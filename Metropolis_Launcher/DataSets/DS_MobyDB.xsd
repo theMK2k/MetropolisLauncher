@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_MobyDB" targetNamespace="http://tempuri.org/DS_MobyDB.xsd" xmlns:mstns="http://tempuri.org/DS_MobyDB.xsd" xmlns="http://tempuri.org/DS_MobyDB.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_MobyDB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_MobyDB" msprop:Generator_UserDSName="DS_MobyDB">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_Moby_Attributes" msprop:Generator_TableClassName="tbl_Moby_AttributesDataTable" msprop:Generator_TableVarName="tabletbl_Moby_Attributes" msprop:Generator_RowChangedName="tbl_Moby_AttributesRowChanged" msprop:Generator_TablePropName="tbl_Moby_Attributes" msprop:Generator_RowDeletingName="tbl_Moby_AttributesRowDeleting" msprop:Generator_RowChangingName="tbl_Moby_AttributesRowChanging" msprop:Generator_RowEvHandlerName="tbl_Moby_AttributesRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Moby_AttributesRowDeleted" msprop:Generator_RowClassName="tbl_Moby_AttributesRow" msprop:Generator_UserTableName="tbl_Moby_Attributes" msprop:Generator_RowEvArgName="tbl_Moby_AttributesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Moby_Attributes" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Attributes" msprop:Generator_ColumnPropNameInRow="id_Moby_Attributes" msprop:Generator_ColumnPropNameInTable="id_Moby_AttributesColumn" msprop:Generator_UserColumnName="id_Moby_Attributes" type="xs:long" />
+              <xs:element name="id_Moby_Attributes_Categories" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Attributes_Categories" msprop:Generator_ColumnPropNameInRow="id_Moby_Attributes_Categories" msprop:Generator_ColumnPropNameInTable="id_Moby_Attributes_CategoriesColumn" msprop:Generator_UserColumnName="id_Moby_Attributes_Categories" type="xs:long" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Moby_Releases" msprop:Generator_TableClassName="tbl_Moby_ReleasesDataTable" msprop:Generator_TableVarName="tabletbl_Moby_Releases" msprop:Generator_RowChangedName="tbl_Moby_ReleasesRowChanged" msprop:Generator_TablePropName="tbl_Moby_Releases" msprop:Generator_RowDeletingName="tbl_Moby_ReleasesRowDeleting" msprop:Generator_RowChangingName="tbl_Moby_ReleasesRowChanging" msprop:Generator_RowEvHandlerName="tbl_Moby_ReleasesRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Moby_ReleasesRowDeleted" msprop:Generator_RowClassName="tbl_Moby_ReleasesRow" msprop:Generator_UserTableName="tbl_Moby_Releases" msprop:Generator_RowEvArgName="tbl_Moby_ReleasesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Moby_Releases" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Releases" msprop:Generator_ColumnPropNameInRow="id_Moby_Releases" msprop:Generator_ColumnPropNameInTable="id_Moby_ReleasesColumn" msprop:Generator_UserColumnName="id_Moby_Releases" type="xs:long" />
+              <xs:element name="id_Moby_Games" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Games" msprop:Generator_ColumnPropNameInRow="id_Moby_Games" msprop:Generator_ColumnPropNameInTable="id_Moby_GamesColumn" msprop:Generator_UserColumnName="id_Moby_Games" type="xs:long" minOccurs="0" />
+              <xs:element name="id_Moby_Platforms" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Platforms" msprop:Generator_ColumnPropNameInRow="id_Moby_Platforms" msprop:Generator_ColumnPropNameInTable="id_Moby_PlatformsColumn" msprop:Generator_UserColumnName="id_Moby_Platforms" type="xs:long" minOccurs="0" />
+              <xs:element name="MobyRank" msprop:Generator_ColumnVarNameInTable="columnMobyRank" msprop:Generator_ColumnPropNameInRow="MobyRank" msprop:Generator_ColumnPropNameInTable="MobyRankColumn" msprop:Generator_UserColumnName="MobyRank" type="xs:long" minOccurs="0" />
+              <xs:element name="MobyScore" msprop:Generator_ColumnVarNameInTable="columnMobyScore" msprop:Generator_ColumnPropNameInRow="MobyScore" msprop:Generator_ColumnPropNameInTable="MobyScoreColumn" msprop:Generator_UserColumnName="MobyScore" type="xs:float" minOccurs="0" />
+              <xs:element name="Publisher_id_Moby_Companies" msprop:Generator_ColumnVarNameInTable="columnPublisher_id_Moby_Companies" msprop:Generator_ColumnPropNameInRow="Publisher_id_Moby_Companies" msprop:Generator_ColumnPropNameInTable="Publisher_id_Moby_CompaniesColumn" msprop:Generator_UserColumnName="Publisher_id_Moby_Companies" type="xs:long" minOccurs="0" />
+              <xs:element name="Developer_id_Moby_Companies" msprop:Generator_ColumnVarNameInTable="columnDeveloper_id_Moby_Companies" msprop:Generator_ColumnPropNameInRow="Developer_id_Moby_Companies" msprop:Generator_ColumnPropNameInTable="Developer_id_Moby_CompaniesColumn" msprop:Generator_UserColumnName="Developer_id_Moby_Companies" type="xs:long" minOccurs="0" />
+              <xs:element name="URL" msprop:Generator_ColumnVarNameInTable="columnURL" msprop:Generator_ColumnPropNameInRow="URL" msprop:Generator_ColumnPropNameInTable="URLColumn" msprop:Generator_UserColumnName="URL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Technical_Notes" msprop:Generator_ColumnVarNameInTable="columnTechnical_Notes" msprop:Generator_ColumnPropNameInRow="Technical_Notes" msprop:Generator_ColumnPropNameInTable="Technical_NotesColumn" msprop:Generator_UserColumnName="Technical_Notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Moby_Companies" msprop:Generator_TableClassName="tbl_Moby_CompaniesDataTable" msprop:Generator_TableVarName="tabletbl_Moby_Companies" msprop:Generator_RowChangedName="tbl_Moby_CompaniesRowChanged" msprop:Generator_TablePropName="tbl_Moby_Companies" msprop:Generator_RowDeletingName="tbl_Moby_CompaniesRowDeleting" msprop:Generator_RowChangingName="tbl_Moby_CompaniesRowChanging" msprop:Generator_RowEvHandlerName="tbl_Moby_CompaniesRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Moby_CompaniesRowDeleted" msprop:Generator_RowClassName="tbl_Moby_CompaniesRow" msprop:Generator_UserTableName="tbl_Moby_Companies" msprop:Generator_RowEvArgName="tbl_Moby_CompaniesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Moby_Companies" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Companies" msprop:Generator_ColumnPropNameInRow="id_Moby_Companies" msprop:Generator_ColumnPropNameInTable="id_Moby_CompaniesColumn" msprop:Generator_UserColumnName="id_Moby_Companies" type="xs:long" />
+              <xs:element name="URLPart" msprop:Generator_ColumnVarNameInTable="columnURLPart" msprop:Generator_ColumnPropNameInRow="URLPart" msprop:Generator_ColumnPropNameInTable="URLPartColumn" msprop:Generator_UserColumnName="URLPart" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Moby_Games" msprop:Generator_TableClassName="tbl_Moby_GamesDataTable" msprop:Generator_TableVarName="tabletbl_Moby_Games" msprop:Generator_RowChangedName="tbl_Moby_GamesRowChanged" msprop:Generator_TablePropName="tbl_Moby_Games" msprop:Generator_RowDeletingName="tbl_Moby_GamesRowDeleting" msprop:Generator_RowChangingName="tbl_Moby_GamesRowChanging" msprop:Generator_RowEvHandlerName="tbl_Moby_GamesRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Moby_GamesRowDeleted" msprop:Generator_RowClassName="tbl_Moby_GamesRow" msprop:Generator_UserTableName="tbl_Moby_Games" msprop:Generator_RowEvArgName="tbl_Moby_GamesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Moby_Games" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Games" msprop:Generator_ColumnPropNameInRow="id_Moby_Games" msprop:Generator_ColumnPropNameInTable="id_Moby_GamesColumn" msprop:Generator_UserColumnName="id_Moby_Games" type="xs:long" />
+              <xs:element name="URLPart" msprop:Generator_ColumnVarNameInTable="columnURLPart" msprop:Generator_ColumnPropNameInRow="URLPart" msprop:Generator_ColumnPropNameInTable="URLPartColumn" msprop:Generator_UserColumnName="URLPart" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Moby_Genres" msprop:Generator_TableClassName="tbl_Moby_GenresDataTable" msprop:Generator_TableVarName="tabletbl_Moby_Genres" msprop:Generator_RowChangedName="tbl_Moby_GenresRowChanged" msprop:Generator_TablePropName="tbl_Moby_Genres" msprop:Generator_RowDeletingName="tbl_Moby_GenresRowDeleting" msprop:Generator_RowChangingName="tbl_Moby_GenresRowChanging" msprop:Generator_RowEvHandlerName="tbl_Moby_GenresRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Moby_GenresRowDeleted" msprop:Generator_RowClassName="tbl_Moby_GenresRow" msprop:Generator_UserTableName="tbl_Moby_Genres" msprop:Generator_RowEvArgName="tbl_Moby_GenresRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Moby_Genres" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Genres" msprop:Generator_ColumnPropNameInRow="id_Moby_Genres" msprop:Generator_ColumnPropNameInTable="id_Moby_GenresColumn" msprop:Generator_UserColumnName="id_Moby_Genres" type="xs:long" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Basic_Genres" msprop:Generator_ColumnVarNameInTable="columnBasic_Genres" msprop:Generator_ColumnPropNameInRow="Basic_Genres" msprop:Generator_ColumnPropNameInTable="Basic_GenresColumn" msprop:Generator_UserColumnName="Basic_Genres" type="xs:long" minOccurs="0" />
+              <xs:element name="Perspectives" msprop:Generator_ColumnVarNameInTable="columnPerspectives" msprop:Generator_ColumnPropNameInRow="Perspectives" msprop:Generator_ColumnPropNameInTable="PerspectivesColumn" msprop:Generator_UserColumnName="Perspectives" type="xs:long" minOccurs="0" />
+              <xs:element name="Sports_Themes" msprop:Generator_ColumnVarNameInTable="columnSports_Themes" msprop:Generator_ColumnPropNameInRow="Sports_Themes" msprop:Generator_ColumnPropNameInTable="Sports_ThemesColumn" msprop:Generator_UserColumnName="Sports_Themes" type="xs:long" minOccurs="0" />
+              <xs:element name="Non_Sports_Themes" msprop:Generator_ColumnVarNameInTable="columnNon_Sports_Themes" msprop:Generator_ColumnPropNameInRow="Non_Sports_Themes" msprop:Generator_ColumnPropNameInTable="Non_Sports_ThemesColumn" msprop:Generator_UserColumnName="Non_Sports_Themes" type="xs:long" minOccurs="0" />
+              <xs:element name="Educational_Categories" msprop:Generator_ColumnVarNameInTable="columnEducational_Categories" msprop:Generator_ColumnPropNameInRow="Educational_Categories" msprop:Generator_ColumnPropNameInTable="Educational_CategoriesColumn" msprop:Generator_UserColumnName="Educational_Categories" type="xs:long" minOccurs="0" />
+              <xs:element name="Other_Attributes" msprop:Generator_ColumnVarNameInTable="columnOther_Attributes" msprop:Generator_ColumnPropNameInRow="Other_Attributes" msprop:Generator_ColumnPropNameInTable="Other_AttributesColumn" msprop:Generator_UserColumnName="Other_Attributes" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Moby_Platforms" msprop:Generator_TableClassName="tbl_Moby_PlatformsDataTable" msprop:Generator_TableVarName="tabletbl_Moby_Platforms" msprop:Generator_RowChangedName="tbl_Moby_PlatformsRowChanged" msprop:Generator_TablePropName="tbl_Moby_Platforms" msprop:Generator_RowDeletingName="tbl_Moby_PlatformsRowDeleting" msprop:Generator_RowChangingName="tbl_Moby_PlatformsRowChanging" msprop:Generator_RowEvHandlerName="tbl_Moby_PlatformsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Moby_PlatformsRowDeleted" msprop:Generator_RowClassName="tbl_Moby_PlatformsRow" msprop:Generator_UserTableName="tbl_Moby_Platforms" msprop:Generator_RowEvArgName="tbl_Moby_PlatformsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Moby_Platforms" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Platforms" msprop:Generator_ColumnPropNameInRow="id_Moby_Platforms" msprop:Generator_ColumnPropNameInTable="id_Moby_PlatformsColumn" msprop:Generator_UserColumnName="id_Moby_Platforms" type="xs:long" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="URLPart" msprop:Generator_ColumnVarNameInTable="columnURLPart" msprop:Generator_ColumnPropNameInRow="URLPart" msprop:Generator_ColumnPropNameInTable="URLPartColumn" msprop:Generator_UserColumnName="URLPart" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Visible" msprop:Generator_ColumnVarNameInTable="columnVisible" msprop:Generator_ColumnPropNameInRow="Visible" msprop:Generator_ColumnPropNameInTable="VisibleColumn" msprop:Generator_UserColumnName="Visible" type="xs:long" minOccurs="0" />
+              <xs:element name="Display_Name" msprop:Generator_ColumnVarNameInTable="columnDisplay_Name" msprop:Generator_ColumnPropNameInRow="Display_Name" msprop:Generator_ColumnPropNameInTable="Display_NameColumn" msprop:Generator_UserColumnName="Display_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Moby_Games_Alternate_Titles" msprop:Generator_TableClassName="tbl_Moby_Games_Alternate_TitlesDataTable" msprop:Generator_TableVarName="tabletbl_Moby_Games_Alternate_Titles" msprop:Generator_RowChangedName="tbl_Moby_Games_Alternate_TitlesRowChanged" msprop:Generator_TablePropName="tbl_Moby_Games_Alternate_Titles" msprop:Generator_RowDeletingName="tbl_Moby_Games_Alternate_TitlesRowDeleting" msprop:Generator_RowChangingName="tbl_Moby_Games_Alternate_TitlesRowChanging" msprop:Generator_RowEvHandlerName="tbl_Moby_Games_Alternate_TitlesRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Moby_Games_Alternate_TitlesRowDeleted" msprop:Generator_RowClassName="tbl_Moby_Games_Alternate_TitlesRow" msprop:Generator_UserTableName="tbl_Moby_Games_Alternate_Titles" msprop:Generator_RowEvArgName="tbl_Moby_Games_Alternate_TitlesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Moby_Games_Alternate_Titles" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="id_Moby_Games_AlternateTitles" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Games_Alternate_Titles" msprop:Generator_ColumnPropNameInRow="id_Moby_Games_Alternate_Titles" msprop:Generator_ColumnPropNameInTable="id_Moby_Games_Alternate_TitlesColumn" msprop:Generator_UserColumnName="id_Moby_Games_Alternate_Titles" type="xs:long" />
+              <xs:element name="id_Moby_Games" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Games" msprop:Generator_ColumnPropNameInRow="id_Moby_Games" msprop:Generator_ColumnPropNameInTable="id_Moby_GamesColumn" msprop:Generator_UserColumnName="id_Moby_Games" type="xs:long" minOccurs="0" />
+              <xs:element name="Alternate_Title" msprop:Generator_ColumnVarNameInTable="columnAlternate_Title" msprop:Generator_ColumnPropNameInRow="Alternate_Title" msprop:Generator_ColumnPropNameInTable="Alternate_TitleColumn" msprop:Generator_UserColumnName="Alternate_Title" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Moby_Games_Genres" msprop:Generator_TableClassName="tbl_Moby_Games_GenresDataTable" msprop:Generator_TableVarName="tabletbl_Moby_Games_Genres" msprop:Generator_RowChangedName="tbl_Moby_Games_GenresRowChanged" msprop:Generator_TablePropName="tbl_Moby_Games_Genres" msprop:Generator_RowDeletingName="tbl_Moby_Games_GenresRowDeleting" msprop:Generator_RowChangingName="tbl_Moby_Games_GenresRowChanging" msprop:Generator_RowEvHandlerName="tbl_Moby_Games_GenresRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Moby_Games_GenresRowDeleted" msprop:Generator_RowClassName="tbl_Moby_Games_GenresRow" msprop:Generator_UserTableName="tbl_Moby_Games_Genres" msprop:Generator_RowEvArgName="tbl_Moby_Games_GenresRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Moby_Games_Genres" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Games_Genres" msprop:Generator_ColumnPropNameInRow="id_Moby_Games_Genres" msprop:Generator_ColumnPropNameInTable="id_Moby_Games_GenresColumn" msprop:Generator_UserColumnName="id_Moby_Games_Genres" type="xs:long" />
+              <xs:element name="id_Moby_Games" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Games" msprop:Generator_ColumnPropNameInRow="id_Moby_Games" msprop:Generator_ColumnPropNameInTable="id_Moby_GamesColumn" msprop:Generator_UserColumnName="id_Moby_Games" type="xs:long" minOccurs="0" />
+              <xs:element name="id_Moby_Genres" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Genres" msprop:Generator_ColumnPropNameInRow="id_Moby_Genres" msprop:Generator_ColumnPropNameInTable="id_Moby_GenresColumn" msprop:Generator_UserColumnName="id_Moby_Genres" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Moby_Game_Groups" msprop:Generator_TableClassName="tbl_Moby_Game_GroupsDataTable" msprop:Generator_TableVarName="tabletbl_Moby_Game_Groups" msprop:Generator_RowChangedName="tbl_Moby_Game_GroupsRowChanged" msprop:Generator_TablePropName="tbl_Moby_Game_Groups" msprop:Generator_RowDeletingName="tbl_Moby_Game_GroupsRowDeleting" msprop:Generator_RowChangingName="tbl_Moby_Game_GroupsRowChanging" msprop:Generator_RowEvHandlerName="tbl_Moby_Game_GroupsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Moby_Game_GroupsRowDeleted" msprop:Generator_RowClassName="tbl_Moby_Game_GroupsRow" msprop:Generator_UserTableName="tbl_Moby_Game_Groups" msprop:Generator_RowEvArgName="tbl_Moby_Game_GroupsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Moby_Game_Groups" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Game_Groups" msprop:Generator_ColumnPropNameInRow="id_Moby_Game_Groups" msprop:Generator_ColumnPropNameInTable="id_Moby_Game_GroupsColumn" msprop:Generator_UserColumnName="id_Moby_Game_Groups" type="xs:long" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="URLPart" msprop:Generator_ColumnVarNameInTable="columnURLPart" msprop:Generator_ColumnPropNameInRow="URLPart" msprop:Generator_ColumnPropNameInTable="URLPartColumn" msprop:Generator_UserColumnName="URLPart" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="src_Moby_Releases" msprop:Generator_TableClassName="src_Moby_ReleasesDataTable" msprop:Generator_TableVarName="tablesrc_Moby_Releases" msprop:Generator_TablePropName="src_Moby_Releases" msprop:Generator_RowDeletingName="src_Moby_ReleasesRowDeleting" msprop:Generator_RowChangingName="src_Moby_ReleasesRowChanging" msprop:Generator_RowEvHandlerName="src_Moby_ReleasesRowChangeEventHandler" msprop:Generator_RowDeletedName="src_Moby_ReleasesRowDeleted" msprop:Generator_UserTableName="src_Moby_Releases" msprop:Generator_RowChangedName="src_Moby_ReleasesRowChanged" msprop:Generator_RowEvArgName="src_Moby_ReleasesRowChangeEvent" msprop:Generator_RowClassName="src_Moby_ReleasesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Moby_Releases" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Releases" msprop:Generator_ColumnPropNameInRow="id_Moby_Releases" msprop:Generator_ColumnPropNameInTable="id_Moby_ReleasesColumn" msprop:Generator_UserColumnName="id_Moby_Releases" type="xs:long" minOccurs="0" />
+              <xs:element name="Gamename" msprop:Generator_ColumnVarNameInTable="columnGamename" msprop:Generator_ColumnPropNameInRow="Gamename" msprop:Generator_ColumnPropNameInTable="GamenameColumn" msprop:Generator_UserColumnName="Gamename" type="xs:string" minOccurs="0" />
+              <xs:element name="id_Moby_Platforms" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Platforms" msprop:Generator_ColumnPropNameInRow="id_Moby_Platforms" msprop:Generator_ColumnPropNameInTable="id_Moby_PlatformsColumn" msprop:Generator_UserColumnName="id_Moby_Platforms" type="xs:long" minOccurs="0" />
+              <xs:element name="Soundex" msprop:Generator_ColumnVarNameInTable="columnSoundex" msprop:Generator_ColumnPropNameInRow="Soundex" msprop:Generator_ColumnPropNameInTable="SoundexColumn" msprop:Generator_UserColumnName="Soundex" type="xs:string" minOccurs="0" />
+              <xs:element name="Moby_Games_URLPart" msprop:Generator_ColumnVarNameInTable="columnMoby_Games_URLPart" msprop:Generator_ColumnPropNameInRow="Moby_Games_URLPart" msprop:Generator_ColumnPropNameInTable="Moby_Games_URLPartColumn" msprop:Generator_UserColumnName="Moby_Games_URLPart" type="xs:string" minOccurs="0" />
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:string" minOccurs="0" />
+              <xs:element name="created" msprop:Generator_ColumnVarNameInTable="columncreated" msprop:Generator_ColumnPropNameInRow="created" msprop:Generator_ColumnPropNameInTable="createdColumn" msprop:Generator_UserColumnName="created" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Highlighted" msprop:Generator_ColumnVarNameInTable="columnHighlighted" msprop:Generator_ColumnPropNameInRow="Highlighted" msprop:Generator_ColumnPropNameInTable="HighlightedColumn" msprop:Generator_UserColumnName="Highlighted" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="tmp_Gamename_Filtered" msprop:Generator_ColumnVarNameInTable="columntmp_Gamename_Filtered" msprop:Generator_ColumnPropNameInRow="tmp_Gamename_Filtered" msprop:Generator_ColumnPropNameInTable="tmp_Gamename_FilteredColumn" msprop:Generator_UserColumnName="tmp_Gamename_Filtered" type="xs:string" minOccurs="0" />
+              <xs:element name="Developer_id_Moby_Companies" msprop:Generator_ColumnVarNameInTable="columnDeveloper_id_Moby_Companies" msprop:Generator_ColumnPropNameInRow="Developer_id_Moby_Companies" msprop:Generator_ColumnPropNameInTable="Developer_id_Moby_CompaniesColumn" msprop:Generator_UserColumnName="Developer_id_Moby_Companies" type="xs:long" minOccurs="0" />
+              <xs:element name="Developer" msprop:Generator_ColumnVarNameInTable="columnDeveloper" msprop:Generator_ColumnPropNameInRow="Developer" msprop:Generator_ColumnPropNameInTable="DeveloperColumn" msprop:Generator_UserColumnName="Developer" type="xs:string" minOccurs="0" />
+              <xs:element name="Publisher_id_Moby_Companies" msprop:Generator_ColumnVarNameInTable="columnPublisher_id_Moby_Companies" msprop:Generator_ColumnPropNameInRow="Publisher_id_Moby_Companies" msprop:Generator_ColumnPropNameInTable="Publisher_id_Moby_CompaniesColumn" msprop:Generator_UserColumnName="Publisher_id_Moby_Companies" type="xs:long" minOccurs="0" />
+              <xs:element name="Publisher" msprop:Generator_ColumnVarNameInTable="columnPublisher" msprop:Generator_ColumnPropNameInRow="Publisher" msprop:Generator_ColumnPropNameInTable="PublisherColumn" msprop:Generator_UserColumnName="Publisher" type="xs:string" minOccurs="0" />
+              <xs:element name="deprecated" msprop:Generator_ColumnVarNameInTable="columndeprecated" msprop:Generator_ColumnPropNameInRow="deprecated" msprop:Generator_ColumnPropNameInTable="deprecatedColumn" msprop:Generator_UserColumnName="deprecated" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Moby_Attributes" />
+      <xs:field xpath="mstns:id_Moby_Attributes" />
+    </xs:unique>
+    <xs:unique name="tbl_Moby_Releases_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Moby_Releases" />
+      <xs:field xpath="mstns:id_Moby_Releases" />
+    </xs:unique>
+    <xs:unique name="tbl_Moby_Companies_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Moby_Companies" />
+      <xs:field xpath="mstns:id_Moby_Companies" />
+    </xs:unique>
+    <xs:unique name="tbl_Moby_Games_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Moby_Games" />
+      <xs:field xpath="mstns:id_Moby_Games" />
+    </xs:unique>
+    <xs:unique name="tbl_Moby_Genres_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Moby_Genres" />
+      <xs:field xpath="mstns:id_Moby_Genres" />
+    </xs:unique>
+    <xs:unique name="tbl_Moby_Platforms_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Moby_Platforms" />
+      <xs:field xpath="mstns:id_Moby_Platforms" />
+    </xs:unique>
+    <xs:unique name="tbl_Moby_Games_Alternate_Titles_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Moby_Games_Alternate_Titles" />
+      <xs:field xpath="mstns:id_Moby_Games_Alternate_Titles" />
+    </xs:unique>
+    <xs:unique name="tbl_Moby_Games_Genres_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Moby_Games_Genres" />
+      <xs:field xpath="mstns:id_Moby_Games_Genres" />
+    </xs:unique>
+    <xs:unique name="tbl_Moby_Game_Groups_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Moby_Game_Groups" />
+      <xs:field xpath="mstns:id_Moby_Game_Groups" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

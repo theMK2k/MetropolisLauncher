@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Rombase" targetNamespace="http://tempuri.org/DS_Rombase.xsd" xmlns:mstns="http://tempuri.org/DS_Rombase.xsd" xmlns="http://tempuri.org/DS_Rombase.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Rombase" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_Rombase" msprop:Generator_UserDSName="DS_Rombase">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_Rombase" msprop:Generator_TableClassName="tbl_RombaseDataTable" msprop:Generator_TableVarName="tabletbl_Rombase" msprop:Generator_TablePropName="tbl_Rombase" msprop:Generator_RowDeletingName="tbl_RombaseRowDeleting" msprop:Generator_RowChangingName="tbl_RombaseRowChanging" msprop:Generator_RowEvHandlerName="tbl_RombaseRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_RombaseRowDeleted" msprop:Generator_UserTableName="tbl_Rombase" msprop:Generator_RowChangedName="tbl_RombaseRowChanged" msprop:Generator_RowEvArgName="tbl_RombaseRowChangeEvent" msprop:Generator_RowClassName="tbl_RombaseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_rombase" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_rombase" msprop:Generator_ColumnPropNameInRow="id_rombase" msprop:Generator_ColumnPropNameInTable="id_rombaseColumn" msprop:Generator_UserColumnName="id_rombase" type="xs:long" />
+              <xs:element name="filename" msprop:Generator_ColumnVarNameInTable="columnfilename" msprop:Generator_ColumnPropNameInRow="filename" msprop:Generator_ColumnPropNameInTable="filenameColumn" msprop:Generator_UserColumnName="filename" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustomIdentifier" msprop:Generator_ColumnVarNameInTable="columnCustomIdentifier" msprop:Generator_ColumnPropNameInRow="CustomIdentifier" msprop:Generator_ColumnPropNameInTable="CustomIdentifierColumn" msprop:Generator_UserColumnName="CustomIdentifier" type="xs:string" minOccurs="0" />
+              <xs:element name="size" msprop:Generator_ColumnVarNameInTable="columnsize" msprop:Generator_ColumnPropNameInRow="size" msprop:Generator_ColumnPropNameInTable="sizeColumn" msprop:Generator_UserColumnName="size" type="xs:long" minOccurs="0" />
+              <xs:element name="crc" msprop:Generator_ColumnVarNameInTable="columncrc" msprop:Generator_ColumnPropNameInRow="crc" msprop:Generator_ColumnPropNameInTable="crcColumn" msprop:Generator_UserColumnName="crc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="md5" msprop:Generator_ColumnVarNameInTable="columnmd5" msprop:Generator_ColumnPropNameInRow="md5" msprop:Generator_ColumnPropNameInTable="md5Column" msprop:Generator_UserColumnName="md5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sha1" msprop:Generator_ColumnVarNameInTable="columnsha1" msprop:Generator_ColumnPropNameInRow="sha1" msprop:Generator_ColumnPropNameInTable="sha1Column" msprop:Generator_UserColumnName="sha1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_Moby_Platforms" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Platforms" msprop:Generator_ColumnPropNameInRow="id_Moby_Platforms" msprop:Generator_ColumnPropNameInTable="id_Moby_PlatformsColumn" msprop:Generator_UserColumnName="id_Moby_Platforms" type="xs:long" minOccurs="0" />
+              <xs:element name="id_Moby_Releases" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Releases" msprop:Generator_ColumnPropNameInRow="id_Moby_Releases" msprop:Generator_ColumnPropNameInTable="id_Moby_ReleasesColumn" msprop:Generator_UserColumnName="id_Moby_Releases" type="xs:long" minOccurs="0" />
+              <xs:element name="Soundex" msprop:Generator_ColumnVarNameInTable="columnSoundex" msprop:Generator_ColumnPropNameInRow="Soundex" msprop:Generator_ColumnPropNameInTable="SoundexColumn" msprop:Generator_UserColumnName="Soundex" type="xs:string" minOccurs="0" />
+              <xs:element name="Moby_Games_URLPart" msprop:Generator_ColumnVarNameInTable="columnMoby_Games_URLPart" msprop:Generator_ColumnPropNameInRow="Moby_Games_URLPart" msprop:Generator_ColumnPropNameInTable="Moby_Games_URLPartColumn" msprop:Generator_UserColumnName="Moby_Games_URLPart" type="xs:string" minOccurs="0" />
+              <xs:element name="Moby_Platforms_URLPart" msprop:Generator_ColumnVarNameInTable="columnMoby_Platforms_URLPart" msprop:Generator_ColumnPropNameInRow="Moby_Platforms_URLPart" msprop:Generator_ColumnPropNameInTable="Moby_Platforms_URLPartColumn" msprop:Generator_UserColumnName="Moby_Platforms_URLPart" type="xs:string" minOccurs="0" />
+              <xs:element name="deprecated" msprop:Generator_ColumnVarNameInTable="columndeprecated" msprop:Generator_ColumnPropNameInRow="deprecated" msprop:Generator_ColumnPropNameInTable="deprecatedColumn" msprop:Generator_UserColumnName="deprecated" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Rombase" />
+      <xs:field xpath="mstns:id_rombase" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_IMDB" targetNamespace="http://tempuri.org/DS_IMDB.xsd" xmlns:mstns="http://tempuri.org/DS_IMDB.xsd" xmlns="http://tempuri.org/DS_IMDB.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections></Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_IMDB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_IMDB" msprop:Generator_UserDSName="DS_IMDB">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_Categories" msprop:Generator_TableClassName="tbl_CategoriesDataTable" msprop:Generator_TableVarName="tabletbl_Categories" msprop:Generator_TablePropName="tbl_Categories" msprop:Generator_RowDeletingName="tbl_CategoriesRowDeleting" msprop:Generator_UserTableName="tbl_Categories" msprop:Generator_RowChangingName="tbl_CategoriesRowChanging" msprop:Generator_RowEvHandlerName="tbl_CategoriesRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_CategoriesRowDeleted" msprop:Generator_RowEvArgName="tbl_CategoriesRowChangeEvent" msprop:Generator_RowChangedName="tbl_CategoriesRowChanged" msprop:Generator_RowClassName="tbl_CategoriesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Categories" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Categories" msprop:Generator_ColumnPropNameInRow="id_Categories" msprop:Generator_ColumnPropNameInTable="id_CategoriesColumn" msprop:Generator_UserColumnName="id_Categories" type="xs:long" />
+              <xs:element name="CategoryName" msprop:Generator_ColumnVarNameInTable="columnCategoryName" msprop:Generator_ColumnPropNameInRow="CategoryName" msprop:Generator_ColumnPropNameInTable="CategoryNameColumn" msprop:Generator_UserColumnName="CategoryName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_ContentRating" msprop:Generator_TableClassName="tbl_ContentRatingDataTable" msprop:Generator_TableVarName="tabletbl_ContentRating" msprop:Generator_TablePropName="tbl_ContentRating" msprop:Generator_RowDeletingName="tbl_ContentRatingRowDeleting" msprop:Generator_UserTableName="tbl_ContentRating" msprop:Generator_RowChangingName="tbl_ContentRatingRowChanging" msprop:Generator_RowEvHandlerName="tbl_ContentRatingRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_ContentRatingRowDeleted" msprop:Generator_RowEvArgName="tbl_ContentRatingRowChangeEvent" msprop:Generator_RowChangedName="tbl_ContentRatingRowChanged" msprop:Generator_RowClassName="tbl_ContentRatingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_ContentRating" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_ContentRating" msprop:Generator_ColumnPropNameInRow="id_ContentRating" msprop:Generator_ColumnPropNameInTable="id_ContentRatingColumn" msprop:Generator_UserColumnName="id_ContentRating" type="xs:long" />
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Age" msprop:Generator_ColumnVarNameInTable="columnAge" msprop:Generator_ColumnPropNameInRow="Age" msprop:Generator_ColumnPropNameInTable="AgeColumn" msprop:Generator_UserColumnName="Age" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Episodes" msprop:Generator_TableClassName="tbl_EpisodesDataTable" msprop:Generator_TableVarName="tabletbl_Episodes" msprop:Generator_TablePropName="tbl_Episodes" msprop:Generator_RowDeletingName="tbl_EpisodesRowDeleting" msprop:Generator_UserTableName="tbl_Episodes" msprop:Generator_RowChangingName="tbl_EpisodesRowChanging" msprop:Generator_RowEvHandlerName="tbl_EpisodesRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_EpisodesRowDeleted" msprop:Generator_RowEvArgName="tbl_EpisodesRowChangeEvent" msprop:Generator_RowChangedName="tbl_EpisodesRowChanged" msprop:Generator_RowClassName="tbl_EpisodesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Episodes" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Episodes" msprop:Generator_ColumnPropNameInRow="id_Episodes" msprop:Generator_ColumnPropNameInTable="id_EpisodesColumn" msprop:Generator_UserColumnName="id_Episodes" type="xs:long" />
+              <xs:element name="id_Seasons" msprop:Generator_ColumnVarNameInTable="columnid_Seasons" msprop:Generator_ColumnPropNameInRow="id_Seasons" msprop:Generator_ColumnPropNameInTable="id_SeasonsColumn" msprop:Generator_UserColumnName="id_Seasons" type="xs:long" minOccurs="0" />
+              <xs:element name="IMDBid" msprop:Generator_ColumnVarNameInTable="columnIMDBid" msprop:Generator_ColumnPropNameInRow="IMDBid" msprop:Generator_ColumnPropNameInTable="IMDBidColumn" msprop:Generator_UserColumnName="IMDBid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:long" minOccurs="0" />
+              <xs:element name="Rating" msprop:Generator_ColumnVarNameInTable="columnRating" msprop:Generator_ColumnPropNameInRow="Rating" msprop:Generator_ColumnPropNameInTable="RatingColumn" msprop:Generator_UserColumnName="Rating" type="xs:float" minOccurs="0" />
+              <xs:element name="RatingUsers" msprop:Generator_ColumnVarNameInTable="columnRatingUsers" msprop:Generator_ColumnPropNameInRow="RatingUsers" msprop:Generator_ColumnPropNameInTable="RatingUsersColumn" msprop:Generator_UserColumnName="RatingUsers" type="xs:long" minOccurs="0" />
+              <xs:element name="MetaScore" msprop:Generator_ColumnVarNameInTable="columnMetaScore" msprop:Generator_ColumnPropNameInRow="MetaScore" msprop:Generator_ColumnPropNameInTable="MetaScoreColumn" msprop:Generator_UserColumnName="MetaScore" type="xs:long" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Length" msprop:Generator_ColumnVarNameInTable="columnLength" msprop:Generator_ColumnPropNameInRow="Length" msprop:Generator_ColumnPropNameInTable="LengthColumn" msprop:Generator_UserColumnName="Length" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Genres" msprop:Generator_TableClassName="tbl_GenresDataTable" msprop:Generator_TableVarName="tabletbl_Genres" msprop:Generator_TablePropName="tbl_Genres" msprop:Generator_RowDeletingName="tbl_GenresRowDeleting" msprop:Generator_UserTableName="tbl_Genres" msprop:Generator_RowChangingName="tbl_GenresRowChanging" msprop:Generator_RowEvHandlerName="tbl_GenresRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_GenresRowDeleted" msprop:Generator_RowEvArgName="tbl_GenresRowChangeEvent" msprop:Generator_RowChangedName="tbl_GenresRowChanged" msprop:Generator_RowClassName="tbl_GenresRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Genres" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Genres" msprop:Generator_ColumnPropNameInRow="id_Genres" msprop:Generator_ColumnPropNameInTable="id_GenresColumn" msprop:Generator_UserColumnName="id_Genres" type="xs:long" />
+              <xs:element name="GenreName" msprop:Generator_ColumnVarNameInTable="columnGenreName" msprop:Generator_ColumnPropNameInRow="GenreName" msprop:Generator_ColumnPropNameInTable="GenreNameColumn" msprop:Generator_UserColumnName="GenreName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="URLPart" msprop:Generator_ColumnVarNameInTable="columnURLPart" msprop:Generator_ColumnPropNameInRow="URLPart" msprop:Generator_ColumnPropNameInTable="URLPartColumn" msprop:Generator_UserColumnName="URLPart" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Jobs" msprop:Generator_TableClassName="tbl_JobsDataTable" msprop:Generator_TableVarName="tabletbl_Jobs" msprop:Generator_TablePropName="tbl_Jobs" msprop:Generator_RowDeletingName="tbl_JobsRowDeleting" msprop:Generator_UserTableName="tbl_Jobs" msprop:Generator_RowChangingName="tbl_JobsRowChanging" msprop:Generator_RowEvHandlerName="tbl_JobsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_JobsRowDeleted" msprop:Generator_RowEvArgName="tbl_JobsRowChangeEvent" msprop:Generator_RowChangedName="tbl_JobsRowChanged" msprop:Generator_RowClassName="tbl_JobsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Jobs" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Jobs" msprop:Generator_ColumnPropNameInRow="id_Jobs" msprop:Generator_ColumnPropNameInTable="id_JobsColumn" msprop:Generator_UserColumnName="id_Jobs" type="xs:long" />
+              <xs:element name="JobTitle" msprop:Generator_ColumnVarNameInTable="columnJobTitle" msprop:Generator_ColumnPropNameInRow="JobTitle" msprop:Generator_ColumnPropNameInTable="JobTitleColumn" msprop:Generator_UserColumnName="JobTitle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Movies" msprop:Generator_TableClassName="tbl_MoviesDataTable" msprop:Generator_TableVarName="tabletbl_Movies" msprop:Generator_TablePropName="tbl_Movies" msprop:Generator_RowDeletingName="tbl_MoviesRowDeleting" msprop:Generator_UserTableName="tbl_Movies" msprop:Generator_RowChangingName="tbl_MoviesRowChanging" msprop:Generator_RowEvHandlerName="tbl_MoviesRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_MoviesRowDeleted" msprop:Generator_RowEvArgName="tbl_MoviesRowChangeEvent" msprop:Generator_RowChangedName="tbl_MoviesRowChanged" msprop:Generator_RowClassName="tbl_MoviesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Movies" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Movies" msprop:Generator_ColumnPropNameInRow="id_Movies" msprop:Generator_ColumnPropNameInTable="id_MoviesColumn" msprop:Generator_UserColumnName="id_Movies" type="xs:long" />
+              <xs:element name="id_Categories" msprop:Generator_ColumnVarNameInTable="columnid_Categories" msprop:Generator_ColumnPropNameInRow="id_Categories" msprop:Generator_ColumnPropNameInTable="id_CategoriesColumn" msprop:Generator_UserColumnName="id_Categories" type="xs:long" minOccurs="0" />
+              <xs:element name="IMDBid" msprop:Generator_ColumnVarNameInTable="columnIMDBid" msprop:Generator_ColumnPropNameInRow="IMDBid" msprop:Generator_ColumnPropNameInTable="IMDBidColumn" msprop:Generator_UserColumnName="IMDBid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:long" minOccurs="0" />
+              <xs:element name="Rating" msprop:Generator_ColumnVarNameInTable="columnRating" msprop:Generator_ColumnPropNameInRow="Rating" msprop:Generator_ColumnPropNameInTable="RatingColumn" msprop:Generator_UserColumnName="Rating" type="xs:float" minOccurs="0" />
+              <xs:element name="RatingUsers" msprop:Generator_ColumnVarNameInTable="columnRatingUsers" msprop:Generator_ColumnPropNameInRow="RatingUsers" msprop:Generator_ColumnPropNameInTable="RatingUsersColumn" msprop:Generator_UserColumnName="RatingUsers" type="xs:long" minOccurs="0" />
+              <xs:element name="MetaScore" msprop:Generator_ColumnVarNameInTable="columnMetaScore" msprop:Generator_ColumnPropNameInRow="MetaScore" msprop:Generator_ColumnPropNameInTable="MetaScoreColumn" msprop:Generator_UserColumnName="MetaScore" type="xs:long" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Length" msprop:Generator_ColumnVarNameInTable="columnLength" msprop:Generator_ColumnPropNameInRow="Length" msprop:Generator_ColumnPropNameInTable="LengthColumn" msprop:Generator_UserColumnName="Length" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Movies_Episodes_Genres" msprop:Generator_TableClassName="tbl_Movies_Episodes_GenresDataTable" msprop:Generator_TableVarName="tabletbl_Movies_Episodes_Genres" msprop:Generator_TablePropName="tbl_Movies_Episodes_Genres" msprop:Generator_RowDeletingName="tbl_Movies_Episodes_GenresRowDeleting" msprop:Generator_UserTableName="tbl_Movies_Episodes_Genres" msprop:Generator_RowChangingName="tbl_Movies_Episodes_GenresRowChanging" msprop:Generator_RowEvHandlerName="tbl_Movies_Episodes_GenresRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Movies_Episodes_GenresRowDeleted" msprop:Generator_RowEvArgName="tbl_Movies_Episodes_GenresRowChangeEvent" msprop:Generator_RowChangedName="tbl_Movies_Episodes_GenresRowChanged" msprop:Generator_RowClassName="tbl_Movies_Episodes_GenresRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Movies_Episodes_Genres" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Movies_Episodes_Genres" msprop:Generator_ColumnPropNameInRow="id_Movies_Episodes_Genres" msprop:Generator_ColumnPropNameInTable="id_Movies_Episodes_GenresColumn" msprop:Generator_UserColumnName="id_Movies_Episodes_Genres" type="xs:long" />
+              <xs:element name="id_Movies" msprop:Generator_ColumnVarNameInTable="columnid_Movies" msprop:Generator_ColumnPropNameInRow="id_Movies" msprop:Generator_ColumnPropNameInTable="id_MoviesColumn" msprop:Generator_UserColumnName="id_Movies" type="xs:long" minOccurs="0" />
+              <xs:element name="id_Episodes" msprop:Generator_ColumnVarNameInTable="columnid_Episodes" msprop:Generator_ColumnPropNameInRow="id_Episodes" msprop:Generator_ColumnPropNameInTable="id_EpisodesColumn" msprop:Generator_UserColumnName="id_Episodes" type="xs:long" minOccurs="0" />
+              <xs:element name="id_Genres" msprop:Generator_ColumnVarNameInTable="columnid_Genres" msprop:Generator_ColumnPropNameInRow="id_Genres" msprop:Generator_ColumnPropNameInTable="id_GenresColumn" msprop:Generator_UserColumnName="id_Genres" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Movies_Episodes_PlotKeywords" msprop:Generator_TableClassName="tbl_Movies_Episodes_PlotKeywordsDataTable" msprop:Generator_TableVarName="tabletbl_Movies_Episodes_PlotKeywords" msprop:Generator_TablePropName="tbl_Movies_Episodes_PlotKeywords" msprop:Generator_RowDeletingName="tbl_Movies_Episodes_PlotKeywordsRowDeleting" msprop:Generator_UserTableName="tbl_Movies_Episodes_PlotKeywords" msprop:Generator_RowChangingName="tbl_Movies_Episodes_PlotKeywordsRowChanging" msprop:Generator_RowEvHandlerName="tbl_Movies_Episodes_PlotKeywordsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Movies_Episodes_PlotKeywordsRowDeleted" msprop:Generator_RowEvArgName="tbl_Movies_Episodes_PlotKeywordsRowChangeEvent" msprop:Generator_RowChangedName="tbl_Movies_Episodes_PlotKeywordsRowChanged" msprop:Generator_RowClassName="tbl_Movies_Episodes_PlotKeywordsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Movies_Episodes_PlotKeywords" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Movies_Episodes_PlotKeywords" msprop:Generator_ColumnPropNameInRow="id_Movies_Episodes_PlotKeywords" msprop:Generator_ColumnPropNameInTable="id_Movies_Episodes_PlotKeywordsColumn" msprop:Generator_UserColumnName="id_Movies_Episodes_PlotKeywords" type="xs:long" />
+              <xs:element name="id_Movies" msprop:Generator_ColumnVarNameInTable="columnid_Movies" msprop:Generator_ColumnPropNameInRow="id_Movies" msprop:Generator_ColumnPropNameInTable="id_MoviesColumn" msprop:Generator_UserColumnName="id_Movies" type="xs:long" minOccurs="0" />
+              <xs:element name="id_Episodes" msprop:Generator_ColumnVarNameInTable="columnid_Episodes" msprop:Generator_ColumnPropNameInRow="id_Episodes" msprop:Generator_ColumnPropNameInTable="id_EpisodesColumn" msprop:Generator_UserColumnName="id_Episodes" type="xs:long" minOccurs="0" />
+              <xs:element name="id_PlotKeywords" msprop:Generator_ColumnVarNameInTable="columnid_PlotKeywords" msprop:Generator_ColumnPropNameInRow="id_PlotKeywords" msprop:Generator_ColumnPropNameInTable="id_PlotKeywordsColumn" msprop:Generator_UserColumnName="id_PlotKeywords" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Persons" msprop:Generator_TableClassName="tbl_PersonsDataTable" msprop:Generator_TableVarName="tabletbl_Persons" msprop:Generator_TablePropName="tbl_Persons" msprop:Generator_RowDeletingName="tbl_PersonsRowDeleting" msprop:Generator_UserTableName="tbl_Persons" msprop:Generator_RowChangingName="tbl_PersonsRowChanging" msprop:Generator_RowEvHandlerName="tbl_PersonsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_PersonsRowDeleted" msprop:Generator_RowEvArgName="tbl_PersonsRowChangeEvent" msprop:Generator_RowChangedName="tbl_PersonsRowChanged" msprop:Generator_RowClassName="tbl_PersonsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Persons" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Persons" msprop:Generator_ColumnPropNameInRow="id_Persons" msprop:Generator_ColumnPropNameInTable="id_PersonsColumn" msprop:Generator_UserColumnName="id_Persons" type="xs:long" />
+              <xs:element name="IMDBid" msprop:Generator_ColumnVarNameInTable="columnIMDBid" msprop:Generator_ColumnPropNameInRow="IMDBid" msprop:Generator_ColumnPropNameInTable="IMDBidColumn" msprop:Generator_UserColumnName="IMDBid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Persons_Jobs" msprop:Generator_TableClassName="tbl_Persons_JobsDataTable" msprop:Generator_TableVarName="tabletbl_Persons_Jobs" msprop:Generator_TablePropName="tbl_Persons_Jobs" msprop:Generator_RowDeletingName="tbl_Persons_JobsRowDeleting" msprop:Generator_UserTableName="tbl_Persons_Jobs" msprop:Generator_RowChangingName="tbl_Persons_JobsRowChanging" msprop:Generator_RowEvHandlerName="tbl_Persons_JobsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Persons_JobsRowDeleted" msprop:Generator_RowEvArgName="tbl_Persons_JobsRowChangeEvent" msprop:Generator_RowChangedName="tbl_Persons_JobsRowChanged" msprop:Generator_RowClassName="tbl_Persons_JobsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Persons_Jobs" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Persons_Jobs" msprop:Generator_ColumnPropNameInRow="id_Persons_Jobs" msprop:Generator_ColumnPropNameInTable="id_Persons_JobsColumn" msprop:Generator_UserColumnName="id_Persons_Jobs" type="xs:long" />
+              <xs:element name="id_Persons" msprop:Generator_ColumnVarNameInTable="columnid_Persons" msprop:Generator_ColumnPropNameInRow="id_Persons" msprop:Generator_ColumnPropNameInTable="id_PersonsColumn" msprop:Generator_UserColumnName="id_Persons" type="xs:long" minOccurs="0" />
+              <xs:element name="id_Movies" msprop:Generator_ColumnVarNameInTable="columnid_Movies" msprop:Generator_ColumnPropNameInRow="id_Movies" msprop:Generator_ColumnPropNameInTable="id_MoviesColumn" msprop:Generator_UserColumnName="id_Movies" type="xs:long" minOccurs="0" />
+              <xs:element name="id_Episodes" msprop:Generator_ColumnVarNameInTable="columnid_Episodes" msprop:Generator_ColumnPropNameInRow="id_Episodes" msprop:Generator_ColumnPropNameInTable="id_EpisodesColumn" msprop:Generator_UserColumnName="id_Episodes" type="xs:long" minOccurs="0" />
+              <xs:element name="id_Jobs" msprop:Generator_ColumnVarNameInTable="columnid_Jobs" msprop:Generator_ColumnPropNameInRow="id_Jobs" msprop:Generator_ColumnPropNameInTable="id_JobsColumn" msprop:Generator_UserColumnName="id_Jobs" type="xs:long" minOccurs="0" />
+              <xs:element name="Notes" msprop:Generator_ColumnVarNameInTable="columnNotes" msprop:Generator_ColumnPropNameInRow="Notes" msprop:Generator_ColumnPropNameInTable="NotesColumn" msprop:Generator_UserColumnName="Notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_PlotKeywords" msprop:Generator_TableClassName="tbl_PlotKeywordsDataTable" msprop:Generator_TableVarName="tabletbl_PlotKeywords" msprop:Generator_TablePropName="tbl_PlotKeywords" msprop:Generator_RowDeletingName="tbl_PlotKeywordsRowDeleting" msprop:Generator_UserTableName="tbl_PlotKeywords" msprop:Generator_RowChangingName="tbl_PlotKeywordsRowChanging" msprop:Generator_RowEvHandlerName="tbl_PlotKeywordsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_PlotKeywordsRowDeleted" msprop:Generator_RowEvArgName="tbl_PlotKeywordsRowChangeEvent" msprop:Generator_RowChangedName="tbl_PlotKeywordsRowChanged" msprop:Generator_RowClassName="tbl_PlotKeywordsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_PlotKeywords" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_PlotKeywords" msprop:Generator_ColumnPropNameInRow="id_PlotKeywords" msprop:Generator_ColumnPropNameInTable="id_PlotKeywordsColumn" msprop:Generator_UserColumnName="id_PlotKeywords" type="xs:long" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Seasons" msprop:Generator_TableClassName="tbl_SeasonsDataTable" msprop:Generator_TableVarName="tabletbl_Seasons" msprop:Generator_TablePropName="tbl_Seasons" msprop:Generator_RowDeletingName="tbl_SeasonsRowDeleting" msprop:Generator_UserTableName="tbl_Seasons" msprop:Generator_RowChangingName="tbl_SeasonsRowChanging" msprop:Generator_RowEvHandlerName="tbl_SeasonsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_SeasonsRowDeleted" msprop:Generator_RowEvArgName="tbl_SeasonsRowChangeEvent" msprop:Generator_RowChangedName="tbl_SeasonsRowChanged" msprop:Generator_RowClassName="tbl_SeasonsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Seasons" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Seasons" msprop:Generator_ColumnPropNameInRow="id_Seasons" msprop:Generator_ColumnPropNameInTable="id_SeasonsColumn" msprop:Generator_UserColumnName="id_Seasons" type="xs:long" />
+              <xs:element name="id_Series" msprop:Generator_ColumnVarNameInTable="columnid_Series" msprop:Generator_ColumnPropNameInRow="id_Series" msprop:Generator_ColumnPropNameInTable="id_SeriesColumn" msprop:Generator_UserColumnName="id_Series" type="xs:long" minOccurs="0" />
+              <xs:element name="IMDBid" msprop:Generator_ColumnVarNameInTable="columnIMDBid" msprop:Generator_ColumnPropNameInRow="IMDBid" msprop:Generator_ColumnPropNameInTable="IMDBidColumn" msprop:Generator_UserColumnName="IMDBid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Season" msprop:Generator_ColumnVarNameInTable="columnSeason" msprop:Generator_ColumnPropNameInRow="Season" msprop:Generator_ColumnPropNameInTable="SeasonColumn" msprop:Generator_UserColumnName="Season" type="xs:long" minOccurs="0" />
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Series" msprop:Generator_TableClassName="tbl_SeriesDataTable" msprop:Generator_TableVarName="tabletbl_Series" msprop:Generator_TablePropName="tbl_Series" msprop:Generator_RowDeletingName="tbl_SeriesRowDeleting" msprop:Generator_UserTableName="tbl_Series" msprop:Generator_RowChangingName="tbl_SeriesRowChanging" msprop:Generator_RowEvHandlerName="tbl_SeriesRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_SeriesRowDeleted" msprop:Generator_RowEvArgName="tbl_SeriesRowChangeEvent" msprop:Generator_RowChangedName="tbl_SeriesRowChanged" msprop:Generator_RowClassName="tbl_SeriesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Series" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Series" msprop:Generator_ColumnPropNameInRow="id_Series" msprop:Generator_ColumnPropNameInTable="id_SeriesColumn" msprop:Generator_UserColumnName="id_Series" type="xs:long" />
+              <xs:element name="id_Categories" msprop:Generator_ColumnVarNameInTable="columnid_Categories" msprop:Generator_ColumnPropNameInRow="id_Categories" msprop:Generator_ColumnPropNameInTable="id_CategoriesColumn" msprop:Generator_UserColumnName="id_Categories" type="xs:long" minOccurs="0" />
+              <xs:element name="IMDBid" msprop:Generator_ColumnVarNameInTable="columnIMDBid" msprop:Generator_ColumnPropNameInRow="IMDBid" msprop:Generator_ColumnPropNameInTable="IMDBidColumn" msprop:Generator_UserColumnName="IMDBid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_UserColumnName="Category" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:long" minOccurs="0" />
+              <xs:element name="Rating" msprop:Generator_ColumnVarNameInTable="columnRating" msprop:Generator_ColumnPropNameInRow="Rating" msprop:Generator_ColumnPropNameInTable="RatingColumn" msprop:Generator_UserColumnName="Rating" type="xs:float" minOccurs="0" />
+              <xs:element name="RatingUsers" msprop:Generator_ColumnVarNameInTable="columnRatingUsers" msprop:Generator_ColumnPropNameInRow="RatingUsers" msprop:Generator_ColumnPropNameInTable="RatingUsersColumn" msprop:Generator_UserColumnName="RatingUsers" type="xs:long" minOccurs="0" />
+              <xs:element name="MetaScore" msprop:Generator_ColumnVarNameInTable="columnMetaScore" msprop:Generator_ColumnPropNameInRow="MetaScore" msprop:Generator_ColumnPropNameInTable="MetaScoreColumn" msprop:Generator_UserColumnName="MetaScore" type="xs:long" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Categories" />
+      <xs:field xpath="mstns:id_Categories" />
+    </xs:unique>
+    <xs:unique name="tbl_ContentRating_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_ContentRating" />
+      <xs:field xpath="mstns:id_ContentRating" />
+    </xs:unique>
+    <xs:unique name="tbl_Episodes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Episodes" />
+      <xs:field xpath="mstns:id_Episodes" />
+    </xs:unique>
+    <xs:unique name="tbl_Genres_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Genres" />
+      <xs:field xpath="mstns:id_Genres" />
+    </xs:unique>
+    <xs:unique name="tbl_Jobs_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Jobs" />
+      <xs:field xpath="mstns:id_Jobs" />
+    </xs:unique>
+    <xs:unique name="tbl_Movies_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Movies" />
+      <xs:field xpath="mstns:id_Movies" />
+    </xs:unique>
+    <xs:unique name="tbl_Movies_Episodes_Genres_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Movies_Episodes_Genres" />
+      <xs:field xpath="mstns:id_Movies_Episodes_Genres" />
+    </xs:unique>
+    <xs:unique name="tbl_Movies_Episodes_PlotKeywords_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Movies_Episodes_PlotKeywords" />
+      <xs:field xpath="mstns:id_Movies_Episodes_PlotKeywords" />
+    </xs:unique>
+    <xs:unique name="tbl_Persons_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Persons" />
+      <xs:field xpath="mstns:id_Persons" />
+    </xs:unique>
+    <xs:unique name="tbl_Persons_Jobs_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Persons_Jobs" />
+      <xs:field xpath="mstns:id_Persons_Jobs" />
+    </xs:unique>
+    <xs:unique name="tbl_PlotKeywords_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_PlotKeywords" />
+      <xs:field xpath="mstns:id_PlotKeywords" />
+    </xs:unique>
+    <xs:unique name="tbl_Seasons_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Seasons" />
+      <xs:field xpath="mstns:id_Seasons" />
+    </xs:unique>
+    <xs:unique name="tbl_Series_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_Series" />
+      <xs:field xpath="mstns:id_Series" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

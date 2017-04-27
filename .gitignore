@@ -1,0 +1,4 @@
+.vs/**/*
+Metropolis_Launcher/bin/**/*
+Metropolis_Launcher/obj/**/*
+Metropolis_Launcher/Metropolis_Launcher.vbproj.user

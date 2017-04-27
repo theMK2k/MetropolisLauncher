@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="BTA_Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="BTA_Main.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
+        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
+        bmRlcnRfdm9uCw==
+</value>
+  </data>
+  <data name="BTA_Main.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAPgIAAD4CAABsBAAAAQEBAQoPAgAAAGwEAAACH4sIAAAAAAAEALVUW2/TMBRud6lW
+        BrzwwGuU57Zp2I1FzSaxCYTYCloL7K1yk9PWENvFdnp542/x68Zx4l7VCYSKI9nOuXzfZ+fkFIqFQuEB
+        h1nNeLqDU7M1VRpY7ZpoUnG+gFRU8PC4VjdPxblKE51KCDmkWpKk4nxKuwmNPsC0Lb4DD7tnZ+QkOjn1
+        z4+Oof76fN+Av1jCzKYW6F20v7T72h0woSnvW7ryPUta0QAYOcTdNe313knCdovF5xbIxhm9ZQNU2sPp
+        10HjcsISZ2Q1u36t7jrAIxEjdOimulf1T93Li2dPGhMVqIzAoXHoNmFslbgOInAVunYTTHA/0HoYeN54
+        PK6Nj2pC9r1X9brv3d/e5CJnsUzFiIJEklt0VWU0kkKJnq5GggUYV82jXFThOEYHJMCAa4cTBqtS8sjg
+        vbKW0NUyhbn9s4KrVErMvRERScC6M+AcGimHCUza0yFYq7UPBI3AYZR/jKJU4hHxohiZzN5S3hUpjyF2
+        52mbtLZJNwF/OeZx2oVXwY8UP8q6axMBjV1HI0rooovyxZVoIvugmxikhiQC87lWD+P9BfpbIKaUlyiU
+        llgp22VpRWKFY+vH+Aq0P9D/nwHizlbP0vAeK4bMs7mIMpdVtyhpb17Ts+LfhLCWm/Nnv+lFaR/7x89i
+        I8ZW05dBvhD2L/+1zckh/pQzI6qOfHNBe6aXrfU409lKnVvyTUhcKDfLm5QmcblzByNqQkzvPsCxY/v4
+        gx2HvwF6cNgN4gUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAs=
+</value>
+  </data>
+  <data name="BTA_Main.FillString" xml:space="preserve">
+    <value>001;Platform;;;;002;Rank;;;;003;Score;;;;004;Publisher;;;;005;Developer;;;;006;Year;;;;101;Genres;;;;102;Perspectives;;;;107;Visual Presentation;;;;108;Gameplay;;;;109;Pacing;;;;110;Narrative Theme / Topic;;;;111;Setting;;;;103;Sports Themes;;;;112;Vehicular Themes;;;;105;Educational Categories;;;;113;Interface/Control;;;;114;DLC / Add-on;;;;115;Special Edition;;;;106;Other Attributes;;;;201;Min. Players;;;;202;Max. Players;;;;203;AgeO;;;;204;AgeP;;;;205;Rating Descriptors;;;;207;Multiplayer Attributes;;;;206;Tech. Info;;;;301;Groups;;;;401;Staff;;;</value>
+  </data>
+  <data name="BTA_Main.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
+</value>
+  </data>
+  <data name="lbl_205_Rating_Descriptors_Explanation.Text" xml:space="preserve">
+    <value>The similarity score of 0 up to 100 is calculated the following way:
+
+Let X be the number of distinct rating descriptors shared by both games A and B.
+Let Y be the number of distinct rating descriptors of game A and B.
+
+score = 100 * (X / Y)</value>
+  </data>
+  <data name="lbl_207_Multiplayer_Attributes_Explanation.Text" xml:space="preserve">
+    <value>The similarity score of 0 up to 100 is calculated the following way:
+
+Let X be the number of distinct multiplayer attributes shared by both games A and B.
+Let Y be the number of distinct multiplayer attributes of game A and B.
+
+score = 100 * (X / Y)</value>
+  </data>
+  <data name="lbl_206_Other_Attributes_Explanation.Text" xml:space="preserve">
+    <value>The similarity score of 0 up to 100 is calculated the following way:
+
+Let X be the number of distinct tech info shared by both games A and B.
+Let Y be the number of distinct tech info of game A and B.
+
+score = 100 * (X / Y)</value>
+  </data>
+  <data name="lbl_301_Group_Membership_Explanation.Text" xml:space="preserve">
+    <value>The similarity score of 0 up to 100 is calculated the following way:
+
+Let X be the number of distinct group membership shared by both games A and B.
+Let Y be the number of distinct group membership of game A and B.
+
+score = 100 * (X / Y)</value>
+  </data>
+  <data name="lbl_401_Staff.Text" xml:space="preserve">
+    <value>The similarity score of 0 up to 100 is calculated the following way:
+
+Let X be the number of distinct staff involved in both games A and B.
+Let Y be the number of distinct staff involved in game A and B.
+
+score = 100 * (X / Y)</value>
+  </data>
+  <data name="ToolTipItem1.Text" xml:space="preserve">
+    <value>The overall similarity is calculated the following way:
+
+Let ∑(Weighted Scores) be the total sum of weighted scores
+Let ∑(Weights) be the total sum of all involved weights. A weight is involved if there was a chance to calculate a score.
+
+                               ∑(Weighted Scores)
+Overall Similarity = ------------------------
+                                 ∑(Weights) * 100</value>
+  </data>
+  <data name="ToolTipItem2.Text" xml:space="preserve">
+    <value>The overall similarity is calculated the following way:
+
+Let ∑(Weighted Scores) be the total sum of weighted scores
+Let ∑(Weights) be the total sum of all involved weights. A weight is involved if there was a chance to calculate a score.
+
+                               ∑(Weighted Scores)
+Overall Similarity = ------------------------
+                                 ∑(Weights) * 100</value>
+  </data>
+</root>
