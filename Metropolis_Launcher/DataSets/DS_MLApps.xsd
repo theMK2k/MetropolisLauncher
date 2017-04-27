@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_MLApps" targetNamespace="http://tempuri.org/DS_MLApps.xsd" xmlns:mstns="http://tempuri.org/DS_MLApps.xsd" xmlns="http://tempuri.org/DS_MLApps.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_MLApps" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_MLApps" msprop:Generator_UserDSName="DS_MLApps">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Categories" msprop:Generator_TableClassName="CategoriesDataTable" msprop:Generator_TableVarName="tableCategories" msprop:Generator_TablePropName="Categories" msprop:Generator_RowDeletingName="CategoriesRowDeleting" msprop:Generator_UserTableName="Categories" msprop:Generator_RowChangingName="CategoriesRowChanging" msprop:Generator_RowEvHandlerName="CategoriesRowChangeEventHandler" msprop:Generator_RowDeletedName="CategoriesRowDeleted" msprop:Generator_RowEvArgName="CategoriesRowChangeEvent" msprop:Generator_RowChangedName="CategoriesRowChanged" msprop:Generator_RowClassName="CategoriesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Categories" msprop:Generator_ColumnVarNameInTable="columnid_Categories" msprop:Generator_ColumnPropNameInRow="id_Categories" msprop:Generator_ColumnPropNameInTable="id_CategoriesColumn" msprop:Generator_UserColumnName="id_Categories" type="xs:long" minOccurs="0" />
+              <xs:element name="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_UserColumnName="Category" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Apps" msprop:Generator_TableClassName="AppsDataTable" msprop:Generator_TableVarName="tableApps" msprop:Generator_TablePropName="Apps" msprop:Generator_RowDeletingName="AppsRowDeleting" msprop:Generator_UserTableName="Apps" msprop:Generator_RowChangingName="AppsRowChanging" msprop:Generator_RowEvHandlerName="AppsRowChangeEventHandler" msprop:Generator_RowDeletedName="AppsRowDeleted" msprop:Generator_RowEvArgName="AppsRowChangeEvent" msprop:Generator_RowChangedName="AppsRowChanged" msprop:Generator_RowClassName="AppsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Apps" msprop:Generator_ColumnVarNameInTable="columnid_Apps" msprop:Generator_ColumnPropNameInRow="id_Apps" msprop:Generator_ColumnPropNameInTable="id_AppsColumn" msprop:Generator_UserColumnName="id_Apps" type="xs:long" minOccurs="0" />
+              <xs:element name="id_Categories" msprop:Generator_ColumnVarNameInTable="columnid_Categories" msprop:Generator_ColumnPropNameInRow="id_Categories" msprop:Generator_ColumnPropNameInTable="id_CategoriesColumn" msprop:Generator_UserColumnName="id_Categories" type="xs:long" minOccurs="0" />
+              <xs:element name="DisplayName" msprop:Generator_ColumnVarNameInTable="columnDisplayName" msprop:Generator_ColumnPropNameInRow="DisplayName" msprop:Generator_ColumnPropNameInTable="DisplayNameColumn" msprop:Generator_UserColumnName="DisplayName" type="xs:string" minOccurs="0" />
+              <xs:element name="Executable" msprop:Generator_ColumnVarNameInTable="columnExecutable" msprop:Generator_ColumnPropNameInRow="Executable" msprop:Generator_ColumnPropNameInTable="ExecutableColumn" msprop:Generator_UserColumnName="Executable" type="xs:string" minOccurs="0" />
+              <xs:element name="Arguments" msprop:Generator_ColumnVarNameInTable="columnArguments" msprop:Generator_ColumnPropNameInRow="Arguments" msprop:Generator_ColumnPropNameInTable="ArgumentsColumn" msprop:Generator_UserColumnName="Arguments" type="xs:string" minOccurs="0" />
+              <xs:element name="RunExclusive" msprop:Generator_ColumnVarNameInTable="columnRunExclusive" msprop:Generator_ColumnPropNameInRow="RunExclusive" msprop:Generator_ColumnPropNameInTable="RunExclusiveColumn" msprop:Generator_UserColumnName="RunExclusive" type="xs:boolean" default="true" minOccurs="0" />
+              <xs:element name="Stat_Executions" msprop:Generator_ColumnVarNameInTable="columnStat_Executions" msprop:Generator_ColumnPropNameInRow="Stat_Executions" msprop:Generator_ColumnPropNameInTable="Stat_ExecutionsColumn" msprop:Generator_UserColumnName="Stat_Executions" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="Stat_RunLength" msprop:Generator_ColumnVarNameInTable="columnStat_RunLength" msprop:Generator_ColumnPropNameInRow="Stat_RunLength" msprop:Generator_ColumnPropNameInTable="Stat_RunLengthColumn" msprop:Generator_UserColumnName="Stat_RunLength" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Categories" />
+      <xs:field xpath="mstns:id_Categories" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Categories_Apps" msdata:parent="Categories" msdata:child="Apps" msdata:parentkey="id_Categories" msdata:childkey="id_Categories" msprop:Generator_UserChildTable="Apps" msprop:Generator_ChildPropName="GetAppsRows" msprop:Generator_ParentPropName="CategoriesRow" msprop:Generator_UserRelationName="Categories_Apps" msprop:Generator_RelationVarName="relationCategories_Apps" msprop:Generator_UserParentTable="Categories" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

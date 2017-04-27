@@ -1,0 +1,1759 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FAFBA71A-26CF-4A0D-B880-F467C92BF104}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Metropolis_Launcher.My.MyApplication</StartupObject>
+    <RootNamespace>Metropolis_Launcher</RootNamespace>
+    <AssemblyName>Metropolis_Launcher</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Metropolis_Launcher.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>42030,42104,42108,42109</WarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Metropolis_Launcher.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>42030,42104,42108,42109</WarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>Off</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PreRelease|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\PreRelease\</OutputPath>
+    <DocumentationFile>Metropolis_Launcher.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Metropolis_Launcher.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Apps\Programming\VS10\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;D:\Apps\Programming\VS10\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <DefineConstants>PreRelease</DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <WarningsAsErrors>42030,42104,42108,42109</WarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>space_invader_icon_1_by_moglenstar.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>Metropolis_Launcher.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Metropolis_Launcher.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\C-Apps\VS10\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\C-Apps\VS10\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <WarningsAsErrors>42030,42104,42108,42109</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>Metropolis_Launcher.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Metropolis_Launcher.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\C-Apps\VS10\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\C-Apps\VS10\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <WarningsAsErrors>42030,42104,42108,42109</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PreRelease|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\PreRelease\</OutputPath>
+    <DefineConstants>PreRelease</DefineConstants>
+    <DocumentationFile>Metropolis_Launcher.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Metropolis_Launcher.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Apps\Programming\VS10\Team Tools\Static Analysis Tools\\Rule Sets;C:\C-Apps\VS10\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Apps\Programming\VS10\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\C-Apps\VS10\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <WarningsAsErrors>42030,42104,42108,42109</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Metropolis_Launcher.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Metropolis_Launcher.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\C-Apps\VS10\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\C-Apps\VS10\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <WarningsAsErrors>42030,42104,42108,42109</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Metropolis_Launcher.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Metropolis_Launcher.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\C-Apps\VS10\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\C-Apps\VS10\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <WarningsAsErrors>42030,42104,42108,42109</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PreRelease|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\PreRelease\</OutputPath>
+    <DefineConstants>PreRelease</DefineConstants>
+    <DocumentationFile>Metropolis_Launcher.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Metropolis_Launcher.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Apps\Programming\VS10\Team Tools\Static Analysis Tools\\Rule Sets;C:\C-Apps\VS10\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Apps\Programming\VS10\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\C-Apps\VS10\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\C-Apps\VS10\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <WarningsAsErrors>42030,42104,42108,42109</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>84B0622CCE92CFC97025B9B7BBE9F1E75B0DE6B9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Metropolis_Launcher_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugTEST|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\DebugTEST\</OutputPath>
+    <DocumentationFile>Metropolis_Launcher.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <WarningsAsErrors>42030,42104,42108,42109</WarningsAsErrors>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugTEST|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\DebugTEST\</OutputPath>
+    <DocumentationFile>Metropolis_Launcher.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <WarningsAsErrors>42030,42104,42108,42109</WarningsAsErrors>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugTEST|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\DebugTEST\</OutputPath>
+    <DocumentationFile>Metropolis_Launcher.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>42030,42104,42108,42109</WarningsAsErrors>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Metropolis_Launcher_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AlphaFS">
+      <HintPath>..\..\..\Libraries\MKNetLib\MKNetLib\Dependencies\AlphaFS.dll</HintPath>
+    </Reference>
+    <Reference Include="DamienG.Library, Version=1.0.5167.26635, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\MKNetLib\MKNetLib\Dependencies\DamienG.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v15.2, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v15.2.Presets, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v15.2.Win, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v15.2, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v15.2, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DiscUtils, Version=0.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\DiscUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="DiscUtils.Common, Version=0.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\DiscUtils.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\..\Libraries\MKNetLib\MKNetLib\Dependencies\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.IWshRuntimeLibrary">
+      <HintPath>Libs\Interop.IWshRuntimeLibrary.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.DirectInput, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="MKNetDXLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\MKNetDXLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MKNetLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\MKNetLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ookii.Dialogs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0c15020868fd6249, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\MKNetLib\MKNetLib\Dependencies\Ookii.Dialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="SgmlReaderDll, Version=1.8.7.40394, Culture=neutral, PublicKeyToken=46b2db9ca481831b, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\MKNetLib\MKNetLib\Dependencies\SgmlReaderDll.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpCompress.3.5">
+      <HintPath>..\..\..\Libraries\MKNetLib\MKNetLib\Dependencies\SharpCompress.3.5.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\MKNetLib\MKNetLib\Dependencies\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="DataAccess = MKNetLib.cls_MKSQLiteDataAccess" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="TC = MKNetLib.cls_MKTypeConverter" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\cls_3IntVec.vb" />
+    <Compile Include="Classes\cls_3ObjVec.vb" />
+    <Compile Include="Classes\cls_AddGameStats.vb" />
+    <Compile Include="Classes\cls_Extras.vb" />
+    <Compile Include="Classes\cls_FilteringModel_Emulation_Games.vb" />
+    <Compile Include="Classes\cls_Globals.vb" />
+    <Compile Include="Classes\cls_PDSettingHandler.vb" />
+    <Compile Include="Classes\cls_PermDecision.vb" />
+    <Compile Include="Classes\cls_Settings.vb" />
+    <Compile Include="DataSets\DS_IMDB.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_IMDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DS_IMDB.vb">
+      <DependentUpon>DS_IMDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DS_ML.Designer.vb">
+      <DependentUpon>DS_ML.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DataSets\DS_ML.vb">
+      <DependentUpon>DS_ML.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DS_MLApps.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_MLApps.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DS_MLApps.vb">
+      <DependentUpon>DS_MLApps.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DS_MobyDB.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_MobyDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DS_MobyDB.vb">
+      <DependentUpon>DS_MobyDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DS_Rombase.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rombase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DS_Rombase.vb">
+      <DependentUpon>DS_Rombase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_About.Designer.vb">
+      <DependentUpon>frm_About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_App_Edit.Designer.vb">
+      <DependentUpon>frm_App_Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_App_Edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Backup.Designer.vb">
+      <DependentUpon>frm_Backup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Backup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Moby_Auto_Link.Designer.vb">
+      <DependentUpon>frm_Moby_Auto_Link.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Moby_Auto_Link.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Moby_Auto_Link_Options.Designer.vb">
+      <DependentUpon>frm_Moby_Auto_Link_Options.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Moby_Auto_Link_Options.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Rescan_Options.Designer.vb">
+      <DependentUpon>frm_Rescan_Options.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Rescan_Options.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Rombase_Manager.Designer.vb">
+      <DependentUpon>frm_Rombase_Manager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Rombase_Manager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_DOSBox_Choose_Exe.Designer.vb">
+      <DependentUpon>frm_DOSBox_Choose_Exe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_DOSBox_Choose_Exe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_DOSBox_Choose_NIC.Designer.vb">
+      <DependentUpon>frm_DOSBox_Choose_NIC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_DOSBox_Choose_NIC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_DOSBox_Templates.Designer.vb">
+      <DependentUpon>frm_DOSBox_Templates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_DOSBox_Templates.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Emu_Game_Screenshotviewer.Designer.vb">
+      <DependentUpon>frm_Emu_Game_Screenshotviewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Emu_Game_Screenshotviewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Export.Designer.vb">
+      <DependentUpon>frm_Export.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Export.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Login.Designer.vb">
+      <DependentUpon>frm_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Mame_Config.Designer.vb">
+      <DependentUpon>frm_Mame_Config.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Mame_Config.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Moby_Staff_Info.Designer.vb">
+      <DependentUpon>frm_Moby_Staff_Info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Moby_Staff_Info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Moby_Game_Group_Info.Designer.vb">
+      <DependentUpon>frm_Moby_Game_Group_Info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Moby_Game_Group_Info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Moby_Platforms_Configuration.Designer.vb">
+      <DependentUpon>frm_Moby_Platforms_Configuration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Moby_Platforms_Configuration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_PermDecision.Designer.vb">
+      <DependentUpon>frm_PermDecision.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_PermDecision.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Rom_Manager_ChangeDirectory.Designer.vb">
+      <DependentUpon>frm_Rom_Manager_ChangeDirectory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Rom_Manager_ChangeDirectory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Description.Designer.vb">
+      <DependentUpon>frm_Description.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Description.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Emulators.Designer.vb">
+      <DependentUpon>frm_Emulators.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Emulators.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Emu_Game_Edit.Designer.vb">
+      <DependentUpon>frm_Emu_Game_Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Emu_Game_Edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Emu_Game_Edit_GenreDescription.Designer.vb">
+      <DependentUpon>frm_Emu_Game_Edit_GenreDescription.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Emu_Game_Edit_GenreDescription.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Emu_Game_Rating_Weights_Edit.Designer.vb">
+      <DependentUpon>frm_Emu_Game_Rating_Weights_Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Emu_Game_Rating_Weights_Edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Emu_ImageSettings.Designer.vb">
+      <DependentUpon>frm_Emu_ImageSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Emu_ImageSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_FilterSet.Designer.vb">
+      <DependentUpon>frm_FilterSet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_FilterSet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Movie_Manager.Designer.vb">
+      <DependentUpon>frm_Movie_Manager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Movie_Manager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Rom_Manager.Designer.vb">
+      <DependentUpon>frm_Rom_Manager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Rom_Manager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Main.Designer.vb">
+      <DependentUpon>frm_Main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Moby_Import.Designer.vb">
+      <DependentUpon>frm_Moby_Import.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Moby_Import.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Screenshot_Edit.Designer.vb">
+      <DependentUpon>frm_Screenshot_Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Screenshot_Edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Search_Missing_Extras.Designer.vb">
+      <DependentUpon>frm_Search_Missing_Extras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Search_Missing_Extras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Similarity_Calculation.Designer.vb">
+      <DependentUpon>frm_Similarity_Calculation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Similarity_Calculation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Similarity_Calculation_Config_Edit.Designer.vb">
+      <DependentUpon>frm_Similarity_Calculation_Config_Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Similarity_Calculation_Config_Edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Similarity_Calculation_Details.Designer.vb">
+      <DependentUpon>frm_Similarity_Calculation_Details.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Similarity_Calculation_Details.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Tag_Parser_Edit.Designer.vb">
+      <DependentUpon>frm_Tag_Parser_Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Tag_Parser_Edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Users_Edit.Designer.vb">
+      <DependentUpon>frm_Users_Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Users_Edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Users_Setup.Designer.vb">
+      <DependentUpon>frm_Users_Setup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Users_Setup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Pages\ucr_Apps.Designer.vb">
+      <DependentUpon>ucr_Apps.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ucr_Apps.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\ucr_Emulation.Designer.vb">
+      <DependentUpon>ucr_Emulation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ucr_Emulation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\ucr_Settings.Designer.vb">
+      <DependentUpon>ucr_Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ucr_Settings.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\ucr_Todo.Designer.vb">
+      <DependentUpon>ucr_Todo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ucr_Todo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucr_DOSBox_Config.Designer.vb">
+      <DependentUpon>ucr_DOSBox_Config.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucr_DOSBox_Config.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucr_Similarity_Calculation_Details_Genre.Designer.vb">
+      <DependentUpon>ucr_Similarity_Calculation_Details_Genre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucr_Similarity_Calculation_Details_Genre.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\frm_About.resx">
+      <DependentUpon>frm_About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_App_Edit.resx">
+      <DependentUpon>frm_App_Edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Backup.resx">
+      <DependentUpon>frm_Backup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Moby_Auto_Link.resx">
+      <DependentUpon>frm_Moby_Auto_Link.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Moby_Auto_Link_Options.resx">
+      <DependentUpon>frm_Moby_Auto_Link_Options.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Rescan_Options.resx">
+      <DependentUpon>frm_Rescan_Options.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Rombase_Manager.resx">
+      <DependentUpon>frm_Rombase_Manager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_DOSBox_Choose_Exe.resx">
+      <DependentUpon>frm_DOSBox_Choose_Exe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_DOSBox_Choose_NIC.resx">
+      <DependentUpon>frm_DOSBox_Choose_NIC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_DOSBox_Templates.resx">
+      <DependentUpon>frm_DOSBox_Templates.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Emu_Game_Screenshotviewer.resx">
+      <DependentUpon>frm_Emu_Game_Screenshotviewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Export.resx">
+      <DependentUpon>frm_Export.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Login.resx">
+      <DependentUpon>frm_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Mame_Config.resx">
+      <DependentUpon>frm_Mame_Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Moby_Staff_Info.resx">
+      <DependentUpon>frm_Moby_Staff_Info.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Moby_Game_Group_Info.resx">
+      <DependentUpon>frm_Moby_Game_Group_Info.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Moby_Platforms_Configuration.resx">
+      <DependentUpon>frm_Moby_Platforms_Configuration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_PermDecision.resx">
+      <DependentUpon>frm_PermDecision.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Rom_Manager_ChangeDirectory.resx">
+      <DependentUpon>frm_Rom_Manager_ChangeDirectory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Description.resx">
+      <DependentUpon>frm_Description.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Emulators.resx">
+      <DependentUpon>frm_Emulators.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Emu_Game_Edit.resx">
+      <DependentUpon>frm_Emu_Game_Edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Emu_Game_Edit_GenreDescription.resx">
+      <DependentUpon>frm_Emu_Game_Edit_GenreDescription.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Emu_Game_Rating_Weights_Edit.resx">
+      <DependentUpon>frm_Emu_Game_Rating_Weights_Edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Emu_ImageSettings.resx">
+      <DependentUpon>frm_Emu_ImageSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_FilterSet.resx">
+      <DependentUpon>frm_FilterSet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Movie_Manager.resx">
+      <DependentUpon>frm_Movie_Manager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Rom_Manager.resx">
+      <DependentUpon>frm_Rom_Manager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Main.resx">
+      <DependentUpon>frm_Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Moby_Import.resx">
+      <DependentUpon>frm_Moby_Import.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Screenshot_Edit.resx">
+      <DependentUpon>frm_Screenshot_Edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Search_Missing_Extras.resx">
+      <DependentUpon>frm_Search_Missing_Extras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Similarity_Calculation.resx">
+      <DependentUpon>frm_Similarity_Calculation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Similarity_Calculation_Config_Edit.resx">
+      <DependentUpon>frm_Similarity_Calculation_Config_Edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Similarity_Calculation_Details.resx">
+      <DependentUpon>frm_Similarity_Calculation_Details.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Tag_Parser_Edit.resx">
+      <DependentUpon>frm_Tag_Parser_Edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Users_Edit.resx">
+      <DependentUpon>frm_Users_Edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Users_Setup.resx">
+      <DependentUpon>frm_Users_Setup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ucr_Apps.resx">
+      <DependentUpon>ucr_Apps.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ucr_Emulation.resx">
+      <DependentUpon>ucr_Emulation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ucr_Settings.resx">
+      <DependentUpon>ucr_Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ucr_Todo.resx">
+      <DependentUpon>ucr_Todo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucr_DOSBox_Config.resx">
+      <DependentUpon>ucr_DOSBox_Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucr_Similarity_Calculation_Details_Genre.resx">
+      <DependentUpon>ucr_Similarity_Calculation_Details_Genre.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Notes\Contact.txt" />
+    <Content Include="Notes\DOSBox_Builds.txt" />
+    <Content Include="Notes\Gridview_Serialization_Properties.txt" />
+    <Content Include="Notes\MetroColors2.html" />
+    <Content Include="Notes\moby_contribution.txt" />
+    <Content Include="Notes\PSX_Releases.txt" />
+    <Content Include="Notes\Rombase_Content.txt" />
+    <Content Include="Notes\Test_Catalog 20150101.txt" />
+    <Content Include="Notes\Test_Catalog.txt" />
+    <Content Include="Notes\TODO.txt" />
+    <EmbeddedResource Include="Resources\helpmap.xml" />
+    <Content Include="ProductPage\.gitignore" />
+    <Content Include="ProductPage\gulpfile.js" />
+    <Content Include="ProductPage\imgsrc_backgrounds\metropolis-launcher-header-a1.jpg" />
+    <Content Include="ProductPage\imgsrc_backgrounds\metropolis-launcher-header-a2-bw.jpg" />
+    <Content Include="ProductPage\imgsrc_backgrounds\metropolis-launcher-header-a2.jpg" />
+    <Content Include="ProductPage\imgsrc_logos-original\bizhawk.jpg" />
+    <Content Include="ProductPage\imgsrc_logos-original\BizHawk.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\dolphin.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\dosbox.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\epsxe.PNG" />
+    <Content Include="ProductPage\imgsrc_logos-original\fs-uae.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\grayscale\internet-archive.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\grayscale\metropolis-launcher.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\grayscale\mobygames.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\grayscale\no-intro.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\grayscale\pdroms.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\grayscale\retroachievements.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\grayscale\retroarch.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\grayscale\tosec.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\internet-archive.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\metropolis-launcher_large_final.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\mobygames-logo.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\no-intro.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\no-intro2.gif" />
+    <Content Include="ProductPage\imgsrc_logos-original\pcsx2.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\pdroms.gif" />
+    <Content Include="ProductPage\imgsrc_logos-original\ppsspp.jpg" />
+    <Content Include="ProductPage\imgsrc_logos-original\ppsspp.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\project64.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\redump.org.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\retroachievements.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\retroarch-plain-logo.png" />
+    <Content Include="ProductPage\imgsrc_logos-original\tosec.gif" />
+    <Content Include="ProductPage\imgsrc_logos-original\vice.png" />
+    <Content Include="ProductPage\img\features\skins.png" />
+    <Content Include="ProductPage\img\features\Tables_Auto_Filter_Row.gif" />
+    <Content Include="ProductPage\img\features\Tables_Auto_Filter_Row.png" />
+    <Content Include="ProductPage\img\features\Tables_Column_Add.gif" />
+    <Content Include="ProductPage\img\features\Tables_Column_Add.png" />
+    <Content Include="ProductPage\img\features\Tables_Column_Clear_All_Sorting.gif" />
+    <Content Include="ProductPage\img\features\Tables_Column_Clear_All_Sorting.png" />
+    <Content Include="ProductPage\img\features\Tables_Column_Clear_Sorting_Contextmenu.gif" />
+    <Content Include="ProductPage\img\features\Tables_Column_Clear_Sorting_Contextmenu.png" />
+    <Content Include="ProductPage\img\features\Tables_Column_Clear_Sorting_CTRL.gif" />
+    <Content Include="ProductPage\img\features\Tables_Column_Clear_Sorting_CTRL.png" />
+    <Content Include="ProductPage\img\features\Tables_Column_Group.gif" />
+    <Content Include="ProductPage\img\features\Tables_Column_Group.png" />
+    <Content Include="ProductPage\img\features\Tables_Column_Group_Contextmenu.gif" />
+    <Content Include="ProductPage\img\features\Tables_Column_Group_Contextmenu.png" />
+    <Content Include="ProductPage\img\features\Tables_Column_Group_Rearrange.gif" />
+    <Content Include="ProductPage\img\features\Tables_Column_Group_Rearrange.png" />
+    <Content Include="ProductPage\img\features\Tables_Column_Hide.gif" />
+    <Content Include="ProductPage\img\features\Tables_Column_Hide.png" />
+    <Content Include="ProductPage\img\features\Tables_Column_Sequence.gif" />
+    <Content Include="ProductPage\img\features\Tables_Column_Sequence.png" />
+    <Content Include="ProductPage\img\features\Tables_Column_Sizing.gif" />
+    <Content Include="ProductPage\img\features\Tables_Column_Sizing.png" />
+    <Content Include="ProductPage\img\features\Tables_Column_Sort.gif" />
+    <Content Include="ProductPage\img\features\Tables_Column_Sort.png" />
+    <Content Include="ProductPage\img\features\Tables_Column_Sort_Multi.gif" />
+    <Content Include="ProductPage\img\features\Tables_Column_Sort_Multi.png" />
+    <Content Include="ProductPage\img\features\Tables_Filtersets.gif" />
+    <Content Include="ProductPage\img\features\Tables_Filtersets.png" />
+    <Content Include="ProductPage\img\features\Tables_Filter_Button.gif" />
+    <Content Include="ProductPage\img\features\Tables_Filter_Button.png" />
+    <Content Include="ProductPage\img\features\Tables_Filter_Button_Datatypes.gif" />
+    <Content Include="ProductPage\img\features\Tables_Filter_Button_Datatypes.png" />
+    <Content Include="ProductPage\img\features\Tables_Filter_Custom_Auto_Filter.gif" />
+    <Content Include="ProductPage\img\features\Tables_Filter_Custom_Auto_Filter.png" />
+    <Content Include="ProductPage\img\features\Tables_Filter_Editor.gif" />
+    <Content Include="ProductPage\img\features\Tables_Filter_Editor.png" />
+    <Content Include="ProductPage\img\features\Tables_Quick_Filter.gif" />
+    <Content Include="ProductPage\img\features\Tables_Quick_Filter.png" />
+    <Content Include="ProductPage\img\features\Tables_Search_as_you_type.gif" />
+    <Content Include="ProductPage\img\features\Tables_Search_as_you_type.png" />
+    <Content Include="ProductPage\img\features\Tables_table-wide_search.gif" />
+    <Content Include="ProductPage\img\features\Tables_table-wide_search.png" />
+    <Content Include="ProductPage\img\logos\bizhawk.png" />
+    <Content Include="ProductPage\img\logos\dolphin.png" />
+    <Content Include="ProductPage\img\logos\dosbox.png" />
+    <Content Include="ProductPage\img\logos\epsxe.png" />
+    <Content Include="ProductPage\img\logos\fs-uae.png" />
+    <Content Include="ProductPage\img\logos\internet-archive.png" />
+    <Content Include="ProductPage\img\logos\metropolis-launcher.png" />
+    <Content Include="ProductPage\img\logos\metropolis-launcher_large.png" />
+    <Content Include="ProductPage\img\logos\mobygames.png" />
+    <Content Include="ProductPage\img\logos\no-intro.png" />
+    <Content Include="ProductPage\img\logos\pcsx2.png" />
+    <Content Include="ProductPage\img\logos\pdroms.png" />
+    <Content Include="ProductPage\img\logos\ppsspp.png" />
+    <Content Include="ProductPage\img\logos\project64.png" />
+    <Content Include="ProductPage\img\logos\redump.png" />
+    <Content Include="ProductPage\img\logos\retroachievements.png" />
+    <Content Include="ProductPage\img\logos\retroarch.png" />
+    <Content Include="ProductPage\img\logos\tosec.png" />
+    <Content Include="ProductPage\img\map-image.png" />
+    <Content Include="ProductPage\img\metropolis-launcher-header.jpg" />
+    <Content Include="ProductPage\img\screenshots\00_Skins.png" />
+    <Content Include="ProductPage\img\screenshots\01_Main-Summary.png" />
+    <Content Include="ProductPage\img\screenshots\02_Main-Technical_Specs.png" />
+    <Content Include="ProductPage\img\screenshots\03_Main-Statistics.png" />
+    <Content Include="ProductPage\img\screenshots\04_Main-Rating.png" />
+    <Content Include="ProductPage\img\screenshots\05_Main-Edit_Rating_Weights.png" />
+    <Content Include="ProductPage\img\screenshots\06_Main-Context_Menu.png" />
+    <Content Include="ProductPage\img\screenshots\07_Main-Header_Context_Menu.png" />
+    <Content Include="ProductPage\img\screenshots\08_Main-Game_Groups.png" />
+    <Content Include="ProductPage\img\screenshots\09_Main-Game_Groups-Info.png" />
+    <Content Include="ProductPage\img\screenshots\102_Main-Developer-Filter.png" />
+    <Content Include="ProductPage\img\screenshots\10_Main-Game_Groups-Filter.png" />
+    <Content Include="ProductPage\img\screenshots\11_Main-Filtering.png" />
+    <Content Include="ProductPage\img\screenshots\12_Main-All_Fields.png" />
+    <Content Include="ProductPage\img\screenshots\13_Edit_Game.png" />
+    <Content Include="ProductPage\img\screenshots\14_Rom_Manager_SMD.png" />
+    <Content Include="ProductPage\img\screenshots\15_Rom_Manager_C64.png" />
+    <Content Include="ProductPage\img\screenshots\16_Rom_Manager_DOS.png" />
+    <Content Include="ProductPage\img\screenshots\17_Emulator_Settings_Multi_Emulator.png" />
+    <Content Include="ProductPage\img\screenshots\18_Emulator_Settings_DosBox_Patches.png" />
+    <Content Include="ProductPage\img\screenshots\19_DOSBox_Templates.png" />
+    <Content Include="ProductPage\img\screenshots\20_MAME_Configuration.png" />
+    <Content Include="ProductPage\img\screenshots\21_Multiuser_Setup.png" />
+    <Content Include="ProductPage\img\screenshots\22_Multiuser_Login.png" />
+    <Content Include="ProductPage\img\screenshots\23_Multiuser_Add_Games.png" />
+    <Content Include="ProductPage\img\screenshots\24_Main_Search_Missing_Extras.png" />
+    <Content Include="ProductPage\img\screenshots\25_Similarity_Calculation01.png" />
+    <Content Include="ProductPage\img\screenshots\26_Similarity_Calculation02.png" />
+    <Content Include="ProductPage\img\screenshots\27_Similarity_Calculation03.png" />
+    <Content Include="ProductPage\img\screenshots\28_Similarity_Calculation04.png" />
+    <Content Include="ProductPage\img\screenshots\DOSBox_Templates.png" />
+    <Content Include="ProductPage\img\screenshots\Emulator_Settings_DOSBox_Patches.png" />
+    <Content Include="ProductPage\img\screenshots\Emulator_Settings_Platform_Support.png" />
+    <Content Include="ProductPage\img\screenshots\Emulator_Settings_Startup_Parameters.png" />
+    <Content Include="ProductPage\img\screenshots\Main_Have_Want_Trade.png" />
+    <Content Include="ProductPage\img\screenshots\Main_Rating_Sorted.png" />
+    <Content Include="ProductPage\img\screenshots\Main_Similarity_Calculation_Results.png" />
+    <Content Include="ProductPage\img\screenshots\Main_Statistics_Columns.png" />
+    <Content Include="ProductPage\img\screenshots\Main_Statistics_Tab.png" />
+    <Content Include="ProductPage\img\screenshots\MAME_Configuration.png" />
+    <Content Include="ProductPage\img\screenshots\Similarity_Calculation_Add_Config_2.png" />
+    <Content Include="ProductPage\img\screenshots\Similarity_Calculation_Results_DOOM.png" />
+    <Content Include="ProductPage\img\screenshots\Tag_Parser_Settings.png" />
+    <Content Include="ProductPage\index_master.html" />
+    <Content Include="ProductPage\js\agency.js" />
+    <Content Include="ProductPage\js\contact_me.js" />
+    <Content Include="ProductPage\js\gallery.js" />
+    <Content Include="ProductPage\js\jqBootstrapValidation.js" />
+    <Content Include="space_invader_icon_1_by_moglenstar.ico" />
+    <None Include="DataSets\DS_IMDB.xsc">
+      <DependentUpon>DS_IMDB.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DS_IMDB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_IMDB.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSets\DS_IMDB.xss">
+      <DependentUpon>DS_IMDB.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DS_ML.xsc">
+      <DependentUpon>DS_ML.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DS_ML.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ML.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSets\DS_ML.xss">
+      <DependentUpon>DS_ML.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DS_MobyDB.xsc">
+      <DependentUpon>DS_MobyDB.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DS_MobyDB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_MobyDB.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSets\DS_MobyDB.xss">
+      <DependentUpon>DS_MobyDB.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DS_Rombase.xsc">
+      <DependentUpon>DS_Rombase.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DS_Rombase.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rombase.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSets\DS_Rombase.xss">
+      <DependentUpon>DS_Rombase.xsd</DependentUpon>
+    </None>
+    <None Include="imdb.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Metropolis_Launcher_TemporaryKey.pfx" />
+    <None Include="ml.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ml.db_initial">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="moby.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="ProductPage\less\agency.less" />
+    <None Include="ProductPage\less\mixins.less" />
+    <None Include="ProductPage\less\variables.less" />
+    <None Include="ProductPage\LICENSE" />
+    <None Include="ProductPage\mail\contact_me.php" />
+    <None Include="ProductPage\package.json" />
+    <None Include="ProductPage\README.md" />
+    <None Include="ProductPage\scss\agency.scss" />
+    <None Include="ProductPage\scss\_mixins.scss" />
+    <None Include="ProductPage\scss\_variables.scss" />
+    <None Include="ProductPage\TODO.md" />
+    <None Include="ProductPage\_Themes\startbootstrap-agency-gh-pages.zip" />
+    <None Include="ProductPage\_Themes\startbootstrap-creative-gh-pages.zip" />
+    <None Include="Resources\pen_white.png" />
+    <None Include="App.config" />
+    <None Include="DataSets\DS_MLApps.xsc">
+      <DependentUpon>DS_MLApps.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DS_MLApps.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_MLApps.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSets\DS_MLApps.xss">
+      <DependentUpon>DS_MLApps.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Notes\MetroColors.html" />
+    <None Include="rombase.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Notes\Metro_BGColors.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="de\DevExpress.Data.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.PivotGrid.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Printing.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.RichEdit.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Utils.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraBars.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraEditors.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraGauges.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraGauges.v15.2.Presets.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraLayout.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraPivotGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraRichEdit.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraTreeList.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Data.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.PivotGrid.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Printing.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.RichEdit.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Utils.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraBars.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraEditors.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraGauges.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraGauges.v15.2.Presets.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraLayout.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraPivotGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraRichEdit.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraTreeList.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Data.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.PivotGrid.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Printing.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.RichEdit.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Utils.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraBars.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraEditors.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraGauges.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraGauges.v15.2.Presets.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraGauges.v15.2.Win.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraLayout.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraPivotGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraRichEdit.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraTreeList.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Data.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.PivotGrid.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Printing.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.RichEdit.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Utils.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraBars.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraEditors.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraGauges.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraGauges.v15.2.Presets.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraLayout.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraPivotGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraRichEdit.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraTreeList.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ProductPage\img\about\" />
+    <Folder Include="ProductPage\img\logos-original\grayscale\" />
+    <Folder Include="ProductPage\img\team\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>call "$(DevEnvDir)..\..\vc\vcvarsall.bat" x86
+"$(DevEnvDir)..\..\vc\bin\EditBin.exe" "$(TargetPath)"  /LARGEADDRESSAWARE</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
