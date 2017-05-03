@@ -4418,7 +4418,7 @@
 	''' <param name="row"></param>
 	''' <remarks></remarks>
 	Public Sub Upsert_Rom_Manager_tbl_Emu_Games(ByRef tran As SQLite.SQLiteTransaction, ByRef row As DataRow)
-		Dim Column_Blacklist As String() = {"ROMBASE_id_Moby_Platforms", "id_Emu_Games", "Rating_Gameplay", "Rating_Graphics", "Rating_Sound", "Rating_Story", "Rating_Personal", "Num_Played", "Num_Runtime"}
+		Dim Column_Blacklist As String() = {"ROMBASE_id_Moby_Platforms", "id_Emu_Games", "Rating_Gameplay", "Rating_Graphics", "Rating_Sound", "Rating_Story", "Rating_Personal", "Num_Played", "Num_Runtime", "deprecated"}
 
 		Dim id_Emu_Games As Object = Nothing
 		If TC.NZ(row("id_Emu_Games"), 0) > 0 Then

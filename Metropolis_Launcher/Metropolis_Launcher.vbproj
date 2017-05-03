@@ -350,30 +350,15 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DiscUtils, Version=0.11.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Libs\DiscUtils.dll</HintPath>
-    </Reference>
-    <Reference Include="DiscUtils.Common, Version=0.11.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Libs\DiscUtils.Common.dll</HintPath>
-    </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\..\..\Libraries\MKNetLib\MKNetLib\Dependencies\HtmlAgilityPack.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.IWshRuntimeLibrary">
-      <HintPath>Libs\Interop.IWshRuntimeLibrary.dll</HintPath>
+    <Reference Include="Interop.IWshRuntimeLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\..\..\Libraries\MKNetLib\MKNetLib\Dependencies\Interop.IWshRuntimeLibrary.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.DirectX.DirectInput, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
-    <Reference Include="MKNetDXLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Libs\MKNetDXLib.dll</HintPath>
-    </Reference>
-    <Reference Include="MKNetLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Libs\MKNetLib.dll</HintPath>
-    </Reference>
     <Reference Include="Ookii.Dialogs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0c15020868fd6249, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Libraries\MKNetLib\MKNetLib\Dependencies\Ookii.Dialogs.dll</HintPath>
@@ -1100,6 +1085,7 @@
     <None Include="ml.chm">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ml.db" />
     <None Include="ml.db_initial">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -1149,6 +1135,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Notes\Metro_BGColors.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Libraries\DiscUtils\src\DiscUtils.csproj">
+      <Project>{dbb340f9-2386-43c2-a473-fa496cbe07a4}</Project>
+      <Name>DiscUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\DiscUtils\utils\DiscUtils.Common\DiscUtils.Common.csproj">
+      <Project>{40f44fcf-5c77-404d-82bd-9e17bda5e04b}</Project>
+      <Name>DiscUtils.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MKNetDXLib\MKNetDXLib.vbproj">
+      <Project>{39539B52-FD58-435A-94D7-398C21984B04}</Project>
+      <Name>MKNetDXLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MKNetLib\MKNetLib\MKNetLib.vbproj">
+      <Project>{5EFF8642-CD3B-498F-A50F-6F05B47325E2}</Project>
+      <Name>MKNetLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="de\DevExpress.Data.v15.2.resources">
