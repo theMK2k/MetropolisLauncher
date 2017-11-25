@@ -27,6 +27,14 @@ Partial Public Class DS_Rombase
     
     Private tabletbl_Rombase As tbl_RombaseDataTable
     
+    Private tabletbl_Rombase_Known_Emulators As tbl_Rombase_Known_EmulatorsDataTable
+    
+    Private tabletbl_Rombase_Known_Emulators_Moby_Platforms As tbl_Rombase_Known_Emulators_Moby_PlatformsDataTable
+    
+    Private tablesrc_frm_Known_Emulators_Moby_Platforms As src_frm_Known_Emulators_Moby_PlatformsDataTable
+    
+    Private tabletbl_Rombase_Known_Emulators_Multivolume_Parameters As tbl_Rombase_Known_Emulators_Multivolume_ParametersDataTable
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -59,6 +67,18 @@ Partial Public Class DS_Rombase
             If (Not (ds.Tables("tbl_Rombase")) Is Nothing) Then
                 MyBase.Tables.Add(New tbl_RombaseDataTable(ds.Tables("tbl_Rombase")))
             End If
+            If (Not (ds.Tables("tbl_Rombase_Known_Emulators")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_Rombase_Known_EmulatorsDataTable(ds.Tables("tbl_Rombase_Known_Emulators")))
+            End If
+            If (Not (ds.Tables("tbl_Rombase_Known_Emulators_Moby_Platforms")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_Rombase_Known_Emulators_Moby_PlatformsDataTable(ds.Tables("tbl_Rombase_Known_Emulators_Moby_Platforms")))
+            End If
+            If (Not (ds.Tables("src_frm_Known_Emulators_Moby_Platforms")) Is Nothing) Then
+                MyBase.Tables.Add(New src_frm_Known_Emulators_Moby_PlatformsDataTable(ds.Tables("src_frm_Known_Emulators_Moby_Platforms")))
+            End If
+            If (Not (ds.Tables("tbl_Rombase_Known_Emulators_Multivolume_Parameters")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_Rombase_Known_Emulators_Multivolume_ParametersDataTable(ds.Tables("tbl_Rombase_Known_Emulators_Multivolume_Parameters")))
+            End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
             Me.Namespace = ds.Namespace
@@ -83,6 +103,46 @@ Partial Public Class DS_Rombase
     Public ReadOnly Property tbl_Rombase() As tbl_RombaseDataTable
         Get
             Return Me.tabletbl_Rombase
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property tbl_Rombase_Known_Emulators() As tbl_Rombase_Known_EmulatorsDataTable
+        Get
+            Return Me.tabletbl_Rombase_Known_Emulators
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property tbl_Rombase_Known_Emulators_Moby_Platforms() As tbl_Rombase_Known_Emulators_Moby_PlatformsDataTable
+        Get
+            Return Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property src_frm_Known_Emulators_Moby_Platforms() As src_frm_Known_Emulators_Moby_PlatformsDataTable
+        Get
+            Return Me.tablesrc_frm_Known_Emulators_Moby_Platforms
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property tbl_Rombase_Known_Emulators_Multivolume_Parameters() As tbl_Rombase_Known_Emulators_Multivolume_ParametersDataTable
+        Get
+            Return Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters
         End Get
     End Property
     
@@ -156,6 +216,18 @@ Partial Public Class DS_Rombase
             If (Not (ds.Tables("tbl_Rombase")) Is Nothing) Then
                 MyBase.Tables.Add(New tbl_RombaseDataTable(ds.Tables("tbl_Rombase")))
             End If
+            If (Not (ds.Tables("tbl_Rombase_Known_Emulators")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_Rombase_Known_EmulatorsDataTable(ds.Tables("tbl_Rombase_Known_Emulators")))
+            End If
+            If (Not (ds.Tables("tbl_Rombase_Known_Emulators_Moby_Platforms")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_Rombase_Known_Emulators_Moby_PlatformsDataTable(ds.Tables("tbl_Rombase_Known_Emulators_Moby_Platforms")))
+            End If
+            If (Not (ds.Tables("src_frm_Known_Emulators_Moby_Platforms")) Is Nothing) Then
+                MyBase.Tables.Add(New src_frm_Known_Emulators_Moby_PlatformsDataTable(ds.Tables("src_frm_Known_Emulators_Moby_Platforms")))
+            End If
+            If (Not (ds.Tables("tbl_Rombase_Known_Emulators_Multivolume_Parameters")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_Rombase_Known_Emulators_Multivolume_ParametersDataTable(ds.Tables("tbl_Rombase_Known_Emulators_Multivolume_Parameters")))
+            End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
             Me.Namespace = ds.Namespace
@@ -194,6 +266,30 @@ Partial Public Class DS_Rombase
                 Me.tabletbl_Rombase.InitVars
             End If
         End If
+        Me.tabletbl_Rombase_Known_Emulators = CType(MyBase.Tables("tbl_Rombase_Known_Emulators"),tbl_Rombase_Known_EmulatorsDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tabletbl_Rombase_Known_Emulators) Is Nothing) Then
+                Me.tabletbl_Rombase_Known_Emulators.InitVars
+            End If
+        End If
+        Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms = CType(MyBase.Tables("tbl_Rombase_Known_Emulators_Moby_Platforms"),tbl_Rombase_Known_Emulators_Moby_PlatformsDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms) Is Nothing) Then
+                Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms.InitVars
+            End If
+        End If
+        Me.tablesrc_frm_Known_Emulators_Moby_Platforms = CType(MyBase.Tables("src_frm_Known_Emulators_Moby_Platforms"),src_frm_Known_Emulators_Moby_PlatformsDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tablesrc_frm_Known_Emulators_Moby_Platforms) Is Nothing) Then
+                Me.tablesrc_frm_Known_Emulators_Moby_Platforms.InitVars
+            End If
+        End If
+        Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters = CType(MyBase.Tables("tbl_Rombase_Known_Emulators_Multivolume_Parameters"),tbl_Rombase_Known_Emulators_Multivolume_ParametersDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters) Is Nothing) Then
+                Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters.InitVars
+            End If
+        End If
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -206,11 +302,43 @@ Partial Public Class DS_Rombase
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tabletbl_Rombase = New tbl_RombaseDataTable()
         MyBase.Tables.Add(Me.tabletbl_Rombase)
+        Me.tabletbl_Rombase_Known_Emulators = New tbl_Rombase_Known_EmulatorsDataTable()
+        MyBase.Tables.Add(Me.tabletbl_Rombase_Known_Emulators)
+        Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms = New tbl_Rombase_Known_Emulators_Moby_PlatformsDataTable()
+        MyBase.Tables.Add(Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms)
+        Me.tablesrc_frm_Known_Emulators_Moby_Platforms = New src_frm_Known_Emulators_Moby_PlatformsDataTable()
+        MyBase.Tables.Add(Me.tablesrc_frm_Known_Emulators_Moby_Platforms)
+        Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters = New tbl_Rombase_Known_Emulators_Multivolume_ParametersDataTable()
+        MyBase.Tables.Add(Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Function ShouldSerializetbl_Rombase() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializetbl_Rombase_Known_Emulators() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializetbl_Rombase_Known_Emulators_Moby_Platforms() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializesrc_frm_Known_Emulators_Moby_Platforms() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializetbl_Rombase_Known_Emulators_Multivolume_Parameters() As Boolean
         Return false
     End Function
     
@@ -274,6 +402,18 @@ Partial Public Class DS_Rombase
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub tbl_RombaseRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_RombaseRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub tbl_Rombase_Known_EmulatorsRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_Rombase_Known_EmulatorsRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub tbl_Rombase_Known_Emulators_Moby_PlatformsRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_Rombase_Known_Emulators_Moby_PlatformsRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub src_frm_Known_Emulators_Moby_PlatformsRowChangeEventHandler(ByVal sender As Object, ByVal e As src_frm_Known_Emulators_Moby_PlatformsRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -700,6 +840,1253 @@ Partial Public Class DS_Rombase
     End Class
     
     '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class tbl_Rombase_Known_EmulatorsDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tbl_Rombase_Known_EmulatorsRow)
+        
+        Private columnid_Rombase_Known_Emulators As Global.System.Data.DataColumn
+        
+        Private columnIdentifier As Global.System.Data.DataColumn
+        
+        Private columnName As Global.System.Data.DataColumn
+        
+        Private columnDescription As Global.System.Data.DataColumn
+        
+        Private columnAutoconfig_Note As Global.System.Data.DataColumn
+        
+        Private columnExe_Identifier_Regex As Global.System.Data.DataColumn
+        
+        Private columnURL_Website As Global.System.Data.DataColumn
+        
+        Private columnURL_Download As Global.System.Data.DataColumn
+        
+        Private columnStartupParameter As Global.System.Data.DataColumn
+        
+        Private columnScreenshotDirectory As Global.System.Data.DataColumn
+        
+        Private columnid_List_Generators As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "tbl_Rombase_Known_Emulators"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Rombase_Known_EmulatorsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Rombase_Known_Emulators
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property IdentifierColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnIdentifier
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnName
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DescriptionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDescription
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Autoconfig_NoteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAutoconfig_Note
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Exe_Identifier_RegexColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnExe_Identifier_Regex
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property URL_WebsiteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnURL_Website
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property URL_DownloadColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnURL_Download
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property StartupParameterColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnStartupParameter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ScreenshotDirectoryColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnScreenshotDirectory
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_List_GeneratorsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_List_Generators
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_Rombase_Known_EmulatorsRow
+            Get
+                Return CType(Me.Rows(index),tbl_Rombase_Known_EmulatorsRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Rombase_Known_EmulatorsRowChanging As tbl_Rombase_Known_EmulatorsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Rombase_Known_EmulatorsRowChanged As tbl_Rombase_Known_EmulatorsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Rombase_Known_EmulatorsRowDeleting As tbl_Rombase_Known_EmulatorsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Rombase_Known_EmulatorsRowDeleted As tbl_Rombase_Known_EmulatorsRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addtbl_Rombase_Known_EmulatorsRow(ByVal row As tbl_Rombase_Known_EmulatorsRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addtbl_Rombase_Known_EmulatorsRow(ByVal Identifier As String, ByVal Name As String, ByVal Description As String, ByVal Autoconfig_Note As String, ByVal Exe_Identifier_Regex As String, ByVal URL_Website As String, ByVal URL_Download As String, ByVal StartupParameter As String, ByVal ScreenshotDirectory As String, ByVal id_List_Generators As Long) As tbl_Rombase_Known_EmulatorsRow
+            Dim rowtbl_Rombase_Known_EmulatorsRow As tbl_Rombase_Known_EmulatorsRow = CType(Me.NewRow,tbl_Rombase_Known_EmulatorsRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, Identifier, Name, Description, Autoconfig_Note, Exe_Identifier_Regex, URL_Website, URL_Download, StartupParameter, ScreenshotDirectory, id_List_Generators}
+            rowtbl_Rombase_Known_EmulatorsRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtbl_Rombase_Known_EmulatorsRow)
+            Return rowtbl_Rombase_Known_EmulatorsRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As tbl_Rombase_Known_EmulatorsDataTable = CType(MyBase.Clone,tbl_Rombase_Known_EmulatorsDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New tbl_Rombase_Known_EmulatorsDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Rombase_Known_Emulators = MyBase.Columns("id_Rombase_Known_Emulators")
+            Me.columnIdentifier = MyBase.Columns("Identifier")
+            Me.columnName = MyBase.Columns("Name")
+            Me.columnDescription = MyBase.Columns("Description")
+            Me.columnAutoconfig_Note = MyBase.Columns("Autoconfig_Note")
+            Me.columnExe_Identifier_Regex = MyBase.Columns("Exe_Identifier_Regex")
+            Me.columnURL_Website = MyBase.Columns("URL_Website")
+            Me.columnURL_Download = MyBase.Columns("URL_Download")
+            Me.columnStartupParameter = MyBase.Columns("StartupParameter")
+            Me.columnScreenshotDirectory = MyBase.Columns("ScreenshotDirectory")
+            Me.columnid_List_Generators = MyBase.Columns("id_List_Generators")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Rombase_Known_Emulators = New Global.System.Data.DataColumn("id_Rombase_Known_Emulators", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Rombase_Known_Emulators)
+            Me.columnIdentifier = New Global.System.Data.DataColumn("Identifier", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIdentifier)
+            Me.columnName = New Global.System.Data.DataColumn("Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnName)
+            Me.columnDescription = New Global.System.Data.DataColumn("Description", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDescription)
+            Me.columnAutoconfig_Note = New Global.System.Data.DataColumn("Autoconfig_Note", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAutoconfig_Note)
+            Me.columnExe_Identifier_Regex = New Global.System.Data.DataColumn("Exe_Identifier_Regex", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnExe_Identifier_Regex)
+            Me.columnURL_Website = New Global.System.Data.DataColumn("URL_Website", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnURL_Website)
+            Me.columnURL_Download = New Global.System.Data.DataColumn("URL_Download", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnURL_Download)
+            Me.columnStartupParameter = New Global.System.Data.DataColumn("StartupParameter", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnStartupParameter)
+            Me.columnScreenshotDirectory = New Global.System.Data.DataColumn("ScreenshotDirectory", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnScreenshotDirectory)
+            Me.columnid_List_Generators = New Global.System.Data.DataColumn("id_List_Generators", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_List_Generators)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_Rombase_Known_Emulators}, false))
+            Me.columnid_Rombase_Known_Emulators.AutoIncrement = true
+            Me.columnid_Rombase_Known_Emulators.AutoIncrementSeed = -1
+            Me.columnid_Rombase_Known_Emulators.AutoIncrementStep = -1
+            Me.columnid_Rombase_Known_Emulators.AllowDBNull = false
+            Me.columnid_Rombase_Known_Emulators.Unique = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newtbl_Rombase_Known_EmulatorsRow() As tbl_Rombase_Known_EmulatorsRow
+            Return CType(Me.NewRow,tbl_Rombase_Known_EmulatorsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New tbl_Rombase_Known_EmulatorsRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(tbl_Rombase_Known_EmulatorsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.tbl_Rombase_Known_EmulatorsRowChangedEvent) Is Nothing) Then
+                RaiseEvent tbl_Rombase_Known_EmulatorsRowChanged(Me, New tbl_Rombase_Known_EmulatorsRowChangeEvent(CType(e.Row,tbl_Rombase_Known_EmulatorsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.tbl_Rombase_Known_EmulatorsRowChangingEvent) Is Nothing) Then
+                RaiseEvent tbl_Rombase_Known_EmulatorsRowChanging(Me, New tbl_Rombase_Known_EmulatorsRowChangeEvent(CType(e.Row,tbl_Rombase_Known_EmulatorsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.tbl_Rombase_Known_EmulatorsRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tbl_Rombase_Known_EmulatorsRowDeleted(Me, New tbl_Rombase_Known_EmulatorsRowChangeEvent(CType(e.Row,tbl_Rombase_Known_EmulatorsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.tbl_Rombase_Known_EmulatorsRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tbl_Rombase_Known_EmulatorsRowDeleting(Me, New tbl_Rombase_Known_EmulatorsRowChangeEvent(CType(e.Row,tbl_Rombase_Known_EmulatorsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removetbl_Rombase_Known_EmulatorsRow(ByVal row As tbl_Rombase_Known_EmulatorsRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_Rombase = New DS_Rombase()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "tbl_Rombase_Known_EmulatorsDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class tbl_Rombase_Known_Emulators_Moby_PlatformsDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tbl_Rombase_Known_Emulators_Moby_PlatformsRow)
+        
+        Private columnid_Rombase_Known_Emulators_Moby_Platforms As Global.System.Data.DataColumn
+        
+        Private columnid_Rombase_Known_Emulators As Global.System.Data.DataColumn
+        
+        Private columnid_Moby_Platforms As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "tbl_Rombase_Known_Emulators_Moby_Platforms"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Rombase_Known_Emulators_Moby_PlatformsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Rombase_Known_Emulators_Moby_Platforms
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Rombase_Known_EmulatorsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Rombase_Known_Emulators
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Moby_PlatformsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Moby_Platforms
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_Rombase_Known_Emulators_Moby_PlatformsRow
+            Get
+                Return CType(Me.Rows(index),tbl_Rombase_Known_Emulators_Moby_PlatformsRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Rombase_Known_Emulators_Moby_PlatformsRowChanging As tbl_Rombase_Known_Emulators_Moby_PlatformsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Rombase_Known_Emulators_Moby_PlatformsRowChanged As tbl_Rombase_Known_Emulators_Moby_PlatformsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Rombase_Known_Emulators_Moby_PlatformsRowDeleting As tbl_Rombase_Known_Emulators_Moby_PlatformsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Rombase_Known_Emulators_Moby_PlatformsRowDeleted As tbl_Rombase_Known_Emulators_Moby_PlatformsRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addtbl_Rombase_Known_Emulators_Moby_PlatformsRow(ByVal row As tbl_Rombase_Known_Emulators_Moby_PlatformsRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addtbl_Rombase_Known_Emulators_Moby_PlatformsRow(ByVal id_Rombase_Known_Emulators As Long, ByVal id_Moby_Platforms As Long) As tbl_Rombase_Known_Emulators_Moby_PlatformsRow
+            Dim rowtbl_Rombase_Known_Emulators_Moby_PlatformsRow As tbl_Rombase_Known_Emulators_Moby_PlatformsRow = CType(Me.NewRow,tbl_Rombase_Known_Emulators_Moby_PlatformsRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, id_Rombase_Known_Emulators, id_Moby_Platforms}
+            rowtbl_Rombase_Known_Emulators_Moby_PlatformsRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtbl_Rombase_Known_Emulators_Moby_PlatformsRow)
+            Return rowtbl_Rombase_Known_Emulators_Moby_PlatformsRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As tbl_Rombase_Known_Emulators_Moby_PlatformsDataTable = CType(MyBase.Clone,tbl_Rombase_Known_Emulators_Moby_PlatformsDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New tbl_Rombase_Known_Emulators_Moby_PlatformsDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Rombase_Known_Emulators_Moby_Platforms = MyBase.Columns("id_Rombase_Known_Emulators_Moby_Platforms")
+            Me.columnid_Rombase_Known_Emulators = MyBase.Columns("id_Rombase_Known_Emulators")
+            Me.columnid_Moby_Platforms = MyBase.Columns("id_Moby_Platforms")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Rombase_Known_Emulators_Moby_Platforms = New Global.System.Data.DataColumn("id_Rombase_Known_Emulators_Moby_Platforms", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Rombase_Known_Emulators_Moby_Platforms)
+            Me.columnid_Rombase_Known_Emulators = New Global.System.Data.DataColumn("id_Rombase_Known_Emulators", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Rombase_Known_Emulators)
+            Me.columnid_Moby_Platforms = New Global.System.Data.DataColumn("id_Moby_Platforms", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Moby_Platforms)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_Rombase_Known_Emulators_Moby_Platforms}, false))
+            Me.columnid_Rombase_Known_Emulators_Moby_Platforms.AutoIncrement = true
+            Me.columnid_Rombase_Known_Emulators_Moby_Platforms.AutoIncrementSeed = -1
+            Me.columnid_Rombase_Known_Emulators_Moby_Platforms.AutoIncrementStep = -1
+            Me.columnid_Rombase_Known_Emulators_Moby_Platforms.AllowDBNull = false
+            Me.columnid_Rombase_Known_Emulators_Moby_Platforms.Unique = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newtbl_Rombase_Known_Emulators_Moby_PlatformsRow() As tbl_Rombase_Known_Emulators_Moby_PlatformsRow
+            Return CType(Me.NewRow,tbl_Rombase_Known_Emulators_Moby_PlatformsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New tbl_Rombase_Known_Emulators_Moby_PlatformsRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(tbl_Rombase_Known_Emulators_Moby_PlatformsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.tbl_Rombase_Known_Emulators_Moby_PlatformsRowChangedEvent) Is Nothing) Then
+                RaiseEvent tbl_Rombase_Known_Emulators_Moby_PlatformsRowChanged(Me, New tbl_Rombase_Known_Emulators_Moby_PlatformsRowChangeEvent(CType(e.Row,tbl_Rombase_Known_Emulators_Moby_PlatformsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.tbl_Rombase_Known_Emulators_Moby_PlatformsRowChangingEvent) Is Nothing) Then
+                RaiseEvent tbl_Rombase_Known_Emulators_Moby_PlatformsRowChanging(Me, New tbl_Rombase_Known_Emulators_Moby_PlatformsRowChangeEvent(CType(e.Row,tbl_Rombase_Known_Emulators_Moby_PlatformsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.tbl_Rombase_Known_Emulators_Moby_PlatformsRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tbl_Rombase_Known_Emulators_Moby_PlatformsRowDeleted(Me, New tbl_Rombase_Known_Emulators_Moby_PlatformsRowChangeEvent(CType(e.Row,tbl_Rombase_Known_Emulators_Moby_PlatformsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.tbl_Rombase_Known_Emulators_Moby_PlatformsRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tbl_Rombase_Known_Emulators_Moby_PlatformsRowDeleting(Me, New tbl_Rombase_Known_Emulators_Moby_PlatformsRowChangeEvent(CType(e.Row,tbl_Rombase_Known_Emulators_Moby_PlatformsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removetbl_Rombase_Known_Emulators_Moby_PlatformsRow(ByVal row As tbl_Rombase_Known_Emulators_Moby_PlatformsRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_Rombase = New DS_Rombase()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "tbl_Rombase_Known_Emulators_Moby_PlatformsDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class src_frm_Known_Emulators_Moby_PlatformsDataTable
+        Inherits Global.System.Data.TypedTableBase(Of src_frm_Known_Emulators_Moby_PlatformsRow)
+        
+        Private columnid_Moby_Platforms As Global.System.Data.DataColumn
+        
+        Private columnSupported As Global.System.Data.DataColumn
+        
+        Private columnDisplay_Name As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "src_frm_Known_Emulators_Moby_Platforms"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Moby_PlatformsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Moby_Platforms
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SupportedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSupported
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Display_NameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDisplay_Name
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As src_frm_Known_Emulators_Moby_PlatformsRow
+            Get
+                Return CType(Me.Rows(index),src_frm_Known_Emulators_Moby_PlatformsRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event src_frm_Known_Emulators_Moby_PlatformsRowChanging As src_frm_Known_Emulators_Moby_PlatformsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event src_frm_Known_Emulators_Moby_PlatformsRowChanged As src_frm_Known_Emulators_Moby_PlatformsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event src_frm_Known_Emulators_Moby_PlatformsRowDeleting As src_frm_Known_Emulators_Moby_PlatformsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event src_frm_Known_Emulators_Moby_PlatformsRowDeleted As src_frm_Known_Emulators_Moby_PlatformsRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addsrc_frm_Known_Emulators_Moby_PlatformsRow(ByVal row As src_frm_Known_Emulators_Moby_PlatformsRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addsrc_frm_Known_Emulators_Moby_PlatformsRow(ByVal id_Moby_Platforms As Integer, ByVal Supported As Boolean, ByVal Display_Name As String) As src_frm_Known_Emulators_Moby_PlatformsRow
+            Dim rowsrc_frm_Known_Emulators_Moby_PlatformsRow As src_frm_Known_Emulators_Moby_PlatformsRow = CType(Me.NewRow,src_frm_Known_Emulators_Moby_PlatformsRow)
+            Dim columnValuesArray() As Object = New Object() {id_Moby_Platforms, Supported, Display_Name}
+            rowsrc_frm_Known_Emulators_Moby_PlatformsRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowsrc_frm_Known_Emulators_Moby_PlatformsRow)
+            Return rowsrc_frm_Known_Emulators_Moby_PlatformsRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As src_frm_Known_Emulators_Moby_PlatformsDataTable = CType(MyBase.Clone,src_frm_Known_Emulators_Moby_PlatformsDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New src_frm_Known_Emulators_Moby_PlatformsDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Moby_Platforms = MyBase.Columns("id_Moby_Platforms")
+            Me.columnSupported = MyBase.Columns("Supported")
+            Me.columnDisplay_Name = MyBase.Columns("Display_Name")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Moby_Platforms = New Global.System.Data.DataColumn("id_Moby_Platforms", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Moby_Platforms)
+            Me.columnSupported = New Global.System.Data.DataColumn("Supported", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSupported)
+            Me.columnDisplay_Name = New Global.System.Data.DataColumn("Display_Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDisplay_Name)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newsrc_frm_Known_Emulators_Moby_PlatformsRow() As src_frm_Known_Emulators_Moby_PlatformsRow
+            Return CType(Me.NewRow,src_frm_Known_Emulators_Moby_PlatformsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New src_frm_Known_Emulators_Moby_PlatformsRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(src_frm_Known_Emulators_Moby_PlatformsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.src_frm_Known_Emulators_Moby_PlatformsRowChangedEvent) Is Nothing) Then
+                RaiseEvent src_frm_Known_Emulators_Moby_PlatformsRowChanged(Me, New src_frm_Known_Emulators_Moby_PlatformsRowChangeEvent(CType(e.Row,src_frm_Known_Emulators_Moby_PlatformsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.src_frm_Known_Emulators_Moby_PlatformsRowChangingEvent) Is Nothing) Then
+                RaiseEvent src_frm_Known_Emulators_Moby_PlatformsRowChanging(Me, New src_frm_Known_Emulators_Moby_PlatformsRowChangeEvent(CType(e.Row,src_frm_Known_Emulators_Moby_PlatformsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.src_frm_Known_Emulators_Moby_PlatformsRowDeletedEvent) Is Nothing) Then
+                RaiseEvent src_frm_Known_Emulators_Moby_PlatformsRowDeleted(Me, New src_frm_Known_Emulators_Moby_PlatformsRowChangeEvent(CType(e.Row,src_frm_Known_Emulators_Moby_PlatformsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.src_frm_Known_Emulators_Moby_PlatformsRowDeletingEvent) Is Nothing) Then
+                RaiseEvent src_frm_Known_Emulators_Moby_PlatformsRowDeleting(Me, New src_frm_Known_Emulators_Moby_PlatformsRowChangeEvent(CType(e.Row,src_frm_Known_Emulators_Moby_PlatformsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removesrc_frm_Known_Emulators_Moby_PlatformsRow(ByVal row As src_frm_Known_Emulators_Moby_PlatformsRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_Rombase = New DS_Rombase()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "src_frm_Known_Emulators_Moby_PlatformsDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class tbl_Rombase_Known_Emulators_Multivolume_ParametersDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tbl_Rombase_Known_Emulators_Multivolume_ParametersRow)
+        
+        Private columnid_Rombase_Known_Emulators_Multivolume_Parameters As Global.System.Data.DataColumn
+        
+        Private columnid_Rombase_Known_Emulators As Global.System.Data.DataColumn
+        
+        Private columnVolume_Number As Global.System.Data.DataColumn
+        
+        Private columnParameter As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "tbl_Rombase_Known_Emulators_Multivolume_Parameters"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Rombase_Known_Emulators_Multivolume_ParametersColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Rombase_Known_Emulators_Multivolume_Parameters
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Rombase_Known_EmulatorsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Rombase_Known_Emulators
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Volume_NumberColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnVolume_Number
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ParameterColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnParameter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_Rombase_Known_Emulators_Multivolume_ParametersRow
+            Get
+                Return CType(Me.Rows(index),tbl_Rombase_Known_Emulators_Multivolume_ParametersRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChanging As tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChanged As tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Rombase_Known_Emulators_Multivolume_ParametersRowDeleting As tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Rombase_Known_Emulators_Multivolume_ParametersRowDeleted As tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addtbl_Rombase_Known_Emulators_Multivolume_ParametersRow(ByVal row As tbl_Rombase_Known_Emulators_Multivolume_ParametersRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addtbl_Rombase_Known_Emulators_Multivolume_ParametersRow(ByVal id_Rombase_Known_Emulators As Long, ByVal Volume_Number As Long, ByVal Parameter As String) As tbl_Rombase_Known_Emulators_Multivolume_ParametersRow
+            Dim rowtbl_Rombase_Known_Emulators_Multivolume_ParametersRow As tbl_Rombase_Known_Emulators_Multivolume_ParametersRow = CType(Me.NewRow,tbl_Rombase_Known_Emulators_Multivolume_ParametersRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, id_Rombase_Known_Emulators, Volume_Number, Parameter}
+            rowtbl_Rombase_Known_Emulators_Multivolume_ParametersRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtbl_Rombase_Known_Emulators_Multivolume_ParametersRow)
+            Return rowtbl_Rombase_Known_Emulators_Multivolume_ParametersRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As tbl_Rombase_Known_Emulators_Multivolume_ParametersDataTable = CType(MyBase.Clone,tbl_Rombase_Known_Emulators_Multivolume_ParametersDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New tbl_Rombase_Known_Emulators_Multivolume_ParametersDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Rombase_Known_Emulators_Multivolume_Parameters = MyBase.Columns("id_Rombase_Known_Emulators_Multivolume_Parameters")
+            Me.columnid_Rombase_Known_Emulators = MyBase.Columns("id_Rombase_Known_Emulators")
+            Me.columnVolume_Number = MyBase.Columns("Volume_Number")
+            Me.columnParameter = MyBase.Columns("Parameter")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Rombase_Known_Emulators_Multivolume_Parameters = New Global.System.Data.DataColumn("id_Rombase_Known_Emulators_Multivolume_Parameters", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Rombase_Known_Emulators_Multivolume_Parameters)
+            Me.columnid_Rombase_Known_Emulators = New Global.System.Data.DataColumn("id_Rombase_Known_Emulators", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Rombase_Known_Emulators)
+            Me.columnVolume_Number = New Global.System.Data.DataColumn("Volume_Number", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnVolume_Number)
+            Me.columnParameter = New Global.System.Data.DataColumn("Parameter", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnParameter)
+            Me.columnid_Rombase_Known_Emulators_Multivolume_Parameters.AutoIncrement = true
+            Me.columnid_Rombase_Known_Emulators_Multivolume_Parameters.AutoIncrementSeed = -1
+            Me.columnid_Rombase_Known_Emulators_Multivolume_Parameters.AutoIncrementStep = -1
+            Me.columnid_Rombase_Known_Emulators_Multivolume_Parameters.AllowDBNull = false
+            Me.columnid_Rombase_Known_Emulators_Multivolume_Parameters.Caption = "id_Emulators_Multivolume_Parameters"
+            Me.columnid_Rombase_Known_Emulators.Caption = "id_Emulators"
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newtbl_Rombase_Known_Emulators_Multivolume_ParametersRow() As tbl_Rombase_Known_Emulators_Multivolume_ParametersRow
+            Return CType(Me.NewRow,tbl_Rombase_Known_Emulators_Multivolume_ParametersRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New tbl_Rombase_Known_Emulators_Multivolume_ParametersRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(tbl_Rombase_Known_Emulators_Multivolume_ParametersRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChangedEvent) Is Nothing) Then
+                RaiseEvent tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChanged(Me, New tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChangeEvent(CType(e.Row,tbl_Rombase_Known_Emulators_Multivolume_ParametersRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChangingEvent) Is Nothing) Then
+                RaiseEvent tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChanging(Me, New tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChangeEvent(CType(e.Row,tbl_Rombase_Known_Emulators_Multivolume_ParametersRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.tbl_Rombase_Known_Emulators_Multivolume_ParametersRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tbl_Rombase_Known_Emulators_Multivolume_ParametersRowDeleted(Me, New tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChangeEvent(CType(e.Row,tbl_Rombase_Known_Emulators_Multivolume_ParametersRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.tbl_Rombase_Known_Emulators_Multivolume_ParametersRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tbl_Rombase_Known_Emulators_Multivolume_ParametersRowDeleting(Me, New tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChangeEvent(CType(e.Row,tbl_Rombase_Known_Emulators_Multivolume_ParametersRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removetbl_Rombase_Known_Emulators_Multivolume_ParametersRow(ByVal row As tbl_Rombase_Known_Emulators_Multivolume_ParametersRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_Rombase = New DS_Rombase()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "tbl_Rombase_Known_Emulators_Multivolume_ParametersDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
     Partial Public Class tbl_RombaseRow
@@ -1051,6 +2438,606 @@ Partial Public Class DS_Rombase
     End Class
     
     '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class tbl_Rombase_Known_EmulatorsRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tabletbl_Rombase_Known_Emulators As tbl_Rombase_Known_EmulatorsDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tabletbl_Rombase_Known_Emulators = CType(Me.Table,tbl_Rombase_Known_EmulatorsDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Rombase_Known_Emulators() As Long
+            Get
+                Return CType(Me(Me.tabletbl_Rombase_Known_Emulators.id_Rombase_Known_EmulatorsColumn),Long)
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators.id_Rombase_Known_EmulatorsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Identifier() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Rombase_Known_Emulators.IdentifierColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Identifier in Tabelle tbl_Rombase_Known_Emulators ist DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators.IdentifierColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Name() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Rombase_Known_Emulators.NameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Name in Tabelle tbl_Rombase_Known_Emulators ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators.NameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Description() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Rombase_Known_Emulators.DescriptionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Description in Tabelle tbl_Rombase_Known_Emulators ist DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators.DescriptionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Autoconfig_Note() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Rombase_Known_Emulators.Autoconfig_NoteColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Autoconfig_Note in Tabelle tbl_Rombase_Known_Emulators ist DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators.Autoconfig_NoteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Exe_Identifier_Regex() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Rombase_Known_Emulators.Exe_Identifier_RegexColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Exe_Identifier_Regex in Tabelle tbl_Rombase_Known_Emulators i"& _ 
+                            "st DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators.Exe_Identifier_RegexColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property URL_Website() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Rombase_Known_Emulators.URL_WebsiteColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte URL_Website in Tabelle tbl_Rombase_Known_Emulators ist DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators.URL_WebsiteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property URL_Download() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Rombase_Known_Emulators.URL_DownloadColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte URL_Download in Tabelle tbl_Rombase_Known_Emulators ist DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators.URL_DownloadColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property StartupParameter() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Rombase_Known_Emulators.StartupParameterColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte StartupParameter in Tabelle tbl_Rombase_Known_Emulators ist D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators.StartupParameterColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ScreenshotDirectory() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Rombase_Known_Emulators.ScreenshotDirectoryColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte ScreenshotDirectory in Tabelle tbl_Rombase_Known_Emulators is"& _ 
+                            "t DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators.ScreenshotDirectoryColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_List_Generators() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Rombase_Known_Emulators.id_List_GeneratorsColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_List_Generators in Tabelle tbl_Rombase_Known_Emulators ist"& _ 
+                            " DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators.id_List_GeneratorsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsIdentifierNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Rombase_Known_Emulators.IdentifierColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetIdentifierNull()
+            Me(Me.tabletbl_Rombase_Known_Emulators.IdentifierColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNameNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Rombase_Known_Emulators.NameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNameNull()
+            Me(Me.tabletbl_Rombase_Known_Emulators.NameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDescriptionNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Rombase_Known_Emulators.DescriptionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDescriptionNull()
+            Me(Me.tabletbl_Rombase_Known_Emulators.DescriptionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsAutoconfig_NoteNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Rombase_Known_Emulators.Autoconfig_NoteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetAutoconfig_NoteNull()
+            Me(Me.tabletbl_Rombase_Known_Emulators.Autoconfig_NoteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsExe_Identifier_RegexNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Rombase_Known_Emulators.Exe_Identifier_RegexColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetExe_Identifier_RegexNull()
+            Me(Me.tabletbl_Rombase_Known_Emulators.Exe_Identifier_RegexColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsURL_WebsiteNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Rombase_Known_Emulators.URL_WebsiteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetURL_WebsiteNull()
+            Me(Me.tabletbl_Rombase_Known_Emulators.URL_WebsiteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsURL_DownloadNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Rombase_Known_Emulators.URL_DownloadColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetURL_DownloadNull()
+            Me(Me.tabletbl_Rombase_Known_Emulators.URL_DownloadColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsStartupParameterNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Rombase_Known_Emulators.StartupParameterColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetStartupParameterNull()
+            Me(Me.tabletbl_Rombase_Known_Emulators.StartupParameterColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsScreenshotDirectoryNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Rombase_Known_Emulators.ScreenshotDirectoryColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetScreenshotDirectoryNull()
+            Me(Me.tabletbl_Rombase_Known_Emulators.ScreenshotDirectoryColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_List_GeneratorsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Rombase_Known_Emulators.id_List_GeneratorsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_List_GeneratorsNull()
+            Me(Me.tabletbl_Rombase_Known_Emulators.id_List_GeneratorsColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class tbl_Rombase_Known_Emulators_Moby_PlatformsRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tabletbl_Rombase_Known_Emulators_Moby_Platforms As tbl_Rombase_Known_Emulators_Moby_PlatformsDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms = CType(Me.Table,tbl_Rombase_Known_Emulators_Moby_PlatformsDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Rombase_Known_Emulators_Moby_Platforms() As Long
+            Get
+                Return CType(Me(Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms.id_Rombase_Known_Emulators_Moby_PlatformsColumn),Long)
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms.id_Rombase_Known_Emulators_Moby_PlatformsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Rombase_Known_Emulators() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms.id_Rombase_Known_EmulatorsColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Rombase_Known_Emulators in Tabelle tbl_Rombase_Known_Emula"& _ 
+                            "tors_Moby_Platforms ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms.id_Rombase_Known_EmulatorsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Moby_Platforms() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms.id_Moby_PlatformsColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Moby_Platforms in Tabelle tbl_Rombase_Known_Emulators_Moby"& _ 
+                            "_Platforms ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms.id_Moby_PlatformsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Rombase_Known_EmulatorsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms.id_Rombase_Known_EmulatorsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Rombase_Known_EmulatorsNull()
+            Me(Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms.id_Rombase_Known_EmulatorsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Moby_PlatformsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms.id_Moby_PlatformsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Moby_PlatformsNull()
+            Me(Me.tabletbl_Rombase_Known_Emulators_Moby_Platforms.id_Moby_PlatformsColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class src_frm_Known_Emulators_Moby_PlatformsRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tablesrc_frm_Known_Emulators_Moby_Platforms As src_frm_Known_Emulators_Moby_PlatformsDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tablesrc_frm_Known_Emulators_Moby_Platforms = CType(Me.Table,src_frm_Known_Emulators_Moby_PlatformsDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Moby_Platforms() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_frm_Known_Emulators_Moby_Platforms.id_Moby_PlatformsColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Moby_Platforms in Tabelle src_frm_Known_Emulators_Moby_Pla"& _ 
+                            "tforms ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_frm_Known_Emulators_Moby_Platforms.id_Moby_PlatformsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Supported() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_frm_Known_Emulators_Moby_Platforms.SupportedColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Supported in Tabelle src_frm_Known_Emulators_Moby_Platforms i"& _ 
+                            "st DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_frm_Known_Emulators_Moby_Platforms.SupportedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Display_Name() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_frm_Known_Emulators_Moby_Platforms.Display_NameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Display_Name in Tabelle src_frm_Known_Emulators_Moby_Platform"& _ 
+                            "s ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_frm_Known_Emulators_Moby_Platforms.Display_NameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Moby_PlatformsNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_frm_Known_Emulators_Moby_Platforms.id_Moby_PlatformsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Moby_PlatformsNull()
+            Me(Me.tablesrc_frm_Known_Emulators_Moby_Platforms.id_Moby_PlatformsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSupportedNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_frm_Known_Emulators_Moby_Platforms.SupportedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSupportedNull()
+            Me(Me.tablesrc_frm_Known_Emulators_Moby_Platforms.SupportedColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDisplay_NameNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_frm_Known_Emulators_Moby_Platforms.Display_NameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDisplay_NameNull()
+            Me(Me.tablesrc_frm_Known_Emulators_Moby_Platforms.Display_NameColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class tbl_Rombase_Known_Emulators_Multivolume_ParametersRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tabletbl_Rombase_Known_Emulators_Multivolume_Parameters As tbl_Rombase_Known_Emulators_Multivolume_ParametersDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters = CType(Me.Table,tbl_Rombase_Known_Emulators_Multivolume_ParametersDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Rombase_Known_Emulators_Multivolume_Parameters() As Long
+            Get
+                Return CType(Me(Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters.id_Rombase_Known_Emulators_Multivolume_ParametersColumn),Long)
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters.id_Rombase_Known_Emulators_Multivolume_ParametersColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Rombase_Known_Emulators() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters.id_Rombase_Known_EmulatorsColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Rombase_Known_Emulators in Tabelle tbl_Rombase_Known_Emula"& _ 
+                            "tors_Multivolume_Parameters ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters.id_Rombase_Known_EmulatorsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Volume_Number() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters.Volume_NumberColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Volume_Number in Tabelle tbl_Rombase_Known_Emulators_Multivol"& _ 
+                            "ume_Parameters ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters.Volume_NumberColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Parameter() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters.ParameterColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Parameter in Tabelle tbl_Rombase_Known_Emulators_Multivolume_"& _ 
+                            "Parameters ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters.ParameterColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Rombase_Known_EmulatorsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters.id_Rombase_Known_EmulatorsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Rombase_Known_EmulatorsNull()
+            Me(Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters.id_Rombase_Known_EmulatorsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsVolume_NumberNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters.Volume_NumberColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetVolume_NumberNull()
+            Me(Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters.Volume_NumberColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsParameterNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters.ParameterColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetParameterNull()
+            Me(Me.tabletbl_Rombase_Known_Emulators_Multivolume_Parameters.ParameterColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -1072,6 +3059,150 @@ Partial Public Class DS_Rombase
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As tbl_RombaseRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class tbl_Rombase_Known_EmulatorsRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As tbl_Rombase_Known_EmulatorsRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As tbl_Rombase_Known_EmulatorsRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As tbl_Rombase_Known_EmulatorsRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class tbl_Rombase_Known_Emulators_Moby_PlatformsRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As tbl_Rombase_Known_Emulators_Moby_PlatformsRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As tbl_Rombase_Known_Emulators_Moby_PlatformsRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As tbl_Rombase_Known_Emulators_Moby_PlatformsRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class src_frm_Known_Emulators_Moby_PlatformsRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As src_frm_Known_Emulators_Moby_PlatformsRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As src_frm_Known_Emulators_Moby_PlatformsRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As src_frm_Known_Emulators_Moby_PlatformsRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As tbl_Rombase_Known_Emulators_Multivolume_ParametersRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As tbl_Rombase_Known_Emulators_Multivolume_ParametersRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As tbl_Rombase_Known_Emulators_Multivolume_ParametersRow
             Get
                 Return Me.eventRow
             End Get

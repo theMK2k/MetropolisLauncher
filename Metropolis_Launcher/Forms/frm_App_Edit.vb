@@ -16,7 +16,7 @@
 	Private Sub btn_OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_OK.Click
 		'TODO: Checks
 		If TC.NZ(cmb_Category.EditValue, 0) = 0 Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("Please choose a category.")
+			MKDXHelper.MessageBox("Please choose a category.", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 			cmb_Category.Focus()
 			Return
 		End If

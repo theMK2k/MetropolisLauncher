@@ -237,7 +237,7 @@ Public Class frm_Main
 					prg.Close()
 				Catch ex As Exception
 					prg.Close()
-					DevExpress.XtraEditors.XtraMessageBox.Show("Error while creating " & targetfullpath & "." & ControlChars.CrLf & ControlChars.CrLf & ex.Message, "Creating Backup", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+					MKDXHelper.ExceptionMessageBox(ex, "Error while creating " & targetfullpath & "." & ControlChars.CrLf & ControlChars.CrLf, "Creating Backup")
 				End Try
 
 				Try
@@ -256,7 +256,7 @@ Public Class frm_Main
 				Catch ex As Exception
 					prg.Close()
 
-					DevExpress.XtraEditors.XtraMessageBox.Show("Error while cleaning up:" & ControlChars.CrLf & ControlChars.CrLf & ex.Message, "Cleanup Backupdirectory", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+					MKDXHelper.ExceptionMessageBox(ex, "Error while cleaning up:" & ControlChars.CrLf & ControlChars.CrLf, "Cleanup Backupdirectory")
 				End Try
 
 				Try
@@ -282,32 +282,32 @@ Public Class frm_Main
 			bInitialStartup = True
 
 			If Alphaleonis.Win32.Filesystem.File.Exists(mldb_initial_file) Then
-				DevExpress.XtraEditors.XtraMessageBox.Show("Hi! This is your first time starting Metropolis Launcher. The main database (ml.db) will be initialized now.", "Metropolis Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information)
+				MKDXHelper.MessageBox("Hi! This is your first time starting Metropolis Launcher. The main database (ml.db) will be initialized now.", "Metropolis Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
 				Try
 					Alphaleonis.Win32.Filesystem.File.Copy(mldb_initial_file, mldb_file)
 				Catch ex As Exception
-					DevExpress.XtraEditors.XtraMessageBox.Show("Something went wrong while copying ml.db_initial to ml.db, if you installed Metropolis Launcher under C:\Program Files please choose a different location." & ControlChars.CrLf & ControlChars.CrLf & "The error was: " & ex.Message, "Metropolis Launcher", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+					MKDXHelper.ExceptionMessageBox(ex, "Something went wrong while copying ml.db_initial to ml.db, if you installed Metropolis Launcher under C:\Program Files please choose a different location." & ControlChars.CrLf & ControlChars.CrLf & "The error was: ", "Metropolis Launcher")
 					Return False
 				End Try
 			Else
-				DevExpress.XtraEditors.XtraMessageBox.Show("Hi! This is your first time starting Metropolis Launcher, but the initial database cannot be found (ml.db_initial). Please get it together with all the other neccessary database files from the Metropolis Launcher database pack over at http://emulation-evolved.net.", "Metropolis Launcher", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+				MKDXHelper.MessageBox("Hi! This is your first time starting Metropolis Launcher, but the initial database cannot be found (ml.db_initial). Please get it together with all the other necessary database files from https://metropolis-launcher.net", "Metropolis Launcher", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 				Return False
 			End If
 		End If
 
 		If Not Alphaleonis.Win32.Filesystem.File.Exists(mldb_file) Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("The main database file cannot be found (ml.db), please download and extract the Metropolis Launcher database pack over at http://emulation-evolved.net.", "Metropolis Launcher", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+			MKDXHelper.MessageBox("The main database file cannot be found (ml.db), please download and extract Metropolis Launcher from https://metropolis-launcher.net", "Metropolis Launcher", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 			Return False
 		End If
 
 		If Not Alphaleonis.Win32.Filesystem.File.Exists(mobydb_file) Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("The Moby Games database file cannot be found (moby.db), please download and extract the Metropolis Launcher database pack over at http://emulation-evolved.net.", "Metropolis Launcher", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+			MKDXHelper.MessageBox("The Moby Games database file cannot be found (moby.db), please download and extract Metropolis Launcher from https://metropolis-launcher.net", "Metropolis Launcher", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 			Return False
 		End If
 
 		If Not Alphaleonis.Win32.Filesystem.File.Exists(rombasedb_file) Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("The Rombase database file cannot be found (rombase.db), please download and extract the Metropolis Launcher database pack over at http://emulation-evolved.net.", "Metropolis Launcher", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+			MKDXHelper.MessageBox("The Rombase database file cannot be found (rombase.db), please download and extract Metropolis Launcher from https://metropolis-launcher.net", "Metropolis Launcher", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 			Return False
 		End If
 
@@ -327,12 +327,12 @@ Public Class frm_Main
 			MKNetLib.cls_MKSQLiteDataAccess.FireProcedure(cls_Globals.Conn, 0, "ATTACH 'moby.db' AS 'moby'", Nothing)
 			MKNetLib.cls_MKSQLiteDataAccess.FireProcedure(cls_Globals.Conn, 0, "ATTACH 'rombase.db' AS 'rombase'", Nothing)
 		Catch ex As Exception
-			DevExpress.XtraEditors.XtraMessageBox.Show("An error occured while opening the database connection, Metropolis Launcher will be closed now." & ControlChars.CrLf & ControlChars.CrLf & "The error was: " & ex.Message, "Metropolis Launcher", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+			MKDXHelper.ExceptionMessageBox(ex, "An error occured while opening the database connection, Metropolis Launcher will be closed now." & ControlChars.CrLf & ControlChars.CrLf & "The error was: ", "Metropolis Launcher")
 			Return False
 		End Try
 
 		If bInitialStartup Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("Initialization of the databases was successful.", "Metropolis Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information)
+			MKDXHelper.MessageBox("Initialization of the databases was successful.", "Metropolis Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information)
 		End If
 
 		cls_Settings.SetSetting("LaunchCounter", TC.NZ(cls_Settings.GetSetting("LaunchCounter"), 0) + 1)
@@ -452,7 +452,7 @@ Public Class frm_Main
 		Try
 			dbsync.DoSync()
 		Catch ex As Exception
-			DevExpress.XtraEditors.XtraMessageBox.Show("Error while synchronizing databases:" & ControlChars.CrLf & dbsync._SyncLog, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+			MKDXHelper.MessageBox("Error while synchronizing databases:" & ControlChars.CrLf & dbsync._SyncLog, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 			_Immediate_Close = True
 			Me.Close()
 			Return
@@ -515,11 +515,17 @@ Public Class frm_Main
 			sSQL &= ";	CREATE UNIQUE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Releases_Attributes_id_Moby_Releases_Attributes ON tbl_Moby_Releases_Attributes (id_Moby_Releases_Attributes)" & ControlChars.CrLf
 			sSQL &= "" & ControlChars.CrLf
 			sSQL &= "-- Moby DB - Foreign Keys" & ControlChars.CrLf
-			sSQL &= "; CREATE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Game_Groups_Moby_Releases_id_Moby_Game_Groups ON tbl_Moby_Game_Groups_Moby_Releases (id_Moby_Game_Groups)" & ControlChars.CrLf
-			sSQL &= "; CREATE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Game_Groups_Moby_Releases_id_Moby_Releases ON tbl_Moby_Game_Groups_Moby_Releases (id_Moby_Releases)" & ControlChars.CrLf
-			sSQL &= "; CREATE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Releases_Attributes_id_Moby_Attributes ON tbl_Moby_Releases_Attributes (id_Moby_Attributes)" & ControlChars.CrLf
-			sSQL &= "; CREATE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Releases_Staff_id_Moby_Releases ON tbl_Moby_Releases_Staff (id_Moby_Releases)" & ControlChars.CrLf
-			sSQL &= "; CREATE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Releases_Staff_id_Moby_Staff ON tbl_Moby_Releases_Staff (id_Moby_Staff)" & ControlChars.CrLf
+			sSQL &= ";	CREATE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Game_Groups_Moby_Releases_id_Moby_Game_Groups ON tbl_Moby_Game_Groups_Moby_Releases (id_Moby_Game_Groups)" & ControlChars.CrLf
+			sSQL &= ";	CREATE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Game_Groups_Moby_Releases_id_Moby_Releases ON tbl_Moby_Game_Groups_Moby_Releases (id_Moby_Releases)" & ControlChars.CrLf
+			sSQL &= ";	CREATE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Releases_Attributes_id_Moby_Attributes ON tbl_Moby_Releases_Attributes (id_Moby_Attributes)" & ControlChars.CrLf
+			sSQL &= ";	CREATE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Releases_Staff_id_Moby_Releases ON tbl_Moby_Releases_Staff (id_Moby_Releases)" & ControlChars.CrLf
+			sSQL &= ";	CREATE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Releases_Staff_id_Moby_Staff ON tbl_Moby_Releases_Staff (id_Moby_Staff)" & ControlChars.CrLf
+			sSQL &= ";	CREATE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Releases_Cover_Art_id_Moby_Releases ON tbl_Moby_Releases_Cover_Art (id_Moby_Releases)" & ControlChars.CrLf
+			sSQL &= ";	CREATE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Releases_Cover_Art_id_Moby_Cover_Art_Types ON tbl_Moby_Releases_Cover_Art (id_Moby_Cover_Art_Types)" & ControlChars.CrLf
+			sSQL &= ";	CREATE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Releases_Cover_Art_Packaging ON tbl_Moby_Releases_Cover_Art (Packaging)" & ControlChars.CrLf
+			sSQL &= ";	CREATE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Releases_Cover_Art_Regions_id_Moby_Releases_Cover_Art ON tbl_Moby_Releases_Cover_Art_Regions (id_Moby_Releases_Cover_Art)" & ControlChars.CrLf
+			sSQL &= ";	CREATE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Releases_Cover_Art_Regions_id_Regions ON tbl_Moby_Releases_Cover_Art_Regions (id_Moby_Regions)" & ControlChars.CrLf
+			sSQL &= ";	CREATE INDEX IF NOT EXISTS moby.IDX_tbl_Moby_Releases_Screenshots_id_Moby_Releases ON tbl_Moby_Releases_Screenshots (id_Moby_Releases)" & ControlChars.CrLf
 			sSQL &= "" & ControlChars.CrLf
 			sSQL &= "-- Rombase DB" & ControlChars.CrLf
 			sSQL &= ";	CREATE INDEX IF NOT EXISTS rombase.IDX_tbl_Rombase_size ON tbl_Rombase (size)" & ControlChars.CrLf
@@ -557,7 +563,7 @@ Public Class frm_Main
 
 			DataAccess.FireProcedure(cls_Globals.Conn, 0, sSQL)
 		Catch ex As Exception
-			DevExpress.XtraEditors.XtraMessageBox.Show("An error occured while updating indexes on the database." & ControlChars.CrLf & ControlChars.CrLf & "The error was: " & ex.Message, "Metropolis Launcher", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+			MKDXHelper.ExceptionMessageBox(ex, "An error occured while updating indexes on the database." & ControlChars.CrLf & ControlChars.CrLf & "The error was: ", "Metropolis Launcher")
 		End Try
 
 		Using frm As New MKNetDXLib.frm_SQLite_DBUpdater(cls_Globals.Conn, DS, AddressOf Application.DoEvents)
@@ -566,11 +572,12 @@ Public Class frm_Main
 
 		cls_Settings.SetSetting("LastRunHost", System.Environment.MachineName)
 
-		'Migrate new DOSBox Profiles from Rombase
+		'Migrate new DOSBox/ScummVM Profiles from Rombase
 		DS_ML.Migrate_Rombase_DOSBox_Configs(cls_Globals.Conn)
+		DS_ML.Migrate_Rombase_ScummVM_Configs(cls_Globals.Conn)
 
 #If PreRelease Then
-		DevExpress.XtraEditors.XtraMessageBox.Show("Hi, you are using this PreRelease of Metropolis Launcher, because you agreed in helping the project or have otherwise been deemed worthy." & ControlChars.CrLf & ControlChars.CrLf & "This is build " & Alphaleonis.Win32.Filesystem.File.GetLastWriteTime(System.Reflection.Assembly.GetEntryAssembly().Location).ToString("yyyyMMdd-HHmmss") & ControlChars.CrLf & ControlChars.CrLf & "PLEASE DO NOT REDISTRIBUTE - The final version will be released as freeware when it's done.", "Metropolis Launcher PreRelease")
+		MKDXHelper.MessageBox("Hi, you are using this PreRelease of Metropolis Launcher, because you agreed in helping the project or have otherwise been deemed worthy." & ControlChars.CrLf & ControlChars.CrLf & "This is build " & Alphaleonis.Win32.Filesystem.File.GetLastWriteTime(System.Reflection.Assembly.GetEntryAssembly().Location).ToString("yyyyMMdd-HHmmss") & ControlChars.CrLf & ControlChars.CrLf & "PLEASE DO NOT REDISTRIBUTE - The final version will be released as freeware when it's done.", "Metropolis Launcher PreRelease", MessageBoxButtons.OK, MessageBoxIcon.Information)
 #End If
 
 		Me.tile_Apps.Enabled = True

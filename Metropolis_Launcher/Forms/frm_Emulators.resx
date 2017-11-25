@@ -126,6 +126,19 @@
   <metadata name="BS_Platforms.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>230, 17</value>
   </metadata>
+  <metadata name="BS_List_Generators.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>744, 56</value>
+  </metadata>
+  <data name="ToolTipItem6.Text" xml:space="preserve">
+    <value>Metropolis Launcher can generate a text-based file list upon startup and feed the generated textfile to the Emulator as the startup parameter %listfile%.
+
+The List Generator defines how the file list should be created.</value>
+  </data>
+  <data name="ToolTipItem7.Text" xml:space="preserve">
+    <value>Metropolis Launcher can generate a text-based file list upon startup and feed the generated textfile to the Emulator as the startup parameter %listfile%.
+
+The List Generator defines how the file list should be created.</value>
+  </data>
   <metadata name="BTA_Libretro_Core.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>820, 17</value>
   </metadata>
@@ -175,12 +188,12 @@
         ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
 </value>
   </data>
-  <data name="ToolTipItem1.Text" xml:space="preserve">
+  <data name="ToolTipItem8.Text" xml:space="preserve">
     <value>The emulator appears to be RetroArch. Select here the Libretro Core to be used for this emulator configuration.
 
 All cores in this list are found in the \cores subdirectory. If there are none, run the emulator and us it's Online Updater to download cores.</value>
   </data>
-  <data name="ToolTipItem2.Text" xml:space="preserve">
+  <data name="ToolTipItem9.Text" xml:space="preserve">
     <value>The emulator appears to be RetroArch. Select here the Libretro Core to be used for this emulator configuration.
 
 All cores in this list are found in the \cores subdirectory. If there are none, run the emulator and us it's Online Updater to download cores.</value>
@@ -191,7 +204,7 @@ All cores in this list are found in the \cores subdirectory. If there are none, 
   <metadata name="DS_J2K.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>972, 17</value>
   </metadata>
-  <data name="ToolTipItem7.Text" xml:space="preserve">
+  <data name="ToolTipItem14.Text" xml:space="preserve">
     <value>Define the startup parameters in this field. 
 
 Available variables are:
@@ -201,12 +214,11 @@ Available variables are:
 %romdir% (directory of the rom)
 %romfile% (filename of the rom)
 %romfullpath% (full path to the rom incl. filename)
-%multivolume% (all the applicable parameters for multiple volumes, see "Multiple Volumes" tab)</value>
+%multivolume% (all the applicable parameters for multiple volumes, see "Multiple Volumes" tab)
+%listfile% (using a List Generator a textfile is built containing the game files, use this startup parameter to feed it to the launched emulator, optionally you define the file extension using %listfile.ext%, default is .txt)</value>
   </data>
-  <data name="ToolTipItem8.Text" xml:space="preserve">
+  <data name="ToolTipItem15.Text" xml:space="preserve">
     <value>Define the startup parameters in this field. 
-
-In case of DOSBox you can define additional startup parameters here, though Metropolis Launcher already provides options which affect the startup of DOSBox.
 
 Available variables are:
 %emudir% (directory of the emulator)
@@ -215,9 +227,10 @@ Available variables are:
 %romdir% (directory of the rom)
 %romfile% (filename of the rom)
 %romfullpath% (full path to the rom incl. filename)
-%multivolume% (all the applicable parameters for multiple volumes, see "Multiple Volumes" tab)</value>
+%multivolume% (all the applicable parameters for multiple volumes, see "Multiple Volumes" tab)
+%listfile% (using a List Generator a textfile is built containing the game files, use this startup parameter to feed it to the launched emulator, optionally you define the file extension using %listfile.ext%, default is .txt)</value>
   </data>
-  <data name="ToolTipItem10.Text" xml:space="preserve">
+  <data name="ToolTipItem17.Text" xml:space="preserve">
     <value>If you want to use J2K as a keyboard to joystick mapper for this emulator, choose your preset here. J2K will be launched accordingly on startup of the emulator and will be set to the "Empty" J2K preset afterwards.</value>
   </data>
   <metadata name="BS_MV.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -245,6 +258,9 @@ Available variables are:
     <value>650, 56</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>72</value>
+    <value>109</value>
+  </metadata>
+  <metadata name="DS_Rombase.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>898, 56</value>
   </metadata>
 </root>

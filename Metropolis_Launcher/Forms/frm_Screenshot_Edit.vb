@@ -98,12 +98,12 @@
 		Dim rows() As DataRow = Me.DS_ML.tbl_ImageEditorTemplates.Select("id_ImageEditorTemplates = " & TC.getSQLFormat(e.NewValue))
 		If rows.Length > 0 Then
 			If _img.Width - rows(0)("Left") - rows(0)("Right") < 0 Then
-				DevExpress.XtraEditors.XtraMessageBox.Show("Cannot use this template because the horizontal cropping is too big", "Cannot use template", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+				MKDXHelper.MessageBox("The template cannot be used because the horizontal cropping is too big", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 				e.Cancel = True
 				Return
 			End If
 			If _img.Width - rows(0)("Top") - rows(0)("Bottom") < 0 Then
-				DevExpress.XtraEditors.XtraMessageBox.Show("Cannot use this template because the vertical cropping is too big", "Cannot use template", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+				MKDXHelper.MessageBox("The tempate cannot be used because the vertical cropping is too big", "Cannot use template", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 				e.Cancel = True
 				Return
 			End If
@@ -151,7 +151,7 @@
 				End Using
 			Case DevExpress.XtraEditors.Controls.ButtonPredefines.Minus
 				'Delete Template
-				If DevExpress.XtraEditors.XtraMessageBox.Show("Do you really want to delete the selected template?", "Delete template", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+				If MKDXHelper.MessageBox("Do you really want to delete the selected template?", "Delete template", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
 					DataAccess.FireProcedure(cls_Globals.Conn, 0, "DELETE FROM tbl_ImageEditorTemplates WHERE id_ImageEditorTemplates = " & TC.getSQLFormat(BS_ImageEditorTemplates.Current("id_ImageEditorTemplates")))
 					Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
 						DS_ML.Fill_tbl_ImageEditorSettings(tran, Me.DS_ML.tbl_ImageEditorTemplates)

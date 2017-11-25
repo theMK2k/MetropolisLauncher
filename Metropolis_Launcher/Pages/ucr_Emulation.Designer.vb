@@ -304,7 +304,7 @@ Partial Class ucr_Emulation
 		Me.bbi_Show_Similarity_Feature_Columns = New DevExpress.XtraBars.BarButtonItem()
 		Me.bbi_Open_Similarity_Details = New DevExpress.XtraBars.BarButtonItem()
 		Me.bbi_Launch_Random = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Extras_Image_Manager = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_USER_Extras_Manager = New DevExpress.XtraBars.BarButtonItem()
 		Me.bbi_Extras_Viewer_Settings = New DevExpress.XtraBars.BarButtonItem()
 		Me.bbi_GameGroup_Info = New DevExpress.XtraBars.BarButtonItem()
 		Me.bbi_GameGroup_Filter = New DevExpress.XtraBars.BarButtonItem()
@@ -312,6 +312,8 @@ Partial Class ucr_Emulation
 		Me.bsi_Export = New DevExpress.XtraBars.BarSubItem()
 		Me.bbi_Export_CSV = New DevExpress.XtraBars.BarButtonItem()
 		Me.bbi_Export_XLSX = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_ScummVM_Templates = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_MOBY_Extras_Manager = New DevExpress.XtraBars.BarButtonItem()
 		Me.ttctl_TecSpec = New DevExpress.Utils.DefaultToolTipController(Me.components)
 		Me.tlp_Combos = New System.Windows.Forms.TableLayoutPanel()
 		Me.pnl_31 = New MKNetDXLib.ctl_MKDXPanel()
@@ -448,8 +450,10 @@ Partial Class ucr_Emulation
 		Me.tpg_Want = New DevExpress.XtraTab.XtraTabPage()
 		Me.spltpnl_Main = New MKNetDXLib.ctl_MKDXSplitPanel()
 		Me.spltpnl_Details = New MKNetDXLib.ctl_MKDXSplitPanel()
+		Me.prg_Extras_Download = New MKNetDXLib.ctl_MKDXProgressBarControl()
 		Me.pic_Game = New MKNetDXLib.ctl_MKDXPictureEdit()
 		Me.lbl_Displayname = New MKNetDXLib.ctl_MKDXLabel()
+		Me.lbl_Extras_Description = New MKNetDXLib.ctl_MKDXLabel()
 		Me.tmr_ImageUpdate = New System.Windows.Forms.Timer(Me.components)
 		Me.popmnu_Emu = New MKNetDXLib.cmp_MKDXPopupMenu()
 		Me.tmr = New System.Windows.Forms.Timer(Me.components)
@@ -561,6 +565,7 @@ Partial Class ucr_Emulation
 		Me.spltpnl_Main.SuspendLayout()
 		CType(Me.spltpnl_Details, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.spltpnl_Details.SuspendLayout()
+		CType(Me.prg_Extras_Download.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.pic_Game.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.popmnu_Emu, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.popmnu_GameGroups, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1831,8 +1836,8 @@ Partial Class ucr_Emulation
 		Me.barmng.DockControls.Add(Me.barDockControlLeft)
 		Me.barmng.DockControls.Add(Me.barDockControlRight)
 		Me.barmng.Form = Me
-		Me.barmng.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.bbi_Contribute_TechInfo, Me.bbi_Open_Moby_Page, Me.bsi_Launch, Me.bbi_Edit_Game, Me.bbi_DOSBox_Clear_Exe_Config, Me.bbi_Rom_Manager, Me.bbi_Rombase_Manager, Me.bbi_Edit_Multiple_Games, Me.bbi_Export, Me.bbi_Emu_Settings, Me.bbi_DOSBox_Templates, Me.bbi_Analyze_Missing_Extras, Me.bsi_MultiUser, Me.bbi_MultiUser_Add_Games, Me.bbi_MultiUser_Show_Games, Me.bbi_MultiUser_Remove_Games, Me.bbi_Staff_Info, Me.bbi_Staff_Filter, Me.bbi_Similarity_Calculation, Me.bbi_Show_Similarity_Feature_Columns, Me.bbi_Open_Similarity_Details, Me.bbi_Launch_Random, Me.bbi_Extras_Image_Manager, Me.bbi_Extras_Viewer_Settings, Me.bbi_GameGroup_Info, Me.bbi_GameGroup_Filter, Me.bbi_Statistics_Remove, Me.bsi_Export, Me.bbi_Export_CSV, Me.bbi_Export_XLSX})
-		Me.barmng.MaxItemId = 29
+		Me.barmng.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.bbi_Contribute_TechInfo, Me.bbi_Open_Moby_Page, Me.bsi_Launch, Me.bbi_Edit_Game, Me.bbi_DOSBox_Clear_Exe_Config, Me.bbi_Rom_Manager, Me.bbi_Rombase_Manager, Me.bbi_Edit_Multiple_Games, Me.bbi_Export, Me.bbi_Emu_Settings, Me.bbi_DOSBox_Templates, Me.bbi_Analyze_Missing_Extras, Me.bsi_MultiUser, Me.bbi_MultiUser_Add_Games, Me.bbi_MultiUser_Show_Games, Me.bbi_MultiUser_Remove_Games, Me.bbi_Staff_Info, Me.bbi_Staff_Filter, Me.bbi_Similarity_Calculation, Me.bbi_Show_Similarity_Feature_Columns, Me.bbi_Open_Similarity_Details, Me.bbi_Launch_Random, Me.bbi_USER_Extras_Manager, Me.bbi_Extras_Viewer_Settings, Me.bbi_GameGroup_Info, Me.bbi_GameGroup_Filter, Me.bbi_Statistics_Remove, Me.bsi_Export, Me.bbi_Export_CSV, Me.bbi_Export_XLSX, Me.bbi_ScummVM_Templates, Me.bbi_MOBY_Extras_Manager})
+		Me.barmng.MaxItemId = 31
 		'
 		'barDockControlTop
 		'
@@ -2035,12 +2040,12 @@ Partial Class ucr_Emulation
 		SuperToolTip1.Items.Add(ToolTipItem1)
 		Me.bbi_Launch_Random.SuperTip = SuperToolTip1
 		'
-		'bbi_Extras_Image_Manager
+		'bbi_USER_Extras_Manager
 		'
-		Me.bbi_Extras_Image_Manager.Caption = "Open Extras &Manager"
-		Me.bbi_Extras_Image_Manager.Id = 21
-		Me.bbi_Extras_Image_Manager.ImageUri.Uri = "Zoom2"
-		Me.bbi_Extras_Image_Manager.Name = "bbi_Extras_Image_Manager"
+		Me.bbi_USER_Extras_Manager.Caption = "Open USER Extras &Manager"
+		Me.bbi_USER_Extras_Manager.Id = 21
+		Me.bbi_USER_Extras_Manager.ImageUri.Uri = "Zoom2"
+		Me.bbi_USER_Extras_Manager.Name = "bbi_USER_Extras_Manager"
 		'
 		'bbi_Extras_Viewer_Settings
 		'
@@ -2091,6 +2096,20 @@ Partial Class ucr_Emulation
 		Me.bbi_Export_XLSX.Id = 28
 		Me.bbi_Export_XLSX.ImageUri.Uri = "ExportToXLSX"
 		Me.bbi_Export_XLSX.Name = "bbi_Export_XLSX"
+		'
+		'bbi_ScummVM_Templates
+		'
+		Me.bbi_ScummVM_Templates.Caption = "Open ScummVM Templates"
+		Me.bbi_ScummVM_Templates.Id = 29
+		Me.bbi_ScummVM_Templates.ImageUri.Uri = "Replace"
+		Me.bbi_ScummVM_Templates.Name = "bbi_ScummVM_Templates"
+		'
+		'bbi_MOBY_Extras_Manager
+		'
+		Me.bbi_MOBY_Extras_Manager.Caption = "Open MOBY Extras Manager"
+		Me.bbi_MOBY_Extras_Manager.Id = 30
+		Me.bbi_MOBY_Extras_Manager.ImageUri.Uri = "Zoom2"
+		Me.bbi_MOBY_Extras_Manager.Name = "bbi_MOBY_Extras_Manager"
 		'
 		'ttctl_TecSpec
 		'
@@ -3871,8 +3890,10 @@ Partial Class ucr_Emulation
 		Me.spltpnl_Details.Horizontal = False
 		Me.spltpnl_Details.Location = New System.Drawing.Point(0, 0)
 		Me.spltpnl_Details.Name = "spltpnl_Details"
+		Me.spltpnl_Details.Panel1.Controls.Add(Me.prg_Extras_Download)
 		Me.spltpnl_Details.Panel1.Controls.Add(Me.pic_Game)
 		Me.spltpnl_Details.Panel1.Controls.Add(Me.lbl_Displayname)
+		Me.spltpnl_Details.Panel1.Controls.Add(Me.lbl_Extras_Description)
 		Me.spltpnl_Details.Panel1.Text = "Panel1"
 		Me.spltpnl_Details.Panel2.Controls.Add(Me.tcl_App)
 		Me.spltpnl_Details.Panel2.Text = "Panel2"
@@ -3881,6 +3902,18 @@ Partial Class ucr_Emulation
 		Me.spltpnl_Details.TabIndex = 3
 		Me.spltpnl_Details.Text = "Ctl_MKDXSplitPanel1"
 		Me.spltpnl_Details.ToolTipController = Me.ttctl_TecSpec.DefaultController
+		'
+		'prg_Extras_Download
+		'
+		Me.prg_Extras_Download.Dock = System.Windows.Forms.DockStyle.Bottom
+		Me.prg_Extras_Download.Location = New System.Drawing.Point(0, 249)
+		Me.prg_Extras_Download.MenuManager = Me.barmng
+		Me.prg_Extras_Download.Name = "prg_Extras_Download"
+		Me.prg_Extras_Download.Properties.ProgressViewStyle = DevExpress.XtraEditors.Controls.ProgressViewStyle.Solid
+		Me.prg_Extras_Download.Properties.ShowTitle = True
+		Me.prg_Extras_Download.Size = New System.Drawing.Size(307, 13)
+		Me.prg_Extras_Download.TabIndex = 6
+		Me.prg_Extras_Download.Visible = False
 		'
 		'pic_Game
 		'
@@ -3901,7 +3934,7 @@ Partial Class ucr_Emulation
 		Me.pic_Game.Properties.ShowMenu = False
 		Me.pic_Game.Properties.ShowZoomSubMenu = DevExpress.Utils.DefaultBoolean.[True]
 		Me.pic_Game.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom
-		Me.pic_Game.Size = New System.Drawing.Size(307, 225)
+		Me.pic_Game.Size = New System.Drawing.Size(307, 219)
 		Me.pic_Game.TabIndex = 0
 		'
 		'lbl_Displayname
@@ -3921,6 +3954,21 @@ Partial Class ucr_Emulation
 		Me.lbl_Displayname.Size = New System.Drawing.Size(307, 43)
 		Me.lbl_Displayname.TabIndex = 4
 		'
+		'lbl_Extras_Description
+		'
+		Me.lbl_Extras_Description.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical
+		Me.lbl_Extras_Description.Dock = System.Windows.Forms.DockStyle.Bottom
+		Me.lbl_Extras_Description.Location = New System.Drawing.Point(0, 262)
+		Me.lbl_Extras_Description.MKBoundControl1 = Nothing
+		Me.lbl_Extras_Description.MKBoundControl2 = Nothing
+		Me.lbl_Extras_Description.MKBoundControl3 = Nothing
+		Me.lbl_Extras_Description.MKBoundControl4 = Nothing
+		Me.lbl_Extras_Description.MKBoundControl5 = Nothing
+		Me.lbl_Extras_Description.Name = "lbl_Extras_Description"
+		Me.lbl_Extras_Description.Padding = New System.Windows.Forms.Padding(3)
+		Me.lbl_Extras_Description.Size = New System.Drawing.Size(307, 6)
+		Me.lbl_Extras_Description.TabIndex = 5
+		'
 		'tmr_ImageUpdate
 		'
 		Me.tmr_ImageUpdate.Enabled = True
@@ -3928,7 +3976,7 @@ Partial Class ucr_Emulation
 		'
 		'popmnu_Emu
 		'
-		Me.popmnu_Emu.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.bsi_Launch), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Launch_Random), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Edit_Game), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Edit_Multiple_Games), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_DOSBox_Clear_Exe_Config), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Similarity_Calculation), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Open_Similarity_Details), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Show_Similarity_Feature_Columns), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Open_Moby_Page), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Contribute_TechInfo), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Emu_Settings), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_DOSBox_Templates), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Rom_Manager), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Rombase_Manager), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Analyze_Missing_Extras), New DevExpress.XtraBars.LinkPersistInfo(Me.bsi_MultiUser), New DevExpress.XtraBars.LinkPersistInfo(Me.bsi_Export)})
+		Me.popmnu_Emu.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.bsi_Launch), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Launch_Random), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Edit_Game), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Edit_Multiple_Games), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_DOSBox_Clear_Exe_Config), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Similarity_Calculation), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Open_Similarity_Details), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Show_Similarity_Feature_Columns), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Open_Moby_Page), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Contribute_TechInfo), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Emu_Settings), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_DOSBox_Templates), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_ScummVM_Templates), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Rom_Manager), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Rombase_Manager), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Analyze_Missing_Extras), New DevExpress.XtraBars.LinkPersistInfo(Me.bsi_MultiUser), New DevExpress.XtraBars.LinkPersistInfo(Me.bsi_Export)})
 		Me.popmnu_Emu.Manager = Me.barmng
 		Me.popmnu_Emu.Name = "popmnu_Emu"
 		'
@@ -3949,7 +3997,7 @@ Partial Class ucr_Emulation
 		'
 		'popmnu_Extras
 		'
-		Me.popmnu_Extras.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Extras_Image_Manager), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Extras_Viewer_Settings)})
+		Me.popmnu_Extras.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_USER_Extras_Manager), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_MOBY_Extras_Manager), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Extras_Viewer_Settings)})
 		Me.popmnu_Extras.Manager = Me.barmng
 		Me.popmnu_Extras.Name = "popmnu_Extras"
 		'
@@ -4078,6 +4126,7 @@ Partial Class ucr_Emulation
 		Me.spltpnl_Main.ResumeLayout(False)
 		CType(Me.spltpnl_Details, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.spltpnl_Details.ResumeLayout(False)
+		CType(Me.prg_Extras_Download.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.pic_Game.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.popmnu_Emu, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.popmnu_GameGroups, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4320,7 +4369,7 @@ Partial Class ucr_Emulation
 	Friend WithEvents colid_DOSBox_Configs_Template As DevExpress.XtraGrid.Columns.GridColumn
 	Friend WithEvents bbi_Launch_Random As DevExpress.XtraBars.BarButtonItem
 	Friend WithEvents popmnu_Extras As MKNetDXLib.cmp_MKDXPopupMenu
-	Friend WithEvents bbi_Extras_Image_Manager As DevExpress.XtraBars.BarButtonItem
+	Friend WithEvents bbi_USER_Extras_Manager As DevExpress.XtraBars.BarButtonItem
 	Friend WithEvents bbi_Extras_Viewer_Settings As DevExpress.XtraBars.BarButtonItem
 	Friend WithEvents bbi_GameGroup_Info As DevExpress.XtraBars.BarButtonItem
 	Friend WithEvents bbi_GameGroup_Filter As DevExpress.XtraBars.BarButtonItem
@@ -4386,4 +4435,8 @@ Partial Class ucr_Emulation
 	Friend WithEvents col113_Interface_Control As DevExpress.XtraGrid.Columns.GridColumn
 	Friend WithEvents col114_DLC_Addon As DevExpress.XtraGrid.Columns.GridColumn
 	Friend WithEvents col115_Special_Edition As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents bbi_ScummVM_Templates As DevExpress.XtraBars.BarButtonItem
+	Friend WithEvents lbl_Extras_Description As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents prg_Extras_Download As MKNetDXLib.ctl_MKDXProgressBarControl
+	Friend WithEvents bbi_MOBY_Extras_Manager As DevExpress.XtraBars.BarButtonItem
 End Class

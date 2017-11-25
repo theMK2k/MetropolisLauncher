@@ -53,7 +53,7 @@ Public Class frm_ROMBase_Manager
 		End If
 
 #If Not DEBUG Then
-		If Not DevExpress.XtraEditors.XtraMessageBox.Show("The RomBase Manager is an internal tool for managing file metadata. This data is not supposed to be managed by individual users. Click >yes< if you really know what you're doing.", "RomBase Manager", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes Then
+		If Not MKDXHelper.MessageBox("The RomBase Manager is an internal tool for managing file metadata. This data is not supposed to be managed by individual users. Click >yes< if you really know what you're doing.", "RomBase Manager", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
 			Me.Close()
 			Return
 		End If
@@ -69,13 +69,24 @@ Public Class frm_ROMBase_Manager
 		End If
 
 		If BS_Rombase.Current IsNot Nothing AndAlso BS_Moby_Releases IsNot Nothing Then
+			Dim row_Current As DataRow = BS_Moby_Releases.Current.Row
+
+			Dim ar_Selected_Rows As New ArrayList
+
+
+
 			For Each iRowHandle As Integer In gv_DAT.GetSelectedRows
 				If iRowHandle >= 0 AndAlso gv_DAT.GetRow(iRowHandle) IsNot Nothing Then
-					gv_DAT.GetRow(iRowHandle).Row("id_Moby_Releases") = Math.Abs(BS_Moby_Releases.Current("id_Moby_Releases"))
-					gv_DAT.GetRow(iRowHandle).Row("Moby_Games_URLPart") = BS_Moby_Releases.Current("Moby_Games_URLPart").Replace("\", "")
-					gv_DAT.GetRow(iRowHandle).Row("deprecated") = BS_Moby_Releases.Current("deprecated")
+					ar_Selected_Rows.Add(gv_DAT.GetRow(iRowHandle).Row)
 				End If
 			Next
+
+			For Each selected_Row As DataRow In ar_Selected_Rows
+				selected_Row("id_Moby_Releases") = Math.Abs(row_Current("id_Moby_Releases"))
+				selected_Row("Moby_Games_URLPart") = row_Current("Moby_Games_URLPart").Replace("\", "")
+				selected_Row("deprecated") = row_Current("deprecated")
+			Next
+
 		End If
 	End Sub
 
@@ -140,21 +151,22 @@ Public Class frm_ROMBase_Manager
 
 			sSQL = ""
 			sSQL &= "	SELECT"
-			sSQL &= "	id_rombase"
-			sSQL &= "	, filename"
-			sSQL &= "	, size"
-			sSQL &= "	, crc"
-			sSQL &= "	, md5"
-			sSQL &= "	, sha1"
-			sSQL &= "	, id_Moby_Platforms"
-			sSQL &= "	, id_Moby_Releases"
+			sSQL &= "	RB.id_rombase"
+			sSQL &= "	, RB.filename"
+			sSQL &= "	, RB.size"
+			sSQL &= "	, RB.crc"
+			sSQL &= "	, RB.md5"
+			sSQL &= "	, RB.sha1"
+			sSQL &= "	, RB.id_Moby_Platforms"
+			sSQL &= "	, RB.id_Moby_Releases"
 			'sSQL &= "	, soundex(filename) AS Soundex"
-			sSQL &= " , Moby_Platforms_URLPart"
-			sSQL &= " , Moby_Games_URLPart"
-			sSQL &= "	, CustomIdentifier"
-			sSQL &= " , MG.deprecated AS deprecated"
+			sSQL &= " , RB.Moby_Platforms_URLPart"
+			sSQL &= " , RB.Moby_Games_URLPart"
+			sSQL &= "	, RB.CustomIdentifier"
+			sSQL &= " , CASE WHEN REL.deprecated = 1 THEN 1 ELSE MG.deprecated END AS deprecated"
 			sSQL &= "	FROM rombase.tbl_Rombase RB"
 			sSQL &= " LEFT JOIN moby.tbl_Moby_Games MG ON RB.Moby_Games_URLPart = MG.URLPart"
+			sSQL &= " LEFT JOIN tbl_Moby_Releases REL ON REL.id_Moby_Games = MG.id_Moby_Games AND REL.id_Moby_Platforms = RB.id_Moby_Platforms"
 			sSQL &= "	WHERE RB.id_Rombase_Owner IS NULL AND RB.id_Moby_Platforms = " & TC.getSQLFormat(e.NewValue)
 			sSQL &= "	ORDER BY filename"
 			DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, DS_Rombase.tbl_Rombase)
@@ -320,13 +332,13 @@ Public Class frm_ROMBase_Manager
 
 				Next
 			Catch ex As Exception
-				DevExpress.XtraEditors.XtraMessageBox.Show(ex.Message)
+				MKDXHelper.ExceptionMessageBox(ex)
 			Finally
 				tran.Commit()
 			End Try
 		End Using
 
-		DevExpress.XtraEditors.XtraMessageBox.Show("Import done, " & iNew & " new entries out of " & iTotal & " and " & iError & " errors!")
+		MKDXHelper.MessageBox("Import done, " & iNew & " new entries out of " & iTotal & " and " & iError & " errors!", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
 	End Sub
 
 	Private Sub grd_Moby_Releases_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles grd_Moby_Releases.Click
@@ -367,7 +379,7 @@ Public Class frm_ROMBase_Manager
 	End Sub
 
 	Private Sub bbi_Write_XML_ItemClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bbi_Write_XML.ItemClick
-		Dim sFile As String = MKNetLib.cls_MKFileSupport.SaveFile()
+		Dim sFile As String = MKNetLib.cls_MKFileSupport.SaveFileDialog()
 		If Alphaleonis.Win32.Filesystem.File.Exists(sFile) Then
 			DS_Rombase.WriteXml(sFile)
 		End If
@@ -382,7 +394,7 @@ Public Class frm_ROMBase_Manager
 	Private Function Save(Optional ByVal AskForSave As Boolean = False) As DialogResult
 		If AskForSave Then
 			If BS_Rombase.DataSource.Tables(BS_Rombase.DataMember).GetChanges IsNot Nothing Then
-				Dim res As DialogResult = DevExpress.XtraEditors.XtraMessageBox.Show("Do you want to save your changes?", "Save?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+				Dim res As DialogResult = MKDXHelper.MessageBox("Do you want to save your changes?", "Save?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
 				If res = Windows.Forms.DialogResult.Cancel Then
 					Return Windows.Forms.DialogResult.Cancel
 				End If
@@ -401,7 +413,7 @@ Public Class frm_ROMBase_Manager
 					Try
 						DS_Rombase.Upsert_Rombase(tran, DBNull.Value, row("filename"), row("size"), row("crc"), row("md5"), row("sha1"), row("id_Moby_Platforms"), row("id_Moby_Releases"), row("Moby_Platforms_URLPart"), row("Moby_Games_URLPart"), CustomIdentifier:=row("CustomIdentifier"), id_rombase:=row("id_rombase"))
 					Catch ex As Exception
-						DevExpress.XtraEditors.XtraMessageBox.Show(ex.Message)
+						MKDXHelper.ExceptionMessageBox(ex)
 					End Try
 				Next
 
@@ -453,7 +465,7 @@ Public Class frm_ROMBase_Manager
 	End Sub
 
 	Private Sub bbi_Delete_ItemClick(sender As Object, e As EventArgs) Handles bbi_Delete.ItemClick
-		If DevExpress.XtraEditors.XtraMessageBox.Show("Do you really want to delete the selected entries?", "Delete", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+		If MKDXHelper.MessageBox("Do you really want to delete the selected entries?", "Delete", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
 
 		Dim ar_Rows_Delete As New ArrayList
 		For Each iRowHandle As Integer In gv_DAT.GetSelectedRows
@@ -532,7 +544,7 @@ Public Class frm_ROMBase_Manager
 				End Try
 			End Using
 
-			DevExpress.XtraEditors.XtraMessageBox.Show("Import done, " & iNew & " new entries out of " & iTotal & " and " & iError & " errors!")
+			MKDXHelper.MessageBox("Import done, " & iNew & " new entries out of " & iTotal & " and " & iError & " errors!", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
 		End If
 	End Sub
 
@@ -672,7 +684,7 @@ Public Class frm_ROMBase_Manager
 				End Try
 			End Using
 
-			DevExpress.XtraEditors.XtraMessageBox.Show("Import done, " & iNew & " new entries out of " & iTotal & " and " & iError & " errors!")
+			MKDXHelper.MessageBox("Import done, " & iNew & " new entries out of " & iTotal & " and " & iError & " errors!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 		End If
 	End Sub
 
@@ -683,7 +695,7 @@ Public Class frm_ROMBase_Manager
 		For Each row_Rombase As DataRow In Me.DS_Rombase.Tables("tbl_Rombase").Rows
 			If Not {DataRowState.Deleted, DataRowState.Detached}.Contains(row_Rombase.RowState) Then
 				Dim Moby_Games_URLPart As String = TC.NZ(row_Rombase("Moby_Games_URLPart"), "")
-				Moby_Games_URLPart = Moby_Games_URLPart.Replace("\", "")
+				Moby_Games_URLPart = Replace(Moby_Games_URLPart, "\", "")
 
 				If Moby_Games_URLPart <> "" Then
 					If Not ar_Have.Contains(Moby_Games_URLPart) Then
@@ -699,13 +711,17 @@ Public Class frm_ROMBase_Manager
 			Dim sURLPart As String = row_Moby_Releases("Moby_Games_URLPart").ToString.Replace("\", "")
 
 			If Not ar_Moby_Total.Contains(sURLPart) Then
-				ar_Moby_Total.Add(sURLPart)
+				If (TC.NZ(row_Moby_Releases("deprecated"), False) = False AndAlso TC.NZ(row_Moby_Releases("compilation"), False) = False) OrElse ar_Have.Contains(sURLPart) Then
+					ar_Moby_Total.Add(sURLPart)
+				End If
 			End If
 
 			If Not ar_Have.Contains(sURLPart) Then
-				row_Moby_Releases("Highlighted") = True
-				If Not ar_Missing.Contains(sURLPart) Then
-					ar_Missing.Add(sURLPart)
+				If TC.NZ(row_Moby_Releases("deprecated"), False) = False AndAlso TC.NZ(row_Moby_Releases("compilation"), False) = False Then
+					row_Moby_Releases("Highlighted") = True
+					If Not ar_Missing.Contains(sURLPart) Then
+						ar_Missing.Add(sURLPart)
+					End If
 				End If
 			Else
 				row_Moby_Releases("Highlighted") = False
@@ -721,8 +737,9 @@ Public Class frm_ROMBase_Manager
 		Dim sMessage As String = ""
 		sMessage &= "Out of " & ar_Moby_Total.Count & " distinct MobyGames Releases, " & ar_Have.Count & " are linked to a Game, " & ar_Missing.Count & " are missing." & ControlChars.CrLf
 		sMessage &= "The link ratio is " & CInt(CDbl(ar_Have.Count) * 100 / CDbl(ar_Moby_Total.Count)) & "%. Any missing MobyGame Release is highlighted."
+		sMessage &= ControlChars.CrLf & ControlChars.CrLf & "Deprecated and Compilation releases have been ignored."
 		sMessage &= ControlChars.CrLf & ControlChars.CrLf & CInt(CDbl(ar_Have.Count) * 100 / CDbl(ar_Moby_Total.Count)) & "% (" & ar_Have.Count & " / " & ar_Moby_Total.Count & ")"
-		DevExpress.XtraEditors.XtraMessageBox.Show(sMessage, "Evaluate MobyGames Links", MessageBoxButtons.OK, MessageBoxIcon.Information)
+		MKDXHelper.MessageBox(sMessage, "Evaluate MobyGames Links", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
 		Cursor = Cursors.Default
 	End Sub
@@ -763,7 +780,15 @@ Public Class frm_ROMBase_Manager
 		For Each row_Rombase As DS_Rombase.tbl_RombaseRow In Me.DS_Rombase.tbl_Rombase.Rows
 			prg.IncreaseCurrentValue()
 
+			Dim doCheck As Boolean = False
+
 			If TC.NZ(row_Rombase("Moby_Games_URLPart"), "") = "" Then
+				doCheck = True
+			ElseIf autolinkOptions.Redetect_Deprecated AndAlso TC.NZ(row_Rombase("deprecated"), False) = True Then
+				doCheck = True
+			End If
+
+			If doCheck Then
 				Dim row_Auto_Link As DS_ML.tbl_Moby_Auto_LinkRow = tbl_Moby_Auto_Link.NewRow
 				row_Auto_Link.id = row_Rombase.id_rombase
 
@@ -782,7 +807,7 @@ Public Class frm_ROMBase_Manager
 		prg.Close()
 
 		If tbl_Moby_Auto_Link.Rows.Count = 0 Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("All entries are already linked, no need for an auto link.")
+			MKDXHelper.MessageBox("All entries are already linked, no need for an auto link.", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
 			Return
 		End If
 
@@ -792,7 +817,9 @@ Public Class frm_ROMBase_Manager
 		prg.Start()
 
 		For Each row_Moby_Releases As DS_MobyDB.src_Moby_ReleasesRow In Me.DS_MobyDB.src_Moby_Releases.Rows
-			src_Moby_Releases.ImportRow(row_Moby_Releases)
+			If Not autolinkOptions.Ignore_Deprecated OrElse Not TC.NZ(row_Moby_Releases.deprecated, False) Then
+				src_Moby_Releases.ImportRow(row_Moby_Releases)
+			End If
 		Next
 
 		For Each row_Moby_Releases As DS_MobyDB.src_Moby_ReleasesRow In src_Moby_Releases.Rows
@@ -803,7 +830,7 @@ Public Class frm_ROMBase_Manager
 
 		sExplanation = "The left list shows all the RomBase entries that had previously missing MobyGames links. If a match with a MobyGames release has been found, the corresponding fields (Moby Gamename, Match Accuracy etc.) have values. If the match accuracy is exactly 100%, the link is automatically set to be applied (see Apply column). Please thoroughly review these results and check/uncheck the Apply checkbox (by click or by pressing Enter). You can also re-link with another MobyGames release by doubleclicking the release on the right list."
 
-		Using frm As New frm_Moby_Auto_Link(tbl_Moby_Auto_Link, src_Moby_Releases, sExplanation, autolinkOptions, BS_Moby_Platforms.Current("URLPart"))
+		Using frm As New frm_Moby_Auto_Link(tbl_Moby_Auto_Link, src_Moby_Releases, sExplanation, autolinkOptions)
 			If frm.ShowDialog() = DialogResult.OK Then
 				Dim iLinkCount As Integer = 0
 
@@ -818,7 +845,7 @@ Public Class frm_ROMBase_Manager
 					End If
 				Next
 
-				DevExpress.XtraEditors.XtraMessageBox.Show(iLinkCount & " links have been applied.", "Auto-Link")
+				MKDXHelper.MessageBox(iLinkCount & " links have been applied.", "Auto-Link", MessageBoxButtons.OK, MessageBoxIcon.Information)
 			End If
 		End Using
 	End Sub
@@ -919,13 +946,13 @@ Public Class frm_ROMBase_Manager
 				iTotal -= 1
 				iError -= 1
 			Catch ex As Exception
-				DevExpress.XtraEditors.XtraMessageBox.Show(ex.Message)
+				MKDXHelper.ExceptionMessageBox(ex)
 			Finally
 				tran.Commit()
 			End Try
 		End Using
 
-		DevExpress.XtraEditors.XtraMessageBox.Show("Import done, " & iNew & " new entries out of " & iTotal & " and " & iError & " errors!")
+		MKDXHelper.MessageBox("Import done, " & iNew & " new entries out of " & iTotal & " and " & iError & " errors!", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
 	End Sub
 
 	Private Sub gv_DAT_FocusedRowChanged(sender As Object, e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles gv_DAT.FocusedRowChanged

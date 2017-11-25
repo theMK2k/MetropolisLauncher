@@ -350,15 +350,30 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
+    <Reference Include="DiscUtils, Version=0.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\DiscUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="DiscUtils.Common, Version=0.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\DiscUtils.Common.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\..\..\Libraries\MKNetLib\MKNetLib\Dependencies\HtmlAgilityPack.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.IWshRuntimeLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <HintPath>..\..\..\Libraries\MKNetLib\MKNetLib\Dependencies\Interop.IWshRuntimeLibrary.dll</HintPath>
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Interop.IWshRuntimeLibrary">
+      <HintPath>Libs\Interop.IWshRuntimeLibrary.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.DirectX.DirectInput, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="MKNetDXLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\MKNetDXLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MKNetLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\MKNetLib.dll</HintPath>
+    </Reference>
     <Reference Include="Ookii.Dialogs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0c15020868fd6249, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Libraries\MKNetLib\MKNetLib\Dependencies\Ookii.Dialogs.dll</HintPath>
@@ -391,6 +406,7 @@
   <ItemGroup>
     <Import Include="DataAccess = MKNetLib.cls_MKSQLiteDataAccess" />
     <Import Include="Microsoft.VisualBasic" />
+    <Import Include="MKDXHelper = MKNetDXLib.cls_MKDXHelper" />
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
@@ -406,6 +422,7 @@
     <Compile Include="Classes\cls_3IntVec.vb" />
     <Compile Include="Classes\cls_3ObjVec.vb" />
     <Compile Include="Classes\cls_AddGameStats.vb" />
+    <Compile Include="Classes\cls_DownloadManager.vb" />
     <Compile Include="Classes\cls_Extras.vb" />
     <Compile Include="Classes\cls_FilteringModel_Emulation_Games.vb" />
     <Compile Include="Classes\cls_Globals.vb" />
@@ -470,6 +487,18 @@
     <Compile Include="Forms\frm_Backup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frm_Known_Emulators.Designer.vb">
+      <DependentUpon>frm_Known_Emulators.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Known_Emulators.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_List_Generator_Edit.Designer.vb">
+      <DependentUpon>frm_List_Generator_Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_List_Generator_Edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frm_Moby_Auto_Link.Designer.vb">
       <DependentUpon>frm_Moby_Auto_Link.vb</DependentUpon>
     </Compile>
@@ -480,6 +509,12 @@
       <DependentUpon>frm_Moby_Auto_Link_Options.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frm_Moby_Auto_Link_Options.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_MOBY_Extras_Manager.Designer.vb">
+      <DependentUpon>frm_MOBY_Extras_Manager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_MOBY_Extras_Manager.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frm_Rescan_Options.Designer.vb">
@@ -639,10 +674,34 @@
     <Compile Include="Forms\frm_Screenshot_Edit.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frm_ScummVM_Scan.Designer.vb">
+      <DependentUpon>frm_ScummVM_Scan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_ScummVM_Scan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_ScummVM_Templates.Designer.vb">
+      <DependentUpon>frm_ScummVM_Templates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_ScummVM_Templates.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frm_Search_Missing_Extras.Designer.vb">
       <DependentUpon>frm_Search_Missing_Extras.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frm_Search_Missing_Extras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Select_Emulator.Designer.vb">
+      <DependentUpon>frm_Select_Emulator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Select_Emulator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Select_Known_Emulator.Designer.vb">
+      <DependentUpon>frm_Select_Known_Emulator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Select_Known_Emulator.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frm_Similarity_Calculation.Designer.vb">
@@ -679,6 +738,12 @@
       <DependentUpon>frm_Users_Setup.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frm_Users_Setup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_USER_Extras_Manager.Designer.vb">
+      <DependentUpon>frm_USER_Extras_Manager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_USER_Extras_Manager.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -726,6 +791,12 @@
     <Compile Include="UserControls\ucr_DOSBox_Config.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserControls\ucr_ScummVM_Config.Designer.vb">
+      <DependentUpon>ucr_ScummVM_Config.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucr_ScummVM_Config.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\ucr_Similarity_Calculation_Details_Genre.Designer.vb">
       <DependentUpon>ucr_Similarity_Calculation_Details_Genre.vb</DependentUpon>
     </Compile>
@@ -743,11 +814,20 @@
     <EmbeddedResource Include="Forms\frm_Backup.resx">
       <DependentUpon>frm_Backup.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Known_Emulators.resx">
+      <DependentUpon>frm_Known_Emulators.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_List_Generator_Edit.resx">
+      <DependentUpon>frm_List_Generator_Edit.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_Moby_Auto_Link.resx">
       <DependentUpon>frm_Moby_Auto_Link.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_Moby_Auto_Link_Options.resx">
       <DependentUpon>frm_Moby_Auto_Link_Options.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_MOBY_Extras_Manager.resx">
+      <DependentUpon>frm_MOBY_Extras_Manager.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_Rescan_Options.resx">
       <DependentUpon>frm_Rescan_Options.vb</DependentUpon>
@@ -828,8 +908,20 @@
     <EmbeddedResource Include="Forms\frm_Screenshot_Edit.resx">
       <DependentUpon>frm_Screenshot_Edit.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_ScummVM_Scan.resx">
+      <DependentUpon>frm_ScummVM_Scan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_ScummVM_Templates.resx">
+      <DependentUpon>frm_ScummVM_Templates.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_Search_Missing_Extras.resx">
       <DependentUpon>frm_Search_Missing_Extras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Select_Emulator.resx">
+      <DependentUpon>frm_Select_Emulator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Select_Known_Emulator.resx">
+      <DependentUpon>frm_Select_Known_Emulator.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_Similarity_Calculation.resx">
       <DependentUpon>frm_Similarity_Calculation.vb</DependentUpon>
@@ -849,6 +941,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_Users_Setup.resx">
       <DependentUpon>frm_Users_Setup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_USER_Extras_Manager.resx">
+      <DependentUpon>frm_USER_Extras_Manager.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -871,6 +966,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucr_DOSBox_Config.resx">
       <DependentUpon>ucr_DOSBox_Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucr_ScummVM_Config.resx">
+      <DependentUpon>ucr_ScummVM_Config.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucr_Similarity_Calculation_Details_Genre.resx">
       <DependentUpon>ucr_Similarity_Calculation_Details_Genre.vb</DependentUpon>
@@ -1085,7 +1183,6 @@
     <None Include="ml.chm">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ml.db" />
     <None Include="ml.db_initial">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -1135,24 +1232,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Notes\Metro_BGColors.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Libraries\DiscUtils\src\DiscUtils.csproj">
-      <Project>{dbb340f9-2386-43c2-a473-fa496cbe07a4}</Project>
-      <Name>DiscUtils</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Libraries\DiscUtils\utils\DiscUtils.Common\DiscUtils.Common.csproj">
-      <Project>{40f44fcf-5c77-404d-82bd-9e17bda5e04b}</Project>
-      <Name>DiscUtils.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Libraries\MKNetDXLib\MKNetDXLib.vbproj">
-      <Project>{39539B52-FD58-435A-94D7-398C21984B04}</Project>
-      <Name>MKNetDXLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Libraries\MKNetLib\MKNetLib\MKNetLib.vbproj">
-      <Project>{5EFF8642-CD3B-498F-A50F-6F05B47325E2}</Project>
-      <Name>MKNetLib</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="de\DevExpress.Data.v15.2.resources">

@@ -103,6 +103,20 @@ Partial Public Class DS_ML
     
     Private tabletbl_Moby_Auto_Link As tbl_Moby_Auto_LinkDataTable
     
+    Private tabletbl_List_Generators As tbl_List_GeneratorsDataTable
+    
+    Private tablestatic_List_Generator_Sort As static_List_Generator_SortDataTable
+    
+    Private tabletbl_ScummVM_Configs As tbl_ScummVM_ConfigsDataTable
+    
+    Private tablesrc_ucr_Emulation_Moby_Releases_Screenshots As src_ucr_Emulation_Moby_Releases_ScreenshotsDataTable
+    
+    Private tablesrc_ucr_Emulation_Moby_Releases_Cover_Art As src_ucr_Emulation_Moby_Releases_Cover_ArtDataTable
+    
+    Private tablesrc_frm_MOBY_Extras_Manager As src_frm_MOBY_Extras_ManagerDataTable
+    
+    Private tabletbl_Moby_Regions As tbl_Moby_RegionsDataTable
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -248,6 +262,27 @@ Partial Public Class DS_ML
             End If
             If (Not (ds.Tables("tbl_Moby_Auto_Link")) Is Nothing) Then
                 MyBase.Tables.Add(New tbl_Moby_Auto_LinkDataTable(ds.Tables("tbl_Moby_Auto_Link")))
+            End If
+            If (Not (ds.Tables("tbl_List_Generators")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_List_GeneratorsDataTable(ds.Tables("tbl_List_Generators")))
+            End If
+            If (Not (ds.Tables("static_List_Generator_Sort")) Is Nothing) Then
+                MyBase.Tables.Add(New static_List_Generator_SortDataTable(ds.Tables("static_List_Generator_Sort")))
+            End If
+            If (Not (ds.Tables("tbl_ScummVM_Configs")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_ScummVM_ConfigsDataTable(ds.Tables("tbl_ScummVM_Configs")))
+            End If
+            If (Not (ds.Tables("src_ucr_Emulation_Moby_Releases_Screenshots")) Is Nothing) Then
+                MyBase.Tables.Add(New src_ucr_Emulation_Moby_Releases_ScreenshotsDataTable(ds.Tables("src_ucr_Emulation_Moby_Releases_Screenshots")))
+            End If
+            If (Not (ds.Tables("src_ucr_Emulation_Moby_Releases_Cover_Art")) Is Nothing) Then
+                MyBase.Tables.Add(New src_ucr_Emulation_Moby_Releases_Cover_ArtDataTable(ds.Tables("src_ucr_Emulation_Moby_Releases_Cover_Art")))
+            End If
+            If (Not (ds.Tables("src_frm_MOBY_Extras_Manager")) Is Nothing) Then
+                MyBase.Tables.Add(New src_frm_MOBY_Extras_ManagerDataTable(ds.Tables("src_frm_MOBY_Extras_Manager")))
+            End If
+            If (Not (ds.Tables("tbl_Moby_Regions")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_Moby_RegionsDataTable(ds.Tables("tbl_Moby_Regions")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -658,6 +693,76 @@ Partial Public Class DS_ML
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property tbl_List_Generators() As tbl_List_GeneratorsDataTable
+        Get
+            Return Me.tabletbl_List_Generators
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property static_List_Generator_Sort() As static_List_Generator_SortDataTable
+        Get
+            Return Me.tablestatic_List_Generator_Sort
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property tbl_ScummVM_Configs() As tbl_ScummVM_ConfigsDataTable
+        Get
+            Return Me.tabletbl_ScummVM_Configs
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property src_ucr_Emulation_Moby_Releases_Screenshots() As src_ucr_Emulation_Moby_Releases_ScreenshotsDataTable
+        Get
+            Return Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property src_ucr_Emulation_Moby_Releases_Cover_Art() As src_ucr_Emulation_Moby_Releases_Cover_ArtDataTable
+        Get
+            Return Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property src_frm_MOBY_Extras_Manager() As src_frm_MOBY_Extras_ManagerDataTable
+        Get
+            Return Me.tablesrc_frm_MOBY_Extras_Manager
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property tbl_Moby_Regions() As tbl_Moby_RegionsDataTable
+        Get
+            Return Me.tabletbl_Moby_Regions
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.BrowsableAttribute(true),  _
      Global.System.ComponentModel.DesignerSerializationVisibilityAttribute(Global.System.ComponentModel.DesignerSerializationVisibility.Visible)>  _
     Public Overrides Property SchemaSerializationMode() As Global.System.Data.SchemaSerializationMode
@@ -839,6 +944,27 @@ Partial Public Class DS_ML
             End If
             If (Not (ds.Tables("tbl_Moby_Auto_Link")) Is Nothing) Then
                 MyBase.Tables.Add(New tbl_Moby_Auto_LinkDataTable(ds.Tables("tbl_Moby_Auto_Link")))
+            End If
+            If (Not (ds.Tables("tbl_List_Generators")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_List_GeneratorsDataTable(ds.Tables("tbl_List_Generators")))
+            End If
+            If (Not (ds.Tables("static_List_Generator_Sort")) Is Nothing) Then
+                MyBase.Tables.Add(New static_List_Generator_SortDataTable(ds.Tables("static_List_Generator_Sort")))
+            End If
+            If (Not (ds.Tables("tbl_ScummVM_Configs")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_ScummVM_ConfigsDataTable(ds.Tables("tbl_ScummVM_Configs")))
+            End If
+            If (Not (ds.Tables("src_ucr_Emulation_Moby_Releases_Screenshots")) Is Nothing) Then
+                MyBase.Tables.Add(New src_ucr_Emulation_Moby_Releases_ScreenshotsDataTable(ds.Tables("src_ucr_Emulation_Moby_Releases_Screenshots")))
+            End If
+            If (Not (ds.Tables("src_ucr_Emulation_Moby_Releases_Cover_Art")) Is Nothing) Then
+                MyBase.Tables.Add(New src_ucr_Emulation_Moby_Releases_Cover_ArtDataTable(ds.Tables("src_ucr_Emulation_Moby_Releases_Cover_Art")))
+            End If
+            If (Not (ds.Tables("src_frm_MOBY_Extras_Manager")) Is Nothing) Then
+                MyBase.Tables.Add(New src_frm_MOBY_Extras_ManagerDataTable(ds.Tables("src_frm_MOBY_Extras_Manager")))
+            End If
+            If (Not (ds.Tables("tbl_Moby_Regions")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_Moby_RegionsDataTable(ds.Tables("tbl_Moby_Regions")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -1106,6 +1232,48 @@ Partial Public Class DS_ML
                 Me.tabletbl_Moby_Auto_Link.InitVars
             End If
         End If
+        Me.tabletbl_List_Generators = CType(MyBase.Tables("tbl_List_Generators"),tbl_List_GeneratorsDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tabletbl_List_Generators) Is Nothing) Then
+                Me.tabletbl_List_Generators.InitVars
+            End If
+        End If
+        Me.tablestatic_List_Generator_Sort = CType(MyBase.Tables("static_List_Generator_Sort"),static_List_Generator_SortDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tablestatic_List_Generator_Sort) Is Nothing) Then
+                Me.tablestatic_List_Generator_Sort.InitVars
+            End If
+        End If
+        Me.tabletbl_ScummVM_Configs = CType(MyBase.Tables("tbl_ScummVM_Configs"),tbl_ScummVM_ConfigsDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tabletbl_ScummVM_Configs) Is Nothing) Then
+                Me.tabletbl_ScummVM_Configs.InitVars
+            End If
+        End If
+        Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots = CType(MyBase.Tables("src_ucr_Emulation_Moby_Releases_Screenshots"),src_ucr_Emulation_Moby_Releases_ScreenshotsDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots) Is Nothing) Then
+                Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.InitVars
+            End If
+        End If
+        Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art = CType(MyBase.Tables("src_ucr_Emulation_Moby_Releases_Cover_Art"),src_ucr_Emulation_Moby_Releases_Cover_ArtDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art) Is Nothing) Then
+                Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.InitVars
+            End If
+        End If
+        Me.tablesrc_frm_MOBY_Extras_Manager = CType(MyBase.Tables("src_frm_MOBY_Extras_Manager"),src_frm_MOBY_Extras_ManagerDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tablesrc_frm_MOBY_Extras_Manager) Is Nothing) Then
+                Me.tablesrc_frm_MOBY_Extras_Manager.InitVars
+            End If
+        End If
+        Me.tabletbl_Moby_Regions = CType(MyBase.Tables("tbl_Moby_Regions"),tbl_Moby_RegionsDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tabletbl_Moby_Regions) Is Nothing) Then
+                Me.tabletbl_Moby_Regions.InitVars
+            End If
+        End If
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1194,6 +1362,20 @@ Partial Public Class DS_ML
         MyBase.Tables.Add(Me.tabletbl_Emu_Games_Have_Want_List_Items)
         Me.tabletbl_Moby_Auto_Link = New tbl_Moby_Auto_LinkDataTable()
         MyBase.Tables.Add(Me.tabletbl_Moby_Auto_Link)
+        Me.tabletbl_List_Generators = New tbl_List_GeneratorsDataTable()
+        MyBase.Tables.Add(Me.tabletbl_List_Generators)
+        Me.tablestatic_List_Generator_Sort = New static_List_Generator_SortDataTable()
+        MyBase.Tables.Add(Me.tablestatic_List_Generator_Sort)
+        Me.tabletbl_ScummVM_Configs = New tbl_ScummVM_ConfigsDataTable()
+        MyBase.Tables.Add(Me.tabletbl_ScummVM_Configs)
+        Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots = New src_ucr_Emulation_Moby_Releases_ScreenshotsDataTable()
+        MyBase.Tables.Add(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots)
+        Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art = New src_ucr_Emulation_Moby_Releases_Cover_ArtDataTable()
+        MyBase.Tables.Add(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art)
+        Me.tablesrc_frm_MOBY_Extras_Manager = New src_frm_MOBY_Extras_ManagerDataTable()
+        MyBase.Tables.Add(Me.tablesrc_frm_MOBY_Extras_Manager)
+        Me.tabletbl_Moby_Regions = New tbl_Moby_RegionsDataTable()
+        MyBase.Tables.Add(Me.tabletbl_Moby_Regions)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1432,6 +1614,48 @@ Partial Public Class DS_ML
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializetbl_List_Generators() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializestatic_List_Generator_Sort() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializetbl_ScummVM_Configs() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializesrc_ucr_Emulation_Moby_Releases_Screenshots() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializesrc_ucr_Emulation_Moby_Releases_Cover_Art() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializesrc_frm_MOBY_Extras_Manager() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializetbl_Moby_Regions() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Sub SchemaChanged(ByVal sender As Object, ByVal e As Global.System.ComponentModel.CollectionChangeEventArgs)
         If (e.Action = Global.System.ComponentModel.CollectionChangeAction.Remove) Then
             Me.InitVars
@@ -1605,6 +1829,27 @@ Partial Public Class DS_ML
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub tbl_Moby_Auto_LinkRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_Moby_Auto_LinkRowChangeEvent)
     
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub tbl_List_GeneratorsRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_List_GeneratorsRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub static_List_Generator_SortRowChangeEventHandler(ByVal sender As Object, ByVal e As static_List_Generator_SortRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub tbl_ScummVM_ConfigsRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_ScummVM_ConfigsRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub src_ucr_Emulation_Moby_Releases_ScreenshotsRowChangeEventHandler(ByVal sender As Object, ByVal e As src_ucr_Emulation_Moby_Releases_ScreenshotsRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub src_ucr_Emulation_Moby_Releases_Cover_ArtRowChangeEventHandler(ByVal sender As Object, ByVal e As src_ucr_Emulation_Moby_Releases_Cover_ArtRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub src_frm_MOBY_Extras_ManagerRowChangeEventHandler(ByVal sender As Object, ByVal e As src_frm_MOBY_Extras_ManagerRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub tbl_Moby_RegionsRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_Moby_RegionsRowChangeEvent)
+    
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
@@ -1630,6 +1875,8 @@ Partial Public Class DS_ML
         Private columnScreenshotDirectory As Global.System.Data.DataColumn
         
         Private columnLibretro_Core As Global.System.Data.DataColumn
+        
+        Private columnid_List_Generators As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -1739,6 +1986,14 @@ Partial Public Class DS_ML
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_List_GeneratorsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_List_Generators
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1775,9 +2030,9 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addtbl_EmulatorsRow(ByVal Displayname As String, ByVal InstallDirectory As String, ByVal Executable As String, ByVal StartupParameter As String, ByVal AutoItScript As String, ByVal J2KPreset As String, ByVal ScreenshotDirectory As String, ByVal Libretro_Core As String) As tbl_EmulatorsRow
+        Public Overloads Function Addtbl_EmulatorsRow(ByVal Displayname As String, ByVal InstallDirectory As String, ByVal Executable As String, ByVal StartupParameter As String, ByVal AutoItScript As String, ByVal J2KPreset As String, ByVal ScreenshotDirectory As String, ByVal Libretro_Core As String, ByVal id_List_Generators As Long) As tbl_EmulatorsRow
             Dim rowtbl_EmulatorsRow As tbl_EmulatorsRow = CType(Me.NewRow,tbl_EmulatorsRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Displayname, InstallDirectory, Executable, StartupParameter, AutoItScript, J2KPreset, ScreenshotDirectory, Libretro_Core}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Displayname, InstallDirectory, Executable, StartupParameter, AutoItScript, J2KPreset, ScreenshotDirectory, Libretro_Core, id_List_Generators}
             rowtbl_EmulatorsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_EmulatorsRow)
             Return rowtbl_EmulatorsRow
@@ -1815,6 +2070,7 @@ Partial Public Class DS_ML
             Me.columnJ2KPreset = MyBase.Columns("J2KPreset")
             Me.columnScreenshotDirectory = MyBase.Columns("ScreenshotDirectory")
             Me.columnLibretro_Core = MyBase.Columns("Libretro_Core")
+            Me.columnid_List_Generators = MyBase.Columns("id_List_Generators")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1838,6 +2094,8 @@ Partial Public Class DS_ML
             MyBase.Columns.Add(Me.columnScreenshotDirectory)
             Me.columnLibretro_Core = New Global.System.Data.DataColumn("Libretro_Core", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLibretro_Core)
+            Me.columnid_List_Generators = New Global.System.Data.DataColumn("id_List_Generators", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_List_Generators)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_Emulators}, true))
             Me.columnid_Emulators.AutoIncrement = true
             Me.columnid_Emulators.AutoIncrementSeed = -1
@@ -2858,6 +3116,10 @@ Partial Public Class DS_ML
         
         Private columnid_DOSBox_Configs As Global.System.Data.DataColumn
         
+        Private columnCustomIdentifier As Global.System.Data.DataColumn
+        
+        Private columnUnavailable As Global.System.Data.DataColumn
+        
         Private columnGame As Global.System.Data.DataColumn
         
         Private columnFolder As Global.System.Data.DataColumn
@@ -2953,6 +3215,8 @@ Partial Public Class DS_ML
         Private columnMaxPlayers As Global.System.Data.DataColumn
         
         Private columnid_Moby_Platforms As Global.System.Data.DataColumn
+        
+        Private columnid_Moby_Platforms_Alternative As Global.System.Data.DataColumn
         
         Private columnRating As Global.System.Data.DataColumn
         
@@ -3144,6 +3408,22 @@ Partial Public Class DS_ML
         Public ReadOnly Property id_DOSBox_ConfigsColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnid_DOSBox_Configs
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CustomIdentifierColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCustomIdentifier
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property UnavailableColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnUnavailable
             End Get
         End Property
         
@@ -3528,6 +3808,14 @@ Partial Public Class DS_ML
         Public ReadOnly Property id_Moby_PlatformsColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnid_Moby_Platforms
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Moby_Platforms_AlternativeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Moby_Platforms_Alternative
             End Get
         End Property
         
@@ -4077,6 +4365,8 @@ Partial Public Class DS_ML
                     ByVal tmp_Highlighted As Boolean,  _
                     ByVal id_DOSBox_Configs_Template As Long,  _
                     ByVal id_DOSBox_Configs As Long,  _
+                    ByVal CustomIdentifier As String,  _
+                    ByVal Unavailable As Boolean,  _
                     ByVal Game As String,  _
                     ByVal Folder As String,  _
                     ByVal File As String,  _
@@ -4125,6 +4415,7 @@ Partial Public Class DS_ML
                     ByVal MinPlayers As Integer,  _
                     ByVal MaxPlayers As Integer,  _
                     ByVal id_Moby_Platforms As Integer,  _
+                    ByVal id_Moby_Platforms_Alternative As Long,  _
                     ByVal Rating As Integer,  _
                     ByVal Version As String,  _
                     ByVal Alt As String,  _
@@ -4189,7 +4480,7 @@ Partial Public Class DS_ML
                     ByVal _301_Group_Membership As Integer,  _
                     ByVal _401_Staff As Integer) As src_ucr_Emulation_GamesRow
             Dim rowsrc_ucr_Emulation_GamesRow As src_ucr_Emulation_GamesRow = CType(Me.NewRow,src_ucr_Emulation_GamesRow)
-            Dim columnValuesArray() As Object = New Object() {id_Emu_Games, tmp_Highlighted, id_DOSBox_Configs_Template, id_DOSBox_Configs, Game, Folder, File, InnerFile, Want, Have, Trade, Rank, Score, Year, Num_Played, Num_Runtime, Rating_Gameplay, Rating_Graphics, Rating_Personal, Rating_Sound, Rating_Story, Favourite, Platform, Game_NoPrefix, Age_Pessimistic, Age_Optimistic, Publisher, Developer, Description, Technical_Notes, Alternate_Titles, Basic_Genres, Perspectives, Sports_Themes, Educational_Categories, Other_Attributes, Visual_Presentation, Pacing, Gameplay, Interface_Control, Vehicular_Themes, Setting, Narrative_Theme_Topic, DLC_Addon, Special_Edition, Platform_Short, Moby_URL, Moby_Platforms_URLPart, Moby_Games_URLPart, MinPlayers, MaxPlayers, id_Moby_Platforms, Rating, Version, Alt, Trainer, Translation, Hack, Bios, Prototype, Alpha, Beta, Sample, Kiosk, Unlicensed, Fixed, Pirated, Good, Bad, Overdump, PublicDomain, Regions, Languages, MP_GameModes, MP_Options, SpecialInfo, id_Moby_Games, Last_Played, created, MultiVolume, Volume_Number, Platform_Exclusive, J2KPreset, id_Moby_Releases, Similarity, _001_Platform, _002_MobyRank, _003_MobyScore, _004_Publisher, _005_Developer, _006_Year, _101_Basic_Genres, _102_Perspectives, _103_Sports_Themes, _104_Non_Sports_Themes, _105_Educational_Categories, _106_Other_Attributes, _107_Visual_Presentation, _108_Gameplay, _109_Pacing, _110_Narrative_Theme_Topic, _111_Setting, _112_Vehicular_Themes, _113_Interface_Control, _114_DLC_Addon, _115_Special_Edition, _201_MinPlayers, _202_MaxPlayers, _203_AgeO, _204_AgeP, _205_Rating_Descriptors, _206_Other_Attributes, _207_Multiplayer_Attributes, _301_Group_Membership, _401_Staff}
+            Dim columnValuesArray() As Object = New Object() {id_Emu_Games, tmp_Highlighted, id_DOSBox_Configs_Template, id_DOSBox_Configs, CustomIdentifier, Unavailable, Game, Folder, File, InnerFile, Want, Have, Trade, Rank, Score, Year, Num_Played, Num_Runtime, Rating_Gameplay, Rating_Graphics, Rating_Personal, Rating_Sound, Rating_Story, Favourite, Platform, Game_NoPrefix, Age_Pessimistic, Age_Optimistic, Publisher, Developer, Description, Technical_Notes, Alternate_Titles, Basic_Genres, Perspectives, Sports_Themes, Educational_Categories, Other_Attributes, Visual_Presentation, Pacing, Gameplay, Interface_Control, Vehicular_Themes, Setting, Narrative_Theme_Topic, DLC_Addon, Special_Edition, Platform_Short, Moby_URL, Moby_Platforms_URLPart, Moby_Games_URLPart, MinPlayers, MaxPlayers, id_Moby_Platforms, id_Moby_Platforms_Alternative, Rating, Version, Alt, Trainer, Translation, Hack, Bios, Prototype, Alpha, Beta, Sample, Kiosk, Unlicensed, Fixed, Pirated, Good, Bad, Overdump, PublicDomain, Regions, Languages, MP_GameModes, MP_Options, SpecialInfo, id_Moby_Games, Last_Played, created, MultiVolume, Volume_Number, Platform_Exclusive, J2KPreset, id_Moby_Releases, Similarity, _001_Platform, _002_MobyRank, _003_MobyScore, _004_Publisher, _005_Developer, _006_Year, _101_Basic_Genres, _102_Perspectives, _103_Sports_Themes, _104_Non_Sports_Themes, _105_Educational_Categories, _106_Other_Attributes, _107_Visual_Presentation, _108_Gameplay, _109_Pacing, _110_Narrative_Theme_Topic, _111_Setting, _112_Vehicular_Themes, _113_Interface_Control, _114_DLC_Addon, _115_Special_Edition, _201_MinPlayers, _202_MaxPlayers, _203_AgeO, _204_AgeP, _205_Rating_Descriptors, _206_Other_Attributes, _207_Multiplayer_Attributes, _301_Group_Membership, _401_Staff}
             rowsrc_ucr_Emulation_GamesRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowsrc_ucr_Emulation_GamesRow)
             Return rowsrc_ucr_Emulation_GamesRow
@@ -4216,6 +4507,8 @@ Partial Public Class DS_ML
             Me.columntmp_Highlighted = MyBase.Columns("tmp_Highlighted")
             Me.columnid_DOSBox_Configs_Template = MyBase.Columns("id_DOSBox_Configs_Template")
             Me.columnid_DOSBox_Configs = MyBase.Columns("id_DOSBox_Configs")
+            Me.columnCustomIdentifier = MyBase.Columns("CustomIdentifier")
+            Me.columnUnavailable = MyBase.Columns("Unavailable")
             Me.columnGame = MyBase.Columns("Game")
             Me.columnFolder = MyBase.Columns("Folder")
             Me.columnFile = MyBase.Columns("File")
@@ -4264,6 +4557,7 @@ Partial Public Class DS_ML
             Me.columnMinPlayers = MyBase.Columns("MinPlayers")
             Me.columnMaxPlayers = MyBase.Columns("MaxPlayers")
             Me.columnid_Moby_Platforms = MyBase.Columns("id_Moby_Platforms")
+            Me.columnid_Moby_Platforms_Alternative = MyBase.Columns("id_Moby_Platforms_Alternative")
             Me.columnRating = MyBase.Columns("Rating")
             Me.columnVersion = MyBase.Columns("Version")
             Me.columnAlt = MyBase.Columns("Alt")
@@ -4340,6 +4634,10 @@ Partial Public Class DS_ML
             MyBase.Columns.Add(Me.columnid_DOSBox_Configs_Template)
             Me.columnid_DOSBox_Configs = New Global.System.Data.DataColumn("id_DOSBox_Configs", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_DOSBox_Configs)
+            Me.columnCustomIdentifier = New Global.System.Data.DataColumn("CustomIdentifier", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCustomIdentifier)
+            Me.columnUnavailable = New Global.System.Data.DataColumn("Unavailable", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnUnavailable)
             Me.columnGame = New Global.System.Data.DataColumn("Game", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnGame)
             Me.columnFolder = New Global.System.Data.DataColumn("Folder", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -4436,6 +4734,8 @@ Partial Public Class DS_ML
             MyBase.Columns.Add(Me.columnMaxPlayers)
             Me.columnid_Moby_Platforms = New Global.System.Data.DataColumn("id_Moby_Platforms", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_Moby_Platforms)
+            Me.columnid_Moby_Platforms_Alternative = New Global.System.Data.DataColumn("id_Moby_Platforms_Alternative", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Moby_Platforms_Alternative)
             Me.columnRating = New Global.System.Data.DataColumn("Rating", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnRating)
             Me.columnVersion = New Global.System.Data.DataColumn("Version", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -8526,9 +8826,15 @@ Partial Public Class DS_ML
         
         Private columnid_DOSBox_Configs As Global.System.Data.DataColumn
         
+        Private columnid_ScummVM_Configs_Template As Global.System.Data.DataColumn
+        
+        Private columnid_ScummVM_Configs As Global.System.Data.DataColumn
+        
         Private columnid_Rombase_DOSBox_Filetypes As Global.System.Data.DataColumn
         
         Private columnid_Rombase_DOSBox_Exe_Types As Global.System.Data.DataColumn
+        
+        Private columnUnavailable As Global.System.Data.DataColumn
         
         Private columnDOSBox_Mount_Destination As Global.System.Data.DataColumn
         
@@ -8537,6 +8843,8 @@ Partial Public Class DS_ML
         Private columnMoby_Games_URLPart As Global.System.Data.DataColumn
         
         Private columnid_Moby_Platforms As Global.System.Data.DataColumn
+        
+        Private columnid_Moby_Platforms_Alternative As Global.System.Data.DataColumn
         
         Private columnFolder As Global.System.Data.DataColumn
         
@@ -8694,6 +9002,8 @@ Partial Public Class DS_ML
         
         Private columndeprecated As Global.System.Data.DataColumn
         
+        Private columntmp_Highlighted As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -8755,6 +9065,22 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_ScummVM_Configs_TemplateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_ScummVM_Configs_Template
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_ScummVM_ConfigsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_ScummVM_Configs
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property id_Rombase_DOSBox_FiletypesColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnid_Rombase_DOSBox_Filetypes
@@ -8766,6 +9092,14 @@ Partial Public Class DS_ML
         Public ReadOnly Property id_Rombase_DOSBox_Exe_TypesColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnid_Rombase_DOSBox_Exe_Types
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property UnavailableColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnUnavailable
             End Get
         End Property
         
@@ -8798,6 +9132,14 @@ Partial Public Class DS_ML
         Public ReadOnly Property id_Moby_PlatformsColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnid_Moby_Platforms
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Moby_Platforms_AlternativeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Moby_Platforms_Alternative
             End Get
         End Property
         
@@ -9426,6 +9768,14 @@ Partial Public Class DS_ML
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property tmp_HighlightedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntmp_Highlighted
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -9465,12 +9815,16 @@ Partial Public Class DS_ML
         Public Overloads Function Addtbl_Emu_GamesRow( _
                     ByVal id_DOSBox_Configs_Template As Long,  _
                     ByVal id_DOSBox_Configs As Long,  _
+                    ByVal id_ScummVM_Configs_Template As Long,  _
+                    ByVal id_ScummVM_Configs As Long,  _
                     ByVal id_Rombase_DOSBox_Filetypes As Long,  _
                     ByVal id_Rombase_DOSBox_Exe_Types As Long,  _
+                    ByVal Unavailable As Boolean,  _
                     ByVal DOSBox_Mount_Destination As String,  _
                     ByVal Hidden As Boolean,  _
                     ByVal Moby_Games_URLPart As String,  _
                     ByVal id_Moby_Platforms As Long,  _
+                    ByVal id_Moby_Platforms_Alternative As Long,  _
                     ByVal Folder As String,  _
                     ByVal File As String,  _
                     ByVal InnerFile As String,  _
@@ -9548,9 +9902,10 @@ Partial Public Class DS_ML
                     ByVal Volume_Number As Long,  _
                     ByVal id_Emu_Games_Owner As Long,  _
                     ByVal Filtered_Name As String,  _
-                    ByVal deprecated As Boolean) As tbl_Emu_GamesRow
+                    ByVal deprecated As Boolean,  _
+                    ByVal tmp_Highlighted As Boolean) As tbl_Emu_GamesRow
             Dim rowtbl_Emu_GamesRow As tbl_Emu_GamesRow = CType(Me.NewRow,tbl_Emu_GamesRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, id_DOSBox_Configs_Template, id_DOSBox_Configs, id_Rombase_DOSBox_Filetypes, id_Rombase_DOSBox_Exe_Types, DOSBox_Mount_Destination, Hidden, Moby_Games_URLPart, id_Moby_Platforms, Folder, File, InnerFile, Size, CustomIdentifier, CRC32, SHA1, MD5, Name, Name_Prefix, Note, Publisher, Publisher_id_Moby_Companies, Developer, Developer_id_Moby_Companies, Description, Favourite, Rating_Gameplay, Rating_Graphics, Rating_Sound, Rating_Story, Rating_Personal, Num_Played, Num_Runtime, Year, Version, Alt, Trainer, Translation, Hack, Bios, Prototype, Alpha, Beta, Sample, Kiosk, Unlicensed, Fixed, Pirated, Good, Bad, Overdump, PublicDomain, ROMBASE_id_Moby_Platforms, id_Rombase, id_Emulators, Publisher_USR, Publisher_id_Moby_Companies_USR, Developer_USR, Developer_id_Moby_Companies_USR, Description_USR, Year_USR, Version_USR, Alt_USR, Trainer_USR, Translation_USR, Hack_USR, Bios_USR, Prototype_USR, Alpha_USR, Beta_USR, Sample_USR, Kiosk_USR, Unlicensed_USR, Fixed_USR, Pirated_USR, Good_USR, Bad_USR, Overdump_USR, PublicDomain_USR, Name_USR, Name_Prefix_USR, Note_USR, created, Volume_Number, id_Emu_Games_Owner, Filtered_Name, deprecated}
+            Dim columnValuesArray() As Object = New Object() {Nothing, id_DOSBox_Configs_Template, id_DOSBox_Configs, id_ScummVM_Configs_Template, id_ScummVM_Configs, id_Rombase_DOSBox_Filetypes, id_Rombase_DOSBox_Exe_Types, Unavailable, DOSBox_Mount_Destination, Hidden, Moby_Games_URLPart, id_Moby_Platforms, id_Moby_Platforms_Alternative, Folder, File, InnerFile, Size, CustomIdentifier, CRC32, SHA1, MD5, Name, Name_Prefix, Note, Publisher, Publisher_id_Moby_Companies, Developer, Developer_id_Moby_Companies, Description, Favourite, Rating_Gameplay, Rating_Graphics, Rating_Sound, Rating_Story, Rating_Personal, Num_Played, Num_Runtime, Year, Version, Alt, Trainer, Translation, Hack, Bios, Prototype, Alpha, Beta, Sample, Kiosk, Unlicensed, Fixed, Pirated, Good, Bad, Overdump, PublicDomain, ROMBASE_id_Moby_Platforms, id_Rombase, id_Emulators, Publisher_USR, Publisher_id_Moby_Companies_USR, Developer_USR, Developer_id_Moby_Companies_USR, Description_USR, Year_USR, Version_USR, Alt_USR, Trainer_USR, Translation_USR, Hack_USR, Bios_USR, Prototype_USR, Alpha_USR, Beta_USR, Sample_USR, Kiosk_USR, Unlicensed_USR, Fixed_USR, Pirated_USR, Good_USR, Bad_USR, Overdump_USR, PublicDomain_USR, Name_USR, Name_Prefix_USR, Note_USR, created, Volume_Number, id_Emu_Games_Owner, Filtered_Name, deprecated, tmp_Highlighted}
             rowtbl_Emu_GamesRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_Emu_GamesRow)
             Return rowtbl_Emu_GamesRow
@@ -9582,12 +9937,16 @@ Partial Public Class DS_ML
             Me.columnid_Emu_Games = MyBase.Columns("id_Emu_Games")
             Me.columnid_DOSBox_Configs_Template = MyBase.Columns("id_DOSBox_Configs_Template")
             Me.columnid_DOSBox_Configs = MyBase.Columns("id_DOSBox_Configs")
+            Me.columnid_ScummVM_Configs_Template = MyBase.Columns("id_ScummVM_Configs_Template")
+            Me.columnid_ScummVM_Configs = MyBase.Columns("id_ScummVM_Configs")
             Me.columnid_Rombase_DOSBox_Filetypes = MyBase.Columns("id_Rombase_DOSBox_Filetypes")
             Me.columnid_Rombase_DOSBox_Exe_Types = MyBase.Columns("id_Rombase_DOSBox_Exe_Types")
+            Me.columnUnavailable = MyBase.Columns("Unavailable")
             Me.columnDOSBox_Mount_Destination = MyBase.Columns("DOSBox_Mount_Destination")
             Me.columnHidden = MyBase.Columns("Hidden")
             Me.columnMoby_Games_URLPart = MyBase.Columns("Moby_Games_URLPart")
             Me.columnid_Moby_Platforms = MyBase.Columns("id_Moby_Platforms")
+            Me.columnid_Moby_Platforms_Alternative = MyBase.Columns("id_Moby_Platforms_Alternative")
             Me.columnFolder = MyBase.Columns("Folder")
             Me.columnFile = MyBase.Columns("File")
             Me.columnInnerFile = MyBase.Columns("InnerFile")
@@ -9666,6 +10025,7 @@ Partial Public Class DS_ML
             Me.columnid_Emu_Games_Owner = MyBase.Columns("id_Emu_Games_Owner")
             Me.columnFiltered_Name = MyBase.Columns("Filtered_Name")
             Me.columndeprecated = MyBase.Columns("deprecated")
+            Me.columntmp_Highlighted = MyBase.Columns("tmp_Highlighted")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9677,10 +10037,16 @@ Partial Public Class DS_ML
             MyBase.Columns.Add(Me.columnid_DOSBox_Configs_Template)
             Me.columnid_DOSBox_Configs = New Global.System.Data.DataColumn("id_DOSBox_Configs", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_DOSBox_Configs)
+            Me.columnid_ScummVM_Configs_Template = New Global.System.Data.DataColumn("id_ScummVM_Configs_Template", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_ScummVM_Configs_Template)
+            Me.columnid_ScummVM_Configs = New Global.System.Data.DataColumn("id_ScummVM_Configs", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_ScummVM_Configs)
             Me.columnid_Rombase_DOSBox_Filetypes = New Global.System.Data.DataColumn("id_Rombase_DOSBox_Filetypes", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_Rombase_DOSBox_Filetypes)
             Me.columnid_Rombase_DOSBox_Exe_Types = New Global.System.Data.DataColumn("id_Rombase_DOSBox_Exe_Types", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_Rombase_DOSBox_Exe_Types)
+            Me.columnUnavailable = New Global.System.Data.DataColumn("Unavailable", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnUnavailable)
             Me.columnDOSBox_Mount_Destination = New Global.System.Data.DataColumn("DOSBox_Mount_Destination", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDOSBox_Mount_Destination)
             Me.columnHidden = New Global.System.Data.DataColumn("Hidden", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
@@ -9689,6 +10055,8 @@ Partial Public Class DS_ML
             MyBase.Columns.Add(Me.columnMoby_Games_URLPart)
             Me.columnid_Moby_Platforms = New Global.System.Data.DataColumn("id_Moby_Platforms", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_Moby_Platforms)
+            Me.columnid_Moby_Platforms_Alternative = New Global.System.Data.DataColumn("id_Moby_Platforms_Alternative", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Moby_Platforms_Alternative)
             Me.columnFolder = New Global.System.Data.DataColumn("Folder", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFolder)
             Me.columnFile = New Global.System.Data.DataColumn("File", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -9845,6 +10213,8 @@ Partial Public Class DS_ML
             MyBase.Columns.Add(Me.columnFiltered_Name)
             Me.columndeprecated = New Global.System.Data.DataColumn("deprecated", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndeprecated)
+            Me.columntmp_Highlighted = New Global.System.Data.DataColumn("tmp_Highlighted", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntmp_Highlighted)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_Emu_Games}, true))
             Me.columnid_Emu_Games.AutoIncrement = true
             Me.columnid_Emu_Games.AutoIncrementSeed = -1
@@ -12647,6 +13017,8 @@ Partial Public Class DS_ML
         
         Private columnsourcefile As Global.System.Data.DataColumn
         
+        Private columnis_allowed_by_filter_ini As Global.System.Data.DataColumn
+        
         Private columnisbios As Global.System.Data.DataColumn
         
         Private columnisdevice As Global.System.Data.DataColumn
@@ -12747,6 +13119,14 @@ Partial Public Class DS_ML
         Public ReadOnly Property sourcefileColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnsourcefile
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property is_allowed_by_filter_iniColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnis_allowed_by_filter_ini
             End Get
         End Property
         
@@ -12867,9 +13247,25 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addtbl_Mame_RomsRow(ByVal name As String, ByVal description As String, ByVal year As String, ByVal manufacturer As String, ByVal sourcefile As String, ByVal isbios As Boolean, ByVal isdevice As Boolean, ByVal ismechanical As Boolean, ByVal issoftwarelist As Boolean, ByVal hasdisplay As Boolean, ByVal runnable As Boolean, ByVal cloneof As String, ByVal romof As String, ByVal sampleof As String, ByVal mameinfo As String) As tbl_Mame_RomsRow
+        Public Overloads Function Addtbl_Mame_RomsRow( _
+                    ByVal name As String,  _
+                    ByVal description As String,  _
+                    ByVal year As String,  _
+                    ByVal manufacturer As String,  _
+                    ByVal sourcefile As String,  _
+                    ByVal is_allowed_by_filter_ini As Boolean,  _
+                    ByVal isbios As Boolean,  _
+                    ByVal isdevice As Boolean,  _
+                    ByVal ismechanical As Boolean,  _
+                    ByVal issoftwarelist As Boolean,  _
+                    ByVal hasdisplay As Boolean,  _
+                    ByVal runnable As Boolean,  _
+                    ByVal cloneof As String,  _
+                    ByVal romof As String,  _
+                    ByVal sampleof As String,  _
+                    ByVal mameinfo As String) As tbl_Mame_RomsRow
             Dim rowtbl_Mame_RomsRow As tbl_Mame_RomsRow = CType(Me.NewRow,tbl_Mame_RomsRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, name, description, year, manufacturer, sourcefile, isbios, isdevice, ismechanical, issoftwarelist, hasdisplay, runnable, cloneof, romof, sampleof, mameinfo}
+            Dim columnValuesArray() As Object = New Object() {Nothing, name, description, year, manufacturer, sourcefile, is_allowed_by_filter_ini, isbios, isdevice, ismechanical, issoftwarelist, hasdisplay, runnable, cloneof, romof, sampleof, mameinfo}
             rowtbl_Mame_RomsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_Mame_RomsRow)
             Return rowtbl_Mame_RomsRow
@@ -12904,6 +13300,7 @@ Partial Public Class DS_ML
             Me.columnyear = MyBase.Columns("year")
             Me.columnmanufacturer = MyBase.Columns("manufacturer")
             Me.columnsourcefile = MyBase.Columns("sourcefile")
+            Me.columnis_allowed_by_filter_ini = MyBase.Columns("is_allowed_by_filter_ini")
             Me.columnisbios = MyBase.Columns("isbios")
             Me.columnisdevice = MyBase.Columns("isdevice")
             Me.columnismechanical = MyBase.Columns("ismechanical")
@@ -12931,6 +13328,8 @@ Partial Public Class DS_ML
             MyBase.Columns.Add(Me.columnmanufacturer)
             Me.columnsourcefile = New Global.System.Data.DataColumn("sourcefile", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnsourcefile)
+            Me.columnis_allowed_by_filter_ini = New Global.System.Data.DataColumn("is_allowed_by_filter_ini", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnis_allowed_by_filter_ini)
             Me.columnisbios = New Global.System.Data.DataColumn("isbios", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnisbios)
             Me.columnisdevice = New Global.System.Data.DataColumn("isdevice", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
@@ -13849,6 +14248,10 @@ Partial Public Class DS_ML
         
         Private columnp_sdl_output As Global.System.Data.DataColumn
         
+        Private _columnp_sdl_surfacenp_sharpness As Global.System.Data.DataColumn
+        
+        Private _columnp_sdl_surface_collapse_dbl As Global.System.Data.DataColumn
+        
         Private columnp_dosbox_vmemsize As Global.System.Data.DataColumn
         
         Private columnp_dosbox_memsizekb As Global.System.Data.DataColumn
@@ -13873,6 +14276,8 @@ Partial Public Class DS_ML
         
         Private columnp_voodoo As Global.System.Data.DataColumn
         
+        Private columnp_voodoo_voodoomem As Global.System.Data.DataColumn
+        
         Private columnp_mixer_swapstereo As Global.System.Data.DataColumn
         
         Private columnp_midi_mididevice As Global.System.Data.DataColumn
@@ -13893,9 +14298,61 @@ Partial Public Class DS_ML
         
         Private columnp_midi_mt32_partials As Global.System.Data.DataColumn
         
+        Private columnp_midi_mt32_romdir As Global.System.Data.DataColumn
+        
+        Private columnp_midi_mt32_chunk As Global.System.Data.DataColumn
+        
+        Private columnp_midi_mt32_prebuffer As Global.System.Data.DataColumn
+        
+        Private columnp_midi_mt32_analog As Global.System.Data.DataColumn
+        
+        Private columnp_midi_mt32_rate As Global.System.Data.DataColumn
+        
+        Private columnp_midi_mt32_src_quality As Global.System.Data.DataColumn
+        
+        Private columnp_midi_mt32_niceampramp As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_soundfont As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_samplerate As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_gain As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_polyphony As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_cores As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_periods As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_periodsize As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_reverb As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_chorus As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_reverb_roomsize As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_reverb_damping As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_reverb_width As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_reverb_level As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_chorus_number As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_chorus_level As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_chorus_speed As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_chorus_depth As Global.System.Data.DataColumn
+        
+        Private columnp_midi_fluid_chorus_type As Global.System.Data.DataColumn
+        
         Private columnp_sblaster_oplmode As Global.System.Data.DataColumn
         
         Private columnp_sblaster_hardwarebase As Global.System.Data.DataColumn
+        
+        Private columnp_sblaster_oplemu As Global.System.Data.DataColumn
         
         Private columnp_sblaster_goldplay As Global.System.Data.DataColumn
         
@@ -14756,6 +15213,22 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property _p_sdl_surfacenp_sharpnessColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me._columnp_sdl_surfacenp_sharpness
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property _p_sdl_surface_collapse_dblColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me._columnp_sdl_surface_collapse_dbl
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property p_dosbox_vmemsizeColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnp_dosbox_vmemsize
@@ -14852,6 +15325,14 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_voodoo_voodoomemColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_voodoo_voodoomem
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property p_mixer_swapstereoColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnp_mixer_swapstereo
@@ -14932,6 +15413,206 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_mt32_romdirColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_mt32_romdir
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_mt32_chunkColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_mt32_chunk
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_mt32_prebufferColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_mt32_prebuffer
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_mt32_analogColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_mt32_analog
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_mt32_rateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_mt32_rate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_mt32_src_qualityColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_mt32_src_quality
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_mt32_niceamprampColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_mt32_niceampramp
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_soundfontColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_soundfont
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_samplerateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_samplerate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_gainColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_gain
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_polyphonyColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_polyphony
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_coresColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_cores
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_periodsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_periods
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_periodsizeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_periodsize
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_reverbColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_reverb
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_chorusColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_chorus
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_reverb_roomsizeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_reverb_roomsize
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_reverb_dampingColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_reverb_damping
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_reverb_widthColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_reverb_width
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_reverb_levelColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_reverb_level
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_chorus_numberColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_chorus_number
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_chorus_levelColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_chorus_level
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_chorus_speedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_chorus_speed
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_chorus_depthColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_chorus_depth
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_midi_fluid_chorus_typeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_midi_fluid_chorus_type
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property p_sblaster_oplmodeColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnp_sblaster_oplmode
@@ -14943,6 +15624,14 @@ Partial Public Class DS_ML
         Public ReadOnly Property p_sblaster_hardwarebaseColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnp_sblaster_hardwarebase
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property p_sblaster_oplemuColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnp_sblaster_oplemu
             End Get
         End Property
         
@@ -15389,6 +16078,8 @@ Partial Public Class DS_ML
                     ByVal p_sdl_pixelshader As String,  _
                     ByVal p_sdl_pixelshader_forced As Boolean,  _
                     ByVal p_sdl_output As String,  _
+                    ByVal _p_sdl_surfacenp_sharpness As Integer,  _
+                    ByVal _p_sdl_surface_collapse_dbl As Boolean,  _
                     ByVal p_dosbox_vmemsize As Integer,  _
                     ByVal p_dosbox_memsizekb As Integer,  _
                     ByVal p_dosbox_forcerate As String,  _
@@ -15401,6 +16092,7 @@ Partial Public Class DS_ML
                     ByVal p_keyboard_aux As Boolean,  _
                     ByVal p_keyboard_auxdevice As String,  _
                     ByVal p_voodoo As String,  _
+                    ByVal p_voodoo_voodoomem As String,  _
                     ByVal p_mixer_swapstereo As Boolean,  _
                     ByVal p_midi_mididevice As String,  _
                     ByVal p_midi_mt32_reverse_stereo As Boolean,  _
@@ -15411,8 +16103,34 @@ Partial Public Class DS_ML
                     ByVal p_midi_mt32_reverb_time As Integer,  _
                     ByVal p_midi_mt32_reverb_level As Integer,  _
                     ByVal p_midi_mt32_partials As Integer,  _
+                    ByVal p_midi_mt32_romdir As String,  _
+                    ByVal p_midi_mt32_chunk As Long,  _
+                    ByVal p_midi_mt32_prebuffer As Long,  _
+                    ByVal p_midi_mt32_analog As Long,  _
+                    ByVal p_midi_mt32_rate As String,  _
+                    ByVal p_midi_mt32_src_quality As Long,  _
+                    ByVal p_midi_mt32_niceampramp As Boolean,  _
+                    ByVal p_midi_fluid_soundfont As String,  _
+                    ByVal p_midi_fluid_samplerate As Long,  _
+                    ByVal p_midi_fluid_gain As Decimal,  _
+                    ByVal p_midi_fluid_polyphony As Long,  _
+                    ByVal p_midi_fluid_cores As String,  _
+                    ByVal p_midi_fluid_periods As Long,  _
+                    ByVal p_midi_fluid_periodsize As Long,  _
+                    ByVal p_midi_fluid_reverb As Boolean,  _
+                    ByVal p_midi_fluid_chorus As Boolean,  _
+                    ByVal p_midi_fluid_reverb_roomsize As Decimal,  _
+                    ByVal p_midi_fluid_reverb_damping As Decimal,  _
+                    ByVal p_midi_fluid_reverb_width As Decimal,  _
+                    ByVal p_midi_fluid_reverb_level As Decimal,  _
+                    ByVal p_midi_fluid_chorus_number As Long,  _
+                    ByVal p_midi_fluid_chorus_level As Decimal,  _
+                    ByVal p_midi_fluid_chorus_speed As Decimal,  _
+                    ByVal p_midi_fluid_chorus_depth As Decimal,  _
+                    ByVal p_midi_fluid_chorus_type As Long,  _
                     ByVal p_sblaster_oplmode As String,  _
                     ByVal p_sblaster_hardwarebase As String,  _
+                    ByVal p_sblaster_oplemu As String,  _
                     ByVal p_sblaster_goldplay As Boolean,  _
                     ByVal p_innova_innova As Boolean,  _
                     ByVal p_innova_samplerate As String,  _
@@ -15453,7 +16171,7 @@ Partial Public Class DS_ML
                     ByVal p_ide4_int13fakeio As Boolean,  _
                     ByVal p_ide4_int13fakev86io As Boolean) As tbl_DOSBox_ConfigsRow
             Dim rowtbl_DOSBox_ConfigsRow As tbl_DOSBox_ConfigsRow = CType(Me.NewRow,tbl_DOSBox_ConfigsRow)
-            Dim columnValuesArray() As Object = New Object() {id_DOSBox_Configs, id_Rombase_DOSBox_Configs, isTemplate, Displayname, _sdl_fullscreen, _sdl_fulldouble, _sdl_fullresolution, _sdl_windowresolution, _sdl_output, _sdl_autolock, _sdl_sensitivity, _sdl_waitonerror, _sdl_priority_1, _sdl_priority_2, _sdl_mapperfile, _sdl_usescancodes, _dosbox_language, _dosbox_machine, _dosbox_memsize, _render_frameskip, _render_aspect, _render_scaler, _render_scaler_forced, _cpu_core, _cpu_cputype, _cpu_cycles, _cpu_cycleup, _cpu_cycledown, _mixer_nosound, _mixer_rate, _mixer_blocksize, _mixer_prebuffer, _midi_mpu401, _midi_mididevice, _midi_midiconfig, _sblaster_sbtype, _sblaster_sbbase, _sblaster_irq, _sblaster_dma, _sblaster_hdma, _sblaster_sbmixer, _sblaster_oplmode, _sblaster_oplemu, _sblaster_oplrate, _gus_gus, _gus_gusrate, _gus_gusbase, _gus_gusirq, _gus_gusdma, _gus_ultradir, _speaker_pcspeaker, _speaker_pcrate, _speaker_tandy, _speaker_tandyrate, _speaker_disney, _joystick_joysticktype, _joystick_timed, _joystick_autofire, _joystick_swap34, _joystick_buttonwrap, _serial_serial1, _serial_serial2, _serial_serial3, _serial_serial4, _dos_xms, _dos_ems, _dos_umb, _dos_keyboardlayout, _ipx_ipx, _autoexec_before, _autoexec_after, _ml_autoclose, _ml_showconsole, _ml_customsettings, _ml_useloadfix, _ml_loadfix, _ml_volume_master_left, _ml_volume_master_right, _ml_volume_spkr_left, _ml_volume_spkr_right, _ml_volume_sb_left, _ml_volume_sb_right, _ml_volume_disney_left, _ml_volume_disney_right, _ml_volume_gus_left, _ml_volume_gus_right, _ml_volume_fm_left, _ml_volume_fm_right, _ml_volume_cdaudio_left, _ml_volume_cdaudio_right, p_sdl_pixelshader, p_sdl_pixelshader_forced, p_sdl_output, p_dosbox_vmemsize, p_dosbox_memsizekb, p_dosbox_forcerate, p_dosbox_pit_hack, p_render_scaler, p_render_autofit, p_vsync_vsyncmode, p_vsync_vsyncrate, p_cpu_cputype, p_keyboard_aux, p_keyboard_auxdevice, p_voodoo, p_mixer_swapstereo, p_midi_mididevice, p_midi_mt32_reverse_stereo, p_midi_mt32_verbose, p_midi_mt32_thread, p_midi_mt32_dac, p_midi_mt32_reverb_mode, p_midi_mt32_reverb_time, p_midi_mt32_reverb_level, p_midi_mt32_partials, p_sblaster_oplmode, p_sblaster_hardwarebase, p_sblaster_goldplay, p_innova_innova, p_innova_samplerate, p_innova_sidbase, p_innova_quality, p_speaker_ps1audio, p_speaker_ps1audiorate, p_printer_printer, p_printer_dpi, p_printer_width, p_printer_height, p_printer_printoutput, p_printer_multipage, p_printer_docpath, p_printer_timeout, p_parallel_parallel1, p_parallel_parallel2, p_parallel_parallel3, p_parallel_dongle, p_glide_glide, p_glide_lfb, p_glide_splash, p_ne2000_ne2000, p_ne2000_nicbase, p_ne2000_nicirq, p_ne2000_macaddr, p_ne2000_realnic, p_ide1_enable, p_ide1_int13fakeio, p_ide1_int13fakev86io, p_ide2_enable, p_ide2_int13fakeio, p_ide2_int13fakev86io, p_ide3_enable, p_ide3_int13fakeio, p_ide3_int13fakev86io, p_ide4_enable, p_ide4_int13fakeio, p_ide4_int13fakev86io}
+            Dim columnValuesArray() As Object = New Object() {id_DOSBox_Configs, id_Rombase_DOSBox_Configs, isTemplate, Displayname, _sdl_fullscreen, _sdl_fulldouble, _sdl_fullresolution, _sdl_windowresolution, _sdl_output, _sdl_autolock, _sdl_sensitivity, _sdl_waitonerror, _sdl_priority_1, _sdl_priority_2, _sdl_mapperfile, _sdl_usescancodes, _dosbox_language, _dosbox_machine, _dosbox_memsize, _render_frameskip, _render_aspect, _render_scaler, _render_scaler_forced, _cpu_core, _cpu_cputype, _cpu_cycles, _cpu_cycleup, _cpu_cycledown, _mixer_nosound, _mixer_rate, _mixer_blocksize, _mixer_prebuffer, _midi_mpu401, _midi_mididevice, _midi_midiconfig, _sblaster_sbtype, _sblaster_sbbase, _sblaster_irq, _sblaster_dma, _sblaster_hdma, _sblaster_sbmixer, _sblaster_oplmode, _sblaster_oplemu, _sblaster_oplrate, _gus_gus, _gus_gusrate, _gus_gusbase, _gus_gusirq, _gus_gusdma, _gus_ultradir, _speaker_pcspeaker, _speaker_pcrate, _speaker_tandy, _speaker_tandyrate, _speaker_disney, _joystick_joysticktype, _joystick_timed, _joystick_autofire, _joystick_swap34, _joystick_buttonwrap, _serial_serial1, _serial_serial2, _serial_serial3, _serial_serial4, _dos_xms, _dos_ems, _dos_umb, _dos_keyboardlayout, _ipx_ipx, _autoexec_before, _autoexec_after, _ml_autoclose, _ml_showconsole, _ml_customsettings, _ml_useloadfix, _ml_loadfix, _ml_volume_master_left, _ml_volume_master_right, _ml_volume_spkr_left, _ml_volume_spkr_right, _ml_volume_sb_left, _ml_volume_sb_right, _ml_volume_disney_left, _ml_volume_disney_right, _ml_volume_gus_left, _ml_volume_gus_right, _ml_volume_fm_left, _ml_volume_fm_right, _ml_volume_cdaudio_left, _ml_volume_cdaudio_right, p_sdl_pixelshader, p_sdl_pixelshader_forced, p_sdl_output, _p_sdl_surfacenp_sharpness, _p_sdl_surface_collapse_dbl, p_dosbox_vmemsize, p_dosbox_memsizekb, p_dosbox_forcerate, p_dosbox_pit_hack, p_render_scaler, p_render_autofit, p_vsync_vsyncmode, p_vsync_vsyncrate, p_cpu_cputype, p_keyboard_aux, p_keyboard_auxdevice, p_voodoo, p_voodoo_voodoomem, p_mixer_swapstereo, p_midi_mididevice, p_midi_mt32_reverse_stereo, p_midi_mt32_verbose, p_midi_mt32_thread, p_midi_mt32_dac, p_midi_mt32_reverb_mode, p_midi_mt32_reverb_time, p_midi_mt32_reverb_level, p_midi_mt32_partials, p_midi_mt32_romdir, p_midi_mt32_chunk, p_midi_mt32_prebuffer, p_midi_mt32_analog, p_midi_mt32_rate, p_midi_mt32_src_quality, p_midi_mt32_niceampramp, p_midi_fluid_soundfont, p_midi_fluid_samplerate, p_midi_fluid_gain, p_midi_fluid_polyphony, p_midi_fluid_cores, p_midi_fluid_periods, p_midi_fluid_periodsize, p_midi_fluid_reverb, p_midi_fluid_chorus, p_midi_fluid_reverb_roomsize, p_midi_fluid_reverb_damping, p_midi_fluid_reverb_width, p_midi_fluid_reverb_level, p_midi_fluid_chorus_number, p_midi_fluid_chorus_level, p_midi_fluid_chorus_speed, p_midi_fluid_chorus_depth, p_midi_fluid_chorus_type, p_sblaster_oplmode, p_sblaster_hardwarebase, p_sblaster_oplemu, p_sblaster_goldplay, p_innova_innova, p_innova_samplerate, p_innova_sidbase, p_innova_quality, p_speaker_ps1audio, p_speaker_ps1audiorate, p_printer_printer, p_printer_dpi, p_printer_width, p_printer_height, p_printer_printoutput, p_printer_multipage, p_printer_docpath, p_printer_timeout, p_parallel_parallel1, p_parallel_parallel2, p_parallel_parallel3, p_parallel_dongle, p_glide_glide, p_glide_lfb, p_glide_splash, p_ne2000_ne2000, p_ne2000_nicbase, p_ne2000_nicirq, p_ne2000_macaddr, p_ne2000_realnic, p_ide1_enable, p_ide1_int13fakeio, p_ide1_int13fakev86io, p_ide2_enable, p_ide2_int13fakeio, p_ide2_int13fakev86io, p_ide3_enable, p_ide3_int13fakeio, p_ide3_int13fakev86io, p_ide4_enable, p_ide4_int13fakeio, p_ide4_int13fakev86io}
             rowtbl_DOSBox_ConfigsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_DOSBox_ConfigsRow)
             Return rowtbl_DOSBox_ConfigsRow
@@ -15569,6 +16287,8 @@ Partial Public Class DS_ML
             Me.columnp_sdl_pixelshader = MyBase.Columns("p_sdl_pixelshader")
             Me.columnp_sdl_pixelshader_forced = MyBase.Columns("p_sdl_pixelshader_forced")
             Me.columnp_sdl_output = MyBase.Columns("p_sdl_output")
+            Me._columnp_sdl_surfacenp_sharpness = MyBase.Columns("p_sdl_surfacenp-sharpness")
+            Me._columnp_sdl_surface_collapse_dbl = MyBase.Columns("p_sdl_surface-collapse-dbl")
             Me.columnp_dosbox_vmemsize = MyBase.Columns("p_dosbox_vmemsize")
             Me.columnp_dosbox_memsizekb = MyBase.Columns("p_dosbox_memsizekb")
             Me.columnp_dosbox_forcerate = MyBase.Columns("p_dosbox_forcerate")
@@ -15581,6 +16301,7 @@ Partial Public Class DS_ML
             Me.columnp_keyboard_aux = MyBase.Columns("p_keyboard_aux")
             Me.columnp_keyboard_auxdevice = MyBase.Columns("p_keyboard_auxdevice")
             Me.columnp_voodoo = MyBase.Columns("p_voodoo")
+            Me.columnp_voodoo_voodoomem = MyBase.Columns("p_voodoo_voodoomem")
             Me.columnp_mixer_swapstereo = MyBase.Columns("p_mixer_swapstereo")
             Me.columnp_midi_mididevice = MyBase.Columns("p_midi_mididevice")
             Me.columnp_midi_mt32_reverse_stereo = MyBase.Columns("p_midi_mt32_reverse_stereo")
@@ -15591,8 +16312,34 @@ Partial Public Class DS_ML
             Me.columnp_midi_mt32_reverb_time = MyBase.Columns("p_midi_mt32_reverb_time")
             Me.columnp_midi_mt32_reverb_level = MyBase.Columns("p_midi_mt32_reverb_level")
             Me.columnp_midi_mt32_partials = MyBase.Columns("p_midi_mt32_partials")
+            Me.columnp_midi_mt32_romdir = MyBase.Columns("p_midi_mt32_romdir")
+            Me.columnp_midi_mt32_chunk = MyBase.Columns("p_midi_mt32_chunk")
+            Me.columnp_midi_mt32_prebuffer = MyBase.Columns("p_midi_mt32_prebuffer")
+            Me.columnp_midi_mt32_analog = MyBase.Columns("p_midi_mt32_analog")
+            Me.columnp_midi_mt32_rate = MyBase.Columns("p_midi_mt32_rate")
+            Me.columnp_midi_mt32_src_quality = MyBase.Columns("p_midi_mt32_src_quality")
+            Me.columnp_midi_mt32_niceampramp = MyBase.Columns("p_midi_mt32_niceampramp")
+            Me.columnp_midi_fluid_soundfont = MyBase.Columns("p_midi_fluid_soundfont")
+            Me.columnp_midi_fluid_samplerate = MyBase.Columns("p_midi_fluid_samplerate")
+            Me.columnp_midi_fluid_gain = MyBase.Columns("p_midi_fluid_gain")
+            Me.columnp_midi_fluid_polyphony = MyBase.Columns("p_midi_fluid_polyphony")
+            Me.columnp_midi_fluid_cores = MyBase.Columns("p_midi_fluid_cores")
+            Me.columnp_midi_fluid_periods = MyBase.Columns("p_midi_fluid_periods")
+            Me.columnp_midi_fluid_periodsize = MyBase.Columns("p_midi_fluid_periodsize")
+            Me.columnp_midi_fluid_reverb = MyBase.Columns("p_midi_fluid_reverb")
+            Me.columnp_midi_fluid_chorus = MyBase.Columns("p_midi_fluid_chorus")
+            Me.columnp_midi_fluid_reverb_roomsize = MyBase.Columns("p_midi_fluid_reverb_roomsize")
+            Me.columnp_midi_fluid_reverb_damping = MyBase.Columns("p_midi_fluid_reverb_damping")
+            Me.columnp_midi_fluid_reverb_width = MyBase.Columns("p_midi_fluid_reverb_width")
+            Me.columnp_midi_fluid_reverb_level = MyBase.Columns("p_midi_fluid_reverb_level")
+            Me.columnp_midi_fluid_chorus_number = MyBase.Columns("p_midi_fluid_chorus_number")
+            Me.columnp_midi_fluid_chorus_level = MyBase.Columns("p_midi_fluid_chorus_level")
+            Me.columnp_midi_fluid_chorus_speed = MyBase.Columns("p_midi_fluid_chorus_speed")
+            Me.columnp_midi_fluid_chorus_depth = MyBase.Columns("p_midi_fluid_chorus_depth")
+            Me.columnp_midi_fluid_chorus_type = MyBase.Columns("p_midi_fluid_chorus_type")
             Me.columnp_sblaster_oplmode = MyBase.Columns("p_sblaster_oplmode")
             Me.columnp_sblaster_hardwarebase = MyBase.Columns("p_sblaster_hardwarebase")
+            Me.columnp_sblaster_oplemu = MyBase.Columns("p_sblaster_oplemu")
             Me.columnp_sblaster_goldplay = MyBase.Columns("p_sblaster_goldplay")
             Me.columnp_innova_innova = MyBase.Columns("p_innova_innova")
             Me.columnp_innova_samplerate = MyBase.Columns("p_innova_samplerate")
@@ -15995,6 +16742,14 @@ Partial Public Class DS_ML
             MyBase.Columns.Add(Me.columnp_sdl_pixelshader_forced)
             Me.columnp_sdl_output = New Global.System.Data.DataColumn("p_sdl_output", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnp_sdl_output)
+            Me._columnp_sdl_surfacenp_sharpness = New Global.System.Data.DataColumn("p_sdl_surfacenp-sharpness", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me._columnp_sdl_surfacenp_sharpness.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnp_sdl_surfacenp_sharpness")
+            Me._columnp_sdl_surfacenp_sharpness.ExtendedProperties.Add("Generator_UserColumnName", "p_sdl_surfacenp-sharpness")
+            MyBase.Columns.Add(Me._columnp_sdl_surfacenp_sharpness)
+            Me._columnp_sdl_surface_collapse_dbl = New Global.System.Data.DataColumn("p_sdl_surface-collapse-dbl", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            Me._columnp_sdl_surface_collapse_dbl.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnp_sdl_surface_collapse_dbl")
+            Me._columnp_sdl_surface_collapse_dbl.ExtendedProperties.Add("Generator_UserColumnName", "p_sdl_surface-collapse-dbl")
+            MyBase.Columns.Add(Me._columnp_sdl_surface_collapse_dbl)
             Me.columnp_dosbox_vmemsize = New Global.System.Data.DataColumn("p_dosbox_vmemsize", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnp_dosbox_vmemsize)
             Me.columnp_dosbox_memsizekb = New Global.System.Data.DataColumn("p_dosbox_memsizekb", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
@@ -16019,6 +16774,8 @@ Partial Public Class DS_ML
             MyBase.Columns.Add(Me.columnp_keyboard_auxdevice)
             Me.columnp_voodoo = New Global.System.Data.DataColumn("p_voodoo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnp_voodoo)
+            Me.columnp_voodoo_voodoomem = New Global.System.Data.DataColumn("p_voodoo_voodoomem", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_voodoo_voodoomem)
             Me.columnp_mixer_swapstereo = New Global.System.Data.DataColumn("p_mixer_swapstereo", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnp_mixer_swapstereo)
             Me.columnp_midi_mididevice = New Global.System.Data.DataColumn("p_midi_mididevice", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -16039,10 +16796,62 @@ Partial Public Class DS_ML
             MyBase.Columns.Add(Me.columnp_midi_mt32_reverb_level)
             Me.columnp_midi_mt32_partials = New Global.System.Data.DataColumn("p_midi_mt32_partials", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnp_midi_mt32_partials)
+            Me.columnp_midi_mt32_romdir = New Global.System.Data.DataColumn("p_midi_mt32_romdir", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_mt32_romdir)
+            Me.columnp_midi_mt32_chunk = New Global.System.Data.DataColumn("p_midi_mt32_chunk", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_mt32_chunk)
+            Me.columnp_midi_mt32_prebuffer = New Global.System.Data.DataColumn("p_midi_mt32_prebuffer", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_mt32_prebuffer)
+            Me.columnp_midi_mt32_analog = New Global.System.Data.DataColumn("p_midi_mt32_analog", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_mt32_analog)
+            Me.columnp_midi_mt32_rate = New Global.System.Data.DataColumn("p_midi_mt32_rate", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_mt32_rate)
+            Me.columnp_midi_mt32_src_quality = New Global.System.Data.DataColumn("p_midi_mt32_src_quality", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_mt32_src_quality)
+            Me.columnp_midi_mt32_niceampramp = New Global.System.Data.DataColumn("p_midi_mt32_niceampramp", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_mt32_niceampramp)
+            Me.columnp_midi_fluid_soundfont = New Global.System.Data.DataColumn("p_midi_fluid_soundfont", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_soundfont)
+            Me.columnp_midi_fluid_samplerate = New Global.System.Data.DataColumn("p_midi_fluid_samplerate", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_samplerate)
+            Me.columnp_midi_fluid_gain = New Global.System.Data.DataColumn("p_midi_fluid_gain", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_gain)
+            Me.columnp_midi_fluid_polyphony = New Global.System.Data.DataColumn("p_midi_fluid_polyphony", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_polyphony)
+            Me.columnp_midi_fluid_cores = New Global.System.Data.DataColumn("p_midi_fluid_cores", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_cores)
+            Me.columnp_midi_fluid_periods = New Global.System.Data.DataColumn("p_midi_fluid_periods", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_periods)
+            Me.columnp_midi_fluid_periodsize = New Global.System.Data.DataColumn("p_midi_fluid_periodsize", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_periodsize)
+            Me.columnp_midi_fluid_reverb = New Global.System.Data.DataColumn("p_midi_fluid_reverb", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_reverb)
+            Me.columnp_midi_fluid_chorus = New Global.System.Data.DataColumn("p_midi_fluid_chorus", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_chorus)
+            Me.columnp_midi_fluid_reverb_roomsize = New Global.System.Data.DataColumn("p_midi_fluid_reverb_roomsize", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_reverb_roomsize)
+            Me.columnp_midi_fluid_reverb_damping = New Global.System.Data.DataColumn("p_midi_fluid_reverb_damping", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_reverb_damping)
+            Me.columnp_midi_fluid_reverb_width = New Global.System.Data.DataColumn("p_midi_fluid_reverb_width", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_reverb_width)
+            Me.columnp_midi_fluid_reverb_level = New Global.System.Data.DataColumn("p_midi_fluid_reverb_level", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_reverb_level)
+            Me.columnp_midi_fluid_chorus_number = New Global.System.Data.DataColumn("p_midi_fluid_chorus_number", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_chorus_number)
+            Me.columnp_midi_fluid_chorus_level = New Global.System.Data.DataColumn("p_midi_fluid_chorus_level", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_chorus_level)
+            Me.columnp_midi_fluid_chorus_speed = New Global.System.Data.DataColumn("p_midi_fluid_chorus_speed", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_chorus_speed)
+            Me.columnp_midi_fluid_chorus_depth = New Global.System.Data.DataColumn("p_midi_fluid_chorus_depth", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_chorus_depth)
+            Me.columnp_midi_fluid_chorus_type = New Global.System.Data.DataColumn("p_midi_fluid_chorus_type", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_midi_fluid_chorus_type)
             Me.columnp_sblaster_oplmode = New Global.System.Data.DataColumn("p_sblaster_oplmode", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnp_sblaster_oplmode)
             Me.columnp_sblaster_hardwarebase = New Global.System.Data.DataColumn("p_sblaster_hardwarebase", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnp_sblaster_hardwarebase)
+            Me.columnp_sblaster_oplemu = New Global.System.Data.DataColumn("p_sblaster_oplemu", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnp_sblaster_oplemu)
             Me.columnp_sblaster_goldplay = New Global.System.Data.DataColumn("p_sblaster_goldplay", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnp_sblaster_goldplay)
             Me.columnp_innova_innova = New Global.System.Data.DataColumn("p_innova_innova", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
@@ -16567,6 +17376,8 @@ Partial Public Class DS_ML
         
         Private columnMB_Supported As Global.System.Data.DataColumn
         
+        Private columnECE_Supported As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -16675,6 +17486,14 @@ Partial Public Class DS_ML
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ECE_SupportedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnECE_Supported
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -16711,9 +17530,9 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addsrc_frm_Emulators_DOSBox_PatchesRow(ByVal id_DOSBox_Patches As Integer, ByVal id_DOSBox_Patches_Categories As Integer, ByVal Categoryname As String, ByVal Patchname As String, ByVal Identifier As String, ByVal Description As String, ByVal Activated As Boolean, ByVal DAUM_Supported As Boolean, ByVal MB_Supported As Boolean) As src_frm_Emulators_DOSBox_PatchesRow
+        Public Overloads Function Addsrc_frm_Emulators_DOSBox_PatchesRow(ByVal id_DOSBox_Patches As Integer, ByVal id_DOSBox_Patches_Categories As Integer, ByVal Categoryname As String, ByVal Patchname As String, ByVal Identifier As String, ByVal Description As String, ByVal Activated As Boolean, ByVal DAUM_Supported As Boolean, ByVal MB_Supported As Boolean, ByVal ECE_Supported As Boolean) As src_frm_Emulators_DOSBox_PatchesRow
             Dim rowsrc_frm_Emulators_DOSBox_PatchesRow As src_frm_Emulators_DOSBox_PatchesRow = CType(Me.NewRow,src_frm_Emulators_DOSBox_PatchesRow)
-            Dim columnValuesArray() As Object = New Object() {id_DOSBox_Patches, id_DOSBox_Patches_Categories, Categoryname, Patchname, Identifier, Description, Activated, DAUM_Supported, MB_Supported}
+            Dim columnValuesArray() As Object = New Object() {id_DOSBox_Patches, id_DOSBox_Patches_Categories, Categoryname, Patchname, Identifier, Description, Activated, DAUM_Supported, MB_Supported, ECE_Supported}
             rowsrc_frm_Emulators_DOSBox_PatchesRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowsrc_frm_Emulators_DOSBox_PatchesRow)
             Return rowsrc_frm_Emulators_DOSBox_PatchesRow
@@ -16745,6 +17564,7 @@ Partial Public Class DS_ML
             Me.columnActivated = MyBase.Columns("Activated")
             Me.columnDAUM_Supported = MyBase.Columns("DAUM_Supported")
             Me.columnMB_Supported = MyBase.Columns("MB_Supported")
+            Me.columnECE_Supported = MyBase.Columns("ECE_Supported")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -16768,6 +17588,8 @@ Partial Public Class DS_ML
             MyBase.Columns.Add(Me.columnDAUM_Supported)
             Me.columnMB_Supported = New Global.System.Data.DataColumn("MB_Supported", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnMB_Supported)
+            Me.columnECE_Supported = New Global.System.Data.DataColumn("ECE_Supported", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnECE_Supported)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -20908,6 +21730,3051 @@ Partial Public Class DS_ML
     End Class
     
     '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class tbl_List_GeneratorsDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tbl_List_GeneratorsRow)
+        
+        Private columnid_List_Generators As Global.System.Data.DataColumn
+        
+        Private columnName As Global.System.Data.DataColumn
+        
+        Private columnMain_Template As Global.System.Data.DataColumn
+        
+        Private columnFile_Entry_Template As Global.System.Data.DataColumn
+        
+        Private columnSort As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "tbl_List_Generators"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_List_GeneratorsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_List_Generators
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnName
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Main_TemplateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMain_Template
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property File_Entry_TemplateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFile_Entry_Template
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SortColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSort
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_List_GeneratorsRow
+            Get
+                Return CType(Me.Rows(index),tbl_List_GeneratorsRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_List_GeneratorsRowChanging As tbl_List_GeneratorsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_List_GeneratorsRowChanged As tbl_List_GeneratorsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_List_GeneratorsRowDeleting As tbl_List_GeneratorsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_List_GeneratorsRowDeleted As tbl_List_GeneratorsRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addtbl_List_GeneratorsRow(ByVal row As tbl_List_GeneratorsRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addtbl_List_GeneratorsRow(ByVal Name As String, ByVal Main_Template As String, ByVal File_Entry_Template As String, ByVal Sort As Long) As tbl_List_GeneratorsRow
+            Dim rowtbl_List_GeneratorsRow As tbl_List_GeneratorsRow = CType(Me.NewRow,tbl_List_GeneratorsRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, Name, Main_Template, File_Entry_Template, Sort}
+            rowtbl_List_GeneratorsRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtbl_List_GeneratorsRow)
+            Return rowtbl_List_GeneratorsRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As tbl_List_GeneratorsDataTable = CType(MyBase.Clone,tbl_List_GeneratorsDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New tbl_List_GeneratorsDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_List_Generators = MyBase.Columns("id_List_Generators")
+            Me.columnName = MyBase.Columns("Name")
+            Me.columnMain_Template = MyBase.Columns("Main_Template")
+            Me.columnFile_Entry_Template = MyBase.Columns("File_Entry_Template")
+            Me.columnSort = MyBase.Columns("Sort")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_List_Generators = New Global.System.Data.DataColumn("id_List_Generators", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_List_Generators)
+            Me.columnName = New Global.System.Data.DataColumn("Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnName)
+            Me.columnMain_Template = New Global.System.Data.DataColumn("Main_Template", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMain_Template)
+            Me.columnFile_Entry_Template = New Global.System.Data.DataColumn("File_Entry_Template", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFile_Entry_Template)
+            Me.columnSort = New Global.System.Data.DataColumn("Sort", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSort)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_List_Generators}, false))
+            Me.columnid_List_Generators.AutoIncrement = true
+            Me.columnid_List_Generators.AutoIncrementSeed = -1
+            Me.columnid_List_Generators.AutoIncrementStep = -1
+            Me.columnid_List_Generators.AllowDBNull = false
+            Me.columnid_List_Generators.Unique = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newtbl_List_GeneratorsRow() As tbl_List_GeneratorsRow
+            Return CType(Me.NewRow,tbl_List_GeneratorsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New tbl_List_GeneratorsRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(tbl_List_GeneratorsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.tbl_List_GeneratorsRowChangedEvent) Is Nothing) Then
+                RaiseEvent tbl_List_GeneratorsRowChanged(Me, New tbl_List_GeneratorsRowChangeEvent(CType(e.Row,tbl_List_GeneratorsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.tbl_List_GeneratorsRowChangingEvent) Is Nothing) Then
+                RaiseEvent tbl_List_GeneratorsRowChanging(Me, New tbl_List_GeneratorsRowChangeEvent(CType(e.Row,tbl_List_GeneratorsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.tbl_List_GeneratorsRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tbl_List_GeneratorsRowDeleted(Me, New tbl_List_GeneratorsRowChangeEvent(CType(e.Row,tbl_List_GeneratorsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.tbl_List_GeneratorsRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tbl_List_GeneratorsRowDeleting(Me, New tbl_List_GeneratorsRowChangeEvent(CType(e.Row,tbl_List_GeneratorsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removetbl_List_GeneratorsRow(ByVal row As tbl_List_GeneratorsRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_ML = New DS_ML()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "tbl_List_GeneratorsDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class static_List_Generator_SortDataTable
+        Inherits Global.System.Data.TypedTableBase(Of static_List_Generator_SortRow)
+        
+        Private columnid_Sort As Global.System.Data.DataColumn
+        
+        Private columnName As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "static_List_Generator_Sort"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_SortColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Sort
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnName
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As static_List_Generator_SortRow
+            Get
+                Return CType(Me.Rows(index),static_List_Generator_SortRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event static_List_Generator_SortRowChanging As static_List_Generator_SortRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event static_List_Generator_SortRowChanged As static_List_Generator_SortRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event static_List_Generator_SortRowDeleting As static_List_Generator_SortRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event static_List_Generator_SortRowDeleted As static_List_Generator_SortRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addstatic_List_Generator_SortRow(ByVal row As static_List_Generator_SortRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addstatic_List_Generator_SortRow(ByVal id_Sort As String, ByVal Name As String) As static_List_Generator_SortRow
+            Dim rowstatic_List_Generator_SortRow As static_List_Generator_SortRow = CType(Me.NewRow,static_List_Generator_SortRow)
+            Dim columnValuesArray() As Object = New Object() {id_Sort, Name}
+            rowstatic_List_Generator_SortRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowstatic_List_Generator_SortRow)
+            Return rowstatic_List_Generator_SortRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As static_List_Generator_SortDataTable = CType(MyBase.Clone,static_List_Generator_SortDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New static_List_Generator_SortDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Sort = MyBase.Columns("id_Sort")
+            Me.columnName = MyBase.Columns("Name")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Sort = New Global.System.Data.DataColumn("id_Sort", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Sort)
+            Me.columnName = New Global.System.Data.DataColumn("Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnName)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newstatic_List_Generator_SortRow() As static_List_Generator_SortRow
+            Return CType(Me.NewRow,static_List_Generator_SortRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New static_List_Generator_SortRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(static_List_Generator_SortRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.static_List_Generator_SortRowChangedEvent) Is Nothing) Then
+                RaiseEvent static_List_Generator_SortRowChanged(Me, New static_List_Generator_SortRowChangeEvent(CType(e.Row,static_List_Generator_SortRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.static_List_Generator_SortRowChangingEvent) Is Nothing) Then
+                RaiseEvent static_List_Generator_SortRowChanging(Me, New static_List_Generator_SortRowChangeEvent(CType(e.Row,static_List_Generator_SortRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.static_List_Generator_SortRowDeletedEvent) Is Nothing) Then
+                RaiseEvent static_List_Generator_SortRowDeleted(Me, New static_List_Generator_SortRowChangeEvent(CType(e.Row,static_List_Generator_SortRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.static_List_Generator_SortRowDeletingEvent) Is Nothing) Then
+                RaiseEvent static_List_Generator_SortRowDeleting(Me, New static_List_Generator_SortRowChangeEvent(CType(e.Row,static_List_Generator_SortRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removestatic_List_Generator_SortRow(ByVal row As static_List_Generator_SortRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_ML = New DS_ML()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "static_List_Generator_SortDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class tbl_ScummVM_ConfigsDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tbl_ScummVM_ConfigsRow)
+        
+        Private columnid_ScummVM_Configs As Global.System.Data.DataColumn
+        
+        Private columnid_Rombase_ScummVM_Configs As Global.System.Data.DataColumn
+        
+        Private columnisTemplate As Global.System.Data.DataColumn
+        
+        Private columnDisplayname As Global.System.Data.DataColumn
+        
+        Private columnuser_defined_config As Global.System.Data.DataColumn
+        
+        Private columnuser_defined_commandline As Global.System.Data.DataColumn
+        
+        Private columnconsole As Global.System.Data.DataColumn
+        
+        Private columnconfirm_exit As Global.System.Data.DataColumn
+        
+        Private columnsavepath As Global.System.Data.DataColumn
+        
+        Private columnextrapath As Global.System.Data.DataColumn
+        
+        Private columnlanguage As Global.System.Data.DataColumn
+        
+        Private columnjoystick_num As Global.System.Data.DataColumn
+        
+        Private columncopy_protection As Global.System.Data.DataColumn
+        
+        Private columnboot_param As Global.System.Data.DataColumn
+        
+        Private columnfullscreen As Global.System.Data.DataColumn
+        
+        Private columnaspect_ratio As Global.System.Data.DataColumn
+        
+        Private columngfx_mode As Global.System.Data.DataColumn
+        
+        Private columnsubtitles As Global.System.Data.DataColumn
+        
+        Private columnmusic_driver As Global.System.Data.DataColumn
+        
+        Private columnmulti_midi As Global.System.Data.DataColumn
+        
+        Private columnsoundfont As Global.System.Data.DataColumn
+        
+        Private columnnative_mt32 As Global.System.Data.DataColumn
+        
+        Private columnenable_gs As Global.System.Data.DataColumn
+        
+        Private columnoutput_rate As Global.System.Data.DataColumn
+        
+        Private columnmusic_volume As Global.System.Data.DataColumn
+        
+        Private columnspeech_volume As Global.System.Data.DataColumn
+        
+        Private columnsfx_volume As Global.System.Data.DataColumn
+        
+        Private columnspeech_mute As Global.System.Data.DataColumn
+        
+        Private columntalkspeed As Global.System.Data.DataColumn
+        
+        Private columncdrom As Global.System.Data.DataColumn
+        
+        Private columntempo As Global.System.Data.DataColumn
+        
+        Private columnmidi_gain As Global.System.Data.DataColumn
+        
+        Private columnautosave_period As Global.System.Data.DataColumn
+        
+        Private columnsave_slot As Global.System.Data.DataColumn
+        
+        Private columndemo_mode As Global.System.Data.DataColumn
+        
+        Private columnalt_intro As Global.System.Data.DataColumn
+        
+        Private columnmusic_mute As Global.System.Data.DataColumn
+        
+        Private columnsfx_mute As Global.System.Data.DataColumn
+        
+        Private columngfx_details As Global.System.Data.DataColumn
+        
+        Private columnobject_labels As Global.System.Data.DataColumn
+        
+        Private columnreverse_stereo As Global.System.Data.DataColumn
+        
+        Private columnwalkspeed As Global.System.Data.DataColumn
+        
+        Private columnfiltering As Global.System.Data.DataColumn
+        
+        Private columnopl_driver As Global.System.Data.DataColumn
+        
+        Private columnoriginalsaveload As Global.System.Data.DataColumn
+        
+        Private columnaltamigapalette As Global.System.Data.DataColumn
+        
+        Private columnmousesupport As Global.System.Data.DataColumn
+        
+        Private columndisable_dithering As Global.System.Data.DataColumn
+        
+        Private columnprefer_digitalsfx As Global.System.Data.DataColumn
+        
+        Private columnnative_fb01 As Global.System.Data.DataColumn
+        
+        Private columnuse_cdaudio As Global.System.Data.DataColumn
+        
+        Private columnwindows_cursors As Global.System.Data.DataColumn
+        
+        Private columnsilver_cursors As Global.System.Data.DataColumn
+        
+        Private columnenable_gore As Global.System.Data.DataColumn
+        
+        Private columnsmooth_scrolling As Global.System.Data.DataColumn
+        
+        Private columnfloating_cursors As Global.System.Data.DataColumn
+        
+        Private columnenable_color_blind As Global.System.Data.DataColumn
+        
+        Private columnstudio_audience As Global.System.Data.DataColumn
+        
+        Private columnskip_support As Global.System.Data.DataColumn
+        
+        Private columnhelium_mode As Global.System.Data.DataColumn
+        
+        Private columnskiphallofrecordsscenes As Global.System.Data.DataColumn
+        
+        Private columnscalemakingofvideos As Global.System.Data.DataColumn
+        
+        Private columnfast_movie_speed As Global.System.Data.DataColumn
+        
+        Private columndoublefps As Global.System.Data.DataColumn
+        
+        Private columnvenusenabled As Global.System.Data.DataColumn
+        
+        Private columnnoanimwhileturning As Global.System.Data.DataColumn
+        
+        Private columnmpegmovies As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "tbl_ScummVM_Configs"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_ScummVM_ConfigsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_ScummVM_Configs
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Rombase_ScummVM_ConfigsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Rombase_ScummVM_Configs
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property isTemplateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnisTemplate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DisplaynameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDisplayname
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property user_defined_configColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnuser_defined_config
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property user_defined_commandlineColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnuser_defined_commandline
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property consoleColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnconsole
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property confirm_exitColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnconfirm_exit
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property savepathColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsavepath
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property extrapathColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnextrapath
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property languageColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnlanguage
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property joystick_numColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnjoystick_num
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property copy_protectionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncopy_protection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property boot_paramColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnboot_param
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property fullscreenColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnfullscreen
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property aspect_ratioColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnaspect_ratio
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property gfx_modeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columngfx_mode
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property subtitlesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsubtitles
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property music_driverColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmusic_driver
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property multi_midiColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmulti_midi
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property soundfontColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsoundfont
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property native_mt32Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnative_mt32
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property enable_gsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnenable_gs
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property output_rateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnoutput_rate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property music_volumeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmusic_volume
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property speech_volumeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnspeech_volume
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property sfx_volumeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsfx_volume
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property speech_muteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnspeech_mute
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property talkspeedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntalkspeed
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property cdromColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncdrom
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property tempoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntempo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property midi_gainColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmidi_gain
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property autosave_periodColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnautosave_period
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property save_slotColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsave_slot
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property demo_modeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndemo_mode
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property alt_introColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnalt_intro
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property music_muteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmusic_mute
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property sfx_muteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsfx_mute
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property gfx_detailsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columngfx_details
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property object_labelsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnobject_labels
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property reverse_stereoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnreverse_stereo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property walkspeedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnwalkspeed
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property filteringColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnfiltering
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property opl_driverColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnopl_driver
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property originalsaveloadColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnoriginalsaveload
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property altamigapaletteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnaltamigapalette
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property mousesupportColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmousesupport
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property disable_ditheringColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndisable_dithering
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property prefer_digitalsfxColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnprefer_digitalsfx
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property native_fb01Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnative_fb01
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property use_cdaudioColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnuse_cdaudio
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property windows_cursorsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnwindows_cursors
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property silver_cursorsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsilver_cursors
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property enable_goreColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnenable_gore
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property smooth_scrollingColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsmooth_scrolling
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property floating_cursorsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnfloating_cursors
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property enable_color_blindColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnenable_color_blind
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property studio_audienceColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnstudio_audience
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property skip_supportColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnskip_support
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property helium_modeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnhelium_mode
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property skiphallofrecordsscenesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnskiphallofrecordsscenes
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property scalemakingofvideosColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnscalemakingofvideos
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property fast_movie_speedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnfast_movie_speed
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property doublefpsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndoublefps
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property venusenabledColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnvenusenabled
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property noanimwhileturningColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnoanimwhileturning
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property mpegmoviesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmpegmovies
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_ScummVM_ConfigsRow
+            Get
+                Return CType(Me.Rows(index),tbl_ScummVM_ConfigsRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_ScummVM_ConfigsRowChanging As tbl_ScummVM_ConfigsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_ScummVM_ConfigsRowChanged As tbl_ScummVM_ConfigsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_ScummVM_ConfigsRowDeleting As tbl_ScummVM_ConfigsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_ScummVM_ConfigsRowDeleted As tbl_ScummVM_ConfigsRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addtbl_ScummVM_ConfigsRow(ByVal row As tbl_ScummVM_ConfigsRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addtbl_ScummVM_ConfigsRow( _
+                    ByVal id_ScummVM_Configs As Long,  _
+                    ByVal id_Rombase_ScummVM_Configs As Long,  _
+                    ByVal isTemplate As Boolean,  _
+                    ByVal Displayname As String,  _
+                    ByVal user_defined_config As String,  _
+                    ByVal user_defined_commandline As String,  _
+                    ByVal console As Boolean,  _
+                    ByVal confirm_exit As Boolean,  _
+                    ByVal savepath As String,  _
+                    ByVal extrapath As String,  _
+                    ByVal language As String,  _
+                    ByVal joystick_num As String,  _
+                    ByVal copy_protection As Boolean,  _
+                    ByVal boot_param As String,  _
+                    ByVal fullscreen As Boolean,  _
+                    ByVal aspect_ratio As Boolean,  _
+                    ByVal gfx_mode As String,  _
+                    ByVal subtitles As Boolean,  _
+                    ByVal music_driver As String,  _
+                    ByVal multi_midi As Boolean,  _
+                    ByVal soundfont As String,  _
+                    ByVal native_mt32 As Boolean,  _
+                    ByVal enable_gs As Boolean,  _
+                    ByVal output_rate As String,  _
+                    ByVal music_volume As Long,  _
+                    ByVal speech_volume As Long,  _
+                    ByVal sfx_volume As Long,  _
+                    ByVal speech_mute As Boolean,  _
+                    ByVal talkspeed As Long,  _
+                    ByVal cdrom As Long,  _
+                    ByVal tempo As Long,  _
+                    ByVal midi_gain As Long,  _
+                    ByVal autosave_period As Long,  _
+                    ByVal save_slot As String,  _
+                    ByVal demo_mode As Boolean,  _
+                    ByVal alt_intro As Boolean,  _
+                    ByVal music_mute As Boolean,  _
+                    ByVal sfx_mute As Boolean,  _
+                    ByVal gfx_details As String,  _
+                    ByVal object_labels As Boolean,  _
+                    ByVal reverse_stereo As Boolean,  _
+                    ByVal walkspeed As String,  _
+                    ByVal filtering As Boolean,  _
+                    ByVal opl_driver As String,  _
+                    ByVal originalsaveload As Boolean,  _
+                    ByVal altamigapalette As Boolean,  _
+                    ByVal mousesupport As Boolean,  _
+                    ByVal disable_dithering As Boolean,  _
+                    ByVal prefer_digitalsfx As Boolean,  _
+                    ByVal native_fb01 As Boolean,  _
+                    ByVal use_cdaudio As Boolean,  _
+                    ByVal windows_cursors As Boolean,  _
+                    ByVal silver_cursors As Boolean,  _
+                    ByVal enable_gore As Boolean,  _
+                    ByVal smooth_scrolling As Boolean,  _
+                    ByVal floating_cursors As Boolean,  _
+                    ByVal enable_color_blind As Boolean,  _
+                    ByVal studio_audience As Boolean,  _
+                    ByVal skip_support As Boolean,  _
+                    ByVal helium_mode As Boolean,  _
+                    ByVal skiphallofrecordsscenes As Boolean,  _
+                    ByVal scalemakingofvideos As Boolean,  _
+                    ByVal fast_movie_speed As Boolean,  _
+                    ByVal doublefps As Boolean,  _
+                    ByVal venusenabled As Boolean,  _
+                    ByVal noanimwhileturning As Boolean,  _
+                    ByVal mpegmovies As Boolean) As tbl_ScummVM_ConfigsRow
+            Dim rowtbl_ScummVM_ConfigsRow As tbl_ScummVM_ConfigsRow = CType(Me.NewRow,tbl_ScummVM_ConfigsRow)
+            Dim columnValuesArray() As Object = New Object() {id_ScummVM_Configs, id_Rombase_ScummVM_Configs, isTemplate, Displayname, user_defined_config, user_defined_commandline, console, confirm_exit, savepath, extrapath, language, joystick_num, copy_protection, boot_param, fullscreen, aspect_ratio, gfx_mode, subtitles, music_driver, multi_midi, soundfont, native_mt32, enable_gs, output_rate, music_volume, speech_volume, sfx_volume, speech_mute, talkspeed, cdrom, tempo, midi_gain, autosave_period, save_slot, demo_mode, alt_intro, music_mute, sfx_mute, gfx_details, object_labels, reverse_stereo, walkspeed, filtering, opl_driver, originalsaveload, altamigapalette, mousesupport, disable_dithering, prefer_digitalsfx, native_fb01, use_cdaudio, windows_cursors, silver_cursors, enable_gore, smooth_scrolling, floating_cursors, enable_color_blind, studio_audience, skip_support, helium_mode, skiphallofrecordsscenes, scalemakingofvideos, fast_movie_speed, doublefps, venusenabled, noanimwhileturning, mpegmovies}
+            rowtbl_ScummVM_ConfigsRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtbl_ScummVM_ConfigsRow)
+            Return rowtbl_ScummVM_ConfigsRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As tbl_ScummVM_ConfigsDataTable = CType(MyBase.Clone,tbl_ScummVM_ConfigsDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New tbl_ScummVM_ConfigsDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_ScummVM_Configs = MyBase.Columns("id_ScummVM_Configs")
+            Me.columnid_Rombase_ScummVM_Configs = MyBase.Columns("id_Rombase_ScummVM_Configs")
+            Me.columnisTemplate = MyBase.Columns("isTemplate")
+            Me.columnDisplayname = MyBase.Columns("Displayname")
+            Me.columnuser_defined_config = MyBase.Columns("user_defined_config")
+            Me.columnuser_defined_commandline = MyBase.Columns("user_defined_commandline")
+            Me.columnconsole = MyBase.Columns("console")
+            Me.columnconfirm_exit = MyBase.Columns("confirm_exit")
+            Me.columnsavepath = MyBase.Columns("savepath")
+            Me.columnextrapath = MyBase.Columns("extrapath")
+            Me.columnlanguage = MyBase.Columns("language")
+            Me.columnjoystick_num = MyBase.Columns("joystick_num")
+            Me.columncopy_protection = MyBase.Columns("copy_protection")
+            Me.columnboot_param = MyBase.Columns("boot_param")
+            Me.columnfullscreen = MyBase.Columns("fullscreen")
+            Me.columnaspect_ratio = MyBase.Columns("aspect_ratio")
+            Me.columngfx_mode = MyBase.Columns("gfx_mode")
+            Me.columnsubtitles = MyBase.Columns("subtitles")
+            Me.columnmusic_driver = MyBase.Columns("music_driver")
+            Me.columnmulti_midi = MyBase.Columns("multi_midi")
+            Me.columnsoundfont = MyBase.Columns("soundfont")
+            Me.columnnative_mt32 = MyBase.Columns("native_mt32")
+            Me.columnenable_gs = MyBase.Columns("enable_gs")
+            Me.columnoutput_rate = MyBase.Columns("output_rate")
+            Me.columnmusic_volume = MyBase.Columns("music_volume")
+            Me.columnspeech_volume = MyBase.Columns("speech_volume")
+            Me.columnsfx_volume = MyBase.Columns("sfx_volume")
+            Me.columnspeech_mute = MyBase.Columns("speech_mute")
+            Me.columntalkspeed = MyBase.Columns("talkspeed")
+            Me.columncdrom = MyBase.Columns("cdrom")
+            Me.columntempo = MyBase.Columns("tempo")
+            Me.columnmidi_gain = MyBase.Columns("midi_gain")
+            Me.columnautosave_period = MyBase.Columns("autosave_period")
+            Me.columnsave_slot = MyBase.Columns("save_slot")
+            Me.columndemo_mode = MyBase.Columns("demo_mode")
+            Me.columnalt_intro = MyBase.Columns("alt_intro")
+            Me.columnmusic_mute = MyBase.Columns("music_mute")
+            Me.columnsfx_mute = MyBase.Columns("sfx_mute")
+            Me.columngfx_details = MyBase.Columns("gfx_details")
+            Me.columnobject_labels = MyBase.Columns("object_labels")
+            Me.columnreverse_stereo = MyBase.Columns("reverse_stereo")
+            Me.columnwalkspeed = MyBase.Columns("walkspeed")
+            Me.columnfiltering = MyBase.Columns("filtering")
+            Me.columnopl_driver = MyBase.Columns("opl_driver")
+            Me.columnoriginalsaveload = MyBase.Columns("originalsaveload")
+            Me.columnaltamigapalette = MyBase.Columns("altamigapalette")
+            Me.columnmousesupport = MyBase.Columns("mousesupport")
+            Me.columndisable_dithering = MyBase.Columns("disable_dithering")
+            Me.columnprefer_digitalsfx = MyBase.Columns("prefer_digitalsfx")
+            Me.columnnative_fb01 = MyBase.Columns("native_fb01")
+            Me.columnuse_cdaudio = MyBase.Columns("use_cdaudio")
+            Me.columnwindows_cursors = MyBase.Columns("windows_cursors")
+            Me.columnsilver_cursors = MyBase.Columns("silver_cursors")
+            Me.columnenable_gore = MyBase.Columns("enable_gore")
+            Me.columnsmooth_scrolling = MyBase.Columns("smooth_scrolling")
+            Me.columnfloating_cursors = MyBase.Columns("floating_cursors")
+            Me.columnenable_color_blind = MyBase.Columns("enable_color_blind")
+            Me.columnstudio_audience = MyBase.Columns("studio_audience")
+            Me.columnskip_support = MyBase.Columns("skip_support")
+            Me.columnhelium_mode = MyBase.Columns("helium_mode")
+            Me.columnskiphallofrecordsscenes = MyBase.Columns("skiphallofrecordsscenes")
+            Me.columnscalemakingofvideos = MyBase.Columns("scalemakingofvideos")
+            Me.columnfast_movie_speed = MyBase.Columns("fast_movie_speed")
+            Me.columndoublefps = MyBase.Columns("doublefps")
+            Me.columnvenusenabled = MyBase.Columns("venusenabled")
+            Me.columnnoanimwhileturning = MyBase.Columns("noanimwhileturning")
+            Me.columnmpegmovies = MyBase.Columns("mpegmovies")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_ScummVM_Configs = New Global.System.Data.DataColumn("id_ScummVM_Configs", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_ScummVM_Configs)
+            Me.columnid_Rombase_ScummVM_Configs = New Global.System.Data.DataColumn("id_Rombase_ScummVM_Configs", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Rombase_ScummVM_Configs)
+            Me.columnisTemplate = New Global.System.Data.DataColumn("isTemplate", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnisTemplate)
+            Me.columnDisplayname = New Global.System.Data.DataColumn("Displayname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDisplayname)
+            Me.columnuser_defined_config = New Global.System.Data.DataColumn("user_defined_config", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnuser_defined_config)
+            Me.columnuser_defined_commandline = New Global.System.Data.DataColumn("user_defined_commandline", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnuser_defined_commandline)
+            Me.columnconsole = New Global.System.Data.DataColumn("console", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnconsole)
+            Me.columnconfirm_exit = New Global.System.Data.DataColumn("confirm_exit", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnconfirm_exit)
+            Me.columnsavepath = New Global.System.Data.DataColumn("savepath", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsavepath)
+            Me.columnextrapath = New Global.System.Data.DataColumn("extrapath", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnextrapath)
+            Me.columnlanguage = New Global.System.Data.DataColumn("language", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnlanguage)
+            Me.columnjoystick_num = New Global.System.Data.DataColumn("joystick_num", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnjoystick_num)
+            Me.columncopy_protection = New Global.System.Data.DataColumn("copy_protection", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncopy_protection)
+            Me.columnboot_param = New Global.System.Data.DataColumn("boot_param", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnboot_param)
+            Me.columnfullscreen = New Global.System.Data.DataColumn("fullscreen", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnfullscreen)
+            Me.columnaspect_ratio = New Global.System.Data.DataColumn("aspect_ratio", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnaspect_ratio)
+            Me.columngfx_mode = New Global.System.Data.DataColumn("gfx_mode", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columngfx_mode)
+            Me.columnsubtitles = New Global.System.Data.DataColumn("subtitles", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsubtitles)
+            Me.columnmusic_driver = New Global.System.Data.DataColumn("music_driver", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmusic_driver)
+            Me.columnmulti_midi = New Global.System.Data.DataColumn("multi_midi", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmulti_midi)
+            Me.columnsoundfont = New Global.System.Data.DataColumn("soundfont", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsoundfont)
+            Me.columnnative_mt32 = New Global.System.Data.DataColumn("native_mt32", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnative_mt32)
+            Me.columnenable_gs = New Global.System.Data.DataColumn("enable_gs", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnenable_gs)
+            Me.columnoutput_rate = New Global.System.Data.DataColumn("output_rate", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnoutput_rate)
+            Me.columnmusic_volume = New Global.System.Data.DataColumn("music_volume", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmusic_volume)
+            Me.columnspeech_volume = New Global.System.Data.DataColumn("speech_volume", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnspeech_volume)
+            Me.columnsfx_volume = New Global.System.Data.DataColumn("sfx_volume", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsfx_volume)
+            Me.columnspeech_mute = New Global.System.Data.DataColumn("speech_mute", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnspeech_mute)
+            Me.columntalkspeed = New Global.System.Data.DataColumn("talkspeed", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntalkspeed)
+            Me.columncdrom = New Global.System.Data.DataColumn("cdrom", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncdrom)
+            Me.columntempo = New Global.System.Data.DataColumn("tempo", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntempo)
+            Me.columnmidi_gain = New Global.System.Data.DataColumn("midi_gain", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmidi_gain)
+            Me.columnautosave_period = New Global.System.Data.DataColumn("autosave_period", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnautosave_period)
+            Me.columnsave_slot = New Global.System.Data.DataColumn("save_slot", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsave_slot)
+            Me.columndemo_mode = New Global.System.Data.DataColumn("demo_mode", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndemo_mode)
+            Me.columnalt_intro = New Global.System.Data.DataColumn("alt_intro", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnalt_intro)
+            Me.columnmusic_mute = New Global.System.Data.DataColumn("music_mute", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmusic_mute)
+            Me.columnsfx_mute = New Global.System.Data.DataColumn("sfx_mute", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsfx_mute)
+            Me.columngfx_details = New Global.System.Data.DataColumn("gfx_details", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columngfx_details)
+            Me.columnobject_labels = New Global.System.Data.DataColumn("object_labels", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnobject_labels)
+            Me.columnreverse_stereo = New Global.System.Data.DataColumn("reverse_stereo", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnreverse_stereo)
+            Me.columnwalkspeed = New Global.System.Data.DataColumn("walkspeed", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnwalkspeed)
+            Me.columnfiltering = New Global.System.Data.DataColumn("filtering", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnfiltering)
+            Me.columnopl_driver = New Global.System.Data.DataColumn("opl_driver", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnopl_driver)
+            Me.columnoriginalsaveload = New Global.System.Data.DataColumn("originalsaveload", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnoriginalsaveload)
+            Me.columnaltamigapalette = New Global.System.Data.DataColumn("altamigapalette", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnaltamigapalette)
+            Me.columnmousesupport = New Global.System.Data.DataColumn("mousesupport", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmousesupport)
+            Me.columndisable_dithering = New Global.System.Data.DataColumn("disable_dithering", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndisable_dithering)
+            Me.columnprefer_digitalsfx = New Global.System.Data.DataColumn("prefer_digitalsfx", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnprefer_digitalsfx)
+            Me.columnnative_fb01 = New Global.System.Data.DataColumn("native_fb01", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnative_fb01)
+            Me.columnuse_cdaudio = New Global.System.Data.DataColumn("use_cdaudio", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnuse_cdaudio)
+            Me.columnwindows_cursors = New Global.System.Data.DataColumn("windows_cursors", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnwindows_cursors)
+            Me.columnsilver_cursors = New Global.System.Data.DataColumn("silver_cursors", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsilver_cursors)
+            Me.columnenable_gore = New Global.System.Data.DataColumn("enable_gore", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnenable_gore)
+            Me.columnsmooth_scrolling = New Global.System.Data.DataColumn("smooth_scrolling", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsmooth_scrolling)
+            Me.columnfloating_cursors = New Global.System.Data.DataColumn("floating_cursors", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnfloating_cursors)
+            Me.columnenable_color_blind = New Global.System.Data.DataColumn("enable_color_blind", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnenable_color_blind)
+            Me.columnstudio_audience = New Global.System.Data.DataColumn("studio_audience", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnstudio_audience)
+            Me.columnskip_support = New Global.System.Data.DataColumn("skip_support", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnskip_support)
+            Me.columnhelium_mode = New Global.System.Data.DataColumn("helium_mode", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnhelium_mode)
+            Me.columnskiphallofrecordsscenes = New Global.System.Data.DataColumn("skiphallofrecordsscenes", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnskiphallofrecordsscenes)
+            Me.columnscalemakingofvideos = New Global.System.Data.DataColumn("scalemakingofvideos", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnscalemakingofvideos)
+            Me.columnfast_movie_speed = New Global.System.Data.DataColumn("fast_movie_speed", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnfast_movie_speed)
+            Me.columndoublefps = New Global.System.Data.DataColumn("doublefps", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndoublefps)
+            Me.columnvenusenabled = New Global.System.Data.DataColumn("venusenabled", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnvenusenabled)
+            Me.columnnoanimwhileturning = New Global.System.Data.DataColumn("noanimwhileturning", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnoanimwhileturning)
+            Me.columnmpegmovies = New Global.System.Data.DataColumn("mpegmovies", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmpegmovies)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newtbl_ScummVM_ConfigsRow() As tbl_ScummVM_ConfigsRow
+            Return CType(Me.NewRow,tbl_ScummVM_ConfigsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New tbl_ScummVM_ConfigsRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(tbl_ScummVM_ConfigsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.tbl_ScummVM_ConfigsRowChangedEvent) Is Nothing) Then
+                RaiseEvent tbl_ScummVM_ConfigsRowChanged(Me, New tbl_ScummVM_ConfigsRowChangeEvent(CType(e.Row,tbl_ScummVM_ConfigsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.tbl_ScummVM_ConfigsRowChangingEvent) Is Nothing) Then
+                RaiseEvent tbl_ScummVM_ConfigsRowChanging(Me, New tbl_ScummVM_ConfigsRowChangeEvent(CType(e.Row,tbl_ScummVM_ConfigsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.tbl_ScummVM_ConfigsRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tbl_ScummVM_ConfigsRowDeleted(Me, New tbl_ScummVM_ConfigsRowChangeEvent(CType(e.Row,tbl_ScummVM_ConfigsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.tbl_ScummVM_ConfigsRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tbl_ScummVM_ConfigsRowDeleting(Me, New tbl_ScummVM_ConfigsRowChangeEvent(CType(e.Row,tbl_ScummVM_ConfigsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removetbl_ScummVM_ConfigsRow(ByVal row As tbl_ScummVM_ConfigsRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_ML = New DS_ML()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "tbl_ScummVM_ConfigsDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class src_ucr_Emulation_Moby_Releases_ScreenshotsDataTable
+        Inherits Global.System.Data.TypedTableBase(Of src_ucr_Emulation_Moby_Releases_ScreenshotsRow)
+        
+        Private columnid_Moby_Releases_Screenshots As Global.System.Data.DataColumn
+        
+        Private columnURL As Global.System.Data.DataColumn
+        
+        Private columnDescription As Global.System.Data.DataColumn
+        
+        Private columntmp_Description As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "src_ucr_Emulation_Moby_Releases_Screenshots"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Moby_Releases_ScreenshotsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Moby_Releases_Screenshots
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property URLColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnURL
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DescriptionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDescription
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property tmp_DescriptionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntmp_Description
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As src_ucr_Emulation_Moby_Releases_ScreenshotsRow
+            Get
+                Return CType(Me.Rows(index),src_ucr_Emulation_Moby_Releases_ScreenshotsRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event src_ucr_Emulation_Moby_Releases_ScreenshotsRowChanging As src_ucr_Emulation_Moby_Releases_ScreenshotsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event src_ucr_Emulation_Moby_Releases_ScreenshotsRowChanged As src_ucr_Emulation_Moby_Releases_ScreenshotsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event src_ucr_Emulation_Moby_Releases_ScreenshotsRowDeleting As src_ucr_Emulation_Moby_Releases_ScreenshotsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event src_ucr_Emulation_Moby_Releases_ScreenshotsRowDeleted As src_ucr_Emulation_Moby_Releases_ScreenshotsRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addsrc_ucr_Emulation_Moby_Releases_ScreenshotsRow(ByVal row As src_ucr_Emulation_Moby_Releases_ScreenshotsRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addsrc_ucr_Emulation_Moby_Releases_ScreenshotsRow(ByVal id_Moby_Releases_Screenshots As Long, ByVal URL As String, ByVal Description As String, ByVal tmp_Description As String) As src_ucr_Emulation_Moby_Releases_ScreenshotsRow
+            Dim rowsrc_ucr_Emulation_Moby_Releases_ScreenshotsRow As src_ucr_Emulation_Moby_Releases_ScreenshotsRow = CType(Me.NewRow,src_ucr_Emulation_Moby_Releases_ScreenshotsRow)
+            Dim columnValuesArray() As Object = New Object() {id_Moby_Releases_Screenshots, URL, Description, tmp_Description}
+            rowsrc_ucr_Emulation_Moby_Releases_ScreenshotsRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowsrc_ucr_Emulation_Moby_Releases_ScreenshotsRow)
+            Return rowsrc_ucr_Emulation_Moby_Releases_ScreenshotsRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As src_ucr_Emulation_Moby_Releases_ScreenshotsDataTable = CType(MyBase.Clone,src_ucr_Emulation_Moby_Releases_ScreenshotsDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New src_ucr_Emulation_Moby_Releases_ScreenshotsDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Moby_Releases_Screenshots = MyBase.Columns("id_Moby_Releases_Screenshots")
+            Me.columnURL = MyBase.Columns("URL")
+            Me.columnDescription = MyBase.Columns("Description")
+            Me.columntmp_Description = MyBase.Columns("tmp_Description")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Moby_Releases_Screenshots = New Global.System.Data.DataColumn("id_Moby_Releases_Screenshots", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Moby_Releases_Screenshots)
+            Me.columnURL = New Global.System.Data.DataColumn("URL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnURL)
+            Me.columnDescription = New Global.System.Data.DataColumn("Description", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDescription)
+            Me.columntmp_Description = New Global.System.Data.DataColumn("tmp_Description", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntmp_Description)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newsrc_ucr_Emulation_Moby_Releases_ScreenshotsRow() As src_ucr_Emulation_Moby_Releases_ScreenshotsRow
+            Return CType(Me.NewRow,src_ucr_Emulation_Moby_Releases_ScreenshotsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New src_ucr_Emulation_Moby_Releases_ScreenshotsRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(src_ucr_Emulation_Moby_Releases_ScreenshotsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.src_ucr_Emulation_Moby_Releases_ScreenshotsRowChangedEvent) Is Nothing) Then
+                RaiseEvent src_ucr_Emulation_Moby_Releases_ScreenshotsRowChanged(Me, New src_ucr_Emulation_Moby_Releases_ScreenshotsRowChangeEvent(CType(e.Row,src_ucr_Emulation_Moby_Releases_ScreenshotsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.src_ucr_Emulation_Moby_Releases_ScreenshotsRowChangingEvent) Is Nothing) Then
+                RaiseEvent src_ucr_Emulation_Moby_Releases_ScreenshotsRowChanging(Me, New src_ucr_Emulation_Moby_Releases_ScreenshotsRowChangeEvent(CType(e.Row,src_ucr_Emulation_Moby_Releases_ScreenshotsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.src_ucr_Emulation_Moby_Releases_ScreenshotsRowDeletedEvent) Is Nothing) Then
+                RaiseEvent src_ucr_Emulation_Moby_Releases_ScreenshotsRowDeleted(Me, New src_ucr_Emulation_Moby_Releases_ScreenshotsRowChangeEvent(CType(e.Row,src_ucr_Emulation_Moby_Releases_ScreenshotsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.src_ucr_Emulation_Moby_Releases_ScreenshotsRowDeletingEvent) Is Nothing) Then
+                RaiseEvent src_ucr_Emulation_Moby_Releases_ScreenshotsRowDeleting(Me, New src_ucr_Emulation_Moby_Releases_ScreenshotsRowChangeEvent(CType(e.Row,src_ucr_Emulation_Moby_Releases_ScreenshotsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removesrc_ucr_Emulation_Moby_Releases_ScreenshotsRow(ByVal row As src_ucr_Emulation_Moby_Releases_ScreenshotsRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_ML = New DS_ML()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "src_ucr_Emulation_Moby_Releases_ScreenshotsDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class src_ucr_Emulation_Moby_Releases_Cover_ArtDataTable
+        Inherits Global.System.Data.TypedTableBase(Of src_ucr_Emulation_Moby_Releases_Cover_ArtRow)
+        
+        Private columnid_Moby_Releases_Cover_Art As Global.System.Data.DataColumn
+        
+        Private columnid_Moby_Cover_Art_Types As Global.System.Data.DataColumn
+        
+        Private columnURL As Global.System.Data.DataColumn
+        
+        Private columnPackaging As Global.System.Data.DataColumn
+        
+        Private columnComment As Global.System.Data.DataColumn
+        
+        Private columnPackageComment As Global.System.Data.DataColumn
+        
+        Private columntmp_Description As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "src_ucr_Emulation_Moby_Releases_Cover_Art"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Moby_Releases_Cover_ArtColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Moby_Releases_Cover_Art
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Moby_Cover_Art_TypesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Moby_Cover_Art_Types
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property URLColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnURL
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PackagingColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPackaging
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CommentColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnComment
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PackageCommentColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPackageComment
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property tmp_DescriptionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntmp_Description
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As src_ucr_Emulation_Moby_Releases_Cover_ArtRow
+            Get
+                Return CType(Me.Rows(index),src_ucr_Emulation_Moby_Releases_Cover_ArtRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event src_ucr_Emulation_Moby_Releases_Cover_ArtRowChanging As src_ucr_Emulation_Moby_Releases_Cover_ArtRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event src_ucr_Emulation_Moby_Releases_Cover_ArtRowChanged As src_ucr_Emulation_Moby_Releases_Cover_ArtRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event src_ucr_Emulation_Moby_Releases_Cover_ArtRowDeleting As src_ucr_Emulation_Moby_Releases_Cover_ArtRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event src_ucr_Emulation_Moby_Releases_Cover_ArtRowDeleted As src_ucr_Emulation_Moby_Releases_Cover_ArtRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addsrc_ucr_Emulation_Moby_Releases_Cover_ArtRow(ByVal row As src_ucr_Emulation_Moby_Releases_Cover_ArtRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addsrc_ucr_Emulation_Moby_Releases_Cover_ArtRow(ByVal id_Moby_Releases_Cover_Art As String, ByVal id_Moby_Cover_Art_Types As Long, ByVal URL As String, ByVal Packaging As String, ByVal Comment As String, ByVal PackageComment As String, ByVal tmp_Description As String) As src_ucr_Emulation_Moby_Releases_Cover_ArtRow
+            Dim rowsrc_ucr_Emulation_Moby_Releases_Cover_ArtRow As src_ucr_Emulation_Moby_Releases_Cover_ArtRow = CType(Me.NewRow,src_ucr_Emulation_Moby_Releases_Cover_ArtRow)
+            Dim columnValuesArray() As Object = New Object() {id_Moby_Releases_Cover_Art, id_Moby_Cover_Art_Types, URL, Packaging, Comment, PackageComment, tmp_Description}
+            rowsrc_ucr_Emulation_Moby_Releases_Cover_ArtRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowsrc_ucr_Emulation_Moby_Releases_Cover_ArtRow)
+            Return rowsrc_ucr_Emulation_Moby_Releases_Cover_ArtRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As src_ucr_Emulation_Moby_Releases_Cover_ArtDataTable = CType(MyBase.Clone,src_ucr_Emulation_Moby_Releases_Cover_ArtDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New src_ucr_Emulation_Moby_Releases_Cover_ArtDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Moby_Releases_Cover_Art = MyBase.Columns("id_Moby_Releases_Cover_Art")
+            Me.columnid_Moby_Cover_Art_Types = MyBase.Columns("id_Moby_Cover_Art_Types")
+            Me.columnURL = MyBase.Columns("URL")
+            Me.columnPackaging = MyBase.Columns("Packaging")
+            Me.columnComment = MyBase.Columns("Comment")
+            Me.columnPackageComment = MyBase.Columns("PackageComment")
+            Me.columntmp_Description = MyBase.Columns("tmp_Description")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Moby_Releases_Cover_Art = New Global.System.Data.DataColumn("id_Moby_Releases_Cover_Art", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Moby_Releases_Cover_Art)
+            Me.columnid_Moby_Cover_Art_Types = New Global.System.Data.DataColumn("id_Moby_Cover_Art_Types", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Moby_Cover_Art_Types)
+            Me.columnURL = New Global.System.Data.DataColumn("URL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnURL)
+            Me.columnPackaging = New Global.System.Data.DataColumn("Packaging", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPackaging)
+            Me.columnComment = New Global.System.Data.DataColumn("Comment", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnComment)
+            Me.columnPackageComment = New Global.System.Data.DataColumn("PackageComment", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPackageComment)
+            Me.columntmp_Description = New Global.System.Data.DataColumn("tmp_Description", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntmp_Description)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newsrc_ucr_Emulation_Moby_Releases_Cover_ArtRow() As src_ucr_Emulation_Moby_Releases_Cover_ArtRow
+            Return CType(Me.NewRow,src_ucr_Emulation_Moby_Releases_Cover_ArtRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New src_ucr_Emulation_Moby_Releases_Cover_ArtRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(src_ucr_Emulation_Moby_Releases_Cover_ArtRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.src_ucr_Emulation_Moby_Releases_Cover_ArtRowChangedEvent) Is Nothing) Then
+                RaiseEvent src_ucr_Emulation_Moby_Releases_Cover_ArtRowChanged(Me, New src_ucr_Emulation_Moby_Releases_Cover_ArtRowChangeEvent(CType(e.Row,src_ucr_Emulation_Moby_Releases_Cover_ArtRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.src_ucr_Emulation_Moby_Releases_Cover_ArtRowChangingEvent) Is Nothing) Then
+                RaiseEvent src_ucr_Emulation_Moby_Releases_Cover_ArtRowChanging(Me, New src_ucr_Emulation_Moby_Releases_Cover_ArtRowChangeEvent(CType(e.Row,src_ucr_Emulation_Moby_Releases_Cover_ArtRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.src_ucr_Emulation_Moby_Releases_Cover_ArtRowDeletedEvent) Is Nothing) Then
+                RaiseEvent src_ucr_Emulation_Moby_Releases_Cover_ArtRowDeleted(Me, New src_ucr_Emulation_Moby_Releases_Cover_ArtRowChangeEvent(CType(e.Row,src_ucr_Emulation_Moby_Releases_Cover_ArtRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.src_ucr_Emulation_Moby_Releases_Cover_ArtRowDeletingEvent) Is Nothing) Then
+                RaiseEvent src_ucr_Emulation_Moby_Releases_Cover_ArtRowDeleting(Me, New src_ucr_Emulation_Moby_Releases_Cover_ArtRowChangeEvent(CType(e.Row,src_ucr_Emulation_Moby_Releases_Cover_ArtRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removesrc_ucr_Emulation_Moby_Releases_Cover_ArtRow(ByVal row As src_ucr_Emulation_Moby_Releases_Cover_ArtRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_ML = New DS_ML()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "src_ucr_Emulation_Moby_Releases_Cover_ArtDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class src_frm_MOBY_Extras_ManagerDataTable
+        Inherits Global.System.Data.TypedTableBase(Of src_frm_MOBY_Extras_ManagerRow)
+        
+        Private columnExtraType As Global.System.Data.DataColumn
+        
+        Private columnid_Moby_Extras_Properties As Global.System.Data.DataColumn
+        
+        Private columnid_Moby_Releases_Screenshots As Global.System.Data.DataColumn
+        
+        Private columnid_Moby_Releases_Cover_Art As Global.System.Data.DataColumn
+        
+        Private columnShow As Global.System.Data.DataColumn
+        
+        Private columnSort As Global.System.Data.DataColumn
+        
+        Private columnURL As Global.System.Data.DataColumn
+        
+        Private columntmp_Description As Global.System.Data.DataColumn
+        
+        Private columntmp_Available As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "src_frm_MOBY_Extras_Manager"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ExtraTypeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnExtraType
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Moby_Extras_PropertiesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Moby_Extras_Properties
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Moby_Releases_ScreenshotsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Moby_Releases_Screenshots
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Moby_Releases_Cover_ArtColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Moby_Releases_Cover_Art
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ShowColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnShow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SortColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSort
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property URLColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnURL
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property tmp_DescriptionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntmp_Description
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property tmp_AvailableColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntmp_Available
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As src_frm_MOBY_Extras_ManagerRow
+            Get
+                Return CType(Me.Rows(index),src_frm_MOBY_Extras_ManagerRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event src_frm_MOBY_Extras_ManagerRowChanging As src_frm_MOBY_Extras_ManagerRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event src_frm_MOBY_Extras_ManagerRowChanged As src_frm_MOBY_Extras_ManagerRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event src_frm_MOBY_Extras_ManagerRowDeleting As src_frm_MOBY_Extras_ManagerRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event src_frm_MOBY_Extras_ManagerRowDeleted As src_frm_MOBY_Extras_ManagerRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addsrc_frm_MOBY_Extras_ManagerRow(ByVal row As src_frm_MOBY_Extras_ManagerRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addsrc_frm_MOBY_Extras_ManagerRow(ByVal ExtraType As String, ByVal id_Moby_Extras_Properties As Long, ByVal id_Moby_Releases_Screenshots As Long, ByVal id_Moby_Releases_Cover_Art As Long, ByVal Show As Boolean, ByVal Sort As Long, ByVal URL As String, ByVal tmp_Description As String, ByVal tmp_Available As Boolean) As src_frm_MOBY_Extras_ManagerRow
+            Dim rowsrc_frm_MOBY_Extras_ManagerRow As src_frm_MOBY_Extras_ManagerRow = CType(Me.NewRow,src_frm_MOBY_Extras_ManagerRow)
+            Dim columnValuesArray() As Object = New Object() {ExtraType, id_Moby_Extras_Properties, id_Moby_Releases_Screenshots, id_Moby_Releases_Cover_Art, Show, Sort, URL, tmp_Description, tmp_Available}
+            rowsrc_frm_MOBY_Extras_ManagerRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowsrc_frm_MOBY_Extras_ManagerRow)
+            Return rowsrc_frm_MOBY_Extras_ManagerRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As src_frm_MOBY_Extras_ManagerDataTable = CType(MyBase.Clone,src_frm_MOBY_Extras_ManagerDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New src_frm_MOBY_Extras_ManagerDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnExtraType = MyBase.Columns("ExtraType")
+            Me.columnid_Moby_Extras_Properties = MyBase.Columns("id_Moby_Extras_Properties")
+            Me.columnid_Moby_Releases_Screenshots = MyBase.Columns("id_Moby_Releases_Screenshots")
+            Me.columnid_Moby_Releases_Cover_Art = MyBase.Columns("id_Moby_Releases_Cover_Art")
+            Me.columnShow = MyBase.Columns("Show")
+            Me.columnSort = MyBase.Columns("Sort")
+            Me.columnURL = MyBase.Columns("URL")
+            Me.columntmp_Description = MyBase.Columns("tmp_Description")
+            Me.columntmp_Available = MyBase.Columns("tmp_Available")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnExtraType = New Global.System.Data.DataColumn("ExtraType", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnExtraType)
+            Me.columnid_Moby_Extras_Properties = New Global.System.Data.DataColumn("id_Moby_Extras_Properties", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Moby_Extras_Properties)
+            Me.columnid_Moby_Releases_Screenshots = New Global.System.Data.DataColumn("id_Moby_Releases_Screenshots", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Moby_Releases_Screenshots)
+            Me.columnid_Moby_Releases_Cover_Art = New Global.System.Data.DataColumn("id_Moby_Releases_Cover_Art", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Moby_Releases_Cover_Art)
+            Me.columnShow = New Global.System.Data.DataColumn("Show", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnShow)
+            Me.columnSort = New Global.System.Data.DataColumn("Sort", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSort)
+            Me.columnURL = New Global.System.Data.DataColumn("URL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnURL)
+            Me.columntmp_Description = New Global.System.Data.DataColumn("tmp_Description", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntmp_Description)
+            Me.columntmp_Available = New Global.System.Data.DataColumn("tmp_Available", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntmp_Available)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newsrc_frm_MOBY_Extras_ManagerRow() As src_frm_MOBY_Extras_ManagerRow
+            Return CType(Me.NewRow,src_frm_MOBY_Extras_ManagerRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New src_frm_MOBY_Extras_ManagerRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(src_frm_MOBY_Extras_ManagerRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.src_frm_MOBY_Extras_ManagerRowChangedEvent) Is Nothing) Then
+                RaiseEvent src_frm_MOBY_Extras_ManagerRowChanged(Me, New src_frm_MOBY_Extras_ManagerRowChangeEvent(CType(e.Row,src_frm_MOBY_Extras_ManagerRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.src_frm_MOBY_Extras_ManagerRowChangingEvent) Is Nothing) Then
+                RaiseEvent src_frm_MOBY_Extras_ManagerRowChanging(Me, New src_frm_MOBY_Extras_ManagerRowChangeEvent(CType(e.Row,src_frm_MOBY_Extras_ManagerRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.src_frm_MOBY_Extras_ManagerRowDeletedEvent) Is Nothing) Then
+                RaiseEvent src_frm_MOBY_Extras_ManagerRowDeleted(Me, New src_frm_MOBY_Extras_ManagerRowChangeEvent(CType(e.Row,src_frm_MOBY_Extras_ManagerRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.src_frm_MOBY_Extras_ManagerRowDeletingEvent) Is Nothing) Then
+                RaiseEvent src_frm_MOBY_Extras_ManagerRowDeleting(Me, New src_frm_MOBY_Extras_ManagerRowChangeEvent(CType(e.Row,src_frm_MOBY_Extras_ManagerRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removesrc_frm_MOBY_Extras_ManagerRow(ByVal row As src_frm_MOBY_Extras_ManagerRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_ML = New DS_ML()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "src_frm_MOBY_Extras_ManagerDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class tbl_Moby_RegionsDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tbl_Moby_RegionsRow)
+        
+        Private columnid_Moby_Regions As Global.System.Data.DataColumn
+        
+        Private columnid_Moby_Regions_Owner As Global.System.Data.DataColumn
+        
+        Private columnRegion As Global.System.Data.DataColumn
+        
+        Private columnSort As Global.System.Data.DataColumn
+        
+        Private columntmp_Apply As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "tbl_Moby_Regions"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Moby_RegionsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Moby_Regions
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Moby_Regions_OwnerColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Moby_Regions_Owner
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property RegionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRegion
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SortColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSort
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property tmp_ApplyColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntmp_Apply
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_Moby_RegionsRow
+            Get
+                Return CType(Me.Rows(index),tbl_Moby_RegionsRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Moby_RegionsRowChanging As tbl_Moby_RegionsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Moby_RegionsRowChanged As tbl_Moby_RegionsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Moby_RegionsRowDeleting As tbl_Moby_RegionsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Moby_RegionsRowDeleted As tbl_Moby_RegionsRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addtbl_Moby_RegionsRow(ByVal row As tbl_Moby_RegionsRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addtbl_Moby_RegionsRow(ByVal id_Moby_Regions As Long, ByVal id_Moby_Regions_Owner As Long, ByVal _Region As String, ByVal Sort As Long, ByVal tmp_Apply As Boolean) As tbl_Moby_RegionsRow
+            Dim rowtbl_Moby_RegionsRow As tbl_Moby_RegionsRow = CType(Me.NewRow,tbl_Moby_RegionsRow)
+            Dim columnValuesArray() As Object = New Object() {id_Moby_Regions, id_Moby_Regions_Owner, _Region, Sort, tmp_Apply}
+            rowtbl_Moby_RegionsRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtbl_Moby_RegionsRow)
+            Return rowtbl_Moby_RegionsRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function FindByid_Moby_Regions(ByVal id_Moby_Regions As Long) As tbl_Moby_RegionsRow
+            Return CType(Me.Rows.Find(New Object() {id_Moby_Regions}),tbl_Moby_RegionsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As tbl_Moby_RegionsDataTable = CType(MyBase.Clone,tbl_Moby_RegionsDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New tbl_Moby_RegionsDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Moby_Regions = MyBase.Columns("id_Moby_Regions")
+            Me.columnid_Moby_Regions_Owner = MyBase.Columns("id_Moby_Regions_Owner")
+            Me.columnRegion = MyBase.Columns("Region")
+            Me.columnSort = MyBase.Columns("Sort")
+            Me.columntmp_Apply = MyBase.Columns("tmp_Apply")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Moby_Regions = New Global.System.Data.DataColumn("id_Moby_Regions", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Moby_Regions)
+            Me.columnid_Moby_Regions_Owner = New Global.System.Data.DataColumn("id_Moby_Regions_Owner", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Moby_Regions_Owner)
+            Me.columnRegion = New Global.System.Data.DataColumn("Region", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnRegion.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "RegionColumn")
+            Me.columnRegion.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnRegion")
+            Me.columnRegion.ExtendedProperties.Add("Generator_UserColumnName", "Region")
+            MyBase.Columns.Add(Me.columnRegion)
+            Me.columnSort = New Global.System.Data.DataColumn("Sort", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSort)
+            Me.columntmp_Apply = New Global.System.Data.DataColumn("tmp_Apply", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntmp_Apply)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_Moby_Regions}, true))
+            Me.columnid_Moby_Regions.AllowDBNull = false
+            Me.columnid_Moby_Regions.Unique = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newtbl_Moby_RegionsRow() As tbl_Moby_RegionsRow
+            Return CType(Me.NewRow,tbl_Moby_RegionsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New tbl_Moby_RegionsRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(tbl_Moby_RegionsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.tbl_Moby_RegionsRowChangedEvent) Is Nothing) Then
+                RaiseEvent tbl_Moby_RegionsRowChanged(Me, New tbl_Moby_RegionsRowChangeEvent(CType(e.Row,tbl_Moby_RegionsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.tbl_Moby_RegionsRowChangingEvent) Is Nothing) Then
+                RaiseEvent tbl_Moby_RegionsRowChanging(Me, New tbl_Moby_RegionsRowChangeEvent(CType(e.Row,tbl_Moby_RegionsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.tbl_Moby_RegionsRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tbl_Moby_RegionsRowDeleted(Me, New tbl_Moby_RegionsRowChangeEvent(CType(e.Row,tbl_Moby_RegionsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.tbl_Moby_RegionsRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tbl_Moby_RegionsRowDeleting(Me, New tbl_Moby_RegionsRowChangeEvent(CType(e.Row,tbl_Moby_RegionsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removetbl_Moby_RegionsRow(ByVal row As tbl_Moby_RegionsRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_ML = New DS_ML()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "tbl_Moby_RegionsDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
     Partial Public Class tbl_EmulatorsRow
@@ -21055,6 +24922,21 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_List_Generators() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Emulators.id_List_GeneratorsColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_List_Generators in Tabelle tbl_Emulators ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Emulators.id_List_GeneratorsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsDisplaynameNull() As Boolean
             Return Me.IsNull(Me.tabletbl_Emulators.DisplaynameColumn)
         End Function
@@ -21147,6 +25029,18 @@ Partial Public Class DS_ML
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetLibretro_CoreNull()
             Me(Me.tabletbl_Emulators.Libretro_CoreColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_List_GeneratorsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Emulators.id_List_GeneratorsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_List_GeneratorsNull()
+            Me(Me.tabletbl_Emulators.id_List_GeneratorsColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -21500,6 +25394,37 @@ Partial Public Class DS_ML
             End Get
             Set
                 Me(Me.tablesrc_ucr_Emulation_Games.id_DOSBox_ConfigsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CustomIdentifier() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Games.CustomIdentifierColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte CustomIdentifier in Tabelle src_ucr_Emulation_Games ist DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Games.CustomIdentifierColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Unavailable() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Games.UnavailableColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Unavailable in Tabelle src_ucr_Emulation_Games ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Games.UnavailableColumn) = value
             End Set
         End Property
         
@@ -22238,6 +26163,22 @@ Partial Public Class DS_ML
             End Get
             Set
                 Me(Me.tablesrc_ucr_Emulation_Games.id_Moby_PlatformsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Moby_Platforms_Alternative() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Games.id_Moby_Platforms_AlternativeColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Moby_Platforms_Alternative in Tabelle src_ucr_Emulation_Ga"& _ 
+                            "mes ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Games.id_Moby_Platforms_AlternativeColumn) = value
             End Set
         End Property
         
@@ -23255,6 +27196,30 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCustomIdentifierNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Games.CustomIdentifierColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCustomIdentifierNull()
+            Me(Me.tablesrc_ucr_Emulation_Games.CustomIdentifierColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsUnavailableNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Games.UnavailableColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetUnavailableNull()
+            Me(Me.tablesrc_ucr_Emulation_Games.UnavailableColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsGameNull() As Boolean
             Return Me.IsNull(Me.tablesrc_ucr_Emulation_Games.GameColumn)
         End Function
@@ -23827,6 +27792,18 @@ Partial Public Class DS_ML
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Setid_Moby_PlatformsNull()
             Me(Me.tablesrc_ucr_Emulation_Games.id_Moby_PlatformsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Moby_Platforms_AlternativeNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Games.id_Moby_Platforms_AlternativeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Moby_Platforms_AlternativeNull()
+            Me(Me.tablesrc_ucr_Emulation_Games.id_Moby_Platforms_AlternativeColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -27684,6 +31661,37 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_ScummVM_Configs_Template() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Emu_Games.id_ScummVM_Configs_TemplateColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_ScummVM_Configs_Template in Tabelle tbl_Emu_Games ist DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Emu_Games.id_ScummVM_Configs_TemplateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_ScummVM_Configs() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Emu_Games.id_ScummVM_ConfigsColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_ScummVM_Configs in Tabelle tbl_Emu_Games ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Emu_Games.id_ScummVM_ConfigsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property id_Rombase_DOSBox_Filetypes() As Long
             Get
                 Try 
@@ -27711,6 +31719,21 @@ Partial Public Class DS_ML
             End Get
             Set
                 Me(Me.tabletbl_Emu_Games.id_Rombase_DOSBox_Exe_TypesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Unavailable() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Emu_Games.UnavailableColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Unavailable in Tabelle tbl_Emu_Games ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Emu_Games.UnavailableColumn) = value
             End Set
         End Property
         
@@ -27772,6 +31795,22 @@ Partial Public Class DS_ML
             End Get
             Set
                 Me(Me.tabletbl_Emu_Games.id_Moby_PlatformsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Moby_Platforms_Alternative() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Emu_Games.id_Moby_Platforms_AlternativeColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Moby_Platforms_Alternative in Tabelle tbl_Emu_Games ist DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Emu_Games.id_Moby_Platforms_AlternativeColumn) = value
             End Set
         End Property
         
@@ -28952,6 +32991,21 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property tmp_Highlighted() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Emu_Games.tmp_HighlightedColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte tmp_Highlighted in Tabelle tbl_Emu_Games ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Emu_Games.tmp_HighlightedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Isid_DOSBox_Configs_TemplateNull() As Boolean
             Return Me.IsNull(Me.tabletbl_Emu_Games.id_DOSBox_Configs_TemplateColumn)
         End Function
@@ -28976,6 +33030,30 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_ScummVM_Configs_TemplateNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Emu_Games.id_ScummVM_Configs_TemplateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_ScummVM_Configs_TemplateNull()
+            Me(Me.tabletbl_Emu_Games.id_ScummVM_Configs_TemplateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_ScummVM_ConfigsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Emu_Games.id_ScummVM_ConfigsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_ScummVM_ConfigsNull()
+            Me(Me.tabletbl_Emu_Games.id_ScummVM_ConfigsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Isid_Rombase_DOSBox_FiletypesNull() As Boolean
             Return Me.IsNull(Me.tabletbl_Emu_Games.id_Rombase_DOSBox_FiletypesColumn)
         End Function
@@ -28996,6 +33074,18 @@ Partial Public Class DS_ML
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Setid_Rombase_DOSBox_Exe_TypesNull()
             Me(Me.tabletbl_Emu_Games.id_Rombase_DOSBox_Exe_TypesColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsUnavailableNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Emu_Games.UnavailableColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetUnavailableNull()
+            Me(Me.tabletbl_Emu_Games.UnavailableColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -29044,6 +33134,18 @@ Partial Public Class DS_ML
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Setid_Moby_PlatformsNull()
             Me(Me.tabletbl_Emu_Games.id_Moby_PlatformsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Moby_Platforms_AlternativeNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Emu_Games.id_Moby_Platforms_AlternativeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Moby_Platforms_AlternativeNull()
+            Me(Me.tabletbl_Emu_Games.id_Moby_Platforms_AlternativeColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -29980,6 +34082,18 @@ Partial Public Class DS_ML
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetdeprecatedNull()
             Me(Me.tabletbl_Emu_Games.deprecatedColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Istmp_HighlightedNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Emu_Games.tmp_HighlightedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Settmp_HighlightedNull()
+            Me(Me.tabletbl_Emu_Games.tmp_HighlightedColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -31066,6 +35180,22 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property is_allowed_by_filter_ini() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Mame_Roms.is_allowed_by_filter_iniColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte is_allowed_by_filter_ini in Tabelle tbl_Mame_Roms ist DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Mame_Roms.is_allowed_by_filter_iniColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property isbios() As Boolean
             Get
                 Try 
@@ -31272,6 +35402,18 @@ Partial Public Class DS_ML
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetsourcefileNull()
             Me(Me.tabletbl_Mame_Roms.sourcefileColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isis_allowed_by_filter_iniNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Mame_Roms.is_allowed_by_filter_iniColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setis_allowed_by_filter_iniNull()
+            Me(Me.tabletbl_Mame_Roms.is_allowed_by_filter_iniColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -33004,6 +37146,38 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property _p_sdl_surfacenp_sharpness() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs._p_sdl_surfacenp_sharpnessColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_sdl_surfacenp-sharpness in Tabelle tbl_DOSBox_Configs ist D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs._p_sdl_surfacenp_sharpnessColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property _p_sdl_surface_collapse_dbl() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs._p_sdl_surface_collapse_dblColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_sdl_surface-collapse-dbl in Tabelle tbl_DOSBox_Configs ist "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs._p_sdl_surface_collapse_dblColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property p_dosbox_vmemsize() As Integer
             Get
                 Try 
@@ -33185,6 +37359,21 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_voodoo_voodoomem() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_voodoo_voodoomemColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_voodoo_voodoomem in Tabelle tbl_DOSBox_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_voodoo_voodoomemColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property p_mixer_swapstereo() As Boolean
             Get
                 Try 
@@ -33341,6 +37530,400 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_mt32_romdir() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_romdirColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_mt32_romdir in Tabelle tbl_DOSBox_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_romdirColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_mt32_chunk() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_chunkColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_mt32_chunk in Tabelle tbl_DOSBox_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_chunkColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_mt32_prebuffer() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_prebufferColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_mt32_prebuffer in Tabelle tbl_DOSBox_Configs ist DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_prebufferColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_mt32_analog() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_analogColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_mt32_analog in Tabelle tbl_DOSBox_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_analogColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_mt32_rate() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_rateColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_mt32_rate in Tabelle tbl_DOSBox_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_rateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_mt32_src_quality() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_src_qualityColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_mt32_src_quality in Tabelle tbl_DOSBox_Configs ist DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_src_qualityColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_mt32_niceampramp() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_niceamprampColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_mt32_niceampramp in Tabelle tbl_DOSBox_Configs ist DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_niceamprampColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_soundfont() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_soundfontColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_soundfont in Tabelle tbl_DOSBox_Configs ist DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_soundfontColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_samplerate() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_samplerateColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_samplerate in Tabelle tbl_DOSBox_Configs ist DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_samplerateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_gain() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_gainColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_gain in Tabelle tbl_DOSBox_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_gainColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_polyphony() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_polyphonyColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_polyphony in Tabelle tbl_DOSBox_Configs ist DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_polyphonyColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_cores() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_coresColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_cores in Tabelle tbl_DOSBox_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_coresColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_periods() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_periodsColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_periods in Tabelle tbl_DOSBox_Configs ist DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_periodsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_periodsize() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_periodsizeColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_periodsize in Tabelle tbl_DOSBox_Configs ist DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_periodsizeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_reverb() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverbColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_reverb in Tabelle tbl_DOSBox_Configs ist DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverbColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_chorus() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorusColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_chorus in Tabelle tbl_DOSBox_Configs ist DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorusColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_reverb_roomsize() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverb_roomsizeColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_reverb_roomsize in Tabelle tbl_DOSBox_Configs is"& _ 
+                            "t DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverb_roomsizeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_reverb_damping() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverb_dampingColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_reverb_damping in Tabelle tbl_DOSBox_Configs ist"& _ 
+                            " DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverb_dampingColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_reverb_width() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverb_widthColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_reverb_width in Tabelle tbl_DOSBox_Configs ist D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverb_widthColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_reverb_level() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverb_levelColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_reverb_level in Tabelle tbl_DOSBox_Configs ist D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverb_levelColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_chorus_number() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_numberColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_chorus_number in Tabelle tbl_DOSBox_Configs ist "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_numberColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_chorus_level() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_levelColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_chorus_level in Tabelle tbl_DOSBox_Configs ist D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_levelColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_chorus_speed() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_speedColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_chorus_speed in Tabelle tbl_DOSBox_Configs ist D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_speedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_chorus_depth() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_depthColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_chorus_depth in Tabelle tbl_DOSBox_Configs ist D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_depthColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_midi_fluid_chorus_type() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_typeColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_midi_fluid_chorus_type in Tabelle tbl_DOSBox_Configs ist DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_typeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property p_sblaster_oplmode() As String
             Get
                 Try 
@@ -33367,6 +37950,21 @@ Partial Public Class DS_ML
             End Get
             Set
                 Me(Me.tabletbl_DOSBox_Configs.p_sblaster_hardwarebaseColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property p_sblaster_oplemu() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_DOSBox_Configs.p_sblaster_oplemuColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte p_sblaster_oplemu in Tabelle tbl_DOSBox_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_DOSBox_Configs.p_sblaster_oplemuColumn) = value
             End Set
         End Property
         
@@ -35085,6 +39683,30 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Is_p_sdl_surfacenp_sharpnessNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs._p_sdl_surfacenp_sharpnessColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Set_p_sdl_surfacenp_sharpnessNull()
+            Me(Me.tabletbl_DOSBox_Configs._p_sdl_surfacenp_sharpnessColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Is_p_sdl_surface_collapse_dblNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs._p_sdl_surface_collapse_dblColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Set_p_sdl_surface_collapse_dblNull()
+            Me(Me.tabletbl_DOSBox_Configs._p_sdl_surface_collapse_dblColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Isp_dosbox_vmemsizeNull() As Boolean
             Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_dosbox_vmemsizeColumn)
         End Function
@@ -35229,6 +39851,18 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_voodoo_voodoomemNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_voodoo_voodoomemColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_voodoo_voodoomemNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_voodoo_voodoomemColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Isp_mixer_swapstereoNull() As Boolean
             Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_mixer_swapstereoColumn)
         End Function
@@ -35349,6 +39983,306 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_mt32_romdirNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_mt32_romdirColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_mt32_romdirNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_romdirColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_mt32_chunkNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_mt32_chunkColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_mt32_chunkNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_chunkColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_mt32_prebufferNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_mt32_prebufferColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_mt32_prebufferNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_prebufferColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_mt32_analogNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_mt32_analogColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_mt32_analogNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_analogColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_mt32_rateNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_mt32_rateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_mt32_rateNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_rateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_mt32_src_qualityNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_mt32_src_qualityColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_mt32_src_qualityNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_src_qualityColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_mt32_niceamprampNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_mt32_niceamprampColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_mt32_niceamprampNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_mt32_niceamprampColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_soundfontNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_soundfontColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_soundfontNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_soundfontColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_samplerateNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_samplerateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_samplerateNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_samplerateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_gainNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_gainColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_gainNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_gainColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_polyphonyNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_polyphonyColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_polyphonyNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_polyphonyColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_coresNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_coresColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_coresNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_coresColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_periodsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_periodsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_periodsNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_periodsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_periodsizeNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_periodsizeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_periodsizeNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_periodsizeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_reverbNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverbColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_reverbNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverbColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_chorusNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorusColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_chorusNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorusColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_reverb_roomsizeNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverb_roomsizeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_reverb_roomsizeNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverb_roomsizeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_reverb_dampingNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverb_dampingColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_reverb_dampingNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverb_dampingColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_reverb_widthNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverb_widthColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_reverb_widthNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverb_widthColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_reverb_levelNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverb_levelColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_reverb_levelNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_reverb_levelColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_chorus_numberNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_numberColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_chorus_numberNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_numberColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_chorus_levelNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_levelColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_chorus_levelNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_levelColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_chorus_speedNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_speedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_chorus_speedNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_speedColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_chorus_depthNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_depthColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_chorus_depthNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_depthColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_midi_fluid_chorus_typeNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_typeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_midi_fluid_chorus_typeNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_midi_fluid_chorus_typeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Isp_sblaster_oplmodeNull() As Boolean
             Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_sblaster_oplmodeColumn)
         End Function
@@ -35369,6 +40303,18 @@ Partial Public Class DS_ML
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Setp_sblaster_hardwarebaseNull()
             Me(Me.tabletbl_DOSBox_Configs.p_sblaster_hardwarebaseColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isp_sblaster_oplemuNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_DOSBox_Configs.p_sblaster_oplemuColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setp_sblaster_oplemuNull()
+            Me(Me.tabletbl_DOSBox_Configs.p_sblaster_oplemuColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -36126,6 +41072,22 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ECE_Supported() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_frm_Emulators_DOSBox_Patches.ECE_SupportedColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte ECE_Supported in Tabelle src_frm_Emulators_DOSBox_Patches ist"& _ 
+                            " DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_frm_Emulators_DOSBox_Patches.ECE_SupportedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Isid_DOSBox_PatchesNull() As Boolean
             Return Me.IsNull(Me.tablesrc_frm_Emulators_DOSBox_Patches.id_DOSBox_PatchesColumn)
         End Function
@@ -36230,6 +41192,18 @@ Partial Public Class DS_ML
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetMB_SupportedNull()
             Me(Me.tablesrc_frm_Emulators_DOSBox_Patches.MB_SupportedColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsECE_SupportedNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_frm_Emulators_DOSBox_Patches.ECE_SupportedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetECE_SupportedNull()
+            Me(Me.tablesrc_frm_Emulators_DOSBox_Patches.ECE_SupportedColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -39873,6 +44847,2785 @@ Partial Public Class DS_ML
     End Class
     
     '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class tbl_List_GeneratorsRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tabletbl_List_Generators As tbl_List_GeneratorsDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tabletbl_List_Generators = CType(Me.Table,tbl_List_GeneratorsDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_List_Generators() As Long
+            Get
+                Return CType(Me(Me.tabletbl_List_Generators.id_List_GeneratorsColumn),Long)
+            End Get
+            Set
+                Me(Me.tabletbl_List_Generators.id_List_GeneratorsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Name() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_List_Generators.NameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Name in Tabelle tbl_List_Generators ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_List_Generators.NameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Main_Template() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_List_Generators.Main_TemplateColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Main_Template in Tabelle tbl_List_Generators ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_List_Generators.Main_TemplateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property File_Entry_Template() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_List_Generators.File_Entry_TemplateColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte File_Entry_Template in Tabelle tbl_List_Generators ist DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_List_Generators.File_Entry_TemplateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Sort() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_List_Generators.SortColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Sort in Tabelle tbl_List_Generators ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_List_Generators.SortColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNameNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_List_Generators.NameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNameNull()
+            Me(Me.tabletbl_List_Generators.NameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMain_TemplateNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_List_Generators.Main_TemplateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMain_TemplateNull()
+            Me(Me.tabletbl_List_Generators.Main_TemplateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsFile_Entry_TemplateNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_List_Generators.File_Entry_TemplateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetFile_Entry_TemplateNull()
+            Me(Me.tabletbl_List_Generators.File_Entry_TemplateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSortNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_List_Generators.SortColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSortNull()
+            Me(Me.tabletbl_List_Generators.SortColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class static_List_Generator_SortRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tablestatic_List_Generator_Sort As static_List_Generator_SortDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tablestatic_List_Generator_Sort = CType(Me.Table,static_List_Generator_SortDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Sort() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablestatic_List_Generator_Sort.id_SortColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Sort in Tabelle static_List_Generator_Sort ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablestatic_List_Generator_Sort.id_SortColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Name() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablestatic_List_Generator_Sort.NameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Name in Tabelle static_List_Generator_Sort ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablestatic_List_Generator_Sort.NameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_SortNull() As Boolean
+            Return Me.IsNull(Me.tablestatic_List_Generator_Sort.id_SortColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_SortNull()
+            Me(Me.tablestatic_List_Generator_Sort.id_SortColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNameNull() As Boolean
+            Return Me.IsNull(Me.tablestatic_List_Generator_Sort.NameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNameNull()
+            Me(Me.tablestatic_List_Generator_Sort.NameColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class tbl_ScummVM_ConfigsRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tabletbl_ScummVM_Configs As tbl_ScummVM_ConfigsDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tabletbl_ScummVM_Configs = CType(Me.Table,tbl_ScummVM_ConfigsDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_ScummVM_Configs() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.id_ScummVM_ConfigsColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_ScummVM_Configs in Tabelle tbl_ScummVM_Configs ist DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.id_ScummVM_ConfigsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Rombase_ScummVM_Configs() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.id_Rombase_ScummVM_ConfigsColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Rombase_ScummVM_Configs in Tabelle tbl_ScummVM_Configs ist"& _ 
+                            " DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.id_Rombase_ScummVM_ConfigsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property isTemplate() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.isTemplateColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte isTemplate in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.isTemplateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Displayname() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.DisplaynameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Displayname in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.DisplaynameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property user_defined_config() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.user_defined_configColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte user_defined_config in Tabelle tbl_ScummVM_Configs ist DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.user_defined_configColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property user_defined_commandline() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.user_defined_commandlineColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte user_defined_commandline in Tabelle tbl_ScummVM_Configs ist D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.user_defined_commandlineColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property console() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.consoleColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte console in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.consoleColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property confirm_exit() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.confirm_exitColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte confirm_exit in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.confirm_exitColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property savepath() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.savepathColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte savepath in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.savepathColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property extrapath() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.extrapathColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte extrapath in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.extrapathColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property language() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.languageColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte language in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.languageColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property joystick_num() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.joystick_numColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte joystick_num in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.joystick_numColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property copy_protection() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.copy_protectionColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte copy_protection in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.copy_protectionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property boot_param() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.boot_paramColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte boot_param in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.boot_paramColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property fullscreen() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.fullscreenColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte fullscreen in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.fullscreenColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property aspect_ratio() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.aspect_ratioColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte aspect_ratio in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.aspect_ratioColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property gfx_mode() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.gfx_modeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte gfx_mode in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.gfx_modeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property subtitles() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.subtitlesColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte subtitles in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.subtitlesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property music_driver() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.music_driverColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte music_driver in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.music_driverColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property multi_midi() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.multi_midiColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte multi_midi in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.multi_midiColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property soundfont() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.soundfontColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte soundfont in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.soundfontColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property native_mt32() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.native_mt32Column),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte native_mt32 in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.native_mt32Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property enable_gs() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.enable_gsColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte enable_gs in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.enable_gsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property output_rate() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.output_rateColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte output_rate in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.output_rateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property music_volume() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.music_volumeColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte music_volume in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.music_volumeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property speech_volume() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.speech_volumeColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte speech_volume in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.speech_volumeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property sfx_volume() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.sfx_volumeColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte sfx_volume in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.sfx_volumeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property speech_mute() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.speech_muteColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte speech_mute in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.speech_muteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property talkspeed() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.talkspeedColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte talkspeed in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.talkspeedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property cdrom() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.cdromColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte cdrom in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.cdromColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property tempo() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.tempoColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte tempo in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.tempoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property midi_gain() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.midi_gainColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte midi_gain in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.midi_gainColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property autosave_period() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.autosave_periodColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte autosave_period in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.autosave_periodColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property save_slot() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.save_slotColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte save_slot in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.save_slotColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property demo_mode() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.demo_modeColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte demo_mode in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.demo_modeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property alt_intro() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.alt_introColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte alt_intro in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.alt_introColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property music_mute() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.music_muteColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte music_mute in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.music_muteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property sfx_mute() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.sfx_muteColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte sfx_mute in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.sfx_muteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property gfx_details() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.gfx_detailsColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte gfx_details in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.gfx_detailsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property object_labels() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.object_labelsColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte object_labels in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.object_labelsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property reverse_stereo() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.reverse_stereoColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte reverse_stereo in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.reverse_stereoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property walkspeed() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.walkspeedColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte walkspeed in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.walkspeedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property filtering() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.filteringColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte filtering in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.filteringColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property opl_driver() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.opl_driverColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte opl_driver in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.opl_driverColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property originalsaveload() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.originalsaveloadColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte originalsaveload in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.originalsaveloadColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property altamigapalette() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.altamigapaletteColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte altamigapalette in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.altamigapaletteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property mousesupport() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.mousesupportColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte mousesupport in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.mousesupportColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property disable_dithering() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.disable_ditheringColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte disable_dithering in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.disable_ditheringColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property prefer_digitalsfx() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.prefer_digitalsfxColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte prefer_digitalsfx in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.prefer_digitalsfxColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property native_fb01() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.native_fb01Column),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte native_fb01 in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.native_fb01Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property use_cdaudio() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.use_cdaudioColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte use_cdaudio in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.use_cdaudioColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property windows_cursors() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.windows_cursorsColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte windows_cursors in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.windows_cursorsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property silver_cursors() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.silver_cursorsColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte silver_cursors in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.silver_cursorsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property enable_gore() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.enable_goreColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte enable_gore in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.enable_goreColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property smooth_scrolling() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.smooth_scrollingColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte smooth_scrolling in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.smooth_scrollingColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property floating_cursors() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.floating_cursorsColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte floating_cursors in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.floating_cursorsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property enable_color_blind() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.enable_color_blindColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte enable_color_blind in Tabelle tbl_ScummVM_Configs ist DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.enable_color_blindColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property studio_audience() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.studio_audienceColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte studio_audience in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.studio_audienceColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property skip_support() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.skip_supportColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte skip_support in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.skip_supportColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property helium_mode() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.helium_modeColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte helium_mode in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.helium_modeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property skiphallofrecordsscenes() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.skiphallofrecordsscenesColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte skiphallofrecordsscenes in Tabelle tbl_ScummVM_Configs ist DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.skiphallofrecordsscenesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property scalemakingofvideos() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.scalemakingofvideosColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte scalemakingofvideos in Tabelle tbl_ScummVM_Configs ist DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.scalemakingofvideosColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property fast_movie_speed() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.fast_movie_speedColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte fast_movie_speed in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.fast_movie_speedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property doublefps() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.doublefpsColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte doublefps in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.doublefpsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property venusenabled() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.venusenabledColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte venusenabled in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.venusenabledColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property noanimwhileturning() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.noanimwhileturningColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte noanimwhileturning in Tabelle tbl_ScummVM_Configs ist DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.noanimwhileturningColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property mpegmovies() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_ScummVM_Configs.mpegmoviesColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte mpegmovies in Tabelle tbl_ScummVM_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_ScummVM_Configs.mpegmoviesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_ScummVM_ConfigsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.id_ScummVM_ConfigsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_ScummVM_ConfigsNull()
+            Me(Me.tabletbl_ScummVM_Configs.id_ScummVM_ConfigsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Rombase_ScummVM_ConfigsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.id_Rombase_ScummVM_ConfigsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Rombase_ScummVM_ConfigsNull()
+            Me(Me.tabletbl_ScummVM_Configs.id_Rombase_ScummVM_ConfigsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsisTemplateNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.isTemplateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetisTemplateNull()
+            Me(Me.tabletbl_ScummVM_Configs.isTemplateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDisplaynameNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.DisplaynameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDisplaynameNull()
+            Me(Me.tabletbl_ScummVM_Configs.DisplaynameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isuser_defined_configNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.user_defined_configColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setuser_defined_configNull()
+            Me(Me.tabletbl_ScummVM_Configs.user_defined_configColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isuser_defined_commandlineNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.user_defined_commandlineColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setuser_defined_commandlineNull()
+            Me(Me.tabletbl_ScummVM_Configs.user_defined_commandlineColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsconsoleNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.consoleColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetconsoleNull()
+            Me(Me.tabletbl_ScummVM_Configs.consoleColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isconfirm_exitNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.confirm_exitColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setconfirm_exitNull()
+            Me(Me.tabletbl_ScummVM_Configs.confirm_exitColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IssavepathNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.savepathColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetsavepathNull()
+            Me(Me.tabletbl_ScummVM_Configs.savepathColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsextrapathNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.extrapathColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetextrapathNull()
+            Me(Me.tabletbl_ScummVM_Configs.extrapathColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IslanguageNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.languageColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetlanguageNull()
+            Me(Me.tabletbl_ScummVM_Configs.languageColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isjoystick_numNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.joystick_numColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setjoystick_numNull()
+            Me(Me.tabletbl_ScummVM_Configs.joystick_numColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Iscopy_protectionNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.copy_protectionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setcopy_protectionNull()
+            Me(Me.tabletbl_ScummVM_Configs.copy_protectionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isboot_paramNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.boot_paramColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setboot_paramNull()
+            Me(Me.tabletbl_ScummVM_Configs.boot_paramColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsfullscreenNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.fullscreenColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetfullscreenNull()
+            Me(Me.tabletbl_ScummVM_Configs.fullscreenColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isaspect_ratioNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.aspect_ratioColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setaspect_ratioNull()
+            Me(Me.tabletbl_ScummVM_Configs.aspect_ratioColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isgfx_modeNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.gfx_modeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setgfx_modeNull()
+            Me(Me.tabletbl_ScummVM_Configs.gfx_modeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IssubtitlesNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.subtitlesColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetsubtitlesNull()
+            Me(Me.tabletbl_ScummVM_Configs.subtitlesColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Ismusic_driverNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.music_driverColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setmusic_driverNull()
+            Me(Me.tabletbl_ScummVM_Configs.music_driverColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Ismulti_midiNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.multi_midiColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setmulti_midiNull()
+            Me(Me.tabletbl_ScummVM_Configs.multi_midiColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IssoundfontNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.soundfontColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetsoundfontNull()
+            Me(Me.tabletbl_ScummVM_Configs.soundfontColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isnative_mt32Null() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.native_mt32Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setnative_mt32Null()
+            Me(Me.tabletbl_ScummVM_Configs.native_mt32Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isenable_gsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.enable_gsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setenable_gsNull()
+            Me(Me.tabletbl_ScummVM_Configs.enable_gsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isoutput_rateNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.output_rateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setoutput_rateNull()
+            Me(Me.tabletbl_ScummVM_Configs.output_rateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Ismusic_volumeNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.music_volumeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setmusic_volumeNull()
+            Me(Me.tabletbl_ScummVM_Configs.music_volumeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isspeech_volumeNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.speech_volumeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setspeech_volumeNull()
+            Me(Me.tabletbl_ScummVM_Configs.speech_volumeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Issfx_volumeNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.sfx_volumeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setsfx_volumeNull()
+            Me(Me.tabletbl_ScummVM_Configs.sfx_volumeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isspeech_muteNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.speech_muteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setspeech_muteNull()
+            Me(Me.tabletbl_ScummVM_Configs.speech_muteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IstalkspeedNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.talkspeedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SettalkspeedNull()
+            Me(Me.tabletbl_ScummVM_Configs.talkspeedColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscdromNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.cdromColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcdromNull()
+            Me(Me.tabletbl_ScummVM_Configs.cdromColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IstempoNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.tempoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SettempoNull()
+            Me(Me.tabletbl_ScummVM_Configs.tempoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Ismidi_gainNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.midi_gainColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setmidi_gainNull()
+            Me(Me.tabletbl_ScummVM_Configs.midi_gainColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isautosave_periodNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.autosave_periodColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setautosave_periodNull()
+            Me(Me.tabletbl_ScummVM_Configs.autosave_periodColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Issave_slotNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.save_slotColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setsave_slotNull()
+            Me(Me.tabletbl_ScummVM_Configs.save_slotColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isdemo_modeNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.demo_modeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setdemo_modeNull()
+            Me(Me.tabletbl_ScummVM_Configs.demo_modeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isalt_introNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.alt_introColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setalt_introNull()
+            Me(Me.tabletbl_ScummVM_Configs.alt_introColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Ismusic_muteNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.music_muteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setmusic_muteNull()
+            Me(Me.tabletbl_ScummVM_Configs.music_muteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Issfx_muteNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.sfx_muteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setsfx_muteNull()
+            Me(Me.tabletbl_ScummVM_Configs.sfx_muteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isgfx_detailsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.gfx_detailsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setgfx_detailsNull()
+            Me(Me.tabletbl_ScummVM_Configs.gfx_detailsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isobject_labelsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.object_labelsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setobject_labelsNull()
+            Me(Me.tabletbl_ScummVM_Configs.object_labelsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isreverse_stereoNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.reverse_stereoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setreverse_stereoNull()
+            Me(Me.tabletbl_ScummVM_Configs.reverse_stereoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IswalkspeedNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.walkspeedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetwalkspeedNull()
+            Me(Me.tabletbl_ScummVM_Configs.walkspeedColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsfilteringNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.filteringColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetfilteringNull()
+            Me(Me.tabletbl_ScummVM_Configs.filteringColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isopl_driverNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.opl_driverColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setopl_driverNull()
+            Me(Me.tabletbl_ScummVM_Configs.opl_driverColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsoriginalsaveloadNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.originalsaveloadColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetoriginalsaveloadNull()
+            Me(Me.tabletbl_ScummVM_Configs.originalsaveloadColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsaltamigapaletteNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.altamigapaletteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetaltamigapaletteNull()
+            Me(Me.tabletbl_ScummVM_Configs.altamigapaletteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsmousesupportNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.mousesupportColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetmousesupportNull()
+            Me(Me.tabletbl_ScummVM_Configs.mousesupportColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isdisable_ditheringNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.disable_ditheringColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setdisable_ditheringNull()
+            Me(Me.tabletbl_ScummVM_Configs.disable_ditheringColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isprefer_digitalsfxNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.prefer_digitalsfxColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setprefer_digitalsfxNull()
+            Me(Me.tabletbl_ScummVM_Configs.prefer_digitalsfxColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isnative_fb01Null() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.native_fb01Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setnative_fb01Null()
+            Me(Me.tabletbl_ScummVM_Configs.native_fb01Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isuse_cdaudioNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.use_cdaudioColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setuse_cdaudioNull()
+            Me(Me.tabletbl_ScummVM_Configs.use_cdaudioColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Iswindows_cursorsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.windows_cursorsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setwindows_cursorsNull()
+            Me(Me.tabletbl_ScummVM_Configs.windows_cursorsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Issilver_cursorsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.silver_cursorsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setsilver_cursorsNull()
+            Me(Me.tabletbl_ScummVM_Configs.silver_cursorsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isenable_goreNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.enable_goreColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setenable_goreNull()
+            Me(Me.tabletbl_ScummVM_Configs.enable_goreColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Issmooth_scrollingNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.smooth_scrollingColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setsmooth_scrollingNull()
+            Me(Me.tabletbl_ScummVM_Configs.smooth_scrollingColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isfloating_cursorsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.floating_cursorsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setfloating_cursorsNull()
+            Me(Me.tabletbl_ScummVM_Configs.floating_cursorsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isenable_color_blindNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.enable_color_blindColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setenable_color_blindNull()
+            Me(Me.tabletbl_ScummVM_Configs.enable_color_blindColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isstudio_audienceNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.studio_audienceColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setstudio_audienceNull()
+            Me(Me.tabletbl_ScummVM_Configs.studio_audienceColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isskip_supportNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.skip_supportColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setskip_supportNull()
+            Me(Me.tabletbl_ScummVM_Configs.skip_supportColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Ishelium_modeNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.helium_modeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Sethelium_modeNull()
+            Me(Me.tabletbl_ScummVM_Configs.helium_modeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsskiphallofrecordsscenesNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.skiphallofrecordsscenesColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetskiphallofrecordsscenesNull()
+            Me(Me.tabletbl_ScummVM_Configs.skiphallofrecordsscenesColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsscalemakingofvideosNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.scalemakingofvideosColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetscalemakingofvideosNull()
+            Me(Me.tabletbl_ScummVM_Configs.scalemakingofvideosColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isfast_movie_speedNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.fast_movie_speedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setfast_movie_speedNull()
+            Me(Me.tabletbl_ScummVM_Configs.fast_movie_speedColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsdoublefpsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.doublefpsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetdoublefpsNull()
+            Me(Me.tabletbl_ScummVM_Configs.doublefpsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsvenusenabledNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.venusenabledColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetvenusenabledNull()
+            Me(Me.tabletbl_ScummVM_Configs.venusenabledColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsnoanimwhileturningNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.noanimwhileturningColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetnoanimwhileturningNull()
+            Me(Me.tabletbl_ScummVM_Configs.noanimwhileturningColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsmpegmoviesNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_ScummVM_Configs.mpegmoviesColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetmpegmoviesNull()
+            Me(Me.tabletbl_ScummVM_Configs.mpegmoviesColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class src_ucr_Emulation_Moby_Releases_ScreenshotsRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tablesrc_ucr_Emulation_Moby_Releases_Screenshots As src_ucr_Emulation_Moby_Releases_ScreenshotsDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots = CType(Me.Table,src_ucr_Emulation_Moby_Releases_ScreenshotsDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Moby_Releases_Screenshots() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.id_Moby_Releases_ScreenshotsColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Moby_Releases_Screenshots in Tabelle src_ucr_Emulation_Mob"& _ 
+                            "y_Releases_Screenshots ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.id_Moby_Releases_ScreenshotsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property URL() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.URLColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte URL in Tabelle src_ucr_Emulation_Moby_Releases_Screenshots is"& _ 
+                            "t DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.URLColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Description() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.DescriptionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Description in Tabelle src_ucr_Emulation_Moby_Releases_Screen"& _ 
+                            "shots ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.DescriptionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property tmp_Description() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.tmp_DescriptionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte tmp_Description in Tabelle src_ucr_Emulation_Moby_Releases_Sc"& _ 
+                            "reenshots ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.tmp_DescriptionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Moby_Releases_ScreenshotsNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.id_Moby_Releases_ScreenshotsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Moby_Releases_ScreenshotsNull()
+            Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.id_Moby_Releases_ScreenshotsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsURLNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.URLColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetURLNull()
+            Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.URLColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDescriptionNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.DescriptionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDescriptionNull()
+            Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.DescriptionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Istmp_DescriptionNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.tmp_DescriptionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Settmp_DescriptionNull()
+            Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Screenshots.tmp_DescriptionColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class src_ucr_Emulation_Moby_Releases_Cover_ArtRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tablesrc_ucr_Emulation_Moby_Releases_Cover_Art As src_ucr_Emulation_Moby_Releases_Cover_ArtDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art = CType(Me.Table,src_ucr_Emulation_Moby_Releases_Cover_ArtDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Moby_Releases_Cover_Art() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.id_Moby_Releases_Cover_ArtColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Moby_Releases_Cover_Art in Tabelle src_ucr_Emulation_Moby_"& _ 
+                            "Releases_Cover_Art ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.id_Moby_Releases_Cover_ArtColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Moby_Cover_Art_Types() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.id_Moby_Cover_Art_TypesColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Moby_Cover_Art_Types in Tabelle src_ucr_Emulation_Moby_Rel"& _ 
+                            "eases_Cover_Art ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.id_Moby_Cover_Art_TypesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property URL() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.URLColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte URL in Tabelle src_ucr_Emulation_Moby_Releases_Cover_Art ist "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.URLColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Packaging() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.PackagingColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Packaging in Tabelle src_ucr_Emulation_Moby_Releases_Cover_Ar"& _ 
+                            "t ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.PackagingColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Comment() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.CommentColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Comment in Tabelle src_ucr_Emulation_Moby_Releases_Cover_Art "& _ 
+                            "ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.CommentColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PackageComment() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.PackageCommentColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte PackageComment in Tabelle src_ucr_Emulation_Moby_Releases_Cov"& _ 
+                            "er_Art ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.PackageCommentColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property tmp_Description() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.tmp_DescriptionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte tmp_Description in Tabelle src_ucr_Emulation_Moby_Releases_Co"& _ 
+                            "ver_Art ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.tmp_DescriptionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Moby_Releases_Cover_ArtNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.id_Moby_Releases_Cover_ArtColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Moby_Releases_Cover_ArtNull()
+            Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.id_Moby_Releases_Cover_ArtColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Moby_Cover_Art_TypesNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.id_Moby_Cover_Art_TypesColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Moby_Cover_Art_TypesNull()
+            Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.id_Moby_Cover_Art_TypesColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsURLNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.URLColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetURLNull()
+            Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.URLColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPackagingNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.PackagingColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPackagingNull()
+            Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.PackagingColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCommentNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.CommentColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCommentNull()
+            Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.CommentColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPackageCommentNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.PackageCommentColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPackageCommentNull()
+            Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.PackageCommentColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Istmp_DescriptionNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.tmp_DescriptionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Settmp_DescriptionNull()
+            Me(Me.tablesrc_ucr_Emulation_Moby_Releases_Cover_Art.tmp_DescriptionColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class src_frm_MOBY_Extras_ManagerRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tablesrc_frm_MOBY_Extras_Manager As src_frm_MOBY_Extras_ManagerDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tablesrc_frm_MOBY_Extras_Manager = CType(Me.Table,src_frm_MOBY_Extras_ManagerDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ExtraType() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_frm_MOBY_Extras_Manager.ExtraTypeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte ExtraType in Tabelle src_frm_MOBY_Extras_Manager ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_frm_MOBY_Extras_Manager.ExtraTypeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Moby_Extras_Properties() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_frm_MOBY_Extras_Manager.id_Moby_Extras_PropertiesColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Moby_Extras_Properties in Tabelle src_frm_MOBY_Extras_Mana"& _ 
+                            "ger ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_frm_MOBY_Extras_Manager.id_Moby_Extras_PropertiesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Moby_Releases_Screenshots() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_frm_MOBY_Extras_Manager.id_Moby_Releases_ScreenshotsColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Moby_Releases_Screenshots in Tabelle src_frm_MOBY_Extras_M"& _ 
+                            "anager ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_frm_MOBY_Extras_Manager.id_Moby_Releases_ScreenshotsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Moby_Releases_Cover_Art() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_frm_MOBY_Extras_Manager.id_Moby_Releases_Cover_ArtColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Moby_Releases_Cover_Art in Tabelle src_frm_MOBY_Extras_Man"& _ 
+                            "ager ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_frm_MOBY_Extras_Manager.id_Moby_Releases_Cover_ArtColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Show() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_frm_MOBY_Extras_Manager.ShowColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Show in Tabelle src_frm_MOBY_Extras_Manager ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_frm_MOBY_Extras_Manager.ShowColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Sort() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_frm_MOBY_Extras_Manager.SortColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Sort in Tabelle src_frm_MOBY_Extras_Manager ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_frm_MOBY_Extras_Manager.SortColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property URL() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_frm_MOBY_Extras_Manager.URLColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte URL in Tabelle src_frm_MOBY_Extras_Manager ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_frm_MOBY_Extras_Manager.URLColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property tmp_Description() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_frm_MOBY_Extras_Manager.tmp_DescriptionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte tmp_Description in Tabelle src_frm_MOBY_Extras_Manager ist DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_frm_MOBY_Extras_Manager.tmp_DescriptionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property tmp_Available() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_frm_MOBY_Extras_Manager.tmp_AvailableColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte tmp_Available in Tabelle src_frm_MOBY_Extras_Manager ist DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_frm_MOBY_Extras_Manager.tmp_AvailableColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsExtraTypeNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_frm_MOBY_Extras_Manager.ExtraTypeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetExtraTypeNull()
+            Me(Me.tablesrc_frm_MOBY_Extras_Manager.ExtraTypeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Moby_Extras_PropertiesNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_frm_MOBY_Extras_Manager.id_Moby_Extras_PropertiesColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Moby_Extras_PropertiesNull()
+            Me(Me.tablesrc_frm_MOBY_Extras_Manager.id_Moby_Extras_PropertiesColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Moby_Releases_ScreenshotsNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_frm_MOBY_Extras_Manager.id_Moby_Releases_ScreenshotsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Moby_Releases_ScreenshotsNull()
+            Me(Me.tablesrc_frm_MOBY_Extras_Manager.id_Moby_Releases_ScreenshotsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Moby_Releases_Cover_ArtNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_frm_MOBY_Extras_Manager.id_Moby_Releases_Cover_ArtColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Moby_Releases_Cover_ArtNull()
+            Me(Me.tablesrc_frm_MOBY_Extras_Manager.id_Moby_Releases_Cover_ArtColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsShowNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_frm_MOBY_Extras_Manager.ShowColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetShowNull()
+            Me(Me.tablesrc_frm_MOBY_Extras_Manager.ShowColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSortNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_frm_MOBY_Extras_Manager.SortColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSortNull()
+            Me(Me.tablesrc_frm_MOBY_Extras_Manager.SortColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsURLNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_frm_MOBY_Extras_Manager.URLColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetURLNull()
+            Me(Me.tablesrc_frm_MOBY_Extras_Manager.URLColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Istmp_DescriptionNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_frm_MOBY_Extras_Manager.tmp_DescriptionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Settmp_DescriptionNull()
+            Me(Me.tablesrc_frm_MOBY_Extras_Manager.tmp_DescriptionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Istmp_AvailableNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_frm_MOBY_Extras_Manager.tmp_AvailableColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Settmp_AvailableNull()
+            Me(Me.tablesrc_frm_MOBY_Extras_Manager.tmp_AvailableColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class tbl_Moby_RegionsRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tabletbl_Moby_Regions As tbl_Moby_RegionsDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tabletbl_Moby_Regions = CType(Me.Table,tbl_Moby_RegionsDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Moby_Regions() As Long
+            Get
+                Return CType(Me(Me.tabletbl_Moby_Regions.id_Moby_RegionsColumn),Long)
+            End Get
+            Set
+                Me(Me.tabletbl_Moby_Regions.id_Moby_RegionsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Moby_Regions_Owner() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Moby_Regions.id_Moby_Regions_OwnerColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Moby_Regions_Owner in Tabelle tbl_Moby_Regions ist DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Moby_Regions.id_Moby_Regions_OwnerColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property _Region() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Moby_Regions.RegionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Region in Tabelle tbl_Moby_Regions ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Moby_Regions.RegionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Sort() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Moby_Regions.SortColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Sort in Tabelle tbl_Moby_Regions ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Moby_Regions.SortColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property tmp_Apply() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Moby_Regions.tmp_ApplyColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte tmp_Apply in Tabelle tbl_Moby_Regions ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Moby_Regions.tmp_ApplyColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Moby_Regions_OwnerNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Moby_Regions.id_Moby_Regions_OwnerColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Moby_Regions_OwnerNull()
+            Me(Me.tabletbl_Moby_Regions.id_Moby_Regions_OwnerColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Is_RegionNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Moby_Regions.RegionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Set_RegionNull()
+            Me(Me.tabletbl_Moby_Regions.RegionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSortNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Moby_Regions.SortColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSortNull()
+            Me(Me.tabletbl_Moby_Regions.SortColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Istmp_ApplyNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Moby_Regions.tmp_ApplyColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Settmp_ApplyNull()
+            Me(Me.tabletbl_Moby_Regions.tmp_ApplyColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -41262,6 +49015,258 @@ Partial Public Class DS_ML
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As tbl_Moby_Auto_LinkRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class tbl_List_GeneratorsRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As tbl_List_GeneratorsRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As tbl_List_GeneratorsRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As tbl_List_GeneratorsRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class static_List_Generator_SortRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As static_List_Generator_SortRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As static_List_Generator_SortRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As static_List_Generator_SortRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class tbl_ScummVM_ConfigsRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As tbl_ScummVM_ConfigsRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As tbl_ScummVM_ConfigsRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As tbl_ScummVM_ConfigsRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class src_ucr_Emulation_Moby_Releases_ScreenshotsRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As src_ucr_Emulation_Moby_Releases_ScreenshotsRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As src_ucr_Emulation_Moby_Releases_ScreenshotsRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As src_ucr_Emulation_Moby_Releases_ScreenshotsRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class src_ucr_Emulation_Moby_Releases_Cover_ArtRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As src_ucr_Emulation_Moby_Releases_Cover_ArtRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As src_ucr_Emulation_Moby_Releases_Cover_ArtRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As src_ucr_Emulation_Moby_Releases_Cover_ArtRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class src_frm_MOBY_Extras_ManagerRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As src_frm_MOBY_Extras_ManagerRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As src_frm_MOBY_Extras_ManagerRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As src_frm_MOBY_Extras_ManagerRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class tbl_Moby_RegionsRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As tbl_Moby_RegionsRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As tbl_Moby_RegionsRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As tbl_Moby_RegionsRow
             Get
                 Return Me.eventRow
             End Get

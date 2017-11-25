@@ -10,9 +10,7 @@ Public Class frm_Moby_Auto_Link
 
 	Private _tbl_Moby_Auto_Link As DS_ML.tbl_Moby_Auto_LinkDataTable
 
-	Private _Moby_Platform_URLPart As String
-
-	Public Sub New(ByRef tbl_Moby_Auto_Link As DS_ML.tbl_Moby_Auto_LinkDataTable, ByRef src_Moby_Releases As DS_MobyDB.src_Moby_ReleasesDataTable, ByVal sExplanation As String, ByRef Auto_Link_Options As frm_Moby_Auto_Link_Options.cls_Moby_Auto_Link_Options, ByVal Moby_Platform_URLPart As String)
+	Public Sub New(ByRef tbl_Moby_Auto_Link As DS_ML.tbl_Moby_Auto_LinkDataTable, ByRef src_Moby_Releases As DS_MobyDB.src_Moby_ReleasesDataTable, ByVal sExplanation As String, ByRef Auto_Link_Options As frm_Moby_Auto_Link_Options.cls_Moby_Auto_Link_Options)
 		InitializeComponent()
 
 		barmng.SetPopupContextMenu(grd_Moby_Releases, popmnu_Moby_Games)
@@ -23,8 +21,6 @@ Public Class frm_Moby_Auto_Link
 
 		Me._tbl_Moby_Auto_Link = tbl_Moby_Auto_Link
 		Me._src_Moby_Releases = src_Moby_Releases
-
-		Me._Moby_Platform_URLPart = Moby_Platform_URLPart
 
 		'### Import and Filter Moby Auto Link Rows ###
 		Dim prg As New MKNetDXLib.cls_MKDXBaseform_Progress_Helper(cls_Skins.GetCurrentSkinname(Nothing), 400, 60, ProgressBarStyle.Blocks, False, "Filtering Game names...", 0, _tbl_Moby_Auto_Link.Rows.Count, False)
@@ -109,7 +105,7 @@ Public Class frm_Moby_Auto_Link
 				row_Game("Publisher") = row_BestMatch("Publisher")
 				row_Game("deprecated") = row_BestMatch("deprecated")
 
-				If score_BestMatch = 1 Then
+				If Me._Auto_Link_Options.Apply_at_100 AndAlso score_BestMatch = 1 Then
 					row_Game.Apply = True
 				End If
 			End If
@@ -289,7 +285,7 @@ Public Class frm_Moby_Auto_Link
 		If BS_Moby_Releases.Current Is Nothing Then Return
 
 		Try
-			Dim sURL As String = "http://www.mobygames.com/game/" & Me._Moby_Platform_URLPart & "/" & TC.NZ(BS_Moby_Releases.Current("Moby_Games_URLPart"), "").Replace("\", "")
+			Dim sURL As String = "http://www.mobygames.com/game/" & TC.NZ(BS_Moby_Releases.Current("Moby_Platforms_URLPart"), "").Replace("\", "") & "/" & TC.NZ(BS_Moby_Releases.Current("Moby_Games_URLPart"), "").Replace("\", "")
 			Dim procinfo As New ProcessStartInfo(sURL)
 			procinfo.UseShellExecute = True
 			Process.Start(procinfo)

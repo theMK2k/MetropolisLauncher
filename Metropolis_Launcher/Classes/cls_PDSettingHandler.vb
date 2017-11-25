@@ -145,7 +145,9 @@
 	Protected Overrides Sub Finalize()
 		MyBase.Finalize()
 		Try
-			_cnn.Close()
+			If _cnn IsNot Nothing Then
+				_cnn.Close()
+			End If
 		Catch
 			'
 		Finally

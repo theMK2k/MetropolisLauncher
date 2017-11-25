@@ -490,4 +490,44 @@
     <anchor>
     </anchor>
   </entry>
+  <entry>
+    <form>frm_ScummVM_Templates</form>
+    <control>
+    </control>
+    <topic>scummvm_templates.htm</topic>
+    <anchor>
+    </anchor>
+  </entry>
+  <entry>
+    <form>frm_MOBY_Extras_Manager</form>
+    <control>
+    </control>
+    <topic>moby_extras_manager.htm</topic>
+    <anchor>
+    </anchor>
+  </entry>
+  <entry>
+    <form>frm_List_Generator_Edit</form>
+    <control>
+    </control>
+    <topic>edit_list_generator.htm</topic>
+    <anchor>
+    </anchor>
+  </entry>
+  <entry>
+    <form>frm_ScummVM_Scan</form>
+    <control>
+    </control>
+    <topic>add_scummvm_games2.htm</topic>
+    <anchor>
+    </anchor>
+  </entry>
+  <entry>
+    <form>frm_Select_Known_Emulator</form>
+    <control>
+    </control>
+    <topic>select_auto_config_option.htm</topic>
+    <anchor>
+    </anchor>
+  </entry>
 </doc>

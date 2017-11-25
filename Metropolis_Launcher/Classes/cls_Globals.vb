@@ -43,6 +43,7 @@
 
 	'id_Moby_Platforms of tbl_Moby_Platforms
 	Public Enum enm_Moby_Platforms
+		scummvm = -3
 		mame = -2
 		ALL = -1
 		linux = 1
@@ -223,6 +224,16 @@
 
 		If Not Alphaleonis.Win32.Filesystem.Directory.Exists(sTempDir) Then
 			sTempDir = Alphaleonis.Win32.Filesystem.Path.GetTempPath
+
+			Try
+				Alphaleonis.Win32.Filesystem.Directory.CreateDirectory(sTempDir & "\" & "ml")
+
+				If Alphaleonis.Win32.Filesystem.Directory.Exists(sTempDir & "\" & "ml") Then
+					sTempDir = sTempDir & "\" & "ml"
+				End If
+			Catch ex As Exception
+
+			End Try
 		End If
 
 		MKNetLib.cls_MKFileSupport.TempDirRoot = sTempDir

@@ -4,12 +4,14 @@
 		Public _ExtraNum As Integer = 0
 		Public _NoExtraFound As Boolean = True
 		Public _ExtraType As Object = Nothing
+		Public _WrappedToFirst As Boolean = False 'True when the current extra is the very first after wrapping from the last
 
-		Public Sub New(ByVal Path As String, ByVal ExtraNum As Integer, ByVal NoExtraFound As Boolean, ByVal ExtraType As Object)
+		Public Sub New(ByVal Path As String, ByVal ExtraNum As Integer, ByVal NoExtraFound As Boolean, ByVal ExtraType As Object, ByVal WrappedToFirst As Boolean)
 			_Path = Path
 			_ExtraNum = ExtraNum
 			_NoExtraFound = NoExtraFound
 			_ExtraType = ExtraType
+			_WrappedToFirst = WrappedToFirst
 		End Sub
 	End Class
 
@@ -41,7 +43,8 @@
 			DS_ML.Fill_src_ucr_Emulation_Games(tran, dt_Emu_Games, Nothing, Nothing, Nothing, id_Emu_Games)
 		End Using
 
-		If dt_Emu_Games.Rows.Count <> 1 Then Return New cls_Extras_Result("", 0, True, Nothing)
+		If dt_Emu_Games.Rows.Count <> 1 Then Return New cls_Extras_Result("", 0, True, Nothing, False)
+
 		Dim row_Emu_Games As DataRow = dt_Emu_Games.Rows(0)
 
 		Dim Platform_Short As String = TC.NZ(row_Emu_Games("Platform_Short"), "")
@@ -59,7 +62,7 @@
 	End Function
 
 	Public Shared Function FindNextExtra(ByVal Platform_Short As String, ByVal id_Moby_Platforms As Integer, ByVal Game As String, ByVal FileName As String, ByVal ExtraNum As Integer, ByVal SkipToNextImmediately As Boolean, ByVal ExtraType As Object, Optional ByVal IgnoreHiddenExtraCategories As Boolean = False, Optional ByVal LimitToExtraType As Boolean = False) As cls_Extras_Result
-		If TC.NZ(ExtraType, "").Length = 0 Then Return New cls_Extras_Result("", 0, True, Nothing)
+		If TC.NZ(ExtraType, "").Length = 0 Then Return New cls_Extras_Result("", 0, True, Nothing, False)
 
 		If SkipToNextImmediately Then
 			ExtraNum = ExtraNum + 1
@@ -77,10 +80,12 @@
 			Case cls_Globals.enm_Moby_Platforms.win
 				sRom = GetExtraFilename(Game, FileName)
 			Case Else
-				sRom = Alphaleonis.Win32.Filesystem.Path.GetFileNameWithoutExtension(TC.NZ(FileName, ""))
+				sRom = Alphaleonis.Win32.Filesystem.Path.GetFileNameWithoutExtension(TC.NZ(MKNetLib.cls_MKStringSupport.GetCleanFileName(FileName), ""))
 		End Select
 
 		Dim sNextExtra As String = ""
+
+		Dim bWrappedToFirst = False
 
 		While Not bDone AndAlso iNext < 2
 			Dim sFileName As String = FindNextExtraFromSupportedExtensions(cls_Globals.Dir_Extras & "\emulation\" & sPlatform & "\" & ExtraType & "\" & sRom & getExtraSuffix(ExtraNum))  'IIf(ExtraNum = 0, "", " [image" & (ExtraNum + 1) & "]")
@@ -94,9 +99,11 @@
 				Else
 					iNext = iNext + 1
 				End If
+
 				ExtraNum = 0
 
 				If TC.NZ(ExtraType, "").Length = 0 Then
+					bWrappedToFirst = True
 					ExtraType = DataAccess.FireProcedureReturnScalar(cls_Globals.Conn, 0, "SELECT Name FROM tbl_Emu_Extras WHERE Sort = (SELECT MIN(Sort) from tbl_Emu_Extras " & IIf(IgnoreHiddenExtraCategories, "", "WHERE IFNULL(Hide, 0) = 0") & ") LIMIT 1")
 					iNext = iNext + 1
 				End If
@@ -107,7 +114,7 @@
 			NoExtraFound = True
 		End If
 
-		Return New cls_Extras_Result(sNextExtra, ExtraNum, NoExtraFound, ExtraType)
+		Return New cls_Extras_Result(sNextExtra, ExtraNum, NoExtraFound, ExtraType, bWrappedToFirst)
 	End Function
 
 	''' <summary>
@@ -211,5 +218,29 @@
 		Else
 			Return MKNetLib.cls_MKStringSupport.GetCleanFileName(TC.NZ(Game, ""))
 		End If
+	End Function
+
+	''' <summary>
+	''' Ensure the file is present and not 0 size
+	''' If it is 0 size, delete it
+	''' </summary>
+	''' <param name="filepath"></param>
+	''' <returns>True, if file exists and is of size != 0</returns>
+	Public Shared Function EnsureExtrasFile(filepath)
+		If Not Alphaleonis.Win32.Filesystem.File.Exists(filepath) Then
+			Return False
+		End If
+
+		Dim fi As New Alphaleonis.Win32.Filesystem.FileInfo(filepath)
+		If fi.Length = 0 Then
+			Try
+				Alphaleonis.Win32.Filesystem.File.Delete(filepath)
+			Catch ex As Exception
+			End Try
+
+			Return False
+		End If
+
+		Return True
 	End Function
 End Class

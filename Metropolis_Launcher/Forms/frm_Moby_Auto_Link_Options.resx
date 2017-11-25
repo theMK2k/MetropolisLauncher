@@ -146,18 +146,18 @@ This filter would be applied to your filenames and Moby Games release names.</va
 This filter would be applied to your filenames and Moby Games release names.</value>
   </data>
   <data name="lbl_Explanation.Text" xml:space="preserve">
-    <value>The detection of MobyGames links works by finding the correct Moby Rlease for your games. This is done by text comparison. In order to successfully compare two texts, a filtering can be done. Please set up the filtering options in this dialog.
+    <value>The detection of MobyGames links works by finding the correct Moby Release for your games. This is done by text comparison. In order to successfully compare two texts, a filtering can be done. Please set up the filtering options in this dialog.
 
 Note: These filters will NOT alter your actual filenames.</value>
   </data>
-  <data name="ToolTipItem10.Text" xml:space="preserve">
+  <data name="ToolTipItem16.Text" xml:space="preserve">
     <value>Your filenames may come with extensions, e.g. .bin, .iso, .md etc.
 
 As Moby Games releases do not contain such extensions, it is recommended to strip all of them from the filenames in order to get good results in a text comparison.
 
 This filter would be applied to your filenames.</value>
   </data>
-  <data name="ToolTipItem11.Text" xml:space="preserve">
+  <data name="ToolTipItem17.Text" xml:space="preserve">
     <value>Your filenames may come with extensions, e.g. .bin, .iso, .md etc.
 
 As Moby Games releases do not contain such extensions, it is recommended to strip all of them from the filenames in order to get good results in a text comparison.

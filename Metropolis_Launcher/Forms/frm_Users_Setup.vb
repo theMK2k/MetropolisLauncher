@@ -43,7 +43,7 @@
 	End Sub
 
 	Private Sub bbi_Delete_User_ItemClick(ByVal sender As System.Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs) Handles bbi_Delete_User.ItemClick
-		If DevExpress.XtraEditors.XtraMessageBox.Show("Do you really want to delete user '" & BS_Users.Current("Username") & "'?", "Delete User", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+		If MKDXHelper.MessageBox("Do you really want to delete user '" & BS_Users.Current("Username") & "'?", "Delete User", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
 			BS_Users.RemoveCurrent()
 		End If
 	End Sub

@@ -1,4 +1,6 @@
 ﻿Partial Class DS_ML
+	Partial Public Class tbl_Moby_RegionsDataTable
+	End Class
 
 	Public Enum enm_FilterSetTypes
 			All = 0
@@ -6,34 +8,34 @@
 		End Enum
 
 #Region "Select Statements"
-		Public Function Select_src_ucr_Emulation_Games_Rating(ByRef tran As SQLite.SQLiteTransaction, ByVal id_Emu_Games As Integer) As Object
-		Dim sSQL As String = _
-		"	SELECT" & ControlChars.CrLf & _
-		"					CAST" & ControlChars.CrLf & _
-		"						(" & ControlChars.CrLf & _
-		"							CAST(" & ControlChars.CrLf & _
-		"								CAST(IFNULL(Rating_Gameplay * RW1.Weight, 0) AS REAL) / 5 + CAST(IFNULL(Rating_Graphics * RW2.Weight, 0) AS REAL) / 5 + CAST(IFNULL(Rating_Personal * RW5.Weight, 0) AS REAL) / 5 + CAST(IFNULL(Rating_Sound * RW3.Weight, 0) AS REAL) / 5 + CAST(IFNULL(Rating_Story * RW4.Weight, 0) AS REAL) / 5 AS REAL" & ControlChars.CrLf & _
-		"							)" & ControlChars.CrLf & _
-		"							/" & ControlChars.CrLf & _
-		"							(" & ControlChars.CrLf & _
-		"								CAST(" & ControlChars.CrLf & _
-		"									CASE WHEN Rating_Gameplay IS NOT NULL THEN RW1.Weight ELSE 0 END" & ControlChars.CrLf & _
-		"									+ CASE WHEN Rating_Graphics IS NOT NULL THEN RW2.Weight ELSE 0 END" & ControlChars.CrLf & _
-		"									+ CASE WHEN Rating_Personal IS NOT NULL THEN RW5.Weight ELSE 0 END" & ControlChars.CrLf & _
-		"									+ CASE WHEN Rating_Sound IS NOT NULL THEN RW3.Weight ELSE 0 END" & ControlChars.CrLf & _
-		"									+ CASE WHEN Rating_Story IS NOT NULL THEN RW4.Weight ELSE 0 END" & ControlChars.CrLf & _
-		"								AS REAL)" & ControlChars.CrLf & _
-		"							)" & ControlChars.CrLf & _
-		"							* 100" & ControlChars.CrLf & _
-		"						AS INTEGER" & ControlChars.CrLf & _
-		"						)" & ControlChars.CrLf & _
-		"						AS Rating" & ControlChars.CrLf & _
-		"	FROM			tbl_Emu_Games EMUGAME" & ControlChars.CrLf & _
-		" LEFT JOIN tbl_Emu_Games_Rating_Weights RW1 ON RW1.id_Emu_Games_Rating_Weights = 1" & ControlChars.CrLf & _
-		" LEFT JOIN tbl_Emu_Games_Rating_Weights RW2 ON RW2.id_Emu_Games_Rating_Weights = 2" & ControlChars.CrLf & _
-		" LEFT JOIN tbl_Emu_Games_Rating_Weights RW3 ON RW3.id_Emu_Games_Rating_Weights = 3" & ControlChars.CrLf & _
-		" LEFT JOIN tbl_Emu_Games_Rating_Weights RW4 ON RW4.id_Emu_Games_Rating_Weights = 4" & ControlChars.CrLf & _
-		" LEFT JOIN tbl_Emu_Games_Rating_Weights RW5 ON RW5.id_Emu_Games_Rating_Weights = 5" & ControlChars.CrLf & _
+	Public Function Select_src_ucr_Emulation_Games_Rating(ByRef tran As SQLite.SQLiteTransaction, ByVal id_Emu_Games As Integer) As Object
+		Dim sSQL As String =
+		"	SELECT" & ControlChars.CrLf &
+		"					CAST" & ControlChars.CrLf &
+		"						(" & ControlChars.CrLf &
+		"							CAST(" & ControlChars.CrLf &
+		"								CAST(IFNULL(Rating_Gameplay * RW1.Weight, 0) AS REAL) / 5 + CAST(IFNULL(Rating_Graphics * RW2.Weight, 0) AS REAL) / 5 + CAST(IFNULL(Rating_Personal * RW5.Weight, 0) AS REAL) / 5 + CAST(IFNULL(Rating_Sound * RW3.Weight, 0) AS REAL) / 5 + CAST(IFNULL(Rating_Story * RW4.Weight, 0) AS REAL) / 5 AS REAL" & ControlChars.CrLf &
+		"							)" & ControlChars.CrLf &
+		"							/" & ControlChars.CrLf &
+		"							(" & ControlChars.CrLf &
+		"								CAST(" & ControlChars.CrLf &
+		"									CASE WHEN Rating_Gameplay IS NOT NULL THEN RW1.Weight ELSE 0 END" & ControlChars.CrLf &
+		"									+ CASE WHEN Rating_Graphics IS NOT NULL THEN RW2.Weight ELSE 0 END" & ControlChars.CrLf &
+		"									+ CASE WHEN Rating_Personal IS NOT NULL THEN RW5.Weight ELSE 0 END" & ControlChars.CrLf &
+		"									+ CASE WHEN Rating_Sound IS NOT NULL THEN RW3.Weight ELSE 0 END" & ControlChars.CrLf &
+		"									+ CASE WHEN Rating_Story IS NOT NULL THEN RW4.Weight ELSE 0 END" & ControlChars.CrLf &
+		"								AS REAL)" & ControlChars.CrLf &
+		"							)" & ControlChars.CrLf &
+		"							* 100" & ControlChars.CrLf &
+		"						AS INTEGER" & ControlChars.CrLf &
+		"						)" & ControlChars.CrLf &
+		"						AS Rating" & ControlChars.CrLf &
+		"	FROM			tbl_Emu_Games EMUGAME" & ControlChars.CrLf &
+		" LEFT JOIN tbl_Emu_Games_Rating_Weights RW1 ON RW1.id_Emu_Games_Rating_Weights = 1" & ControlChars.CrLf &
+		" LEFT JOIN tbl_Emu_Games_Rating_Weights RW2 ON RW2.id_Emu_Games_Rating_Weights = 2" & ControlChars.CrLf &
+		" LEFT JOIN tbl_Emu_Games_Rating_Weights RW3 ON RW3.id_Emu_Games_Rating_Weights = 3" & ControlChars.CrLf &
+		" LEFT JOIN tbl_Emu_Games_Rating_Weights RW4 ON RW4.id_Emu_Games_Rating_Weights = 4" & ControlChars.CrLf &
+		" LEFT JOIN tbl_Emu_Games_Rating_Weights RW5 ON RW5.id_Emu_Games_Rating_Weights = 5" & ControlChars.CrLf &
 		"	WHERE			EMUGAME.id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games)
 
 		Return MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnScalar(tran.Connection, 0, sSQL, tran)
@@ -177,7 +179,7 @@
 		sSQL &= "	SELECT A.Name AS Name FROM" & ControlChars.CrLf
 		sSQL &= "	(" & ControlChars.CrLf
 		sSQL &= "		SELECT id_Moby_Attributes FROM tbl_Moby_Releases_Attributes RA" & ControlChars.CrLf
-		sSQL &= "		WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM tbl_Moby_Releases WHERE id_Moby_Platforms = (SELECT id_Moby_Platforms FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games) & ") AND id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = (SELECT Moby_Games_URLPart FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games) & ")))" & ControlChars.CrLf
+		sSQL &= "		WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM tbl_Moby_Releases WHERE id_Moby_Platforms = (SELECT IFNULL(id_Moby_Platforms_Alternative, id_Moby_Platforms) FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games) & ") AND id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = (SELECT Moby_Games_URLPart FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games) & ")))" & ControlChars.CrLf
 		sSQL &= "		UNION SELECT id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "		FROM tbl_Emu_Games_Moby_Attributes EGMA" & ControlChars.CrLf
 		sSQL &= "		WHERE EGMA.id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games) & ControlChars.CrLf
@@ -237,7 +239,7 @@
 		sSQL &= "	SELECT A.Name AS Name FROM" & ControlChars.CrLf
 		sSQL &= "	(" & ControlChars.CrLf
 		sSQL &= "		SELECT id_Moby_Attributes FROM tbl_Moby_Releases_Attributes RA" & ControlChars.CrLf
-		sSQL &= "		WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM tbl_Moby_Releases WHERE id_Moby_Platforms = (SELECT id_Moby_Platforms FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games_A) & ") AND id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = (SELECT Moby_Games_URLPart FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games_A) & ")))" & ControlChars.CrLf
+		sSQL &= "		WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM tbl_Moby_Releases WHERE id_Moby_Platforms = (SELECT IFNULL(id_Moby_Platforms_Alternative, id_Moby_Platforms) FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games_A) & ") AND id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = (SELECT Moby_Games_URLPart FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games_A) & ")))" & ControlChars.CrLf
 		sSQL &= "		UNION SELECT id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "		FROM tbl_Emu_Games_Moby_Attributes EGMA" & ControlChars.CrLf
 		sSQL &= "		WHERE EGMA.id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games_A) & ControlChars.CrLf
@@ -266,7 +268,7 @@
 		sSQL &= "		SELECT A.id_Moby_Attributes FROM" & ControlChars.CrLf
 		sSQL &= "		(" & ControlChars.CrLf
 		sSQL &= "			SELECT id_Moby_Attributes FROM tbl_Moby_Releases_Attributes RA" & ControlChars.CrLf
-		sSQL &= "			WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM tbl_Moby_Releases WHERE id_Moby_Platforms = (SELECT id_Moby_Platforms FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games_B) & ") AND id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = (SELECT Moby_Games_URLPart FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games_B) & ")))" & ControlChars.CrLf
+		sSQL &= "			WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM tbl_Moby_Releases WHERE id_Moby_Platforms = (SELECT IFNULL(id_Moby_Platforms_Alternative, id_Moby_Platforms) FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games_B) & ") AND id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = (SELECT Moby_Games_URLPart FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games_B) & ")))" & ControlChars.CrLf
 		sSQL &= "			UNION SELECT id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "			FROM tbl_Emu_Games_Moby_Attributes EGMA" & ControlChars.CrLf
 		sSQL &= "			WHERE EGMA.id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games_B) & ControlChars.CrLf
@@ -302,7 +304,7 @@
 		sSQL &= "	SELECT A.Name AS Name FROM" & ControlChars.CrLf
 		sSQL &= "	(" & ControlChars.CrLf
 		sSQL &= "		SELECT id_Moby_Attributes FROM tbl_Moby_Releases_Attributes RA" & ControlChars.CrLf
-		sSQL &= "		WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM tbl_Moby_Releases WHERE id_Moby_Platforms = (SELECT id_Moby_Platforms FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games_A) & ") AND id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = (SELECT Moby_Games_URLPart FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games_A) & ")))" & ControlChars.CrLf
+		sSQL &= "		WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM tbl_Moby_Releases WHERE id_Moby_Platforms = (SELECT IFNULL(id_Moby_Platforms_Alternative, id_Moby_Platforms) FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games_A) & ") AND id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = (SELECT Moby_Games_URLPart FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games_A) & ")))" & ControlChars.CrLf
 		sSQL &= "		UNION SELECT id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "		FROM tbl_Emu_Games_Moby_Attributes EGMA" & ControlChars.CrLf
 		sSQL &= "		WHERE EGMA.id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games_A) & ControlChars.CrLf
@@ -372,7 +374,7 @@
 #Region "Fill Statements"
 	Public Sub Fill_src_frm_Emulators(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As tbl_EmulatorsDataTable)
 		dt.Clear()
-		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, "SELECT id_Emulators, Displayname, InstallDirectory, Executable, StartupParameter, AutoItScript, J2KPreset, ScreenshotDirectory, Libretro_Core FROM tbl_Emulators ORDER BY Displayname", dt, tran)
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, "SELECT id_Emulators, Displayname, InstallDirectory, Executable, StartupParameter, AutoItScript, J2KPreset, ScreenshotDirectory, Libretro_Core, id_List_Generators FROM tbl_Emulators ORDER BY Displayname", dt, tran)
 	End Sub
 
 	Public Sub Fill_src_frm_Emulators_Moby_Platforms(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As src_frm_Emulators_Moby_PlatformsDataTable, ByVal id_Emulators As Integer)
@@ -494,6 +496,7 @@
 		sSQL &= "					, EMUGAME.id_DOSBox_Configs" & ControlChars.CrLf
 		sSQL &= "					, EMUGAME.id_Rombase_DOSBox_Filetypes" & ControlChars.CrLf
 		sSQL &= "					, EMUGAME.id_Rombase_DOSBox_Exe_Types" & ControlChars.CrLf
+		sSQL &= "					, IFNULL(EMUGAME.Unavailable, 0) AS Unavailable" & ControlChars.CrLf
 		sSQL &= "					, EMUGAME.DOSBox_Mount_Destination" & ControlChars.CrLf
 		'sSQL &= "					, REPLACE(" & ControlChars.CrLf
 		sSQL &= "					,		CASE	WHEN EMUGAME.Name Is NULL" & ControlChars.CrLf
@@ -609,9 +612,11 @@
 		sSQL &= "				" & ControlChars.CrLf
 		sSQL &= "				-- ids" & ControlChars.CrLf
 		sSQL &= "				, EMUGAME.id_Moby_Platforms" & ControlChars.CrLf
+		sSQL &= "				, EMUGAME.id_Moby_Platforms_Alternative" & ControlChars.CrLf
 		sSQL &= "				, GAME.id_Moby_Games" & ControlChars.CrLf
 		sSQL &= "				, EMUGAME.id_Rombase" & ControlChars.CrLf
 		sSQL &= "				, EMUGAME.Volume_Number" & ControlChars.CrLf
+		sSQL &= "				, EMUGAME.CustomIdentifier" & ControlChars.CrLf
 		sSQL &= "				" & ControlChars.CrLf
 		sSQL &= "				,	CAST" & ControlChars.CrLf
 		sSQL &= "					(" & ControlChars.CrLf
@@ -672,8 +677,9 @@
 		sSQL &= " " & IIf(cls_Globals.Restricted AndAlso Not ShowVolumes, "INNER", "LEFT") & " JOIN tbl_Users_Emu_Games USREG ON id_Users = " & cls_Globals.id_Users & " AND EMUGAME.id_Emu_Games = USREG.id_Emu_Games"
 		sSQL &= "	LEFT JOIN tbl_Moby_Games GAME ON EMUGAME.Moby_Games_URLPart = GAME.URLPart" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Moby_Platforms PF ON EMUGAME.id_Moby_Platforms = PF.id_Moby_Platforms" & ControlChars.CrLf
+		sSQL &= "	LEFT JOIN tbl_Moby_Platforms PFALT ON EMUGAME.id_Moby_Platforms_Alternative = PFALT.id_Moby_Platforms" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Moby_Platforms_Settings PFS ON EMUGAME.id_Moby_Platforms = PFS.id_Moby_Platforms" & ControlChars.CrLf
-		sSQL &= "	LEFT JOIN tbl_Moby_Releases REL ON EMUGAME.id_Moby_Platforms = REL.id_Moby_Platforms AND GAME.id_Moby_Games = REL.id_Moby_Games" & ControlChars.CrLf
+		sSQL &= "	LEFT JOIN tbl_Moby_Releases REL ON IFNULL(EMUGAME.id_Moby_Platforms_Alternative, EMUGAME.id_Moby_Platforms) = REL.id_Moby_Platforms AND GAME.id_Moby_Games = REL.id_Moby_Games" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Moby_Companies C1 ON REL.Publisher_id_Moby_Companies = C1.id_Moby_Companies" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Moby_Companies C2 ON REL.Developer_id_Moby_Companies = C2.id_Moby_Companies" & ControlChars.CrLf
 		sSQL &= " LEFT JOIN tbl_Emu_Games_Rating_Weights RW1 ON RW1.id_Emu_Games_Rating_Weights = 1" & ControlChars.CrLf
@@ -712,7 +718,8 @@
 			sSQL &= " AND EMUGAME.id_Emu_Games > 0" 'Prevent Emu_Mapping entries from showing up
 		End If
 
-		If TC.NZ(id_Moby_Platforms, 0) > 0 OrElse TC.NZ(id_Moby_Platforms, 0) = cls_Globals.enm_Moby_Platforms.mame Then
+		'If TC.NZ(id_Moby_Platforms, 0) > 0 OrElse TC.NZ(id_Moby_Platforms, 0) = cls_Globals.enm_Moby_Platforms.mame Then
+		If TC.NZ(id_Moby_Platforms, 0) <> 0 AndAlso TC.NZ(id_Moby_Platforms, 0) <> cls_Globals.enm_Moby_Platforms.ALL Then
 			sSQL &= " AND EMUGAME.id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms) & ControlChars.CrLf
 		End If
 
@@ -835,7 +842,7 @@
 		sSQL &= "	INNER JOIN moby.tbl_Moby_Attributes_Categories ATTC ON ATT.id_Moby_Attributes_Categories = ATTC.id_Moby_Attributes_Categories" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Emu_Games EMUGAME ON EMUGAME.id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games) & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN moby.tbl_Moby_Games GAME ON EMUGAME.Moby_Games_URLPart = GAME.URLPart" & ControlChars.CrLf
-		sSQL &= "	LEFT JOIN moby.tbl_Moby_Releases REL ON EMUGAME.id_Moby_Platforms = REL.id_Moby_Platforms AND GAME.id_Moby_Games = REL.id_Moby_Games" & ControlChars.CrLf
+		sSQL &= "	LEFT JOIN moby.tbl_Moby_Releases REL ON REL.id_Moby_Platforms = IFNULL(EMUGAME.id_Moby_Platforms_Alternative, EMUGAME.id_Moby_Platforms) AND GAME.id_Moby_Games = REL.id_Moby_Games" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN rombase.tbl_Rombase RB ON RB.id_Rombase = " & TC.getSQLFormat(id_Rombase) & ControlChars.CrLf
 		sSQL &= "	" & ControlChars.CrLf
 		sSQL &= "	ORDER BY CategoryGroup, ATTC.Name, ATT.Name" & ControlChars.CrLf
@@ -1067,14 +1074,19 @@
 		sSQL &= "	, EMUGAMES.id_Emu_Games_Owner"
 		sSQL &= "	, EMUGAMES.id_DOSBox_Configs_Template"
 		sSQL &= "	, EMUGAMES.id_DOSBox_Configs"
+		sSQL &= "	, EMUGAMES.id_ScummVM_Configs_Template"
+		sSQL &= "	, EMUGAMES.id_ScummVM_Configs"
 		sSQL &= "	, EMUGAMES.id_Rombase_DOSBox_Filetypes"
 		sSQL &= "	, EMUGAMES.id_Rombase_DOSBox_Exe_Types"
+		sSQL &= "	, EMUGAMES.CustomIdentifier"
+		sSQL &= "	, IFNULL(EMUGAMES.Unavailable, 0) AS Unavailable"
 		sSQL &= "	, EMUGAMES.DOSBox_Mount_Destination"
 		sSQL &= "	, EMUGAMES.Volume_Number"
 		sSQL &= "	, EMUGAMES.Filtered_Name"
 		sSQL &= "	, EMUGAMES.Hidden"
 		sSQL &= "	, EMUGAMES.Moby_Games_URLPart"
 		sSQL &= "	, EMUGAMES.id_Moby_Platforms"
+		sSQL &= "	, EMUGAMES.id_Moby_Platforms_Alternative"
 		sSQL &= "	, EMUGAMES.id_Rombase"
 		sSQL &= "	, EMUGAMES.id_Emulators"
 		sSQL &= "	, EMUGAMES.Folder"
@@ -1148,10 +1160,11 @@
 		sSQL &= "	, EMUGAMES.PublicDomain_USR"
 		sSQL &= "	, ROMBASE.id_Moby_Platforms AS ROMBASE_id_Moby_Platforms"
 		sSQL &= "	, EMUGAMES.created"
-		sSQL &= " , MG.deprecated"
+		sSQL &= " , CASE WHEN REL.deprecated = 1 THEN 1 ELSE MG.deprecated END AS deprecated"
 		sSQL &= "	FROM tbl_Emu_Games EMUGAMES"
 		sSQL &= "	LEFT JOIN tbl_Rombase ROMBASE ON EMUGAMES.id_Rombase = ROMBASE.id_Rombase"
 		sSQL &= "	LEFT JOIN tbl_Moby_Games MG ON EMUGAMES.Moby_Games_URLPart = MG.URLPart"
+		sSQL &= " LEFT JOIN tbl_Moby_Releases REL ON REL.id_Moby_Games = MG.id_Moby_Games AND REL.id_Moby_Platforms = EMUGAMES.id_Moby_Platforms"
 
 		If id_Emu_Games = 0 Then
 			sSQL &= "	WHERE EMUGAMES.id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms)
@@ -1184,12 +1197,25 @@
 		sSQL &= "		, DEV.Name AS Developer" & ControlChars.CrLf
 		sSQL &= "		, REL.Publisher_id_Moby_Companies AS Publisher_id_Moby_Companies" & ControlChars.CrLf
 		sSQL &= "		, PUB.Name AS Publisher" & ControlChars.CrLf
-		sSQL &= "		, GAME.deprecated AS deprecated" & ControlChars.CrLf
+		sSQL &= "		, CASE WHEN REL.deprecated = 1 THEN 1 ELSE GAME.deprecated END AS deprecated" & ControlChars.CrLf
+		sSQL &= "		, CASE WHEN EXISTS(" & ControlChars.CrLf
+		sSQL &= "				SELECT 1" & ControlChars.CrLf
+		sSQL &= "				FROM moby.tbl_Moby_Games_Genres MGG" & ControlChars.CrLf
+		sSQL &= "				INNER JOIN moby.tbl_Moby_Genres MG ON MGG.id_Moby_Genres = MG.id_Moby_Genres" & ControlChars.CrLf
+		sSQL &= "				WHERE MGG.id_Moby_Games = REL.id_Moby_Games" & ControlChars.CrLf
+		sSQL &= "							AND MG.URLPart = 'compilation-shovelware'" & ControlChars.CrLf
+		sSQL &= "			) THEN 1 ELSE 0 END AS compilation" & ControlChars.CrLf
+		sSQL &= "		, PLTFM.ShortName AS Platform" & ControlChars.CrLf
+		sSQL &= "		, PLTFM.URLPart AS Moby_Platforms_URLPart" & ControlChars.CrLf
 		sSQL &= "	FROM moby.tbl_Moby_Releases REL" & ControlChars.CrLf
 		sSQL &= "	INNER JOIN moby.tbl_Moby_Games GAME ON REL.id_Moby_Games = GAME.id_Moby_Games" & ControlChars.CrLf
+		sSQL &= "	INNER JOIN moby.tbl_Moby_Platforms PLTFM ON REL.id_Moby_Platforms = PLTFM.id_Moby_Platforms" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN moby.tbl_Moby_Companies DEV ON REL.Developer_id_Moby_Companies = DEV.id_Moby_Companies" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN moby.tbl_Moby_Companies PUB ON REL.Publisher_id_Moby_Companies = PUB.id_Moby_Companies" & ControlChars.CrLf
-		sSQL &= "	WHERE REL.id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms) & ControlChars.CrLf
+
+		If TC.NZ(id_Moby_Platforms, 0) <> 0 AndAlso id_Moby_Platforms <> cls_Globals.enm_Moby_Platforms.ALL AndAlso id_Moby_Platforms <> cls_Globals.enm_Moby_Platforms.scummvm Then
+			sSQL &= "	WHERE REL.id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms) & ControlChars.CrLf
+		End If
 
 		sSQL &= "	UNION" & ControlChars.CrLf
 		sSQL &= "	SELECT" & ControlChars.CrLf
@@ -1204,10 +1230,25 @@
 		sSQL &= "		, DEV.Name AS Developer" & ControlChars.CrLf
 		sSQL &= "		, REL.Publisher_id_Moby_Companies AS Publisher_id_Moby_Companies" & ControlChars.CrLf
 		sSQL &= "		, PUB.Name AS Publisher" & ControlChars.CrLf
-		sSQL &= "		, GAME.deprecated AS deprecated" & ControlChars.CrLf
+		sSQL &= "		, CASE WHEN REL.deprecated = 1 THEN 1 ELSE GAME.deprecated END AS deprecated" & ControlChars.CrLf
+		sSQL &= "		, CASE WHEN EXISTS(" & ControlChars.CrLf
+		sSQL &= "				SELECT 1" & ControlChars.CrLf
+		sSQL &= "				FROM moby.tbl_Moby_Games_Genres MGG" & ControlChars.CrLf
+		sSQL &= "				INNER JOIN moby.tbl_Moby_Genres MG ON MGG.id_Moby_Genres = MG.id_Moby_Genres" & ControlChars.CrLf
+		sSQL &= "				WHERE MGG.id_Moby_Games = REL.id_Moby_Games" & ControlChars.CrLf
+		sSQL &= "							AND MG.URLPart = 'compilation-shovelware'" & ControlChars.CrLf
+		sSQL &= "			) THEN 1 ELSE 0 END AS compilation" & ControlChars.CrLf
+		sSQL &= "		, PLTFM.ShortName AS Platform" & ControlChars.CrLf
+		sSQL &= "		, PLTFM.URLPart AS Moby_Platforms_URLPart" & ControlChars.CrLf
 		sSQL &= "	FROM moby.tbl_Moby_Games_Alternate_Titles MGAT" & ControlChars.CrLf
 		sSQL &= "	INNER JOIN moby.tbl_Moby_Games GAME ON MGAT.id_Moby_Games = GAME.id_Moby_Games" & ControlChars.CrLf
-		sSQL &= "	INNER JOIN moby.tbl_Moby_Releases REL ON REL.id_Moby_Games = GAME.id_Moby_Games AND REL.id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms) & ControlChars.CrLf
+		sSQL &= "	INNER JOIN moby.tbl_Moby_Releases REL ON REL.id_Moby_Games = GAME.id_Moby_Games"
+		sSQL &= "	INNER JOIN moby.tbl_Moby_Platforms PLTFM ON REL.id_Moby_Platforms = PLTFM.id_Moby_Platforms" & ControlChars.CrLf
+
+		If TC.NZ(id_Moby_Platforms, 0) <> 0 AndAlso id_Moby_Platforms <> cls_Globals.enm_Moby_Platforms.ALL AndAlso id_Moby_Platforms <> cls_Globals.enm_Moby_Platforms.scummvm Then
+			sSQL &= " AND REL.id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms) & ControlChars.CrLf
+		End If
+
 		sSQL &= "	LEFT JOIN moby.tbl_Moby_Companies DEV ON REL.Developer_id_Moby_Companies = DEV.id_Moby_Companies" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN moby.tbl_Moby_Companies PUB ON REL.Publisher_id_Moby_Companies = PUB.id_Moby_Companies" & ControlChars.CrLf
 
@@ -1468,6 +1509,8 @@
 		sSQL &= "		, RBDBC.[p_sdl_pixelshader] AS [p_sdl_pixelshader]"
 		sSQL &= "		, RBDBC.[p_sdl_pixelshader_forced] AS [p_sdl_pixelshader_forced]"
 		sSQL &= "		, RBDBC.[p_sdl_output] AS [p_sdl_output]"
+		sSQL &= "		, RBDBC.[p_sdl_surfacenp-sharpness] AS [p_sdl_surfacenp-sharpness]"
+		sSQL &= "		, RBDBC.[p_sdl_surface-collapse-dbl] AS [p_sdl_surface-collapse-dbl]"
 		sSQL &= "		, RBDBC.[p_dosbox_vmemsize] AS [p_dosbox_vmemsize]"
 		sSQL &= "		, RBDBC.[p_dosbox_memsizekb] AS [p_dosbox_memsizekb]"
 		sSQL &= "		, RBDBC.[p_dosbox_forcerate] AS [p_dosbox_forcerate]"
@@ -1480,6 +1523,7 @@
 		sSQL &= "		, RBDBC.[p_keyboard_aux] AS [p_keyboard_aux]"
 		sSQL &= "		, RBDBC.[p_keyboard_auxdevice] AS [p_keyboard_auxdevice]"
 		sSQL &= "		, RBDBC.[p_voodoo] AS [p_voodoo]"
+		sSQL &= "		, RBDBC.[p_voodoo_voodoomem] AS [p_voodoo_voodoomem]"
 		sSQL &= "		, RBDBC.[p_mixer_swapstereo] AS [p_mixer_swapstereo]"
 		sSQL &= "		, RBDBC.[p_midi_mididevice] AS [p_midi_mididevice]"
 		sSQL &= "		, RBDBC.[p_midi_mt32_reverse_stereo] AS [p_midi_mt32_reverse_stereo]"
@@ -1490,7 +1534,33 @@
 		sSQL &= "		, RBDBC.[p_midi_mt32_reverb_time] AS [p_midi_mt32_reverb_time]"
 		sSQL &= "		, RBDBC.[p_midi_mt32_reverb_level] AS [p_midi_mt32_reverb_level]"
 		sSQL &= "		, RBDBC.[p_midi_mt32_partials] AS [p_midi_mt32_partials]"
+		sSQL &= "		, RBDBC.[p_midi_mt32_romdir] AS [p_midi_mt32_romdir]"
+		sSQL &= "		, RBDBC.[p_midi_mt32_chunk] AS [p_midi_mt32_chunk]"
+		sSQL &= "		, RBDBC.[p_midi_mt32_prebuffer] AS [p_midi_mt32_prebuffer]"
+		sSQL &= "		, RBDBC.[p_midi_mt32_analog] AS [p_midi_mt32_analog]"
+		sSQL &= "		, RBDBC.[p_midi_mt32_rate] AS [p_midi_mt32_rate]"
+		sSQL &= "		, RBDBC.[p_midi_mt32_src_quality] AS [p_midi_mt32_src_quality]"
+		sSQL &= "		, RBDBC.[p_midi_mt32_niceampramp] AS [p_midi_mt32_niceampramp]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_soundfont] AS [p_midi_fluid_soundfont]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_samplerate] AS [p_midi_fluid_samplerate]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_gain] AS [p_midi_fluid_gain]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_polyphony] AS [p_midi_fluid_polyphony]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_cores] AS [p_midi_fluid_cores]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_periods] AS [p_midi_fluid_periods]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_periodsize] AS [p_midi_fluid_periodsize]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_reverb] AS [p_midi_fluid_reverb]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_chorus] AS [p_midi_fluid_chorus]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_reverb_roomsize] AS [p_midi_fluid_reverb_roomsize]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_reverb_damping] AS [p_midi_fluid_reverb_damping]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_reverb_width] AS [p_midi_fluid_reverb_width]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_reverb_level] AS [p_midi_fluid_reverb_level]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_chorus_number] AS [p_midi_fluid_chorus_number]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_chorus_level] AS [p_midi_fluid_chorus_level]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_chorus_speed] AS [p_midi_fluid_chorus_speed]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_chorus_depth] AS [p_midi_fluid_chorus_depth]"
+		sSQL &= "		, RBDBC.[p_midi_fluid_chorus_type] AS [p_midi_fluid_chorus_type]"
 		sSQL &= "		, RBDBC.[p_sblaster_oplmode] AS [p_sblaster_oplmode]"
+		sSQL &= "		, RBDBC.[p_sblaster_oplemu] AS [p_sblaster_oplemu]"
 		sSQL &= "		, RBDBC.[p_sblaster_hardwarebase] AS [p_sblaster_hardwarebase]"
 		sSQL &= "		, RBDBC.[p_sblaster_goldplay] AS [p_sblaster_goldplay]"
 		sSQL &= "		, RBDBC.[p_innova_innova] AS [p_innova_innova]"
@@ -1537,6 +1607,90 @@
 
 		DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
 	End Sub
+
+	Public Shared Sub Fill_tbl_Rombase_ScummVM_Template_Configs(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As DS_ML.tbl_ScummVM_ConfigsDataTable, Optional ByVal id_Rombase_ScummVM_Configs As Long = 0)
+		If dt Is Nothing Then
+			dt = New DS_ML.tbl_ScummVM_ConfigsDataTable
+		End If
+
+		dt.Clear()
+
+		Dim sSQL As String = ""
+		sSQL &= "	SELECT"
+		sSQL &= "		RBSVMC.[id_Rombase_ScummVM_Configs] AS [id_ScummVM_Configs]"
+		sSQL &= "		, 1 AS [isTemplate]"
+		sSQL &= "		, RBSVMC.[id_Rombase_ScummVM_Configs] AS [id_Rombase_ScummVM_Configs]"
+		sSQL &= "		, RBSVMC.[Displayname] AS [Displayname]"
+		sSQL &= "		, RBSVMC.[user_defined_config] AS [user_defined_config]"
+		sSQL &= "		, RBSVMC.[user_defined_commandline] AS [user_defined_commandline]"
+		sSQL &= "		, RBSVMC.[console] AS [console]"
+		sSQL &= "		, RBSVMC.[confirm_exit] AS [confirm_exit]"
+		sSQL &= "		, RBSVMC.[savepath] AS [savepath]"
+		sSQL &= "		, RBSVMC.[extrapath] AS [extrapath]"
+		sSQL &= "		, RBSVMC.[language] AS [language]"
+		sSQL &= "		, RBSVMC.[joystick_num] AS [joystick_num]"
+		sSQL &= "		, RBSVMC.[copy_protection] AS [copy_protection]"
+		sSQL &= "		, RBSVMC.[boot_param] AS [boot_param]"
+		sSQL &= "		, RBSVMC.[fullscreen] AS [fullscreen]"
+		sSQL &= "		, RBSVMC.[aspect_ratio] AS [aspect_ratio]"
+		sSQL &= "		, RBSVMC.[gfx_mode] AS [gfx_mode]"
+		sSQL &= "		, RBSVMC.[subtitles] AS [subtitles]"
+		sSQL &= "		, RBSVMC.[music_driver] AS [music_driver]"
+		sSQL &= "		, RBSVMC.[multi_midi] AS [multi_midi]"
+		sSQL &= "		, RBSVMC.[soundfont] AS [soundfont]"
+		sSQL &= "		, RBSVMC.[native_mt32] AS [native_mt32]"
+		sSQL &= "		, RBSVMC.[enable_gs] AS [enable_gs]"
+		sSQL &= "		, RBSVMC.[output_rate] AS [output_rate]"
+		sSQL &= "		, RBSVMC.[music_volume] AS [music_volume]"
+		sSQL &= "		, RBSVMC.[speech_volume] AS [speech_volume]"
+		sSQL &= "		, RBSVMC.[sfx_volume] AS [sfx_volume]"
+		sSQL &= "		, RBSVMC.[speech_mute] AS [speech_mute]"
+		sSQL &= "		, RBSVMC.[talkspeed] AS [talkspeed]"
+		sSQL &= "		, RBSVMC.[cdrom] AS [cdrom]"
+		sSQL &= "		, RBSVMC.[tempo] AS [tempo]"
+		sSQL &= "		, RBSVMC.[midi_gain] AS [midi_gain]"
+		sSQL &= "		, RBSVMC.[autosave_period] AS [autosave_period]"
+		sSQL &= "		, RBSVMC.[save_slot] AS [save_slot]"
+		sSQL &= "		, RBSVMC.[demo_mode] AS [demo_mode]"
+		sSQL &= "		, RBSVMC.[alt_intro] AS [alt_intro]"
+		sSQL &= "		, RBSVMC.[music_mute] AS [music_mute]"
+		sSQL &= "		, RBSVMC.[sfx_mute] AS [sfx_mute]"
+		sSQL &= "		, RBSVMC.[gfx_details] AS [gfx_details]"
+		sSQL &= "		, RBSVMC.[object_labels] AS [object_labels]"
+		sSQL &= "		, RBSVMC.[reverse_stereo] AS [reverse_stereo]"
+		sSQL &= "		, RBSVMC.[walkspeed] AS [walkspeed]"
+		sSQL &= "		, RBSVMC.[filtering] AS [filtering]"
+		sSQL &= "		, RBSVMC.[opl_driver] AS [opl_driver]"
+		sSQL &= "		, RBSVMC.[originalsaveload] AS [originalsaveload]"
+		sSQL &= "		, RBSVMC.[altamigapalette] AS [altamigapalette]"
+		sSQL &= "		, RBSVMC.[mousesupport] AS [mousesupport]"
+		sSQL &= "		, RBSVMC.[disable_dithering] AS [disable_dithering]"
+		sSQL &= "		, RBSVMC.[prefer_digitalsfx] AS [prefer_digitalsfx]"
+		sSQL &= "		, RBSVMC.[native_fb01] AS [native_fb01]"
+		sSQL &= "		, RBSVMC.[use_cdaudio] AS [use_cdaudio]"
+		sSQL &= "		, RBSVMC.[windows_cursors] AS [windows_cursors]"
+		sSQL &= "		, RBSVMC.[silver_cursors] AS [silver_cursors]"
+		sSQL &= "		, RBSVMC.[enable_gore] AS [enable_gore]"
+		sSQL &= "		, RBSVMC.[smooth_scrolling] AS [smooth_scrolling]"
+		sSQL &= "		, RBSVMC.[floating_cursors] AS [floating_cursors]"
+		sSQL &= "		, RBSVMC.[enable_color_blind] AS [enable_color_blind]"
+		sSQL &= "		, RBSVMC.[studio_audience] AS [studio_audience]"
+		sSQL &= "		, RBSVMC.[skip_support] AS [skip_support]"
+		sSQL &= "		, RBSVMC.[helium_mode] AS [helium_mode]"
+		sSQL &= "		, RBSVMC.[skiphallofrecordsscenes] AS [skiphallofrecordsscenes]"
+		sSQL &= "		, RBSVMC.[scalemakingofvideos] AS [scalemakingofvideos]"
+		sSQL &= "		, RBSVMC.[fast_movie_speed] AS [fast_movie_speed]"
+		sSQL &= "		, RBSVMC.[doublefps] AS [doublefps]"
+		sSQL &= "		, RBSVMC.[venusenabled] AS [venusenabled]"
+		sSQL &= "		, RBSVMC.[noanimwhileturning] AS [noanimwhileturning]"
+		sSQL &= "		, RBSVMC.[mpegmovies] AS [mpegmovies]"
+		sSQL &= "	FROM rombase.tbl_Rombase_ScummVM_Configs RBSVMC"
+		If id_Rombase_ScummVM_Configs <> 0 Then sSQL &= "	WHERE RBSVMC.id_Rombase_ScummVM_Configs = " & TC.getSQLFormat(id_Rombase_ScummVM_Configs)
+		sSQL &= "	ORDER BY [Displayname]"
+
+		DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
+	End Sub
+
 
 	Public Shared Sub Fill_tbl_DOSBox_Template_Configs(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As DS_ML.tbl_DOSBox_ConfigsDataTable, Optional ByVal id_DOSBox_Configs As Long = 0)
 		If dt Is Nothing Then
@@ -1640,6 +1794,8 @@
 		sSQL &= "		, IFNULL(DBC.[p_sdl_pixelshader], RBDBC.[p_sdl_pixelshader]) AS [p_sdl_pixelshader]"
 		sSQL &= "		, IFNULL(DBC.[p_sdl_pixelshader_forced], RBDBC.[p_sdl_pixelshader_forced]) AS [p_sdl_pixelshader_forced]"
 		sSQL &= "		, IFNULL(DBC.[p_sdl_output], RBDBC.[p_sdl_output]) AS [p_sdl_output]"
+		sSQL &= "		, IFNULL(DBC.[p_sdl_surfacenp-sharpness], RBDBC.[p_sdl_surfacenp-sharpness]) AS [p_sdl_surfacenp-sharpness]"
+		sSQL &= "		, IFNULL(DBC.[p_sdl_surface-collapse-dbl], RBDBC.[p_sdl_surface-collapse-dbl]) AS [p_sdl_surface-collapse-dbl]"
 		sSQL &= "		, IFNULL(DBC.[p_dosbox_vmemsize], RBDBC.[p_dosbox_vmemsize]) AS [p_dosbox_vmemsize]"
 		sSQL &= "		, IFNULL(DBC.[p_dosbox_memsizekb], RBDBC.[p_dosbox_memsizekb]) AS [p_dosbox_memsizekb]"
 		sSQL &= "		, IFNULL(DBC.[p_dosbox_forcerate], RBDBC.[p_dosbox_forcerate]) AS [p_dosbox_forcerate]"
@@ -1652,6 +1808,7 @@
 		sSQL &= "		, IFNULL(DBC.[p_keyboard_aux], RBDBC.[p_keyboard_aux]) AS [p_keyboard_aux]"
 		sSQL &= "		, IFNULL(DBC.[p_keyboard_auxdevice], RBDBC.[p_keyboard_auxdevice]) AS [p_keyboard_auxdevice]"
 		sSQL &= "		, IFNULL(DBC.[p_voodoo], RBDBC.[p_voodoo]) AS [p_voodoo]"
+		sSQL &= "		, IFNULL(DBC.[p_voodoo_voodoomem], RBDBC.[p_voodoo_voodoomem]) AS [p_voodoo_voodoomem]"
 		sSQL &= "		, IFNULL(DBC.[p_mixer_swapstereo], RBDBC.[p_mixer_swapstereo]) AS [p_mixer_swapstereo]"
 		sSQL &= "		, IFNULL(DBC.[p_midi_mididevice], RBDBC.[p_midi_mididevice]) AS [p_midi_mididevice]"
 		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_reverse_stereo], RBDBC.[p_midi_mt32_reverse_stereo]) AS [p_midi_mt32_reverse_stereo]"
@@ -1662,7 +1819,33 @@
 		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_reverb_time], RBDBC.[p_midi_mt32_reverb_time]) AS [p_midi_mt32_reverb_time]"
 		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_reverb_level], RBDBC.[p_midi_mt32_reverb_level]) AS [p_midi_mt32_reverb_level]"
 		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_partials], RBDBC.[p_midi_mt32_partials]) AS [p_midi_mt32_partials]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_romdir], RBDBC.[p_midi_mt32_romdir]) AS [p_midi_mt32_romdir]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_chunk], RBDBC.[p_midi_mt32_chunk]) AS [p_midi_mt32_chunk]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_prebuffer], RBDBC.[p_midi_mt32_prebuffer]) AS [p_midi_mt32_prebuffer]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_analog], RBDBC.[p_midi_mt32_analog]) AS [p_midi_mt32_analog]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_rate], RBDBC.[p_midi_mt32_rate]) AS [p_midi_mt32_rate]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_src_quality], RBDBC.[p_midi_mt32_src_quality]) AS [p_midi_mt32_src_quality]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_niceampramp], RBDBC.[p_midi_mt32_niceampramp]) AS [p_midi_mt32_niceampramp]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_soundfont], RBDBC.[p_midi_fluid_soundfont]) AS [p_midi_fluid_soundfont]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_samplerate], RBDBC.[p_midi_fluid_samplerate]) AS [p_midi_fluid_samplerate]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_gain], RBDBC.[p_midi_fluid_gain]) AS [p_midi_fluid_gain]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_polyphony], RBDBC.[p_midi_fluid_polyphony]) AS [p_midi_fluid_polyphony]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_cores], RBDBC.[p_midi_fluid_cores]) AS [p_midi_fluid_cores]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_periods], RBDBC.[p_midi_fluid_periods]) AS [p_midi_fluid_periods]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_periodsize], RBDBC.[p_midi_fluid_periodsize]) AS [p_midi_fluid_periodsize]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_reverb], RBDBC.[p_midi_fluid_reverb]) AS [p_midi_fluid_reverb]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_chorus], RBDBC.[p_midi_fluid_chorus]) AS [p_midi_fluid_chorus]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_reverb_roomsize], RBDBC.[p_midi_fluid_reverb_roomsize]) AS [p_midi_fluid_reverb_roomsize]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_reverb_damping], RBDBC.[p_midi_fluid_reverb_damping]) AS [p_midi_fluid_reverb_damping]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_reverb_width], RBDBC.[p_midi_fluid_reverb_width]) AS [p_midi_fluid_reverb_width]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_reverb_level], RBDBC.[p_midi_fluid_reverb_level]) AS [p_midi_fluid_reverb_level]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_chorus_number], RBDBC.[p_midi_fluid_chorus_number]) AS [p_midi_fluid_chorus_number]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_chorus_level], RBDBC.[p_midi_fluid_chorus_level]) AS [p_midi_fluid_chorus_level]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_chorus_speed], RBDBC.[p_midi_fluid_chorus_speed]) AS [p_midi_fluid_chorus_speed]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_chorus_depth], RBDBC.[p_midi_fluid_chorus_depth]) AS [p_midi_fluid_chorus_depth]"
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_chorus_type], RBDBC.[p_midi_fluid_chorus_type]) AS [p_midi_fluid_chorus_type]"
 		sSQL &= "		, IFNULL(DBC.[p_sblaster_oplmode], RBDBC.[p_sblaster_oplmode]) AS [p_sblaster_oplmode]"
+		sSQL &= "		, IFNULL(DBC.[p_sblaster_oplemu], RBDBC.[p_sblaster_oplemu]) AS [p_sblaster_oplemu]"
 		sSQL &= "		, IFNULL(DBC.[p_sblaster_hardwarebase], RBDBC.[p_sblaster_hardwarebase]) AS [p_sblaster_hardwarebase]"
 		sSQL &= "		, IFNULL(DBC.[p_sblaster_goldplay], RBDBC.[p_sblaster_goldplay]) AS [p_sblaster_goldplay]"
 		sSQL &= "		, IFNULL(DBC.[p_innova_innova], RBDBC.[p_innova_innova]) AS [p_innova_innova]"
@@ -1707,6 +1890,91 @@
 		sSQL &= "	LEFT JOIN rombase.tbl_Rombase_DOSBox_Configs RBDBC ON DBC.id_Rombase_DOSBox_Configs = RBDBC.id_Rombase_DOSBox_Configs"
 		sSQL &= "	WHERE DBC.isTemplate = 1"
 		If id_DOSBox_Configs <> 0 Then sSQL &= "	AND DBC.id_DOSBox_Configs = " & TC.getSQLFormat(id_DOSBox_Configs)
+		sSQL &= "	ORDER BY [Displayname]"
+
+		DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
+	End Sub
+
+	Public Shared Sub Fill_tbl_ScummVM_Template_Configs(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As DS_ML.tbl_ScummVM_ConfigsDataTable, Optional ByVal id_ScummVM_Configs As Long = 0)
+		If dt Is Nothing Then
+			dt = New DS_ML.tbl_ScummVM_ConfigsDataTable
+		End If
+
+		dt.Clear()
+
+		Dim sSQL As String = ""
+		sSQL &= "	SELECT"
+		sSQL &= "		SVMC.[id_ScummVM_Configs] AS [id_ScummVM_Configs]"
+		sSQL &= "		, SVMC.[isTemplate] AS [isTemplate]"
+		sSQL &= "		, IFNULL(SVMC.[id_Rombase_ScummVM_Configs], RBSVMC.[id_Rombase_ScummVM_Configs]) AS [id_Rombase_ScummVM_Configs]"
+		sSQL &= "		, IFNULL(SVMC.[Displayname], RBSVMC.[Displayname]) AS [Displayname]"
+		sSQL &= "		, IFNULL(SVMC.[user_defined_config], RBSVMC.[user_defined_config]) AS [user_defined_config]"
+		sSQL &= "		, IFNULL(SVMC.[user_defined_commandline], RBSVMC.[user_defined_commandline]) AS [user_defined_commandline]"
+		sSQL &= "		, IFNULL(SVMC.[console], RBSVMC.[console]) AS [console]"
+		sSQL &= "		, IFNULL(SVMC.[confirm_exit], RBSVMC.[confirm_exit]) AS [confirm_exit]"
+		sSQL &= "		, IFNULL(SVMC.[savepath], RBSVMC.[savepath]) AS [savepath]"
+		sSQL &= "		, IFNULL(SVMC.[extrapath], RBSVMC.[extrapath]) AS [extrapath]"
+		sSQL &= "		, IFNULL(SVMC.[language], RBSVMC.[language]) AS [language]"
+		sSQL &= "		, IFNULL(SVMC.[joystick_num], RBSVMC.[joystick_num]) AS [joystick_num]"
+		sSQL &= "		, IFNULL(SVMC.[copy_protection], RBSVMC.[copy_protection]) AS [copy_protection]"
+		sSQL &= "		, IFNULL(SVMC.[boot_param], RBSVMC.[boot_param]) AS [boot_param]"
+		sSQL &= "		, IFNULL(SVMC.[fullscreen], RBSVMC.[fullscreen]) AS [fullscreen]"
+		sSQL &= "		, IFNULL(SVMC.[aspect_ratio], RBSVMC.[aspect_ratio]) AS [aspect_ratio]"
+		sSQL &= "		, IFNULL(SVMC.[gfx_mode], RBSVMC.[gfx_mode]) AS [gfx_mode]"
+		sSQL &= "		, IFNULL(SVMC.[subtitles], RBSVMC.[subtitles]) AS [subtitles]"
+		sSQL &= "		, IFNULL(SVMC.[music_driver], RBSVMC.[music_driver]) AS [music_driver]"
+		sSQL &= "		, IFNULL(SVMC.[multi_midi], RBSVMC.[multi_midi]) AS [multi_midi]"
+		sSQL &= "		, IFNULL(SVMC.[soundfont], RBSVMC.[soundfont]) AS [soundfont]"
+		sSQL &= "		, IFNULL(SVMC.[native_mt32], RBSVMC.[native_mt32]) AS [native_mt32]"
+		sSQL &= "		, IFNULL(SVMC.[enable_gs], RBSVMC.[enable_gs]) AS [enable_gs]"
+		sSQL &= "		, IFNULL(SVMC.[output_rate], RBSVMC.[output_rate]) AS [output_rate]"
+		sSQL &= "		, IFNULL(SVMC.[music_volume], RBSVMC.[music_volume]) AS [music_volume]"
+		sSQL &= "		, IFNULL(SVMC.[speech_volume], RBSVMC.[speech_volume]) AS [speech_volume]"
+		sSQL &= "		, IFNULL(SVMC.[sfx_volume], RBSVMC.[sfx_volume]) AS [sfx_volume]"
+		sSQL &= "		, IFNULL(SVMC.[speech_mute], RBSVMC.[speech_mute]) AS [speech_mute]"
+		sSQL &= "		, IFNULL(SVMC.[talkspeed], RBSVMC.[talkspeed]) AS [talkspeed]"
+		sSQL &= "		, IFNULL(SVMC.[cdrom], RBSVMC.[cdrom]) AS [cdrom]"
+		sSQL &= "		, IFNULL(SVMC.[tempo], RBSVMC.[tempo]) AS [tempo]"
+		sSQL &= "		, IFNULL(SVMC.[midi_gain], RBSVMC.[midi_gain]) AS [midi_gain]"
+		sSQL &= "		, IFNULL(SVMC.[autosave_period], RBSVMC.[autosave_period]) AS [autosave_period]"
+		sSQL &= "		, IFNULL(SVMC.[save_slot], RBSVMC.[save_slot]) AS [save_slot]"
+		sSQL &= "		, IFNULL(SVMC.[demo_mode], RBSVMC.[demo_mode]) AS [demo_mode]"
+		sSQL &= "		, IFNULL(SVMC.[alt_intro], RBSVMC.[alt_intro]) AS [alt_intro]"
+		sSQL &= "		, IFNULL(SVMC.[music_mute], RBSVMC.[music_mute]) AS [music_mute]"
+		sSQL &= "		, IFNULL(SVMC.[sfx_mute], RBSVMC.[sfx_mute]) AS [sfx_mute]"
+		sSQL &= "		, IFNULL(SVMC.[gfx_details], RBSVMC.[gfx_details]) AS [gfx_details]"
+		sSQL &= "		, IFNULL(SVMC.[object_labels], RBSVMC.[object_labels]) AS [object_labels]"
+		sSQL &= "		, IFNULL(SVMC.[reverse_stereo], RBSVMC.[reverse_stereo]) AS [reverse_stereo]"
+		sSQL &= "		, IFNULL(SVMC.[walkspeed], RBSVMC.[walkspeed]) AS [walkspeed]"
+		sSQL &= "		, IFNULL(SVMC.[filtering], RBSVMC.[filtering]) AS [filtering]"
+		sSQL &= "		, IFNULL(SVMC.[opl_driver], RBSVMC.[opl_driver]) AS [opl_driver]"
+		sSQL &= "		, IFNULL(SVMC.[originalsaveload], RBSVMC.[originalsaveload]) AS [originalsaveload]"
+		sSQL &= "		, IFNULL(SVMC.[altamigapalette], RBSVMC.[altamigapalette]) AS [altamigapalette]"
+		sSQL &= "		, IFNULL(SVMC.[mousesupport], RBSVMC.[mousesupport]) AS [mousesupport]"
+		sSQL &= "		, IFNULL(SVMC.[disable_dithering], RBSVMC.[disable_dithering]) AS [disable_dithering]"
+		sSQL &= "		, IFNULL(SVMC.[prefer_digitalsfx], RBSVMC.[prefer_digitalsfx]) AS [prefer_digitalsfx]"
+		sSQL &= "		, IFNULL(SVMC.[native_fb01], RBSVMC.[native_fb01]) AS [native_fb01]"
+		sSQL &= "		, IFNULL(SVMC.[use_cdaudio], RBSVMC.[use_cdaudio]) AS [use_cdaudio]"
+		sSQL &= "		, IFNULL(SVMC.[windows_cursors], RBSVMC.[windows_cursors]) AS [windows_cursors]"
+		sSQL &= "		, IFNULL(SVMC.[silver_cursors], RBSVMC.[silver_cursors]) AS [silver_cursors]"
+		sSQL &= "		, IFNULL(SVMC.[enable_gore], RBSVMC.[enable_gore]) AS [enable_gore]"
+		sSQL &= "		, IFNULL(SVMC.[smooth_scrolling], RBSVMC.[smooth_scrolling]) AS [smooth_scrolling]"
+		sSQL &= "		, IFNULL(SVMC.[floating_cursors], RBSVMC.[floating_cursors]) AS [floating_cursors]"
+		sSQL &= "		, IFNULL(SVMC.[enable_color_blind], RBSVMC.[enable_color_blind]) AS [enable_color_blind]"
+		sSQL &= "		, IFNULL(SVMC.[studio_audience], RBSVMC.[studio_audience]) AS [studio_audience]"
+		sSQL &= "		, IFNULL(SVMC.[skip_support], RBSVMC.[skip_support]) AS [skip_support]"
+		sSQL &= "		, IFNULL(SVMC.[helium_mode], RBSVMC.[helium_mode]) AS [helium_mode]"
+		sSQL &= "		, IFNULL(SVMC.[skiphallofrecordsscenes], RBSVMC.[skiphallofrecordsscenes]) AS [skiphallofrecordsscenes]"
+		sSQL &= "		, IFNULL(SVMC.[scalemakingofvideos], RBSVMC.[scalemakingofvideos]) AS [scalemakingofvideos]"
+		sSQL &= "		, IFNULL(SVMC.[fast_movie_speed], RBSVMC.[fast_movie_speed]) AS [fast_movie_speed]"
+		sSQL &= "		, IFNULL(SVMC.[doublefps], RBSVMC.[doublefps]) AS [doublefps]"
+		sSQL &= "		, IFNULL(SVMC.[venusenabled], RBSVMC.[venusenabled]) AS [venusenabled]"
+		sSQL &= "		, IFNULL(SVMC.[noanimwhileturning], RBSVMC.[noanimwhileturning]) AS [noanimwhileturning]"
+		sSQL &= "		, IFNULL(SVMC.[mpegmovies], RBSVMC.[mpegmovies]) AS [mpegmovies]"
+		sSQL &= "	FROM main.tbl_ScummVM_Configs SVMC"
+		sSQL &= "	LEFT JOIN rombase.tbl_Rombase_ScummVM_Configs RBSVMC ON SVMC.id_Rombase_ScummVM_Configs = RBSVMC.id_Rombase_ScummVM_Configs"
+		sSQL &= "	WHERE SVMC.isTemplate = 1"
+		If id_ScummVM_Configs <> 0 Then sSQL &= "	AND SVMC.id_ScummVM_Configs = " & TC.getSQLFormat(id_ScummVM_Configs)
 		sSQL &= "	ORDER BY [Displayname]"
 
 		DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
@@ -1810,6 +2078,8 @@
 		sSQL &= "		, IFNULL(DBC.[p_sdl_pixelshader], IFNULL(DBCT.[p_sdl_pixelshader], RBDBC.[p_sdl_pixelshader])) AS [p_sdl_pixelshader]" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(DBC.[p_sdl_pixelshader_forced], IFNULL(DBCT.[p_sdl_pixelshader_forced], RBDBC.[p_sdl_pixelshader_forced])) AS [p_sdl_pixelshader_forced]" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(DBC.[p_sdl_output], IFNULL(DBCT.[p_sdl_output], RBDBC.[p_sdl_output])) AS [p_sdl_output]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_sdl_surfacenp-sharpness], IFNULL(DBCT.[p_sdl_surfacenp-sharpness], RBDBC.[p_sdl_surfacenp-sharpness])) AS [p_sdl_surfacenp-sharpness]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_sdl_surface-collapse-dbl], IFNULL(DBCT.[p_sdl_surface-collapse-dbl], RBDBC.[p_sdl_surface-collapse-dbl])) AS [p_sdl_surface-collapse-dbl]" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(DBC.[p_dosbox_vmemsize], IFNULL(DBCT.[p_dosbox_vmemsize], RBDBC.[p_dosbox_vmemsize])) AS [p_dosbox_vmemsize]" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(DBC.[p_dosbox_memsizekb], IFNULL(DBCT.[p_dosbox_memsizekb], RBDBC.[p_dosbox_memsizekb])) AS [p_dosbox_memsizekb]" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(DBC.[p_dosbox_forcerate], IFNULL(DBCT.[p_dosbox_forcerate], RBDBC.[p_dosbox_forcerate])) AS [p_dosbox_forcerate]" & ControlChars.CrLf
@@ -1822,6 +2092,7 @@
 		sSQL &= "		, IFNULL(DBC.[p_keyboard_aux], IFNULL(DBCT.[p_keyboard_aux], RBDBC.[p_keyboard_aux])) AS [p_keyboard_aux]" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(DBC.[p_keyboard_auxdevice], IFNULL(DBCT.[p_keyboard_auxdevice], RBDBC.[p_keyboard_auxdevice])) AS [p_keyboard_auxdevice]" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(DBC.[p_voodoo], IFNULL(DBCT.[p_voodoo], RBDBC.[p_voodoo])) AS [p_voodoo]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_voodoo_voodoomem], IFNULL(DBCT.[p_voodoo_voodoomem], RBDBC.[p_voodoo_voodoomem])) AS [p_voodoo_voodoomem]" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(DBC.[p_mixer_swapstereo], IFNULL(DBCT.[p_mixer_swapstereo], RBDBC.[p_mixer_swapstereo])) AS [p_mixer_swapstereo]" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(DBC.[p_midi_mididevice], IFNULL(DBCT.[p_midi_mididevice], RBDBC.[p_midi_mididevice])) AS [p_midi_mididevice]" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_reverse_stereo], IFNULL(DBCT.[p_midi_mt32_reverse_stereo], RBDBC.[p_midi_mt32_reverse_stereo])) AS [p_midi_mt32_reverse_stereo]" & ControlChars.CrLf
@@ -1832,7 +2103,33 @@
 		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_reverb_time], IFNULL(DBCT.[p_midi_mt32_reverb_time], RBDBC.[p_midi_mt32_reverb_time])) AS [p_midi_mt32_reverb_time]" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_reverb_level], IFNULL(DBCT.[p_midi_mt32_reverb_level], RBDBC.[p_midi_mt32_reverb_level])) AS [p_midi_mt32_reverb_level]" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_partials], IFNULL(DBCT.[p_midi_mt32_partials], RBDBC.[p_midi_mt32_partials])) AS [p_midi_mt32_partials]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_romdir], IFNULL(DBCT.[p_midi_mt32_romdir], RBDBC.[p_midi_mt32_romdir])) AS [p_midi_mt32_romdir]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_chunk], IFNULL(DBCT.[p_midi_mt32_chunk], RBDBC.[p_midi_mt32_chunk])) AS [p_midi_mt32_chunk]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_prebuffer], IFNULL(DBCT.[p_midi_mt32_prebuffer], RBDBC.[p_midi_mt32_prebuffer])) AS [p_midi_mt32_prebuffer]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_analog], IFNULL(DBCT.[p_midi_mt32_analog], RBDBC.[p_midi_mt32_analog])) AS [p_midi_mt32_analog]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_rate], IFNULL(DBCT.[p_midi_mt32_rate], RBDBC.[p_midi_mt32_rate])) AS [p_midi_mt32_rate]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_src_quality], IFNULL(DBCT.[p_midi_mt32_src_quality], RBDBC.[p_midi_mt32_src_quality])) AS [p_midi_mt32_src_quality]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_mt32_niceampramp], IFNULL(DBCT.[p_midi_mt32_niceampramp], RBDBC.[p_midi_mt32_niceampramp])) AS [p_midi_mt32_niceampramp]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_soundfont], IFNULL(DBCT.[p_midi_fluid_soundfont], RBDBC.[p_midi_fluid_soundfont])) AS [p_midi_fluid_soundfont]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_samplerate], IFNULL(DBCT.[p_midi_fluid_samplerate], RBDBC.[p_midi_fluid_samplerate])) AS [p_midi_fluid_samplerate]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_gain], IFNULL(DBCT.[p_midi_fluid_gain], RBDBC.[p_midi_fluid_gain])) AS [p_midi_fluid_gain]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_polyphony], IFNULL(DBCT.[p_midi_fluid_polyphony], RBDBC.[p_midi_fluid_polyphony])) AS [p_midi_fluid_polyphony]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_cores], IFNULL(DBCT.[p_midi_fluid_cores], RBDBC.[p_midi_fluid_cores])) AS [p_midi_fluid_cores]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_periods], IFNULL(DBCT.[p_midi_fluid_periods], RBDBC.[p_midi_fluid_periods])) AS [p_midi_fluid_periods]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_periodsize], IFNULL(DBCT.[p_midi_fluid_periodsize], RBDBC.[p_midi_fluid_periodsize])) AS [p_midi_fluid_periodsize]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_reverb], IFNULL(DBCT.[p_midi_fluid_reverb], RBDBC.[p_midi_fluid_reverb])) AS [p_midi_fluid_reverb]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_chorus], IFNULL(DBCT.[p_midi_fluid_chorus], RBDBC.[p_midi_fluid_chorus])) AS [p_midi_fluid_chorus]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_reverb_roomsize], IFNULL(DBCT.[p_midi_fluid_reverb_roomsize], RBDBC.[p_midi_fluid_reverb_roomsize])) AS [p_midi_fluid_reverb_roomsize]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_reverb_damping], IFNULL(DBCT.[p_midi_fluid_reverb_damping], RBDBC.[p_midi_fluid_reverb_damping])) AS [p_midi_fluid_reverb_damping]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_reverb_width], IFNULL(DBCT.[p_midi_fluid_reverb_width], RBDBC.[p_midi_fluid_reverb_width])) AS [p_midi_fluid_reverb_width]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_reverb_level], IFNULL(DBCT.[p_midi_fluid_reverb_level], RBDBC.[p_midi_fluid_reverb_level])) AS [p_midi_fluid_reverb_level]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_chorus_number], IFNULL(DBCT.[p_midi_fluid_chorus_number], RBDBC.[p_midi_fluid_chorus_number])) AS [p_midi_fluid_chorus_number]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_chorus_level], IFNULL(DBCT.[p_midi_fluid_chorus_level], RBDBC.[p_midi_fluid_chorus_level])) AS [p_midi_fluid_chorus_level]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_chorus_speed], IFNULL(DBCT.[p_midi_fluid_chorus_speed], RBDBC.[p_midi_fluid_chorus_speed])) AS [p_midi_fluid_chorus_speed]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_chorus_depth], IFNULL(DBCT.[p_midi_fluid_chorus_depth], RBDBC.[p_midi_fluid_chorus_depth])) AS [p_midi_fluid_chorus_depth]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_midi_fluid_chorus_type], IFNULL(DBCT.[p_midi_fluid_chorus_type], RBDBC.[p_midi_fluid_chorus_type])) AS [p_midi_fluid_chorus_type]" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(DBC.[p_sblaster_oplmode], IFNULL(DBCT.[p_sblaster_oplmode], RBDBC.[p_sblaster_oplmode])) AS [p_sblaster_oplmode]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[p_sblaster_oplemu], IFNULL(DBCT.[p_sblaster_oplemu], RBDBC.[p_sblaster_oplemu])) AS [p_sblaster_oplemu]" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(DBC.[p_sblaster_hardwarebase], IFNULL(DBCT.[p_sblaster_hardwarebase], RBDBC.[p_sblaster_hardwarebase])) AS [p_sblaster_hardwarebase]" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(DBC.[p_sblaster_goldplay], IFNULL(DBCT.[p_sblaster_goldplay], RBDBC.[p_sblaster_goldplay])) AS [p_sblaster_goldplay]" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(DBC.[p_innova_innova], IFNULL(DBCT.[p_innova_innova], RBDBC.[p_innova_innova])) AS [p_innova_innova]" & ControlChars.CrLf
@@ -1882,11 +2179,92 @@
 		DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
 	End Sub
 
+	Public Shared Sub Fill_tbl_ScummVM_Configs(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As DS_ML.tbl_ScummVM_ConfigsDataTable, Optional ByVal id_Emu_Games As Long = 0)
+		If dt Is Nothing Then dt = New DS_ML.tbl_ScummVM_ConfigsDataTable
+		dt.Clear()
+
+		Dim sSQL As String = ""
+		sSQL &= "	SELECT" & ControlChars.CrLf
+		sSQL &= "		IFNULL(DBC.[id_ScummVM_Configs], DBCT.[id_ScummVM_Configs]) AS [id_ScummVM_Configs]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[id_Rombase_ScummVM_Configs], IFNULL(DBCT.[id_Rombase_ScummVM_Configs], RBDBC.[id_Rombase_ScummVM_Configs])) AS [id_Rombase_ScummVM_Configs]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[Displayname], IFNULL(DBCT.[Displayname], RBDBC.[Displayname])) AS [Displayname]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[user_defined_config], IFNULL(DBCT.[user_defined_config], RBDBC.[user_defined_config])) AS [user_defined_config]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[user_defined_commandline], IFNULL(DBCT.[user_defined_commandline], RBDBC.[user_defined_commandline])) AS [user_defined_commandline]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[console], IFNULL(DBCT.[console], RBDBC.[console])) AS [console]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[confirm_exit], IFNULL(DBCT.[confirm_exit], RBDBC.[confirm_exit])) AS [confirm_exit]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[savepath], IFNULL(DBCT.[savepath], RBDBC.[savepath])) AS [savepath]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[extrapath], IFNULL(DBCT.[extrapath], RBDBC.[extrapath])) AS [extrapath]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[language], IFNULL(DBCT.[language], RBDBC.[language])) AS [language]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[joystick_num], IFNULL(DBCT.[joystick_num], RBDBC.[joystick_num])) AS [joystick_num]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[copy_protection], IFNULL(DBCT.[copy_protection], RBDBC.[copy_protection])) AS [copy_protection]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[boot_param], IFNULL(DBCT.[boot_param], RBDBC.[boot_param])) AS [boot_param]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[fullscreen], IFNULL(DBCT.[fullscreen], RBDBC.[fullscreen])) AS [fullscreen]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[aspect_ratio], IFNULL(DBCT.[aspect_ratio], RBDBC.[aspect_ratio])) AS [aspect_ratio]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[gfx_mode], IFNULL(DBCT.[gfx_mode], RBDBC.[gfx_mode])) AS [gfx_mode]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[subtitles], IFNULL(DBCT.[subtitles], RBDBC.[subtitles])) AS [subtitles]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[music_driver], IFNULL(DBCT.[music_driver], RBDBC.[music_driver])) AS [music_driver]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[multi_midi], IFNULL(DBCT.[multi_midi], RBDBC.[multi_midi])) AS [multi_midi]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[soundfont], IFNULL(DBCT.[soundfont], RBDBC.[soundfont])) AS [soundfont]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[native_mt32], IFNULL(DBCT.[native_mt32], RBDBC.[native_mt32])) AS [native_mt32]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[enable_gs], IFNULL(DBCT.[enable_gs], RBDBC.[enable_gs])) AS [enable_gs]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[output_rate], IFNULL(DBCT.[output_rate], RBDBC.[output_rate])) AS [output_rate]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[music_volume], IFNULL(DBCT.[music_volume], RBDBC.[music_volume])) AS [music_volume]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[speech_volume], IFNULL(DBCT.[speech_volume], RBDBC.[speech_volume])) AS [speech_volume]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[sfx_volume], IFNULL(DBCT.[sfx_volume], RBDBC.[sfx_volume])) AS [sfx_volume]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[speech_mute], IFNULL(DBCT.[speech_mute], RBDBC.[speech_mute])) AS [speech_mute]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[talkspeed], IFNULL(DBCT.[talkspeed], RBDBC.[talkspeed])) AS [talkspeed]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[cdrom], IFNULL(DBCT.[cdrom], RBDBC.[cdrom])) AS [cdrom]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[tempo], IFNULL(DBCT.[tempo], RBDBC.[tempo])) AS [tempo]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[midi_gain], IFNULL(DBCT.[midi_gain], RBDBC.[midi_gain])) AS [midi_gain]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[autosave_period], IFNULL(DBCT.[autosave_period], RBDBC.[autosave_period])) AS [autosave_period]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[save_slot], IFNULL(DBCT.[save_slot], RBDBC.[save_slot])) AS [save_slot]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[demo_mode], IFNULL(DBCT.[demo_mode], RBDBC.[demo_mode])) AS [demo_mode]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[alt_intro], IFNULL(DBCT.[alt_intro], RBDBC.[alt_intro])) AS [alt_intro]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[music_mute], IFNULL(DBCT.[music_mute], RBDBC.[music_mute])) AS [music_mute]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[sfx_mute], IFNULL(DBCT.[sfx_mute], RBDBC.[sfx_mute])) AS [sfx_mute]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[gfx_details], IFNULL(DBCT.[gfx_details], RBDBC.[gfx_details])) AS [gfx_details]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[object_labels], IFNULL(DBCT.[object_labels], RBDBC.[object_labels])) AS [object_labels]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[reverse_stereo], IFNULL(DBCT.[reverse_stereo], RBDBC.[reverse_stereo])) AS [reverse_stereo]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[walkspeed], IFNULL(DBCT.[walkspeed], RBDBC.[walkspeed])) AS [walkspeed]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[filtering], IFNULL(DBCT.[filtering], RBDBC.[filtering])) AS [filtering]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[opl_driver], IFNULL(DBCT.[opl_driver], RBDBC.[opl_driver])) AS [opl_driver]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[originalsaveload], IFNULL(DBCT.[originalsaveload], RBDBC.[originalsaveload])) AS [originalsaveload]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[altamigapalette], IFNULL(DBCT.[altamigapalette], RBDBC.[altamigapalette])) AS [altamigapalette]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[mousesupport], IFNULL(DBCT.[mousesupport], RBDBC.[mousesupport])) AS [mousesupport]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[disable_dithering], IFNULL(DBCT.[disable_dithering], RBDBC.[disable_dithering])) AS [disable_dithering]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[prefer_digitalsfx], IFNULL(DBCT.[prefer_digitalsfx], RBDBC.[prefer_digitalsfx])) AS [prefer_digitalsfx]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[native_fb01], IFNULL(DBCT.[native_fb01], RBDBC.[native_fb01])) AS [native_fb01]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[use_cdaudio], IFNULL(DBCT.[use_cdaudio], RBDBC.[use_cdaudio])) AS [use_cdaudio]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[windows_cursors], IFNULL(DBCT.[windows_cursors], RBDBC.[windows_cursors])) AS [windows_cursors]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[silver_cursors], IFNULL(DBCT.[silver_cursors], RBDBC.[silver_cursors])) AS [silver_cursors]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[enable_gore], IFNULL(DBCT.[enable_gore], RBDBC.[enable_gore])) AS [enable_gore]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[smooth_scrolling], IFNULL(DBCT.[smooth_scrolling], RBDBC.[smooth_scrolling])) AS [smooth_scrolling]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[floating_cursors], IFNULL(DBCT.[floating_cursors], RBDBC.[floating_cursors])) AS [floating_cursors]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[enable_color_blind], IFNULL(DBCT.[enable_color_blind], RBDBC.[enable_color_blind])) AS [enable_color_blind]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[studio_audience], IFNULL(DBCT.[studio_audience], RBDBC.[studio_audience])) AS [studio_audience]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[skip_support], IFNULL(DBCT.[skip_support], RBDBC.[skip_support])) AS [skip_support]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[helium_mode], IFNULL(DBCT.[helium_mode], RBDBC.[helium_mode])) AS [helium_mode]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[skiphallofrecordsscenes], IFNULL(DBCT.[skiphallofrecordsscenes], RBDBC.[skiphallofrecordsscenes])) AS [skiphallofrecordsscenes]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[scalemakingofvideos], IFNULL(DBCT.[scalemakingofvideos], RBDBC.[scalemakingofvideos])) AS [scalemakingofvideos]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[fast_movie_speed], IFNULL(DBCT.[fast_movie_speed], RBDBC.[fast_movie_speed])) AS [fast_movie_speed]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[doublefps], IFNULL(DBCT.[doublefps], RBDBC.[doublefps])) AS [doublefps]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[venusenabled], IFNULL(DBCT.[venusenabled], RBDBC.[venusenabled])) AS [venusenabled]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[noanimwhileturning], IFNULL(DBCT.[noanimwhileturning], RBDBC.[noanimwhileturning])) AS [noanimwhileturning]" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(DBC.[mpegmovies], IFNULL(DBCT.[mpegmovies], RBDBC.[mpegmovies])) AS [mpegmovies]" & ControlChars.CrLf
+		sSQL &= "	FROM main.tbl_Emu_Games EG " & ControlChars.CrLf
+		sSQL &= " LEFT JOIN main.tbl_ScummVM_Configs DBC ON DBC.id_ScummVM_Configs = EG.id_ScummVM_Configs" & ControlChars.CrLf
+		sSQL &= " LEFT JOIN main.tbl_ScummVM_Configs DBCT ON DBCT.id_ScummVM_Configs = EG.id_ScummVM_Configs_Template" & ControlChars.CrLf
+		sSQL &= "	LEFT JOIN rombase.tbl_Rombase_ScummVM_Configs RBDBC ON DBCT.id_Rombase_ScummVM_Configs = RBDBC.id_Rombase_ScummVM_Configs" & ControlChars.CrLf
+		sSQL &= "	WHERE EG.id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games)
+
+		DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
+	End Sub
+
 	Public Shared Sub Fill_src_frm_Emulators_DOSBox_Patches(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As DS_ML.src_frm_Emulators_DOSBox_PatchesDataTable, Optional ByVal id_Emulators As Integer = 0)
 		Dim sSQL As String = ""
 		sSQL &= "	SELECT" & ControlChars.CrLf
-		sSQL &= "		P.id_DOSBox_Patches" & ControlChars.CrLf
-		sSQL &= "		, PC.id_DOSBox_Patches_Categories" & ControlChars.CrLf
+		sSQL &= "		P.id_Rombase_DOSBox_Patches AS id_DOSBox_Patches" & ControlChars.CrLf
+		sSQL &= "		, PC.id_Rombase_DOSBox_Patches_Categories AS id_DOSBox_Patches_Categories" & ControlChars.CrLf
 		sSQL &= "		, PC.Categoryname" & ControlChars.CrLf
 		sSQL &= "		, P.Identifier" & ControlChars.CrLf
 		sSQL &= "		, P.Patchname" & ControlChars.CrLf
@@ -1894,9 +2272,10 @@
 		sSQL &= "		, EP.Activated" & ControlChars.CrLf
 		sSQL &= "		, P.DAUM_Supported" & ControlChars.CrLf
 		sSQL &= "		, P.MB_Supported" & ControlChars.CrLf
-		sSQL &= "	FROM tbl_DOSBox_Patches P" & ControlChars.CrLf
-		sSQL &= "	LEFT JOIN tbl_DOSBox_Patches_Categories PC ON P.id_DOSBox_Patches_Categories = PC.id_DOSBox_Patches_Categories" & ControlChars.CrLf
-		sSQL &= "	LEFT JOIN tbl_Emulators_DOSBox_Patches EP ON P.id_DOSBox_Patches = EP.id_DOSBox_Patches AND EP.id_Emulators = " & TC.getSQLFormat(id_Emulators) & ControlChars.CrLf
+		sSQL &= "		, P.ECE_Supported" & ControlChars.CrLf
+		sSQL &= "	FROM rombase.tbl_Rombase_DOSBox_Patches P" & ControlChars.CrLf
+		sSQL &= "	LEFT JOIN rombase.tbl_Rombase_DOSBox_Patches_Categories PC ON P.id_Rombase_DOSBox_Patches_Categories = PC.id_Rombase_DOSBox_Patches_Categories" & ControlChars.CrLf
+		sSQL &= "	LEFT JOIN tbl_Emulators_DOSBox_Patches EP ON P.id_Rombase_DOSBox_Patches = EP.id_DOSBox_Patches AND EP.id_Emulators = " & TC.getSQLFormat(id_Emulators) & ControlChars.CrLf
 		sSQL &= "	ORDER BY PC.Sort, P.Sort" & ControlChars.CrLf
 
 		dt.Clear()
@@ -1906,10 +2285,10 @@
 	Public Shared Sub Fill_src_frm_Emulators_DOSBox_Patches_Categories(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As DS_ML.src_frm_Emulators_DOSBox_Patches_CategoriesDataTable)
 		Dim sSQL As String = ""
 		sSQL &= "	SELECT DISTINCT" & ControlChars.CrLf
-		sSQL &= "		PC.id_DOSBox_Patches_Categories" & ControlChars.CrLf
+		sSQL &= "		PC.id_Rombase_DOSBox_Patches_Categories AS id_DOSBox_Patches_Categories" & ControlChars.CrLf
 		sSQL &= "		, PC.Categoryname" & ControlChars.CrLf
-		sSQL &= "	FROM tbl_DOSBox_Patches P" & ControlChars.CrLf
-		sSQL &= "	LEFT JOIN tbl_DOSBox_Patches_Categories PC ON P.id_DOSBox_Patches_Categories = PC.id_DOSBox_Patches_Categories" & ControlChars.CrLf
+		sSQL &= "	FROM tbl_Rombase_DOSBox_Patches P" & ControlChars.CrLf
+		sSQL &= "	LEFT JOIN tbl_Rombase_DOSBox_Patches_Categories PC ON P.id_Rombase_DOSBox_Patches_Categories = PC.id_Rombase_DOSBox_Patches_Categories" & ControlChars.CrLf
 		sSQL &= "	ORDER BY PC.Sort, P.Sort" & ControlChars.CrLf
 		dt.Clear()
 
@@ -2464,7 +2843,7 @@
 		sSQL &= "(" & ControlChars.CrLf
 		sSQL &= "	SELECT		EGC.id_Emu_Games" & ControlChars.CrLf
 		sSQL &= "						, MRC.id_Moby_Releases" & ControlChars.CrLf
-		sSQL &= "						, CASE	WHEN EG.id_Moby_Platforms = EGC.id_Moby_Platforms THEN 100 ELSE 0 END AS [001_Platform]" & ControlChars.CrLf
+		sSQL &= "						, CASE	WHEN IFNULL(EG.id_Moby_Platforms_Alternative, EG.id_Moby_Platforms) = IFNULL(EGC.id_Moby_Platforms_Alternative, EGC.id_Moby_Platforms) THEN 100 ELSE 0 END AS [001_Platform]" & ControlChars.CrLf
 		sSQL &= "						, CASE	WHEN MR.MobyRank IS NOT NULL OR MRC.MobyRank IS NOT NULL" & ControlChars.CrLf
 		sSQL &= "										THEN 100 - ABS(IFNULL(MR.MobyRank, 0) - IFNULL(MRC.MobyRank, 0))" & ControlChars.CrLf
 		sSQL &= "										ELSE NULL" & ControlChars.CrLf
@@ -3318,13 +3697,13 @@
 		sSQL &= "							AS [401_Staff]" & ControlChars.CrLf
 		sSQL &= "	FROM			tbl_Emu_Games EG" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Moby_Games MG ON EG.Moby_Games_URLPart = MG.URLPart" & ControlChars.CrLf
-		sSQL &= "	LEFT JOIN tbl_Moby_Releases MR ON EG.id_Moby_Platforms = MR.id_Moby_Platforms AND MG.id_Moby_Games = MR.id_Moby_Games" & ControlChars.CrLf
+		sSQL &= "	LEFT JOIN tbl_Moby_Releases MR ON IFNULL(EG.id_Moby_Platforms_Alternative, EG.id_Moby_Platforms) = MR.id_Moby_Platforms AND MG.id_Moby_Games = MR.id_Moby_Games" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Moby_Companies C1 ON MR.Publisher_id_Moby_Companies = C1.id_Moby_Companies" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Moby_Companies C2 ON MR.Developer_id_Moby_Companies = C2.id_Moby_Companies" & ControlChars.CrLf
 		sSQL &= "" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Emu_Games EGC ON EGC.id_Emu_Games_Owner IS NULL AND EGC.id_Emu_Games > 0" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Moby_Games MGC ON EGC.Moby_Games_URLPart = MGC.URLPart" & ControlChars.CrLf
-		sSQL &= "	LEFT JOIN tbl_Moby_Releases MRC ON EGC.id_Moby_Platforms = MRC.id_Moby_Platforms AND MGC.id_Moby_Games = MRC.id_Moby_Games" & ControlChars.CrLf
+		sSQL &= "	LEFT JOIN tbl_Moby_Releases MRC ON IFNULL(EGC.id_Moby_Platforms_Alternative, EGC.id_Moby_Platforms) = MRC.id_Moby_Platforms AND MGC.id_Moby_Games = MRC.id_Moby_Games" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Moby_Companies C1C ON MRC.Publisher_id_Moby_Companies = C1C.id_Moby_Companies" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Moby_Companies C2C ON MRC.Developer_id_Moby_Companies = C2C.id_Moby_Companies" & ControlChars.CrLf
 		sSQL &= "" & ControlChars.CrLf
@@ -3400,7 +3779,7 @@
 			sSQL &= "	)" & ControlChars.CrLf
 			sSQL &= "" & ControlChars.CrLf
 			sSQL &= "	SELECT		MRC.id_Moby_Releases" & ControlChars.CrLf
-			sSQL &= "						, CASE	WHEN EG.id_Moby_Platforms = MRC.id_Moby_Platforms THEN 100 ELSE 0 END AS [001_Platform]" & ControlChars.CrLf
+			sSQL &= "						, CASE	WHEN IFNULL(EG.id_Moby_Platforms_Alternative, EG.id_Moby_Platforms) = MRC.id_Moby_Platforms THEN 100 ELSE 0 END AS [001_Platform]" & ControlChars.CrLf
 			sSQL &= "						, CASE	WHEN MR.MobyRank IS NOT NULL OR MRC.MobyRank IS NOT NULL" & ControlChars.CrLf
 			sSQL &= "										THEN 100 - ABS(IFNULL(MR.MobyRank, 0) - IFNULL(MRC.MobyRank, 0))" & ControlChars.CrLf
 			sSQL &= "										ELSE NULL" & ControlChars.CrLf
@@ -4091,7 +4470,7 @@
 			sSQL &= "						, IFNULL(SimConf.Weight_401_Staff, 1)" & ControlChars.CrLf
 			sSQL &= "	FROM			tbl_Emu_Games EG" & ControlChars.CrLf
 			sSQL &= "	LEFT JOIN tbl_Moby_Games MG ON EG.Moby_Games_URLPart = MG.URLPart" & ControlChars.CrLf
-			sSQL &= "	LEFT JOIN tbl_Moby_Releases MR ON EG.id_Moby_Platforms = MR.id_Moby_Platforms AND MG.id_Moby_Games = MR.id_Moby_Games" & ControlChars.CrLf
+			sSQL &= "	LEFT JOIN tbl_Moby_Releases MR ON IFNULL(EG.id_Moby_Platforms_Alternative, EG.id_Moby_Platforms) = MR.id_Moby_Platforms AND MG.id_Moby_Games = MR.id_Moby_Games" & ControlChars.CrLf
 			sSQL &= "	LEFT JOIN tbl_Moby_Companies C1 ON MR.Publisher_id_Moby_Companies = C1.id_Moby_Companies" & ControlChars.CrLf
 			sSQL &= "	LEFT JOIN tbl_Moby_Companies C2 ON MR.Developer_id_Moby_Companies = C2.id_Moby_Companies" & ControlChars.CrLf
 			sSQL &= "" & ControlChars.CrLf
@@ -4296,8 +4675,8 @@
 		sSQL &= "FROM		ttb_Emu_Games_Similarity_Calculation EGSC" & ControlChars.CrLf
 		sSQL &= "INNER JOIN tbl_Emu_Games EG ON EGSC.id_Emu_Games = EG.id_Emu_Games" & ControlChars.CrLf
 		sSQL &= "LEFT JOIN tbl_Moby_Games MG ON EG.Moby_Games_URLPart = MG.URLPart" & ControlChars.CrLf
-		sSQL &= "LEFT JOIN tbl_Moby_Releases MR ON EG.id_Moby_Platforms = MR.id_Moby_Platforms AND MG.id_Moby_Games = MR.id_Moby_Games" & ControlChars.CrLf
-		sSQL &= "LEFT JOIN tbl_Moby_Platforms PLTFM ON EG.id_Moby_Platforms = PLTFM.id_Moby_Platforms" & ControlChars.CrLf
+		sSQL &= "LEFT JOIN tbl_Moby_Releases MR ON IFNULL(EG.id_Moby_Platforms_Alternative, EG.id_Moby_Platforms) = MR.id_Moby_Platforms AND MG.id_Moby_Games = MR.id_Moby_Games" & ControlChars.CrLf
+		sSQL &= "LEFT JOIN tbl_Moby_Platforms PLTFM ON IFNULL(EG.id_Moby_Platforms_Alternative, EG.id_Moby_Platforms) = PLTFM.id_Moby_Platforms" & ControlChars.CrLf
 
 		If Not Only_Show_Haves Then
 			sSQL &= "UNION" & ControlChars.CrLf
@@ -4400,7 +4779,7 @@
 		sSQL &= "					, SCRE.[401_Staff] AS [401_Staff]" & ControlChars.CrLf
 		sSQL &= "	FROM		tbl_Similarity_Calculation_Results_Entries SCRE" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Emu_Games EG ON SCRE.id_Emu_Games = EG.id_Emu_Games" & ControlChars.CrLf
-		sSQL &= "	LEFT JOIN tbl_Moby_Releases MR ON SCRE.id_Moby_Releases = MR.id_Moby_Releases --EG.id_Moby_Platforms = MR.id_Moby_Platforms AND MG.id_Moby_Games = MR.id_Moby_Games" & ControlChars.CrLf
+		sSQL &= "	LEFT JOIN tbl_Moby_Releases MR ON SCRE.id_Moby_Releases = MR.id_Moby_Releases --IFNULL(EG.id_Moby_Platforms_Alternative, EG.id_Moby_Platforms) = MR.id_Moby_Platforms AND MG.id_Moby_Games = MR.id_Moby_Games" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Moby_Games MG ON MR.id_Moby_Games = MG.id_Moby_Games" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Moby_Platforms PLTFM ON MR.id_Moby_Platforms = PLTFM.id_Moby_Platforms" & ControlChars.CrLf
 		sSQL &= "	WHERE SCRE.id_Similarity_Calculation_Results = " & TC.getSQLFormat(id_Similarity_Calculation_Results) & ControlChars.CrLf
@@ -4408,6 +4787,174 @@
 		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, sSQL, dt, tran)
 	End Sub
 
+	Public Shared Sub Fill_tbl_List_Generators(ByRef dt As tbl_List_GeneratorsDataTable, Optional ByVal id_List_Generators As Integer = 0, Optional ByVal OnlyRombase As Boolean = False)
+		dt.Clear()
+		Dim sSQL As String = ""
+
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "		-id_Rombase_List_Generators AS id_List_Generators" & ControlChars.CrLf
+		sSQL &= "		, Name" & ControlChars.CrLf
+		sSQL &= "		, Main_Template" & ControlChars.CrLf
+		sSQL &= "		, File_Entry_Template" & ControlChars.CrLf
+		sSQL &= "		, Sort" & ControlChars.CrLf
+		sSQL &= "FROM	rombase.tbl_Rombase_List_Generators" & ControlChars.CrLf
+		sSQL &= "WHERE	1=1" & ControlChars.CrLf
+		sSQL &= IIf(id_List_Generators < 0, " AND id_Rombase_List_Generators = " & TC.getSQLFormat(-1 * id_List_Generators), "") & ControlChars.CrLf
+
+		sSQL &= "UNION" & ControlChars.CrLf
+
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "		id_List_Generators" & ControlChars.CrLf
+		sSQL &= "		, Name" & ControlChars.CrLf
+		sSQL &= "		, Main_Template" & ControlChars.CrLf
+		sSQL &= "		, File_Entry_Template" & ControlChars.CrLf
+		sSQL &= "		, Sort" & ControlChars.CrLf
+		sSQL &= "FROM	tbl_List_Generators" & ControlChars.CrLf
+		sSQL &= "WHERE	" & IIf(OnlyRombase, "0=1", "1=1") & ControlChars.CrLf
+		sSQL &= IIf(id_List_Generators > 0, " AND id_List_Generators = " & TC.getSQLFormat(id_List_Generators), "") & ControlChars.CrLf
+
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
+	End Sub
+
+	Public Shared Sub Fill_static_List_Generators_Sort(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As static_List_Generator_SortDataTable)
+		dt.Clear()
+
+		Dim sSQL As String = ""
+		sSQL &= "SELECT	1 AS id_Sort, 'Ascending' AS Name" & ControlChars.CrLf
+		sSQL &= "UNION" & ControlChars.CrLf
+		sSQL &= "SELECT 2 As id_Sort, 'Descending' AS Name" & ControlChars.CrLf
+
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, sSQL, dt, tran)
+	End Sub
+
+	Public Shared Sub Fill_src_ucr_Emulation_Moby_Releases_Screenshots(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As src_ucr_Emulation_Moby_Releases_ScreenshotsDataTable, ByVal id_Moby_Releases As Object)
+		dt.Clear()
+
+		If TC.IsNullNothingOrEmpty(id_Moby_Releases) Then
+			Return
+		End If
+
+		Dim sSQL As String = ""
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "	MRS.id_Moby_Releases_Screenshots" & ControlChars.CrLf
+		sSQL &= "	, MRS.URL" & ControlChars.CrLf
+		sSQL &= "	, MRS.Description" & ControlChars.CrLf
+		sSQL &= "	, MRS.Description AS tmp_Description" & ControlChars.CrLf
+		sSQL &= "FROM moby.tbl_Moby_Releases_Screenshots AS MRS" & ControlChars.CrLf
+		sSQL &= "LEFT JOIN tbl_Moby_Extras_Properties PROP ON PROP.id_Moby_Releases = " & TC.getSQLFormat(id_Moby_Releases) & " AND PROP.id_Moby_Releases_Screenshots = MRS.id_Moby_Releases_Screenshots" & ControlChars.CrLf
+		sSQL &= "WHERE	MRS.deprecated = 0" & ControlChars.CrLf
+		sSQL &= "				AND MRS.id_Moby_Releases = " & TC.getSQLFormat(id_Moby_Releases) & ControlChars.CrLf
+		sSQL &= "				AND IFNULL(PROP.Show, 1) = 1" & ControlChars.CrLf
+		sSQL &= "ORDER BY PROP.Sort" & ControlChars.CrLf
+
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, sSQL, dt, tran)
+	End Sub
+
+	Public Shared Sub Fill_src_ucr_Emulation_Moby_Releases_Cover_Art(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As src_ucr_Emulation_Moby_Releases_Cover_ArtDataTable, ByVal id_Moby_Releases As Object)
+		dt.Clear()
+
+		If TC.IsNullNothingOrEmpty(id_Moby_Releases) Then
+			Return
+		End If
+
+		Dim sSQL As String = ""
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "	MRCA.id_Moby_Releases_Cover_Art" & ControlChars.CrLf
+		sSQL &= "	, MRCA.id_Moby_Cover_Art_Types" & ControlChars.CrLf
+		sSQL &= "	, MRCA.URL" & ControlChars.CrLf
+		sSQL &= "	, MRCA.Packaging" & ControlChars.CrLf
+		sSQL &= "	, MRCA.Comment" & ControlChars.CrLf
+		sSQL &= "	, MRCA.PackageComment" & ControlChars.CrLf
+		sSQL &= "	, ''" & ControlChars.CrLf
+		sSQL &= "		|| IFNULL(' ' || MRCA.Packaging, '')" & ControlChars.CrLf
+		sSQL &= "		|| IFNULL(' (' || MCAT.Name || ')', '')" & ControlChars.CrLf
+		sSQL &= "		|| IFNULL('\n' ||" & ControlChars.CrLf
+		sSQL &= "			(" & ControlChars.CrLf
+		sSQL &= "				SELECT GROUP_CONCAT(MR.Region, ', ')" & ControlChars.CrLf
+		sSQL &= "				FROM moby.tbl_Moby_Releases_Cover_Art_Regions MRCAR" & ControlChars.CrLf
+		sSQL &= "				INNER JOIN moby.tbl_Moby_Regions MR ON MRCAR.id_Moby_Regions = MR.id_Moby_Regions AND MRCAR.id_Moby_Releases_Cover_Art = MRCA.id_Moby_Releases_Cover_Art" & ControlChars.CrLf
+		sSQL &= "				ORDER BY MR.sort" & ControlChars.CrLf
+		sSQL &= "			)" & ControlChars.CrLf
+		sSQL &= "			, '')" & ControlChars.CrLf
+		sSQL &= "		AS tmp_Description" & ControlChars.CrLf
+		sSQL &= "FROM moby.tbl_Moby_Releases_Cover_Art MRCA" & ControlChars.CrLf
+		sSQL &= "LEFT JOIN moby.tbl_Moby_Cover_Art_Types MCAT ON MRCA.id_Moby_Cover_Art_Types = MCAT.id_Moby_Cover_Art_Types" & ControlChars.CrLf
+		sSQL &= "LEFT JOIN tbl_Moby_Extras_Properties PROP ON PROP.id_Moby_Releases = " & TC.getSQLFormat(id_Moby_Releases) & " AND PROP.id_Moby_Releases_Cover_Art = MRCA.id_Moby_Releases_Cover_Art" & ControlChars.CrLf
+		sSQL &= "WHERE	deprecated = 0" & ControlChars.CrLf
+		sSQL &= "				AND MRCA.id_Moby_Releases = " & TC.getSQLFormat(id_Moby_Releases) & ControlChars.CrLf
+		sSQL &= "				AND IFNULL(PROP.Show, 1) = 1" & ControlChars.CrLf
+		sSQL &= "				ORDER BY PROP.Sort"
+
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, sSQL, dt, tran)
+	End Sub
+
+	Public Shared Sub Fill_src_frm_MOBY_Extras_Manager(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As src_frm_MOBY_Extras_ManagerDataTable, ByVal id_Moby_Releases As Object)
+		dt.Clear()
+
+		If TC.IsNullNothingOrEmpty(id_Moby_Releases) Then
+			Return
+		End If
+
+		Dim sSQL As String = ""
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= " 'Cover Art' AS ExtraType" & ControlChars.CrLf
+		sSQL &= "	, MRCA.id_Moby_Releases_Cover_Art AS id_Moby_Releases_Cover_Art" & ControlChars.CrLf
+		sSQL &= "	, NULL AS id_Moby_Releases_Screenshots" & ControlChars.CrLf
+		sSQL &= "	, MRCA.URL AS URL" & ControlChars.CrLf
+		sSQL &= "	, ''" & ControlChars.CrLf
+		sSQL &= "		|| IFNULL(' ' || MRCA.Packaging, '')" & ControlChars.CrLf
+		sSQL &= "		|| IFNULL(' (' || MCAT.Name || ')', '')" & ControlChars.CrLf
+		sSQL &= "		|| IFNULL(' ' ||" & ControlChars.CrLf
+		sSQL &= "			(" & ControlChars.CrLf
+		sSQL &= "				SELECT GROUP_CONCAT(MR.Region, ', ')" & ControlChars.CrLf
+		sSQL &= "				FROM moby.tbl_Moby_Releases_Cover_Art_Regions MRCAR" & ControlChars.CrLf
+		sSQL &= "				INNER JOIN moby.tbl_Moby_Regions MR ON MRCAR.id_Moby_Regions = MR.id_Moby_Regions AND MRCAR.id_Moby_Releases_Cover_Art = MRCA.id_Moby_Releases_Cover_Art" & ControlChars.CrLf
+		sSQL &= "				ORDER BY MR.sort" & ControlChars.CrLf
+		sSQL &= "			)" & ControlChars.CrLf
+		sSQL &= "			, '')" & ControlChars.CrLf
+		sSQL &= "		AS tmp_Description" & ControlChars.CrLf
+		sSQL &= "	, PROP.Sort AS Sort" & ControlChars.CrLf
+		sSQL &= "	, IFNULL(PROP.Show, 1) AS Show" & ControlChars.CrLf
+		sSQL &= "	, PROP.id_Moby_Extras_Properties AS id_Moby_Extras_Properties" & ControlChars.CrLf
+		sSQL &= "FROM moby.tbl_Moby_Releases_Cover_Art MRCA" & ControlChars.CrLf
+		sSQL &= "LEFT JOIN moby.tbl_Moby_Cover_Art_Types MCAT ON MRCA.id_Moby_Cover_Art_Types = MCAT.id_Moby_Cover_Art_Types" & ControlChars.CrLf
+		sSQL &= "LEFT JOIN tbl_Moby_Extras_Properties PROP ON PROP.id_Moby_Releases = " & TC.getSQLFormat(id_Moby_Releases) & " AND PROP.id_Moby_Releases_Cover_Art = MRCA.id_Moby_Releases_Cover_Art" & ControlChars.CrLf
+		sSQL &= "WHERE	MRCA.deprecated = 0" & ControlChars.CrLf
+		sSQL &= "AND MRCA.id_Moby_Releases = " & TC.getSQLFormat(id_Moby_Releases) & ControlChars.CrLf
+
+		sSQL &= "UNION" & ControlChars.CrLf
+
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= " 'Screenshots' AS ExtraType" & ControlChars.CrLf
+		sSQL &= "	, NULL AS id_Moby_Releases_Cover_Art" & ControlChars.CrLf
+		sSQL &= "	, MRS.id_Moby_Releases_Screenshots" & ControlChars.CrLf
+		sSQL &= "	, MRS.URL" & ControlChars.CrLf
+		sSQL &= "	, MRS.Description AS tmp_Description" & ControlChars.CrLf
+		sSQL &= "	, PROP.Sort AS Sort" & ControlChars.CrLf
+		sSQL &= "	, IFNULL(PROP.Show, 1) AS Show" & ControlChars.CrLf
+		sSQL &= "	, PROP.id_Moby_Extras_Properties AS id_Moby_Extras_Properties" & ControlChars.CrLf
+		sSQL &= "FROM moby.tbl_Moby_Releases_Screenshots MRS" & ControlChars.CrLf
+		sSQL &= "LEFT JOIN tbl_Moby_Extras_Properties PROP ON PROP.id_Moby_Releases = " & TC.getSQLFormat(id_Moby_Releases) & " AND PROP.id_Moby_Releases_Screenshots = MRS.id_Moby_Releases_Screenshots" & ControlChars.CrLf
+		sSQL &= "WHERE	MRS.deprecated = 0" & ControlChars.CrLf
+		sSQL &= "				AND MRS.id_Moby_Releases = " & TC.getSQLFormat(id_Moby_Releases) & ControlChars.CrLf
+		sSQL &= "ORDER BY ExtraType, Sort" & ControlChars.CrLf
+
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, sSQL, dt, tran)
+	End Sub
+
+	Public Shared Sub Fill_tbl_Moby_Regions(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As tbl_Moby_RegionsDataTable)
+		Dim sSQL As String = ""
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "	id_Moby_Regions" & ControlChars.CrLf
+		sSQL &= "	, id_Moby_Regions_Owner" & ControlChars.CrLf
+		sSQL &= "	, Region" & ControlChars.CrLf
+		sSQL &= "	, Sort" & ControlChars.CrLf
+		sSQL &= "	, 0 AS tmp_Apply" & ControlChars.CrLf
+		sSQL &= "FROM moby.tbl_Moby_Regions" & ControlChars.CrLf
+		sSQL &= "ORDER BY SORT, Region"
+
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, sSQL, dt, tran)
+	End Sub
 #End Region
 
 #Region "Upsert Statements"
@@ -4418,7 +4965,7 @@
 	''' <param name="row"></param>
 	''' <remarks></remarks>
 	Public Sub Upsert_Rom_Manager_tbl_Emu_Games(ByRef tran As SQLite.SQLiteTransaction, ByRef row As DataRow)
-		Dim Column_Blacklist As String() = {"ROMBASE_id_Moby_Platforms", "id_Emu_Games", "Rating_Gameplay", "Rating_Graphics", "Rating_Sound", "Rating_Story", "Rating_Personal", "Num_Played", "Num_Runtime", "deprecated"}
+		Dim Column_Blacklist As String() = {"ROMBASE_id_Moby_Platforms", "id_Emu_Games", "Rating_Gameplay", "Rating_Graphics", "Rating_Sound", "Rating_Story", "Rating_Personal", "Num_Played", "Num_Runtime", "deprecated", "tmp_Highlighted"}
 
 		Dim id_Emu_Games As Object = Nothing
 		If TC.NZ(row("id_Emu_Games"), 0) > 0 Then
@@ -4741,6 +5288,81 @@
 		Return id_DOSBox_Configs
 	End Function
 
+	Public Shared Function Upsert_tbl_ScummVM_Configs_Templates(ByRef tran As SQLite.SQLiteTransaction, ByRef row As DS_ML.tbl_ScummVM_ConfigsRow, Optional ByVal Create_Duplicate As Boolean = False, Optional ByVal New_Template_Name As String = "") As Int64
+		Dim tbl_RB As New DS_ML.tbl_ScummVM_ConfigsDataTable
+
+		If Not Create_Duplicate Then
+			If TC.NZ(row("id_Rombase_ScummVM_Configs"), 0) > 0 Then
+				DataAccess.FireProcedureReturnDT(tran.Connection, 0, False, "SELECT * FROM rombase.tbl_Rombase_ScummVM_Configs WHERE id_Rombase_ScummVM_Configs = " & TC.getSQLFormat(row("id_Rombase_ScummVM_Configs")), tbl_RB, tran)
+			End If
+		End If
+
+		Dim row_RB As DataRow = Nothing
+		If tbl_RB.Rows.Count = 1 Then
+			row_RB = tbl_RB.Rows(0)
+		End If
+
+		Dim id_ScummVM_Configs As Int64 = 0
+
+		'Insert a new default ScummVM Config or Update an existing one
+		'Only add values if they differ from row_RB
+		If Not Create_Duplicate AndAlso TC.NZ(row("id_ScummVM_Configs"), 0) > 0 Then
+			'Update
+			Dim sSQL As String = ""
+			sSQL &= "	UPDATE tbl_ScummVM_Configs SET" & ControlChars.CrLf
+
+			sSQL &= "	isTemplate = " & TC.getSQLFormat(1) & ControlChars.CrLf
+			sSQL &= "	, id_Rombase_ScummVM_Configs = " & TC.getSQLFormat(row("id_Rombase_ScummVM_Configs")) & ControlChars.CrLf
+
+			For Each col As DataColumn In row.Table.Columns
+				If Not {"id_ScummVM_Configs", "id_Rombase_ScummVM_Configs"}.Contains(col.ColumnName) Then
+					sSQL &= "	, [" & col.ColumnName & "] = " & IIf(row_RB IsNot Nothing AndAlso MKNetLib.cls_MKSQLDataAccess.HasColumn(row_RB, col.ColumnName) AndAlso Equals(row(col.ColumnName), row_RB(col.ColumnName)), TC.getSQLFormat(DBNull.Value), TC.getSQLFormat(row(col.ColumnName))) & ControlChars.CrLf
+				End If
+			Next
+
+			sSQL &= "	WHERE id_ScummVM_Configs = " & TC.getSQLFormat(row("id_ScummVM_Configs"))
+
+			DataAccess.FireProcedure(tran.Connection, 0, sSQL, tran)
+			tran.Commit()
+			id_ScummVM_Configs = row("id_ScummVM_Configs")
+		Else
+			'Insert
+			Dim sSQL As String = ""
+			sSQL &= "	INSERT INTO tbl_ScummVM_Configs" & ControlChars.CrLf
+
+			Dim sSQL_Columns As String = "	(" & ControlChars.CrLf
+			Dim sSQL_Values As String = "	(" & ControlChars.CrLf
+
+			sSQL_Columns &= "	isTemplate" & ControlChars.CrLf
+			sSQL_Columns &= "	, id_Rombase_ScummVM_Configs" & ControlChars.CrLf
+
+
+			sSQL_Values &= "	" & TC.getSQLFormat(1) & ControlChars.CrLf
+			sSQL_Values &= "	, " & IIf(Create_Duplicate, "NULL", TC.getSQLFormat(row("id_Rombase_ScummVM_Configs"))) & ControlChars.CrLf
+
+			For Each col As DataColumn In row.Table.Columns
+				If Not {"id_ScummVM_Configs", "id_Rombase_ScummVM_Configs"}.Contains(col.ColumnName) Then
+					sSQL_Columns &= "	, [" & col.ColumnName & "] " & ControlChars.CrLf
+					If col.ColumnName = "Displayname" AndAlso TC.NZ(New_Template_Name, "") <> "" Then
+						sSQL_Values &= "	, " & TC.getSQLFormat(New_Template_Name)
+					Else
+						sSQL_Values &= "	, " & IIf(row_RB IsNot Nothing AndAlso MKNetLib.cls_MKSQLDataAccess.HasColumn(row_RB, col.ColumnName) AndAlso Equals(row(col.ColumnName), row_RB(col.ColumnName)), TC.getSQLFormat(DBNull.Value), TC.getSQLFormat(row(col.ColumnName))) & ControlChars.CrLf
+					End If
+				End If
+			Next
+
+			sSQL_Columns &= "	)" & ControlChars.CrLf & " VALUES " & ControlChars.CrLf
+			sSQL_Values &= "	)" & ControlChars.CrLf
+
+			sSQL &= sSQL_Columns & sSQL_Values & "; SELECT last_insert_rowid()"
+
+			id_ScummVM_Configs = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, sSQL, tran), 0)
+			tran.Commit()
+		End If
+
+		Return id_ScummVM_Configs
+	End Function
+
 	Public Shared Function Upsert_tbl_DOSBox_Config(ByRef tran As SQLite.SQLiteTransaction, ByRef row As DS_ML.tbl_DOSBox_ConfigsRow, ByVal id_Emu_Games As Long) As Int64
 		Dim id_DOSBox_Config_Template As Long = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "SELECT id_DOSBox_Configs_Template FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games), tran), 0)
 		Dim id_DOSBox_Config As Long = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "SELECT id_DOSBox_Configs FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games), tran), 0)
@@ -4808,6 +5430,75 @@
 		End If
 
 		Return id_DOSBox_Config
+	End Function
+
+	Public Shared Function Upsert_tbl_ScummVM_Config(ByRef tran As SQLite.SQLiteTransaction, ByRef row As DS_ML.tbl_ScummVM_ConfigsRow, ByVal id_Emu_Games As Long) As Int64
+		Dim id_ScummVM_Config_Template As Long = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "SELECT id_ScummVM_Configs_Template FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games), tran), 0)
+		Dim id_ScummVM_Config As Long = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "SELECT id_ScummVM_Configs FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games), tran), 0)
+
+		Dim row_Template As DataRow = Nothing
+
+		Dim tbl_Template As DS_ML.tbl_ScummVM_ConfigsDataTable = Nothing
+		If id_ScummVM_Config_Template <> 0 Then
+			DS_ML.Fill_tbl_ScummVM_Template_Configs(tran, tbl_Template, id_ScummVM_Config_Template)
+		End If
+
+		If tbl_Template.Rows.Count = 1 Then
+			row_Template = tbl_Template.Rows(0)
+		End If
+
+		'Insert a new ScummVM Config for the game or Update an existing one
+		'Only add values if they differ from row_Template
+		If id_ScummVM_Config <> 0 Then
+			'Update
+			Dim sSQL As String = ""
+			sSQL &= "	UPDATE tbl_ScummVM_Configs SET" & ControlChars.CrLf
+
+			sSQL &= "	isTemplate = " & TC.getSQLFormat(DBNull.Value) & ControlChars.CrLf
+			sSQL &= "	, id_Rombase_ScummVM_Configs = " & TC.getSQLFormat(DBNull.Value) & ControlChars.CrLf
+
+			For Each col As DataColumn In row.Table.Columns
+				If Not {"id_ScummVM_Configs", "id_Rombase_ScummVM_Configs"}.Contains(col.ColumnName) Then
+					sSQL &= "	, [" & col.ColumnName & "] = " & IIf(row_Template IsNot Nothing AndAlso MKNetLib.cls_MKSQLDataAccess.HasColumn(row_Template, col.ColumnName) AndAlso Equals(row(col.ColumnName), row_Template(col.ColumnName)), TC.getSQLFormat(DBNull.Value), TC.getSQLFormat(row(col.ColumnName))) & ControlChars.CrLf
+				End If
+			Next
+
+			sSQL &= "	WHERE id_ScummVM_Configs = " & TC.getSQLFormat(row("id_ScummVM_Configs"))
+
+			DataAccess.FireProcedure(tran.Connection, 0, sSQL, tran)
+		Else
+			'Insert
+			Dim sSQL As String = ""
+			sSQL &= "	INSERT INTO tbl_ScummVM_Configs" & ControlChars.CrLf
+
+			Dim sSQL_Columns As String = "	(" & ControlChars.CrLf
+			Dim sSQL_Values As String = "	(" & ControlChars.CrLf
+
+			sSQL_Columns &= "	isTemplate" & ControlChars.CrLf
+			sSQL_Columns &= "	, id_Rombase_ScummVM_Configs" & ControlChars.CrLf
+
+
+			sSQL_Values &= TC.getSQLFormat(DBNull.Value)
+			sSQL_Values &= ", " & TC.getSQLFormat(DBNull.Value)
+
+			For Each col As DataColumn In row.Table.Columns
+				If Not {"id_ScummVM_Configs", "id_Rombase_ScummVM_Configs"}.Contains(col.ColumnName) Then
+					sSQL_Columns &= "	, [" & col.ColumnName & "] " & ControlChars.CrLf
+					sSQL_Values &= "	, " & IIf(row_Template IsNot Nothing AndAlso MKNetLib.cls_MKSQLDataAccess.HasColumn(row_Template, col.ColumnName) AndAlso Equals(row(col.ColumnName), row_Template(col.ColumnName)), TC.getSQLFormat(DBNull.Value), TC.getSQLFormat(row(col.ColumnName))) & ControlChars.CrLf
+				End If
+			Next
+
+			sSQL_Columns &= "	)" & ControlChars.CrLf & " VALUES " & ControlChars.CrLf
+			sSQL_Values &= "	)" & ControlChars.CrLf
+
+			sSQL &= sSQL_Columns & sSQL_Values & "; SELECT last_insert_rowid()"
+
+			id_ScummVM_Config = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, sSQL, tran), 0)
+
+			DataAccess.FireProcedure(tran.Connection, 0, "UPDATE tbl_Emu_Games SET id_ScummVM_Configs = " & TC.getSQLFormat(id_ScummVM_Config) & " WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games), tran)
+		End If
+
+		Return id_ScummVM_Config
 	End Function
 
 	Public Shared Sub Upsert_tbl_Users(ByRef tran As SQLite.SQLiteTransaction, ByRef tbl_Users As DS_ML.tbl_UsersDataTable)
@@ -5002,6 +5693,15 @@
 
 		Return id_Similarity_Calculation_Results
 	End Function
+
+	Public Shared Function Upsert_tbl_List_Generators(ByRef tran As SQLite.SQLiteTransaction, ByVal Name As String, ByVal Sort As Int64, ByVal Main_Template As String, ByVal File_Entry_Template As String, Optional ByVal id_List_Generators As Int64 = 0L) As Int64
+		If id_List_Generators = 0L Then
+			Return DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "INSERT INTO tbl_List_Generators (Name, Sort, Main_Template, File_Entry_Template) VALUES (" & TC.getSQLParameter(Name, Sort, Main_Template, File_Entry_Template) & "); SELECT last_insert_rowid()", tran)
+		Else
+			DataAccess.FireProcedure(tran.Connection, 0, "UPDATE tbl_List_Generators SET Name = " & TC.getSQLFormat(Name) & ", Sort = " & TC.getSQLFormat(Sort) & ", Main_Template = " & TC.getSQLFormat(Main_Template) & ", File_Entry_Template = " & TC.getSQLFormat(File_Entry_Template) & " WHERE id_List_Generators = " & TC.getSQLFormat(id_List_Generators), tran)
+			Return id_List_Generators
+		End If
+	End Function
 #End Region
 
 #Region "Delete Statements"
@@ -5015,15 +5715,15 @@
 	Public Sub Merge_tbl_Emu_Games_Alternate_Titles(ByRef tran As SQLite.SQLiteTransaction, ByVal old_id_Emu_Games As Integer, ByVal new_id_Emu_Games As Integer)
 		Dim sSQL As String = ""
 		sSQL &= "	UPDATE tbl_Emu_Games_Alternate_Titles"
-		sSQL &= "	SET id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games)
+		sSQL &= "	Set id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games)
 		sSQL &= "	WHERE	id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games)
-		sSQL &= "				AND	NOT EXISTS"
+		sSQL &= "				And	Not EXISTS"
 		sSQL &= "				("
-		sSQL &= "					SELECT * FROM"
+		sSQL &= "					Select * FROM"
 		sSQL &= "					tbl_Emu_Games_Alternate_Titles AT2 "
 		sSQL &= "					WHERE AT2.id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games)
-		sSQL &= "								AND AT2.Alternate_Title = tbl_Emu_Games_Alternate_Titles.Alternate_Title"
-		sSQL &= "								AND AT2.Description = tbl_Emu_Games_Alternate_Titles.Description"
+		sSQL &= "								And AT2.Alternate_Title = tbl_Emu_Games_Alternate_Titles.Alternate_Title"
+		sSQL &= "								And AT2.Description = tbl_Emu_Games_Alternate_Titles.Description"
 		sSQL &= "				)"
 		sSQL &= "	;"
 		sSQL &= "	DELETE FROM tbl_Emu_Games_Alternate_Titles WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games)
@@ -5033,14 +5733,14 @@
 	Public Sub Merge_tbl_Emu_Games_Languages(ByRef tran As SQLite.SQLiteTransaction, ByVal old_id_Emu_Games As Integer, ByVal new_id_Emu_Games As Integer)
 		Dim sSQL As String = ""
 		sSQL &= "	UPDATE tbl_Emu_Games_Languages"
-		sSQL &= "	SET id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games)
+		sSQL &= "	Set id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games)
 		sSQL &= "	WHERE	id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games)
-		sSQL &= "				AND	NOT EXISTS"
+		sSQL &= "				And	Not EXISTS"
 		sSQL &= "				("
-		sSQL &= "					SELECT * FROM"
+		sSQL &= "					Select * FROM"
 		sSQL &= "					tbl_Emu_Games_Languages EGL2 "
 		sSQL &= "					WHERE EGL2.id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games)
-		sSQL &= "								AND EGL2.id_Languages = tbl_Emu_Games_Languages.id_Languages"
+		sSQL &= "								And EGL2.id_Languages = tbl_Emu_Games_Languages.id_Languages"
 		sSQL &= "				)"
 		sSQL &= "	;"
 		sSQL &= "	DELETE FROM tbl_Emu_Games_Languages WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games)
@@ -5050,14 +5750,14 @@
 	Public Sub Merge_tbl_Emu_Games_Moby_Attributes(ByRef tran As SQLite.SQLiteTransaction, ByVal old_id_Emu_Games As Integer, ByVal new_id_Emu_Games As Integer)
 		Dim sSQL As String = ""
 		sSQL &= "	UPDATE tbl_Emu_Games_Moby_Attributes"
-		sSQL &= "	SET id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games)
+		sSQL &= "	Set id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games)
 		sSQL &= "	WHERE	id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games)
-		sSQL &= "				AND	NOT EXISTS"
+		sSQL &= "				And	Not EXISTS"
 		sSQL &= "				("
-		sSQL &= "					SELECT * FROM"
+		sSQL &= "					Select * FROM"
 		sSQL &= "					tbl_Emu_Games_Moby_Attributes EGMA2"
 		sSQL &= "					WHERE EGMA2.id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games)
-		sSQL &= "								AND EGMA2.id_Moby_Attributes = tbl_Emu_Games_Moby_Attributes.id_Moby_Attributes"
+		sSQL &= "								And EGMA2.id_Moby_Attributes = tbl_Emu_Games_Moby_Attributes.id_Moby_Attributes"
 		sSQL &= "				)"
 		sSQL &= "	;"
 		sSQL &= "	DELETE FROM tbl_Emu_Games_Moby_Attributes WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games)
@@ -5067,14 +5767,14 @@
 	Public Sub Merge_tbl_Emu_Games_Moby_Genres(ByRef tran As SQLite.SQLiteTransaction, ByVal old_id_Emu_Games As Integer, ByVal new_id_Emu_Games As Integer)
 		Dim sSQL As String = ""
 		sSQL &= "	UPDATE tbl_Emu_Games_Moby_Genres"
-		sSQL &= "	SET id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games)
+		sSQL &= "	Set id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games)
 		sSQL &= "	WHERE	id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games)
-		sSQL &= "				AND	NOT EXISTS"
+		sSQL &= "				And	Not EXISTS"
 		sSQL &= "				("
-		sSQL &= "					SELECT * FROM"
+		sSQL &= "					Select * FROM"
 		sSQL &= "					tbl_Emu_Games_Moby_Genres EGMG2"
 		sSQL &= "					WHERE EGMG2.id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games)
-		sSQL &= "								AND EGMG2.id_Moby_Genres = tbl_Emu_Games_Moby_Genres.id_Moby_Genres"
+		sSQL &= "								And EGMG2.id_Moby_Genres = tbl_Emu_Games_Moby_Genres.id_Moby_Genres"
 		sSQL &= "				)"
 		sSQL &= "	;"
 		sSQL &= "	DELETE FROM tbl_Emu_Games_Moby_Genres WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games)
@@ -5084,14 +5784,14 @@
 	Public Sub Merge_tbl_Emu_Games_Regions(ByRef tran As SQLite.SQLiteTransaction, ByVal old_id_Emu_Games As Integer, ByVal new_id_Emu_Games As Integer)
 		Dim sSQL As String = ""
 		sSQL &= "	UPDATE tbl_Emu_Games_Regions"
-		sSQL &= "	SET id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games)
+		sSQL &= "	Set id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games)
 		sSQL &= "	WHERE	id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games)
-		sSQL &= "				AND	NOT EXISTS"
+		sSQL &= "				And	Not EXISTS"
 		sSQL &= "				("
-		sSQL &= "					SELECT * FROM"
+		sSQL &= "					Select * FROM"
 		sSQL &= "					tbl_Emu_Games_Regions EGR2"
 		sSQL &= "					WHERE EGR2.id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games)
-		sSQL &= "								AND EGR2.id_Regions = tbl_Emu_Games_Regions.id_Regions"
+		sSQL &= "								And EGR2.id_Regions = tbl_Emu_Games_Regions.id_Regions"
 		sSQL &= "				)"
 		sSQL &= "	;"
 		sSQL &= "	DELETE FROM tbl_Emu_Games_Regions WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games)
@@ -5101,49 +5801,49 @@
 	Public Sub Merge_tbl_Emu_Games(ByRef tran As SQLite.SQLiteTransaction, ByVal old_id_Emu_Games As Integer, ByVal new_id_Emu_Games As Integer)
 		Dim sSQL As String = ""
 		sSQL &= "	UPDATE tbl_Emu_Games"
-		sSQL &= "	SET		Hidden = IFNULL((SELECT Hidden FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Hidden)"
-		sSQL &= "				, Moby_Games_URLPart = IFNULL((SELECT Moby_Games_URLPart FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Moby_Games_URLPart)"
-		sSQL &= "				, id_Moby_Platforms = IFNULL((SELECT id_Moby_Platforms FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), id_Moby_Platforms)"
-		sSQL &= "				, id_Rombase = IFNULL((SELECT id_Rombase FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), id_Rombase)"
-		sSQL &= "				, id_Emulators = IFNULL((SELECT id_Emulators FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), id_Emulators)"
-		sSQL &= "				, Name = IFNULL((SELECT Name FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Name)"
-		sSQL &= "				, Name_Prefix = IFNULL((SELECT Name_Prefix FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Name_Prefix)"
-		sSQL &= "				, Note = IFNULL((SELECT Note FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Note)"
-		sSQL &= "				, Publisher = IFNULL((SELECT Publisher FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Publisher)"
-		sSQL &= "				, Publisher_id_Moby_Companies = IFNULL((SELECT Publisher_id_Moby_Companies FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Publisher_id_Moby_Companies)"
-		sSQL &= "				, Developer = IFNULL((SELECT Developer FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Developer)"
-		sSQL &= "				, Developer_id_Moby_Companies = IFNULL((SELECT Developer_id_Moby_Companies FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Developer_id_Moby_Companies)"
-		sSQL &= "				, Description = IFNULL((SELECT Description FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Description)"
-		sSQL &= "				, Favourite = IFNULL((SELECT Favourite FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Favourite)"
-		sSQL &= "				, Rating_Gameplay = IFNULL((SELECT Rating_Gameplay FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Rating_Gameplay)"
-		sSQL &= "				, Rating_Graphics = IFNULL((SELECT Rating_Graphics FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Rating_Graphics)"
-		sSQL &= "				, Rating_Sound = IFNULL((SELECT Rating_Sound FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Rating_Sound)"
-		sSQL &= "				, Rating_Story = IFNULL((SELECT Rating_Story FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Rating_Story)"
-		sSQL &= "				, Rating_Personal = IFNULL((SELECT Rating_Personal FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Rating_Personal)"
-		sSQL &= "				, Num_Played = IFNULL((SELECT Num_Played FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Num_Played)"
-		sSQL &= "				, Num_Runtime = IFNULL((SELECT Num_Runtime FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Num_Runtime)"
-		sSQL &= "				, Year = IFNULL((SELECT Year FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Year)"
-		sSQL &= "				, Version = IFNULL((SELECT Version FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Version)"
-		sSQL &= "				, Alt = IFNULL((SELECT Alt FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Alt)"
-		sSQL &= "				, Trainer = IFNULL((SELECT Trainer FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Trainer)"
-		sSQL &= "				, Translation = IFNULL((SELECT Translation FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Translation)"
-		sSQL &= "				, Hack = IFNULL((SELECT Hack FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Hack)"
-		sSQL &= "				, Bios = IFNULL((SELECT Bios FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Bios)"
-		sSQL &= "				, Prototype = IFNULL((SELECT Prototype FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Prototype)"
-		sSQL &= "				, Alpha = IFNULL((SELECT Alpha FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Alpha)"
-		sSQL &= "				, Beta = IFNULL((SELECT Beta FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Beta)"
-		sSQL &= "				, Sample = IFNULL((SELECT Sample FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Sample)"
-		sSQL &= "				, Kiosk = IFNULL((SELECT Kiosk FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Kiosk)"
-		sSQL &= "				, Unlicensed = IFNULL((SELECT Unlicensed FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Unlicensed)"
-		sSQL &= "				, Fixed = IFNULL((SELECT Fixed FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Fixed)"
-		sSQL &= "				, Pirated = IFNULL((SELECT Pirated FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Pirated)"
-		sSQL &= "				, Good = IFNULL((SELECT Good FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Good)"
-		sSQL &= "				, Bad = IFNULL((SELECT Bad FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Bad)"
-		sSQL &= "				, Overdump = IFNULL((SELECT Overdump FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Overdump)"
-		sSQL &= "				, PublicDomain = IFNULL((SELECT PublicDomain FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), PublicDomain)"
-		sSQL &= "	WHERE	id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games) & " OR id_Emu_Games_Owner = " & TC.getSQLFormat(new_id_Emu_Games)
+		sSQL &= "	Set		Hidden = IFNULL((Select Hidden FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Hidden)"
+		sSQL &= "				, Moby_Games_URLPart = IFNULL((Select Moby_Games_URLPart FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Moby_Games_URLPart)"
+		sSQL &= "				, id_Moby_Platforms = IFNULL((Select id_Moby_Platforms FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), id_Moby_Platforms)"
+		sSQL &= "				, id_Rombase = IFNULL((Select id_Rombase FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), id_Rombase)"
+		sSQL &= "				, id_Emulators = IFNULL((Select id_Emulators FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), id_Emulators)"
+		sSQL &= "				, Name = IFNULL((Select Name FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Name)"
+		sSQL &= "				, Name_Prefix = IFNULL((Select Name_Prefix FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Name_Prefix)"
+		sSQL &= "				, Note = IFNULL((Select Note FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Note)"
+		sSQL &= "				, Publisher = IFNULL((Select Publisher FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Publisher)"
+		sSQL &= "				, Publisher_id_Moby_Companies = IFNULL((Select Publisher_id_Moby_Companies FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Publisher_id_Moby_Companies)"
+		sSQL &= "				, Developer = IFNULL((Select Developer FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Developer)"
+		sSQL &= "				, Developer_id_Moby_Companies = IFNULL((Select Developer_id_Moby_Companies FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Developer_id_Moby_Companies)"
+		sSQL &= "				, Description = IFNULL((Select Description FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Description)"
+		sSQL &= "				, Favourite = IFNULL((Select Favourite FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Favourite)"
+		sSQL &= "				, Rating_Gameplay = IFNULL((Select Rating_Gameplay FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Rating_Gameplay)"
+		sSQL &= "				, Rating_Graphics = IFNULL((Select Rating_Graphics FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Rating_Graphics)"
+		sSQL &= "				, Rating_Sound = IFNULL((Select Rating_Sound FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Rating_Sound)"
+		sSQL &= "				, Rating_Story = IFNULL((Select Rating_Story FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Rating_Story)"
+		sSQL &= "				, Rating_Personal = IFNULL((Select Rating_Personal FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Rating_Personal)"
+		sSQL &= "				, Num_Played = IFNULL((Select Num_Played FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Num_Played)"
+		sSQL &= "				, Num_Runtime = IFNULL((Select Num_Runtime FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Num_Runtime)"
+		sSQL &= "				, Year = IFNULL((Select Year FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Year)"
+		sSQL &= "				, Version = IFNULL((Select Version FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Version)"
+		sSQL &= "				, Alt = IFNULL((Select Alt FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Alt)"
+		sSQL &= "				, Trainer = IFNULL((Select Trainer FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Trainer)"
+		sSQL &= "				, Translation = IFNULL((Select Translation FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Translation)"
+		sSQL &= "				, Hack = IFNULL((Select Hack FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Hack)"
+		sSQL &= "				, Bios = IFNULL((Select Bios FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Bios)"
+		sSQL &= "				, Prototype = IFNULL((Select Prototype FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Prototype)"
+		sSQL &= "				, Alpha = IFNULL((Select Alpha FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Alpha)"
+		sSQL &= "				, Beta = IFNULL((Select Beta FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Beta)"
+		sSQL &= "				, Sample = IFNULL((Select Sample FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Sample)"
+		sSQL &= "				, Kiosk = IFNULL((Select Kiosk FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Kiosk)"
+		sSQL &= "				, Unlicensed = IFNULL((Select Unlicensed FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Unlicensed)"
+		sSQL &= "				, Fixed = IFNULL((Select Fixed FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Fixed)"
+		sSQL &= "				, Pirated = IFNULL((Select Pirated FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Pirated)"
+		sSQL &= "				, Good = IFNULL((Select Good FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Good)"
+		sSQL &= "				, Bad = IFNULL((Select Bad FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Bad)"
+		sSQL &= "				, Overdump = IFNULL((Select Overdump FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), Overdump)"
+		sSQL &= "				, PublicDomain = IFNULL((Select PublicDomain FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & "), PublicDomain)"
+		sSQL &= "	WHERE	id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games) & " Or id_Emu_Games_Owner = " & TC.getSQLFormat(new_id_Emu_Games)
 		sSQL &= "	;"
-		sSQL &= "	DELETE FROM tbl_Emu_Games WHERE	id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & " OR id_Emu_Games_Owner = " & TC.getSQLFormat(old_id_Emu_Games)
+		sSQL &= "	DELETE FROM tbl_Emu_Games WHERE	id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games) & " Or id_Emu_Games_Owner = " & TC.getSQLFormat(old_id_Emu_Games)
 		DataAccess.FireProcedure(tran.Connection, 0, sSQL, tran)
 	End Sub
 #End Region
@@ -5154,7 +5854,7 @@
 		sSQL &= "	" & ControlChars.CrLf
 		sSQL &= "			, " & CacheName & " =" & ControlChars.CrLf
 		sSQL &= "				(" & ControlChars.CrLf
-		sSQL &= "					SELECT group_concat(Name, ', ')" & ControlChars.CrLf
+		sSQL &= "					Select group_concat(Name, ', ')" & ControlChars.CrLf
 		sSQL &= "					FROM" & ControlChars.CrLf
 		sSQL &= "					(	SELECT Name FROM"
 		sSQL &= "						(" & ControlChars.CrLf
@@ -5186,7 +5886,7 @@
 		sSQL &= "	UPDATE tbl_Emu_Games" & ControlChars.CrLf
 		sSQL &= "	SET	 	Cache_Regions = " & ControlChars.CrLf
 		sSQL &= "				(" & ControlChars.CrLf
-		sSQL &= "					SELECT group_concat(R.Region, ',') FROM tbl_Emu_Games_Regions EGR INNER JOIN tbl_Regions R ON EGR.id_Regions = R.id_Regions WHERE EGR.id_Emu_Games = tbl_Emu_Games.id_Emu_Games" & ControlChars.CrLf
+		sSQL &= "					SELECT group_concat(R.Region, ',') FROM tbl_Emu_Games_Regions EGR INNER JOIN moby.tbl_Moby_Regions R ON EGR.id_Regions = R.id_Moby_Regions WHERE EGR.id_Emu_Games = tbl_Emu_Games.id_Emu_Games" & ControlChars.CrLf
 		sSQL &= "				)" & ControlChars.CrLf
 		sSQL &= "	" & ControlChars.CrLf
 		sSQL &= "			,	Cache_Languages = " & ControlChars.CrLf
@@ -5201,7 +5901,7 @@
 		sSQL &= "					(" & ControlChars.CrLf
 		sSQL &= "						SELECT id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "						FROM tbl_Moby_Releases_Attributes RA" & ControlChars.CrLf
-		sSQL &= "						WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM moby.tbl_Moby_Releases REL WHERE REL.id_Moby_Platforms = tbl_Emu_Games.id_Moby_Platforms AND REL.id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = tbl_Emu_Games.Moby_Games_URLPart))" & ControlChars.CrLf
+		sSQL &= "						WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM moby.tbl_Moby_Releases REL WHERE REL.id_Moby_Platforms = IFNULL(tbl_Emu_Games.id_Moby_Platforms_Alternative, tbl_Emu_Games.id_Moby_Platforms) AND REL.id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = tbl_Emu_Games.Moby_Games_URLPart))" & ControlChars.CrLf
 		sSQL &= "						UNION SELECT id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "						FROM tbl_Emu_Games_Moby_Attributes EGMA" & ControlChars.CrLf
 		sSQL &= "						WHERE EGMA.id_Emu_Games = tbl_Emu_Games.id_Emu_Games" & ControlChars.CrLf
@@ -5223,7 +5923,7 @@
 		sSQL &= "					(" & ControlChars.CrLf
 		sSQL &= "						SELECT id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "						FROM tbl_Moby_Releases_Attributes RA" & ControlChars.CrLf
-		sSQL &= "						WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM moby.tbl_Moby_Releases REL WHERE REL.id_Moby_Platforms = tbl_Emu_Games.id_Moby_Platforms AND REL.id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = tbl_Emu_Games.Moby_Games_URLPart))" & ControlChars.CrLf
+		sSQL &= "						WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM moby.tbl_Moby_Releases REL WHERE REL.id_Moby_Platforms = IFNULL(tbl_Emu_Games.id_Moby_Platforms_Alternative, tbl_Emu_Games.id_Moby_Platforms) AND REL.id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = tbl_Emu_Games.Moby_Games_URLPart))" & ControlChars.CrLf
 		sSQL &= "						UNION SELECT id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "						FROM tbl_Emu_Games_Moby_Attributes EGMA" & ControlChars.CrLf
 		sSQL &= "						WHERE EGMA.id_Emu_Games = tbl_Emu_Games.id_Emu_Games" & ControlChars.CrLf
@@ -5271,7 +5971,7 @@
 		sSQL &= "					(" & ControlChars.CrLf
 		sSQL &= "						SELECT id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "						FROM tbl_Moby_Releases_Attributes RA" & ControlChars.CrLf
-		sSQL &= "						WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM moby.tbl_Moby_Releases REL WHERE REL.id_Moby_Platforms = tbl_Emu_Games.id_Moby_Platforms AND REL.id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = tbl_Emu_Games.Moby_Games_URLPart))" & ControlChars.CrLf
+		sSQL &= "						WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM moby.tbl_Moby_Releases REL WHERE REL.id_Moby_Platforms = IFNULL(tbl_Emu_Games.id_Moby_Platforms_Alternative, tbl_Emu_Games.id_Moby_Platforms) AND REL.id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = tbl_Emu_Games.Moby_Games_URLPart))" & ControlChars.CrLf
 		sSQL &= "						UNION" & ControlChars.CrLf
 		sSQL &= "						SELECT id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "						FROM tbl_Emu_Games_Moby_Attributes EGMA" & ControlChars.CrLf
@@ -5294,7 +5994,7 @@
 		sSQL &= "					(" & ControlChars.CrLf
 		sSQL &= "						SELECT id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "						FROM tbl_Moby_Releases_Attributes RA" & ControlChars.CrLf
-		sSQL &= "						WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM moby.tbl_Moby_Releases REL WHERE REL.id_Moby_Platforms = tbl_Emu_Games.id_Moby_Platforms AND REL.id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = tbl_Emu_Games.Moby_Games_URLPart))" & ControlChars.CrLf
+		sSQL &= "						WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM moby.tbl_Moby_Releases REL WHERE REL.id_Moby_Platforms = IFNULL(tbl_Emu_Games.id_Moby_Platforms_Alternative, tbl_Emu_Games.id_Moby_Platforms) AND REL.id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = tbl_Emu_Games.Moby_Games_URLPart))" & ControlChars.CrLf
 		sSQL &= "						UNION SELECT id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "						FROM tbl_Emu_Games_Moby_Attributes EGMA" & ControlChars.CrLf
 		sSQL &= "						WHERE EGMA.id_Emu_Games = tbl_Emu_Games.id_Emu_Games" & ControlChars.CrLf
@@ -5316,7 +6016,7 @@
 		sSQL &= "					(" & ControlChars.CrLf
 		sSQL &= "						SELECT id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "						FROM tbl_Moby_Releases_Attributes RA" & ControlChars.CrLf
-		sSQL &= "						WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM moby.tbl_Moby_Releases REL WHERE REL.id_Moby_Platforms = tbl_Emu_Games.id_Moby_Platforms AND REL.id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = tbl_Emu_Games.Moby_Games_URLPart))" & ControlChars.CrLf
+		sSQL &= "						WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM moby.tbl_Moby_Releases REL WHERE REL.id_Moby_Platforms = IFNULL(tbl_Emu_Games.id_Moby_Platforms_Alternative, tbl_Emu_Games.id_Moby_Platforms) AND REL.id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = tbl_Emu_Games.Moby_Games_URLPart))" & ControlChars.CrLf
 		sSQL &= "						UNION" & ControlChars.CrLf
 		sSQL &= "						SELECT id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "						FROM tbl_Emu_Games_Moby_Attributes EGMA" & ControlChars.CrLf
@@ -5340,7 +6040,7 @@
 		sSQL &= "					(" & ControlChars.CrLf
 		sSQL &= "						SELECT id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "						FROM tbl_Moby_Releases_Attributes RA" & ControlChars.CrLf
-		sSQL &= "						WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM moby.tbl_Moby_Releases REL WHERE REL.id_Moby_Platforms = tbl_Emu_Games.id_Moby_Platforms AND REL.id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = tbl_Emu_Games.Moby_Games_URLPart))" & ControlChars.CrLf
+		sSQL &= "						WHERE RA.id_Moby_Releases = (SELECT id_Moby_Releases FROM moby.tbl_Moby_Releases REL WHERE REL.id_Moby_Platforms = IFNULL(tbl_Emu_Games.id_Moby_Platforms_Alternative, tbl_Emu_Games.id_Moby_Platforms) AND REL.id_Moby_Games = (SELECT id_Moby_Games FROM moby.tbl_Moby_Games MG WHERE MG.URLPart = tbl_Emu_Games.Moby_Games_URLPart))" & ControlChars.CrLf
 		sSQL &= "						UNION" & ControlChars.CrLf
 		sSQL &= "						SELECT id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "						FROM tbl_Emu_Games_Moby_Attributes EGMA" & ControlChars.CrLf
@@ -5435,6 +6135,16 @@
 
 		Return False
 	End Function
+
+	Public Shared Sub Update_Emu_Games_Unavailable(ByVal id_Emu_Games As Int64, ByVal Unavailable As Boolean, Optional ByRef tran As SQLite.SQLiteTransaction = Nothing)
+		Dim conn As SQLite.SQLiteConnection
+		If tran IsNot Nothing Then
+			conn = tran.Connection
+		Else
+			conn = cls_Globals.Conn
+		End If
+		DataAccess.FireProcedure(conn, 0, "UPDATE tbl_Emu_Games SET Unavailable = " & TC.getSQLFormat(Unavailable) & " WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games), tran)
+	End Sub
 #End Region
 
 #Region "Rombase -> Main Migration Scripts"
@@ -5468,6 +6178,42 @@
 
 			DataAccess.FireProcedureReturnScalar(conn, 0, sSQL)
 		End If
+
+		'TODO: UPDATE from Rombase
+	End Sub
+
+	Public Shared Sub Migrate_Rombase_ScummVM_Configs(ByRef conn As SQLite.SQLiteConnection)
+		Dim iMissingScummVMConfigs As Integer = TC.NZ(DataAccess.FireProcedureReturnScalar(conn, 0, "SELECT COUNT(1) FROM rombase.tbl_Rombase_ScummVM_Configs WHERE id_Rombase_ScummVM_Configs NOT IN (SELECT id_Rombase_ScummVM_Configs FROM main.tbl_ScummVM_Configs WHERE id_Rombase_ScummVM_Configs IS NOT NULL)"), 0)
+
+		If iMissingScummVMConfigs > 0 Then
+			Dim dt_Colinfo As DataTable = DataAccess.FireProcedureReturnDT(conn, 0, False, "SELECT * FROM main.tbl_ScummVM_Configs LIMIT 0")
+
+			Dim sSQL As String = ""
+			sSQL &= "	INSERT INTO tbl_ScummVM_Configs" & ControlChars.CrLf
+
+			Dim sSQL_Columns As String = "	(isTemplate, id_Rombase_ScummVM_Configs" & ControlChars.CrLf
+			Dim sSQL_Rombase_Select As String = "	SELECT 1, id_Rombase_ScummVM_Configs, " & ControlChars.CrLf
+
+			Dim Blacklist As String() = {"id_ScummVM_Configs", "isTemplate", "id_Rombase_ScummVM_Configs"}
+			sSQL_Columns &= "	, " & MKNetLib.cls_MKClientSupport.ListColumnNames(dt_Colinfo, Blacklist)
+
+
+			Dim bFirst As Boolean = True
+
+			For i As Integer = 0 To dt_Colinfo.Columns.Count - Blacklist.Length - 1
+				If bFirst Then bFirst = False Else sSQL_Rombase_Select &= "	, "
+				sSQL_Rombase_Select &= "NULL"
+			Next
+
+			sSQL_Columns &= "	)" & ControlChars.CrLf
+			sSQL_Rombase_Select &= "	FROM rombase.tbl_Rombase_ScummVM_Configs WHERE id_Rombase_ScummVM_Configs NOT IN (SELECT id_Rombase_ScummVM_Configs FROM main.tbl_ScummVM_Configs WHERE id_Rombase_ScummVM_Configs IS NOT NULL)" & ControlChars.CrLf
+
+			sSQL &= sSQL_Columns & sSQL_Rombase_Select
+
+			DataAccess.FireProcedureReturnScalar(conn, 0, sSQL)
+		End If
+
+		'TODO: UPDATE from Rombase
 	End Sub
 #End Region
 End Class
