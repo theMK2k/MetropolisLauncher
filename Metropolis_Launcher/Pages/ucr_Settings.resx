@@ -123,37 +123,31 @@
   <metadata name="DS_J2K.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>208, 18</value>
   </metadata>
-  <metadata name="BS_Moby_Platforms.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>634, 17</value>
-  </metadata>
-  <metadata name="DS_MobyDB.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>481, 19</value>
-  </metadata>
-  <data name="ToolTipItem15.Text" xml:space="preserve">
+  <data name="ToolTipItem18.Text" xml:space="preserve">
     <value>This directory will be used for initial extracting of games and most importantly for all the write access of games and applications. Each game will get its own subdirectory within the DOSBox working directory. Metropolis Launcher will not delete anything in here.</value>
   </data>
-  <data name="ToolTipItem17.Text" xml:space="preserve">
+  <data name="ToolTipItem20.Text" xml:space="preserve">
     <value>This directory will be used for temporary files, in most cases ROM files will be extracted for their respective emulators. Metropolis Launcher will delete files that are not neccessary anymore on it's own.</value>
   </data>
-  <data name="ToolTipItem21.Text" xml:space="preserve">
+  <data name="ToolTipItem24.Text" xml:space="preserve">
     <value>This directory will be used for initial extracting of games and most importantly for all the write access of games and applications. Each game will get its own subdirectory within the DOSBox working directory. Metropolis Launcher will not delete anything in here.</value>
   </data>
-  <data name="ToolTipItem23.Text" xml:space="preserve">
+  <data name="ToolTipItem26.Text" xml:space="preserve">
     <value>This directory will be used for temporary files, in most cases ROM files will be extracted for their respective emulators. Metropolis Launcher will delete files that are not neccessary anymore on it's own.</value>
-  </data>
-  <data name="ToolTipItem25.Text" xml:space="preserve">
-    <value>Set here the minimum amount of time a game has to run in order to be added to the statistics. Set this for example to 5 minutes in order to prevent any playtesting below 5 minutes to be counted towards your statistics.</value>
   </data>
   <data name="ToolTipItem28.Text" xml:space="preserve">
     <value>Set here the minimum amount of time a game has to run in order to be added to the statistics. Set this for example to 5 minutes in order to prevent any playtesting below 5 minutes to be counted towards your statistics.</value>
   </data>
-  <data name="ToolTipItem37.Text" xml:space="preserve">
+  <data name="ToolTipItem31.Text" xml:space="preserve">
+    <value>Set here the minimum amount of time a game has to run in order to be added to the statistics. Set this for example to 5 minutes in order to prevent any playtesting below 5 minutes to be counted towards your statistics.</value>
+  </data>
+  <data name="ToolTipItem40.Text" xml:space="preserve">
     <value>This directory will be used for initial extracting of games and most importantly for all the write access of games and applications. Each game will get its own subdirectory within the DOSBox working directory. Metropolis Launcher will not delete anything in here.</value>
   </data>
-  <data name="ToolTipItem39.Text" xml:space="preserve">
+  <data name="ToolTipItem42.Text" xml:space="preserve">
     <value>This directory will be used for temporary files, in most cases ROM files will be extracted for their respective emulators. Metropolis Launcher will delete files that are not neccessary anymore on it's own.</value>
   </data>
-  <data name="ToolTipItem46.Text" xml:space="preserve">
+  <data name="ToolTipItem49.Text" xml:space="preserve">
     <value>Set here the minimum amount of time a game has to run in order to be added to the statistics. Set this for example to 5 minutes in order to prevent any playtesting below 5 minutes to be counted towards your statistics.</value>
   </data>
   <metadata name="BS_Skin.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -161,5 +155,11 @@
   </metadata>
   <metadata name="DS_Skin.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="BS_Moby_Platforms.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>634, 17</value>
+  </metadata>
+  <metadata name="DS_MobyDB.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>481, 19</value>
   </metadata>
 </root>

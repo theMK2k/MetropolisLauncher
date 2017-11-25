@@ -91,7 +91,7 @@ Public Class frm_Similarity_Calculation
 			Case DevExpress.XtraEditors.Controls.ButtonPredefines.Minus
 				If TC.NZ(cmb_Similarity_Calculation_Configuration.EditValue, 0) > 0 Then
 					If TC.NZ(DataAccess.FireProcedureReturnScalar(cls_Globals.Conn, 0, "SELECT COUNT(1) FROM tbl_Similarity_Calculation_Results WHERE id_Similarity_Calculation_Config = " & TC.getSQLFormat(cmb_Similarity_Calculation_Configuration.EditValue)), 0) <> 0 Then
-						DevExpress.XtraEditors.XtraMessageBox.Show("The currently selected configuration is still in use by one or more saved results. You have to remove these results before deleting the configuration.", "Delete Configuration", MessageBoxButtons.OK, MessageBoxIcon.Information)
+						MKDXHelper.MessageBox("The currently selected configuration is still in use by one or more saved results. You have to remove these results before deleting the configuration.", "Delete Configuration", MessageBoxButtons.OK, MessageBoxIcon.Information)
 						Return
 					End If
 
@@ -103,7 +103,7 @@ Public Class frm_Similarity_Calculation
 
 	Private Sub btn_Go_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Go.Click
 		If TC.NZ(cmb_Similarity_Calculation_Configuration.EditValue, 0) = 0 Then
-			If DevExpress.XtraEditors.XtraMessageBox.Show("Warning: the default configuration just sits there being quite useless. It weights each feature set with the same amount and thus gives a rather unfortunate result in the similarity calculation. Please consider creating a configuration to your needs." & ControlChars.CrLf & ControlChars.CrLf & "Do you want to continue calculating similarities based on the default configuration?", "Similarity Calculation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) <> Windows.Forms.DialogResult.Yes Then
+			If MKDXHelper.MessageBox("Warning: the default configuration just sits there being quite useless. It weights each feature set with the same amount and thus gives a rather unfortunate result in the similarity calculation. Please consider creating a configuration to your needs." & ControlChars.CrLf & ControlChars.CrLf & "Do you want to continue calculating similarities based on the default configuration?", "Similarity Calculation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) <> Windows.Forms.DialogResult.Yes Then
 				Return
 			End If
 		End If
@@ -151,7 +151,7 @@ Public Class frm_Similarity_Calculation
 					Dim id_Similarity_Calculation_Results = TC.NZ(DataAccess.FireProcedureReturnScalar(cls_Globals.Conn, 0, "SELECT id_Similarity_Calculation_Results FROM tbl_Similarity_Calculation_Results WHERE Name = " & TC.getSQLFormat(ResultsName)), 0)
 
 					If id_Similarity_Calculation_Results <> 0 Then
-						Dim rel As DialogResult = DevExpress.XtraEditors.XtraMessageBox.Show("The result set '" & ResultsName & "' already exists, do you want to overwrite? Choose 'No' to select a different name.", "Result Set Name akready exists", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information)
+						Dim rel As DialogResult = MKDXHelper.MessageBox("The result set '" & ResultsName & "' already exists, do you want to overwrite? Choose 'No' to select a different name.", "Result Set Name akready exists", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information)
 
 						If rel = Windows.Forms.DialogResult.No Then
 							bLoop = True
@@ -175,7 +175,7 @@ Public Class frm_Similarity_Calculation
 
 					Cursor = Cursors.Default
 
-					DevExpress.XtraEditors.XtraMessageBox.Show("Results are saved as '" & ResultsName & "'.", "Save Results", MessageBoxButtons.OK, MessageBoxIcon.Information)
+					MKDXHelper.MessageBox("Results are saved as '" & ResultsName & "'.", "Save Results", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
 					Me.Results_Saved = True
 				End If
@@ -213,7 +213,7 @@ Public Class frm_Similarity_Calculation
 
 	Private Sub frm_Similarity_Calculation_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
 		If Me.Results_Saved = False Then
-			If Not DevExpress.XtraEditors.XtraMessageBox.Show("Please consider saving your results before closing. Do you want to close anyway?", "Results not saved", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
+			If Not MKDXHelper.MessageBox("Please consider saving your results before closing. Do you want to close anyway?", "Results not saved", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
 				e.Cancel = True
 			End If
 		End If

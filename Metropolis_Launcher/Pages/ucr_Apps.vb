@@ -100,7 +100,7 @@
 	End Sub
 
 	Private Sub bbi_Delete_ItemClick(ByVal sender As System.Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs) Handles bbi_Delete.ItemClick
-		If DevExpress.XtraEditors.XtraMessageBox.Show("Do you really want to delete the current application entry?", "", MessageBoxButtons.YesNo) = MsgBoxResult.Yes Then
+		If MKDXHelper.MessageBox("Do you really want to delete the current application entry?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = MsgBoxResult.Yes Then
 			BS_Apps.RemoveCurrent()
 			DS_MLApps.Update_Apps(cls_Globals.Conn, Me.DS_MLApps.Apps)
 		End If

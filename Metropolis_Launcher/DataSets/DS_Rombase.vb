@@ -2,6 +2,8 @@
 Imports DataAccess = MKNetLib.cls_MKSQLiteDataAccess
 
 Partial Class DS_Rombase
+	Partial Public Class tbl_Rombase_Known_EmulatorsDataTable
+	End Class
 
 #Region "Select Statements"
 	Public Shared Function Select_id_Rombase(ByRef tran As SQLite.SQLiteTransaction, ByVal Mapping_Identifier As Object, ByVal filename As Object, ByVal size As Object, ByVal crc As Object, ByVal md5 As Object, ByVal sha1 As Object, ByVal id_Moby_Platforms As Object, ByVal id_Moby_Releases As Object, ByVal CustomIdentifier As Object, Optional ByVal id_Rombase_Owner As Object = Nothing) As Integer
@@ -16,7 +18,7 @@ Partial Class DS_Rombase
 			End If
 		End If
 
-		If TC.NZ(CustomIdentifier, "").Length > 0 AndAlso TC.NZ(id_Moby_Platforms, 0) > 0 Then
+		If TC.NZ(CustomIdentifier, "").Length > 0 AndAlso TC.NZ(id_Moby_Platforms, 0) <> 0 Then
 			dt = DataAccess.FireProcedureReturnDT(tran.Connection, 0, False, "SELECT id_rombase, filename, size, crc, md5, sha1, id_Moby_Platforms, id_Moby_Releases FROM tbl_Rombase WHERE CustomIdentifier = " & TC.getSQLFormat(CustomIdentifier) & " AND id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms) & IIf(TC.NZ(id_Rombase_Owner, 0) > 0, " AND id_Rombase_Owner = " & TC.getSQLFormat(id_Rombase_Owner), ""), Nothing, tran)
 			If dt.Rows.Count = 1 Then
 				Return dt.Rows(0)("id_rombase")
@@ -74,8 +76,62 @@ Partial Class DS_Rombase
 	End Function
 #End Region
 
+#Region "Fill Statements"
+	Public Sub Fill_tbl_Rombase_Known_Emulators(ByRef dt As DS_Rombase.tbl_Rombase_Known_EmulatorsDataTable)
+		Dim sSQL As String = ""
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "	id_Rombase_Known_Emulators" & ControlChars.CrLf
+		sSQL &= "	, Identifier" & ControlChars.CrLf
+		sSQL &= "	, Name" & ControlChars.CrLf
+		sSQL &= "	, Description" & ControlChars.CrLf
+		sSQL &= "	, Autoconfig_Note" & ControlChars.CrLf
+		sSQL &= "	, Exe_Identifier_Regex" & ControlChars.CrLf
+		sSQL &= "	, URL_Website" & ControlChars.CrLf
+		sSQL &= "	, URL_Download" & ControlChars.CrLf
+		sSQL &= "	, StartupParameter" & ControlChars.CrLf
+		sSQL &= "	, ScreenshotDirectory" & ControlChars.CrLf
+		sSQL &= "	, id_List_Generators" & ControlChars.CrLf
+		sSQL &= "FROM rombase.tbl_Rombase_Known_Emulators" & ControlChars.CrLf
+		sSQL &= "ORDER BY Name" & ControlChars.CrLf
+
+		DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
+	End Sub
+
+	Public Sub Fill_src_frm_Known_Emulators_Moby_Platforms(ByRef dt As DS_Rombase.src_frm_Known_Emulators_Moby_PlatformsDataTable, ByVal id_Rombase_Known_Emulators As Integer)
+		dt.Clear()
+		Dim sSQL As String =
+		"	SELECT" &
+		"		PLTFM.id_Moby_Platforms" &
+		"		, PLTFM.Display_Name" &
+		"		, CASE WHEN EMUPLTFM.id_Moby_Platforms IS NOT NULL THEN 1 ELSE 0 END AS Supported" &
+		"	FROM moby.tbl_Moby_Platforms PLTFM" &
+		"	LEFT JOIN rombase.tbl_Rombase_Known_Emulators_Moby_Platforms EMUPLTFM ON PLTFM.id_Moby_Platforms = EMUPLTFM.id_Moby_Platforms AND EMUPLTFM.id_Rombase_Known_Emulators = " & TC.getSQLFormat(id_Rombase_Known_Emulators) &
+		" LEFT JOIN main.tbl_Moby_Platforms_Settings PLTFMS ON PLTFM.id_Moby_Platforms = PLTFMS.id_Moby_Platforms " &
+		"	WHERE PLTFM.Visible = 1" &
+		"				AND PLTFM.GenericEmulated = 1" &
+		"				AND PLTFM.id_Moby_Platforms_Owner IS NULL" &
+		"	ORDER BY Display_Name"
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
+	End Sub
+
+	Public Sub Fill_src_frm_Known_Emulators_Multivolume_Parameters(ByRef dt As tbl_Rombase_Known_Emulators_Multivolume_ParametersDataTable, ByVal id_Rombase_Known_Emulators As Integer) 'tbl_Emulators_Multivolume_ParametersDataTable
+		dt.Clear()
+		Dim sSQL As String =
+		"	SELECT" &
+		"		id_Rombase_Known_Emulators_Multivolume_Parameters" &
+		"		, id_Rombase_Known_Emulators" &
+		"		, Volume_Number" &
+		"		, Parameter" &
+		"	FROM rombase.tbl_Rombase_Known_Emulators_Multivolume_Parameters" &
+		"	WHERE id_Rombase_Known_Emulators = " & TC.getSQLFormat(id_Rombase_Known_Emulators) &
+		"	ORDER BY Volume_Number"
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
+	End Sub
+
+#End Region
+
 #Region "Upsert Statements"
-	Public Shared Function Upsert_Rombase(ByRef tran As SQLite.SQLiteTransaction, ByVal Mapping_Identifier As Object, ByVal filename As Object, ByVal size As Object, ByVal crc As Object, ByVal md5 As Object, ByVal sha1 As Object, ByVal id_Moby_Platforms As Object, ByVal id_Moby_Releases As Object, ByVal Moby_Platforms_URLPart As Object, ByVal Moby_Games_URLPart As Object, Optional ByVal id_Rombase_Owner As Object = Nothing, Optional ByVal CustomIdentifier As Object = Nothing, Optional ByVal id_rombase As Object = Nothing) As Integer
+	Public Shared Function Upsert_Rombase(ByRef tran As SQLite.SQLiteTransaction, ByVal Mapping_Identifier As Object, ByVal filename As Object, ByVal size As Object, ByVal crc As Object, ByVal md5 As Object, ByVal sha1 As Object, ByVal id_Moby_Platforms As Object, ByVal id_Moby_Releases As Object, ByVal Moby_Platforms_URLPart As Object, ByVal Moby_Games_URLPart As Object, Optional ByVal id_Rombase_Owner As Object = Nothing, Optional ByVal CustomIdentifier As Object = Nothing, Optional ByVal id_rombase As Object = Nothing, Optional ByVal id_Moby_Platforms_Alternative As Object = Nothing) As Integer
 		Dim sSQL = ""
 
 		If TC.NZ(Mapping_Identifier, "") = "" Then
@@ -102,6 +158,7 @@ Partial Class DS_Rombase
 			sSQL &= ", md5 = " & TC.getSQLFormat(md5)
 			sSQL &= ", sha1 = " & TC.getSQLFormat(sha1)
 			sSQL &= ", id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms)
+			sSQL &= ", id_Moby_Platforms_Alternative = " & TC.getSQLFormat(id_Moby_Platforms_Alternative)
 			sSQL &= ", id_Moby_Releases = " & TC.getSQLFormat(id_Moby_Releases)
 			sSQL &= ", Moby_Platforms_URLPart = " & TC.getSQLFormat(Moby_Platforms_URLPart)
 			sSQL &= ", Moby_Games_URLPart = " & TC.getSQLFormat(Moby_Games_URLPart)
@@ -119,7 +176,7 @@ Partial Class DS_Rombase
 			new_id_rombase = Math.Min(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "SELECT MIN(id_rombase) FROM tbl_rombase", tran), 0) - 1
 		End If
 
-		sSQL = "INSERT INTO tbl_Rombase (" & IIf(TC.NZ(Mapping_Identifier, "").Length > 0, "id_rombase, ", "") & "Mapping_Identifier, filename, size, crc, md5, sha1, id_Moby_Platforms, id_Moby_Releases, Moby_Platforms_URLPart, Moby_Games_URLPart, id_Rombase_Owner, CustomIdentifier) VALUES (" _
+		sSQL = "INSERT INTO tbl_Rombase (" & IIf(TC.NZ(Mapping_Identifier, "").Length > 0, "id_rombase, ", "") & "Mapping_Identifier, filename, size, crc, md5, sha1, id_Moby_Platforms, id_Moby_Releases, Moby_Platforms_URLPart, Moby_Games_URLPart, id_Rombase_Owner, CustomIdentifier, id_Moby_Platforms_Alternative) VALUES (" _
 		& IIf(TC.NZ(Mapping_Identifier, "").Length > 0, TC.getSQLFormat(new_id_rombase) & ", ", "") _
 		& TC.getSQLFormat(Mapping_Identifier) _
 		& ", " & TC.getSQLFormat(filename) _
@@ -133,6 +190,7 @@ Partial Class DS_Rombase
 		& ", " & TC.getSQLFormat(Moby_Games_URLPart) _
 		& ", " & TC.getSQLFormat(id_Rombase_Owner) _
 		& ", " & TC.getSQLFormat(CustomIdentifier) _
+		& ", " & TC.getSQLFormat(id_Moby_Platforms_Alternative) _
 		& "); SELECT last_insert_rowid()"
 
 		'Insert

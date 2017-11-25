@@ -30,6 +30,11 @@ Partial Class frm_Rom_Manager
 		Dim SuperToolTip3 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem3 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem3 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip4 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem4 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem4 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip5 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipItem5 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Me.rpi_Moby_Release = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
 		Me.BS_Moby_Releases = New System.Windows.Forms.BindingSource(Me.components)
 		Me.DS_MobyDB = New Metropolis_Launcher.DS_MobyDB()
@@ -44,6 +49,9 @@ Partial Class frm_Rom_Manager
 		Me.colHighlighted = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.colDeveloper = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.colPublisher = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.coldeprecated1 = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.colcompilation = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.colPlatform = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.Ctl_MKDXSplitter1 = New MKNetDXLib.ctl_MKDXSplitter()
 		Me.pnl_Left = New MKNetDXLib.ctl_MKDXPanel()
 		Me.btn_Save = New MKNetDXLib.ctl_MKDXSimpleButton()
@@ -60,6 +68,14 @@ Partial Class frm_Rom_Manager
 		Me.colMoby_Games_URLPart = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.colHidden = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.colAdded = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.coldeprecated = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.colMoby_Games_URLPart_Moby_Year = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.rpi_Moby_Year = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+		Me.colMoby_Games_URLPart_Publisher = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.rpi_Moby_Publisher = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+		Me.colMoby_Games_URLPart_Developer = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.rpi_Moby_Developer = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+		Me.coltmp_Highlighted = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.BS_Moby_Platforms_gv1 = New System.Windows.Forms.BindingSource(Me.components)
 		Me.DS_Rombase = New Metropolis_Launcher.DS_Rombase()
 		Me.BS_Rombase = New System.Windows.Forms.BindingSource(Me.components)
@@ -161,11 +177,12 @@ Partial Class frm_Rom_Manager
 		Me.bbi_Moby_Games_Open_Moby_Page = New DevExpress.XtraBars.BarButtonItem()
 		Me.bbi_Moby_Games_Evaluate_Links = New DevExpress.XtraBars.BarButtonItem()
 		Me.bbi_Auto_Link = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_MobyLink_QA = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Scan_ScummVM_Ini = New DevExpress.XtraBars.BarButtonItem()
 		Me.popmnu_Rom_Manager = New MKNetDXLib.cmp_MKDXPopupMenu()
 		Me.popmnu_DOSBox_Files_and_Folders = New MKNetDXLib.cmp_MKDXPopupMenu()
 		Me.popmnu_Moby_Games = New MKNetDXLib.cmp_MKDXPopupMenu()
-		Me.coldeprecated = New DevExpress.XtraGrid.Columns.GridColumn()
-		Me.coldeprecated1 = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.colCustomIdentifier = New DevExpress.XtraGrid.Columns.GridColumn()
 		CType(Me.rpi_Moby_Release, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BS_Moby_Releases, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.DS_MobyDB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -182,6 +199,9 @@ Partial Class frm_Rom_Manager
 		CType(Me.BS_Emu_Games, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.DS_ML, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.gv_Emu_Games, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.rpi_Moby_Year, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.rpi_Moby_Publisher, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.rpi_Moby_Developer, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BS_Moby_Platforms_gv1, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.DS_Rombase, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BS_Rombase, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -262,7 +282,7 @@ Partial Class frm_Rom_Manager
 		Me.pnl_Right.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.pnl_Right.Location = New System.Drawing.Point(0, 0)
 		Me.pnl_Right.Name = "pnl_Right"
-		Me.pnl_Right.Size = New System.Drawing.Size(589, 313)
+		Me.pnl_Right.Size = New System.Drawing.Size(565, 244)
 		Me.pnl_Right.TabIndex = 5
 		'
 		'lbl_Moby_Releases
@@ -278,7 +298,7 @@ Partial Class frm_Rom_Manager
 		Me.lbl_Moby_Releases.MKBoundControl4 = Nothing
 		Me.lbl_Moby_Releases.MKBoundControl5 = Nothing
 		Me.lbl_Moby_Releases.Name = "lbl_Moby_Releases"
-		Me.lbl_Moby_Releases.Size = New System.Drawing.Size(582, 42)
+		Me.lbl_Moby_Releases.Size = New System.Drawing.Size(558, 42)
 		Me.lbl_Moby_Releases.TabIndex = 2
 		Me.lbl_Moby_Releases.Text = "Moby Releases"
 		'
@@ -297,14 +317,14 @@ Partial Class frm_Rom_Manager
 		Me.grd_Moby_Releases.Location = New System.Drawing.Point(3, 49)
 		Me.grd_Moby_Releases.MainView = Me.gv_Moby_Releases
 		Me.grd_Moby_Releases.Name = "grd_Moby_Releases"
-		Me.grd_Moby_Releases.Size = New System.Drawing.Size(582, 262)
+		Me.grd_Moby_Releases.Size = New System.Drawing.Size(558, 193)
 		Me.grd_Moby_Releases.TabIndex = 0
 		Me.grd_Moby_Releases.UseEmbeddedNavigator = True
 		Me.grd_Moby_Releases.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Moby_Releases})
 		'
 		'gv_Moby_Releases
 		'
-		Me.gv_Moby_Releases.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colGamename, Me.colYear, Me.colAdded1, Me.colHighlighted, Me.colDeveloper, Me.colPublisher, Me.coldeprecated1})
+		Me.gv_Moby_Releases.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colGamename, Me.colYear, Me.colAdded1, Me.colHighlighted, Me.colDeveloper, Me.colPublisher, Me.coldeprecated1, Me.colcompilation, Me.colPlatform})
 		Me.gv_Moby_Releases.GridControl = Me.grd_Moby_Releases
 		Me.gv_Moby_Releases.Name = "gv_Moby_Releases"
 		Me.gv_Moby_Releases.OptionsBehavior.AllowIncrementalSearch = True
@@ -367,11 +387,38 @@ Partial Class frm_Rom_Manager
 		Me.colPublisher.Visible = True
 		Me.colPublisher.VisibleIndex = 4
 		'
+		'coldeprecated1
+		'
+		Me.coldeprecated1.FieldName = "deprecated"
+		Me.coldeprecated1.Name = "coldeprecated1"
+		Me.coldeprecated1.OptionsColumn.AllowEdit = False
+		Me.coldeprecated1.OptionsColumn.ReadOnly = True
+		Me.coldeprecated1.ToolTip = "indicates that the MobyGame release may be deprecated (nothing really to worry he" &
+		"re, the meta data is still there)"
+		'
+		'colcompilation
+		'
+		Me.colcompilation.Caption = "Compilation"
+		Me.colcompilation.FieldName = "compilation"
+		Me.colcompilation.Name = "colcompilation"
+		Me.colcompilation.OptionsColumn.AllowEdit = False
+		Me.colcompilation.OptionsColumn.ReadOnly = True
+		Me.colcompilation.ToolTip = "indicates that this is a compilation of multiple games"
+		Me.colcompilation.Visible = True
+		Me.colcompilation.VisibleIndex = 5
+		'
+		'colPlatform
+		'
+		Me.colPlatform.FieldName = "Platform"
+		Me.colPlatform.Name = "colPlatform"
+		Me.colPlatform.OptionsColumn.AllowEdit = False
+		Me.colPlatform.OptionsColumn.ReadOnly = True
+		'
 		'Ctl_MKDXSplitter1
 		'
 		Me.Ctl_MKDXSplitter1.Location = New System.Drawing.Point(414, 0)
 		Me.Ctl_MKDXSplitter1.Name = "Ctl_MKDXSplitter1"
-		Me.Ctl_MKDXSplitter1.Size = New System.Drawing.Size(5, 730)
+		Me.Ctl_MKDXSplitter1.Size = New System.Drawing.Size(5, 661)
 		Me.Ctl_MKDXSplitter1.TabIndex = 4
 		Me.Ctl_MKDXSplitter1.TabStop = False
 		'
@@ -385,7 +432,7 @@ Partial Class frm_Rom_Manager
 		Me.pnl_Left.Dock = System.Windows.Forms.DockStyle.Left
 		Me.pnl_Left.Location = New System.Drawing.Point(0, 0)
 		Me.pnl_Left.Name = "pnl_Left"
-		Me.pnl_Left.Size = New System.Drawing.Size(414, 730)
+		Me.pnl_Left.Size = New System.Drawing.Size(414, 661)
 		Me.pnl_Left.TabIndex = 3
 		'
 		'btn_Save
@@ -450,8 +497,8 @@ Partial Class frm_Rom_Manager
 		Me.grd_Emu_Games.Location = New System.Drawing.Point(3, 42)
 		Me.grd_Emu_Games.MainView = Me.gv_Emu_Games
 		Me.grd_Emu_Games.Name = "grd_Emu_Games"
-		Me.grd_Emu_Games.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Moby_Release})
-		Me.grd_Emu_Games.Size = New System.Drawing.Size(408, 686)
+		Me.grd_Emu_Games.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Moby_Release, Me.rpi_Moby_Year, Me.rpi_Moby_Developer, Me.rpi_Moby_Publisher})
+		Me.grd_Emu_Games.Size = New System.Drawing.Size(408, 617)
 		Me.grd_Emu_Games.TabIndex = 0
 		Me.grd_Emu_Games.UseEmbeddedNavigator = True
 		Me.grd_Emu_Games.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Emu_Games})
@@ -469,7 +516,7 @@ Partial Class frm_Rom_Manager
 		'
 		'gv_Emu_Games
 		'
-		Me.gv_Emu_Games.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colFolder, Me.colfile, Me.colInnerFile, Me.colMoby_Games_URLPart, Me.colHidden, Me.colAdded, Me.coldeprecated})
+		Me.gv_Emu_Games.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colFolder, Me.colfile, Me.colInnerFile, Me.colMoby_Games_URLPart, Me.colHidden, Me.colAdded, Me.coldeprecated, Me.colMoby_Games_URLPart_Moby_Year, Me.colMoby_Games_URLPart_Publisher, Me.colMoby_Games_URLPart_Developer, Me.coltmp_Highlighted, Me.colCustomIdentifier})
 		Me.gv_Emu_Games.GridControl = Me.grd_Emu_Games
 		Me.gv_Emu_Games.GroupCount = 1
 		Me.gv_Emu_Games.Name = "gv_Emu_Games"
@@ -486,6 +533,7 @@ Partial Class frm_Rom_Manager
 		Me.colFolder.Name = "colFolder"
 		Me.colFolder.OptionsColumn.AllowEdit = False
 		Me.colFolder.OptionsColumn.ReadOnly = True
+		Me.colFolder.ToolTip = "Directory of the game's file/s"
 		Me.colFolder.Visible = True
 		Me.colFolder.VisibleIndex = 2
 		'
@@ -496,6 +544,7 @@ Partial Class frm_Rom_Manager
 		Me.colfile.Name = "colfile"
 		Me.colfile.OptionsColumn.AllowEdit = False
 		Me.colfile.OptionsColumn.ReadOnly = True
+		Me.colfile.ToolTip = "Filename of the game"
 		Me.colfile.Visible = True
 		Me.colfile.VisibleIndex = 0
 		Me.colfile.Width = 140
@@ -507,6 +556,7 @@ Partial Class frm_Rom_Manager
 		Me.colInnerFile.Name = "colInnerFile"
 		Me.colInnerFile.OptionsColumn.AllowEdit = False
 		Me.colInnerFile.OptionsColumn.ReadOnly = True
+		Me.colInnerFile.ToolTip = "Inner file name of the game (e.g. a file within a .zip)"
 		Me.colInnerFile.Visible = True
 		Me.colInnerFile.VisibleIndex = 1
 		Me.colInnerFile.Width = 175
@@ -519,6 +569,7 @@ Partial Class frm_Rom_Manager
 		Me.colMoby_Games_URLPart.Name = "colMoby_Games_URLPart"
 		Me.colMoby_Games_URLPart.OptionsColumn.AllowEdit = False
 		Me.colMoby_Games_URLPart.OptionsColumn.ReadOnly = True
+		Me.colMoby_Games_URLPart.ToolTip = "When linked to a Moby release, this is the Moby release's name"
 		Me.colMoby_Games_URLPart.Visible = True
 		Me.colMoby_Games_URLPart.VisibleIndex = 2
 		Me.colMoby_Games_URLPart.Width = 102
@@ -528,6 +579,7 @@ Partial Class frm_Rom_Manager
 		Me.colHidden.ColumnEdit = Me.rpi_chb_Hidden
 		Me.colHidden.FieldName = "Hidden"
 		Me.colHidden.Name = "colHidden"
+		Me.colHidden.ToolTip = "This game is hidden from all lists"
 		Me.colHidden.Visible = True
 		Me.colHidden.VisibleIndex = 3
 		Me.colHidden.Width = 50
@@ -541,9 +593,85 @@ Partial Class frm_Rom_Manager
 		Me.colAdded.Name = "colAdded"
 		Me.colAdded.OptionsColumn.AllowEdit = False
 		Me.colAdded.OptionsColumn.ReadOnly = True
+		Me.colAdded.ToolTip = "Date and time when the game has been added to Metropolis Launcher"
 		Me.colAdded.Visible = True
 		Me.colAdded.VisibleIndex = 4
 		Me.colAdded.Width = 94
+		'
+		'coldeprecated
+		'
+		Me.coldeprecated.FieldName = "deprecated"
+		Me.coldeprecated.Name = "coldeprecated"
+		Me.coldeprecated.OptionsColumn.AllowEdit = False
+		Me.coldeprecated.OptionsColumn.ReadOnly = True
+		Me.coldeprecated.ToolTip = "indicates that the MobyGame link may be deprecated (nothing really to worry here," &
+		" the meta data is still there)"
+		'
+		'colMoby_Games_URLPart_Moby_Year
+		'
+		Me.colMoby_Games_URLPart_Moby_Year.Caption = "Moby Year"
+		Me.colMoby_Games_URLPart_Moby_Year.ColumnEdit = Me.rpi_Moby_Year
+		Me.colMoby_Games_URLPart_Moby_Year.FieldName = "Moby_Games_URLPart"
+		Me.colMoby_Games_URLPart_Moby_Year.Name = "colMoby_Games_URLPart_Moby_Year"
+		Me.colMoby_Games_URLPart_Moby_Year.OptionsColumn.AllowEdit = False
+		Me.colMoby_Games_URLPart_Moby_Year.OptionsColumn.ReadOnly = True
+		Me.colMoby_Games_URLPart_Moby_Year.ToolTip = "When linked to a Moby release, this is the Moby release's year"
+		'
+		'rpi_Moby_Year
+		'
+		Me.rpi_Moby_Year.AutoHeight = False
+		Me.rpi_Moby_Year.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+		Me.rpi_Moby_Year.DataSource = Me.BS_Moby_Releases
+		Me.rpi_Moby_Year.DisplayMember = "Year"
+		Me.rpi_Moby_Year.Name = "rpi_Moby_Year"
+		Me.rpi_Moby_Year.NullText = ""
+		Me.rpi_Moby_Year.ValueMember = "Moby_Games_URLPart"
+		'
+		'colMoby_Games_URLPart_Publisher
+		'
+		Me.colMoby_Games_URLPart_Publisher.Caption = "Moby Publisher"
+		Me.colMoby_Games_URLPart_Publisher.ColumnEdit = Me.rpi_Moby_Publisher
+		Me.colMoby_Games_URLPart_Publisher.FieldName = "Moby_Games_URLPart"
+		Me.colMoby_Games_URLPart_Publisher.Name = "colMoby_Games_URLPart_Publisher"
+		Me.colMoby_Games_URLPart_Publisher.OptionsColumn.AllowEdit = False
+		Me.colMoby_Games_URLPart_Publisher.OptionsColumn.ReadOnly = True
+		Me.colMoby_Games_URLPart_Publisher.ToolTip = "When linked to a Moby release, this is the Moby release's publisher"
+		'
+		'rpi_Moby_Publisher
+		'
+		Me.rpi_Moby_Publisher.AutoHeight = False
+		Me.rpi_Moby_Publisher.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+		Me.rpi_Moby_Publisher.DataSource = Me.BS_Moby_Releases
+		Me.rpi_Moby_Publisher.DisplayMember = "Publisher"
+		Me.rpi_Moby_Publisher.Name = "rpi_Moby_Publisher"
+		Me.rpi_Moby_Publisher.NullText = ""
+		Me.rpi_Moby_Publisher.ValueMember = "Moby_Games_URLPart"
+		'
+		'colMoby_Games_URLPart_Developer
+		'
+		Me.colMoby_Games_URLPart_Developer.Caption = "Moby Developer"
+		Me.colMoby_Games_URLPart_Developer.ColumnEdit = Me.rpi_Moby_Developer
+		Me.colMoby_Games_URLPart_Developer.FieldName = "Moby_Games_URLPart"
+		Me.colMoby_Games_URLPart_Developer.Name = "colMoby_Games_URLPart_Developer"
+		Me.colMoby_Games_URLPart_Developer.OptionsColumn.AllowEdit = False
+		Me.colMoby_Games_URLPart_Developer.OptionsColumn.ReadOnly = True
+		Me.colMoby_Games_URLPart_Developer.ToolTip = "When linked to a Moby release, this is the Moby release's developer"
+		'
+		'rpi_Moby_Developer
+		'
+		Me.rpi_Moby_Developer.AutoHeight = False
+		Me.rpi_Moby_Developer.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+		Me.rpi_Moby_Developer.DataSource = Me.BS_Moby_Releases
+		Me.rpi_Moby_Developer.DisplayMember = "Developer"
+		Me.rpi_Moby_Developer.Name = "rpi_Moby_Developer"
+		Me.rpi_Moby_Developer.NullText = ""
+		Me.rpi_Moby_Developer.ValueMember = "Moby_Games_URLPart"
+		'
+		'coltmp_Highlighted
+		'
+		Me.coltmp_Highlighted.Caption = "Highlighted"
+		Me.coltmp_Highlighted.FieldName = "tmp_Highlighted"
+		Me.coltmp_Highlighted.Name = "coltmp_Highlighted"
 		'
 		'BS_Moby_Platforms_gv1
 		'
@@ -575,7 +703,7 @@ Partial Class frm_Rom_Manager
 		Me.spltpnl_Right.Panel1.Text = "pnl_MV"
 		Me.spltpnl_Right.Panel2.Controls.Add(Me.pnl_Right)
 		Me.spltpnl_Right.Panel2.Text = "pnl_Moby"
-		Me.spltpnl_Right.Size = New System.Drawing.Size(589, 730)
+		Me.spltpnl_Right.Size = New System.Drawing.Size(565, 661)
 		Me.spltpnl_Right.SplitterPosition = 412
 		Me.spltpnl_Right.TabIndex = 3
 		Me.spltpnl_Right.Text = "Ctl_MKDXSplitPanel1"
@@ -586,7 +714,7 @@ Partial Class frm_Rom_Manager
 		Me.tcl_MV.Location = New System.Drawing.Point(0, 0)
 		Me.tcl_MV.Name = "tcl_MV"
 		Me.tcl_MV.SelectedTabPage = Me.tpg_Discs_Volumes
-		Me.tcl_MV.Size = New System.Drawing.Size(589, 412)
+		Me.tcl_MV.Size = New System.Drawing.Size(565, 412)
 		Me.tcl_MV.TabIndex = 0
 		Me.tcl_MV.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.tpg_Discs_Volumes, Me.tpg_DOSBox_Files_Directories})
 		'
@@ -594,7 +722,7 @@ Partial Class frm_Rom_Manager
 		'
 		Me.tpg_Discs_Volumes.Controls.Add(Me.pnl_Discs_Volumes)
 		Me.tpg_Discs_Volumes.Name = "tpg_Discs_Volumes"
-		Me.tpg_Discs_Volumes.Size = New System.Drawing.Size(583, 384)
+		Me.tpg_Discs_Volumes.Size = New System.Drawing.Size(559, 384)
 		Me.tpg_Discs_Volumes.Text = "Discs/Volumes"
 		'
 		'pnl_Discs_Volumes
@@ -605,7 +733,7 @@ Partial Class frm_Rom_Manager
 		Me.pnl_Discs_Volumes.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.pnl_Discs_Volumes.Location = New System.Drawing.Point(0, 0)
 		Me.pnl_Discs_Volumes.Name = "pnl_Discs_Volumes"
-		Me.pnl_Discs_Volumes.Size = New System.Drawing.Size(583, 384)
+		Me.pnl_Discs_Volumes.Size = New System.Drawing.Size(559, 384)
 		Me.pnl_Discs_Volumes.TabIndex = 5
 		'
 		'grd_MV
@@ -622,7 +750,7 @@ Partial Class frm_Rom_Manager
 		Me.grd_MV.MainView = Me.gv_MV
 		Me.grd_MV.Name = "grd_MV"
 		Me.grd_MV.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit1, Me.RepositoryItemCheckEdit1, Me.rpi_Volume_Number})
-		Me.grd_MV.Size = New System.Drawing.Size(583, 342)
+		Me.grd_MV.Size = New System.Drawing.Size(559, 342)
 		Me.grd_MV.TabIndex = 0
 		Me.grd_MV.UseEmbeddedNavigator = True
 		Me.grd_MV.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_MV})
@@ -762,7 +890,7 @@ Partial Class frm_Rom_Manager
 		Me.lbl_Volumes.MKBoundControl4 = Nothing
 		Me.lbl_Volumes.MKBoundControl5 = Nothing
 		Me.lbl_Volumes.Name = "lbl_Volumes"
-		Me.lbl_Volumes.Size = New System.Drawing.Size(583, 42)
+		Me.lbl_Volumes.Size = New System.Drawing.Size(559, 42)
 		Me.lbl_Volumes.TabIndex = 3
 		Me.lbl_Volumes.Text = "Discs/Volumes"
 		'
@@ -770,7 +898,7 @@ Partial Class frm_Rom_Manager
 		'
 		Me.tpg_DOSBox_Files_Directories.Controls.Add(Me.pnl_DOSBox_Files_and_Folders)
 		Me.tpg_DOSBox_Files_Directories.Name = "tpg_DOSBox_Files_Directories"
-		Me.tpg_DOSBox_Files_Directories.Size = New System.Drawing.Size(583, 384)
+		Me.tpg_DOSBox_Files_Directories.Size = New System.Drawing.Size(559, 384)
 		Me.tpg_DOSBox_Files_Directories.Text = "DOSBox Files and Directories"
 		'
 		'pnl_DOSBox_Files_and_Folders
@@ -780,7 +908,7 @@ Partial Class frm_Rom_Manager
 		Me.pnl_DOSBox_Files_and_Folders.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.pnl_DOSBox_Files_and_Folders.Location = New System.Drawing.Point(0, 0)
 		Me.pnl_DOSBox_Files_and_Folders.Name = "pnl_DOSBox_Files_and_Folders"
-		Me.pnl_DOSBox_Files_and_Folders.Size = New System.Drawing.Size(583, 384)
+		Me.pnl_DOSBox_Files_and_Folders.Size = New System.Drawing.Size(559, 384)
 		Me.pnl_DOSBox_Files_and_Folders.TabIndex = 6
 		'
 		'Ctl_MKDXSplitPanel1
@@ -807,7 +935,7 @@ Partial Class frm_Rom_Manager
 		Me.Ctl_MKDXSplitPanel1.Panel2.Controls.Add(Me.lbl_DOSBox_Type)
 		Me.Ctl_MKDXSplitPanel1.Panel2.Controls.Add(Me.lbl_DOSBox_Folder_and_Files_Settings)
 		Me.Ctl_MKDXSplitPanel1.Panel2.Text = "Panel2"
-		Me.Ctl_MKDXSplitPanel1.Size = New System.Drawing.Size(583, 384)
+		Me.Ctl_MKDXSplitPanel1.Size = New System.Drawing.Size(559, 384)
 		Me.Ctl_MKDXSplitPanel1.SplitterPosition = 281
 		Me.Ctl_MKDXSplitPanel1.TabIndex = 6
 		Me.Ctl_MKDXSplitPanel1.Text = "Ctl_MKDXSplitPanel1"
@@ -949,7 +1077,7 @@ Partial Class frm_Rom_Manager
 		Me.txb_DOSBox_Inner_File.MKEditValue_Compare = Nothing
 		Me.txb_DOSBox_Inner_File.Name = "txb_DOSBox_Inner_File"
 		Me.txb_DOSBox_Inner_File.Properties.ReadOnly = True
-		Me.txb_DOSBox_Inner_File.Size = New System.Drawing.Size(200, 20)
+		Me.txb_DOSBox_Inner_File.Size = New System.Drawing.Size(176, 20)
 		ToolTipTitleItem1.Text = "Inner File"
 		ToolTipItem1.LeftIndent = 6
 		ToolTipItem1.Text = "If the File is packed (e.g. zip or rar file), the inner file specifies the file w" &
@@ -969,7 +1097,7 @@ Partial Class frm_Rom_Manager
 		Me.txb_DOSBox_File.MKEditValue_Compare = Nothing
 		Me.txb_DOSBox_File.Name = "txb_DOSBox_File"
 		Me.txb_DOSBox_File.Properties.ReadOnly = True
-		Me.txb_DOSBox_File.Size = New System.Drawing.Size(200, 20)
+		Me.txb_DOSBox_File.Size = New System.Drawing.Size(176, 20)
 		Me.txb_DOSBox_File.TabIndex = 1
 		'
 		'txb_DOSBox_Folder
@@ -982,7 +1110,7 @@ Partial Class frm_Rom_Manager
 		Me.txb_DOSBox_Folder.MKEditValue_Compare = Nothing
 		Me.txb_DOSBox_Folder.Name = "txb_DOSBox_Folder"
 		Me.txb_DOSBox_Folder.Properties.ReadOnly = True
-		Me.txb_DOSBox_Folder.Size = New System.Drawing.Size(200, 20)
+		Me.txb_DOSBox_Folder.Size = New System.Drawing.Size(176, 20)
 		Me.txb_DOSBox_Folder.TabIndex = 0
 		'
 		'cmb_DOSBox_Volume_Number
@@ -1215,7 +1343,7 @@ Partial Class frm_Rom_Manager
 		Me.lbl_DOSBox_Folder_and_Files_Settings.MKBoundControl4 = Nothing
 		Me.lbl_DOSBox_Folder_and_Files_Settings.MKBoundControl5 = Nothing
 		Me.lbl_DOSBox_Folder_and_Files_Settings.Name = "lbl_DOSBox_Folder_and_Files_Settings"
-		Me.lbl_DOSBox_Folder_and_Files_Settings.Size = New System.Drawing.Size(297, 42)
+		Me.lbl_DOSBox_Folder_and_Files_Settings.Size = New System.Drawing.Size(273, 42)
 		Me.lbl_DOSBox_Folder_and_Files_Settings.TabIndex = 8
 		Me.lbl_DOSBox_Folder_and_Files_Settings.Text = "Configuration"
 		'
@@ -1275,36 +1403,36 @@ Partial Class frm_Rom_Manager
 		Me.barmng.DockControls.Add(Me.barDockControlLeft)
 		Me.barmng.DockControls.Add(Me.barDockControlRight)
 		Me.barmng.Form = Me
-		Me.barmng.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.bbi_AddGames, Me.bbi_AddGamesFolder, Me.bbi_Add_DOSBox_Game_Directory, Me.bbi_Add_DOSBox_Game_Media, Me.bbi_Edit_Game, Me.bbi_Edit_Multiple_Games, Me.bbi_Change_Directory, Me.bbi_Rescan, Me.bbi_SetHidden, Me.bbi_UnsetHidden, Me.bbi_SetLink, Me.bbi_RemoveLink, Me.bbi_Delete_Games, Me.bbi_Merge_Select, Me.bbi_Merge_Start, Me.bbi_Export, Me.bbi_Debug_Import_XML, Me.bbi_Debug_Export_XML, Me.bbi_Debug_Group_Volumes, Me.bbi_Debug_SetModified, Me.bbi_Debug_Apply_TDC, Me.SkinBarSubItem1, Me.bbi_DOSBox_Files_and_Folders_Rename, Me.bbi_DOSBox_Files_and_Folders_Add_Archive, Me.bbi_DOSBox_Files_and_Folders_Add_Directory, Me.bbi_DOSBox_Files_and_Folders_Add_Media, Me.bbi_Moby_Games_Open_Moby_Page, Me.bbi_Moby_Games_Evaluate_Links, Me.bbi_Auto_Link})
-		Me.barmng.MaxItemId = 29
+		Me.barmng.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.bbi_AddGames, Me.bbi_AddGamesFolder, Me.bbi_Add_DOSBox_Game_Directory, Me.bbi_Add_DOSBox_Game_Media, Me.bbi_Edit_Game, Me.bbi_Edit_Multiple_Games, Me.bbi_Change_Directory, Me.bbi_Rescan, Me.bbi_SetHidden, Me.bbi_UnsetHidden, Me.bbi_SetLink, Me.bbi_RemoveLink, Me.bbi_Delete_Games, Me.bbi_Merge_Select, Me.bbi_Merge_Start, Me.bbi_Export, Me.bbi_Debug_Import_XML, Me.bbi_Debug_Export_XML, Me.bbi_Debug_Group_Volumes, Me.bbi_Debug_SetModified, Me.bbi_Debug_Apply_TDC, Me.SkinBarSubItem1, Me.bbi_DOSBox_Files_and_Folders_Rename, Me.bbi_DOSBox_Files_and_Folders_Add_Archive, Me.bbi_DOSBox_Files_and_Folders_Add_Directory, Me.bbi_DOSBox_Files_and_Folders_Add_Media, Me.bbi_Moby_Games_Open_Moby_Page, Me.bbi_Moby_Games_Evaluate_Links, Me.bbi_Auto_Link, Me.bbi_MobyLink_QA, Me.bbi_Scan_ScummVM_Ini})
+		Me.barmng.MaxItemId = 31
 		'
 		'barDockControlTop
 		'
 		Me.barDockControlTop.CausesValidation = False
 		Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
 		Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-		Me.barDockControlTop.Size = New System.Drawing.Size(1008, 0)
+		Me.barDockControlTop.Size = New System.Drawing.Size(984, 0)
 		'
 		'barDockControlBottom
 		'
 		Me.barDockControlBottom.CausesValidation = False
 		Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-		Me.barDockControlBottom.Location = New System.Drawing.Point(0, 730)
-		Me.barDockControlBottom.Size = New System.Drawing.Size(1008, 0)
+		Me.barDockControlBottom.Location = New System.Drawing.Point(0, 661)
+		Me.barDockControlBottom.Size = New System.Drawing.Size(984, 0)
 		'
 		'barDockControlLeft
 		'
 		Me.barDockControlLeft.CausesValidation = False
 		Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
 		Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
-		Me.barDockControlLeft.Size = New System.Drawing.Size(0, 730)
+		Me.barDockControlLeft.Size = New System.Drawing.Size(0, 661)
 		'
 		'barDockControlRight
 		'
 		Me.barDockControlRight.CausesValidation = False
 		Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-		Me.barDockControlRight.Location = New System.Drawing.Point(1008, 0)
-		Me.barDockControlRight.Size = New System.Drawing.Size(0, 730)
+		Me.barDockControlRight.Location = New System.Drawing.Point(984, 0)
+		Me.barDockControlRight.Size = New System.Drawing.Size(0, 661)
 		'
 		'bbi_AddGames
 		'
@@ -1315,21 +1443,21 @@ Partial Class frm_Rom_Manager
 		'
 		'bbi_AddGamesFolder
 		'
-		Me.bbi_AddGamesFolder.Caption = "Add Games (Directory) ..."
+		Me.bbi_AddGamesFolder.Caption = "Add Games (&Directory) ..."
 		Me.bbi_AddGamesFolder.Id = 1
 		Me.bbi_AddGamesFolder.ImageUri.Uri = "Add"
 		Me.bbi_AddGamesFolder.Name = "bbi_AddGamesFolder"
 		'
 		'bbi_Add_DOSBox_Game_Directory
 		'
-		Me.bbi_Add_DOSBox_Game_Directory.Caption = "Add Game (Installed, Directory) ..."
+		Me.bbi_Add_DOSBox_Game_Directory.Caption = "Add Game (&Installed, Directory) ..."
 		Me.bbi_Add_DOSBox_Game_Directory.Id = 2
 		Me.bbi_Add_DOSBox_Game_Directory.ImageUri.Uri = "Add"
 		Me.bbi_Add_DOSBox_Game_Directory.Name = "bbi_Add_DOSBox_Game_Directory"
 		'
 		'bbi_Add_DOSBox_Game_Media
 		'
-		Me.bbi_Add_DOSBox_Game_Media.Caption = "Add Game (Install Media) ..."
+		Me.bbi_Add_DOSBox_Game_Media.Caption = "Add Game (Install &Media) ..."
 		Me.bbi_Add_DOSBox_Game_Media.Id = 3
 		Me.bbi_Add_DOSBox_Game_Media.ImageUri.Uri = "Add"
 		Me.bbi_Add_DOSBox_Game_Media.Name = "bbi_Add_DOSBox_Game_Media"
@@ -1343,7 +1471,7 @@ Partial Class frm_Rom_Manager
 		'
 		'bbi_Edit_Multiple_Games
 		'
-		Me.bbi_Edit_Multiple_Games.Caption = "E&dit Multiple Games"
+		Me.bbi_Edit_Multiple_Games.Caption = "Edi&t Multiple Games"
 		Me.bbi_Edit_Multiple_Games.Id = 5
 		Me.bbi_Edit_Multiple_Games.ImageUri.Uri = "CustomizeGrid"
 		Me.bbi_Edit_Multiple_Games.Name = "bbi_Edit_Multiple_Games"
@@ -1415,7 +1543,7 @@ Partial Class frm_Rom_Manager
 		'
 		'bbi_Export
 		'
-		Me.bbi_Export.Caption = "&Export %0% Games"
+		Me.bbi_Export.Caption = "E&xport %0% Games"
 		Me.bbi_Export.Id = 15
 		Me.bbi_Export.ImageUri.Uri = "SaveAndNew"
 		Me.bbi_Export.Name = "bbi_Export"
@@ -1500,7 +1628,7 @@ Partial Class frm_Rom_Manager
 		'
 		'bbi_Auto_Link
 		'
-		Me.bbi_Auto_Link.Caption = "Detect MobyGames Links..."
+		Me.bbi_Auto_Link.Caption = "Detect MobyGames Li&nks..."
 		Me.bbi_Auto_Link.Id = 28
 		Me.bbi_Auto_Link.ImageUri.Uri = "Find"
 		Me.bbi_Auto_Link.Name = "bbi_Auto_Link"
@@ -1511,9 +1639,34 @@ Partial Class frm_Rom_Manager
 		SuperToolTip3.Items.Add(ToolTipItem3)
 		Me.bbi_Auto_Link.SuperTip = SuperToolTip3
 		'
+		'bbi_MobyLink_QA
+		'
+		Me.bbi_MobyLink_QA.Caption = "MobyLink &QA"
+		Me.bbi_MobyLink_QA.Id = 29
+		Me.bbi_MobyLink_QA.ImageUri.Uri = "Apply"
+		Me.bbi_MobyLink_QA.Name = "bbi_MobyLink_QA"
+		ToolTipTitleItem4.Text = "MobyLink QA"
+		ToolTipItem4.LeftIndent = 6
+		ToolTipItem4.Text = "Check each selected game if either developer or publisher is contained within the" &
+		" filename. If not, the game will be highlighted."
+		SuperToolTip4.Items.Add(ToolTipTitleItem4)
+		SuperToolTip4.Items.Add(ToolTipItem4)
+		Me.bbi_MobyLink_QA.SuperTip = SuperToolTip4
+		'
+		'bbi_Scan_ScummVM_Ini
+		'
+		Me.bbi_Scan_ScummVM_Ini.Caption = "Scan scummvm.ini ..."
+		Me.bbi_Scan_ScummVM_Ini.Id = 30
+		Me.bbi_Scan_ScummVM_Ini.ImageUri.Uri = "Add"
+		Me.bbi_Scan_ScummVM_Ini.Name = "bbi_Scan_ScummVM_Ini"
+		ToolTipItem5.Text = "Scan your scummvm.ini in order to add games to Metropolis Launcher"
+		SuperToolTip5.Items.Add(ToolTipItem5)
+		Me.bbi_Scan_ScummVM_Ini.SuperTip = SuperToolTip5
+		Me.bbi_Scan_ScummVM_Ini.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+		'
 		'popmnu_Rom_Manager
 		'
-		Me.popmnu_Rom_Manager.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_AddGames, True), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_AddGamesFolder), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Add_DOSBox_Game_Directory), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Add_DOSBox_Game_Media), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Edit_Game), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Edit_Multiple_Games), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Change_Directory), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Rescan, True), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_SetHidden), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_UnsetHidden), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_SetLink), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_RemoveLink), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Auto_Link), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Delete_Games, True), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Merge_Select, True), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Merge_Start), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Export, True), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Debug_Import_XML, True), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Debug_Export_XML), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Debug_Group_Volumes), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Debug_SetModified), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Debug_Apply_TDC)})
+		Me.popmnu_Rom_Manager.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_AddGames, True), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_AddGamesFolder), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Add_DOSBox_Game_Directory), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Add_DOSBox_Game_Media), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Edit_Game), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Edit_Multiple_Games), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Change_Directory), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Rescan, True), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_SetHidden), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_UnsetHidden), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_SetLink), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_RemoveLink), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Auto_Link), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_MobyLink_QA), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Delete_Games, True), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Merge_Select, True), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Merge_Start), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Export, True), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Debug_Import_XML, True), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Debug_Export_XML), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Debug_Group_Volumes), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Debug_SetModified), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Debug_Apply_TDC)})
 		Me.popmnu_Rom_Manager.Manager = Me.barmng
 		Me.popmnu_Rom_Manager.Name = "popmnu_Rom_Manager"
 		'
@@ -1529,27 +1682,16 @@ Partial Class frm_Rom_Manager
 		Me.popmnu_Moby_Games.Manager = Me.barmng
 		Me.popmnu_Moby_Games.Name = "popmnu_Moby_Games"
 		'
-		'coldeprecated
+		'colCustomIdentifier
 		'
-		Me.coldeprecated.FieldName = "deprecated"
-		Me.coldeprecated.Name = "coldeprecated"
-		Me.coldeprecated.OptionsColumn.AllowEdit = False
-		Me.coldeprecated.OptionsColumn.ReadOnly = True
-		Me.coldeprecated.ToolTip = "indicates that the MobyGame link may be deprecated (nothing really to worry here," &
-		" the meta data is still there)"
-		'
-		'coldeprecated1
-		'
-		Me.coldeprecated1.FieldName = "deprecated"
-		Me.coldeprecated1.Name = "coldeprecated1"
-		Me.coldeprecated1.OptionsColumn.AllowEdit = False
-		Me.coldeprecated1.OptionsColumn.ReadOnly = True
-		Me.coldeprecated1.ToolTip = "indicates that the MobyGame link may be deprecated (nothing really to worry here," &
-		" the meta data is still there)"
+		Me.colCustomIdentifier.FieldName = "CustomIdentifier"
+		Me.colCustomIdentifier.Name = "colCustomIdentifier"
+		Me.colCustomIdentifier.OptionsColumn.AllowEdit = False
+		Me.colCustomIdentifier.OptionsColumn.ReadOnly = True
 		'
 		'frm_Rom_Manager
 		'
-		Me.ClientSize = New System.Drawing.Size(1008, 730)
+		Me.ClientSize = New System.Drawing.Size(984, 661)
 		Me.Controls.Add(Me.spltpnl_Right)
 		Me.Controls.Add(Me.Ctl_MKDXSplitter1)
 		Me.Controls.Add(Me.pnl_Left)
@@ -1578,6 +1720,9 @@ Partial Class frm_Rom_Manager
 		CType(Me.BS_Emu_Games, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.DS_ML, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.gv_Emu_Games, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.rpi_Moby_Year, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.rpi_Moby_Publisher, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.rpi_Moby_Developer, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.BS_Moby_Platforms_gv1, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.DS_Rombase, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.BS_Rombase, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1762,4 +1907,16 @@ Partial Class frm_Rom_Manager
 	Friend WithEvents colPublisher As DevExpress.XtraGrid.Columns.GridColumn
 	Friend WithEvents coldeprecated1 As DevExpress.XtraGrid.Columns.GridColumn
 	Friend WithEvents coldeprecated As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents colMoby_Games_URLPart_Moby_Year As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents rpi_Moby_Year As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+	Friend WithEvents colMoby_Games_URLPart_Publisher As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents rpi_Moby_Publisher As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+	Friend WithEvents colMoby_Games_URLPart_Developer As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents rpi_Moby_Developer As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+	Friend WithEvents coltmp_Highlighted As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents bbi_MobyLink_QA As DevExpress.XtraBars.BarButtonItem
+	Friend WithEvents colcompilation As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents bbi_Scan_ScummVM_Ini As DevExpress.XtraBars.BarButtonItem
+	Friend WithEvents colPlatform As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents colCustomIdentifier As DevExpress.XtraGrid.Columns.GridColumn
 End Class

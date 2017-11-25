@@ -24,7 +24,7 @@
 		Next
 
 		If Not bFound Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("It seems that there could no network interface card be found. The window will be closed.", "Could not find any NICs", MessageBoxButtons.OK, MessageBoxIcon.Information)
+			MKDXHelper.MessageBox("It seems that there could no network interface card be found. The window will be closed.", "Could not find any NICs", MessageBoxButtons.OK, MessageBoxIcon.Information)
 			Me.DialogResult = Windows.Forms.DialogResult.Cancel
 			Me.Close()
 		End If

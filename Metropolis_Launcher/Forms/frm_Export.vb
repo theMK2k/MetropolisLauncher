@@ -80,7 +80,7 @@
 
 	Private Sub btn_Export_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Export.Click
 		If Not Alphaleonis.Win32.Filesystem.Directory.Exists(txb_Destination.Text) Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("The destination directory does not exist.", "Destination not found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+			MKDXHelper.MessageBox("The destination directory does not exist.", "Destination not found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 			Return
 		End If
 
@@ -104,9 +104,9 @@
 		prg.Close()
 
 		If Not bCancelled Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("The export completed.", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information)
+			MKDXHelper.MessageBox("The export completed.", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information)
 		Else
-			DevExpress.XtraEditors.XtraMessageBox.Show("The export has been cancelled.", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information)
+			MKDXHelper.MessageBox("The export has been cancelled.", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information)
 		End If
 	End Sub
 
@@ -191,7 +191,7 @@
 							End If
 						Catch ex As Exception
 							prg.Hide = True
-							DevExpress.XtraEditors.XtraMessageBox.Show("Error while copying " & filename & "." & ControlChars.CrLf & ControlChars.CrLf & ex.Message, "Export", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+							MKDXHelper.ExceptionMessageBox(ex, "Error while copying " & filename & "." & ControlChars.CrLf & ControlChars.CrLf, "Export")
 							prg.Hide = False
 						End Try
 					ElseIf Alphaleonis.Win32.Filesystem.Directory.Exists(file) Then
@@ -217,13 +217,13 @@
 									FileIO.FileSystem.CopyDirectory(file, destination, True)
 								Else
 									prg.Hide = True
-									DevExpress.XtraEditors.XtraMessageBox.Show("Cannot copy " & dirname & ".", "Export", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+									MKDXHelper.MessageBox("Cannot copy " & dirname & ".", "Export", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 									prg.Hide = False
 								End If
 							End If
 						Catch ex As Exception
 							prg.Hide = True
-							DevExpress.XtraEditors.XtraMessageBox.Show("Error while copying " & dirname & "." & ControlChars.CrLf & ControlChars.CrLf & ex.Message, "Export", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+							MKDXHelper.ExceptionMessageBox(ex, "Error while copying " & dirname & "." & ControlChars.CrLf & ControlChars.CrLf, "Export")
 							prg.Hide = False
 						End Try
 					End If
@@ -262,7 +262,7 @@
 						End If
 					Catch ex As Exception
 						prg.Hide = True
-						DevExpress.XtraEditors.XtraMessageBox.Show("Error while copying " & filename & "." & ControlChars.CrLf & ControlChars.CrLf & ex.Message, "Export", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+						MKDXHelper.ExceptionMessageBox(ex, "Error while copying " & filename & "." & ControlChars.CrLf & ControlChars.CrLf, "Export")
 						prg.Hide = False
 					End Try
 				Next
@@ -299,12 +299,12 @@
 					End Using
 				Catch ex As Exception
 					prg.Hide = True
-					DevExpress.XtraEditors.XtraMessageBox.Show("Error while creating " & OutFileName & ".zip." & ControlChars.CrLf & ControlChars.CrLf & ex.Message, "Export", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+					MKDXHelper.ExceptionMessageBox(ex, "Error while creating " & OutFileName & ".zip." & ControlChars.CrLf & ControlChars.CrLf, "Export")
 					prg.Hide = False
 				End Try
 			Case Else
 				prg.Hide = True
-				DevExpress.XtraEditors.XtraMessageBox.Show("Export mode not recognized.", "Export", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+				MKDXHelper.MessageBox("Export mode not recognized.", "Export", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 				prg.Hide = False
 				Return False
 		End Select

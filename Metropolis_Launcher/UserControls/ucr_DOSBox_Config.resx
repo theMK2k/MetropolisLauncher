@@ -124,10 +124,10 @@
     <value>420, 17</value>
   </metadata>
   <metadata name="BS_Templates.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>612, 217</value>
+    <value>323, 295</value>
   </metadata>
   <metadata name="DS_ML_Templates.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>462, 217</value>
+    <value>173, 295</value>
   </metadata>
   <metadata name="BTA_sdl_priority_1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>120, 17</value>
@@ -325,10 +325,10 @@
         ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
 </value>
   </data>
-  <data name="ToolTipItem42.Text" xml:space="preserve">
+  <data name="ToolTipItem44.Text" xml:space="preserve">
     <value>Amount of memory DOSBox has in megabytes. This value is best left at its default to avoid problems with some games, though few games might require a higher value. There is generally no speed advantage when raising this value.</value>
   </data>
-  <data name="ToolTipItem43.Text" xml:space="preserve">
+  <data name="ToolTipItem45.Text" xml:space="preserve">
     <value>Amount of memory DOSBox has in megabytes. This value is best left at its default to avoid problems with some games, though few games might require a higher value. There is generally no speed advantage when raising this value.</value>
   </data>
   <metadata name="BTA_render_scaler.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -478,65 +478,6 @@
         ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
 </value>
   </data>
-  <metadata name="BTA_sdl_fullresolution.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>924, 17</value>
-  </metadata>
-  <data name="BTA_sdl_fullresolution.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
-        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
-        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
-        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
-        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
-        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
-        bmRlcnRfdm9uCw==
-</value>
-  </data>
-  <data name="BTA_sdl_fullresolution.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
-        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
-        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
-        AQEBCQIAAAAAAAAAHAIAABwCAAAoBAAAAQEBAQoPAgAAACgEAAACH4sIAAAAAAAEAJ1UW0/bMBRugVbr
-        2Payh71aeW6TZtxG1IAESNM06CbaTbwhNzltw2K786WXN37Q/iM7TtwCVdGkOZLtnMv3fT6+VKqVSuUB
-        mx1te7OFXbe3UBqYf0E1bZKfIFUmeLzvt+3XJOcm10ZCzMFoSfMm+W4GeZZ8hUVf/AIeD46O6EFycBge
-        7+1D+9NxzYK/f4JZdD3Q22j/4Ob+NTChMz5ydI0blveSMTC6i7OLbDj8LCnbrlbfOSAXZ/U2LFB9B7s/
-        tc7pnOVk6jR7od/2CPBEpAgde0YPW+Ghd3ry9nVnriJVEJAsjb0uzJwSjyACV7HnJtEc52OtJ1EQzGYz
-        f7bnCzkKPrbbYXBzdVmKXMYylSIKEknu0FWLZYkUSgx1KxEswrhWGeWhCkKsDsiBAdeEUwbPpZSR0Rfl
-        LLGnpYGV/YeCcyMl5l6KhObg3AVwCY2Ukxzm/cUEnNXZxyJLgLCMf0sSI3GJWChG58s/wwfC8BRSb5W2
-        SWufDnIIn8a8TPvoVfDb4KasuzYRTGlu16sRKPZsqpa4k6sCaCpHoLsYqiY0Abtpz5cUrNMHL/EXns26
-        C5fT9VjFYFXGZb03IazllvzFyTip1/DI3lc7KZ7ukYzKgbL/OUoup4T4V86SqDUNbYF27PVZu1b2MtVv
-        r+idkDhk3A5nJsvTxu01TDMbYp+LV9i23NPx4NruX06O5L9VBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL
-</value>
-  </data>
-  <data name="BTA_sdl_fullresolution.FillString" xml:space="preserve">
-    <value>original;320x200;320x240;640x432;640x480;720x480;800x600;960x600;1024x768;1152x864;1280x720;1280x768;1280x800;1280x960;1280x1024;1360x768;1366x760;1366x768;1440x900;1600x1200;1680x1050;1920x1080;1920x1200</value>
-  </data>
-  <data name="BTA_sdl_fullresolution.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
-        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
-        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
-        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
-        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
-</value>
-  </data>
-  <data name="ToolTipItem59.Text" xml:space="preserve">
-    <value>Which resolution to use for fullscreen: original or fixed size (e.g. 1024x768).
-
-Using your monitor's native resolution with Keep Aspect Ratio checked might give the best results.
-
-If you end up with small window on a large screen, try an output different from surface.</value>
-  </data>
   <metadata name="BTA_sdl_windowresolution.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1094, 17</value>
   </metadata>
@@ -578,7 +519,7 @@ If you end up with small window on a large screen, try an output different from 
 </value>
   </data>
   <data name="BTA_sdl_windowresolution.FillString" xml:space="preserve">
-    <value>original;320x200;320x240;640x432;640x480;720x480;800x600;960x600;1024x768;1152x864;1280x720;1280x768;1280x800;1280x960;1280x1024;1360x768;1366x760;1366x768;1440x900;1600x1200;1680x1050;1920x1080;1920x1200</value>
+    <value>original;desktop;320x200;320x240;640x432;640x480;720x480;800x600;960x600;1024x768;1152x864;1280x720;1280x768;1280x800;1280x960;1280x1024;1360x768;1366x760;1366x768;1440x900;1600x1200;1680x1050;1920x1080;1920x1200</value>
   </data>
   <data name="BTA_sdl_windowresolution.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -589,12 +530,57 @@ If you end up with small window on a large screen, try an output different from 
         ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
 </value>
   </data>
-  <data name="ToolTipItem63.Text" xml:space="preserve">
-    <value>Which resolution to use for fullscreen: original or fixed size (e.g. 1024x768).
-
-Using your monitor's native resolution with Keep Aspect Ratio checked might give the best results.
-
-If you end up with small window on a large screen, try an output different from surface.</value>
+  <metadata name="BTA_sdl_fullresolution.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>924, 17</value>
+  </metadata>
+  <data name="BTA_sdl_fullresolution.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
+        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
+        bmRlcnRfdm9uCw==
+</value>
+  </data>
+  <data name="BTA_sdl_fullresolution.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAHAIAABwCAAAoBAAAAQEBAQoPAgAAACgEAAACH4sIAAAAAAAEAJ1UW0/bMBRugVbr
+        2Payh71aeW6TZtxG1IAESNM06CbaTbwhNzltw2K786WXN37Q/iM7TtwCVdGkOZLtnMv3fT6+VKqVSuUB
+        mx1te7OFXbe3UBqYf0E1bZKfIFUmeLzvt+3XJOcm10ZCzMFoSfMm+W4GeZZ8hUVf/AIeD46O6EFycBge
+        7+1D+9NxzYK/f4JZdD3Q22j/4Ob+NTChMz5ydI0blveSMTC6i7OLbDj8LCnbrlbfOSAXZ/U2LFB9B7s/
+        tc7pnOVk6jR7od/2CPBEpAgde0YPW+Ghd3ry9nVnriJVEJAsjb0uzJwSjyACV7HnJtEc52OtJ1EQzGYz
+        f7bnCzkKPrbbYXBzdVmKXMYylSIKEknu0FWLZYkUSgx1KxEswrhWGeWhCkKsDsiBAdeEUwbPpZSR0Rfl
+        LLGnpYGV/YeCcyMl5l6KhObg3AVwCY2Ukxzm/cUEnNXZxyJLgLCMf0sSI3GJWChG58s/wwfC8BRSb5W2
+        SWufDnIIn8a8TPvoVfDb4KasuzYRTGlu16sRKPZsqpa4k6sCaCpHoLsYqiY0Abtpz5cUrNMHL/EXns26
+        C5fT9VjFYFXGZb03IazllvzFyTip1/DI3lc7KZ7ukYzKgbL/OUoup4T4V86SqDUNbYF27PVZu1b2MtVv
+        r+idkDhk3A5nJsvTxu01TDMbYp+LV9i23NPx4NruX06O5L9VBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL
+</value>
+  </data>
+  <data name="BTA_sdl_fullresolution.FillString" xml:space="preserve">
+    <value>original;desktop;320x200;320x240;640x432;640x480;720x480;800x600;960x600;1024x768;1152x864;1280x720;1280x768;1280x800;1280x960;1280x1024;1360x768;1366x760;1366x768;1440x900;1600x1200;1680x1050;1920x1080;1920x1200</value>
+  </data>
+  <data name="BTA_sdl_fullresolution.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
+</value>
   </data>
   <metadata name="BTA_dos_keyboardlayout.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>167, 100</value>
@@ -649,7 +635,7 @@ If you end up with small window on a large screen, try an output different from 
 </value>
   </data>
   <metadata name="BTA_speaker_tandyrate.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1003, 178</value>
+    <value>173, 256</value>
   </metadata>
   <data name="BTA_speaker_tandyrate.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -698,7 +684,7 @@ If you end up with small window on a large screen, try an output different from 
 </value>
   </data>
   <metadata name="BTA_speaker_pcrate.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>687, 178</value>
+    <value>733, 217</value>
   </metadata>
   <data name="BTA_speaker_pcrate.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -747,7 +733,7 @@ If you end up with small window on a large screen, try an output different from 
 </value>
   </data>
   <metadata name="BTA_speaker_tandy.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>847, 178</value>
+    <value>17, 256</value>
   </metadata>
   <data name="BTA_speaker_tandy.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -892,20 +878,6 @@ If you end up with small window on a large screen, try an output different from 
         AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
         ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
 </value>
-  </data>
-  <data name="ToolTipItem91.Text" xml:space="preserve">
-    <value>What resolution to use for fullscreen: original or fixed size (e.g. 1024x768).
-
-Using your monitor's native resolution with aspect=true might give the best results.
-
-If you end up with small window on a large screen, try an output different from surface.</value>
-  </data>
-  <data name="ToolTipItem92.Text" xml:space="preserve">
-    <value>What resolution to use for fullscreen: original or fixed size (e.g. 1024x768).
-
-Using your monitor's native resolution with aspect=true might give the best results.
-
-If you end up with small window on a large screen, try an output different from surface.</value>
   </data>
   <data name="ToolTipItem93.Text" xml:space="preserve">
     <value>What resolution to use for fullscreen: original or fixed size (e.g. 1024x768).
@@ -1089,6 +1061,20 @@ Using your monitor's native resolution with aspect=true might give the best resu
 
 If you end up with small window on a large screen, try an output different from surface.</value>
   </data>
+  <data name="ToolTipItem119.Text" xml:space="preserve">
+    <value>What resolution to use for fullscreen: original or fixed size (e.g. 1024x768).
+
+Using your monitor's native resolution with aspect=true might give the best results.
+
+If you end up with small window on a large screen, try an output different from surface.</value>
+  </data>
+  <data name="ToolTipItem120.Text" xml:space="preserve">
+    <value>What resolution to use for fullscreen: original or fixed size (e.g. 1024x768).
+
+Using your monitor's native resolution with aspect=true might give the best results.
+
+If you end up with small window on a large screen, try an output different from surface.</value>
+  </data>
   <metadata name="BTA_sblaster_oplrate.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1290, 17</value>
   </metadata>
@@ -1237,7 +1223,7 @@ If you end up with small window on a large screen, try an output different from 
 </value>
   </data>
   <metadata name="BTA_sblaster_hdma.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>306, 217</value>
+    <value>17, 295</value>
   </metadata>
   <data name="BTA_sblaster_hdma.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -1286,7 +1272,7 @@ If you end up with small window on a large screen, try an output different from 
 </value>
   </data>
   <metadata name="BTA_sblaster_dma.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>157, 217</value>
+    <value>815, 256</value>
   </metadata>
   <data name="BTA_sblaster_dma.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -1335,7 +1321,7 @@ If you end up with small window on a large screen, try an output different from 
 </value>
   </data>
   <metadata name="BTA_sblaster_irq.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 217</value>
+    <value>675, 256</value>
   </metadata>
   <data name="BTA_sblaster_irq.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -1384,7 +1370,7 @@ If you end up with small window on a large screen, try an output different from 
 </value>
   </data>
   <metadata name="BTA_sblaster_sbbase.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1342, 178</value>
+    <value>512, 256</value>
   </metadata>
   <data name="BTA_sblaster_sbbase.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -1433,7 +1419,7 @@ If you end up with small window on a large screen, try an output different from 
 </value>
   </data>
   <metadata name="BTA_sblaster_sbtype.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1180, 178</value>
+    <value>350, 256</value>
   </metadata>
   <data name="BTA_sblaster_sbtype.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -1827,7 +1813,7 @@ If you end up with small window on a large screen, try an output different from 
         ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
 </value>
   </data>
-  <data name="ToolTipItem165.Text" xml:space="preserve">
+  <data name="ToolTipItem167.Text" xml:space="preserve">
     <value>If set, demo/game-specific hacks are applied to PIT timer emulation to help stabilize the demo and run more reliably.
 
 project_angel_demo: If you intend to run the Project Angel demo, use this setting. The PIT timer is forced to one of two values to resolve hangups, timing issues, music skipping on video mode changes, and VGA tearlines.
@@ -1884,7 +1870,7 @@ pc_speaker_as_timer: A few early DOS demos apparently like to use PIT 2 as a tim
         ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
 </value>
   </data>
-  <data name="ToolTipItem166.Text" xml:space="preserve">
+  <data name="ToolTipItem168.Text" xml:space="preserve">
     <value>If set, demo/game-specific hacks are applied to PIT timer emulation to help stabilize the demo and run more reliably.
 
 project_angel_demo: If you intend to run the Project Angel demo, use this setting. The PIT timer is forced to one of two values to resolve hangups, timing issues, music skipping on video mode changes, and VGA tearlines.
@@ -1941,17 +1927,66 @@ pc_speaker_as_timer: A few early DOS demos apparently like to use PIT 2 as a tim
         ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
 </value>
   </data>
-  <data name="ToolTipItem169.Text" xml:space="preserve">
-    <value>Any amount larger than 0 overrides the Memory size in MB. Amount of memory DOSBox has in kilobytes. Finer grained control of total memory may be useful in emulating ancient DOS machines with less than 640KB of RAM or early 386 systems with odd extended memory sizes.</value>
-  </data>
-  <data name="ToolTipItem170.Text" xml:space="preserve">
-    <value>Any amount larger than 0 overrides the Memory size in MB. Amount of memory DOSBox has in kilobytes. Finer grained control of total memory may be useful in emulating ancient DOS machines with less than 640KB of RAM or early 386 systems with odd extended memory sizes.</value>
-  </data>
   <data name="ToolTipItem171.Text" xml:space="preserve">
     <value>Any amount larger than 0 overrides the Memory size in MB. Amount of memory DOSBox has in kilobytes. Finer grained control of total memory may be useful in emulating ancient DOS machines with less than 640KB of RAM or early 386 systems with odd extended memory sizes.</value>
   </data>
+  <data name="ToolTipItem172.Text" xml:space="preserve">
+    <value>Any amount larger than 0 overrides the Memory size in MB. Amount of memory DOSBox has in kilobytes. Finer grained control of total memory may be useful in emulating ancient DOS machines with less than 640KB of RAM or early 386 systems with odd extended memory sizes.</value>
+  </data>
+  <data name="ToolTipItem173.Text" xml:space="preserve">
+    <value>Any amount larger than 0 overrides the Memory size in MB. Amount of memory DOSBox has in kilobytes. Finer grained control of total memory may be useful in emulating ancient DOS machines with less than 640KB of RAM or early 386 systems with odd extended memory sizes.</value>
+  </data>
+  <metadata name="BTA_p_voodoo_voodoomem.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>449, 295</value>
+  </metadata>
+  <data name="BTA_p_voodoo_voodoomem.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
+        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
+        bmRlcnRfdm9uCw==
+</value>
+  </data>
+  <data name="BTA_p_voodoo_voodoomem.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAHAIAABwCAAAoBAAAAQEBAQoPAgAAACgEAAACH4sIAAAAAAAEAJ1UW0/bMBRugVbr
+        2Payh71aeW6TZtxG1IAESNM06CbaTbwhNzltw2K786WXN37Q/iM7TtwCVdGkOZLtnMv3fT6+VKqVSuUB
+        mx1te7OFXbe3UBqYf0E1bZKfIFUmeLzvt+3XJOcm10ZCzMFoSfMm+W4GeZZ8hUVf/AIeD46O6EFycBge
+        7+1D+9NxzYK/f4JZdD3Q22j/4Ob+NTChMz5ydI0blveSMTC6i7OLbDj8LCnbrlbfOSAXZ/U2LFB9B7s/
+        tc7pnOVk6jR7od/2CPBEpAgde0YPW+Ghd3ry9nVnriJVEJAsjb0uzJwSjyACV7HnJtEc52OtJ1EQzGYz
+        f7bnCzkKPrbbYXBzdVmKXMYylSIKEknu0FWLZYkUSgx1KxEswrhWGeWhCkKsDsiBAdeEUwbPpZSR0Rfl
+        LLGnpYGV/YeCcyMl5l6KhObg3AVwCY2Ukxzm/cUEnNXZxyJLgLCMf0sSI3GJWChG58s/wwfC8BRSb5W2
+        SWufDnIIn8a8TPvoVfDb4KasuzYRTGlu16sRKPZsqpa4k6sCaCpHoLsYqiY0Abtpz5cUrNMHL/EXns26
+        C5fT9VjFYFXGZb03IazllvzFyTip1/DI3lc7KZ7ukYzKgbL/OUoup4T4V86SqDUNbYF27PVZu1b2MtVv
+        r+idkDhk3A5nJsvTxu01TDMbYp+LV9i23NPx4NruX06O5L9VBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL
+</value>
+  </data>
+  <data name="BTA_p_voodoo_voodoomem.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
+</value>
+  </data>
   <metadata name="BTA_p_glide_glide.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>334, 139</value>
+    <value>740, 139</value>
   </metadata>
   <data name="BTA_p_glide_glide.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -2000,7 +2035,7 @@ pc_speaker_as_timer: A few early DOS demos apparently like to use PIT 2 as a tim
 </value>
   </data>
   <metadata name="BTA_p_glide_lfb.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>197, 139</value>
+    <value>603, 139</value>
   </metadata>
   <data name="BTA_p_glide_lfb.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -2049,7 +2084,7 @@ pc_speaker_as_timer: A few early DOS demos apparently like to use PIT 2 as a tim
 </value>
   </data>
   <metadata name="BTA_p_voodoo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1221, 139</value>
+    <value>754, 178</value>
   </metadata>
   <data name="BTA_p_voodoo.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -2146,11 +2181,11 @@ pc_speaker_as_timer: A few early DOS demos apparently like to use PIT 2 as a tim
         ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
 </value>
   </data>
-  <data name="ToolTipItem196.Text" xml:space="preserve">
+  <data name="ToolTipItem205.Text" xml:space="preserve">
     <value>Amount of video memory in megabytes. The maximum resolution and color depth the svga_s3 will be able to display is determined by this value. For build engine games, use more memory so it can use triple buffering and thus won't flicker.</value>
   </data>
   <metadata name="BTA_p_dosbox_vmemsize.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1354, 139</value>
+    <value>17, 217</value>
   </metadata>
   <data name="BTA_p_dosbox_vmemsize.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -2198,14 +2233,14 @@ pc_speaker_as_timer: A few early DOS demos apparently like to use PIT 2 as a tim
         ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
 </value>
   </data>
-  <data name="ToolTipItem197.Text" xml:space="preserve">
+  <data name="ToolTipItem206.Text" xml:space="preserve">
     <value>Amount of video memory in megabytes. The maximum resolution and color depth the svga_s3 will be able to display is determined by this value. For build engine games, use more memory so it can use triple buffering and thus won't flicker.</value>
   </data>
-  <data name="ToolTipItem198.Text" xml:space="preserve">
+  <data name="ToolTipItem207.Text" xml:space="preserve">
     <value>Some patches introduce new scalers. This setting overrides the (standard) scaler setting. Scalers are used to enlarge/enhance low resolution modes. If forced, then the scaler will be used even if the result might not be desired.</value>
   </data>
   <metadata name="BTA_p_render_scaler.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>233, 178</value>
+    <value>423, 217</value>
   </metadata>
   <data name="BTA_p_render_scaler.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -2253,14 +2288,21 @@ pc_speaker_as_timer: A few early DOS demos apparently like to use PIT 2 as a tim
         ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
 </value>
   </data>
-  <data name="ToolTipItem199.Text" xml:space="preserve">
+  <data name="ToolTipItem208.Text" xml:space="preserve">
     <value>Some patches introduce new scalers. This setting overrides the (standard) scaler setting. Scalers are used to enlarge/enhance low resolution modes. If forced, then the scaler will be used even if the result might not be desired.</value>
   </data>
-  <data name="ToolTipItem200.Text" xml:space="preserve">
+  <data name="ToolTipItem209.Text" xml:space="preserve">
     <value>Amount of video memory in megabytes. The maximum resolution and color depth the svga_s3 will be able to display is determined by this value. For build engine games, use more memory so it can use triple buffering and thus won't flicker.</value>
   </data>
+  <data name="ToolTipItem211.Text" xml:space="preserve">
+    <value>Some patches introduce new systems for output. This setting overrides the (standard) Output setting.
+
+surfacepp: pixel-perfect scaling
+surfacenp: near-perfect scaling via oversampling
+surfacenb: nearest-neighbor scaling</value>
+  </data>
   <metadata name="BTA_p_sdl_output.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>395, 178</value>
+    <value>585, 217</value>
   </metadata>
   <data name="BTA_p_sdl_output.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -2300,6 +2342,55 @@ pc_speaker_as_timer: A few early DOS demos apparently like to use PIT 2 as a tim
 </value>
   </data>
   <data name="BTA_p_sdl_output.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
+</value>
+  </data>
+  <metadata name="BTA_p_sblaster_oplemu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>657, 295</value>
+  </metadata>
+  <data name="BTA_p_sblaster_oplemu.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
+        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
+        bmRlcnRfdm9uCw==
+</value>
+  </data>
+  <data name="BTA_p_sblaster_oplemu.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAHAIAABwCAAAoBAAAAQEBAQoPAgAAACgEAAACH4sIAAAAAAAEAJ1UW0/bMBRugVbr
+        2Payh71aeW6TZtxG1IAESNM06CbaTbwhNzltw2K786WXN37Q/iM7TtwCVdGkOZLtnMv3fT6+VKqVSuUB
+        mx1te7OFXbe3UBqYf0E1bZKfIFUmeLzvt+3XJOcm10ZCzMFoSfMm+W4GeZZ8hUVf/AIeD46O6EFycBge
+        7+1D+9NxzYK/f4JZdD3Q22j/4Ob+NTChMz5ydI0blveSMTC6i7OLbDj8LCnbrlbfOSAXZ/U2LFB9B7s/
+        tc7pnOVk6jR7od/2CPBEpAgde0YPW+Ghd3ry9nVnriJVEJAsjb0uzJwSjyACV7HnJtEc52OtJ1EQzGYz
+        f7bnCzkKPrbbYXBzdVmKXMYylSIKEknu0FWLZYkUSgx1KxEswrhWGeWhCkKsDsiBAdeEUwbPpZSR0Rfl
+        LLGnpYGV/YeCcyMl5l6KhObg3AVwCY2Ukxzm/cUEnNXZxyJLgLCMf0sSI3GJWChG58s/wwfC8BRSb5W2
+        SWufDnIIn8a8TPvoVfDb4KasuzYRTGlu16sRKPZsqpa4k6sCaCpHoLsYqiY0Abtpz5cUrNMHL/EXns26
+        C5fT9VjFYFXGZb03IazllvzFyTip1/DI3lc7KZ7ukYzKgbL/OUoup4T4V86SqDUNbYF27PVZu1b2MtVv
+        r+idkDhk3A5nJsvTxu01TDMbYp+LV9i23NPx4NruX06O5L9VBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL
+</value>
+  </data>
+  <data name="BTA_p_sblaster_oplemu.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
@@ -2358,7 +2449,7 @@ pc_speaker_as_timer: A few early DOS demos apparently like to use PIT 2 as a tim
 </value>
   </data>
   <metadata name="BTA_p_sblaster_oplmode.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>862, 139</value>
+    <value>395, 178</value>
   </metadata>
   <data name="BTA_p_sblaster_oplmode.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -2398,6 +2489,140 @@ pc_speaker_as_timer: A few early DOS demos apparently like to use PIT 2 as a tim
 </value>
   </data>
   <data name="BTA_p_sblaster_oplmode.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
+</value>
+  </data>
+  <metadata name="BTA_p_midi_mt32_dac.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>582, 178</value>
+  </metadata>
+  <data name="BTA_p_midi_mt32_dac.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
+        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
+        bmRlcnRfdm9uCw==
+</value>
+  </data>
+  <data name="BTA_p_midi_mt32_dac.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAKQIAACkCAABCBAAAAQEBAQoPAgAAAEIEAAACH4sIAAAAAAAEAK1Uy27TQBRN+ogI
+        BTYs2FpeJ3ZMX9SKW4lWQog2oCag7qqJfZO6zCPMI3F2fAW/W+7Yk7SNUoEQY2lmfB/nnJnr61q9Vqvd
+        4bCrHS82cOr150oDC86IJi3vG0iVC57sBR37tLxTQ7WRkHAwWhLa8r6YIc3TTzAfiO/Ak+HhIdlP9w+i
+        o9096Lw72rbgrx9gllMf9Cba37h9cAlM6JyPHV3zitF+egOM7ODuLB+NPkjCNuv1Vw7IxVm9TQvU2MLp
+        V6N7UjDqTZ1mPwo6vgc8FRlCJ77Ro3Z04J8cv3zeLVSsSgIvzxK/BzOnxPcQgavEd5u4wP2N1pM4DGez
+        WTDbDYQch287nSi8ujivRC5imcoQBYkkd+iqzfJUCiVGup0KFmNcu4ryUYXnWR1AgQHXHicMHkupIuOP
+        ylkSX0sDS/tXBadGSsw9Fymh4NwlcAWNlBMKxWA+AWd19huRp+CxnH9OUyPxiHhRjBSLN8OHwvAMMn+Z
+        tk7rgAwpRA9jnqa99yr4YbAoq651BFNC7Xk1AiW+TdUSK7m8AE3kGHQPQ9WEpGCL9vhI4V9wZLmaUDLX
+        UOj/yNQNnzpp6Vl/Q6XLqbuvV7gs2KKy6xBWciv+8hs8bmxjc/ysdzPso7GMq4Wwf/loXU4F8aecBVF7
+        GtkL2rKNutLAtm0b1xfkVkhccm6X9yanWfP6Eqa5DbE/pmc4NtxP6s6Nnd/8qNxWvwQAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAs=
+</value>
+  </data>
+  <data name="BTA_p_midi_mt32_dac.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
+</value>
+  </data>
+  <data name="ToolTipItem225.Text" xml:space="preserve">
+    <value>MT-32 DAC input emulation mode:
+
+Nice: Produces samples at double the volume, without tricks. Higher quality than the real devices.
+
+Pure: Produces samples that exactly match the bits output from the emulated LA32. Nicer overdrive characteristics than the DAC hacks (it simply clips samples within range). Much less likely to overdrive than any other mode. Half the volume of any of the other modes, meaning its volume relative to the reverb output when mixed together directly will sound wrong. So, reverb level must be lowered. Perfect for developers while debugging :)
+
+GENERATION1: Re-orders the LA32 output bits as in early generation MT-32s (according to Wikipedia). Bit order at DAC (where each number represents the original LA32 output bit number, and XX means the bit is always low): 15 13 12 11 10 09 08 07 06 05 04 03 02 01 00 XX
+
+GENERATION2: Re-orders the LA32 output bits as in later geneerations (personally confirmed on my CM-32L - KG). Bit order at DAC (where each number represents the original LA32 output bit number): 15 13 12 11 10 09 08 07 06 05 04 03 02 01 00 14</value>
+  </data>
+  <data name="ToolTipItem226.Text" xml:space="preserve">
+    <value>MT-32 DAC input emulation mode:
+
+Nice: Produces samples at double the volume, without tricks. Higher quality than the real devices.
+
+Pure: Produces samples that exactly match the bits output from the emulated LA32. Nicer overdrive characteristics than the DAC hacks (it simply clips samples within range). Much less likely to overdrive than any other mode. Half the volume of any of the other modes, meaning its volume relative to the reverb output when mixed together directly will sound wrong. So, reverb level must be lowered. Perfect for developers while debugging :)
+
+GENERATION1: Re-orders the LA32 output bits as in early generation MT-32s (according to Wikipedia). Bit order at DAC (where each number represents the original LA32 output bit number, and XX means the bit is always low): 15 13 12 11 10 09 08 07 06 05 04 03 02 01 00 XX
+
+GENERATION2: Re-orders the LA32 output bits as in later geneerations (personally confirmed on my CM-32L - KG). Bit order at DAC (where each number represents the original LA32 output bit number): 15 13 12 11 10 09 08 07 06 05 04 03 02 01 00 14</value>
+  </data>
+  <data name="ToolTipItem227.Text" xml:space="preserve">
+    <value>Toggles "Nice Amp Ramp" mode that improves amplitude ramp for sustaining instruments.
+
+Quick changes of volume or expression on a MIDI channel may result in amp jumps on real hardware.
+
+When "Nice Amp Ramp" mode is enabled, amp changes gradually instead. Otherwise, the emulation accuracy is preserved.</value>
+  </data>
+  <data name="ToolTipItem228.Text" xml:space="preserve">
+    <value>Toggles "Nice Amp Ramp" mode that improves amplitude ramp for sustaining instruments.
+
+Quick changes of volume or expression on a MIDI channel may result in amp jumps on real hardware.
+
+When "Nice Amp Ramp" mode is enabled, amp changes gradually instead. Otherwise, the emulation accuracy is preserved.</value>
+  </data>
+  <metadata name="BTA_p_midi_mt32_src_quality.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>202, 366</value>
+  </metadata>
+  <data name="BTA_p_midi_mt32_src_quality.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
+        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
+        bmRlcnRfdm9uCw==
+</value>
+  </data>
+  <data name="BTA_p_midi_mt32_src_quality.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAALQIAAC0CAABKBAAAAQEBAQoPAgAAAEoEAAACH4sIAAAAAAAEAKVUW2/TMBRud6ko
+        A1544DXKc5s07MaiZpPYJITYCloL2tvkJqethy/Fdtr0jR/B/x3Hjdt1VScQOJLtnMv3nePj40q1Uqnc
+        47CrHS+2cOp0Z9oADy6IIQ3vGyhNpUgOgpb9Gt55zkyuIBGQG0VYw/uS9xlNP8GsJ7+DSPrHx+QwPTyK
+        TvYPoPXuZNeCv17BnE9dMNsof+P2wTVwaagYOrr6DWfddASc7OHugg4GHxTh29XqKwfk7Gy8dQtU28Hp
+        V619VnDmTVzMfhS0fA9EKjOETvzcDJrRkX92+vJ5u9CxnhN4NEv8DkxdJL6HCEInvtvEBe5HxozjMJxO
+        p8F0P5BqGL5ttaLw5uqyDHJhy3WGKEikhEPXTU5TJbUcmGYqeYx2zdLKxyg8z8YBDDgI4wnC4XEopWX8
+        UTtJ4huVw1L+VcN5rhT6XsqUMHDqOXAJjZRjBkVvNgYndfKRpCl4nIrPaZorTBEPipNi8ZeLvsxFBpm/
+        dNsUa4/0GUSrNk/TPmg1/MixKOuqTQQTwmy+BoESH7VMiuEyfUPUEEwHDfWYpGBL9jih8C8YMqrHjMwM
+        FGaFRxtF/4epHT6V51yz+XzmKhfdQ7XCZbkWdd2EsOZb8s9v4GltF1vjZ7WdYRcNVVwuhP/LlXU+JcSf
+        fBZEzUlkD2jHtula+9qmrd1ekTupcKHCLu9zyrL67TVMqDWxz9IzHFvuibp3Y+83nQ10rb0EAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACw==
+</value>
+  </data>
+  <data name="BTA_p_midi_mt32_src_quality.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
@@ -2455,21 +2680,10 @@ pc_speaker_as_timer: A few early DOS demos apparently like to use PIT 2 as a tim
         ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
 </value>
   </data>
-  <data name="ToolTipItem218.Text" xml:space="preserve">
-    <value>MT-32 DAC input emulation mode:
-
-Nice: Produces samples at double the volume, without tricks. Higher quality than the real devices.
-
-Pure: Produces samples that exactly match the bits output from the emulated LA32. Nicer overdrive characteristics than the DAC hacks (it simply clips samples within range). Much less likely to overdrive than any other mode. Half the volume of any of the other modes, meaning its volume relative to the reverb output when mixed together directly will sound wrong. So, reverb level must be lowered. Perfect for developers while debugging :)
-
-GENERATION1: Re-orders the LA32 output bits as in early generation MT-32s (according to Wikipedia). Bit order at DAC (where each number represents the original LA32 output bit number, and XX means the bit is always low): 15 13 12 11 10 09 08 07 06 05 04 03 02 01 00 XX
-
-GENERATION2: Re-orders the LA32 output bits as in later geneerations (personally confirmed on my CM-32L - KG). Bit order at DAC (where each number represents the original LA32 output bit number): 15 13 12 11 10 09 08 07 06 05 04 03 02 01 00 14</value>
-  </data>
-  <metadata name="BTA_p_midi_mt32_dac.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1049, 139</value>
+  <metadata name="BTA_p_midi_mt32_rate.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>572, 336</value>
   </metadata>
-  <data name="BTA_p_midi_mt32_dac.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="BTA_p_midi_mt32_rate.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
@@ -2480,7 +2694,158 @@ GENERATION2: Re-orders the LA32 output bits as in later geneerations (personally
         bmRlcnRfdm9uCw==
 </value>
   </data>
-  <data name="BTA_p_midi_mt32_dac.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="BTA_p_midi_mt32_rate.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAHAIAABwCAAAoBAAAAQEBAQoPAgAAACgEAAACH4sIAAAAAAAEAJ1UW0/bMBRugVbr
+        2Payh71aeW6TZtxG1IAESNM06CbaTbwhNzltw2K786WXN37Q/iM7TtwCVdGkOZLtnMv3fT6+VKqVSuUB
+        mx1te7OFXbe3UBqYf0E1bZKfIFUmeLzvt+3XJOcm10ZCzMFoSfMm+W4GeZZ8hUVf/AIeD46O6EFycBge
+        7+1D+9NxzYK/f4JZdD3Q22j/4Ob+NTChMz5ydI0blveSMTC6i7OLbDj8LCnbrlbfOSAXZ/U2LFB9B7s/
+        tc7pnOVk6jR7od/2CPBEpAgde0YPW+Ghd3ry9nVnriJVEJAsjb0uzJwSjyACV7HnJtEc52OtJ1EQzGYz
+        f7bnCzkKPrbbYXBzdVmKXMYylSIKEknu0FWLZYkUSgx1KxEswrhWGeWhCkKsDsiBAdeEUwbPpZSR0Rfl
+        LLGnpYGV/YeCcyMl5l6KhObg3AVwCY2Ukxzm/cUEnNXZxyJLgLCMf0sSI3GJWChG58s/wwfC8BRSb5W2
+        SWufDnIIn8a8TPvoVfDb4KasuzYRTGlu16sRKPZsqpa4k6sCaCpHoLsYqiY0Abtpz5cUrNMHL/EXns26
+        C5fT9VjFYFXGZb03IazllvzFyTip1/DI3lc7KZ7ukYzKgbL/OUoup4T4V86SqDUNbYF27PVZu1b2MtVv
+        r+idkDhk3A5nJsvTxu01TDMbYp+LV9i23NPx4NruX06O5L9VBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL
+</value>
+  </data>
+  <data name="BTA_p_midi_mt32_rate.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
+</value>
+  </data>
+  <data name="ToolTipItem241.Text" xml:space="preserve">
+    <value>Minimum milliseconds of data to render at once. Increasing this value reduces rendering overhead which may improve performance but also increases audio lag.
+
+Valid for rendering in separate thread only.</value>
+  </data>
+  <metadata name="BTA_p_midi_mt32_partials.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>197, 139</value>
+  </metadata>
+  <data name="BTA_p_midi_mt32_partials.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
+        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
+        bmRlcnRfdm9uCw==
+</value>
+  </data>
+  <data name="BTA_p_midi_mt32_partials.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAGwIAABsCAAAmBAAAAQEBAQoPAgAAACYEAAACH4sIAAAAAAAEAJ1USU/bQBROgERN
+        aXvpoVfL58SOy1asGCRAqqpCWpG04oYm9ktiOks6S5Ybv6d/kr6xJwGioEodSzPjt3zfN2+WSrVSqTxg
+        s6Ntb7aw6/YWSgMLLogmTe8nSJULnuwHbfs1vXNDtZGQcDBaEtr0vpsBzdOvsOiLX8CTwdEROUgPDqPj
+        vX1ofzquWfD3TzCLrgd6G+0f3Dy4BiZ0zkeOrnHDaC8dAyO7OLvIh8PPkrDtavWdA3JxVm/DAtV3sPtT
+        65zOGfWmTrMfBW3fA56KDKET3+hhKzr0T0/evu7MVawKAi/PEr8LM6fE9xCBq8R3k3iO87HWkzgMZ7NZ
+        MNsLhByFH9vtKLy5uixFLmOZyhAFiSR36KrF8lQKJYa6lQoWY1yrjPJRhedZHUCBAdceJwyeSykj4y/K
+        WRJfSwMr+w8F50ZKzL0UKaHg3AVwCY2UEwrz/mICzursY5Gn4LGcf0tTI3GJWChG5ss/wwfC8Awyf5W2
+        SWufDChET2Nepn30KvhtcFPWXZsIpoTa9WoESnz0UsFHq+VrIkeguxioJiQFu2XPFxSuk4cvsReezaoL
+        l1P1WMNwVcRltTchrOWW/MW5OKnX8MDeVzsZnu2RjMuBsP85SC6nhPhXzpKoNY1sgXbs5Vm7VPYq1W+v
+        yJ2QOOTcDmcmp1nj9hqmuQ2xj8UrbFvu4XhwbfcvC7/qhFMEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAACw==
+</value>
+  </data>
+  <data name="BTA_p_midi_mt32_partials.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
+</value>
+  </data>
+  <data name="ToolTipItem244.Text" xml:space="preserve">
+    <value>How many milliseconds of data to render ahead. Increasing this value may help to avoid underruns but also increases audio lag. Cannot be set less than or equal to MT-32 Chunk value.
+
+Valid for rendering in separate thread only.</value>
+  </data>
+  <data name="ToolTipItem245.Text" xml:space="preserve">
+    <value>How many milliseconds of data to render ahead. Increasing this value may help to avoid underruns but also increases audio lag. Cannot be set less than or equal to MT-32 Chunk value.
+
+Valid for rendering in separate thread only.</value>
+  </data>
+  <data name="ToolTipItem246.Text" xml:space="preserve">
+    <value>Minimum milliseconds of data to render at once. Increasing this value reduces rendering overhead which may improve performance but also increases audio lag.
+
+Valid for rendering in separate thread only.</value>
+  </data>
+  <data name="ToolTipItem247.Text" xml:space="preserve">
+    <value>Minimum milliseconds of data to render at once. Increasing this value reduces rendering overhead which may improve performance but also increases audio lag.
+
+Valid for rendering in separate thread only.</value>
+  </data>
+  <data name="ToolTipItem248.Text" xml:space="preserve">
+    <value>Minimum milliseconds of data to render at once. Increasing this value reduces rendering overhead which may improve performance but also increases audio lag.
+
+Valid for rendering in separate thread only.</value>
+  </data>
+  <data name="ToolTipItem249.Text" xml:space="preserve">
+    <value>MT-32 analogue output emulation mode
+
+0 - Digital
+Only digital path is emulated. The output samples correspond to the digital output signal appeared at the DAC entrance.
+
+Fastest mode.
+
+1 - Coarse
+Coarse emulation of LPF circuit. High frequencies are boosted, sample rate remains unchanged.
+
+A bit better sounding but also a bit slower.
+
+2 - Accurate
+Finer emulation of LPF circuit. Output signal is upsampled to 48 kHz to allow emulation of audible mirror spectra above 16 kHz, which is passed through the LPF circuit without significant attenuation.
+
+Sounding is closer to the analog output from real hardware but also slower than the modes 0 and 1.
+
+3 - Oversampled
+Same as the default mode 2 but the output signal is 2x oversampled, i.e. the output sample rate is 96 kHz.
+
+Even slower than all the other modes but better retains highest frequencies while further resampled in DOSBox mixer.</value>
+  </data>
+  <metadata name="BTA_p_midi_mt32_analog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>12, 366</value>
+  </metadata>
+  <data name="BTA_p_midi_mt32_analog.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
+        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
+        bmRlcnRfdm9uCw==
+</value>
+  </data>
+  <data name="BTA_p_midi_mt32_analog.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
         cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
@@ -2506,7 +2871,7 @@ GENERATION2: Re-orders the LA32 output bits as in later geneerations (personally
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAs=
 </value>
   </data>
-  <data name="BTA_p_midi_mt32_dac.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="BTA_p_midi_mt32_analog.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
         ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
@@ -2515,29 +2880,242 @@ GENERATION2: Re-orders the LA32 output bits as in later geneerations (personally
         ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
 </value>
   </data>
-  <data name="ToolTipItem219.Text" xml:space="preserve">
-    <value>MT-32 DAC input emulation mode:
+  <data name="ToolTipItem250.Text" xml:space="preserve">
+    <value>MT-32 analogue output emulation mode
 
-Nice: Produces samples at double the volume, without tricks. Higher quality than the real devices.
+0 - Digital
+Only digital path is emulated. The output samples correspond to the digital output signal appeared at the DAC entrance.
 
-Pure: Produces samples that exactly match the bits output from the emulated LA32. Nicer overdrive characteristics than the DAC hacks (it simply clips samples within range). Much less likely to overdrive than any other mode. Half the volume of any of the other modes, meaning its volume relative to the reverb output when mixed together directly will sound wrong. So, reverb level must be lowered. Perfect for developers while debugging :)
+Fastest mode.
 
-GENERATION1: Re-orders the LA32 output bits as in early generation MT-32s (according to Wikipedia). Bit order at DAC (where each number represents the original LA32 output bit number, and XX means the bit is always low): 15 13 12 11 10 09 08 07 06 05 04 03 02 01 00 XX
+1 - Coarse
+Coarse emulation of LPF circuit. High frequencies are boosted, sample rate remains unchanged.
 
-GENERATION2: Re-orders the LA32 output bits as in later geneerations (personally confirmed on my CM-32L - KG). Bit order at DAC (where each number represents the original LA32 output bit number): 15 13 12 11 10 09 08 07 06 05 04 03 02 01 00 14</value>
+A bit better sounding but also a bit slower.
+
+2 - Accurate
+Finer emulation of LPF circuit. Output signal is upsampled to 48 kHz to allow emulation of audible mirror spectra above 16 kHz, which is passed through the LPF circuit without significant attenuation.
+
+Sounding is closer to the analog output from real hardware but also slower than the modes 0 and 1.
+
+3 - Oversampled
+Same as the default mode 2 but the output signal is 2x oversampled, i.e. the output sample rate is 96 kHz.
+
+Even slower than all the other modes but better retains highest frequencies while further resampled in DOSBox mixer.</value>
   </data>
-  <data name="ToolTipItem226.Text" xml:space="preserve">
+  <data name="ToolTipItem251.Text" xml:space="preserve">
+    <value>Name of the directory where MT-32 Control and PCM ROM files can be found. Emulation requires these files to work.
+
+Accepted file names are as follows:
+- MT32_CONTROL.ROM or CM32L_CONTROL.ROM (control ROM file)
+- MT32_PCM.ROM or CM32L_PCM.ROM (PCM ROM file)</value>
+  </data>
+  <data name="ToolTipItem252.Text" xml:space="preserve">
+    <value>Name of the directory where MT-32 Control and PCM ROM files can be found. Emulation requires these files to work.
+
+Accepted file names are as follows:
+- MT32_CONTROL.ROM or CM32L_CONTROL.ROM (control ROM file)
+- MT32_PCM.ROM or CM32L_PCM.ROM (PCM ROM file)</value>
+  </data>
+  <data name="ToolTipItem255.Text" xml:space="preserve">
+    <value>Fluidsynth use reverb
+
+When set to "yes" the reverb effects module is activated. Otherwise, no reverb will be added to the output signal. Note that when the reverb module is active, the amount of signal send to the reverb module depends on the "reverb send" generator defined in the SoundFont.</value>
+  </data>
+  <data name="ToolTipItem256.Text" xml:space="preserve">
+    <value>Fluidsynth use reverb
+
+When set to "yes" the reverb effects module is activated. Otherwise, no reverb will be added to the output signal. Note that when the reverb module is active, the amount of signal send to the reverb module depends on the "reverb send" generator defined in the SoundFont.</value>
+  </data>
+  <data name="ToolTipItem258.Text" xml:space="preserve">
+    <value>Fluidsynth polyphony
+
+The polyphony defines how many voices can be played in parallel. The number of voices is not necessarily equivalent to the number of notes played simultaniously. Indeed, when a note is struck on a specific MIDI channel, the preset on that channel may created several voices, for example, one for the left audio channel and one for the right audio channels. The number of voices activated depends on the number of instrument zones that fall in the correspond to the velocity and key of the played note.</value>
+  </data>
+  <data name="ToolTipItem259.Text" xml:space="preserve">
+    <value>Fluidsynth polyphony
+
+The polyphony defines how many voices can be played in parallel. The number of voices is not necessarily equivalent to the number of notes played simultaniously. Indeed, when a note is struck on a specific MIDI channel, the preset on that channel may created several voices, for example, one for the left audio channel and one for the right audio channels. The number of voices activated depends on the number of instrument zones that fall in the correspond to the velocity and key of the played note.</value>
+  </data>
+  <metadata name="BTA_p_midi_fluid_chorus_type.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>389, 139</value>
+  </metadata>
+  <data name="BTA_p_midi_fluid_chorus_type.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
+        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
+        bmRlcnRfdm9uCw==
+</value>
+  </data>
+  <data name="BTA_p_midi_fluid_chorus_type.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAALQIAAC0CAABKBAAAAQEBAQoPAgAAAEoEAAACH4sIAAAAAAAEAKVUW2/TMBRud6ko
+        A1544DXKc5s07MaiZpPYJITYCloL2tvkJqethy/Fdtr0jR/B/x3Hjdt1VScQOJLtnMv3nePj40q1Uqnc
+        47CrHS+2cOp0Z9oADy6IIQ3vGyhNpUgOgpb9Gt55zkyuIBGQG0VYw/uS9xlNP8GsJ7+DSPrHx+QwPTyK
+        TvYPoPXuZNeCv17BnE9dMNsof+P2wTVwaagYOrr6DWfddASc7OHugg4GHxTh29XqKwfk7Gy8dQtU28Hp
+        V619VnDmTVzMfhS0fA9EKjOETvzcDJrRkX92+vJ5u9CxnhN4NEv8DkxdJL6HCEInvtvEBe5HxozjMJxO
+        p8F0P5BqGL5ttaLw5uqyDHJhy3WGKEikhEPXTU5TJbUcmGYqeYx2zdLKxyg8z8YBDDgI4wnC4XEopWX8
+        UTtJ4huVw1L+VcN5rhT6XsqUMHDqOXAJjZRjBkVvNgYndfKRpCl4nIrPaZorTBEPipNi8ZeLvsxFBpm/
+        dNsUa4/0GUSrNk/TPmg1/MixKOuqTQQTwmy+BoESH7VMiuEyfUPUEEwHDfWYpGBL9jih8C8YMqrHjMwM
+        FGaFRxtF/4epHT6V51yz+XzmKhfdQ7XCZbkWdd2EsOZb8s9v4GltF1vjZ7WdYRcNVVwuhP/LlXU+JcSf
+        fBZEzUlkD2jHtula+9qmrd1ekTupcKHCLu9zyrL67TVMqDWxz9IzHFvuibp3Y+83nQ10rb0EAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACw==
+</value>
+  </data>
+  <data name="BTA_p_midi_fluid_chorus_type.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
+</value>
+  </data>
+  <metadata name="BTA_p_midi_fluid_samplerate.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 334</value>
+  </metadata>
+  <data name="BTA_p_midi_fluid_samplerate.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
+        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
+        bmRlcnRfdm9uCw==
+</value>
+  </data>
+  <data name="BTA_p_midi_fluid_samplerate.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAHAIAABwCAAAoBAAAAQEBAQoPAgAAACgEAAACH4sIAAAAAAAEAJ1UW0/bMBRugVbr
+        2Payh71aeW6TZtxG1IAESNM06CbaTbwhNzltw2K786WXN37Q/iM7TtwCVdGkOZLtnMv3fT6+VKqVSuUB
+        mx1te7OFXbe3UBqYf0E1bZKfIFUmeLzvt+3XJOcm10ZCzMFoSfMm+W4GeZZ8hUVf/AIeD46O6EFycBge
+        7+1D+9NxzYK/f4JZdD3Q22j/4Ob+NTChMz5ydI0blveSMTC6i7OLbDj8LCnbrlbfOSAXZ/U2LFB9B7s/
+        tc7pnOVk6jR7od/2CPBEpAgde0YPW+Ghd3ry9nVnriJVEJAsjb0uzJwSjyACV7HnJtEc52OtJ1EQzGYz
+        f7bnCzkKPrbbYXBzdVmKXMYylSIKEknu0FWLZYkUSgx1KxEswrhWGeWhCkKsDsiBAdeEUwbPpZSR0Rfl
+        LLGnpYGV/YeCcyMl5l6KhObg3AVwCY2Ukxzm/cUEnNXZxyJLgLCMf0sSI3GJWChG58s/wwfC8BRSb5W2
+        SWufDnIIn8a8TPvoVfDb4KasuzYRTGlu16sRKPZsqpa4k6sCaCpHoLsYqiY0Abtpz5cUrNMHL/EXns26
+        C5fT9VjFYFXGZb03IazllvzFyTip1/DI3lc7KZ7ukYzKgbL/OUoup4T4V86SqDUNbYF27PVZu1b2MtVv
+        r+idkDhk3A5nJsvTxu01TDMbYp+LV9i23NPx4NruX06O5L9VBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL
+</value>
+  </data>
+  <data name="BTA_p_midi_fluid_samplerate.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
+</value>
+  </data>
+  <data name="ToolTipItem275.Text" xml:space="preserve">
+    <value>Sample rate to use with Fluidsynth
+
+The sample rate of the audio generated by the synthesizer. The audio driver will try to use the same sample rate, but when not possible it will just show a warning and continue with not matching sample rates.</value>
+  </data>
+  <data name="ToolTipItem276.Text" xml:space="preserve">
+    <value>Sample rate to use with Fluidsynth
+
+The sample rate of the audio generated by the synthesizer. The audio driver will try to use the same sample rate, but when not possible it will just show a warning and continue with not matching sample rates.</value>
+  </data>
+  <data name="ToolTipItem277.Text" xml:space="preserve">
+    <value>Fluidsynth use chorus
+
+When set to "yes" the chorus effects module is activated. Otherwise, no chorus will be added to the output signal. Note that when the reverb module is active, the amount of signal send to the chorus module depends on the "chorus send" generator defined in the SoundFont.</value>
+  </data>
+  <data name="ToolTipItem278.Text" xml:space="preserve">
+    <value>Fluidsynth use chorus
+
+When set to "yes" the chorus effects module is activated. Otherwise, no chorus will be added to the output signal. Note that when the reverb module is active, the amount of signal send to the chorus module depends on the "chorus send" generator defined in the SoundFont.</value>
+  </data>
+  <metadata name="BTA_p_midi_fluid_cores.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>226, 334</value>
+  </metadata>
+  <data name="BTA_p_midi_fluid_cores.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
+        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
+        bmRlcnRfdm9uCw==
+</value>
+  </data>
+  <data name="BTA_p_midi_fluid_cores.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAHAIAABwCAAAoBAAAAQEBAQoPAgAAACgEAAACH4sIAAAAAAAEAJ1UW0/bMBRugVbr
+        2Payh71aeW6TZtxG1IAESNM06CbaTbwhNzltw2K786WXN37Q/iM7TtwCVdGkOZLtnMv3fT6+VKqVSuUB
+        mx1te7OFXbe3UBqYf0E1bZKfIFUmeLzvt+3XJOcm10ZCzMFoSfMm+W4GeZZ8hUVf/AIeD46O6EFycBge
+        7+1D+9NxzYK/f4JZdD3Q22j/4Ob+NTChMz5ydI0blveSMTC6i7OLbDj8LCnbrlbfOSAXZ/U2LFB9B7s/
+        tc7pnOVk6jR7od/2CPBEpAgde0YPW+Ghd3ry9nVnriJVEJAsjb0uzJwSjyACV7HnJtEc52OtJ1EQzGYz
+        f7bnCzkKPrbbYXBzdVmKXMYylSIKEknu0FWLZYkUSgx1KxEswrhWGeWhCkKsDsiBAdeEUwbPpZSR0Rfl
+        LLGnpYGV/YeCcyMl5l6KhObg3AVwCY2Ukxzm/cUEnNXZxyJLgLCMf0sSI3GJWChG58s/wwfC8BRSb5W2
+        SWufDnIIn8a8TPvoVfDb4KasuzYRTGlu16sRKPZsqpa4k6sCaCpHoLsYqiY0Abtpz5cUrNMHL/EXns26
+        C5fT9VjFYFXGZb03IazllvzFyTip1/DI3lc7KZ7ukYzKgbL/OUoup4T4V86SqDUNbYF27PVZu1b2MtVv
+        r+idkDhk3A5nJsvTxu01TDMbYp+LV9i23NPx4NruX06O5L9VBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL
+</value>
+  </data>
+  <data name="BTA_p_midi_fluid_cores.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
+</value>
+  </data>
+  <data name="ToolTipItem291.Text" xml:space="preserve">
     <value>Special configuration options for the device driver. This is usually the id of the device you want to use. In the case of coreaudio, you can specify a soundfont here.
 
 When using a Roland MT-32 rev. 0 as midi output device, some games may require a delay in order to prevent 'buffer overflow' issues. In that case, add 'delaysysex', for example: "2 delaysysex". See the README/Manual for more details.</value>
   </data>
-  <data name="ToolTipItem227.Text" xml:space="preserve">
+  <data name="ToolTipItem292.Text" xml:space="preserve">
     <value>Special configuration options for the device driver. This is usually the id of the device you want to use. In the case of coreaudio, you can specify a soundfont here.
 
 When using a Roland MT-32 rev. 0 as midi output device, some games may require a delay in order to prevent 'buffer overflow' issues. In that case, add 'delaysysex', for example: "2 delaysysex". See the README/Manual for more details.</value>
   </data>
   <metadata name="BTA_p_midi_mididevice.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>484, 139</value>
+    <value>17, 178</value>
   </metadata>
   <data name="BTA_p_midi_mididevice.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -2586,7 +3164,7 @@ When using a Roland MT-32 rev. 0 as midi output device, some games may require a
 </value>
   </data>
   <metadata name="BTA_p_keyboard_auxdevice.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>662, 139</value>
+    <value>195, 178</value>
   </metadata>
   <data name="BTA_p_keyboard_auxdevice.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -2634,18 +3212,18 @@ When using a Roland MT-32 rev. 0 as midi output device, some games may require a
         ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
 </value>
   </data>
-  <data name="ToolTipItem232.Text" xml:space="preserve">
+  <data name="ToolTipItem297.Text" xml:space="preserve">
     <value>Enable emulation of the 8042 auxiliary port. PS/2 mouse emulation requires this to be enabled. You should enable this if you will be running Windows ME or any other OS that does not use the BIOS to receive mouse events.</value>
   </data>
-  <data name="ToolTipItem233.Text" xml:space="preserve">
+  <data name="ToolTipItem298.Text" xml:space="preserve">
     <value>Enable emulation of the 8042 auxiliary port. PS/2 mouse emulation requires this to be enabled. You should enable this if you will be running Windows ME or any other OS that does not use the BIOS to receive mouse events.</value>
   </data>
-  <data name="ToolTipItem240.Text" xml:space="preserve">
+  <data name="ToolTipItem305.Text" xml:space="preserve">
     <value>The physical node address of the card. This is used to identify the computer on the network on the lowest level and has to be unique for every instance of DOSBox running on the same LAN. AC:DE:48 is a special reserved address range not used by commercial network cards.
 
 Metropolis Launcher generates random mac address characters in places where you put a questionmark "?" placeholder. This happens every single start of DOSBox.</value>
   </data>
-  <data name="ToolTipItem241.Text" xml:space="preserve">
+  <data name="ToolTipItem306.Text" xml:space="preserve">
     <value>The physical node address of the card. This is used to identify the computer on the network on the lowest level and has to be unique for every instance of DOSBox running on the same LAN. AC:DE:48 is a special reserved address range not used by commercial network cards.
 
 Metropolis Launcher generates random mac address characters in places where you put a questionmark "?" placeholder. This happens every single start of DOSBox.</value>
@@ -2704,9 +3282,107 @@ Metropolis Launcher generates random mac address characters in places where you 
 </value>
   </data>
   <metadata name="BS_DOSBox_Configs_Compare.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 178</value>
+    <value>207, 217</value>
   </metadata>
+  <metadata name="BTA_p_midi_mt32_chunk.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>401, 337</value>
+  </metadata>
+  <data name="BTA_p_midi_mt32_chunk.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
+        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
+        bmRlcnRfdm9uCw==
+</value>
+  </data>
+  <data name="BTA_p_midi_mt32_chunk.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAGwIAABsCAAAmBAAAAQEBAQoPAgAAACYEAAACH4sIAAAAAAAEAJ1USU/bQBROgERN
+        aXvpoVfL58SOy1asGCRAqqpCWpG04oYm9ktiOks6S5Ybv6d/kr6xJwGioEodSzPjt3zfN2+WSrVSqTxg
+        s6Ntb7aw6/YWSgMLLogmTe8nSJULnuwHbfs1vXNDtZGQcDBaEtr0vpsBzdOvsOiLX8CTwdEROUgPDqPj
+        vX1ofzquWfD3TzCLrgd6G+0f3Dy4BiZ0zkeOrnHDaC8dAyO7OLvIh8PPkrDtavWdA3JxVm/DAtV3sPtT
+        65zOGfWmTrMfBW3fA56KDKET3+hhKzr0T0/evu7MVawKAi/PEr8LM6fE9xCBq8R3k3iO87HWkzgMZ7NZ
+        MNsLhByFH9vtKLy5uixFLmOZyhAFiSR36KrF8lQKJYa6lQoWY1yrjPJRhedZHUCBAdceJwyeSykj4y/K
+        WRJfSwMr+w8F50ZKzL0UKaHg3AVwCY2UEwrz/mICzursY5Gn4LGcf0tTI3GJWChG5ss/wwfC8Awyf5W2
+        SWufDChET2Nepn30KvhtcFPWXZsIpoTa9WoESnz0UsFHq+VrIkeguxioJiQFu2XPFxSuk4cvsReezaoL
+        l1P1WMNwVcRltTchrOWW/MW5OKnX8MDeVzsZnu2RjMuBsP85SC6nhPhXzpKoNY1sgXbs5Vm7VPYq1W+v
+        yJ2QOOTcDmcmp1nj9hqmuQ2xj8UrbFvu4XhwbfcvC7/qhFMEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAACw==
+</value>
+  </data>
+  <data name="BTA_p_midi_mt32_chunk.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
+</value>
+  </data>
+  <metadata name="BTA_p_midi_mt32_prebuffer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 256</value>
+  </metadata>
+  <data name="BTA_p_midi_mt32_prebuffer.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
+        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
+        bmRlcnRfdm9uCw==
+</value>
+  </data>
+  <data name="BTA_p_midi_mt32_prebuffer.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAGwIAABsCAAAmBAAAAQEBAQoPAgAAACYEAAACH4sIAAAAAAAEAJ1USU/bQBROgERN
+        aXvpoVfL58SOy1asGCRAqqpCWpG04oYm9ktiOks6S5Ybv6d/kr6xJwGioEodSzPjt3zfN2+WSrVSqTxg
+        s6Ntb7aw6/YWSgMLLogmTe8nSJULnuwHbfs1vXNDtZGQcDBaEtr0vpsBzdOvsOiLX8CTwdEROUgPDqPj
+        vX1ofzquWfD3TzCLrgd6G+0f3Dy4BiZ0zkeOrnHDaC8dAyO7OLvIh8PPkrDtavWdA3JxVm/DAtV3sPtT
+        65zOGfWmTrMfBW3fA56KDKET3+hhKzr0T0/evu7MVawKAi/PEr8LM6fE9xCBq8R3k3iO87HWkzgMZ7NZ
+        MNsLhByFH9vtKLy5uixFLmOZyhAFiSR36KrF8lQKJYa6lQoWY1yrjPJRhedZHUCBAdceJwyeSykj4y/K
+        WRJfSwMr+w8F50ZKzL0UKaHg3AVwCY2UEwrz/mICzursY5Gn4LGcf0tTI3GJWChG5ss/wwfC8Awyf5W2
+        SWufDChET2Nepn30KvhtcFPWXZsIpoTa9WoESnz0UsFHq+VrIkeguxioJiQFu2XPFxSuk4cvsReezaoL
+        l1P1WMNwVcRltTchrOWW/MW5OKnX8MDeVzsZnu2RjMuBsP85SC6nhPhXzpKoNY1sgXbs5Vm7VPYq1W+v
+        yJ2QOOTcDmcmp1nj9hqmuQ2xj8UrbFvu4XhwbfcvC7/qhFMEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAACw==
+</value>
+  </data>
+  <data name="BTA_p_midi_mt32_prebuffer.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>111</value>
+    <value>71</value>
   </metadata>
 </root>

@@ -1,9 +1,7 @@
 ﻿Public Class frm_Tag_Parser_Edit
 	Private Shared _Regions As String() = {"NTSC", "PAL", "World", "Europe", "USA", "Australia", "Japan", "Korea", "China", "Asia", "Brazil", "Canada", "France", "Germany", "Hong Kong", "Italy", "Netherlands", "Spain", "Sweden", "Taiwan", "Russia"}
 
-	'Private Shared _Languages As String() = {"En", "Ja", "Fr", "De", "Es", "It", "Nl", "Pt", "Sv", "No", "Da", "Fi", "Zh", "Ko", "Pl", "Hu", "Gr"}
-	'Private Shared _Languages_Alt As String() = {"Eng", "Jp", "Fre", "Ger", "Spa", "Ita", "Dut", "(Pt)", "(Sv)", "(No)", "(Da)", "(Fi)", "(Zh)", "(Ko)", "(Pl)", "(Hu)", "(Gr)"}
-
+	'TODO: get from tbl_Moby_Languages - copy of tbl_Moby_Regions, Codes will be comma-separated
 	Private Shared _Languages As String(,) = {
 			{"En", "Eng"},
 			{"Ja", "Jp"},
@@ -33,6 +31,7 @@
 	Private Shared _Attributes As String() = {"Year", "Version", "Alt", "Trainer", "Translation", "Hack", "Bios", "Prototype", "Alpha", "Beta", "Sample", "Kiosk", "Unlicensed", "Fixed", "Pirated", "Good", "Bad", "Overdump", "PublicDomain"}
 
 	Private _DoContentAnalysis As Boolean = False
+	Private _AllowArchiveContentAnalysis As Boolean = True
 	Private _Path As String
 	Private _Files As String()
 	Private _Contents As New Dictionary(Of String, String)
@@ -51,6 +50,8 @@
 
 	Private _tran As SQLite.SQLiteTransaction = Nothing
 
+	Private _Actual_Filenames_Provided As Boolean = True
+
 	Public Sub New(ByRef tran As SQLite.SQLiteTransaction)
 		InitializeComponent()
 
@@ -67,10 +68,13 @@
 	''' <param name="Path">Path to directory or single file</param>
 	''' <param name="Allowed_Extensions">Allowed Extensions for filtering</param>
 	''' <remarks></remarks>
-	Public Sub New(ByRef tran As SQLite.SQLiteTransaction, ByVal Path As String, Optional ByVal Allowed_Extensions As ArrayList = Nothing, Optional ByVal MultiVolume As Boolean = False)
+	Public Sub New(ByRef tran As SQLite.SQLiteTransaction, ByVal Path As String, Optional ByVal Allowed_Extensions As ArrayList = Nothing, Optional ByVal MultiVolume As Boolean = False, Optional ByVal Actual_Filenames_Provided As Boolean = True, Optional ByVal AllowArchiveContentAnalysis As Boolean = True)
 		Me.New(tran)
 
 		_Path = Path
+
+		Me._Actual_Filenames_Provided = Actual_Filenames_Provided
+		Me._AllowArchiveContentAnalysis = AllowArchiveContentAnalysis
 
 		Init(Allowed_Extensions, MultiVolume)
 	End Sub
@@ -80,11 +84,15 @@
 	''' </summary>
 	''' <param name="Files">File Paths in String Array</param>
 	''' <param name="Allowed_Extensions">Allowed Extensions for filtering"</param>
+	''' <param name="Actual_Filenames_Provided">Actual Filenames are provided, so that IO.Path.GetFilename works</param>
 	''' <remarks></remarks>
-	Public Sub New(ByRef tran As SQLite.SQLiteTransaction, ByVal Files As String(), Optional ByVal Allowed_Extensions As ArrayList = Nothing, Optional ByVal MultiVolume As Boolean = False)
+	Public Sub New(ByRef tran As SQLite.SQLiteTransaction, ByVal Files As String(), Optional ByVal Allowed_Extensions As ArrayList = Nothing, Optional ByVal MultiVolume As Boolean = False, Optional ByVal Actual_Filenames_Provided As Boolean = True, Optional ByVal AllowArchiveContentAnalysis As Boolean = True)
 		Me.New(tran)
 
 		_Files = Files
+
+		Me._Actual_Filenames_Provided = Actual_Filenames_Provided
+		Me._AllowArchiveContentAnalysis = AllowArchiveContentAnalysis
 
 		Init(Allowed_Extensions, MultiVolume)
 	End Sub
@@ -270,9 +278,9 @@
 						End Try
 					End If
 
-					If MKNetLib.cls_MKRegex.IsMatch(sContent, "(\(|\[)(disc|Disc|disk|Disk|CD|cd)\s*(\d*)") Then
+					If MKNetLib.cls_MKRegex.IsMatch(sContent, "(\(|\[)(disc|Disc|disk|Disk|CD|cd|Tape|tape)\s*(\d*)") Then
 						Try
-							Dim match As String = MKNetLib.cls_MKRegex.GetMatches(sContent, "(\(|\[)(disc|Disc|disk|Disk|CD|cd)\s*(\d*)")(0).Groups(3).Value
+							Dim match As String = MKNetLib.cls_MKRegex.GetMatches(sContent, "(\(|\[)(disc|Disc|disk|Disk|CD|cd|Tape|tape)\s*(\d*)")(0).Groups(3).Value
 							If IsNumeric(match) Then
 								Dim iVolume As Int64 = Convert.ToInt64(match)
 
@@ -302,6 +310,29 @@
 
 						End Try
 					End If
+				ElseIf MKNetLib.cls_MKRegex.IsMatch(sContent, "(S|s)ide\s*(A|B|a|b|1|2)") Then
+					'Just "Side x (of y)"
+					Dim rx As String = "(S|s)ide\s*(A|B|a|b|1|2)"
+					Dim rx_grp As Integer = 2
+
+					Dim match As String = MKNetLib.cls_MKRegex.GetMatches(sContent, rx)(0).Groups(rx_grp).Value
+
+					Dim iVolume As Int64 = 0
+
+					If IsNumeric(match) Then
+						iVolume = Convert.ToInt64(match)
+					ElseIf match = "A" OrElse match = "a" Then
+						iVolume = 1L
+					End If
+					If match = "B" OrElse match = "b" Then
+						iVolume = 2L
+					End If
+
+					If iVolume > 0 Then
+						row("MV_Volume_Number") = iVolume
+					End If
+
+					row("MV_Group_Criteria") = False
 				End If
 
 				If sContent.ToLower.Contains("(alt ") Then
@@ -450,7 +481,7 @@
 		Dim archive As SharpCompress.Archive.IArchive = Nothing
 
 		Try
-			If frm_Rom_Manager.Is_Archive(fi.FullName) Then
+			If Me._AllowArchiveContentAnalysis AndAlso frm_Rom_Manager.Is_Archive(fi.FullName) Then
 				archive = SharpCompress.Archive.ArchiveFactory.Open(fi.FullName)
 			End If
 		Catch ex As Exception
@@ -484,6 +515,7 @@
 			Dim arrFiles As New ArrayList
 			Dim fsrch As New MKNetLib.cls_MKFileSearch(New Alphaleonis.Win32.Filesystem.DirectoryInfo(Path))
 			fsrch.Search(New Alphaleonis.Win32.Filesystem.DirectoryInfo(Path), "*.*")
+
 			arrFiles.AddRange(fsrch.Files)
 
 			Dim prg As New MKNetDXLib.cls_MKDXBaseform_Progress_Helper(cls_Skins.GetCurrentSkinname(Nothing), 400, 60, ProgressBarStyle.Blocks, False, "Extracting tags from file {0} of {1}", 0, arrFiles.Count, False)
@@ -511,22 +543,22 @@
 		iNewTags = TC.NZ(DS_ML.tbl_Tag_Parser.Select("id_Tag_Parser < 0 AND id_Rombase_Tag_Parser IS NULL").Length, 0)
 
 		If iTotalTags = 0 Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("No tags have been found, the window will be closed.", "Tag Analysis Result", MessageBoxButtons.OK, MessageBoxIcon.Information)
+			MKDXHelper.MessageBox("No tags have been found, the window will be closed.", "Tag Analysis Result", MessageBoxButtons.OK, MessageBoxIcon.Information)
 			Return False
 		End If
 
 		If iNewTags = 0 Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("Out of " & iTotalTags & " tags, no new tags have been found. Please use the Tag Parser Settings window to review the settings.", "Tag Analysis Result", MessageBoxButtons.OK, MessageBoxIcon.Information)
+			MKDXHelper.MessageBox("Out of " & iTotalTags & " tags, no new tags have been found. Please use the Tag Parser Settings window to review the settings.", "Tag Analysis Result", MessageBoxButtons.OK, MessageBoxIcon.Information)
 			Return True
 		End If
 
-		DevExpress.XtraEditors.XtraMessageBox.Show("Out of " & iTotalTags & " tags, " & iNewTags & " new " & IIf(iNewTags = 1, "tag has", "tags have") & " been found and will be displayed in bold. Please use the Tag Parser Settings window to adjust the settings.", "Tag Analysis Result", MessageBoxButtons.OK, MessageBoxIcon.Information)
+		MKDXHelper.MessageBox("Out of " & iTotalTags & " tags, " & iNewTags & " new " & IIf(iNewTags = 1, "tag has", "tags have") & " been found and will be displayed in bold. Please use the Tag Parser Settings window to adjust the settings.", "Tag Analysis Result", MessageBoxButtons.OK, MessageBoxIcon.Information)
 		Return True
 	End Function
 
 	Private Sub frm_Tag_Parser_Edit_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
 		If Me.DialogResult <> Windows.Forms.DialogResult.OK Then
-			If DevExpress.XtraEditors.XtraMessageBox.Show("Do you really want to cancel the import process?", "Cancel", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
+			If MKDXHelper.MessageBox("Do you really want to cancel the import process?", "Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.No Then
 				e.Cancel = True
 				Return
 			End If
@@ -545,13 +577,29 @@
 			End If
 
 			If _Files IsNot Nothing Then
+				Dim al_Contents As New Dictionary(Of String, String)
+
 				Dim prg As New MKNetDXLib.cls_MKDXBaseform_Progress_Helper(cls_Skins.GetCurrentSkinname(Me._tran), 400, 60, ProgressBarStyle.Blocks, False, "Extracting tags from file {0} of {1}", 0, _Files.Length, False)
 				prg.Start()
 
 				For Each sFile As String In _Files
 					prg.IncreaseCurrentValue()
-					Extract_Content_From_FileName(Alphaleonis.Win32.Filesystem.Path.GetFileName(sFile), _Contents, _Allowed_Extensions)
+
+					Dim filename As String = sFile
+
+					If Me._Actual_Filenames_Provided Then
+						filename = Alphaleonis.Win32.Filesystem.Path.GetFileName(sFile)
+					End If
+
+					'Extract_Content_From_FileName(filename, _Contents, _Allowed_Extensions)
+					If Me._Actual_Filenames_Provided Then
+						Extract_Content_From_FileInfo(New Alphaleonis.Win32.Filesystem.FileInfo(sFile), al_Contents)
+					Else
+						Extract_Content_From_FileName(filename, al_Contents, _Allowed_Extensions)
+					End If
 				Next
+
+				Me._Contents = al_Contents
 
 				prg.Close()
 			End If
@@ -587,7 +635,7 @@
 	End Sub
 
 	Private Sub btn_OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_OK.Click
-		If Me._MultiVolume AndAlso DevExpress.XtraEditors.XtraMessageBox.Show("The current platform has multiple volumes, did you check for each tag the possibility of multi-volume relevance (either if it denotes a specific disc/volume or needs to be considered for grouping) and wish to proceed?", "Multiple Volumes", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> Windows.Forms.DialogResult.Yes Then
+		If Me._MultiVolume AndAlso MKDXHelper.MessageBox("The current platform has multiple volumes, did you check for each tag the possibility of multi-volume relevance (either if it denotes a specific disc/volume or needs to be considered for grouping) and wish to proceed?", "Multiple Volumes", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> Windows.Forms.DialogResult.Yes Then
 			Return
 		End If
 
@@ -617,7 +665,7 @@
 		Me.Close()
 	End Sub
 
-	Public Shared Sub Apply_Filename_Tags(ByRef tran As SQLite.SQLiteTransaction, ByRef row_emu_games As DS_ML.tbl_Emu_GamesRow, ByRef dt_Emu_Games_Languages As DataTable, ByRef dt_Emu_Games_Regions As DataTable, Optional ByRef al_Allowed_Extensions As ArrayList = Nothing, Optional ByVal MultiVolume As Boolean = False)
+	Public Shared Sub Apply_Filename_Tags(ByRef tran As SQLite.SQLiteTransaction, ByRef row_emu_games As DS_ML.tbl_Emu_GamesRow, ByRef dt_Emu_Games_Languages As DataTable, ByRef dt_Emu_Games_Regions As DataTable, Optional ByRef al_Allowed_Extensions As ArrayList = Nothing, Optional ByVal MultiVolume As Boolean = False, Optional ByVal ActualFilenamesProvided As Boolean = True)
 		'Clean up
 		For Each col As String In _Attributes
 			row_emu_games(col) = DBNull.Value
@@ -642,12 +690,24 @@
 		Dim sFileName As String = ""
 
 		If TC.NZ(row_emu_games("InnerFile"), "") <> "" Then
-			sFilteredName = Alphaleonis.Win32.Filesystem.Path.GetFileNameWithoutExtension(row_emu_games("InnerFile"))
-			sCleanName = Alphaleonis.Win32.Filesystem.Path.GetFileNameWithoutExtension(row_emu_games("InnerFile"))
+			sFilteredName = row_emu_games("InnerFile")
+			If ActualFilenamesProvided Then
+				sFileteredName = Alphaleonis.Win32.Filesystem.Path.GetFileNameWithoutExtension(row_emu_games("InnerFile"))
+			End If
+			sCleanName = row_emu_games("InnerFile")
+			If ActualFilenamesProvided Then
+				sCleanName = Alphaleonis.Win32.Filesystem.Path.GetFileNameWithoutExtension(row_emu_games("InnerFile"))
+			End If
 			sFileName = row_emu_games("InnerFile")
 		ElseIf TC.NZ(row_emu_games("File"), "") <> "" Then
-			sFilteredName = Alphaleonis.Win32.Filesystem.Path.GetFileNameWithoutExtension(row_emu_games("File"))
-			sCleanName = Alphaleonis.Win32.Filesystem.Path.GetFileNameWithoutExtension(row_emu_games("File"))
+			sFilteredName = row_emu_games("File")
+			If ActualFilenamesProvided Then
+				sFilteredName = Alphaleonis.Win32.Filesystem.Path.GetFileNameWithoutExtension(row_emu_games("File"))
+			End If
+			sCleanName = row_emu_games("File")
+			If ActualFilenamesProvided Then
+				sCleanName = Alphaleonis.Win32.Filesystem.Path.GetFileNameWithoutExtension(row_emu_games("File"))
+			End If
 			sFileName = row_emu_games("File")
 		End If
 
@@ -795,12 +855,17 @@
 					If TC.NZ(row_tag_parser(language), False) = True Then
 						Dim id_Languages As Integer = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "SELECT id_Languages FROM tbl_Languages WHERE Language_Short = " & TC.getSQLFormat(language), tran), 0)
 						If id_Languages > 0 Then
+							If dt_Emu_Games_Languages.Select("id_Emu_Games = " & TC.getSQLFormat(row_emu_games("id_Emu_Games")) & " AND id_Languages = " & TC.getSQLFormat(id_Languages)).Count > 0 Then
+								'Lanuage already added - skip
+								Continue For
+							End If
+
 							Dim row_Emu_Games_Languages As DataRow = dt_Emu_Games_Languages.NewRow
-							row_Emu_Games_Languages("id_Languages") = id_Languages
-							row_Emu_Games_Languages("id_Emu_Games") = row_emu_games("id_Emu_Games")
-							dt_Emu_Games_Languages.Rows.Add(row_Emu_Games_Languages)
+								row_Emu_Games_Languages("id_Languages") = id_Languages
+								row_Emu_Games_Languages("id_Emu_Games") = row_emu_games("id_Emu_Games")
+								dt_Emu_Games_Languages.Rows.Add(row_Emu_Games_Languages)
+							End If
 						End If
-					End If
 				Next
 
 				'Regions
@@ -808,6 +873,11 @@
 					If TC.NZ(row_tag_parser(region.Replace(" ", "")), False) = True Then
 						Dim id_Regions As Integer = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "SELECT id_Regions FROM tbl_Regions WHERE Region = " & TC.getSQLFormat(region), tran), 0)
 						If id_Regions > 0 Then
+							If dt_Emu_Games_Regions.Select("id_Emu_Games = " & TC.getSQLFormat(row_emu_games("id_Emu_Games")) & " AND id_Regions = " & TC.getSQLFormat(id_Regions)).Count > 0 Then
+								'Lanuage already added - skip
+								Continue For
+							End If
+
 							Dim row_Emu_Games_Regions As DataRow = dt_Emu_Games_Regions.NewRow
 							row_Emu_Games_Regions("id_Regions") = id_Regions
 							row_Emu_Games_Regions("id_Emu_Games") = row_emu_games("id_Emu_Games")
@@ -845,7 +915,7 @@
 					row_emu_games("Publisher") = sPublisher.Trim
 				End If
 			Catch ex As Exception
-				DevExpress.XtraEditors.XtraMessageBox.Show(ex.Message)
+				MKDXHelper.ExceptionMessageBox(ex)
 			End Try
 		Next
 
@@ -856,6 +926,18 @@
 
 		'Set filtered Name when in MultiVolume mode
 		If MultiVolume Then
+
+			'Append the inner file's file extension to the filtered name to distinguish e.g. .crt games from .d64
+			Try
+				Dim sExtension As String = ""
+				If ActualFilenamesProvided Then
+					sExtension = Alphaleonis.Win32.Filesystem.Path.GetExtension(TC.NZ(row_emu_games("InnerFile"), ""))
+				End If
+				sFilteredName &= sExtension
+			Catch ex As Exception
+
+			End Try
+
 			row_emu_games("Filtered_Name") = sFilteredName
 		End If
 		row_emu_games("Name") = sCleanName
@@ -1021,10 +1103,10 @@
 	End Sub
 
 	Private Sub bbi_Export_ItemClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bbi_Export.ItemClick
-		Dim sPath As Object = MKNetLib.cls_MKFileSupport.SaveFile("Export Tag Settings", "Tag Settings Files (*.mlts)|*.mlts", 0, "mlts")
+		Dim sPath As Object = MKNetLib.cls_MKFileSupport.SaveFileDialog("Export Tag Settings", "Tag Settings Files (*.mlts)|*.mlts", 0, "mlts")
 		If TC.NZ(sPath, "") <> "" Then
 			Me.DS_ML.tbl_Tag_Parser.WriteXml(sPath)
-			DevExpress.XtraEditors.XtraMessageBox.Show("Export done.", "Export Tag Settings", MessageBoxButtons.OK, MessageBoxIcon.Information)
+			MKDXHelper.MessageBox("Export done.", "Export Tag Settings", MessageBoxButtons.OK, MessageBoxIcon.Information)
 		End If
 	End Sub
 
@@ -1049,9 +1131,9 @@
 					End If
 				Next
 
-				DevExpress.XtraEditors.XtraMessageBox.Show("Import done.", "Import Tag Settings XML", MessageBoxButtons.OK, MessageBoxIcon.Information)
+				MKDXHelper.MessageBox("Import done.", "Import Tag Settings XML", MessageBoxButtons.OK, MessageBoxIcon.Information)
 			Catch ex As Exception
-				DevExpress.XtraEditors.XtraMessageBox.Show("Error while importing Tag Settings: " & ControlChars.CrLf & ControlChars.CrLf & ex.Message, "Import Tag Settings XML", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+				MKDXHelper.ExceptionMessageBox(ex, "Error while importing Tag Settings: " & ControlChars.CrLf & ControlChars.CrLf, "Import Tag Settings XML")
 			End Try
 		End If
 	End Sub

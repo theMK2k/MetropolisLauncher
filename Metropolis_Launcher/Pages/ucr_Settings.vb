@@ -89,6 +89,8 @@ Public Class ucr_Settings
 		Me.spn_StatsMinTime.Value = TC.NZ(cls_Settings.GetSetting("Stats_MinTime", cls_Settings.enm_Settingmodes.Per_User), 0)
 		Me.spn_StatsMinTime.Enabled = Me.chb_StatsEnable.Checked
 
+		Me.chb_Downloader.Checked = TC.NZ(cls_Settings.GetSetting("Downloader_Enabled", cls_Settings.enm_Settingmodes.Same_for_All), True)
+
 		Me.cmb_Skin.EditValue = TC.NZ(cls_Settings.GetSetting("Skin", cls_Settings.enm_Settingmodes.Per_User), 4)
 
 		Me.font_Grid.EditValue = TC.NZ(cls_Settings.GetSetting("Font", cls_Settings.enm_Settingmodes.Per_User), "Segoe UI")
@@ -102,6 +104,11 @@ Public Class ucr_Settings
 		If TC.NZ(DataAccess.FireProcedureReturnScalar(cls_Globals.Conn, 0, "SELECT COUNT(1) FROM moby.tbl_Moby_Platforms WHERE id_Moby_Platforms = " & cls_Globals.enm_Moby_Platforms.dos), 0) > 0 Then
 			lbl_DOSBox_Templates.Visible = True
 			btn_DOSBox_Templates.Visible = True
+		End If
+
+		If TC.NZ(DataAccess.FireProcedureReturnScalar(cls_Globals.Conn, 0, "SELECT COUNT(1) FROM moby.tbl_Moby_Platforms WHERE id_Moby_Platforms = " & cls_Globals.enm_Moby_Platforms.scummvm), 0) > 0 Then
+			lbl_ScummVM_Templates.Visible = True
+			btn_ScummVM_Templates.Visible = True
 		End If
 
 		Me.spn_Backup_Frequency.Value = TC.NZ(cls_Settings.GetSetting("Backup_Frequency", cls_Settings.enm_Settingmodes.Same_for_All), 5)
@@ -183,6 +190,8 @@ Public Class ucr_Settings
 		cls_Settings.SetSetting("Stats_Enabled", Me.chb_StatsEnable.Checked, cls_Settings.enm_Settingmodes.Per_User)
 		cls_Settings.SetSetting("Stats_MinTime", Me.spn_StatsMinTime.Value, cls_Settings.enm_Settingmodes.Per_User)
 
+		cls_Settings.SetSetting("Downloader_Enabled", Me.chb_Downloader.Checked, cls_Settings.enm_Settingmodes.Same_for_All)
+
 		cls_Settings.SetSetting("Backup_Frequency", spn_Backup_Frequency.Value)
 		cls_Settings.SetSetting("Backup_Retention", spn_Backup_Retention.Value)
 		cls_Settings.SetSetting("Dir_Backup", txb_Backup_Dir.Text)
@@ -195,27 +204,8 @@ Public Class ucr_Settings
 		End If
 	End Sub
 
-	Private Sub btn_MobyImport_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_MobyImport.Click, btn_MobyImport_with_Groups.Click
-		If TC.IsNullNothingOrEmpty(cmb_Moby_Platforms.EditValue) Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("Please select a platform first!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-			Return
-		End If
-
-		BS_Moby_Platforms.EndEdit()
-
-		Using frm As New frm_Moby_Import(cmb_Moby_Platforms.GetSelectedDataRow.Row("id_Moby_Platforms"), cmb_Moby_Platforms.GetSelectedDataRow.Row("URLPart"), cmb_Moby_Platforms.GetSelectedDataRow.Row("Display_Name"), IIf(sender Is btn_MobyImport_with_Groups, True, False))
-			frm.ShowDialog(Me.ParentForm)
-		End Using
-	End Sub
-
 	Private Sub btn_Rombase_Manager_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_RomBase_Manager.Click
 		Using frm As New frm_ROMBase_Manager
-			frm.ShowDialog(Me.ParentForm)
-		End Using
-	End Sub
-
-	Private Sub btn_Moby_Update_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Moby_Update.Click
-		Using frm As New frm_Moby_Import(Me.DS_MobyDB.tbl_Moby_Platforms)
 			frm.ShowDialog(Me.ParentForm)
 		End Using
 	End Sub
@@ -307,7 +297,7 @@ Public Class ucr_Settings
 	End Sub
 
 	Private Sub btn_ReSync_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_ReSync.Click
-		If DevExpress.XtraEditors.XtraMessageBox.Show("Do you really want to re-sync every data to the rombase?", "Re-Sync", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) <> DialogResult.Yes Then
+		If MKDXHelper.MessageBox("Do you really want to re-sync every data to the rombase?", "Re-Sync", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) <> DialogResult.Yes Then
 			Return
 		End If
 
@@ -325,6 +315,7 @@ Public Class ucr_Settings
 				sSQL &= "		, GAME.MD5" & ControlChars.CrLf
 				sSQL &= "		, GAME.SHA1" & ControlChars.CrLf
 				sSQL &= "		, GAME.id_Moby_Platforms" & ControlChars.CrLf
+				sSQL &= "		, GAME.id_Moby_Platforms_Alternative" & ControlChars.CrLf
 				sSQL &= "		, REL.id_Moby_Releases" & ControlChars.CrLf
 				sSQL &= "		, PLTFM.URLPart AS Moby_Platforms_URLPart" & ControlChars.CrLf
 				sSQL &= "		, MG.URLPart AS Moby_Games_URLPart" & ControlChars.CrLf
@@ -332,8 +323,8 @@ Public Class ucr_Settings
 				sSQL &= "	FROM tbl_Emu_Games GAME" & ControlChars.CrLf
 				sSQL &= "	LEFT JOIN moby.tbl_Moby_Platforms PLTFM ON GAME.id_Moby_Platforms = PLTFM.id_Moby_Platforms" & ControlChars.CrLf
 				sSQL &= "	LEFT JOIN moby.tbl_Moby_Games MG ON GAME.Moby_Games_URLPart = MG.URLPart" & ControlChars.CrLf
-				sSQL &= "	LEFT JOIN moby.tbl_Moby_Releases REL ON REL.id_Moby_Platforms = GAME.id_Moby_Platforms AND REL.id_Moby_Games = MG.id_Moby_Games" & ControlChars.CrLf
-				sSQL &= "	WHERE REL.id_Moby_Platforms <> 3 AND REL.id_Moby_Platforms <> -2 " & ControlChars.CrLf  'Don't export Windows games (3) and M.A.M.E. games (-2)
+				sSQL &= "	LEFT JOIN moby.tbl_Moby_Releases REL ON REL.id_Moby_Platforms = IFNULL(GAME.id_Moby_Platforms_Alternative, GAME.id_Moby_Platforms) AND REL.id_Moby_Games = MG.id_Moby_Games" & ControlChars.CrLf
+				sSQL &= "	WHERE GAME.id_Moby_Platforms <> 3 AND GAME.id_Moby_Platforms <> -2 " & ControlChars.CrLf  'Don't export Windows games (3) and M.A.M.E. games (-2)
 				sSQL &= " AND id_Emu_Games_Owner IS NULL" & ControlChars.CrLf 'Only Main Entries
 				sSQL &= "	AND REL.id_Moby_Platforms IS NOT NULL" & ControlChars.CrLf
 				sSQL &= "	AND GAME.id_Rombase IS NULL" & ControlChars.CrLf
@@ -355,7 +346,7 @@ Public Class ucr_Settings
 
 				'Get Sub-Entries, write those into tbl_Rombase, update id_Rombase for each Sub-Entry
 				For Each row_Emu_Games In dt_EmuGames.Rows
-					Dim id_Rombase As Integer = DS_Rombase.Upsert_Rombase(tran, DBNull.Value, row_Emu_Games("InnerFile"), row_Emu_Games("Size"), row_Emu_Games("CRC32"), row_Emu_Games("MD5"), row_Emu_Games("SHA1"), row_Emu_Games("id_Moby_Platforms"), row_Emu_Games("id_Moby_Releases"), row_Emu_Games("Moby_Platforms_URLPart"), row_Emu_Games("Moby_Games_URLPart"), CustomIdentifier:=row_Emu_Games("CustomIdentifier"))
+					Dim id_Rombase As Integer = DS_Rombase.Upsert_Rombase(tran, DBNull.Value, row_Emu_Games("InnerFile"), row_Emu_Games("Size"), row_Emu_Games("CRC32"), row_Emu_Games("MD5"), row_Emu_Games("SHA1"), row_Emu_Games("id_Moby_Platforms"), row_Emu_Games("id_Moby_Releases"), row_Emu_Games("Moby_Platforms_URLPart"), row_Emu_Games("Moby_Games_URLPart"), CustomIdentifier:=row_Emu_Games("CustomIdentifier"), id_Moby_Platforms_Alternative:=row_Emu_Games("id_Moby_Platforms_Alternative"))
 					If id_Rombase <> 0 Then
 						DataAccess.FireProcedure(tran.Connection, 0, "UPDATE tbl_Emu_Games SET id_Rombase = " & TC.getSQLFormat(id_Rombase) & " WHERE id_Emu_Games = " & TC.getSQLFormat(row_Emu_Games("id_Emu_Games")), tran)
 					End If
@@ -370,6 +361,7 @@ Public Class ucr_Settings
 					sSQL &= "		, GAME.MD5" & ControlChars.CrLf
 					sSQL &= "		, GAME.SHA1" & ControlChars.CrLf
 					sSQL &= "		, GAME.id_Moby_Platforms" & ControlChars.CrLf
+					sSQL &= "		, GAME.id_Moby_Platforms_Alternative" & ControlChars.CrLf
 					sSQL &= "		, REL.id_Moby_Releases" & ControlChars.CrLf
 					sSQL &= "		, PLTFM.URLPart AS Moby_Platforms_URLPart" & ControlChars.CrLf
 					sSQL &= "		, MG.URLPart AS Moby_Games_URLPart" & ControlChars.CrLf
@@ -385,7 +377,7 @@ Public Class ucr_Settings
 
 					For Each row_Emu_Games_Sub In dt_EmuGames_Sub.Rows
 						'Note: this takes ages!
-						Dim id_Rombase_Sub As Integer = DS_Rombase.Upsert_Rombase(tran, DBNull.Value, row_Emu_Games_Sub("InnerFile"), row_Emu_Games_Sub("Size"), row_Emu_Games_Sub("CRC32"), row_Emu_Games_Sub("MD5"), row_Emu_Games_Sub("SHA1"), row_Emu_Games_Sub("id_Moby_Platforms"), row_Emu_Games_Sub("id_Moby_Releases"), row_Emu_Games_Sub("Moby_Platforms_URLPart"), row_Emu_Games_Sub("Moby_Games_URLPart"), id_Rombase, row_Emu_Games_Sub("CustomIdentifier"))
+						Dim id_Rombase_Sub As Integer = DS_Rombase.Upsert_Rombase(tran, DBNull.Value, row_Emu_Games_Sub("InnerFile"), row_Emu_Games_Sub("Size"), row_Emu_Games_Sub("CRC32"), row_Emu_Games_Sub("MD5"), row_Emu_Games_Sub("SHA1"), row_Emu_Games_Sub("id_Moby_Platforms"), row_Emu_Games_Sub("id_Moby_Releases"), row_Emu_Games_Sub("Moby_Platforms_URLPart"), row_Emu_Games_Sub("Moby_Games_URLPart"), id_Rombase, row_Emu_Games_Sub("CustomIdentifier"), id_Moby_Platforms_Alternative:=row_Emu_Games_Sub("id_Moby_Platforms_Alternative"))
 						If id_Rombase_Sub <> 0 Then
 							DataAccess.FireProcedure(tran.Connection, 0, "UPDATE tbl_Emu_Games SET id_Rombase = " & TC.getSQLFormat(id_Rombase_Sub) & " WHERE id_Emu_Games = " & TC.getSQLFormat(row_Emu_Games_Sub("id_Emu_Games")), tran)
 						End If
@@ -480,13 +472,13 @@ Public Class ucr_Settings
 				DataAccess.FireProcedure(tran.Connection, 0, "DELETE FROM rombase.tbl_Rombase_Regions WHERE id_Rombase IN (SELECT EG.id_Rombase FROM main.tbl_Emu_Games_Regions EGR INNER JOIN main.tbl_Emu_Games EG ON EGR.id_Emu_Games = EG.id_Emu_Games); INSERT INTO rombase.tbl_Rombase_Regions (id_Rombase, id_Regions) SELECT	EG.id_Rombase, EGR.id_Regions FROM main.tbl_Emu_Games_Regions EGR INNER JOIN main.tbl_Emu_Games EG ON EGR.id_Emu_Games = EG.id_Emu_Games WHERE EG.id_Rombase IS NOT NULL", tran)
 
 				'### 7. tbl_Tag_Parser
-				DataAccess.FireProcedure(tran.Connection, 0, "DELETE FROM rombase.tbl_Rombase_Tag_Parser; INSERT INTO rombase.tbl_Rombase_Tag_Parser (Apply, Content, Note, Note_HighPriority, Year, Bios, Hack, Trainer, Version, Prototype, Beta, Translation, Alt, Unlicensed, Good, Bad, Fixed, Overdump, Pirated, Alpha, Kiosk, Sample, En, Ja, Fr, De, Es, It, Nl, Pt, Sv, No, Da, Fi, Zh, Ko, Pl, NTSC, PAL, World, Europe, USA, Australia, Japan, Korea, China, Asia, Brazil, Canada, France, Germany, HongKong, Italy, Netherlands, Russia, Spain, Sweden, Taiwan, created, updated, MV_Group_Criteria, MV_Volume_Number, Publisher, Hu, Gr, Found_In) SELECT Apply, Content, Note, Note_HighPriority, Year, Bios, Hack, Trainer, Version, Prototype, Beta, Translation, Alt, Unlicensed, Good, Bad, Fixed, Overdump, Pirated, Alpha, Kiosk, Sample, En, Ja, Fr, De, Es, It, Nl, Pt, Sv, No, Da, Fi, Zh, Ko, Pl, NTSC, PAL, World, Europe, USA, Australia, Japan, Korea, China, Asia, Brazil, Canada, France, Germany, HongKong, Italy, Netherlands, Russia, Spain, Sweden, Taiwan, created, updated, MV_Group_Criteria, MV_Volume_Number, Publisher, Hu, Gr, Found_In FROM main.tbl_Tag_Parser", tran)
+				DataAccess.FireProcedure(tran.Connection, 0, "DELETE FROM rombase.tbl_Rombase_Tag_Parser; INSERT INTO rombase.tbl_Rombase_Tag_Parser (Apply, Content, Note, Note_HighPriority, Year, Bios, Hack, Trainer, Version, Prototype, Beta, Translation, Alt, Unlicensed, Good, Bad, Fixed, Overdump, Pirated, Alpha, Kiosk, Sample, En, Ja, Fr, De, Es, It, Nl, Pt, Sv, No, Da, Fi, Zh, Ko, Pl, NTSC, PAL, World, Europe, USA, Australia, Japan, Korea, China, Asia, Brazil, Canada, France, Germany, HongKong, Italy, Netherlands, Russia, Spain, Sweden, Taiwan, created, updated, MV_Group_Criteria, MV_Volume_Number, Publisher, Hu, Gr, Found_In, Ar, Be, Cz, Ru, Sl, Sr) SELECT Apply, Content, Note, Note_HighPriority, Year, Bios, Hack, Trainer, Version, Prototype, Beta, Translation, Alt, Unlicensed, Good, Bad, Fixed, Overdump, Pirated, Alpha, Kiosk, Sample, En, Ja, Fr, De, Es, It, Nl, Pt, Sv, No, Da, Fi, Zh, Ko, Pl, NTSC, PAL, World, Europe, USA, Australia, Japan, Korea, China, Asia, Brazil, Canada, France, Germany, HongKong, Italy, Netherlands, Russia, Spain, Sweden, Taiwan, created, updated, MV_Group_Criteria, MV_Volume_Number, Publisher, Hu, Gr, Found_In, Ar, Be, Cz, Ru, Sl, Sr FROM main.tbl_Tag_Parser", tran)
 
 				tran.Commit()
 
-				DevExpress.XtraEditors.XtraMessageBox.Show("Re-Sync to Rombase successful.", "Re-Sync successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+				MKDXHelper.MessageBox("Re-Sync to Rombase successful.", "Re-Sync successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 			Catch ex As Exception
-				DevExpress.XtraEditors.XtraMessageBox.Show("Exception: " & ex.Message)
+				MKDXHelper.ExceptionMessageBox(ex)
 				tran.Rollback()
 			End Try
 		End Using
@@ -505,6 +497,13 @@ Public Class ucr_Settings
 			frm.ShowDialog(Me.ParentForm)
 		End Using
 	End Sub
+
+	Private Sub btn_ScummVM_Templates_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_ScummVM_Templates.Click
+		Using frm As New frm_ScummVM_Templates
+			frm.ShowDialog(Me.ParentForm)
+		End Using
+	End Sub
+
 
 	Private Sub btn_J2K_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_J2K.Click
 		Dim j2k_path As String = MKNetLib.cls_MKFileSupport.OpenFileDialog("Browse to your J2K Installation", "(J2K.exe)|J2K.exe", ParentForm:=Me.ParentForm)
@@ -546,11 +545,11 @@ Public Class ucr_Settings
 						cmb_J2K_Config.EditValue = DBNull.Value
 					End If
 				Else
-					DevExpress.XtraEditors.XtraMessageBox.Show("The file you selected cannot be recognized as J2K.")
+					MKDXHelper.MessageBox("The file you selected cannot be recognized as J2K.", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 					Return
 				End If
 			Catch ex As Exception
-				DevExpress.XtraEditors.XtraMessageBox.Show("Error while reading " & j2k_path & ". The error was:" & ControlChars.CrLf & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+				MKDXHelper.ExceptionMessageBox(ex, "Error while reading " & j2k_path & ". The error was:" & ControlChars.CrLf)
 			End Try
 		End If
 	End Sub
@@ -580,7 +579,7 @@ Public Class ucr_Settings
 				tran.Commit()
 			End Using
 
-			DevExpress.XtraEditors.XtraMessageBox.Show("Caches have been successfully refreshed.")
+			MKDXHelper.MessageBox("Caches have been successfully refreshed.", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
 		Catch ex As Exception
 
 		End Try
@@ -591,9 +590,9 @@ Public Class ucr_Settings
 	Private Sub btn_Users_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Users.Click
 		If Not cls_Globals.MultiUserMode Then
 			'Initial Setup
-			If DevExpress.XtraEditors.XtraMessageBox.Show("Multi User Mode allows you to define more than one user for Metropolis Launcher. Each user can be given a password. It is also possible to restict any user to certain pre-selected games (parental control *hint*hint*)." & ControlChars.CrLf & ControlChars.CrLf & "If you click 'yes', you will enable Multi User mode and an unrestricted user 'Admin' will be created. It is strongly advised to define a password for this user.", "Enable Multi User Mode", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
+			If MKDXHelper.MessageBox("Multi User Mode allows you to define more than one user for Metropolis Launcher. Each user can be given a password. It is also possible to restict any user to certain pre-selected games (parental control *hint*hint*)." & ControlChars.CrLf & ControlChars.CrLf & "If you click 'yes', you will enable Multi User mode and an unrestricted user 'Admin' will be created. It is strongly advised to define a password for this user.", "Enable Multi User Mode", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
 				If Not DataAccess.FireProcedure(cls_Globals.Conn, 0, "INSERT INTO tbl_Users (Admin, Username, Restricted) VALUES (1, 'Admin', 0)") Then
-					DevExpress.XtraEditors.XtraMessageBox.Show("Enabling Multi User Mode was not possible, please try again after restarting Metropolis Launcher. If the problem still persists, please contact the developer.", "Enable Multi User Mode", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+					MKDXHelper.MessageBox("Enabling Multi User Mode was not possible, please try again after restarting Metropolis Launcher. If the problem still persists, please contact the developer.", "Enable Multi User Mode", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 					Return
 				End If
 
@@ -695,5 +694,11 @@ Public Class ucr_Settings
 		If e.Button.Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Delete Then
 			txb_J2K.Text = ""
 		End If
+	End Sub
+
+	Private Sub btn_Known_Emulators_Click(sender As Object, e As EventArgs) Handles btn_Known_Emulators.Click
+		Using frm As New frm_Known_Emulators
+			frm.ShowDialog()
+		End Using
 	End Sub
 End Class

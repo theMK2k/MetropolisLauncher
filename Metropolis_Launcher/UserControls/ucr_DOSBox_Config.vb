@@ -1,8 +1,8 @@
 ﻿Public Class ucr_DOSBox_Config
 	Private _First_Paint_Handled As Boolean = False
 
-	Private _id_Emu_Games As Long = 0				' <> 0 when Game specific config
-	Private _id_DOSBox_Configs As Long = 0	' <> 0 when Template config
+	Private _id_Emu_Games As Long = 0       ' <> 0 when Game specific config
+	Private _id_DOSBox_Configs As Long = 0  ' <> 0 when Template config
 
 	Public Event E_Close(ByVal sender As Object, ByVal e As System.EventArgs)
 
@@ -234,12 +234,14 @@
 
 		If BS_DOSBox_Configs.Current Is Nothing Then Return result
 
+		BS_DOSBox_Configs.EndEdit()
+
 		'Set Non-bound Data, also does BS.EndEdit
 		SetDataRowValues()
 
 		If Not BS_DOSBox_Configs.Current.Row.RowState = System.Data.DataRowState.Unchanged Then
 			If TC.NZ(BS_DOSBox_Configs.Current("Displayname"), "").Length = 0 Then
-				DevExpress.XtraEditors.XtraMessageBox.Show("Please provide a template name.", "Save Template", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+				MKDXHelper.MessageBox("Please provide a template name.", "Save Template", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 				txb_Template_Name.Focus()
 				Return result
 			End If
@@ -311,7 +313,7 @@
 		If _id_Emu_Games = 0 Then Return 'Only check, if it is a game specific config
 
 		If Me.HasChanges Then
-			Dim res As DialogResult = DevExpress.XtraEditors.XtraMessageBox.Show("Do you want to save your current changes before changing the underlying template?", "Change Template", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+			Dim res As DialogResult = MKDXHelper.MessageBox("Do you want to save your current changes before changing the underlying template?", "Change Template", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
 
 			If res = Windows.Forms.DialogResult.Yes Then
 				Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
@@ -330,7 +332,7 @@
 		End If
 	End Sub
 
-	Private Sub Handle_LookupEdit_Delete_Button_Press(sender As System.Object, e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles cmb_p_cputype.ButtonPressed, cmb_p_dosbox_pit_hack.ButtonPressed, cmb_p_sdl_output.ButtonPressed, cmb_p_render_scaler.ButtonPressed, cmb_p_sblaster_sbtype.ButtonPressed, cmb_p_sblaster_oplmode.ButtonPressed, cmb_p_sblaster_oplmode.ButtonPressed, cmb_p_sblaster_hardwarebase.ButtonPressed, cmb_p_midi_mididevice.ButtonPressed, cmb_p_midi_mt32_reverb_mode.ButtonPressed, cmb_p_midi_mididevice.ButtonPressed, cmb_p_midi_mt32_dac.ButtonPressed
+	Private Sub Handle_LookupEdit_Delete_Button_Press(sender As System.Object, e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles cmb_p_cputype.ButtonPressed, cmb_p_dosbox_pit_hack.ButtonPressed, cmb_p_sdl_output.ButtonPressed, cmb_p_render_scaler.ButtonPressed, cmb_p_sblaster_sbtype.ButtonPressed, cmb_p_sblaster_oplmode.ButtonPressed, cmb_p_sblaster_oplmode.ButtonPressed, cmb_p_sblaster_hardwarebase.ButtonPressed, cmb_p_midi_mididevice.ButtonPressed, cmb_p_midi_mt32_reverb_mode.ButtonPressed, cmb_p_midi_mididevice.ButtonPressed, cmb_p_midi_mt32_dac.ButtonPressed, cmb_p_sblaster_oplemu.ButtonPressed
 		If e.Button.Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Delete Then
 			CType(sender, MKNetDXLib.ctl_MKDXLookupEdit).EditValue = DBNull.Value
 		End If
@@ -386,24 +388,65 @@
 		cmb_p_keyboard_auxdevice.Enabled = chb_p_keyboard_aux.Checked
 	End Sub
 
-	Private Sub cmb_p_midi_mididevice_EditValueChanged(sender As System.Object, e As System.EventArgs) Handles cmb_p_midi_mididevice.EditValueChanged
-		Me.lbl_p_midi_mt32_dac.Enabled = (TC.NZ(cmb_p_midi_mididevice.EditValue, "") = "mt32")
-		Me.lbl_p_midi_mt32_partials.Enabled = (TC.NZ(cmb_p_midi_mididevice.EditValue, "") = "mt32")
-		Me.lbl_p_midi_mt32_reverb_level.Enabled = (TC.NZ(cmb_p_midi_mididevice.EditValue, "") = "mt32")
-		Me.lbl_p_midi_mt32_reverb_mode.Enabled = (TC.NZ(cmb_p_midi_mididevice.EditValue, "") = "mt32")
-		Me.lbl_p_midi_mt32_reverb_time.Enabled = (TC.NZ(cmb_p_midi_mididevice.EditValue, "") = "mt32")
-		Me.lbl_p_midi_mt32_reverse_stereo.Enabled = (TC.NZ(cmb_p_midi_mididevice.EditValue, "") = "mt32")
-		Me.lbl_p_midi_mt32_thread.Enabled = (TC.NZ(cmb_p_midi_mididevice.EditValue, "") = "mt32")
-		Me.lbl_p_midi_mt32_verbose.Enabled = (TC.NZ(cmb_p_midi_mididevice.EditValue, "") = "mt32")
+	Private Sub p_midi_EditValueChanged(sender As System.Object, e As System.EventArgs) Handles cmb_p_midi_mididevice.EditValueChanged, chb_p_midi_fluid_chorus.EditValueChanged, chb_p_midi_fluid_reverb.EditValueChanged, chb_p_midi_mt32_thread.EditValueChanged
+		If Not {"mt32", "fluidsynth"}.Contains(TC.NZ(cmb_p_midi_mididevice.EditValue, "")) Then
+			Me.tcl_p_midi.Visible = False
+		Else
+			Me.tcl_p_midi.Visible = True
 
-		Me.chb_p_midi_mt32_reverse_stereo.Enabled = (TC.NZ(cmb_p_midi_mididevice.EditValue, "") = "mt32")
-		Me.chb_p_midi_mt32_thread.Enabled = (TC.NZ(cmb_p_midi_mididevice.EditValue, "") = "mt32")
-		Me.chb_p_midi_mt32_verbose.Enabled = (TC.NZ(cmb_p_midi_mididevice.EditValue, "") = "mt32")
-		Me.cmb_p_midi_mt32_dac.Enabled = (TC.NZ(cmb_p_midi_mididevice.EditValue, "") = "mt32")
-		Me.cmb_p_midi_mt32_reverb_mode.Enabled = (TC.NZ(cmb_p_midi_mididevice.EditValue, "") = "mt32")
-		Me.spn_p_midi_mt32_reverb_level.Enabled = (TC.NZ(cmb_p_midi_mididevice.EditValue, "") = "mt32")
-		Me.spn_p_midi_mt32_reverb_time.Enabled = (TC.NZ(cmb_p_midi_mididevice.EditValue, "") = "mt32")
-		Me.spn_p_midi_mt32_partials.Enabled = (TC.NZ(cmb_p_midi_mididevice.EditValue, "") = "mt32")
+			Me.tpg_p_midi_fluidsynth.PageVisible = False
+			Me.tpg_p_midi_mt32.PageVisible = False
+
+			If {"mt32"}.Contains(TC.NZ(cmb_p_midi_mididevice.EditValue, "")) Then
+				Me.tpg_p_midi_mt32.PageVisible = True
+				Me.tcl_p_midi.SelectedTabPage = Me.tpg_p_midi_mt32
+
+				Me.lbl_p_midi_mt32_chunk.Enabled = TC.NZ(Me.chb_p_midi_mt32_thread.EditValue, False)
+				Me.lbl_p_midi_mt32_chunk_ms.Enabled = TC.NZ(Me.chb_p_midi_mt32_thread.EditValue, False)
+				Me.lbl_p_midi_mt32_prebuffer.Enabled = TC.NZ(Me.chb_p_midi_mt32_thread.EditValue, False)
+				Me.lbl_p_midi_mt32_prebuffer_ms.Enabled = TC.NZ(Me.chb_p_midi_mt32_thread.EditValue, False)
+
+				Me.spn_p_midi_mt32_chunk.Enabled = TC.NZ(Me.chb_p_midi_mt32_thread.EditValue, False)
+				Me.spn_p_midi_mt32_prebuffer.Enabled = TC.NZ(Me.chb_p_midi_mt32_thread.EditValue, False)
+			End If
+
+			If {"fluidsynth"}.Contains(TC.NZ(cmb_p_midi_mididevice.EditValue, "")) Then
+				Me.tpg_p_midi_fluidsynth.PageVisible = True
+				Me.tcl_p_midi.SelectedTabPage = Me.tpg_p_midi_fluidsynth
+
+				Me.lbl_p_midi_fluid_chorus_depth.Enabled = TC.NZ(Me.chb_p_midi_fluid_chorus.EditValue, False)
+				Me.lbl_p_midi_fluid_chorus_depth_ms.Enabled = TC.NZ(Me.chb_p_midi_fluid_chorus.EditValue, False)
+				Me.lbl_p_midi_fluid_chorus_level.Enabled = TC.NZ(Me.chb_p_midi_fluid_chorus.EditValue, False)
+				Me.lbl_p_midi_fluid_chorus_number.Enabled = TC.NZ(Me.chb_p_midi_fluid_chorus.EditValue, False)
+				Me.lbl_p_midi_fluid_chorus_speed.Enabled = TC.NZ(Me.chb_p_midi_fluid_chorus.EditValue, False)
+				Me.lbl_p_midi_fluid_chorus_speed_hz.Enabled = TC.NZ(Me.chb_p_midi_fluid_chorus.EditValue, False)
+				Me.lbl_p_midi_fluid_chorus_type.Enabled = TC.NZ(Me.chb_p_midi_fluid_chorus.EditValue, False)
+
+				Me.spn_p_midi_fluid_chorus_depth.Enabled = TC.NZ(Me.chb_p_midi_fluid_chorus.EditValue, False)
+				Me.spn_p_midi_fluid_chorus_level.Enabled = TC.NZ(Me.chb_p_midi_fluid_chorus.EditValue, False)
+				Me.spn_p_midi_fluid_chorus_number.Enabled = TC.NZ(Me.chb_p_midi_fluid_chorus.EditValue, False)
+				Me.spn_p_midi_fluid_chorus_speed.Enabled = TC.NZ(Me.chb_p_midi_fluid_chorus.EditValue, False)
+				Me.cmb_p_midi_fluid_chorus_type.Enabled = TC.NZ(Me.chb_p_midi_fluid_chorus.EditValue, False)
+
+				Me.lbl_p_midi_fluid_reverb_damping.Enabled = TC.NZ(Me.chb_p_midi_fluid_reverb.EditValue, False)
+				Me.lbl_p_midi_fluid_reverb_level.Enabled = TC.NZ(Me.chb_p_midi_fluid_reverb.EditValue, False)
+				Me.lbl_p_midi_fluid_reverb_roomsize.Enabled = TC.NZ(Me.chb_p_midi_fluid_reverb.EditValue, False)
+				Me.lbl_p_midi_fluid_reverb_width.Enabled = TC.NZ(Me.chb_p_midi_fluid_reverb.EditValue, False)
+
+				Me.spn_p_midi_fluid_reverb_damping.Enabled = TC.NZ(Me.chb_p_midi_fluid_reverb.EditValue, False)
+				Me.spn_p_midi_fluid_reverb_level.Enabled = TC.NZ(Me.chb_p_midi_fluid_reverb.EditValue, False)
+				Me.spn_p_midi_fluid_reverb_roomsize.Enabled = TC.NZ(Me.chb_p_midi_fluid_reverb.EditValue, False)
+				Me.spn_p_midi_fluid_reverb_width.Enabled = TC.NZ(Me.chb_p_midi_fluid_reverb.EditValue, False)
+			End If
+		End If
+	End Sub
+
+	Private Sub cmb_p_sdl_output_EditValueChanged(sender As Object, e As EventArgs) Handles cmb_p_sdl_output.EditValueChanged
+		Me.lbl_p_sdl_surfacenp_sharpness.Enabled = (TC.NZ(cmb_p_sdl_output.EditValue, "") = "surfacenp")
+		Me.lbl_p_sdl_surfacenp_sharpness_percent.Enabled = (TC.NZ(cmb_p_sdl_output.EditValue, "") = "surfacenp")
+		Me.spn_p_sdl_surfacenp_sharpness.Enabled = (TC.NZ(cmb_p_sdl_output.EditValue, "") = "surfacenp")
+		Me.lbl_p_sdl_surface_collapse_dbl.Enabled = ({"surfacepp", "surfacenp", "surfacenb"}.Contains(TC.NZ(cmb_p_sdl_output.EditValue, "")))
+		Me.chb_p_sdl_surface_collapse_dbl.Enabled = ({"surfacepp", "surfacenp", "surfacenb"}.Contains(TC.NZ(cmb_p_sdl_output.EditValue, "")))
 	End Sub
 
 	Private Sub chb_p_ne2000_ne2000_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chb_p_ne2000_ne2000.CheckedChanged
@@ -431,7 +474,55 @@
 		Me.txb_p_ne2000_realnic.EditValue = "list"
 	End Sub
 
-	Private Sub btn_dosbox_language_Click(sender As System.Object, e As System.EventArgs) Handles btn_dosbox_language.Click
+	Private Sub cmb_p_sblaster_oplemu_EditValueChanged(sender As Object, e As EventArgs) Handles cmb_p_sblaster_oplemu.EditValueChanged
+		If TC.NZ(cmb_p_sblaster_oplemu.EditValue, "") = "nuked" Then
+			Dim bChanged As Boolean = False
+			If TC.NZ(cmb_mixer_rate.EditValue, "") <> "49716" Then
+				Me.BS_DOSBox_Configs.Current("mixer-rate") = "49716"
+				cmb_mixer_rate.EditValue = "49716"
+				bChanged = True
+			End If
+			If TC.NZ(cmb_sblaster_oplrate.EditValue, "") <> "49716" Then
+				Me.BS_DOSBox_Configs.Current("sblaster-oplrate") = "49716"
+				cmb_sblaster_oplrate.EditValue = "49716"
+				bChanged = True
+			End If
 
+			If bChanged Then
+				MKDXHelper.MessageBox("The Nuked OPL3 Emulator has been chosen. It is absolutely recommended that the Mixer Rate as well as the OPL Rate are set to 49716. These changes have been applied now.", "Nuked OPL3 Emulator", MessageBoxButtons.OK, MessageBoxIcon.Information)
+			End If
+		End If
+	End Sub
+
+	Private Sub btn_p_midi_fluid_soundfont_Click(sender As Object, e As EventArgs) Handles btn_p_midi_fluid_soundfont.Click
+		Dim filepath As String = MKNetLib.cls_MKFileSupport.OpenFileDialog("Browse SoundFont file", "Soundfont File *.sf2|*.sf2", ParentForm:=Me.ParentForm)
+		If Alphaleonis.Win32.Filesystem.File.Exists(filepath) Then
+			Me.txb_p_midi_fluid_soundfont.EditValue = filepath
+		End If
+	End Sub
+
+	Private Sub btn_p_midi_mt32_romdir_Click(sender As Object, e As EventArgs) Handles btn_p_midi_mt32_romdir.Click
+		Dim dirpath As String = MKNetLib.cls_MKFileSupport.OpenFolderDialog("", True, Me.ParentForm)
+		If Alphaleonis.Win32.Filesystem.Directory.Exists(dirpath) Then
+			Me.txb_p_midi_mt32_romdir.EditValue = dirpath
+		End If
+	End Sub
+
+	Private Sub spn_p_midi_mt32_chunk_EditValueChanged(sender As Object, e As EventArgs) Handles spn_p_midi_mt32_chunk.EditValueChanged
+		Me.spn_p_midi_mt32_prebuffer.Properties.MinValue = TC.NZ(Me.spn_p_midi_mt32_chunk.EditValue, 0L) + 1
+	End Sub
+
+	Private Sub btn_sdl_mapperfile_Click(sender As Object, e As EventArgs) Handles btn_sdl_mapperfile.Click
+		Dim filepath As String = MKNetLib.cls_MKFileSupport.SaveFileDialog("Browse Mapper File", "DOSBox Mapper File *.map|*.map", DefaultExt:=".map", ParentForm:=Me.ParentForm, PromptOverwrite:=False)
+		If filepath <> "" Then
+			Me.txb_sdl_mapperfile.EditValue = filepath
+		End If
+	End Sub
+
+	Private Sub btn_dosbox_language_Click(sender As Object, e As EventArgs) Handles btn_dosbox_language.Click
+		Dim filepath As String = MKNetLib.cls_MKFileSupport.OpenFileDialog("Browse Language File", ParentForm:=Me.ParentForm)
+		If Alphaleonis.Win32.Filesystem.File.Exists(filepath) Then
+			Me.txb_dosbox_language.EditValue = filepath
+		End If
 	End Sub
 End Class

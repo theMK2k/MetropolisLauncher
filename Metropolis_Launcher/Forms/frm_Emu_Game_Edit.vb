@@ -11,6 +11,7 @@ Public Class frm_Emu_Game_Edit
 	Private _id_Moby_Platforms As Long = 0  'On Multi-Edit, if a platform has been chosen - we can provide a default emulators selection
 	Private _MultiVolume As Boolean = False 'On Single-Edit, if the platform supports multiple volumes/disks
 	Private _is_DOS_or_Booter As Boolean = False  'On Single-Edit, if the platform is DOS or Booter
+	Private _is_ScummVM As Boolean = False  'On Single-Edit, if the platform is ScummVM
 
 	Private _id_Emu_Games_Multi As Integer()
 	Private _MultiEdit As Boolean = False
@@ -40,6 +41,10 @@ Public Class frm_Emu_Game_Edit
 	''' <remarks></remarks>
 	Public Sub New(ByVal id_Emu_Games As Integer)
 		InitializeComponent()
+
+#If DEBUG Then
+		Me.tpg_Regions_New.PageVisible = True
+#End If
 
 		_id_Emu_Games = id_Emu_Games
 
@@ -134,6 +139,7 @@ Public Class frm_Emu_Game_Edit
 			Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
 				DS_ML.Fill_src_frm_Emu_Game_Edit_Genres(tran, DS_ML.src_frm_Emu_Game_Edit_Genres, _id_Emu_Games, _id_Rombase, _MultiEdit)
 				DS_ML.Fill_src_frm_Emu_Game_Edit_Attributes(tran, DS_ML.src_frm_Emu_Game_Edit_Attributes, _id_Emu_Games, _id_Rombase, _MultiEdit)
+				DS_ML.Fill_tbl_Moby_Regions(tran, DS_ML.tbl_Moby_Regions)
 				tran.Rollback()
 			End Using
 
@@ -264,7 +270,7 @@ Public Class frm_Emu_Game_Edit
 			End If
 
 			If dt Is Nothing Or dt.Rows.Count <> 1 Then
-				DevExpress.XtraEditors.XtraMessageBox.Show("There was a problem loading the data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+				MKDXHelper.MessageBox("There was a problem loading the data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 				Cursor.Current = Cursors.Default
 				Me.Close()
 			End If
@@ -353,6 +359,7 @@ Public Class frm_Emu_Game_Edit
 			Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
 				DS_ML.Fill_src_frm_Emu_Game_Edit_Genres(tran, DS_ML.src_frm_Emu_Game_Edit_Genres, _id_Emu_Games, _id_Rombase, _MultiEdit)
 				DS_ML.Fill_src_frm_Emu_Game_Edit_Attributes(tran, DS_ML.src_frm_Emu_Game_Edit_Attributes, _id_Emu_Games, _id_Rombase, _MultiEdit)
+				DS_ML.Fill_tbl_Moby_Regions(tran, DS_ML.tbl_Moby_Regions)
 				tran.Rollback()
 			End Using
 
@@ -398,7 +405,7 @@ Public Class frm_Emu_Game_Edit
 
 
 			If dt Is Nothing Or dt.Rows.Count <> 1 Then
-				DevExpress.XtraEditors.XtraMessageBox.Show("There was a problem loading the data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+				MKDXHelper.MessageBox("There was a problem loading the data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 				Cursor.Current = Cursors.Default
 				Me.Close()
 			End If
@@ -493,7 +500,9 @@ Public Class frm_Emu_Game_Edit
 
 			Me._MultiVolume = TC.NZ(DataAccess.FireProcedureReturnScalar(cls_Globals.Conn, 0, "SELECT PLTFM.MultiVolume FROM tbl_Emu_Games EG LEFT JOIN moby.tbl_Moby_Platforms PLTFM ON EG.id_Moby_Platforms = PLTFM.id_Moby_Platforms WHERE EG.id_Emu_Games = " & TC.getSQLFormat(Me._id_Emu_Games)), False)
 
-			Me._is_DOS_or_Booter = {cls_Globals.enm_Moby_Platforms.dos, cls_Globals.enm_Moby_Platforms.pcboot}.Contains(TC.NZ(DataAccess.FireProcedureReturnScalar(cls_Globals.Conn, 0, "SELECT id_Moby_Platforms FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(Me._id_Emu_Games)), 0))
+			Dim id_Moby_Platforms As Int64 = TC.NZ(DataAccess.FireProcedureReturnScalar(cls_Globals.Conn, 0, "SELECT id_Moby_Platforms FROM tbl_Emu_Games WHERE id_Emu_Games = " & TC.getSQLFormat(Me._id_Emu_Games)), 0L)
+			Me._is_DOS_or_Booter = {cls_Globals.enm_Moby_Platforms.dos, cls_Globals.enm_Moby_Platforms.pcboot}.Contains(id_Moby_Platforms)
+			Me._is_ScummVM = {cls_Globals.enm_Moby_Platforms.scummvm}.Contains(id_Moby_Platforms)
 
 			'On DOS and PC Booter Platforms Show and initialize the DOSBox Configuration, also show Dosbox Files/Folder
 			If Me._is_DOS_or_Booter Then
@@ -502,11 +511,16 @@ Public Class frm_Emu_Game_Edit
 
 				Me.tpg_DOSBox_Files_and_Directories.PageVisible = True
 				BS_DOSBox_Files_and_Folders.Filter = "id_Emu_Games = " & Me._id_Emu_Games & " OR id_Emu_Games_Owner = " & Me._id_Emu_Games & " AND id_Rombase_DOSBox_Filetypes <> " & TC.getSQLFormat(cls_Globals.enm_Rombase_DOSBox_Filetypes.int)
+			ElseIf Me._is_ScummVM Then
+				tpg_ScummVM_Config.PageVisible = True
+				Me.ucr_ScummVM_Config.Load_Game_Config(Me._id_Emu_Games)
 			ElseIf _MultiVolume Then
 				'In case of Multi-Volume show Disks/Volumes Tabpage
 				Me.tpg_Disks_Volumes.PageVisible = True
 			End If
 		End If
+
+		Me.tv_Regions.ExpandAll()
 
 		Cursor.Current = Cursors.Default
 	End Sub
@@ -752,7 +766,7 @@ Public Class frm_Emu_Game_Edit
 
 					If al_Old_Extras.Count > 0 AndAlso Not cls_Extras.ExtrasListsEqual(al_Old_Extras, al_New_Extras) Then
 
-						Dim res As DialogResult = DevExpress.XtraEditors.XtraMessageBox.Show("Your alterations affect the filenames of one or more extras (title, snapshots etc.). Do you want to automatically rename these extras?", "Extras need renaming", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+						Dim res As DialogResult = MKDXHelper.MessageBox("Your alterations affect the filenames of one or more extras (title, snapshots etc.). Do you want to automatically rename these extras?", "Extras need renaming", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
 
 						If res = DialogResult.Cancel Then
 							tran.Rollback()
@@ -778,6 +792,10 @@ Public Class frm_Emu_Game_Edit
 
 			If tpg_DOSBox_Config.PageVisible = True Then
 				Me.ucr_DOSBox_Config.Save_Game_Config(tran)
+			End If
+
+			If tpg_ScummVM_Config.PageVisible = True Then
+				Me.ucr_ScummVM_Config.Save_Game_Config(tran)
 			End If
 
 			tran.Commit()
@@ -999,7 +1017,7 @@ Public Class frm_Emu_Game_Edit
 						If al_Old_Extras.Count > 0 AndAlso Not cls_Extras.ExtrasListsEqual(al_Old_Extras, al_New_Extras) Then
 							prg.Hide = True
 
-							Dim res As DialogResult = DevExpress.XtraEditors.XtraMessageBox.Show("Your alterations for " & dt_Old.Rows(0)("Name") & " affect the filenames of one or more extras (title, snapshots etc.). Do you want to automatically rename these extras?", "Extras need renaming", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+							Dim res As DialogResult = MKDXHelper.MessageBox("Your alterations for " & dt_Old.Rows(0)("Name") & " affect the filenames of one or more extras (title, snapshots etc.). Do you want to automatically rename these extras?", "Extras need renaming", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
 
 							prg.Hide = False
 
@@ -1283,7 +1301,7 @@ Public Class frm_Emu_Game_Edit
 				DS_ML.Update_tbl_Emu_Games_Caches(tran, id_Emu_Games)
 
 			Catch ex As Exception
-				DevExpress.XtraEditors.XtraMessageBox.Show(ex.Message)
+				MKDXHelper.ExceptionMessageBox(ex)
 				Return
 			End Try
 		Next

@@ -219,7 +219,7 @@ Partial Class frm_Emu_ImageSettings
 		Me.gb_Image_Order.Name = "gb_Image_Order"
 		Me.gb_Image_Order.Size = New System.Drawing.Size(378, 257)
 		Me.gb_Image_Order.TabIndex = 2
-		Me.gb_Image_Order.Text = "Image Order and Visibility"
+		Me.gb_Image_Order.Text = "USER Extras Order and Visibility"
 		'
 		'btn_Down
 		'

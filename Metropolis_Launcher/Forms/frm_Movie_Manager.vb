@@ -19,7 +19,7 @@
 		While bTryAgain
 			sContent = MKNetLib.cls_MKWebClient.FetchURLToString(s_url)
 			bTryAgain = False
-			If sContent.Length = 0 AndAlso DevExpress.XtraEditors.XtraMessageBox.Show("Try again?", "", MessageBoxButtons.YesNo) <> MsgBoxResult.Yes Then
+			If sContent.Length = 0 AndAlso MKDXHelper.MessageBox("Try again?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then
 				bTryAgain = True
 			End If
 		End While
@@ -62,7 +62,7 @@
 					While bTryAgain2
 						result_url_content = MKNetLib.cls_MKWebClient.FetchURLToString(result_url)
 						bTryAgain2 = False
-						If result_url_content.Length = 0 AndAlso DevExpress.XtraEditors.XtraMessageBox.Show("Try again?", "", MessageBoxButtons.YesNo) <> MsgBoxResult.Yes Then
+						If result_url_content.Length = 0 AndAlso MKDXHelper.MessageBox("Try again?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> MsgBoxResult.Yes Then
 							bTryAgain2 = True
 						End If
 					End While

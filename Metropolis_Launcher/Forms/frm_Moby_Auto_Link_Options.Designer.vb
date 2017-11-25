@@ -51,20 +51,38 @@ Partial Class frm_Moby_Auto_Link_Options
 		Dim ToolTipTitleItem13 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem7 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim ToolTipTitleItem14 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim SuperToolTip8 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem15 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem8 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip9 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem16 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem9 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip10 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem17 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem10 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim ToolTipTitleItem18 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim SuperToolTip11 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem19 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipTitleItem18 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem11 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip12 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem19 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem12 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip13 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem20 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem13 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip14 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem21 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem14 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip15 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem22 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem15 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip16 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem23 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem16 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim ToolTipTitleItem24 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip17 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem25 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem17 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim ToolTipTitleItem26 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip9 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem16 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem9 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip8 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem15 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem8 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Me.lbl_Strip_Tags = New MKNetDXLib.ctl_MKDXLabel()
 		Me.chb_Strip_Tags = New MKNetDXLib.ctl_MKDXCheckEdit()
 		Me.lbl_Sort_Words = New MKNetDXLib.ctl_MKDXLabel()
@@ -74,6 +92,10 @@ Partial Class frm_Moby_Auto_Link_Options
 		Me.chb_Remove_Characters = New MKNetDXLib.ctl_MKDXCheckEdit()
 		Me.lbl_Explanation = New MKNetDXLib.ctl_MKDXLabel()
 		Me.pnl_Main = New MKNetDXLib.ctl_MKDXPanel()
+		Me.chb_Redectect_Deprecated = New MKNetDXLib.ctl_MKDXCheckEdit()
+		Me.chb_Ignore_Deprecated = New MKNetDXLib.ctl_MKDXCheckEdit()
+		Me.lbl_Rescan_Deprecated = New MKNetDXLib.ctl_MKDXLabel()
+		Me.lbl_Ignore_Deprecated = New MKNetDXLib.ctl_MKDXLabel()
 		Me.spn_Minimum_Match_Score = New MKNetDXLib.ctl_MKDXSpinEdit()
 		Me.lbl_Minimum_Match_Score = New MKNetDXLib.ctl_MKDXLabel()
 		Me.chb_Strip_Extensions = New MKNetDXLib.ctl_MKDXCheckEdit()
@@ -103,12 +125,16 @@ Partial Class frm_Moby_Auto_Link_Options
 		Me.lbl_Moby_Releases = New MKNetDXLib.ctl_MKDXLabel()
 		Me.btn_Cancel = New MKNetDXLib.ctl_MKDXSimpleButton()
 		Me.btn_OK = New MKNetDXLib.ctl_MKDXSimpleButton()
+		Me.lbl_Apply_at_100 = New MKNetDXLib.ctl_MKDXLabel()
+		Me.chb_Apply_at_100 = New MKNetDXLib.ctl_MKDXCheckEdit()
 		CType(Me.chb_Strip_Tags.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.chb_Sort_Words.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.txb_Remove_Characters.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.chb_Remove_Characters.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.pnl_Main, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.pnl_Main.SuspendLayout()
+		CType(Me.chb_Redectect_Deprecated.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.chb_Ignore_Deprecated.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.spn_Minimum_Match_Score.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.chb_Strip_Extensions.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.pnl_Bottom, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -124,6 +150,7 @@ Partial Class frm_Moby_Auto_Link_Options
 		CType(Me.rpi_Moby_Platforms_gv1, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.grd_Moby_Releases, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.gv_Moby_Releases, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.chb_Apply_at_100.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
 		'
 		'lbl_Strip_Tags
@@ -137,7 +164,7 @@ Partial Class frm_Moby_Auto_Link_Options
 		Me.lbl_Strip_Tags.MKBoundControl4 = Nothing
 		Me.lbl_Strip_Tags.MKBoundControl5 = Nothing
 		Me.lbl_Strip_Tags.Name = "lbl_Strip_Tags"
-		Me.lbl_Strip_Tags.Size = New System.Drawing.Size(143, 20)
+		Me.lbl_Strip_Tags.Size = New System.Drawing.Size(207, 20)
 		ToolTipTitleItem1.Text = "Strip Tags from Filenames"
 		ToolTipItem1.LeftIndent = 6
 		ToolTipItem1.Text = resources.GetString("ToolTipItem1.Text")
@@ -155,7 +182,7 @@ Partial Class frm_Moby_Auto_Link_Options
 		'
 		Me.chb_Strip_Tags.Cursor = System.Windows.Forms.Cursors.Hand
 		Me.chb_Strip_Tags.EditValue = True
-		Me.chb_Strip_Tags.Location = New System.Drawing.Point(148, 27)
+		Me.chb_Strip_Tags.Location = New System.Drawing.Point(212, 27)
 		Me.chb_Strip_Tags.MKBoundLabel = Nothing
 		Me.chb_Strip_Tags.MKEditValue_Compare = Nothing
 		Me.chb_Strip_Tags.Name = "chb_Strip_Tags"
@@ -184,7 +211,7 @@ Partial Class frm_Moby_Auto_Link_Options
 		Me.lbl_Sort_Words.MKBoundControl4 = Nothing
 		Me.lbl_Sort_Words.MKBoundControl5 = Nothing
 		Me.lbl_Sort_Words.Name = "lbl_Sort_Words"
-		Me.lbl_Sort_Words.Size = New System.Drawing.Size(143, 20)
+		Me.lbl_Sort_Words.Size = New System.Drawing.Size(207, 20)
 		ToolTipTitleItem5.Text = "Sort whole words"
 		ToolTipItem3.LeftIndent = 6
 		ToolTipItem3.Text = resources.GetString("ToolTipItem3.Text")
@@ -202,7 +229,7 @@ Partial Class frm_Moby_Auto_Link_Options
 		'
 		Me.chb_Sort_Words.Cursor = System.Windows.Forms.Cursors.Hand
 		Me.chb_Sort_Words.EditValue = True
-		Me.chb_Sort_Words.Location = New System.Drawing.Point(148, 49)
+		Me.chb_Sort_Words.Location = New System.Drawing.Point(212, 49)
 		Me.chb_Sort_Words.MKBoundLabel = Nothing
 		Me.chb_Sort_Words.MKEditValue_Compare = Nothing
 		Me.chb_Sort_Words.Name = "chb_Sort_Words"
@@ -231,7 +258,7 @@ Partial Class frm_Moby_Auto_Link_Options
 		Me.lbl_Remove_Characters.MKBoundControl4 = Nothing
 		Me.lbl_Remove_Characters.MKBoundControl5 = Nothing
 		Me.lbl_Remove_Characters.Name = "lbl_Remove_Characters"
-		Me.lbl_Remove_Characters.Size = New System.Drawing.Size(143, 20)
+		Me.lbl_Remove_Characters.Size = New System.Drawing.Size(207, 20)
 		ToolTipTitleItem9.Text = "Remove Characters"
 		ToolTipItem5.LeftIndent = 6
 		ToolTipItem5.Text = "Some characters do not add up to the distinguishability of games. They could even" &
@@ -252,11 +279,11 @@ Partial Class frm_Moby_Auto_Link_Options
 		Me.txb_Remove_Characters.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
 						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.txb_Remove_Characters.EditValue = ",;:-_'~"
-		Me.txb_Remove_Characters.Location = New System.Drawing.Point(164, 70)
+		Me.txb_Remove_Characters.Location = New System.Drawing.Point(228, 70)
 		Me.txb_Remove_Characters.MKBoundLabel = Nothing
 		Me.txb_Remove_Characters.MKEditValue_Compare = Nothing
 		Me.txb_Remove_Characters.Name = "txb_Remove_Characters"
-		Me.txb_Remove_Characters.Size = New System.Drawing.Size(262, 20)
+		Me.txb_Remove_Characters.Size = New System.Drawing.Size(198, 20)
 		ToolTipTitleItem11.Text = "Remove Characters"
 		ToolTipItem6.LeftIndent = 6
 		ToolTipItem6.Text = "Some characters do not add up to the distinguishability of games. They could even" &
@@ -275,7 +302,7 @@ Partial Class frm_Moby_Auto_Link_Options
 		'
 		Me.chb_Remove_Characters.Cursor = System.Windows.Forms.Cursors.Hand
 		Me.chb_Remove_Characters.EditValue = True
-		Me.chb_Remove_Characters.Location = New System.Drawing.Point(148, 72)
+		Me.chb_Remove_Characters.Location = New System.Drawing.Point(212, 72)
 		Me.chb_Remove_Characters.MKBoundLabel = Nothing
 		Me.chb_Remove_Characters.MKEditValue_Compare = Nothing
 		Me.chb_Remove_Characters.Name = "chb_Remove_Characters"
@@ -317,6 +344,12 @@ Partial Class frm_Moby_Auto_Link_Options
 		'pnl_Main
 		'
 		Me.pnl_Main.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.pnl_Main.Controls.Add(Me.chb_Apply_at_100)
+		Me.pnl_Main.Controls.Add(Me.lbl_Apply_at_100)
+		Me.pnl_Main.Controls.Add(Me.chb_Redectect_Deprecated)
+		Me.pnl_Main.Controls.Add(Me.chb_Ignore_Deprecated)
+		Me.pnl_Main.Controls.Add(Me.lbl_Rescan_Deprecated)
+		Me.pnl_Main.Controls.Add(Me.lbl_Ignore_Deprecated)
 		Me.pnl_Main.Controls.Add(Me.spn_Minimum_Match_Score)
 		Me.pnl_Main.Controls.Add(Me.lbl_Minimum_Match_Score)
 		Me.pnl_Main.Controls.Add(Me.chb_Strip_Extensions)
@@ -331,13 +364,95 @@ Partial Class frm_Moby_Auto_Link_Options
 		Me.pnl_Main.Dock = System.Windows.Forms.DockStyle.Top
 		Me.pnl_Main.Location = New System.Drawing.Point(0, 71)
 		Me.pnl_Main.Name = "pnl_Main"
-		Me.pnl_Main.Size = New System.Drawing.Size(430, 117)
+		Me.pnl_Main.Size = New System.Drawing.Size(430, 253)
 		Me.pnl_Main.TabIndex = 14
+		'
+		'chb_Redectect_Deprecated
+		'
+		Me.chb_Redectect_Deprecated.Cursor = System.Windows.Forms.Cursors.Hand
+		Me.chb_Redectect_Deprecated.EditValue = True
+		Me.chb_Redectect_Deprecated.Location = New System.Drawing.Point(212, 164)
+		Me.chb_Redectect_Deprecated.MKBoundLabel = Nothing
+		Me.chb_Redectect_Deprecated.MKEditValue_Compare = Nothing
+		Me.chb_Redectect_Deprecated.Name = "chb_Redectect_Deprecated"
+		Me.chb_Redectect_Deprecated.Properties.Caption = ""
+		Me.chb_Redectect_Deprecated.Size = New System.Drawing.Size(20, 19)
+		ToolTipTitleItem17.Text = "Re-Detect Games with deprecated links"
+		ToolTipItem10.LeftIndent = 6
+		ToolTipItem10.Text = "Some games could be linked to deprectated Moby Releases. Use this option to perfo" &
+		"rm a re-detection on them."
+		SuperToolTip10.Items.Add(ToolTipTitleItem17)
+		SuperToolTip10.Items.Add(ToolTipItem10)
+		Me.chb_Redectect_Deprecated.SuperTip = SuperToolTip10
+		Me.chb_Redectect_Deprecated.TabIndex = 18
+		'
+		'chb_Ignore_Deprecated
+		'
+		Me.chb_Ignore_Deprecated.Cursor = System.Windows.Forms.Cursors.Hand
+		Me.chb_Ignore_Deprecated.EditValue = True
+		Me.chb_Ignore_Deprecated.Location = New System.Drawing.Point(212, 141)
+		Me.chb_Ignore_Deprecated.MKBoundLabel = Nothing
+		Me.chb_Ignore_Deprecated.MKEditValue_Compare = Nothing
+		Me.chb_Ignore_Deprecated.Name = "chb_Ignore_Deprecated"
+		Me.chb_Ignore_Deprecated.Properties.Caption = ""
+		Me.chb_Ignore_Deprecated.Size = New System.Drawing.Size(20, 19)
+		ToolTipTitleItem18.Text = "Ignore deprecated Moby Releases"
+		ToolTipItem11.LeftIndent = 6
+		ToolTipItem11.Text = "The Moby Database may contain entries which could not be found on the mobygames.c" &
+		"om website anymore. These deprecated entries can be ignored from the detection."
+		SuperToolTip11.Items.Add(ToolTipTitleItem18)
+		SuperToolTip11.Items.Add(ToolTipItem11)
+		Me.chb_Ignore_Deprecated.SuperTip = SuperToolTip11
+		Me.chb_Ignore_Deprecated.TabIndex = 17
+		'
+		'lbl_Rescan_Deprecated
+		'
+		Me.lbl_Rescan_Deprecated.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_Rescan_Deprecated.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_Rescan_Deprecated.Location = New System.Drawing.Point(2, 164)
+		Me.lbl_Rescan_Deprecated.MKBoundControl1 = Nothing
+		Me.lbl_Rescan_Deprecated.MKBoundControl2 = Nothing
+		Me.lbl_Rescan_Deprecated.MKBoundControl3 = Nothing
+		Me.lbl_Rescan_Deprecated.MKBoundControl4 = Nothing
+		Me.lbl_Rescan_Deprecated.MKBoundControl5 = Nothing
+		Me.lbl_Rescan_Deprecated.Name = "lbl_Rescan_Deprecated"
+		Me.lbl_Rescan_Deprecated.Size = New System.Drawing.Size(207, 20)
+		ToolTipTitleItem19.Text = "Re-Detect Games with deprecated links"
+		ToolTipItem12.LeftIndent = 6
+		ToolTipItem12.Text = "Some games could be linked to deprectated Moby Releases. Use this option to perfo" &
+		"rm a re-detection on them."
+		SuperToolTip12.Items.Add(ToolTipTitleItem19)
+		SuperToolTip12.Items.Add(ToolTipItem12)
+		Me.lbl_Rescan_Deprecated.SuperTip = SuperToolTip12
+		Me.lbl_Rescan_Deprecated.TabIndex = 16
+		Me.lbl_Rescan_Deprecated.Text = "Re-Detect Games with deprecated links:"
+		'
+		'lbl_Ignore_Deprecated
+		'
+		Me.lbl_Ignore_Deprecated.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_Ignore_Deprecated.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_Ignore_Deprecated.Location = New System.Drawing.Point(2, 141)
+		Me.lbl_Ignore_Deprecated.MKBoundControl1 = Nothing
+		Me.lbl_Ignore_Deprecated.MKBoundControl2 = Nothing
+		Me.lbl_Ignore_Deprecated.MKBoundControl3 = Nothing
+		Me.lbl_Ignore_Deprecated.MKBoundControl4 = Nothing
+		Me.lbl_Ignore_Deprecated.MKBoundControl5 = Nothing
+		Me.lbl_Ignore_Deprecated.Name = "lbl_Ignore_Deprecated"
+		Me.lbl_Ignore_Deprecated.Size = New System.Drawing.Size(207, 20)
+		ToolTipTitleItem20.Text = "Ignore deprecated Moby Releases"
+		ToolTipItem13.LeftIndent = 6
+		ToolTipItem13.Text = "The Moby Database may contain entries which could not be found on the mobygames.c" &
+		"om website anymore. These deprecated entries can be ignored from the detection."
+		SuperToolTip13.Items.Add(ToolTipTitleItem20)
+		SuperToolTip13.Items.Add(ToolTipItem13)
+		Me.lbl_Ignore_Deprecated.SuperTip = SuperToolTip13
+		Me.lbl_Ignore_Deprecated.TabIndex = 16
+		Me.lbl_Ignore_Deprecated.Text = "Ignore deprecated Moby Releases:"
 		'
 		'spn_Minimum_Match_Score
 		'
 		Me.spn_Minimum_Match_Score.EditValue = New Decimal(New Integer() {1, 0, 0, 0})
-		Me.spn_Minimum_Match_Score.Location = New System.Drawing.Point(148, 95)
+		Me.spn_Minimum_Match_Score.Location = New System.Drawing.Point(212, 95)
 		Me.spn_Minimum_Match_Score.MKBoundLabel = Nothing
 		Me.spn_Minimum_Match_Score.MKEditValue_Compare = Nothing
 		Me.spn_Minimum_Match_Score.Name = "spn_Minimum_Match_Score"
@@ -347,13 +462,13 @@ Partial Class frm_Moby_Auto_Link_Options
 		Me.spn_Minimum_Match_Score.Properties.MaxValue = New Decimal(New Integer() {100, 0, 0, 0})
 		Me.spn_Minimum_Match_Score.Properties.MinValue = New Decimal(New Integer() {1, 0, 0, 0})
 		Me.spn_Minimum_Match_Score.Size = New System.Drawing.Size(55, 20)
-		ToolTipTitleItem15.Text = "Minimum Match Score"
-		ToolTipItem8.LeftIndent = 6
-		ToolTipItem8.Text = "Define here, the minimum match score that is needed to consider a match." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A low" &
+		ToolTipTitleItem21.Text = "Minimum Match Score"
+		ToolTipItem14.LeftIndent = 6
+		ToolTipItem14.Text = "Define here, the minimum match score that is needed to consider a match." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A low" &
 		"er minimum match score can lead to a lesser performant analysis."
-		SuperToolTip8.Items.Add(ToolTipTitleItem15)
-		SuperToolTip8.Items.Add(ToolTipItem8)
-		Me.spn_Minimum_Match_Score.SuperTip = SuperToolTip8
+		SuperToolTip14.Items.Add(ToolTipTitleItem21)
+		SuperToolTip14.Items.Add(ToolTipItem14)
+		Me.spn_Minimum_Match_Score.SuperTip = SuperToolTip14
 		Me.spn_Minimum_Match_Score.TabIndex = 15
 		'
 		'lbl_Minimum_Match_Score
@@ -367,14 +482,14 @@ Partial Class frm_Moby_Auto_Link_Options
 		Me.lbl_Minimum_Match_Score.MKBoundControl4 = Nothing
 		Me.lbl_Minimum_Match_Score.MKBoundControl5 = Nothing
 		Me.lbl_Minimum_Match_Score.Name = "lbl_Minimum_Match_Score"
-		Me.lbl_Minimum_Match_Score.Size = New System.Drawing.Size(143, 20)
-		ToolTipTitleItem16.Text = "Minimum Match Score"
-		ToolTipItem9.LeftIndent = 6
-		ToolTipItem9.Text = "Define here, the minimum match score that is needed to consider a match." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A low" &
+		Me.lbl_Minimum_Match_Score.Size = New System.Drawing.Size(207, 20)
+		ToolTipTitleItem22.Text = "Minimum Match Score"
+		ToolTipItem15.LeftIndent = 6
+		ToolTipItem15.Text = "Define here, the minimum match score that is needed to consider a match." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A low" &
 		"er minimum match score can lead to a lesser performant analysis."
-		SuperToolTip9.Items.Add(ToolTipTitleItem16)
-		SuperToolTip9.Items.Add(ToolTipItem9)
-		Me.lbl_Minimum_Match_Score.SuperTip = SuperToolTip9
+		SuperToolTip15.Items.Add(ToolTipTitleItem22)
+		SuperToolTip15.Items.Add(ToolTipItem15)
+		Me.lbl_Minimum_Match_Score.SuperTip = SuperToolTip15
 		Me.lbl_Minimum_Match_Score.TabIndex = 14
 		Me.lbl_Minimum_Match_Score.Text = "Minimum Match Score:"
 		'
@@ -382,22 +497,22 @@ Partial Class frm_Moby_Auto_Link_Options
 		'
 		Me.chb_Strip_Extensions.Cursor = System.Windows.Forms.Cursors.Hand
 		Me.chb_Strip_Extensions.EditValue = True
-		Me.chb_Strip_Extensions.Location = New System.Drawing.Point(148, 4)
+		Me.chb_Strip_Extensions.Location = New System.Drawing.Point(212, 4)
 		Me.chb_Strip_Extensions.MKBoundLabel = Nothing
 		Me.chb_Strip_Extensions.MKEditValue_Compare = Nothing
 		Me.chb_Strip_Extensions.Name = "chb_Strip_Extensions"
 		Me.chb_Strip_Extensions.Properties.Caption = ""
 		Me.chb_Strip_Extensions.Size = New System.Drawing.Size(20, 19)
-		ToolTipTitleItem17.Text = "Stripping File Extensions"
-		ToolTipItem10.LeftIndent = 6
-		ToolTipItem10.Text = resources.GetString("ToolTipItem10.Text")
-		ToolTipTitleItem18.LeftIndent = 6
-		ToolTipTitleItem18.Text = "Example" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Original Filename: ""Sonic The Hedgehog 2.md""" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Text after filtering: ""S" &
+		ToolTipTitleItem23.Text = "Stripping File Extensions"
+		ToolTipItem16.LeftIndent = 6
+		ToolTipItem16.Text = resources.GetString("ToolTipItem16.Text")
+		ToolTipTitleItem24.LeftIndent = 6
+		ToolTipTitleItem24.Text = "Example" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Original Filename: ""Sonic The Hedgehog 2.md""" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Text after filtering: ""S" &
 		"onic The Hedgehog 2"""
-		SuperToolTip10.Items.Add(ToolTipTitleItem17)
-		SuperToolTip10.Items.Add(ToolTipItem10)
-		SuperToolTip10.Items.Add(ToolTipTitleItem18)
-		Me.chb_Strip_Extensions.SuperTip = SuperToolTip10
+		SuperToolTip16.Items.Add(ToolTipTitleItem23)
+		SuperToolTip16.Items.Add(ToolTipItem16)
+		SuperToolTip16.Items.Add(ToolTipTitleItem24)
+		Me.chb_Strip_Extensions.SuperTip = SuperToolTip16
 		Me.chb_Strip_Extensions.TabIndex = 13
 		'
 		'lbl_Strip_Extensions
@@ -411,17 +526,17 @@ Partial Class frm_Moby_Auto_Link_Options
 		Me.lbl_Strip_Extensions.MKBoundControl4 = Nothing
 		Me.lbl_Strip_Extensions.MKBoundControl5 = Nothing
 		Me.lbl_Strip_Extensions.Name = "lbl_Strip_Extensions"
-		Me.lbl_Strip_Extensions.Size = New System.Drawing.Size(143, 20)
-		ToolTipTitleItem19.Text = "Strip Extensins from Filenames"
-		ToolTipItem11.LeftIndent = 6
-		ToolTipItem11.Text = resources.GetString("ToolTipItem11.Text")
-		ToolTipTitleItem20.LeftIndent = 6
-		ToolTipTitleItem20.Text = "Example" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Original Filename: ""Sonic The Hedgehog 2.md""" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Text after filtering: ""S" &
+		Me.lbl_Strip_Extensions.Size = New System.Drawing.Size(207, 20)
+		ToolTipTitleItem25.Text = "Strip Extensins from Filenames"
+		ToolTipItem17.LeftIndent = 6
+		ToolTipItem17.Text = resources.GetString("ToolTipItem17.Text")
+		ToolTipTitleItem26.LeftIndent = 6
+		ToolTipTitleItem26.Text = "Example" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Original Filename: ""Sonic The Hedgehog 2.md""" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Text after filtering: ""S" &
 		"onic The Hedgehog 2"""
-		SuperToolTip11.Items.Add(ToolTipTitleItem19)
-		SuperToolTip11.Items.Add(ToolTipItem11)
-		SuperToolTip11.Items.Add(ToolTipTitleItem20)
-		Me.lbl_Strip_Extensions.SuperTip = SuperToolTip11
+		SuperToolTip17.Items.Add(ToolTipTitleItem25)
+		SuperToolTip17.Items.Add(ToolTipItem17)
+		SuperToolTip17.Items.Add(ToolTipTitleItem26)
+		Me.lbl_Strip_Extensions.SuperTip = SuperToolTip17
 		Me.lbl_Strip_Extensions.TabIndex = 2
 		Me.lbl_Strip_Extensions.Text = "Strip File Extensions:"
 		'
@@ -430,7 +545,7 @@ Partial Class frm_Moby_Auto_Link_Options
 		Me.pnl_Bottom.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
 		Me.pnl_Bottom.Controls.Add(Me.Ctl_MKDXPanel1)
 		Me.pnl_Bottom.Dock = System.Windows.Forms.DockStyle.Bottom
-		Me.pnl_Bottom.Location = New System.Drawing.Point(0, 197)
+		Me.pnl_Bottom.Location = New System.Drawing.Point(0, 327)
 		Me.pnl_Bottom.Name = "pnl_Bottom"
 		Me.pnl_Bottom.Size = New System.Drawing.Size(430, 28)
 		Me.pnl_Bottom.TabIndex = 15
@@ -714,11 +829,50 @@ Partial Class frm_Moby_Auto_Link_Options
 		Me.btn_OK.TabIndex = 9
 		Me.btn_OK.Text = "&OK"
 		'
+		'lbl_Apply_at_100
+		'
+		Me.lbl_Apply_at_100.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_Apply_at_100.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_Apply_at_100.Location = New System.Drawing.Point(2, 118)
+		Me.lbl_Apply_at_100.MKBoundControl1 = Nothing
+		Me.lbl_Apply_at_100.MKBoundControl2 = Nothing
+		Me.lbl_Apply_at_100.MKBoundControl3 = Nothing
+		Me.lbl_Apply_at_100.MKBoundControl4 = Nothing
+		Me.lbl_Apply_at_100.MKBoundControl5 = Nothing
+		Me.lbl_Apply_at_100.Name = "lbl_Apply_at_100"
+		Me.lbl_Apply_at_100.Size = New System.Drawing.Size(207, 20)
+		ToolTipTitleItem16.Text = "Apply at match score = 100"
+		ToolTipItem9.LeftIndent = 6
+		ToolTipItem9.Text = "If the match score is 100, automatically tick the ""apply"" checkbox"
+		SuperToolTip9.Items.Add(ToolTipTitleItem16)
+		SuperToolTip9.Items.Add(ToolTipItem9)
+		Me.lbl_Apply_at_100.SuperTip = SuperToolTip9
+		Me.lbl_Apply_at_100.TabIndex = 19
+		Me.lbl_Apply_at_100.Text = "Apply at match score = 100:"
+		'
+		'chb_Apply_at_100
+		'
+		Me.chb_Apply_at_100.Cursor = System.Windows.Forms.Cursors.Hand
+		Me.chb_Apply_at_100.EditValue = True
+		Me.chb_Apply_at_100.Location = New System.Drawing.Point(212, 119)
+		Me.chb_Apply_at_100.MKBoundLabel = Nothing
+		Me.chb_Apply_at_100.MKEditValue_Compare = Nothing
+		Me.chb_Apply_at_100.Name = "chb_Apply_at_100"
+		Me.chb_Apply_at_100.Properties.Caption = ""
+		Me.chb_Apply_at_100.Size = New System.Drawing.Size(20, 19)
+		ToolTipTitleItem15.Text = "Apply at match score = 100"
+		ToolTipItem8.LeftIndent = 6
+		ToolTipItem8.Text = "If the match score is 100, automatically tick the ""apply"" checkbox"
+		SuperToolTip8.Items.Add(ToolTipTitleItem15)
+		SuperToolTip8.Items.Add(ToolTipItem8)
+		Me.chb_Apply_at_100.SuperTip = SuperToolTip8
+		Me.chb_Apply_at_100.TabIndex = 20
+		'
 		'frm_Moby_Auto_Link_Options
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.ClientSize = New System.Drawing.Size(430, 225)
+		Me.ClientSize = New System.Drawing.Size(430, 355)
 		Me.Controls.Add(Me.pnl_Bottom)
 		Me.Controls.Add(Me.pnl_Main)
 		Me.Controls.Add(Me.lbl_Explanation)
@@ -732,6 +886,8 @@ Partial Class frm_Moby_Auto_Link_Options
 		CType(Me.chb_Remove_Characters.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.pnl_Main, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.pnl_Main.ResumeLayout(False)
+		CType(Me.chb_Redectect_Deprecated.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.chb_Ignore_Deprecated.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.spn_Minimum_Match_Score.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.chb_Strip_Extensions.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.pnl_Bottom, System.ComponentModel.ISupportInitialize).EndInit()
@@ -747,6 +903,7 @@ Partial Class frm_Moby_Auto_Link_Options
 		CType(Me.rpi_Moby_Platforms_gv1, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.grd_Moby_Releases, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.gv_Moby_Releases, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.chb_Apply_at_100.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.ResumeLayout(False)
 
 	End Sub
@@ -789,4 +946,10 @@ Partial Class frm_Moby_Auto_Link_Options
 	Friend WithEvents chb_Strip_Extensions As MKNetDXLib.ctl_MKDXCheckEdit
 	Friend WithEvents lbl_Strip_Extensions As MKNetDXLib.ctl_MKDXLabel
 	Friend WithEvents spn_Minimum_Match_Score As MKNetDXLib.ctl_MKDXSpinEdit
+	Friend WithEvents chb_Redectect_Deprecated As MKNetDXLib.ctl_MKDXCheckEdit
+	Friend WithEvents chb_Ignore_Deprecated As MKNetDXLib.ctl_MKDXCheckEdit
+	Friend WithEvents lbl_Rescan_Deprecated As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents lbl_Ignore_Deprecated As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents chb_Apply_at_100 As MKNetDXLib.ctl_MKDXCheckEdit
+	Friend WithEvents lbl_Apply_at_100 As MKNetDXLib.ctl_MKDXLabel
 End Class

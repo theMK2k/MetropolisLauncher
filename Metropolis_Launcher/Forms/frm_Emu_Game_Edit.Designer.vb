@@ -23,9 +23,6 @@ Partial Class frm_Emu_Game_Edit
 	<System.Diagnostics.DebuggerStepThrough()> _
 	Private Sub InitializeComponent()
 		Me.components = New System.ComponentModel.Container()
-		Dim SuperToolTip44 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem44 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem44 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip45 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem45 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem45 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
@@ -38,62 +35,62 @@ Partial Class frm_Emu_Game_Edit
 		Dim SuperToolTip3 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem3 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem3 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip4 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem4 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem4 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_Emu_Game_Edit))
-		Dim SerializableAppearanceObject1 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject2 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject3 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject4 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SuperToolTip61 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem61 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem61 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SerializableAppearanceObject5 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject6 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject7 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject8 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SuperToolTip46 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem46 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem46 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip6 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem6 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem6 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip62 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem62 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem62 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip63 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem63 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem63 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip64 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem64 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem64 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip65 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem65 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem65 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip66 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem66 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem66 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip67 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem67 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem67 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip68 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem68 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem68 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip69 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem69 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem69 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip70 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem70 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem70 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip71 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem71 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem71 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip72 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem72 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem72 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip73 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem73 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem73 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip74 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem74 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem74 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip75 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem75 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem75 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip7 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem7 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem7 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip47 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem47 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem47 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip48 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem48 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem48 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip49 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem49 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem49 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip50 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem50 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem50 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip51 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem51 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem51 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip52 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem52 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem52 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip53 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem53 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem53 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip54 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem54 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem54 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip55 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem55 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem55 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip56 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem56 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem56 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip57 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem57 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem57 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip58 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem58 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem58 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip59 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem59 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem59 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip60 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem60 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem60 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
@@ -103,9 +100,9 @@ Partial Class frm_Emu_Game_Edit
 		Dim SuperToolTip23 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem23 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem23 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip43 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem43 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem43 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip24 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem24 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem24 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip25 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem25 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem25 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
@@ -154,12 +151,15 @@ Partial Class frm_Emu_Game_Edit
 		Dim SuperToolTip40 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem40 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem40 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip24 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem24 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem24 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip41 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem41 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem41 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip42 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem42 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem42 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip43 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem43 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem43 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Me.Ctl_MKDXLabel1 = New MKNetDXLib.ctl_MKDXLabel()
 		Me.Ctl_MKDXLabel2 = New MKNetDXLib.ctl_MKDXLabel()
 		Me.Ctl_MKDXLabel3 = New MKNetDXLib.ctl_MKDXLabel()
@@ -333,6 +333,11 @@ Partial Class frm_Emu_Game_Edit
 		Me.chb_Trainer = New MKNetDXLib.ctl_MKDXCheckEdit()
 		Me.chb_Hack = New MKNetDXLib.ctl_MKDXCheckEdit()
 		Me.chb_Bios = New MKNetDXLib.ctl_MKDXCheckEdit()
+		Me.tpg_Regions_New = New DevExpress.XtraTab.XtraTabPage()
+		Me.tv_Regions = New MKNetDXLib.ctl_MKDXTreelist()
+		Me.coltmp_Apply = New DevExpress.XtraTreeList.Columns.TreeListColumn()
+		Me.colRegion = New DevExpress.XtraTreeList.Columns.TreeListColumn()
+		Me.BS_Moby_Regions = New System.Windows.Forms.BindingSource(Me.components)
 		Me.splt_Right = New MKNetDXLib.ctl_MKDXSplitter()
 		Me.tcl_Descriptions = New MKNetDXLib.ctl_MKDXTabControl()
 		Me.tpg_Description = New DevExpress.XtraTab.XtraTabPage()
@@ -341,6 +346,8 @@ Partial Class frm_Emu_Game_Edit
 		Me.txb_Special_Info = New MKNetDXLib.ctl_MKDXMemoEdit()
 		Me.tpg_DOSBox_Config = New DevExpress.XtraTab.XtraTabPage()
 		Me.ucr_DOSBox_Config = New Metropolis_Launcher.ucr_DOSBox_Config()
+		Me.tpg_ScummVM_Config = New DevExpress.XtraTab.XtraTabPage()
+		Me.ucr_ScummVM_Config = New Metropolis_Launcher.ucr_ScummVM_Config()
 		Me.tpg_DOSBox_Files_and_Directories = New DevExpress.XtraTab.XtraTabPage()
 		Me.pnl_DOSBox_Files_and_Folders = New MKNetDXLib.ctl_MKDXPanel()
 		Me.Ctl_MKDXSplitPanel1 = New MKNetDXLib.ctl_MKDXSplitPanel()
@@ -532,6 +539,9 @@ Partial Class frm_Emu_Game_Edit
 		CType(Me.chb_Trainer.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.chb_Hack.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.chb_Bios.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.tpg_Regions_New.SuspendLayout()
+		CType(Me.tv_Regions, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BS_Moby_Regions, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.tcl_Descriptions, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.tcl_Descriptions.SuspendLayout()
 		Me.tpg_Description.SuspendLayout()
@@ -539,6 +549,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.tpg_Special_Info.SuspendLayout()
 		CType(Me.txb_Special_Info.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.tpg_DOSBox_Config.SuspendLayout()
+		Me.tpg_ScummVM_Config.SuspendLayout()
 		Me.tpg_DOSBox_Files_and_Directories.SuspendLayout()
 		CType(Me.pnl_DOSBox_Files_and_Folders, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.pnl_DOSBox_Files_and_Folders.SuspendLayout()
@@ -627,13 +638,13 @@ Partial Class frm_Emu_Game_Edit
 		Me.txb_Name.MKEditValue_Compare = Nothing
 		Me.txb_Name.Name = "txb_Name"
 		Me.txb_Name.Size = New System.Drawing.Size(432, 20)
-		ToolTipTitleItem44.Text = "Name"
-		ToolTipItem44.LeftIndent = 6
-		ToolTipItem44.Text = "This is the name of the game, avoid putting prefixes like ""The"" or ""Disney's"" in " &
+		ToolTipTitleItem45.Text = "Name"
+		ToolTipItem45.LeftIndent = 6
+		ToolTipItem45.Text = "This is the name of the game, avoid putting prefixes like ""The"" or ""Disney's"" in " &
 		"here, they belong in the Prefix field."
-		SuperToolTip44.Items.Add(ToolTipTitleItem44)
-		SuperToolTip44.Items.Add(ToolTipItem44)
-		Me.txb_Name.SuperTip = SuperToolTip44
+		SuperToolTip45.Items.Add(ToolTipTitleItem45)
+		SuperToolTip45.Items.Add(ToolTipItem45)
+		Me.txb_Name.SuperTip = SuperToolTip45
 		Me.txb_Name.TabIndex = 0
 		'
 		'txb_Prefix
@@ -645,13 +656,13 @@ Partial Class frm_Emu_Game_Edit
 		Me.txb_Prefix.MKEditValue_Compare = Nothing
 		Me.txb_Prefix.Name = "txb_Prefix"
 		Me.txb_Prefix.Size = New System.Drawing.Size(432, 20)
-		ToolTipTitleItem45.Text = "Prefix"
-		ToolTipItem45.LeftIndent = 6
-		ToolTipItem45.Text = "This is the prefix to the game's name. Put ""The"" or ""Disney's"" in here. The list " &
+		ToolTipTitleItem1.Text = "Prefix"
+		ToolTipItem1.LeftIndent = 6
+		ToolTipItem1.Text = "This is the prefix to the game's name. Put ""The"" or ""Disney's"" in here. The list " &
 		"of games is fetched sorted by the game names without their prefixes."
-		SuperToolTip45.Items.Add(ToolTipTitleItem45)
-		SuperToolTip45.Items.Add(ToolTipItem45)
-		Me.txb_Prefix.SuperTip = SuperToolTip45
+		SuperToolTip1.Items.Add(ToolTipTitleItem1)
+		SuperToolTip1.Items.Add(ToolTipItem1)
+		Me.txb_Prefix.SuperTip = SuperToolTip1
 		Me.txb_Prefix.TabIndex = 1
 		'
 		'txb_Notes
@@ -663,14 +674,14 @@ Partial Class frm_Emu_Game_Edit
 		Me.txb_Notes.MKEditValue_Compare = Nothing
 		Me.txb_Notes.Name = "txb_Notes"
 		Me.txb_Notes.Size = New System.Drawing.Size(432, 20)
-		ToolTipTitleItem1.Text = "Addition Info"
-		ToolTipItem1.LeftIndent = 6
-		ToolTipItem1.Text = "Keep this additional Info short, it will be added to the game's name in brackets," &
+		ToolTipTitleItem2.Text = "Addition Info"
+		ToolTipItem2.LeftIndent = 6
+		ToolTipItem2.Text = "Keep this additional Info short, it will be added to the game's name in brackets," &
 		" e.g.: ""Sonic the Hedgehog (Spin Dash Hack)"" where ""Spin Dash Hack"" is the addit" &
 		"ional info."
-		SuperToolTip1.Items.Add(ToolTipTitleItem1)
-		SuperToolTip1.Items.Add(ToolTipItem1)
-		Me.txb_Notes.SuperTip = SuperToolTip1
+		SuperToolTip2.Items.Add(ToolTipTitleItem2)
+		SuperToolTip2.Items.Add(ToolTipItem2)
+		Me.txb_Notes.SuperTip = SuperToolTip2
 		Me.txb_Notes.TabIndex = 2
 		'
 		'grd_Attributes
@@ -681,7 +692,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_Attributes.MainView = Me.gv_Attributes
 		Me.grd_Attributes.Name = "grd_Attributes"
 		Me.grd_Attributes.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_TechInfo})
-		Me.grd_Attributes.Size = New System.Drawing.Size(448, 392)
+		Me.grd_Attributes.Size = New System.Drawing.Size(448, 361)
 		Me.grd_Attributes.TabIndex = 1
 		Me.grd_Attributes.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Attributes})
 		'
@@ -780,7 +791,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.pnl_Left.Dock = System.Windows.Forms.DockStyle.Left
 		Me.pnl_Left.Location = New System.Drawing.Point(0, 0)
 		Me.pnl_Left.Name = "pnl_Left"
-		Me.pnl_Left.Size = New System.Drawing.Size(519, 661)
+		Me.pnl_Left.Size = New System.Drawing.Size(519, 630)
 		Me.pnl_Left.TabIndex = 3
 		'
 		'cmb_J2K_Config
@@ -801,12 +812,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.cmb_J2K_Config.Properties.ShowHeader = False
 		Me.cmb_J2K_Config.Properties.ValueMember = "id_Config"
 		Me.cmb_J2K_Config.Size = New System.Drawing.Size(432, 20)
-		ToolTipTitleItem2.Text = "J2K Preset"
-		ToolTipItem2.LeftIndent = 6
-		ToolTipItem2.Text = "Choose which preset you want to use for the J2K joystick to keyboard mapper."
-		SuperToolTip2.Items.Add(ToolTipTitleItem2)
-		SuperToolTip2.Items.Add(ToolTipItem2)
-		Me.cmb_J2K_Config.SuperTip = SuperToolTip2
+		ToolTipTitleItem3.Text = "J2K Preset"
+		ToolTipItem3.LeftIndent = 6
+		ToolTipItem3.Text = "Choose which preset you want to use for the J2K joystick to keyboard mapper."
+		SuperToolTip3.Items.Add(ToolTipTitleItem3)
+		SuperToolTip3.Items.Add(ToolTipItem3)
+		Me.cmb_J2K_Config.SuperTip = SuperToolTip3
 		Me.cmb_J2K_Config.TabIndex = 9
 		'
 		'BS_J2K
@@ -845,12 +856,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.lbl_J2KPreset.MKBoundControl5 = Nothing
 		Me.lbl_J2KPreset.Name = "lbl_J2KPreset"
 		Me.lbl_J2KPreset.Size = New System.Drawing.Size(76, 20)
-		ToolTipTitleItem3.Text = "J2K Preset"
-		ToolTipItem3.LeftIndent = 6
-		ToolTipItem3.Text = resources.GetString("ToolTipItem3.Text")
-		SuperToolTip3.Items.Add(ToolTipTitleItem3)
-		SuperToolTip3.Items.Add(ToolTipItem3)
-		Me.lbl_J2KPreset.SuperTip = SuperToolTip3
+		ToolTipTitleItem4.Text = "J2K Preset"
+		ToolTipItem4.LeftIndent = 6
+		ToolTipItem4.Text = resources.GetString("ToolTipItem4.Text")
+		SuperToolTip4.Items.Add(ToolTipTitleItem4)
+		SuperToolTip4.Items.Add(ToolTipItem4)
+		Me.lbl_J2KPreset.SuperTip = SuperToolTip4
 		Me.lbl_J2KPreset.TabIndex = 15
 		Me.lbl_J2KPreset.Text = "J2K Preset:"
 		'
@@ -862,7 +873,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.cmb_Default_Emulator.MKBoundLabel = Nothing
 		Me.cmb_Default_Emulator.MKEditValue_Compare = Nothing
 		Me.cmb_Default_Emulator.Name = "cmb_Default_Emulator"
-		Me.cmb_Default_Emulator.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject1, SerializableAppearanceObject2, SerializableAppearanceObject3, SerializableAppearanceObject4, "Remove the default emulator for this game or revert back to the globally defined " &
+		Me.cmb_Default_Emulator.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject5, SerializableAppearanceObject6, SerializableAppearanceObject7, SerializableAppearanceObject8, "Remove the default emulator for this game or revert back to the globally defined " &
 										"emulator for this platform", Nothing, Nothing, True)})
 		Me.cmb_Default_Emulator.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("id_Emulators", "id_Emulators", 84, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Displayname", "Displayname", 70, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Used", "Used", 34, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsGlobalDefault", "Is Global Default", 89, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near)})
 		Me.cmb_Default_Emulator.Properties.DataSource = Me.BS_DefaultEmu
@@ -872,12 +883,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.cmb_Default_Emulator.Properties.ShowHeader = False
 		Me.cmb_Default_Emulator.Properties.ValueMember = "id_Emulators"
 		Me.cmb_Default_Emulator.Size = New System.Drawing.Size(432, 20)
-		ToolTipTitleItem61.Text = "Default Emu"
-		ToolTipItem61.LeftIndent = 6
-		ToolTipItem61.Text = "You can choose a default emulator for this game here."
-		SuperToolTip61.Items.Add(ToolTipTitleItem61)
-		SuperToolTip61.Items.Add(ToolTipItem61)
-		Me.cmb_Default_Emulator.SuperTip = SuperToolTip61
+		ToolTipTitleItem46.Text = "Default Emu"
+		ToolTipItem46.LeftIndent = 6
+		ToolTipItem46.Text = "You can choose a default emulator for this game here."
+		SuperToolTip46.Items.Add(ToolTipTitleItem46)
+		SuperToolTip46.Items.Add(ToolTipItem46)
+		Me.cmb_Default_Emulator.SuperTip = SuperToolTip46
 		Me.cmb_Default_Emulator.TabIndex = 8
 		'
 		'BS_DefaultEmu
@@ -894,12 +905,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.txb_Year.Properties.Mask.EditMask = "(19|2\d)(\d\d|xx)"
 		Me.txb_Year.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
 		Me.txb_Year.Size = New System.Drawing.Size(64, 20)
-		ToolTipTitleItem46.Text = "Year"
-		ToolTipItem46.LeftIndent = 6
-		ToolTipItem46.Text = "Year of release"
-		SuperToolTip46.Items.Add(ToolTipTitleItem46)
-		SuperToolTip46.Items.Add(ToolTipItem46)
-		Me.txb_Year.SuperTip = SuperToolTip46
+		ToolTipTitleItem6.Text = "Year"
+		ToolTipItem6.LeftIndent = 6
+		ToolTipItem6.Text = "Year of release"
+		SuperToolTip6.Items.Add(ToolTipTitleItem6)
+		SuperToolTip6.Items.Add(ToolTipItem6)
+		Me.txb_Year.SuperTip = SuperToolTip6
 		Me.txb_Year.TabIndex = 5
 		'
 		'tcl_Attributes
@@ -910,7 +921,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.tcl_Attributes.Location = New System.Drawing.Point(4, 189)
 		Me.tcl_Attributes.Name = "tcl_Attributes"
 		Me.tcl_Attributes.SelectedTabPage = Me.tpg_Genres
-		Me.tcl_Attributes.Size = New System.Drawing.Size(515, 469)
+		Me.tcl_Attributes.Size = New System.Drawing.Size(515, 438)
 		Me.tcl_Attributes.TabIndex = 10
 		Me.tcl_Attributes.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.tpg_Genres, Me.tpg_Perspectives, Me.tpg_Visual_Presentation, Me.tpg_Gameplay, Me.tpg_Pacing, Me.tpg_Narrative_Theme_Topic, Me.tpg_Setting, Me.tpg_Sports_Themes, Me.tpg_Vehicular_Themes, Me.tpg_Educational_Categories, Me.tpg_Interface_Control, Me.tpg_DLC_Addon, Me.tpg_Special_Edition, Me.tpg_Other_Attributes})
 		'
@@ -918,13 +929,13 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.tpg_Genres.Controls.Add(Me.grd_Genres)
 		Me.tpg_Genres.Name = "tpg_Genres"
-		Me.tpg_Genres.Size = New System.Drawing.Size(509, 441)
-		ToolTipTitleItem6.Text = "Genres"
-		ToolTipItem6.LeftIndent = 6
-		ToolTipItem6.Text = "Select the main genres of the game."
-		SuperToolTip6.Items.Add(ToolTipTitleItem6)
-		SuperToolTip6.Items.Add(ToolTipItem6)
-		Me.tpg_Genres.SuperTip = SuperToolTip6
+		Me.tpg_Genres.Size = New System.Drawing.Size(509, 410)
+		ToolTipTitleItem7.Text = "Genres"
+		ToolTipItem7.LeftIndent = 6
+		ToolTipItem7.Text = "Select the main genres of the game."
+		SuperToolTip7.Items.Add(ToolTipTitleItem7)
+		SuperToolTip7.Items.Add(ToolTipItem7)
+		Me.tpg_Genres.SuperTip = SuperToolTip7
 		Me.tpg_Genres.Text = "Genres"
 		'
 		'grd_Genres
@@ -935,7 +946,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_Genres.MainView = Me.gv_Genres
 		Me.grd_Genres.Name = "grd_Genres"
 		Me.grd_Genres.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Genres})
-		Me.grd_Genres.Size = New System.Drawing.Size(509, 441)
+		Me.grd_Genres.Size = New System.Drawing.Size(509, 410)
 		Me.grd_Genres.TabIndex = 0
 		Me.grd_Genres.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Genres})
 		'
@@ -977,13 +988,13 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.tpg_Perspectives.Controls.Add(Me.grd_Perspectives)
 		Me.tpg_Perspectives.Name = "tpg_Perspectives"
-		Me.tpg_Perspectives.Size = New System.Drawing.Size(509, 441)
-		ToolTipTitleItem62.Text = "Perspectives"
-		ToolTipItem62.LeftIndent = 6
-		ToolTipItem62.Text = "Select the perspectives the game supports."
-		SuperToolTip62.Items.Add(ToolTipTitleItem62)
-		SuperToolTip62.Items.Add(ToolTipItem62)
-		Me.tpg_Perspectives.SuperTip = SuperToolTip62
+		Me.tpg_Perspectives.Size = New System.Drawing.Size(509, 410)
+		ToolTipTitleItem47.Text = "Perspectives"
+		ToolTipItem47.LeftIndent = 6
+		ToolTipItem47.Text = "Select the perspectives the game supports."
+		SuperToolTip47.Items.Add(ToolTipTitleItem47)
+		SuperToolTip47.Items.Add(ToolTipItem47)
+		Me.tpg_Perspectives.SuperTip = SuperToolTip47
 		Me.tpg_Perspectives.Text = "Perspectives"
 		'
 		'grd_Perspectives
@@ -994,7 +1005,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_Perspectives.MainView = Me.gv_Perspectives
 		Me.grd_Perspectives.Name = "grd_Perspectives"
 		Me.grd_Perspectives.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Perspectives})
-		Me.grd_Perspectives.Size = New System.Drawing.Size(509, 441)
+		Me.grd_Perspectives.Size = New System.Drawing.Size(509, 410)
 		Me.grd_Perspectives.TabIndex = 1
 		Me.grd_Perspectives.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Perspectives})
 		'
@@ -1042,13 +1053,13 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.tpg_Visual_Presentation.Controls.Add(Me.grd_Visual_Presentation)
 		Me.tpg_Visual_Presentation.Name = "tpg_Visual_Presentation"
-		Me.tpg_Visual_Presentation.Size = New System.Drawing.Size(509, 441)
-		ToolTipTitleItem63.Text = "Visual Presenation"
-		ToolTipItem63.LeftIndent = 6
-		ToolTipItem63.Text = "Select all visual presentations the game supports."
-		SuperToolTip63.Items.Add(ToolTipTitleItem63)
-		SuperToolTip63.Items.Add(ToolTipItem63)
-		Me.tpg_Visual_Presentation.SuperTip = SuperToolTip63
+		Me.tpg_Visual_Presentation.Size = New System.Drawing.Size(509, 410)
+		ToolTipTitleItem48.Text = "Visual Presenation"
+		ToolTipItem48.LeftIndent = 6
+		ToolTipItem48.Text = "Select all visual presentations the game supports."
+		SuperToolTip48.Items.Add(ToolTipTitleItem48)
+		SuperToolTip48.Items.Add(ToolTipItem48)
+		Me.tpg_Visual_Presentation.SuperTip = SuperToolTip48
 		Me.tpg_Visual_Presentation.Text = "Visual Presentation"
 		'
 		'grd_Visual_Presentation
@@ -1059,7 +1070,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_Visual_Presentation.MainView = Me.gv_Visual_Presentation
 		Me.grd_Visual_Presentation.Name = "grd_Visual_Presentation"
 		Me.grd_Visual_Presentation.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Visual_Presentation})
-		Me.grd_Visual_Presentation.Size = New System.Drawing.Size(509, 441)
+		Me.grd_Visual_Presentation.Size = New System.Drawing.Size(509, 410)
 		Me.grd_Visual_Presentation.TabIndex = 6
 		Me.grd_Visual_Presentation.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Visual_Presentation})
 		'
@@ -1107,13 +1118,13 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.tpg_Gameplay.Controls.Add(Me.grd_Gameplay)
 		Me.tpg_Gameplay.Name = "tpg_Gameplay"
-		Me.tpg_Gameplay.Size = New System.Drawing.Size(509, 441)
-		ToolTipTitleItem64.Text = "Gameplay"
-		ToolTipItem64.LeftIndent = 6
-		ToolTipItem64.Text = "Select all gameplay elements the game supports."
-		SuperToolTip64.Items.Add(ToolTipTitleItem64)
-		SuperToolTip64.Items.Add(ToolTipItem64)
-		Me.tpg_Gameplay.SuperTip = SuperToolTip64
+		Me.tpg_Gameplay.Size = New System.Drawing.Size(509, 410)
+		ToolTipTitleItem49.Text = "Gameplay"
+		ToolTipItem49.LeftIndent = 6
+		ToolTipItem49.Text = "Select all gameplay elements the game supports."
+		SuperToolTip49.Items.Add(ToolTipTitleItem49)
+		SuperToolTip49.Items.Add(ToolTipItem49)
+		Me.tpg_Gameplay.SuperTip = SuperToolTip49
 		Me.tpg_Gameplay.Text = "Gameplay"
 		'
 		'grd_Gameplay
@@ -1124,7 +1135,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_Gameplay.MainView = Me.gv_Gameplay
 		Me.grd_Gameplay.Name = "grd_Gameplay"
 		Me.grd_Gameplay.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Gameplay})
-		Me.grd_Gameplay.Size = New System.Drawing.Size(509, 441)
+		Me.grd_Gameplay.Size = New System.Drawing.Size(509, 410)
 		Me.grd_Gameplay.TabIndex = 8
 		Me.grd_Gameplay.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Gameplay})
 		'
@@ -1172,13 +1183,13 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.tpg_Pacing.Controls.Add(Me.grd_Pacing)
 		Me.tpg_Pacing.Name = "tpg_Pacing"
-		Me.tpg_Pacing.Size = New System.Drawing.Size(509, 441)
-		ToolTipTitleItem65.Text = "Pacing"
-		ToolTipItem65.LeftIndent = 6
-		ToolTipItem65.Text = "Select the pacing of the game."
-		SuperToolTip65.Items.Add(ToolTipTitleItem65)
-		SuperToolTip65.Items.Add(ToolTipItem65)
-		Me.tpg_Pacing.SuperTip = SuperToolTip65
+		Me.tpg_Pacing.Size = New System.Drawing.Size(509, 410)
+		ToolTipTitleItem50.Text = "Pacing"
+		ToolTipItem50.LeftIndent = 6
+		ToolTipItem50.Text = "Select the pacing of the game."
+		SuperToolTip50.Items.Add(ToolTipTitleItem50)
+		SuperToolTip50.Items.Add(ToolTipItem50)
+		Me.tpg_Pacing.SuperTip = SuperToolTip50
 		Me.tpg_Pacing.Text = "Pacing"
 		'
 		'grd_Pacing
@@ -1189,7 +1200,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_Pacing.MainView = Me.gv_Pacing
 		Me.grd_Pacing.Name = "grd_Pacing"
 		Me.grd_Pacing.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Pacing})
-		Me.grd_Pacing.Size = New System.Drawing.Size(509, 441)
+		Me.grd_Pacing.Size = New System.Drawing.Size(509, 410)
 		Me.grd_Pacing.TabIndex = 7
 		Me.grd_Pacing.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Pacing})
 		'
@@ -1237,13 +1248,13 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.tpg_Narrative_Theme_Topic.Controls.Add(Me.grd_Narrative_Theme_Topic)
 		Me.tpg_Narrative_Theme_Topic.Name = "tpg_Narrative_Theme_Topic"
-		Me.tpg_Narrative_Theme_Topic.Size = New System.Drawing.Size(509, 441)
-		ToolTipTitleItem66.Text = "Narrative Theme / Topic"
-		ToolTipItem66.LeftIndent = 6
-		ToolTipItem66.Text = "Select all the narritive themes / topics of the game."
-		SuperToolTip66.Items.Add(ToolTipTitleItem66)
-		SuperToolTip66.Items.Add(ToolTipItem66)
-		Me.tpg_Narrative_Theme_Topic.SuperTip = SuperToolTip66
+		Me.tpg_Narrative_Theme_Topic.Size = New System.Drawing.Size(509, 410)
+		ToolTipTitleItem51.Text = "Narrative Theme / Topic"
+		ToolTipItem51.LeftIndent = 6
+		ToolTipItem51.Text = "Select all the narritive themes / topics of the game."
+		SuperToolTip51.Items.Add(ToolTipTitleItem51)
+		SuperToolTip51.Items.Add(ToolTipItem51)
+		Me.tpg_Narrative_Theme_Topic.SuperTip = SuperToolTip51
 		Me.tpg_Narrative_Theme_Topic.Text = "Narrative Theme / Topic"
 		'
 		'grd_Narrative_Theme_Topic
@@ -1254,7 +1265,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_Narrative_Theme_Topic.MainView = Me.gv_Narrative_Theme_Topic
 		Me.grd_Narrative_Theme_Topic.Name = "grd_Narrative_Theme_Topic"
 		Me.grd_Narrative_Theme_Topic.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Narrative_Theme_Topic})
-		Me.grd_Narrative_Theme_Topic.Size = New System.Drawing.Size(509, 441)
+		Me.grd_Narrative_Theme_Topic.Size = New System.Drawing.Size(509, 410)
 		Me.grd_Narrative_Theme_Topic.TabIndex = 12
 		Me.grd_Narrative_Theme_Topic.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Narrative_Theme_Topic})
 		'
@@ -1302,13 +1313,13 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.tpg_Setting.Controls.Add(Me.grd_Setting)
 		Me.tpg_Setting.Name = "tpg_Setting"
-		Me.tpg_Setting.Size = New System.Drawing.Size(509, 441)
-		ToolTipTitleItem67.Text = "Setting"
-		ToolTipItem67.LeftIndent = 6
-		ToolTipItem67.Text = "Select the settings of the game."
-		SuperToolTip67.Items.Add(ToolTipTitleItem67)
-		SuperToolTip67.Items.Add(ToolTipItem67)
-		Me.tpg_Setting.SuperTip = SuperToolTip67
+		Me.tpg_Setting.Size = New System.Drawing.Size(509, 410)
+		ToolTipTitleItem52.Text = "Setting"
+		ToolTipItem52.LeftIndent = 6
+		ToolTipItem52.Text = "Select the settings of the game."
+		SuperToolTip52.Items.Add(ToolTipTitleItem52)
+		SuperToolTip52.Items.Add(ToolTipItem52)
+		Me.tpg_Setting.SuperTip = SuperToolTip52
 		Me.tpg_Setting.Text = "Setting"
 		'
 		'grd_Setting
@@ -1319,7 +1330,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_Setting.MainView = Me.gv_Setting
 		Me.grd_Setting.Name = "grd_Setting"
 		Me.grd_Setting.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Setting})
-		Me.grd_Setting.Size = New System.Drawing.Size(509, 441)
+		Me.grd_Setting.Size = New System.Drawing.Size(509, 410)
 		Me.grd_Setting.TabIndex = 11
 		Me.grd_Setting.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Setting})
 		'
@@ -1367,13 +1378,13 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.tpg_Sports_Themes.Controls.Add(Me.grd_Sports_Themes)
 		Me.tpg_Sports_Themes.Name = "tpg_Sports_Themes"
-		Me.tpg_Sports_Themes.Size = New System.Drawing.Size(509, 441)
-		ToolTipTitleItem68.Text = "Sports Themes"
-		ToolTipItem68.LeftIndent = 6
-		ToolTipItem68.Text = "Select sports themes if applicable."
-		SuperToolTip68.Items.Add(ToolTipTitleItem68)
-		SuperToolTip68.Items.Add(ToolTipItem68)
-		Me.tpg_Sports_Themes.SuperTip = SuperToolTip68
+		Me.tpg_Sports_Themes.Size = New System.Drawing.Size(509, 410)
+		ToolTipTitleItem53.Text = "Sports Themes"
+		ToolTipItem53.LeftIndent = 6
+		ToolTipItem53.Text = "Select sports themes if applicable."
+		SuperToolTip53.Items.Add(ToolTipTitleItem53)
+		SuperToolTip53.Items.Add(ToolTipItem53)
+		Me.tpg_Sports_Themes.SuperTip = SuperToolTip53
 		Me.tpg_Sports_Themes.Text = "Sports Themes"
 		'
 		'grd_Sports_Themes
@@ -1384,7 +1395,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_Sports_Themes.MainView = Me.gv_Sports_Themes
 		Me.grd_Sports_Themes.Name = "grd_Sports_Themes"
 		Me.grd_Sports_Themes.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Sports_Themes})
-		Me.grd_Sports_Themes.Size = New System.Drawing.Size(509, 441)
+		Me.grd_Sports_Themes.Size = New System.Drawing.Size(509, 410)
 		Me.grd_Sports_Themes.TabIndex = 3
 		Me.grd_Sports_Themes.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Sports_Themes})
 		'
@@ -1432,13 +1443,13 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.tpg_Vehicular_Themes.Controls.Add(Me.grd_Vehicular_Themes)
 		Me.tpg_Vehicular_Themes.Name = "tpg_Vehicular_Themes"
-		Me.tpg_Vehicular_Themes.Size = New System.Drawing.Size(509, 441)
-		ToolTipTitleItem69.Text = "Vehicular Themes"
-		ToolTipItem69.LeftIndent = 6
-		ToolTipItem69.Text = "Select vehicular themes if applicable."
-		SuperToolTip69.Items.Add(ToolTipTitleItem69)
-		SuperToolTip69.Items.Add(ToolTipItem69)
-		Me.tpg_Vehicular_Themes.SuperTip = SuperToolTip69
+		Me.tpg_Vehicular_Themes.Size = New System.Drawing.Size(509, 410)
+		ToolTipTitleItem54.Text = "Vehicular Themes"
+		ToolTipItem54.LeftIndent = 6
+		ToolTipItem54.Text = "Select vehicular themes if applicable."
+		SuperToolTip54.Items.Add(ToolTipTitleItem54)
+		SuperToolTip54.Items.Add(ToolTipItem54)
+		Me.tpg_Vehicular_Themes.SuperTip = SuperToolTip54
 		Me.tpg_Vehicular_Themes.Text = "Vehicular Themes"
 		'
 		'grd_Vehicular_Themes
@@ -1449,7 +1460,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_Vehicular_Themes.MainView = Me.gv_Vehicular_Themes
 		Me.grd_Vehicular_Themes.Name = "grd_Vehicular_Themes"
 		Me.grd_Vehicular_Themes.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Vehicular_Themes})
-		Me.grd_Vehicular_Themes.Size = New System.Drawing.Size(509, 441)
+		Me.grd_Vehicular_Themes.Size = New System.Drawing.Size(509, 410)
 		Me.grd_Vehicular_Themes.TabIndex = 10
 		Me.grd_Vehicular_Themes.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Vehicular_Themes})
 		'
@@ -1497,13 +1508,13 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.tpg_Educational_Categories.Controls.Add(Me.grd_Educational_Categories)
 		Me.tpg_Educational_Categories.Name = "tpg_Educational_Categories"
-		Me.tpg_Educational_Categories.Size = New System.Drawing.Size(509, 441)
-		ToolTipTitleItem70.Text = "Educational Categories"
-		ToolTipItem70.LeftIndent = 6
-		ToolTipItem70.Text = "Select educational categories if applicable."
-		SuperToolTip70.Items.Add(ToolTipTitleItem70)
-		SuperToolTip70.Items.Add(ToolTipItem70)
-		Me.tpg_Educational_Categories.SuperTip = SuperToolTip70
+		Me.tpg_Educational_Categories.Size = New System.Drawing.Size(509, 410)
+		ToolTipTitleItem55.Text = "Educational Categories"
+		ToolTipItem55.LeftIndent = 6
+		ToolTipItem55.Text = "Select educational categories if applicable."
+		SuperToolTip55.Items.Add(ToolTipTitleItem55)
+		SuperToolTip55.Items.Add(ToolTipItem55)
+		Me.tpg_Educational_Categories.SuperTip = SuperToolTip55
 		Me.tpg_Educational_Categories.Text = "Educational Categories"
 		'
 		'grd_Educational_Categories
@@ -1514,7 +1525,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_Educational_Categories.MainView = Me.gv_Educational_Categories
 		Me.grd_Educational_Categories.Name = "grd_Educational_Categories"
 		Me.grd_Educational_Categories.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Educational_Categories})
-		Me.grd_Educational_Categories.Size = New System.Drawing.Size(509, 441)
+		Me.grd_Educational_Categories.Size = New System.Drawing.Size(509, 410)
 		Me.grd_Educational_Categories.TabIndex = 4
 		Me.grd_Educational_Categories.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Educational_Categories})
 		'
@@ -1562,13 +1573,13 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.tpg_Interface_Control.Controls.Add(Me.grd_Interface_Control)
 		Me.tpg_Interface_Control.Name = "tpg_Interface_Control"
-		Me.tpg_Interface_Control.Size = New System.Drawing.Size(509, 441)
-		ToolTipTitleItem71.Text = "Interface / Control"
-		ToolTipItem71.LeftIndent = 6
-		ToolTipItem71.Text = "Select all the interface / control options of the game."
-		SuperToolTip71.Items.Add(ToolTipTitleItem71)
-		SuperToolTip71.Items.Add(ToolTipItem71)
-		Me.tpg_Interface_Control.SuperTip = SuperToolTip71
+		Me.tpg_Interface_Control.Size = New System.Drawing.Size(509, 410)
+		ToolTipTitleItem56.Text = "Interface / Control"
+		ToolTipItem56.LeftIndent = 6
+		ToolTipItem56.Text = "Select all the interface / control options of the game."
+		SuperToolTip56.Items.Add(ToolTipTitleItem56)
+		SuperToolTip56.Items.Add(ToolTipItem56)
+		Me.tpg_Interface_Control.SuperTip = SuperToolTip56
 		Me.tpg_Interface_Control.Text = "Interface / Control"
 		'
 		'grd_Interface_Control
@@ -1579,7 +1590,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_Interface_Control.MainView = Me.gv_Interface_Control
 		Me.grd_Interface_Control.Name = "grd_Interface_Control"
 		Me.grd_Interface_Control.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Interface_Control})
-		Me.grd_Interface_Control.Size = New System.Drawing.Size(509, 441)
+		Me.grd_Interface_Control.Size = New System.Drawing.Size(509, 410)
 		Me.grd_Interface_Control.TabIndex = 9
 		Me.grd_Interface_Control.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Interface_Control})
 		'
@@ -1627,13 +1638,13 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.tpg_DLC_Addon.Controls.Add(Me.grd_DLC_Addon)
 		Me.tpg_DLC_Addon.Name = "tpg_DLC_Addon"
-		Me.tpg_DLC_Addon.Size = New System.Drawing.Size(509, 441)
-		ToolTipTitleItem72.Text = "DLC / Add-on"
-		ToolTipItem72.LeftIndent = 6
-		ToolTipItem72.Text = "Select DLC / Add-on options if applicable."
-		SuperToolTip72.Items.Add(ToolTipTitleItem72)
-		SuperToolTip72.Items.Add(ToolTipItem72)
-		Me.tpg_DLC_Addon.SuperTip = SuperToolTip72
+		Me.tpg_DLC_Addon.Size = New System.Drawing.Size(509, 410)
+		ToolTipTitleItem57.Text = "DLC / Add-on"
+		ToolTipItem57.LeftIndent = 6
+		ToolTipItem57.Text = "Select DLC / Add-on options if applicable."
+		SuperToolTip57.Items.Add(ToolTipTitleItem57)
+		SuperToolTip57.Items.Add(ToolTipItem57)
+		Me.tpg_DLC_Addon.SuperTip = SuperToolTip57
 		Me.tpg_DLC_Addon.Text = "DLC / Add-on"
 		'
 		'grd_DLC_Addon
@@ -1644,7 +1655,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_DLC_Addon.MainView = Me.gv_DLC_Addon
 		Me.grd_DLC_Addon.Name = "grd_DLC_Addon"
 		Me.grd_DLC_Addon.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_DLC_Addon})
-		Me.grd_DLC_Addon.Size = New System.Drawing.Size(509, 441)
+		Me.grd_DLC_Addon.Size = New System.Drawing.Size(509, 410)
 		Me.grd_DLC_Addon.TabIndex = 13
 		Me.grd_DLC_Addon.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_DLC_Addon})
 		'
@@ -1692,13 +1703,13 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.tpg_Special_Edition.Controls.Add(Me.grd_Special_Edition)
 		Me.tpg_Special_Edition.Name = "tpg_Special_Edition"
-		Me.tpg_Special_Edition.Size = New System.Drawing.Size(509, 441)
-		ToolTipTitleItem73.Text = "Special Edition"
-		ToolTipItem73.LeftIndent = 6
-		ToolTipItem73.Text = "Select special edition options if applicable."
-		SuperToolTip73.Items.Add(ToolTipTitleItem73)
-		SuperToolTip73.Items.Add(ToolTipItem73)
-		Me.tpg_Special_Edition.SuperTip = SuperToolTip73
+		Me.tpg_Special_Edition.Size = New System.Drawing.Size(509, 410)
+		ToolTipTitleItem58.Text = "Special Edition"
+		ToolTipItem58.LeftIndent = 6
+		ToolTipItem58.Text = "Select special edition options if applicable."
+		SuperToolTip58.Items.Add(ToolTipTitleItem58)
+		SuperToolTip58.Items.Add(ToolTipItem58)
+		Me.tpg_Special_Edition.SuperTip = SuperToolTip58
 		Me.tpg_Special_Edition.Text = "Special Edition"
 		'
 		'grd_Special_Edition
@@ -1709,7 +1720,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_Special_Edition.MainView = Me.gv_Special_Edition
 		Me.grd_Special_Edition.Name = "grd_Special_Edition"
 		Me.grd_Special_Edition.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Special_Edition})
-		Me.grd_Special_Edition.Size = New System.Drawing.Size(509, 441)
+		Me.grd_Special_Edition.Size = New System.Drawing.Size(509, 410)
 		Me.grd_Special_Edition.TabIndex = 14
 		Me.grd_Special_Edition.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Special_Edition})
 		'
@@ -1757,13 +1768,13 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.tpg_Other_Attributes.Controls.Add(Me.grd_Other_Attributes)
 		Me.tpg_Other_Attributes.Name = "tpg_Other_Attributes"
-		Me.tpg_Other_Attributes.Size = New System.Drawing.Size(509, 441)
-		ToolTipTitleItem74.Text = "Other Attributes"
-		ToolTipItem74.LeftIndent = 6
-		ToolTipItem74.Text = "Select other attributes if applicable."
-		SuperToolTip74.Items.Add(ToolTipTitleItem74)
-		SuperToolTip74.Items.Add(ToolTipItem74)
-		Me.tpg_Other_Attributes.SuperTip = SuperToolTip74
+		Me.tpg_Other_Attributes.Size = New System.Drawing.Size(509, 410)
+		ToolTipTitleItem59.Text = "Other Attributes"
+		ToolTipItem59.LeftIndent = 6
+		ToolTipItem59.Text = "Select other attributes if applicable."
+		SuperToolTip59.Items.Add(ToolTipTitleItem59)
+		SuperToolTip59.Items.Add(ToolTipItem59)
+		Me.tpg_Other_Attributes.SuperTip = SuperToolTip59
 		Me.tpg_Other_Attributes.Text = "Other Attributes"
 		'
 		'grd_Other_Attributes
@@ -1774,7 +1785,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_Other_Attributes.MainView = Me.gv_Other_Attributes
 		Me.grd_Other_Attributes.Name = "grd_Other_Attributes"
 		Me.grd_Other_Attributes.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Other_Attributes})
-		Me.grd_Other_Attributes.Size = New System.Drawing.Size(509, 441)
+		Me.grd_Other_Attributes.Size = New System.Drawing.Size(509, 410)
 		Me.grd_Other_Attributes.TabIndex = 5
 		Me.grd_Other_Attributes.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Other_Attributes})
 		'
@@ -1855,12 +1866,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.txb_Alt.MKEditValue_Compare = Nothing
 		Me.txb_Alt.Name = "txb_Alt"
 		Me.txb_Alt.Size = New System.Drawing.Size(64, 20)
-		ToolTipTitleItem75.Text = "Alt"
-		ToolTipItem75.LeftIndent = 6
-		ToolTipItem75.Text = "Alternative Dump information"
-		SuperToolTip75.Items.Add(ToolTipTitleItem75)
-		SuperToolTip75.Items.Add(ToolTipItem75)
-		Me.txb_Alt.SuperTip = SuperToolTip75
+		ToolTipTitleItem60.Text = "Alt"
+		ToolTipItem60.LeftIndent = 6
+		ToolTipItem60.Text = "Alternative Dump information"
+		SuperToolTip60.Items.Add(ToolTipTitleItem60)
+		SuperToolTip60.Items.Add(ToolTipItem60)
+		Me.txb_Alt.SuperTip = SuperToolTip60
 		Me.txb_Alt.TabIndex = 7
 		'
 		'lbl_DefaultEmulator
@@ -1900,12 +1911,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.txb_Version.MKEditValue_Compare = Nothing
 		Me.txb_Version.Name = "txb_Version"
 		Me.txb_Version.Size = New System.Drawing.Size(64, 20)
-		ToolTipTitleItem60.Text = "Version"
-		ToolTipItem60.LeftIndent = 6
-		ToolTipItem60.Text = "Version info"
-		SuperToolTip60.Items.Add(ToolTipTitleItem60)
-		SuperToolTip60.Items.Add(ToolTipItem60)
-		Me.txb_Version.SuperTip = SuperToolTip60
+		ToolTipTitleItem22.Text = "Version"
+		ToolTipItem22.LeftIndent = 6
+		ToolTipItem22.Text = "Version info"
+		SuperToolTip22.Items.Add(ToolTipTitleItem22)
+		SuperToolTip22.Items.Add(ToolTipItem22)
+		Me.txb_Version.SuperTip = SuperToolTip22
 		Me.txb_Version.TabIndex = 6
 		'
 		'lbl_Developer
@@ -1947,12 +1958,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.txb_Developer.MKEditValue_Compare = Nothing
 		Me.txb_Developer.Name = "txb_Developer"
 		Me.txb_Developer.Size = New System.Drawing.Size(432, 20)
-		ToolTipTitleItem22.Text = "Developer"
-		ToolTipItem22.LeftIndent = 6
-		ToolTipItem22.Text = "Developer of the game"
-		SuperToolTip22.Items.Add(ToolTipTitleItem22)
-		SuperToolTip22.Items.Add(ToolTipItem22)
-		Me.txb_Developer.SuperTip = SuperToolTip22
+		ToolTipTitleItem23.Text = "Developer"
+		ToolTipItem23.LeftIndent = 6
+		ToolTipItem23.Text = "Developer of the game"
+		SuperToolTip23.Items.Add(ToolTipTitleItem23)
+		SuperToolTip23.Items.Add(ToolTipItem23)
+		Me.txb_Developer.SuperTip = SuperToolTip23
 		Me.txb_Developer.TabIndex = 4
 		'
 		'txb_Publisher
@@ -1964,12 +1975,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.txb_Publisher.MKEditValue_Compare = Nothing
 		Me.txb_Publisher.Name = "txb_Publisher"
 		Me.txb_Publisher.Size = New System.Drawing.Size(432, 20)
-		ToolTipTitleItem23.Text = "Publisher"
-		ToolTipItem23.LeftIndent = 6
-		ToolTipItem23.Text = "Publisher of the game"
-		SuperToolTip23.Items.Add(ToolTipTitleItem23)
-		SuperToolTip23.Items.Add(ToolTipItem23)
-		Me.txb_Publisher.SuperTip = SuperToolTip23
+		ToolTipTitleItem24.Text = "Publisher"
+		ToolTipItem24.LeftIndent = 6
+		ToolTipItem24.Text = "Publisher of the game"
+		SuperToolTip24.Items.Add(ToolTipTitleItem24)
+		SuperToolTip24.Items.Add(ToolTipItem24)
+		Me.txb_Publisher.SuperTip = SuperToolTip24
 		Me.txb_Publisher.TabIndex = 3
 		'
 		'pnl_Bottom
@@ -1977,7 +1988,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.pnl_Bottom.Controls.Add(Me.btn_Cancel)
 		Me.pnl_Bottom.Controls.Add(Me.btn_OK)
 		Me.pnl_Bottom.Dock = System.Windows.Forms.DockStyle.Bottom
-		Me.pnl_Bottom.Location = New System.Drawing.Point(0, 661)
+		Me.pnl_Bottom.Location = New System.Drawing.Point(0, 630)
 		Me.pnl_Bottom.Name = "pnl_Bottom"
 		Me.pnl_Bottom.Size = New System.Drawing.Size(984, 31)
 		Me.pnl_Bottom.TabIndex = 3
@@ -2004,7 +2015,7 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.splt.Location = New System.Drawing.Point(519, 0)
 		Me.splt.Name = "splt"
-		Me.splt.Size = New System.Drawing.Size(5, 661)
+		Me.splt.Size = New System.Drawing.Size(5, 630)
 		Me.splt.TabIndex = 4
 		Me.splt.TabStop = False
 		'
@@ -2017,7 +2028,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.pnl_Right.Location = New System.Drawing.Point(524, 0)
 		Me.pnl_Right.Name = "pnl_Right"
 		Me.pnl_Right.Padding = New System.Windows.Forms.Padding(1)
-		Me.pnl_Right.Size = New System.Drawing.Size(460, 661)
+		Me.pnl_Right.Size = New System.Drawing.Size(460, 630)
 		Me.pnl_Right.TabIndex = 5
 		'
 		'tcl2
@@ -2026,22 +2037,22 @@ Partial Class frm_Emu_Game_Edit
 		Me.tcl2.Location = New System.Drawing.Point(3, 238)
 		Me.tcl2.Name = "tcl2"
 		Me.tcl2.SelectedTabPage = Me.tpg_TechInfo
-		Me.tcl2.Size = New System.Drawing.Size(454, 420)
+		Me.tcl2.Size = New System.Drawing.Size(454, 389)
 		Me.tcl2.TabIndex = 1
-		Me.tcl2.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.tpg_TechInfo, Me.tpg_Languages, Me.tpg_Regions, Me.tpg_ReleaseInfo})
+		Me.tcl2.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.tpg_TechInfo, Me.tpg_Languages, Me.tpg_Regions, Me.tpg_ReleaseInfo, Me.tpg_Regions_New})
 		'
 		'tpg_TechInfo
 		'
 		Me.tpg_TechInfo.Controls.Add(Me.grd_Attributes)
 		Me.tpg_TechInfo.Name = "tpg_TechInfo"
-		Me.tpg_TechInfo.Size = New System.Drawing.Size(448, 392)
+		Me.tpg_TechInfo.Size = New System.Drawing.Size(448, 361)
 		Me.tpg_TechInfo.Text = "TechInfo"
 		'
 		'tpg_Languages
 		'
 		Me.tpg_Languages.Controls.Add(Me.grd_Languages)
 		Me.tpg_Languages.Name = "tpg_Languages"
-		Me.tpg_Languages.Size = New System.Drawing.Size(448, 392)
+		Me.tpg_Languages.Size = New System.Drawing.Size(448, 361)
 		Me.tpg_Languages.Text = "Languages"
 		'
 		'grd_Languages
@@ -2052,7 +2063,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_Languages.MainView = Me.gv_Languages
 		Me.grd_Languages.Name = "grd_Languages"
 		Me.grd_Languages.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Language})
-		Me.grd_Languages.Size = New System.Drawing.Size(448, 392)
+		Me.grd_Languages.Size = New System.Drawing.Size(448, 361)
 		Me.grd_Languages.TabIndex = 0
 		Me.grd_Languages.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Languages})
 		'
@@ -2111,7 +2122,7 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.tpg_Regions.Controls.Add(Me.grd_Regions)
 		Me.tpg_Regions.Name = "tpg_Regions"
-		Me.tpg_Regions.Size = New System.Drawing.Size(448, 392)
+		Me.tpg_Regions.Size = New System.Drawing.Size(448, 361)
 		Me.tpg_Regions.Text = "Regions"
 		'
 		'grd_Regions
@@ -2122,7 +2133,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.grd_Regions.MainView = Me.gv_Regions
 		Me.grd_Regions.Name = "grd_Regions"
 		Me.grd_Regions.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Regions})
-		Me.grd_Regions.Size = New System.Drawing.Size(448, 392)
+		Me.grd_Regions.Size = New System.Drawing.Size(448, 361)
 		Me.grd_Regions.TabIndex = 1
 		Me.grd_Regions.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Regions})
 		'
@@ -2184,7 +2195,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.tpg_ReleaseInfo.Controls.Add(Me.chb_Hack)
 		Me.tpg_ReleaseInfo.Controls.Add(Me.chb_Bios)
 		Me.tpg_ReleaseInfo.Name = "tpg_ReleaseInfo"
-		Me.tpg_ReleaseInfo.Size = New System.Drawing.Size(448, 392)
+		Me.tpg_ReleaseInfo.Size = New System.Drawing.Size(448, 361)
 		Me.tpg_ReleaseInfo.Text = "ReleaseInfo"
 		'
 		'chb_Alpha
@@ -2197,12 +2208,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.chb_Alpha.Properties.Caption = "Alpha"
 		Me.chb_Alpha.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked
 		Me.chb_Alpha.Size = New System.Drawing.Size(96, 19)
-		ToolTipTitleItem43.Text = "Alpha"
-		ToolTipItem43.LeftIndent = 6
-		ToolTipItem43.Text = "The tag denotes the game is an alpha version."
-		SuperToolTip43.Items.Add(ToolTipTitleItem43)
-		SuperToolTip43.Items.Add(ToolTipItem43)
-		Me.chb_Alpha.SuperTip = SuperToolTip43
+		ToolTipTitleItem25.Text = "Alpha"
+		ToolTipItem25.LeftIndent = 6
+		ToolTipItem25.Text = "The tag denotes the game is an alpha version."
+		SuperToolTip25.Items.Add(ToolTipTitleItem25)
+		SuperToolTip25.Items.Add(ToolTipItem25)
+		Me.chb_Alpha.SuperTip = SuperToolTip25
 		Me.chb_Alpha.TabIndex = 5
 		'
 		'chb_Pirated
@@ -2215,12 +2226,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.chb_Pirated.Properties.Caption = "Pirated"
 		Me.chb_Pirated.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked
 		Me.chb_Pirated.Size = New System.Drawing.Size(96, 19)
-		ToolTipTitleItem25.Text = "Pirated"
-		ToolTipItem25.LeftIndent = 6
-		ToolTipItem25.Text = "The tag denotes the game is a pirated game (e.g. pirate carts)."
-		SuperToolTip25.Items.Add(ToolTipTitleItem25)
-		SuperToolTip25.Items.Add(ToolTipItem25)
-		Me.chb_Pirated.SuperTip = SuperToolTip25
+		ToolTipTitleItem26.Text = "Pirated"
+		ToolTipItem26.LeftIndent = 6
+		ToolTipItem26.Text = "The tag denotes the game is a pirated game (e.g. pirate carts)."
+		SuperToolTip26.Items.Add(ToolTipTitleItem26)
+		SuperToolTip26.Items.Add(ToolTipItem26)
+		Me.chb_Pirated.SuperTip = SuperToolTip26
 		Me.chb_Pirated.TabIndex = 11
 		'
 		'chb_Fixed
@@ -2233,12 +2244,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.chb_Fixed.Properties.Caption = "Fixed"
 		Me.chb_Fixed.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked
 		Me.chb_Fixed.Size = New System.Drawing.Size(96, 19)
-		ToolTipTitleItem26.Text = "Fixed"
-		ToolTipItem26.LeftIndent = 6
-		ToolTipItem26.Text = "The tag denotes the game contains a fix."
-		SuperToolTip26.Items.Add(ToolTipTitleItem26)
-		SuperToolTip26.Items.Add(ToolTipItem26)
-		Me.chb_Fixed.SuperTip = SuperToolTip26
+		ToolTipTitleItem27.Text = "Fixed"
+		ToolTipItem27.LeftIndent = 6
+		ToolTipItem27.Text = "The tag denotes the game contains a fix."
+		SuperToolTip27.Items.Add(ToolTipTitleItem27)
+		SuperToolTip27.Items.Add(ToolTipItem27)
+		Me.chb_Fixed.SuperTip = SuperToolTip27
 		Me.chb_Fixed.TabIndex = 10
 		'
 		'chb_Overdump
@@ -2251,12 +2262,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.chb_Overdump.Properties.Caption = "Overdump"
 		Me.chb_Overdump.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked
 		Me.chb_Overdump.Size = New System.Drawing.Size(96, 19)
-		ToolTipTitleItem27.Text = "Hack"
-		ToolTipItem27.LeftIndent = 6
-		ToolTipItem27.Text = "The tag denotes the game is an overdump."
-		SuperToolTip27.Items.Add(ToolTipTitleItem27)
-		SuperToolTip27.Items.Add(ToolTipItem27)
-		Me.chb_Overdump.SuperTip = SuperToolTip27
+		ToolTipTitleItem28.Text = "Hack"
+		ToolTipItem28.LeftIndent = 6
+		ToolTipItem28.Text = "The tag denotes the game is an overdump."
+		SuperToolTip28.Items.Add(ToolTipTitleItem28)
+		SuperToolTip28.Items.Add(ToolTipItem28)
+		Me.chb_Overdump.SuperTip = SuperToolTip28
 		Me.chb_Overdump.TabIndex = 14
 		'
 		'chb_Bad
@@ -2269,12 +2280,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.chb_Bad.Properties.Caption = "Bad"
 		Me.chb_Bad.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked
 		Me.chb_Bad.Size = New System.Drawing.Size(96, 19)
-		ToolTipTitleItem28.Text = "Bad"
-		ToolTipItem28.LeftIndent = 6
-		ToolTipItem28.Text = "The tag denotes the game is bad dump."
-		SuperToolTip28.Items.Add(ToolTipTitleItem28)
-		SuperToolTip28.Items.Add(ToolTipItem28)
-		Me.chb_Bad.SuperTip = SuperToolTip28
+		ToolTipTitleItem29.Text = "Bad"
+		ToolTipItem29.LeftIndent = 6
+		ToolTipItem29.Text = "The tag denotes the game is bad dump."
+		SuperToolTip29.Items.Add(ToolTipTitleItem29)
+		SuperToolTip29.Items.Add(ToolTipItem29)
+		Me.chb_Bad.SuperTip = SuperToolTip29
 		Me.chb_Bad.TabIndex = 13
 		'
 		'chb_Good
@@ -2287,12 +2298,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.chb_Good.Properties.Caption = "Good"
 		Me.chb_Good.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked
 		Me.chb_Good.Size = New System.Drawing.Size(96, 19)
-		ToolTipTitleItem29.Text = "Good"
-		ToolTipItem29.LeftIndent = 6
-		ToolTipItem29.Text = "The tag denotes the game is a known good dump."
-		SuperToolTip29.Items.Add(ToolTipTitleItem29)
-		SuperToolTip29.Items.Add(ToolTipItem29)
-		Me.chb_Good.SuperTip = SuperToolTip29
+		ToolTipTitleItem30.Text = "Good"
+		ToolTipItem30.LeftIndent = 6
+		ToolTipItem30.Text = "The tag denotes the game is a known good dump."
+		SuperToolTip30.Items.Add(ToolTipTitleItem30)
+		SuperToolTip30.Items.Add(ToolTipItem30)
+		Me.chb_Good.SuperTip = SuperToolTip30
 		Me.chb_Good.TabIndex = 12
 		'
 		'chb_Unlicensed
@@ -2305,12 +2316,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.chb_Unlicensed.Properties.Caption = "Unlicensed"
 		Me.chb_Unlicensed.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked
 		Me.chb_Unlicensed.Size = New System.Drawing.Size(96, 19)
-		ToolTipTitleItem30.Text = "Unlicensed"
-		ToolTipItem30.LeftIndent = 6
-		ToolTipItem30.Text = "The tag denotes the game is an unlicensed game."
-		SuperToolTip30.Items.Add(ToolTipTitleItem30)
-		SuperToolTip30.Items.Add(ToolTipItem30)
-		Me.chb_Unlicensed.SuperTip = SuperToolTip30
+		ToolTipTitleItem31.Text = "Unlicensed"
+		ToolTipItem31.LeftIndent = 6
+		ToolTipItem31.Text = "The tag denotes the game is an unlicensed game."
+		SuperToolTip31.Items.Add(ToolTipTitleItem31)
+		SuperToolTip31.Items.Add(ToolTipItem31)
+		Me.chb_Unlicensed.SuperTip = SuperToolTip31
 		Me.chb_Unlicensed.TabIndex = 9
 		'
 		'chb_Translation
@@ -2323,13 +2334,13 @@ Partial Class frm_Emu_Game_Edit
 		Me.chb_Translation.Properties.Caption = "Translation"
 		Me.chb_Translation.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked
 		Me.chb_Translation.Size = New System.Drawing.Size(96, 19)
-		ToolTipTitleItem31.Text = "Translation"
-		ToolTipItem31.LeftIndent = 6
-		ToolTipItem31.Text = "The tag denotes the game is an (inofficial) translation. Please also keep in mind" &
+		ToolTipTitleItem32.Text = "Translation"
+		ToolTipItem32.LeftIndent = 6
+		ToolTipItem32.Text = "The tag denotes the game is an (inofficial) translation. Please also keep in mind" &
 		" to select the appropriate language/s in the language section."
-		SuperToolTip31.Items.Add(ToolTipTitleItem31)
-		SuperToolTip31.Items.Add(ToolTipItem31)
-		Me.chb_Translation.SuperTip = SuperToolTip31
+		SuperToolTip32.Items.Add(ToolTipTitleItem32)
+		SuperToolTip32.Items.Add(ToolTipItem32)
+		Me.chb_Translation.SuperTip = SuperToolTip32
 		Me.chb_Translation.TabIndex = 1
 		'
 		'chb_Beta
@@ -2342,12 +2353,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.chb_Beta.Properties.Caption = "Beta"
 		Me.chb_Beta.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked
 		Me.chb_Beta.Size = New System.Drawing.Size(96, 19)
-		ToolTipTitleItem32.Text = "Beta"
-		ToolTipItem32.LeftIndent = 6
-		ToolTipItem32.Text = "The tag denotes the game is a beta version."
-		SuperToolTip32.Items.Add(ToolTipTitleItem32)
-		SuperToolTip32.Items.Add(ToolTipItem32)
-		Me.chb_Beta.SuperTip = SuperToolTip32
+		ToolTipTitleItem33.Text = "Beta"
+		ToolTipItem33.LeftIndent = 6
+		ToolTipItem33.Text = "The tag denotes the game is a beta version."
+		SuperToolTip33.Items.Add(ToolTipTitleItem33)
+		SuperToolTip33.Items.Add(ToolTipItem33)
+		Me.chb_Beta.SuperTip = SuperToolTip33
 		Me.chb_Beta.TabIndex = 6
 		'
 		'chb_Kiosk
@@ -2360,12 +2371,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.chb_Kiosk.Properties.Caption = "Kiosk"
 		Me.chb_Kiosk.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked
 		Me.chb_Kiosk.Size = New System.Drawing.Size(96, 19)
-		ToolTipTitleItem33.Text = "Kiosk"
-		ToolTipItem33.LeftIndent = 6
-		ToolTipItem33.Text = "The tag denotes the game is a kiosk version."
-		SuperToolTip33.Items.Add(ToolTipTitleItem33)
-		SuperToolTip33.Items.Add(ToolTipItem33)
-		Me.chb_Kiosk.SuperTip = SuperToolTip33
+		ToolTipTitleItem34.Text = "Kiosk"
+		ToolTipItem34.LeftIndent = 6
+		ToolTipItem34.Text = "The tag denotes the game is a kiosk version."
+		SuperToolTip34.Items.Add(ToolTipTitleItem34)
+		SuperToolTip34.Items.Add(ToolTipItem34)
+		Me.chb_Kiosk.SuperTip = SuperToolTip34
 		Me.chb_Kiosk.TabIndex = 8
 		'
 		'chb_Sample
@@ -2378,12 +2389,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.chb_Sample.Properties.Caption = "Sample"
 		Me.chb_Sample.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked
 		Me.chb_Sample.Size = New System.Drawing.Size(96, 19)
-		ToolTipTitleItem34.Text = "Sample"
-		ToolTipItem34.LeftIndent = 6
-		ToolTipItem34.Text = "The tag denotes the game is a sample or demo."
-		SuperToolTip34.Items.Add(ToolTipTitleItem34)
-		SuperToolTip34.Items.Add(ToolTipItem34)
-		Me.chb_Sample.SuperTip = SuperToolTip34
+		ToolTipTitleItem35.Text = "Sample"
+		ToolTipItem35.LeftIndent = 6
+		ToolTipItem35.Text = "The tag denotes the game is a sample or demo."
+		SuperToolTip35.Items.Add(ToolTipTitleItem35)
+		SuperToolTip35.Items.Add(ToolTipItem35)
+		Me.chb_Sample.SuperTip = SuperToolTip35
 		Me.chb_Sample.TabIndex = 7
 		'
 		'chb_Prototype
@@ -2396,12 +2407,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.chb_Prototype.Properties.Caption = "Prototype"
 		Me.chb_Prototype.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked
 		Me.chb_Prototype.Size = New System.Drawing.Size(96, 19)
-		ToolTipTitleItem35.Text = "Prototype"
-		ToolTipItem35.LeftIndent = 6
-		ToolTipItem35.Text = "The tag denotes the game is a prototype."
-		SuperToolTip35.Items.Add(ToolTipTitleItem35)
-		SuperToolTip35.Items.Add(ToolTipItem35)
-		Me.chb_Prototype.SuperTip = SuperToolTip35
+		ToolTipTitleItem36.Text = "Prototype"
+		ToolTipItem36.LeftIndent = 6
+		ToolTipItem36.Text = "The tag denotes the game is a prototype."
+		SuperToolTip36.Items.Add(ToolTipTitleItem36)
+		SuperToolTip36.Items.Add(ToolTipItem36)
+		Me.chb_Prototype.SuperTip = SuperToolTip36
 		Me.chb_Prototype.TabIndex = 4
 		'
 		'chb_Trainer
@@ -2414,12 +2425,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.chb_Trainer.Properties.Caption = "Trainer"
 		Me.chb_Trainer.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked
 		Me.chb_Trainer.Size = New System.Drawing.Size(96, 19)
-		ToolTipTitleItem36.Text = "Trainer"
-		ToolTipItem36.LeftIndent = 6
-		ToolTipItem36.Text = "The tag denotes the game contains a trainer."
-		SuperToolTip36.Items.Add(ToolTipTitleItem36)
-		SuperToolTip36.Items.Add(ToolTipItem36)
-		Me.chb_Trainer.SuperTip = SuperToolTip36
+		ToolTipTitleItem37.Text = "Trainer"
+		ToolTipItem37.LeftIndent = 6
+		ToolTipItem37.Text = "The tag denotes the game contains a trainer."
+		SuperToolTip37.Items.Add(ToolTipTitleItem37)
+		SuperToolTip37.Items.Add(ToolTipItem37)
+		Me.chb_Trainer.SuperTip = SuperToolTip37
 		Me.chb_Trainer.TabIndex = 0
 		'
 		'chb_Hack
@@ -2432,12 +2443,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.chb_Hack.Properties.Caption = "Hack"
 		Me.chb_Hack.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked
 		Me.chb_Hack.Size = New System.Drawing.Size(96, 19)
-		ToolTipTitleItem37.Text = "Hack"
-		ToolTipItem37.LeftIndent = 6
-		ToolTipItem37.Text = "The tag denotes the game is a hack."
-		SuperToolTip37.Items.Add(ToolTipTitleItem37)
-		SuperToolTip37.Items.Add(ToolTipItem37)
-		Me.chb_Hack.SuperTip = SuperToolTip37
+		ToolTipTitleItem38.Text = "Hack"
+		ToolTipItem38.LeftIndent = 6
+		ToolTipItem38.Text = "The tag denotes the game is a hack."
+		SuperToolTip38.Items.Add(ToolTipTitleItem38)
+		SuperToolTip38.Items.Add(ToolTipItem38)
+		Me.chb_Hack.SuperTip = SuperToolTip38
 		Me.chb_Hack.TabIndex = 2
 		'
 		'chb_Bios
@@ -2450,13 +2461,65 @@ Partial Class frm_Emu_Game_Edit
 		Me.chb_Bios.Properties.Caption = "Bios"
 		Me.chb_Bios.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked
 		Me.chb_Bios.Size = New System.Drawing.Size(96, 19)
-		ToolTipTitleItem38.Text = "Bios"
-		ToolTipItem38.LeftIndent = 6
-		ToolTipItem38.Text = "The tag denotes the rom is a Bios image."
-		SuperToolTip38.Items.Add(ToolTipTitleItem38)
-		SuperToolTip38.Items.Add(ToolTipItem38)
-		Me.chb_Bios.SuperTip = SuperToolTip38
+		ToolTipTitleItem39.Text = "Bios"
+		ToolTipItem39.LeftIndent = 6
+		ToolTipItem39.Text = "The tag denotes the rom is a Bios image."
+		SuperToolTip39.Items.Add(ToolTipTitleItem39)
+		SuperToolTip39.Items.Add(ToolTipItem39)
+		Me.chb_Bios.SuperTip = SuperToolTip39
 		Me.chb_Bios.TabIndex = 3
+		'
+		'tpg_Regions_New
+		'
+		Me.tpg_Regions_New.Controls.Add(Me.tv_Regions)
+		Me.tpg_Regions_New.Name = "tpg_Regions_New"
+		Me.tpg_Regions_New.PageVisible = False
+		Me.tpg_Regions_New.Size = New System.Drawing.Size(448, 361)
+		Me.tpg_Regions_New.Text = "Regions (NEW)"
+		'
+		'tv_Regions
+		'
+		Me.tv_Regions.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.coltmp_Apply, Me.colRegion})
+		Me.tv_Regions.Cursor = System.Windows.Forms.Cursors.Default
+		Me.tv_Regions.DataSource = Me.BS_Moby_Regions
+		Me.tv_Regions.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.tv_Regions.KeyFieldName = "id_Moby_Regions"
+		Me.tv_Regions.Location = New System.Drawing.Point(0, 0)
+		Me.tv_Regions.Name = "tv_Regions"
+		Me.tv_Regions.OptionsView.ShowColumns = False
+		Me.tv_Regions.ParentFieldName = "id_Moby_Regions_Owner"
+		Me.tv_Regions.Size = New System.Drawing.Size(448, 361)
+		Me.tv_Regions.TabIndex = 0
+		'
+		'coltmp_Apply
+		'
+		Me.coltmp_Apply.Caption = " "
+		Me.coltmp_Apply.FieldName = "tmp_Apply"
+		Me.coltmp_Apply.Name = "coltmp_Apply"
+		Me.coltmp_Apply.OptionsColumn.AllowMove = False
+		Me.coltmp_Apply.OptionsColumn.AllowSize = False
+		Me.coltmp_Apply.OptionsColumn.AllowSort = False
+		Me.coltmp_Apply.OptionsColumn.FixedWidth = True
+		Me.coltmp_Apply.Visible = True
+		Me.coltmp_Apply.VisibleIndex = 0
+		Me.coltmp_Apply.Width = 60
+		'
+		'colRegion
+		'
+		Me.colRegion.FieldName = "Region"
+		Me.colRegion.Name = "colRegion"
+		Me.colRegion.OptionsColumn.AllowEdit = False
+		Me.colRegion.OptionsColumn.AllowSize = False
+		Me.colRegion.OptionsColumn.AllowSort = False
+		Me.colRegion.OptionsColumn.ReadOnly = True
+		Me.colRegion.Visible = True
+		Me.colRegion.VisibleIndex = 1
+		Me.colRegion.Width = 368
+		'
+		'BS_Moby_Regions
+		'
+		Me.BS_Moby_Regions.DataMember = "tbl_Moby_Regions"
+		Me.BS_Moby_Regions.DataSource = Me.DS_ML
 		'
 		'splt_Right
 		'
@@ -2475,7 +2538,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.tcl_Descriptions.SelectedTabPage = Me.tpg_Description
 		Me.tcl_Descriptions.Size = New System.Drawing.Size(454, 230)
 		Me.tcl_Descriptions.TabIndex = 0
-		Me.tcl_Descriptions.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.tpg_Description, Me.tpg_Special_Info, Me.tpg_DOSBox_Config, Me.tpg_DOSBox_Files_and_Directories, Me.tpg_Disks_Volumes})
+		Me.tcl_Descriptions.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.tpg_Description, Me.tpg_Special_Info, Me.tpg_DOSBox_Config, Me.tpg_ScummVM_Config, Me.tpg_DOSBox_Files_and_Directories, Me.tpg_Disks_Volumes})
 		'
 		'tpg_Description
 		'
@@ -2493,13 +2556,13 @@ Partial Class frm_Emu_Game_Edit
 		Me.txb_Description.Name = "txb_Description"
 		Me.txb_Description.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None
 		Me.txb_Description.Size = New System.Drawing.Size(448, 202)
-		ToolTipTitleItem39.Text = "Description"
-		ToolTipItem39.LeftIndent = 6
-		ToolTipItem39.Text = "This is the game's description." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Do not put Hack or Translation infos in here, us" &
+		ToolTipTitleItem40.Text = "Description"
+		ToolTipItem40.LeftIndent = 6
+		ToolTipItem40.Text = "This is the game's description." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Do not put Hack or Translation infos in here, us" &
 		"e the Special Info field for them."
-		SuperToolTip39.Items.Add(ToolTipTitleItem39)
-		SuperToolTip39.Items.Add(ToolTipItem39)
-		Me.txb_Description.SuperTip = SuperToolTip39
+		SuperToolTip40.Items.Add(ToolTipTitleItem40)
+		SuperToolTip40.Items.Add(ToolTipItem40)
+		Me.txb_Description.SuperTip = SuperToolTip40
 		Me.txb_Description.TabIndex = 1
 		'
 		'tpg_Special_Info
@@ -2518,13 +2581,13 @@ Partial Class frm_Emu_Game_Edit
 		Me.txb_Special_Info.Name = "txb_Special_Info"
 		Me.txb_Special_Info.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None
 		Me.txb_Special_Info.Size = New System.Drawing.Size(448, 202)
-		ToolTipTitleItem40.Text = "Special Info"
-		ToolTipItem40.LeftIndent = 6
-		ToolTipItem40.Text = "This field contains special information about the game if applicable. Use this fi" &
+		ToolTipTitleItem41.Text = "Special Info"
+		ToolTipItem41.LeftIndent = 6
+		ToolTipItem41.Text = "This field contains special information about the game if applicable. Use this fi" &
 		"eld for Hack or Translation information."
-		SuperToolTip40.Items.Add(ToolTipTitleItem40)
-		SuperToolTip40.Items.Add(ToolTipItem40)
-		Me.txb_Special_Info.SuperTip = SuperToolTip40
+		SuperToolTip41.Items.Add(ToolTipTitleItem41)
+		SuperToolTip41.Items.Add(ToolTipItem41)
+		Me.txb_Special_Info.SuperTip = SuperToolTip41
 		Me.txb_Special_Info.TabIndex = 2
 		'
 		'tpg_DOSBox_Config
@@ -2542,6 +2605,22 @@ Partial Class frm_Emu_Game_Edit
 		Me.ucr_DOSBox_Config.Name = "ucr_DOSBox_Config"
 		Me.ucr_DOSBox_Config.Size = New System.Drawing.Size(448, 202)
 		Me.ucr_DOSBox_Config.TabIndex = 0
+		'
+		'tpg_ScummVM_Config
+		'
+		Me.tpg_ScummVM_Config.Controls.Add(Me.ucr_ScummVM_Config)
+		Me.tpg_ScummVM_Config.Name = "tpg_ScummVM_Config"
+		Me.tpg_ScummVM_Config.PageVisible = False
+		Me.tpg_ScummVM_Config.Size = New System.Drawing.Size(448, 202)
+		Me.tpg_ScummVM_Config.Text = "ScummVM Config"
+		'
+		'ucr_ScummVM_Config
+		'
+		Me.ucr_ScummVM_Config.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.ucr_ScummVM_Config.Location = New System.Drawing.Point(0, 0)
+		Me.ucr_ScummVM_Config.Name = "ucr_ScummVM_Config"
+		Me.ucr_ScummVM_Config.Size = New System.Drawing.Size(448, 202)
+		Me.ucr_ScummVM_Config.TabIndex = 0
 		'
 		'tpg_DOSBox_Files_and_Directories
 		'
@@ -2732,13 +2811,13 @@ Partial Class frm_Emu_Game_Edit
 		Me.txb_DOSBox_Inner_File.Name = "txb_DOSBox_Inner_File"
 		Me.txb_DOSBox_Inner_File.Properties.ReadOnly = True
 		Me.txb_DOSBox_Inner_File.Size = New System.Drawing.Size(143, 20)
-		ToolTipTitleItem24.Text = "Inner File"
-		ToolTipItem24.LeftIndent = 6
-		ToolTipItem24.Text = "If the File is packed (e.g. zip or rar file), the inner file specifies the file w" &
+		ToolTipTitleItem42.Text = "Inner File"
+		ToolTipItem42.LeftIndent = 6
+		ToolTipItem42.Text = "If the File is packed (e.g. zip or rar file), the inner file specifies the file w" &
 		"ithing the packed file."
-		SuperToolTip24.Items.Add(ToolTipTitleItem24)
-		SuperToolTip24.Items.Add(ToolTipItem24)
-		Me.txb_DOSBox_Inner_File.SuperTip = SuperToolTip24
+		SuperToolTip42.Items.Add(ToolTipTitleItem42)
+		SuperToolTip42.Items.Add(ToolTipItem42)
+		Me.txb_DOSBox_Inner_File.SuperTip = SuperToolTip42
 		Me.txb_DOSBox_Inner_File.TabIndex = 2
 		'
 		'txb_DOSBox_File
@@ -2803,12 +2882,12 @@ Partial Class frm_Emu_Game_Edit
 		Me.cmb_DOSBox_Mount_Destination.Properties.ShowHeader = False
 		Me.cmb_DOSBox_Mount_Destination.Properties.ValueMember = "Value"
 		Me.cmb_DOSBox_Mount_Destination.Size = New System.Drawing.Size(143, 20)
-		ToolTipTitleItem42.Text = "Mount as"
-		ToolTipItem42.LeftIndent = 6
-		ToolTipItem42.Text = "The drive letter within DOSBox to which the file's content gets mounted"
-		SuperToolTip42.Items.Add(ToolTipTitleItem42)
-		SuperToolTip42.Items.Add(ToolTipItem42)
-		Me.cmb_DOSBox_Mount_Destination.SuperTip = SuperToolTip42
+		ToolTipTitleItem43.Text = "Mount as"
+		ToolTipItem43.LeftIndent = 6
+		ToolTipItem43.Text = "The drive letter within DOSBox to which the file's content gets mounted"
+		SuperToolTip43.Items.Add(ToolTipTitleItem43)
+		SuperToolTip43.Items.Add(ToolTipItem43)
+		Me.cmb_DOSBox_Mount_Destination.SuperTip = SuperToolTip43
 		Me.cmb_DOSBox_Mount_Destination.TabIndex = 4
 		'
 		'BTA_DOSBox_Mount_Destination
@@ -3160,7 +3239,7 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.barDockControlBottom.CausesValidation = False
 		Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-		Me.barDockControlBottom.Location = New System.Drawing.Point(0, 692)
+		Me.barDockControlBottom.Location = New System.Drawing.Point(0, 661)
 		Me.barDockControlBottom.Size = New System.Drawing.Size(984, 0)
 		'
 		'barDockControlLeft
@@ -3168,14 +3247,14 @@ Partial Class frm_Emu_Game_Edit
 		Me.barDockControlLeft.CausesValidation = False
 		Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
 		Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
-		Me.barDockControlLeft.Size = New System.Drawing.Size(0, 692)
+		Me.barDockControlLeft.Size = New System.Drawing.Size(0, 661)
 		'
 		'barDockControlRight
 		'
 		Me.barDockControlRight.CausesValidation = False
 		Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
 		Me.barDockControlRight.Location = New System.Drawing.Point(984, 0)
-		Me.barDockControlRight.Size = New System.Drawing.Size(0, 692)
+		Me.barDockControlRight.Size = New System.Drawing.Size(0, 661)
 		'
 		'bbi_Genres_Show_Description
 		'
@@ -3272,7 +3351,7 @@ Partial Class frm_Emu_Game_Edit
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.ClientSize = New System.Drawing.Size(984, 692)
+		Me.ClientSize = New System.Drawing.Size(984, 661)
 		Me.Controls.Add(Me.pnl_Right)
 		Me.Controls.Add(Me.splt)
 		Me.Controls.Add(Me.pnl_Left)
@@ -3281,7 +3360,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.Controls.Add(Me.barDockControlRight)
 		Me.Controls.Add(Me.barDockControlBottom)
 		Me.Controls.Add(Me.barDockControlTop)
-		Me.MinimumSize = New System.Drawing.Size(1000, 730)
+		Me.MinimumSize = New System.Drawing.Size(1000, 700)
 		Me.Name = "frm_Emu_Game_Edit"
 		Me.ShowInTaskbar = False
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -3413,6 +3492,9 @@ Partial Class frm_Emu_Game_Edit
 		CType(Me.chb_Trainer.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.chb_Hack.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.chb_Bios.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.tpg_Regions_New.ResumeLayout(False)
+		CType(Me.tv_Regions, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BS_Moby_Regions, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.tcl_Descriptions, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.tcl_Descriptions.ResumeLayout(False)
 		Me.tpg_Description.ResumeLayout(False)
@@ -3420,6 +3502,7 @@ Partial Class frm_Emu_Game_Edit
 		Me.tpg_Special_Info.ResumeLayout(False)
 		CType(Me.txb_Special_Info.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.tpg_DOSBox_Config.ResumeLayout(False)
+		Me.tpg_ScummVM_Config.ResumeLayout(False)
 		Me.tpg_DOSBox_Files_and_Directories.ResumeLayout(False)
 		CType(Me.pnl_DOSBox_Files_and_Folders, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.pnl_DOSBox_Files_and_Folders.ResumeLayout(False)
@@ -3702,4 +3785,11 @@ Partial Class frm_Emu_Game_Edit
 	Friend WithEvents rpi_Special_Edition As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
 	Friend WithEvents rpi_Language As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
 	Friend WithEvents rpi_Regions As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
+	Friend WithEvents tpg_ScummVM_Config As DevExpress.XtraTab.XtraTabPage
+	Friend WithEvents ucr_ScummVM_Config As ucr_ScummVM_Config
+	Friend WithEvents tpg_Regions_New As DevExpress.XtraTab.XtraTabPage
+	Friend WithEvents tv_Regions As MKNetDXLib.ctl_MKDXTreelist
+	Friend WithEvents BS_Moby_Regions As BindingSource
+	Friend WithEvents coltmp_Apply As DevExpress.XtraTreeList.Columns.TreeListColumn
+	Friend WithEvents colRegion As DevExpress.XtraTreeList.Columns.TreeListColumn
 End Class

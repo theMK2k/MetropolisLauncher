@@ -13,7 +13,7 @@
 				DS_ML.Fill_tbl_Similarity_Calculation_Config(tran, Me.DS_ML.tbl_Similarity_Calculation_Config, _id_Similarity_Calculation_Config)
 
 				If Me.DS_ML.tbl_Similarity_Calculation_Config.Rows.Count <> 1 Then
-					DevExpress.XtraEditors.XtraMessageBox.Show("There has been an error while fetching data from the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+					MKDXHelper.MessageBox("There has been an error while fetching data from the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 					Me.Close()
 				End If
 			End Using
@@ -41,7 +41,7 @@
 		Next
 
 		If Not bOK Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("Not all weights should be set to 0.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+			MKDXHelper.MessageBox("Not all weights should be set to 0.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 			Return
 		End If
 

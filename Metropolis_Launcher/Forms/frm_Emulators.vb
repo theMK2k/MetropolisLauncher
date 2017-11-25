@@ -1,8 +1,11 @@
 ﻿Imports System.ComponentModel
 
 Public Class frm_Emulators
+
 	Public Sub New()
 		InitializeComponent()
+
+		DS_Rombase.Fill_tbl_Rombase_Known_Emulators(Me.DS_Rombase.tbl_Rombase_Known_Emulators)
 
 		barmng.SetPopupContextMenu(grd_Emulators, popmnu_Emulators)
 
@@ -15,22 +18,31 @@ Public Class frm_Emulators
 			Me.DS_ML.Fill_src_frm_Emulators(tran, Me.DS_ML.tbl_Emulators)
 		End Using
 
+		DS_ML.Fill_tbl_List_Generators(Me.DS_ML.tbl_List_Generators)
+
 		'Fill the J2K Config DS
 		cls_Settings.Fill_J2K_DS(Me.DS_J2K, TC.NZ(cls_Settings.GetSetting("Path_J2K"), ""))
 
 		Cursor.Current = Cursors.Default
+
+		BS_Emulators_CurrentChanged(Nothing, Nothing)
 	End Sub
 
 	Private _J2KPreset_Original As Object
 
 	Private Function isRetroArch() As Boolean
 		If BS_Emulators.Current Is Nothing Then Return False
-		Return txb_Executable.Text.ToLower.Contains("retroarch")
+		Return TC.NZ(BS_Emulators.Current("Executable"), "").ToLower.Contains("retroarch")
 	End Function
 
 	Private Function isDOSBox() As Boolean
 		If BS_Emulators.Current Is Nothing Then Return False
-		Return BS_Emulators.Current("Executable").ToLower.Contains("dosbox")
+		Return TC.NZ(BS_Emulators.Current("Executable"), "").ToLower.Contains("dosbox")
+	End Function
+
+	Private Function isScummVM() As Boolean
+		If BS_Emulators.Current Is Nothing Then Return False
+		Return TC.NZ(BS_Emulators.Current("Executable"), "").ToLower.Contains("scummvm")
 	End Function
 
 	Private Function hasNewDOSBoxPatches() As Boolean
@@ -48,6 +60,7 @@ Public Class frm_Emulators
 		Unknown = 0
 		DAUM = 1
 		MB = 2
+		ECE = 3
 	End Enum
 
 	Private Sub DetectNewDOSBoxPatches()
@@ -62,6 +75,8 @@ Public Class frm_Emulators
 					dosbox_build = enm_DOSBox_Builds.MB
 				ElseIf sContent.Contains("SVN-Daum") Then
 					dosbox_build = enm_DOSBox_Builds.DAUM
+				ElseIf sContent.Contains("ECE") Then
+					dosbox_build = enm_DOSBox_Builds.ECE
 				End If
 
 				For Each row_patch As DataRow In DS_ML.src_frm_Emulators_DOSBox_Patches.Rows
@@ -71,6 +86,8 @@ Public Class frm_Emulators
 								row_patch("Activated") = TC.NZ(row_patch("DAUM_Supported"), False)
 							Case enm_DOSBox_Builds.MB
 								row_patch("Activated") = TC.NZ(row_patch("MB_Supported"), False)
+							Case enm_DOSBox_Builds.ECE
+								row_patch("Activated") = TC.NZ(row_patch("ECE_Supported"), False)
 						End Select
 						row_patch.AcceptChanges()
 					End If
@@ -85,15 +102,15 @@ Public Class frm_Emulators
 	Private Sub BS_Emulators_CurrentChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BS_Emulators.CurrentChanged
 		Cursor.Current = Cursors.WaitCursor
 
-		Me.DS_ML.tbl_Emulators_Moby_Platforms.Clear()
-
 		If BS_Emulators.Current Is Nothing Then
-			'TODO: gb_Emulator_Settings.Enabled = False
+			pnl_Right.Visible = False
+
 			btn_Duplicate_Emulator.Enabled = False
 			btn_Delete_Emulator.Enabled = False
 			cmb_J2K_Config.EditValue = DBNull.Value
 		Else
-			'TODO: gb_Emulator_Settings.Enabled = True
+			pnl_Right.Visible = True
+
 			btn_Duplicate_Emulator.Enabled = True
 			btn_Delete_Emulator.Enabled = True
 
@@ -107,6 +124,8 @@ Public Class frm_Emulators
 			If isDOSBox() Then
 				txb_StartupParameter.Visible = False
 				lbl_StartupParameter.Visible = False
+				lbl_List_Generator.Visible = False
+				cmb_List_Generator.Visible = False
 				tpg_DOSBox_Patches.PageVisible = True
 				tpg_MV_Settings.PageVisible = False
 				'lbl_AutoItScript.Visible = False
@@ -121,9 +140,39 @@ Public Class frm_Emulators
 				If hasNewDOSBoxPatches() Then
 					DetectNewDOSBoxPatches()
 				End If
+
+				'Automatically check Supported for the DOS Platform
+				For Each row As DS_ML.src_frm_Emulators_Moby_PlatformsRow In Me.DS_ML.src_frm_Emulators_Moby_Platforms.Rows
+					If row.id_Moby_Platforms = cls_Globals.enm_Moby_Platforms.dos Then
+						If TC.NZ(row("Supported"), False) = False Then
+							row("Supported") = True
+						End If
+					End If
+				Next
+			ElseIf isScummVM() Then
+				txb_StartupParameter.Visible = False
+				lbl_StartupParameter.Visible = False
+				lbl_List_Generator.Visible = False
+				cmb_List_Generator.Visible = False
+				tpg_DOSBox_Patches.PageVisible = False
+				tpg_MV_Settings.PageVisible = False
+				'lbl_AutoItScript.Visible = False
+				'memo_AutItScript.Visible = False
+				BS_Platforms.Filter = "id_Moby_Platforms IN (-3)"
+
+				'Automatically check Supported for the DOS Platform
+				For Each row As DS_ML.src_frm_Emulators_Moby_PlatformsRow In Me.DS_ML.src_frm_Emulators_Moby_Platforms.Rows
+					If row.id_Moby_Platforms = cls_Globals.enm_Moby_Platforms.scummvm Then
+						If TC.NZ(row("Supported"), False) = False Then
+							row("Supported") = True
+						End If
+					End If
+				Next
 			Else
 				txb_StartupParameter.Visible = True
 				lbl_StartupParameter.Visible = True
+				lbl_List_Generator.Visible = True
+				cmb_List_Generator.Visible = True
 				tpg_DOSBox_Patches.PageVisible = False
 				tpg_MV_Settings.PageVisible = True
 				'lbl_AutoItScript.Visible = True
@@ -153,19 +202,63 @@ Public Class frm_Emulators
 
 		Refill_LibretroCore()
 
+		If DetectEmu().Rows.Count > 0 Then
+			Me.btn_AutoConfig.Enabled = True
+		Else
+			Me.btn_AutoConfig.Enabled = False
+		End If
+
 		Cursor.Current = Cursors.Default
 	End Sub
 
 	Private Function CheckSave(Optional ByRef row As DataRow = Nothing) As DialogResult
-		If DS_ML.src_frm_Emulators_Moby_Platforms.GetChanges IsNot Nothing _
-		OrElse (row IsNot Nothing AndAlso row.RowState = DataRowState.Added) _
-		OrElse (row IsNot Nothing AndAlso row.RowState = DataRowState.Modified) _
-		OrElse (_J2KPreset_Original IsNot Nothing AndAlso _J2KPreset_Original IsNot DBNull.Value AndAlso Not Equals(_J2KPreset_Original, cmb_J2K_Config.Text)) _
-		OrElse ((_J2KPreset_Original Is Nothing OrElse _J2KPreset_Original Is DBNull.Value) AndAlso (cmb_J2K_Config.EditValue IsNot Nothing AndAlso cmb_J2K_Config.EditValue IsNot DBNull.Value)) _
-		OrElse DS_ML.src_frm_Emulators_DOSBox_Patches.GetChanges IsNot Nothing _
-		OrElse DS_ML.src_frm_Emulators_Moby_Platforms.GetChanges IsNot Nothing _
-		OrElse DS_ML.tbl_Emulators_Multivolume_Parameters.GetChanges IsNot Nothing Then
-			Dim res As DialogResult = DevExpress.XtraEditors.XtraMessageBox.Show("Save the changes for the current emulator?", "Save changes?", MessageBoxButtons.YesNoCancel)
+		Debug.WriteLine("CheckSave START")
+
+		Me.BS_Emulators.EndEdit()
+
+		If row Is Nothing AndAlso BS_Emulators IsNot Nothing Then
+			row = BS_Emulators.Current.row
+		End If
+
+		Dim hasChanges As Boolean = False
+
+		If DS_ML.src_frm_Emulators_Moby_Platforms.GetChanges IsNot Nothing Then
+			Debug.WriteLine("	Change detected in DS_ML.src_frm_Emulators_Moby_Platforms.GetChanges")
+			hasChanges = True
+		End If
+
+		If row IsNot Nothing AndAlso row.RowState = DataRowState.Added Then
+			Debug.WriteLine("	Change detected in row (added)")
+			hasChanges = True
+		End If
+
+		If row IsNot Nothing AndAlso row.RowState = DataRowState.Modified Then
+			Debug.WriteLine("	Change detected in row (modified)")
+			hasChanges = True
+		End If
+
+		If _J2KPreset_Original IsNot Nothing AndAlso _J2KPreset_Original IsNot DBNull.Value AndAlso Not Equals(_J2KPreset_Original, cmb_J2K_Config.Text) Then
+			Debug.WriteLine("	Change detected in J2K (1)")
+			hasChanges = True
+		End If
+
+		If (_J2KPreset_Original Is Nothing OrElse _J2KPreset_Original Is DBNull.Value) AndAlso cmb_J2K_Config.EditValue IsNot Nothing AndAlso cmb_J2K_Config.EditValue IsNot DBNull.Value Then
+			Debug.WriteLine("	Change detected in J2K (2)")
+			hasChanges = True
+		End If
+
+		If DS_ML.src_frm_Emulators_DOSBox_Patches.GetChanges IsNot Nothing Then
+			Debug.WriteLine("	Change detected in DS_ML.src_frm_Emulators_DOSBox_Patches.GetChanges")
+			hasChanges = True
+		End If
+
+		If DS_ML.tbl_Emulators_Multivolume_Parameters.GetChanges IsNot Nothing Then
+			Debug.WriteLine("	Change detected in DS_ML.tbl_Emulators_Multivolume_Parameters.GetChanges")
+			hasChanges = True
+		End If
+
+		If hasChanges Then
+			Dim res As DialogResult = MKDXHelper.MessageBox("Save the changes for the current emulator?", "Save changes?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
 			Return res
 		End If
 
@@ -220,17 +313,14 @@ Public Class frm_Emulators
 		Me.DS_ML.tbl_Emulators.Rows.Add(row)
 
 		BS_Emulators.Position = BS_Emulators.Find("id_Emulators", row("id_Emulators"))
+
+		AutoConfigure(False)
 	End Sub
 
 	Private Sub Handle_Delete_Emulator(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Delete_Emulator.Click, bbi_Delete.ItemClick
-		If DevExpress.XtraEditors.XtraMessageBox.Show("Do you really want to remove the emulator and its settings?", "Delete Emulator", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+		If MKDXHelper.MessageBox("Do you really want to remove the emulator and its settings?", "Delete Emulator", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
 			Dim id_Emulators = BS_Emulators.Current("id_Emulators")
 			Me.BS_Emulators.RemoveCurrent()
-
-			Dim rows_Platforms() As DataRow = Me.DS_ML.tbl_Emulators_Moby_Platforms.Select("id_Emulators = " & id_Emulators)
-			For Each row_Platforms In rows_Platforms
-				Me.DS_ML.tbl_Emulators_Moby_Platforms.Rows.Remove(row_Platforms)
-			Next
 
 			If id_Emulators > 0 Then
 				DataAccess.FireProcedure(cls_Globals.Conn, 0, "DELETE FROM tbl_Emulators WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators))
@@ -241,14 +331,32 @@ Public Class frm_Emulators
 	End Sub
 
 	Private Function Save() As Boolean
+		If Me.DS_ML.src_frm_Emulators_Moby_Platforms.Select("Supported = 1").Length = 0 Then
+			If Not MKDXHelper.MessageBox("It seems you didn't choose one or more supported platform/s in the list. Do you still want to save?", "Missing Supported Platform/s", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
+				Return False
+			End If
+		End If
+
 		If isRetroArch() AndAlso TC.IsNullNothingOrEmpty(cmb_Libretro_Core.EditValue) Then
-			If Not DevExpress.XtraEditors.XtraMessageBox.Show("The emulator appears to be RetroArch. Please consider to choose a Libretro Core. Do you still want to save?", "Missing Libretro Core", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
+			If Not MKDXHelper.MessageBox("The emulator appears to be RetroArch. Please consider to choose a Libretro Core. Do you still want to save?", "Missing Libretro Core", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
 				Return False
 			End If
 		End If
 
 		If Me.DS_ML.tbl_Emulators_Multivolume_Parameters.Rows.Count > 0 AndAlso Not Me.txb_StartupParameter.Text.ToLower.Contains("%multivolume%") Then
-			If Not DevExpress.XtraEditors.XtraMessageBox.Show("There are startup parameters defined in the Multiple Volumes tab. These can only be used if you put %multivolume% in the Startup Parameter field in the Settings tab. Do you still want to save?", "Missing Libretro Core", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
+			If Not MKDXHelper.MessageBox("There are startup parameters defined in the Multiple Volumes tab. These can only be used if you put %multivolume% in the Startup Parameter field in the Settings tab. Do you still want to save?", "Missing Startup Parameter", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
+				Return False
+			End If
+		End If
+
+		If Me.txb_StartupParameter.Text.ToLower.Contains("%listfile") AndAlso TC.NZ(Me.cmb_List_Generator.EditValue, 0) = 0 Then
+			If Not MKDXHelper.MessageBox("You apparently want to generate and use a list file as a Startup Parameter, but you didn't chose a List Generator. Do you still want to save?", "Missing Libretro Core", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
+				Return False
+			End If
+		End If
+
+		If TC.NZ(Me.cmb_List_Generator.EditValue, 0) > 0 AndAlso Not Me.txb_StartupParameter.Text.ToLower.Contains("%listfile") Then
+			If Not MKDXHelper.MessageBox("You chose a List Generator but you didn't provide the %listfile.ext% variable in the Startup Parameter. Do you still want to save?", "Missing Libretro Core", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
 				Return False
 			End If
 		End If
@@ -270,10 +378,10 @@ Public Class frm_Emulators
 		Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
 			Try
 				If id_Emulators_Current < 0 Then
-					id_Emulators_Current = DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "INSERT INTO tbl_Emulators(Displayname, InstallDirectory, Executable, StartupParameter, AutoItScript, J2KPreset, ScreenshotDirectory, Libretro_Core) VALUES(" & TC.getSQLParameter(rowCurrent("Displayname"), rowCurrent("InstallDirectory"), rowCurrent("Executable"), rowCurrent("StartupParameter"), rowCurrent("AutoItScript"), rowCurrent("J2KPreset"), rowCurrent("ScreenshotDirectory"), rowCurrent("Libretro_Core")) & "); SELECT last_insert_rowid()", tran)
+					id_Emulators_Current = DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "INSERT INTO tbl_Emulators(Displayname, InstallDirectory, Executable, StartupParameter, AutoItScript, J2KPreset, ScreenshotDirectory, Libretro_Core, id_List_Generators) VALUES (" & TC.getSQLParameter(rowCurrent("Displayname"), rowCurrent("InstallDirectory"), rowCurrent("Executable"), rowCurrent("StartupParameter"), rowCurrent("AutoItScript"), rowCurrent("J2KPreset"), rowCurrent("ScreenshotDirectory"), rowCurrent("Libretro_Core"), rowCurrent("id_List_Generators")) & "); SELECT last_insert_rowid()", tran)
 					rowCurrent("id_Emulators") = id_Emulators_Current
 				Else
-					DataAccess.FireProcedure(tran.Connection, 0, "UPDATE tbl_Emulators SET Displayname = " & TC.getSQLFormat(rowCurrent("Displayname")) & ", InstallDirectory = " & TC.getSQLFormat(rowCurrent("InstallDirectory")) & ", Executable = " & TC.getSQLFormat(rowCurrent("Executable")) & ", StartupParameter = " & TC.getSQLFormat(rowCurrent("StartupParameter")) & ", AutoItScript = " & TC.getSQLFormat(rowCurrent("AutoItScript")) & ", J2KPreset = " & TC.getSQLFormat(rowCurrent("J2KPreset")) & ", ScreenshotDirectory = " & TC.getSQLFormat(rowCurrent("ScreenshotDirectory")) & ", Libretro_Core = " & TC.getSQLFormat(rowCurrent("Libretro_Core")) & " WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators_Current), tran)
+					DataAccess.FireProcedure(tran.Connection, 0, "UPDATE tbl_Emulators SET Displayname = " & TC.getSQLFormat(rowCurrent("Displayname")) & ", InstallDirectory = " & TC.getSQLFormat(rowCurrent("InstallDirectory")) & ", Executable = " & TC.getSQLFormat(rowCurrent("Executable")) & ", StartupParameter = " & TC.getSQLFormat(rowCurrent("StartupParameter")) & ", AutoItScript = " & TC.getSQLFormat(rowCurrent("AutoItScript")) & ", J2KPreset = " & TC.getSQLFormat(rowCurrent("J2KPreset")) & ", ScreenshotDirectory = " & TC.getSQLFormat(rowCurrent("ScreenshotDirectory")) & ", Libretro_Core = " & TC.getSQLFormat(rowCurrent("Libretro_Core")) & ", id_List_Generators = " & TC.getSQLFormat(rowCurrent("id_List_Generators")) & " WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators_Current), tran)
 				End If
 				rowCurrent.AcceptChanges()
 
@@ -341,10 +449,12 @@ Public Class frm_Emulators
 		Refill_LibretroCore()
 	End Sub
 
-	Private Sub Refill_LibretroCore()
-		Dim oLastCore As Object = cmb_Libretro_Core.EditValue
-		BTA_Libretro_Core.Table.Clear()
+	Private Sub Refill_List_Generators()
+		Me.DS_ML.tbl_List_Generators.Clear()
+		DS_ML.Fill_tbl_List_Generators(Me.DS_ML.tbl_List_Generators)
+	End Sub
 
+	Private Sub Refill_LibretroCore()
 		If Not isRetroArch() Then
 			lbl_Libretro_Core.Visible = False
 			cmb_Libretro_Core.Visible = False
@@ -352,7 +462,10 @@ Public Class frm_Emulators
 			Return
 		End If
 
-		Dim basedir As String = MKNetLib.cls_MKStringSupport.Clean_Right(txb_Directory.Text, "\")
+		Dim oLastCore As Object = BS_Emulators.Current("Libretro_Core") 'cmb_Libretro_Core.EditValue
+		BTA_Libretro_Core.Table.Clear()
+
+		Dim basedir As String = MKNetLib.cls_MKStringSupport.Clean_Right(BS_Emulators.Current("InstallDirectory"), "\") ' txb_Directory.Text
 		Dim coredir As String = basedir & "\cores"
 		Dim infodir As String = basedir & "\info"
 
@@ -488,7 +601,7 @@ Public Class frm_Emulators
 		BS_Emulators.EndEdit()
 
 		If DS_ML.src_frm_Emulators_Moby_Platforms.GetChanges IsNot Nothing OrElse row.RowState = DataRowState.Added OrElse row.RowState = DataRowState.Modified Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("Please save your changes before duplicating an emulator setting.", "Duplicate Emulator", MessageBoxButtons.OK)
+			MKDXHelper.MessageBox("Please save your changes before duplicating an emulator setting.", "Duplicate Emulator", MessageBoxButtons.OK, MessageBoxIcon.Information)
 			Return
 		End If
 
@@ -515,7 +628,7 @@ Public Class frm_Emulators
 					tran.Commit()
 				Catch ex As Exception
 					tran.Rollback()
-					DevExpress.XtraEditors.XtraMessageBox.Show("Error while duplicating emulator settings: " & ex.Message, "Duplicate Emulator", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+					MKDXHelper.ExceptionMessageBox(ex, Caption:="Duplicate Emulator")
 				End Try
 			End Using
 
@@ -532,7 +645,7 @@ Public Class frm_Emulators
 	Private Sub btn_Run_Click(sender As System.Object, e As System.EventArgs) Handles btn_Run.Click
 		Dim fullpath As String = txb_Directory.Text & "\" & txb_Executable.Text
 		If Not Alphaleonis.Win32.Filesystem.File.Exists(fullpath) Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("Error while launching the emulator, file '" & fullpath & "' not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+			MKDXHelper.MessageBox("Error while launching the emulator, file '" & fullpath & "' not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 		Else
 			Try
 				Dim proc = New System.Diagnostics.Process
@@ -541,7 +654,7 @@ Public Class frm_Emulators
 				proc.StartInfo.UseShellExecute = True
 				proc.Start()
 			Catch ex As Exception
-				DevExpress.XtraEditors.XtraMessageBox.Show("Error while launching the emulator: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+				MKDXHelper.ExceptionMessageBox(ex)
 			End Try
 		End If
 	End Sub
@@ -573,6 +686,259 @@ Public Class frm_Emulators
 	End Sub
 
 	Private Sub gv_Platforms_MouseMove(sender As Object, e As MouseEventArgs) Handles gv_Platforms.MouseMove
-		Me.grd_Platforms.ShowHandInColumns(gv_Platforms, {"Suported", "DefaultEmulator"}, e)
+		Me.grd_Platforms.ShowHandInColumns(gv_Platforms, {"Supported", "DefaultEmulator"}, e)
 	End Sub
+
+	Private Sub cmb_List_Generator_ButtonPressed(sender As Object, e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles cmb_List_Generator.ButtonPressed
+		BS_Emulators.EndEdit()
+
+		Select Case e.Button.Kind
+			Case DevExpress.XtraEditors.Controls.ButtonPredefines.Plus
+				'Add List Generator
+				Using frm As New frm_List_Generator_Edit
+					If frm.ShowDialog = DialogResult.OK Then
+						'TODO: Save to tbl_List_Generators, set id_List_Generators within this Emulator and reload the list of List_Generators
+						Dim id_List_Generators As Int64 = 0L
+						Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
+							id_List_Generators = DS_ML.Upsert_tbl_List_Generators(tran, frm.txb_Name.EditValue.Trim, frm.cmb_Sort.EditValue, frm.txb_Main_Template.EditValue, frm.txb_File_Entry_Template.EditValue)
+							tran.Commit()
+						End Using
+						Refill_List_Generators()
+						If id_List_Generators > 0L Then
+							Me.BS_Emulators.Current("id_List_Generators") = id_List_Generators
+						End If
+					End If
+				End Using
+			Case DevExpress.XtraEditors.Controls.ButtonPredefines.Minus
+				'Delete List Generator
+				If TC.NZ(Me.BS_Emulators.Current("id_List_Generators"), 0) = 0 Then
+					Return
+				End If
+
+				If TC.NZ(Me.BS_Emulators.Current("id_List_Generators"), 0) < 0 Then
+					MKDXHelper.MessageBox("The selected list generator cannot be deleted because it is shipped with Metropolis Launcher.", "Delete List Generator", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+					Return
+				End If
+
+				Dim id_List_Generators As Int64 = Me.BS_Emulators.Current("id_List_Generators")
+
+				If MKDXHelper.MessageBox("Do you really want to delete this list generator?", "Delete List Generator", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) <> DialogResult.Yes Then
+					Return
+				End If
+
+
+				Dim sSQL As String = ""
+				sSQL &= "DELETE FROM tbl_List_Generators WHERE id_List_Generators = " & TC.getSQLFormat(id_List_Generators)
+				sSQL &= "; UPDATE tbl_Emulators SET id_List_Generators = NULL WHERE id_List_Generators NOT IN (SELECT id_List_Generators FROM tbl_List_Generators)"
+
+				DataAccess.FireProcedure(cls_Globals.Conn, 0, sSQL)
+
+				For Each row As DataRow In Me.DS_ML.tbl_Emulators.Rows
+					If TC.NZ(row("id_List_Generators"), 0) = id_List_Generators Then
+						row("id_List_Generators") = DBNull.Value
+					End If
+				Next
+
+				Refill_List_Generators()
+			Case DevExpress.XtraEditors.Controls.ButtonPredefines.Delete
+				'Set to NULL
+				Me.BS_Emulators.Current("id_List_Generators") = DBNull.Value
+			Case DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis
+				'Edit List Generator
+				If BS_List_Generators.Current Is Nothing Then
+					Return
+				End If
+				Using frm As New frm_List_Generator_Edit(BS_List_Generators.Current("id_List_Generators"), TC.NZ(BS_List_Generators.Current("Name"), ""), TC.NZ(BS_List_Generators.Current("Sort"), 1L), TC.NZ(BS_List_Generators.Current("Main_Template"), ""), TC.NZ(BS_List_Generators.Current("File_Entry_Template"), ""))
+					If frm.ShowDialog = DialogResult.OK Then
+						If BS_List_Generators.Current("id_List_Generators") > 0 Then
+							Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
+								DS_ML.Upsert_tbl_List_Generators(tran, frm.txb_Name.EditValue.Trim, frm.cmb_Sort.EditValue, frm.txb_Main_Template.EditValue, frm.txb_File_Entry_Template.EditValue, Me.BS_List_Generators.Current("id_List_Generators"))
+								tran.Commit()
+							End Using
+							Refill_List_Generators()
+						End If
+
+						If BS_List_Generators.Current("id_List_Generators") < 0 Then
+							'Add (a shipped List Generator was edited)
+							Dim id_List_Generators As Int64 = 0L
+							Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
+								id_List_Generators = DS_ML.Upsert_tbl_List_Generators(tran, frm.txb_Name.EditValue.Trim, frm.cmb_Sort.EditValue, frm.txb_Main_Template.EditValue, frm.txb_File_Entry_Template.EditValue)
+								tran.Commit()
+							End Using
+							Refill_List_Generators()
+							If id_List_Generators > 0L Then
+								Me.BS_Emulators.Current("id_List_Generators") = id_List_Generators
+							End If
+						End If
+					End If
+				End Using
+		End Select
+	End Sub
+
+#Region "Common Emulators"
+	Private Function DetectEmu() As DS_Rombase.tbl_Rombase_Known_EmulatorsDataTable
+		Dim dtResult As New DS_Rombase.tbl_Rombase_Known_EmulatorsDataTable
+
+		If BS_Emulators.Current Is Nothing Then
+			Return dtResult
+		End If
+
+		Dim exename = TC.NZ(BS_Emulators.Current("Executable"), "").ToLower
+
+		If exename = "" Then
+			Return dtResult
+		End If
+
+		Dim dt As New DS_Rombase.tbl_Rombase_Known_EmulatorsDataTable
+
+		For Each row_Known_Emulator As DS_Rombase.tbl_Rombase_Known_EmulatorsRow In Me.DS_Rombase.tbl_Rombase_Known_Emulators.Rows
+			Dim known_Regex As String = TC.NZ(row_Known_Emulator("Exe_Identifier_Regex"), "").ToLower
+
+			If MKNetLib.cls_MKRegex.IsMatch(exename, known_Regex) Then
+				dtResult.ImportRow(row_Known_Emulator)
+			End If
+		Next
+
+		Return dtResult
+	End Function
+
+	Private Sub btn_AutoConfig_Click(sender As Object, e As EventArgs) Handles btn_AutoConfig.Click
+		AutoConfigure(True)
+	End Sub
+
+	Private Sub AutoConfigure(ByVal Ask As Boolean)
+		Dim dtKnownEmulators = DetectEmu()
+
+		If dtKnownEmulators.Rows.Count = 0 Then
+			If Ask Then
+				MKDXHelper.MessageBox("The emulator couldn't be identified. An automatic configuration is not possible.", "Autoconfigure this Emulator", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+			End If
+			Return
+		End If
+
+		If Ask Then
+			If MKDXHelper.MessageBox("By performing the automatic configuration some settings will be overwritten. Do you want to continue?", "Autoconfig", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) <> DialogResult.Yes Then
+				Return
+			End If
+		End If
+
+		Dim id_Rombase_Known_Emulators As Int64 = 0
+		Dim row_Rombase_Known_Emulators As DS_Rombase.tbl_Rombase_Known_EmulatorsRow = Nothing
+
+		If dtKnownEmulators.Rows.Count = 1 Then
+			row_Rombase_Known_Emulators = dtKnownEmulators.Rows(0)
+		End If
+
+		If dtKnownEmulators.Rows.Count > 1 Then
+			Using frm As New frm_Select_Known_Emulator(dtKnownEmulators)
+				If frm.ShowDialog = DialogResult.OK Then
+					row_Rombase_Known_Emulators = frm.Selected_Known_Emulator_Row
+				End If
+			End Using
+		End If
+
+		If row_Rombase_Known_Emulators Is Nothing Then
+			Return
+		End If
+
+		id_Rombase_Known_Emulators = row_Rombase_Known_Emulators("id_Rombase_Known_Emulators")
+
+		'In any case: we reset the platforms
+		Reset_Platforms()
+		BS_Emulators.Current("ScreenshotDirectory") = DBNull.Value
+		BS_Emulators.Current("StartupParameter") = """%romfullpath%"""
+		BS_Emulators.Current("id_List_Generators") = DBNull.Value
+		BS_Emulators.Current("Libretro_Core") = DBNull.Value
+		Me.DS_ML.tbl_Emulators_Multivolume_Parameters.Clear()
+
+		If Not TC.IsNullNothingOrEmpty(row_Rombase_Known_Emulators("Name")) Then
+			BS_Emulators.Current("Displayname") = row_Rombase_Known_Emulators("Name")
+		End If
+
+		If Not TC.IsNullNothingOrEmpty(row_Rombase_Known_Emulators("StartupParameter")) Then
+			BS_Emulators.Current("StartupParameter") = row_Rombase_Known_Emulators("StartupParameter")
+		End If
+
+		If Not TC.IsNullNothingOrEmpty(row_Rombase_Known_Emulators("ScreenshotDirectory")) Then
+			Dim screenshotdir As String = row_Rombase_Known_Emulators("ScreenshotDirectory")
+			screenshotdir = MKNetLib.cls_MKStringSupport.Clean_Right(TC.NZ(BS_Emulators.Current("InstallDirectory"), ""), "\") & "\" & MKNetLib.cls_MKStringSupport.Clean_Right(MKNetLib.cls_MKStringSupport.Clean_Left(screenshotdir, "\"), "\")
+			If Alphaleonis.Win32.Filesystem.Directory.Exists(screenshotdir) Then
+				BS_Emulators.Current("ScreenshotDirectory") = screenshotdir
+			End If
+		End If
+
+		If Not TC.IsNullNothingOrEmpty(row_Rombase_Known_Emulators("id_List_Generators")) Then
+			BS_Emulators.Current("id_List_Generators") = row_Rombase_Known_Emulators("id_List_Generators")
+		End If
+
+		Me.DS_Rombase.Fill_src_frm_Known_Emulators_Moby_Platforms(Me.DS_Rombase.src_frm_Known_Emulators_Moby_Platforms, id_Rombase_Known_Emulators)
+		Me.DS_Rombase.Fill_src_frm_Known_Emulators_Multivolume_Parameters(Me.DS_Rombase.tbl_Rombase_Known_Emulators_Multivolume_Parameters, id_Rombase_Known_Emulators)
+
+		'Autoconfigure Platforms
+		Dim bSetDefault As Boolean = False
+
+		If Me.DS_Rombase.src_frm_Known_Emulators_Moby_Platforms.Select("Supported = 1").Length > 0 Then
+			bSetDefault = (MKDXHelper.MessageBox("Do you want this emulator to be the default emulator for the platforms it supports?", "Autoconfig", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes)
+		End If
+
+		For Each rowKnownEmuPlatforms As DS_Rombase.src_frm_Known_Emulators_Moby_PlatformsRow In Me.DS_Rombase.src_frm_Known_Emulators_Moby_Platforms.Rows
+			If TC.NZ(rowKnownEmuPlatforms("Supported"), False) = True Then
+				For Each rowPlatform As DS_ML.src_frm_Emulators_Moby_PlatformsRow In Me.DS_ML.src_frm_Emulators_Moby_Platforms.Rows
+					If rowPlatform("id_Moby_Platforms") = rowKnownEmuPlatforms("id_Moby_Platforms") Then
+						rowPlatform("Supported") = True
+						If bSetDefault Then
+							rowPlatform("DefaultEmulator") = True
+						End If
+					End If
+				Next
+			End If
+		Next
+
+		'Multivolume Parameters
+		For Each rowKnownEmuMultivolume As DS_Rombase.tbl_Rombase_Known_Emulators_Multivolume_ParametersRow In Me.DS_Rombase.tbl_Rombase_Known_Emulators_Multivolume_Parameters.Rows
+			Dim row_MV As DS_ML.tbl_Emulators_Multivolume_ParametersRow = Me.DS_ML.tbl_Emulators_Multivolume_Parameters.NewRow
+
+			row_MV.id_Emulators = BS_Emulators.Current("id_Emulators")
+			row_MV("Parameter") = rowKnownEmuMultivolume("Parameter")
+			row_MV("Volume_Number") = rowKnownEmuMultivolume("Volume_Number")
+
+			Me.DS_ML.tbl_Emulators_Multivolume_Parameters.Rows.Add(row_MV)
+		Next
+
+		Me.BS_Emulators.EndEdit()
+
+		Dim sMessage As String = ""
+		sMessage &= "The auto configuration of " & row_Rombase_Known_Emulators("Name") & " was successful."
+
+		If Not TC.IsNullNothingOrEmpty(row_Rombase_Known_Emulators("Autoconfig_Note")) Then
+			sMessage &= ControlChars.CrLf
+			sMessage &= ControlChars.CrLf
+			sMessage &= "IMPORTANT: " & row_Rombase_Known_Emulators("Autoconfig_Note")
+		End If
+
+		MKDXHelper.MessageBox(sMessage, "Autoconfig", MessageBoxButtons.OK, MessageBoxIcon.Information)
+	End Sub
+
+	Private Sub Reset_Platforms()
+		For Each row As DS_ML.src_frm_Emulators_Moby_PlatformsRow In Me.DS_ML.src_frm_Emulators_Moby_Platforms.Rows
+			If TC.NZ(row("Supported"), False) = True Then
+				row("Supported") = False
+			End If
+
+			If TC.NZ(row("DefaultEmulator"), False) = True Then
+				row("DefaultEmulator") = False
+			End If
+		Next
+	End Sub
+
+	Private Sub cmb_List_Generator_EditValueChanged(sender As Object, e As EventArgs) Handles cmb_List_Generator.EditValueChanged
+		Dim edutButtonsEnabled = TC.NZ(Me.cmb_List_Generator.EditValue, 0L) <> 0
+
+		For Each btn As DevExpress.XtraEditors.Controls.EditorButton In Me.cmb_List_Generator.Properties.Buttons()
+			If {DevExpress.XtraEditors.Controls.ButtonPredefines.Minus, DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, DevExpress.XtraEditors.Controls.ButtonPredefines.Delete}.Contains(btn.Kind) Then
+				btn.Enabled = edutButtonsEnabled
+			End If
+		Next
+	End Sub
+#End Region
 End Class

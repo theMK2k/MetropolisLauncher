@@ -1,9 +1,10 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ucr_DOSBox_Config
+
 	Inherits MKNetDXLib.ctl_MKDXUserControl
 
 	'UserControl überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
-	<System.Diagnostics.DebuggerNonUserCode()> _
+	<System.Diagnostics.DebuggerNonUserCode()>
 	Protected Overrides Sub Dispose(ByVal disposing As Boolean)
 		If disposing AndAlso components IsNot Nothing Then
 			components.Dispose()
@@ -17,7 +18,7 @@ Partial Class ucr_DOSBox_Config
 	'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
 	'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
 	'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
-	<System.Diagnostics.DebuggerStepThrough()> _
+	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
 		Me.components = New System.ComponentModel.Container()
 		Dim SuperToolTip2 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
@@ -108,18 +109,18 @@ Partial Class ucr_DOSBox_Config
 		Dim SuperToolTip29 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem29 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem29 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip30 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem30 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem30 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip31 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem31 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem31 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip33 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem33 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem33 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip32 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem32 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem32 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip31 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem31 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem31 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip30 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem30 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem30 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip33 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem33 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem33 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip35 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem35 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem35 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
@@ -150,9 +151,6 @@ Partial Class ucr_DOSBox_Config
 		Dim SuperToolTip42 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem42 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem42 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip46 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem46 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem46 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip45 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem45 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem45 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
@@ -165,6 +163,9 @@ Partial Class ucr_DOSBox_Config
 		Dim SuperToolTip47 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem47 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem47 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip46 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem46 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem46 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip50 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem50 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem50 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
@@ -198,31 +199,31 @@ Partial Class ucr_DOSBox_Config
 		Dim SuperToolTip60 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem60 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem60 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip63 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem63 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem63 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip62 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem62 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem62 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip59 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem59 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem59 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip61 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem61 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem61 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip62 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem62 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem62 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip65 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem65 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem65 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip64 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem64 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem64 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip61 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem61 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem61 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip63 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem63 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem63 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip66 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem66 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim SuperToolTip65 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem65 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem66 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip68 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem68 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem66 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip67 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem67 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem65 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip70 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem70 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem68 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
@@ -295,12 +296,12 @@ Partial Class ucr_DOSBox_Config
 		Dim SuperToolTip91 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem91 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem89 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip93 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem93 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem91 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip94 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem94 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem92 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip93 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem93 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem91 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip95 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem95 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem93 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
@@ -379,12 +380,12 @@ Partial Class ucr_DOSBox_Config
 		Dim SuperToolTip120 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem120 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem118 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip122 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem122 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem120 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip121 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem121 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem119 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip122 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem122 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem120 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip124 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem124 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem122 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
@@ -529,233 +530,233 @@ Partial Class ucr_DOSBox_Config
 		Dim SuperToolTip169 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem169 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem167 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip172 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem172 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem170 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip171 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem171 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem169 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip173 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem173 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem171 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip172 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem172 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem170 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip176 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem176 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem174 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip175 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem175 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem173 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip174 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem174 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem172 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip177 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem177 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem175 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip179 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem179 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem177 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip176 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem176 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem174 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip178 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem178 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem176 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip180 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem180 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem178 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip177 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem177 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem175 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip181 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem181 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem179 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip180 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem180 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem178 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip179 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem179 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem177 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip182 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem182 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem180 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip183 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem183 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem181 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip184 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem184 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem182 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip183 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem183 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem181 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip186 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem186 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem184 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip185 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem185 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem183 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip187 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem187 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem185 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip186 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem186 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem184 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip190 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem190 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem188 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip189 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem189 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem187 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip188 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem188 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem186 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip189 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem189 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem187 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip190 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem190 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem188 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip191 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem191 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem189 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip193 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem193 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem191 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip192 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem192 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem190 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip195 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem195 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem193 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip194 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem194 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem192 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip197 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem197 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem195 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip193 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem193 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem191 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip196 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem196 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem194 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip195 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem195 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem193 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip199 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem199 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem197 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip198 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem198 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem196 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip201 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem201 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem199 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip197 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem197 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem195 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip200 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem200 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem198 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip202 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem202 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem200 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip203 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem203 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem201 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip205 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem205 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem203 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip201 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem201 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem199 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip204 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem204 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem202 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip207 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem207 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem205 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip203 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem203 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem201 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip206 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem206 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem204 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip209 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem209 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem207 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip205 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem205 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem203 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip208 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem208 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem206 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip211 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem211 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem209 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip207 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem207 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem205 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip210 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem210 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem208 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip213 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem213 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem211 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip209 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem209 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem207 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip211 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem211 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem209 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip212 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem212 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem210 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip214 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem214 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem212 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip215 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem215 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem213 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip217 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem217 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem215 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip213 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem213 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem211 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip216 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem216 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem214 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip219 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem219 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip215 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem215 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem213 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip218 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem218 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim SuperToolTip221 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem221 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem217 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim ToolTipItem216 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip217 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem217 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem215 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip220 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem220 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem216 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip223 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem223 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem218 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip219 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem219 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem217 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip222 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem222 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim SuperToolTip225 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem225 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem220 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip221 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem221 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem219 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip224 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem224 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem218 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip227 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem227 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem222 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip223 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem223 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem221 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip225 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem225 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem223 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip226 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem226 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem220 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip229 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem229 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem223 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim ToolTipItem224 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip228 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem228 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem222 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip231 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem231 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem226 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip227 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem227 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem225 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip230 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem230 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem224 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip233 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem233 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem228 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip229 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem229 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem227 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip232 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem232 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem226 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip235 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem235 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem230 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip231 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem231 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem229 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip234 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem234 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem228 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip237 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem237 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem232 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip233 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem233 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem231 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip236 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem236 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem230 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip239 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem239 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem234 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip235 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem235 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem233 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip238 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem238 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem232 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim ToolTipItem236 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip237 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem237 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem235 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip240 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem240 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem234 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip241 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem241 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem235 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip243 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem243 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem237 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip239 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem239 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim SuperToolTip242 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem242 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem236 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip245 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem245 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem239 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim ToolTipItem238 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip241 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem241 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem237 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip244 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem244 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem238 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim ToolTipItem240 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip243 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem243 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem239 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip246 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem246 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip245 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem245 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim SuperToolTip247 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem247 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem241 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip246 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem246 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem240 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip249 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem249 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem243 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
@@ -771,9 +772,204 @@ Partial Class ucr_DOSBox_Config
 		Dim SuperToolTip252 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem252 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem246 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip254 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem254 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem248 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip253 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem253 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem247 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip256 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem256 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem250 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip255 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem255 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem249 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip258 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem258 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem252 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip257 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem257 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem251 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip259 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem259 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem253 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip260 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem260 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem254 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip262 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem262 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem256 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip261 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem261 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem255 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip263 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem263 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem257 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip265 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem265 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem259 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip264 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem264 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem258 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip267 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem267 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem261 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip266 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem266 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem260 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip269 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem269 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem263 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip268 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem268 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem262 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip271 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem271 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem265 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip270 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem270 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem264 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip273 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem273 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem267 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip272 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem272 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem266 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip275 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem275 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem269 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip274 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem274 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem268 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip277 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem277 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem271 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip276 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem276 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem270 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip278 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem278 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem272 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip280 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem280 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem274 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip279 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem279 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem273 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip282 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem282 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem276 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip281 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem281 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem275 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip284 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem284 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem278 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip283 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem283 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem277 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip286 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem286 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem280 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip285 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem285 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem279 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip288 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem288 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem282 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip287 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem287 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem281 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip290 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem290 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem284 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip289 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem289 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem283 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip292 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem292 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem286 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip291 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem291 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem285 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip294 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem294 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem288 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip293 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem293 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem287 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip296 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem296 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem290 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip295 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem295 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem289 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip298 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem298 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem292 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip297 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem297 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem291 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip300 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem300 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem294 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip299 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem299 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem293 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip302 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem302 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem296 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip301 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem301 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem295 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip304 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem304 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem298 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip303 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem303 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem297 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip305 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem305 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem299 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip306 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem306 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem300 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip308 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem308 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem302 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip307 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem307 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem301 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip310 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem310 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem304 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip309 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem309 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem303 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip312 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem312 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem306 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip311 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem311 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem305 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip314 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem314 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem308 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip313 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem313 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem307 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip316 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem316 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem310 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip315 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem315 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem309 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip317 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem317 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem311 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip318 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem318 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem312 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Me.tcl_Dosbox_Config = New MKNetDXLib.ctl_MKDXTabControl()
 		Me.tpg_DOSBox_Settings = New DevExpress.XtraTab.XtraTabPage()
 		Me.chb_sdl_waitonerror = New MKNetDXLib.ctl_MKDXCheckEdit()
@@ -790,7 +986,7 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sdl_priority_2 = New MKNetDXLib.ctl_MKDXLabel()
 		Me.lbl_sdl_priority_1 = New MKNetDXLib.ctl_MKDXLabel()
 		Me.txb_autoexec_after = New MKNetDXLib.ctl_MKDXMemoEdit()
-		Me.Ctl_MKDXLabel1 = New MKNetDXLib.ctl_MKDXLabel()
+		Me.lbl_autoexec_after = New MKNetDXLib.ctl_MKDXLabel()
 		Me.txb_autoexec_before = New MKNetDXLib.ctl_MKDXMemoEdit()
 		Me.lbl_autoexec_before = New MKNetDXLib.ctl_MKDXLabel()
 		Me.txb_ml_customsettings = New MKNetDXLib.ctl_MKDXMemoEdit()
@@ -819,6 +1015,8 @@ Partial Class ucr_DOSBox_Config
 		Me.rb_cpu_cycles_fixed = New MKNetDXLib.ctl_MKDXCheckEdit()
 		Me.rb_cpu_cycles_max = New MKNetDXLib.ctl_MKDXCheckEdit()
 		Me.rb_cpu_cycles_auto = New MKNetDXLib.ctl_MKDXCheckEdit()
+		Me.lbl_p_midi_fluid_soundfont = New MKNetDXLib.ctl_MKDXLabel()
+		Me.txb_p_midi_fluid_soundfont = New MKNetDXLib.ctl_MKDXTextEdit()
 		Me.lbl_cpu_cycles = New MKNetDXLib.ctl_MKDXLabel()
 		Me.tpg_Memory = New DevExpress.XtraTab.XtraTabPage()
 		Me.lbl_dosbox_memsize_unit = New MKNetDXLib.ctl_MKDXLabel()
@@ -1040,11 +1238,17 @@ Partial Class ucr_DOSBox_Config
 		Me.spn_p_dosbox_memsizekb = New MKNetDXLib.ctl_MKDXSpinEdit()
 		Me.lbl_p_dosbox_memsizekb = New MKNetDXLib.ctl_MKDXLabel()
 		Me.tpg_Video_Patches = New DevExpress.XtraTab.XtraTabPage()
+		Me.lbl_p_sdl_surfacenp_sharpness_percent = New MKNetDXLib.ctl_MKDXLabel()
+		Me.cmb_p_voodoo_voodoomem = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.lbl_p_voodoo_voodoomem = New MKNetDXLib.ctl_MKDXLabel()
+		Me.BTA_p_voodoo_voodoomem = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
 		Me.chb_p_glide_splash = New MKNetDXLib.ctl_MKDXCheckEdit()
 		Me.lbl_p_glide_glide = New MKNetDXLib.ctl_MKDXLabel()
 		Me.cmb_p_glide_glide = New MKNetDXLib.ctl_MKDXLookupEdit()
 		Me.BTA_p_glide_glide = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
 		Me.lbl_p_dosbox_forcerate_specific = New MKNetDXLib.ctl_MKDXLabel()
+		Me.spn_p_sdl_surfacenp_sharpness = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.lbl_p_sdl_surfacenp_sharpness = New MKNetDXLib.ctl_MKDXLabel()
 		Me.spn_p_vsync_vsyncrate = New MKNetDXLib.ctl_MKDXSpinEdit()
 		Me.lbl_p_vsync_vsyncrate = New MKNetDXLib.ctl_MKDXLabel()
 		Me.spn_p_dosbox_forcerate_specific = New MKNetDXLib.ctl_MKDXSpinEdit()
@@ -1053,6 +1257,8 @@ Partial Class ucr_DOSBox_Config
 		Me.rb_p_dosbox_forcerate_pal = New MKNetDXLib.ctl_MKDXCheckEdit()
 		Me.rb_p_dosbox_forcerate_ntsc = New MKNetDXLib.ctl_MKDXCheckEdit()
 		Me.rb_p_dosbox_forcerate_disabled = New MKNetDXLib.ctl_MKDXCheckEdit()
+		Me.chb_p_sdl_surface_collapse_dbl = New MKNetDXLib.ctl_MKDXCheckEdit()
+		Me.lbl_p_sdl_surface_collapse_dbl = New MKNetDXLib.ctl_MKDXLabel()
 		Me.chb_p_render_autofit = New MKNetDXLib.ctl_MKDXCheckEdit()
 		Me.lbl_p_render_autofit = New MKNetDXLib.ctl_MKDXLabel()
 		Me.chb_p_sdl_pixelshader_forced = New MKNetDXLib.ctl_MKDXCheckEdit()
@@ -1083,6 +1289,9 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_p_mixer_swapstereo = New MKNetDXLib.ctl_MKDXCheckEdit()
 		Me.lbl_p_mixer_swapstereo = New MKNetDXLib.ctl_MKDXLabel()
 		Me.tpg_Sound_Blaster_Patches = New DevExpress.XtraTab.XtraTabPage()
+		Me.cmb_p_sblaster_oplemu = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.lbl_p_sblaster_oplemu = New MKNetDXLib.ctl_MKDXLabel()
+		Me.BTA_p_sblaster_oplemu = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
 		Me.chb_p_sblaster_goldplay = New MKNetDXLib.ctl_MKDXCheckEdit()
 		Me.lbl_p_sblaster_goldplay = New MKNetDXLib.ctl_MKDXLabel()
 		Me.cmb_p_sblaster_hardwarebase = New MKNetDXLib.ctl_MKDXLookupEdit()
@@ -1094,24 +1303,88 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_p_sblaster_sbtype = New MKNetDXLib.ctl_MKDXLookupEdit()
 		Me.lbl_p_sblaster_sbtype = New MKNetDXLib.ctl_MKDXLabel()
 		Me.tpg_MIDI_Patches = New DevExpress.XtraTab.XtraTabPage()
-		Me.spn_p_midi_mt32_partials = New MKNetDXLib.ctl_MKDXSpinEdit()
-		Me.lbl_p_midi_mt32_partials = New MKNetDXLib.ctl_MKDXLabel()
-		Me.spn_p_midi_mt32_reverb_level = New MKNetDXLib.ctl_MKDXSpinEdit()
-		Me.lbl_p_midi_mt32_reverb_level = New MKNetDXLib.ctl_MKDXLabel()
-		Me.spn_p_midi_mt32_reverb_time = New MKNetDXLib.ctl_MKDXSpinEdit()
-		Me.lbl_p_midi_mt32_reverb_time = New MKNetDXLib.ctl_MKDXLabel()
-		Me.cmb_p_midi_mt32_reverb_mode = New MKNetDXLib.ctl_MKDXLookupEdit()
-		Me.lbl_p_midi_mt32_reverb_mode = New MKNetDXLib.ctl_MKDXLabel()
-		Me.BTA_p_midi_mt32_reverb_mode = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
-		Me.cmb_p_midi_mt32_dac = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.tcl_p_midi = New MKNetDXLib.ctl_MKDXTabControl()
+		Me.tpg_p_midi_mt32 = New DevExpress.XtraTab.XtraTabPage()
 		Me.lbl_p_midi_mt32_dac = New MKNetDXLib.ctl_MKDXLabel()
+		Me.cmb_p_midi_mt32_dac = New MKNetDXLib.ctl_MKDXLookupEdit()
 		Me.BTA_p_midi_mt32_dac = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
-		Me.chb_p_midi_mt32_thread = New MKNetDXLib.ctl_MKDXCheckEdit()
-		Me.lbl_p_midi_mt32_thread = New MKNetDXLib.ctl_MKDXLabel()
-		Me.chb_p_midi_mt32_verbose = New MKNetDXLib.ctl_MKDXCheckEdit()
-		Me.lbl_p_midi_mt32_verbose = New MKNetDXLib.ctl_MKDXLabel()
-		Me.chb_p_midi_mt32_reverse_stereo = New MKNetDXLib.ctl_MKDXCheckEdit()
+		Me.chb_p_midi_mt32_niceampramp = New MKNetDXLib.ctl_MKDXCheckEdit()
+		Me.lbl_p_midi_mt32_niceampramp = New MKNetDXLib.ctl_MKDXLabel()
 		Me.lbl_p_midi_mt32_reverse_stereo = New MKNetDXLib.ctl_MKDXLabel()
+		Me.chb_p_midi_mt32_reverse_stereo = New MKNetDXLib.ctl_MKDXCheckEdit()
+		Me.lbl_p_midi_mt32_verbose = New MKNetDXLib.ctl_MKDXLabel()
+		Me.chb_p_midi_mt32_verbose = New MKNetDXLib.ctl_MKDXCheckEdit()
+		Me.cmb_p_midi_mt32_src_quality = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.lbl_p_midi_mt32_src_quality = New MKNetDXLib.ctl_MKDXLabel()
+		Me.BTA_p_midi_mt32_src_quality = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
+		Me.lbl_p_midi_mt32_thread = New MKNetDXLib.ctl_MKDXLabel()
+		Me.chb_p_midi_mt32_thread = New MKNetDXLib.ctl_MKDXCheckEdit()
+		Me.lbl_p_midi_mt32_reverb_mode = New MKNetDXLib.ctl_MKDXLabel()
+		Me.cmb_p_midi_mt32_reverb_mode = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.BTA_p_midi_mt32_reverb_mode = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
+		Me.cmb_p_midi_mt32_rate = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.lbl_p_midi_mt32_rate = New MKNetDXLib.ctl_MKDXLabel()
+		Me.BTA_p_midi_mt32_rate = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
+		Me.lbl_p_midi_mt32_reverb_time = New MKNetDXLib.ctl_MKDXLabel()
+		Me.spn_p_midi_mt32_reverb_time = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.lbl_p_midi_mt32_reverb_level = New MKNetDXLib.ctl_MKDXLabel()
+		Me.spn_p_midi_mt32_reverb_level = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.lbl_p_midi_mt32_prebuffer_ms = New MKNetDXLib.ctl_MKDXLabel()
+		Me.lbl_p_midi_mt32_partials = New MKNetDXLib.ctl_MKDXLabel()
+		Me.cmb_p_midi_mt32_partials = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.BTA_p_midi_mt32_partials = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
+		Me.spn_p_midi_mt32_prebuffer = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.lbl_p_midi_mt32_prebuffer = New MKNetDXLib.ctl_MKDXLabel()
+		Me.lbl_p_midi_mt32_chunk_ms = New MKNetDXLib.ctl_MKDXLabel()
+		Me.spn_p_midi_mt32_chunk = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.lbl_p_midi_mt32_chunk = New MKNetDXLib.ctl_MKDXLabel()
+		Me.cmb_p_midi_mt32_analog = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.lbl_p_midi_mt32_analog = New MKNetDXLib.ctl_MKDXLabel()
+		Me.BTA_p_midi_mt32_analog = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
+		Me.txb_p_midi_mt32_romdir = New MKNetDXLib.ctl_MKDXTextEdit()
+		Me.lbl_p_midi_mt32_romdir = New MKNetDXLib.ctl_MKDXLabel()
+		Me.btn_p_midi_mt32_romdir = New MKNetDXLib.ctl_MKDXSimpleButton()
+		Me.tpg_p_midi_fluidsynth = New DevExpress.XtraTab.XtraTabPage()
+		Me.lbl_p_midi_fluid_chorus_depth_ms = New MKNetDXLib.ctl_MKDXLabel()
+		Me.lbl_p_midi_fluid_reverb = New MKNetDXLib.ctl_MKDXLabel()
+		Me.chb_p_midi_fluid_reverb = New MKNetDXLib.ctl_MKDXCheckEdit()
+		Me.lbl_p_midi_fluid_chorus_speed_hz = New MKNetDXLib.ctl_MKDXLabel()
+		Me.lbl_p_midi_fluid_polyphony = New MKNetDXLib.ctl_MKDXLabel()
+		Me.spn_p_midi_fluid_polyphony = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.cmb_p_midi_fluid_chorus_type = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.lbl_p_midi_fluid_chorus_type = New MKNetDXLib.ctl_MKDXLabel()
+		Me.BTA_p_midi_fluid_chorus_type = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
+		Me.lbl_p_midi_fluid_periods = New MKNetDXLib.ctl_MKDXLabel()
+		Me.spn_p_midi_fluid_periods = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.lbl_p_midi_fluid_periodsize = New MKNetDXLib.ctl_MKDXLabel()
+		Me.spn_p_midi_fluid_periodsize = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.spn_p_midi_fluid_chorus_depth = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.lbl_p_midi_fluid_chorus_depth = New MKNetDXLib.ctl_MKDXLabel()
+		Me.spn_p_midi_fluid_chorus_speed = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.lbl_p_midi_fluid_chorus_speed = New MKNetDXLib.ctl_MKDXLabel()
+		Me.spn_p_midi_fluid_chorus_level = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.lbl_p_midi_fluid_chorus_level = New MKNetDXLib.ctl_MKDXLabel()
+		Me.btn_p_midi_fluid_soundfont = New MKNetDXLib.ctl_MKDXSimpleButton()
+		Me.spn_p_midi_fluid_chorus_number = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.lbl_p_midi_fluid_chorus_number = New MKNetDXLib.ctl_MKDXLabel()
+		Me.lbl_p_midi_fluid_samplerate = New MKNetDXLib.ctl_MKDXLabel()
+		Me.cmb_p_midi_fluid_samplerate = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.BTA_p_midi_fluid_samplerate = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
+		Me.chb_p_midi_fluid_chorus = New MKNetDXLib.ctl_MKDXCheckEdit()
+		Me.lbl_p_midi_fluid_chorus = New MKNetDXLib.ctl_MKDXLabel()
+		Me.lbl_p_midi_fluid_gain = New MKNetDXLib.ctl_MKDXLabel()
+		Me.spn_p_midi_fluid_gain = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.spn_p_midi_fluid_reverb_level = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.lbl_p_midi_fluid_reverb_level = New MKNetDXLib.ctl_MKDXLabel()
+		Me.lbl_p_midi_fluid_cores = New MKNetDXLib.ctl_MKDXLabel()
+		Me.cmb_p_midi_fluid_cores = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.BTA_p_midi_fluid_cores = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
+		Me.spn_p_midi_fluid_reverb_width = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.lbl_p_midi_fluid_reverb_width = New MKNetDXLib.ctl_MKDXLabel()
+		Me.lbl_p_midi_fluid_reverb_roomsize = New MKNetDXLib.ctl_MKDXLabel()
+		Me.spn_p_midi_fluid_reverb_roomsize = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.spn_p_midi_fluid_reverb_damping = New MKNetDXLib.ctl_MKDXSpinEdit()
+		Me.lbl_p_midi_fluid_reverb_damping = New MKNetDXLib.ctl_MKDXLabel()
 		Me.txb_p_midi_midiconfig = New MKNetDXLib.ctl_MKDXTextEdit()
 		Me.lbl_p_midi_midiconfig = New MKNetDXLib.ctl_MKDXLabel()
 		Me.cmb_p_midi_mididevice = New MKNetDXLib.ctl_MKDXLookupEdit()
@@ -1261,6 +1534,18 @@ Partial Class ucr_DOSBox_Config
 		Me.DataTable48 = New System.Data.DataTable()
 		Me.DataColumn55 = New System.Data.DataColumn()
 		Me.BS_DOSBox_Configs_Compare = New System.Windows.Forms.BindingSource(Me.components)
+		Me.DataColumn56 = New System.Data.DataColumn()
+		Me.DataTable49 = New System.Data.DataTable()
+		Me.DataColumn57 = New System.Data.DataColumn()
+		Me.DataColumn58 = New System.Data.DataColumn()
+		Me.DataTable50 = New System.Data.DataTable()
+		Me.DataColumn59 = New System.Data.DataColumn()
+		Me.BTA_p_midi_mt32_chunk = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
+		Me.BTA_p_midi_mt32_prebuffer = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
+		Me.DataColumn60 = New System.Data.DataColumn()
+		Me.DataTable51 = New System.Data.DataTable()
+		Me.DataColumn61 = New System.Data.DataColumn()
+		Me.DataColumn62 = New System.Data.DataColumn()
 		CType(Me.tcl_Dosbox_Config, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.tcl_Dosbox_Config.SuspendLayout()
 		Me.tpg_DOSBox_Settings.SuspendLayout()
@@ -1290,6 +1575,7 @@ Partial Class ucr_DOSBox_Config
 		CType(Me.rb_cpu_cycles_fixed.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.rb_cpu_cycles_max.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.rb_cpu_cycles_auto.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.txb_p_midi_fluid_soundfont.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.tpg_Memory.SuspendLayout()
 		CType(Me.spn_ml_loadfix.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.chb_ml_useloadfix.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1436,15 +1722,19 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_Memory_Patches.SuspendLayout()
 		CType(Me.spn_p_dosbox_memsizekb.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.tpg_Video_Patches.SuspendLayout()
+		CType(Me.cmb_p_voodoo_voodoomem.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BTA_p_voodoo_voodoomem, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.chb_p_glide_splash.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.cmb_p_glide_glide.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BTA_p_glide_glide, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_sdl_surfacenp_sharpness.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.spn_p_vsync_vsyncrate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.spn_p_dosbox_forcerate_specific.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.rb_p_dosbox_forcerate_specific.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.rb_p_dosbox_forcerate_pal.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.rb_p_dosbox_forcerate_ntsc.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.rb_p_dosbox_forcerate_disabled.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.chb_p_sdl_surface_collapse_dbl.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.chb_p_render_autofit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.chb_p_sdl_pixelshader_forced.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.txb_p_sdl_pixelshader.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1463,6 +1753,8 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_Sound_Patches.SuspendLayout()
 		CType(Me.chb_p_mixer_swapstereo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.tpg_Sound_Blaster_Patches.SuspendLayout()
+		CType(Me.cmb_p_sblaster_oplemu.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BTA_p_sblaster_oplemu, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.chb_p_sblaster_goldplay.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.cmb_p_sblaster_hardwarebase.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BTA_p_sblaster_hardwarebase, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1470,16 +1762,51 @@ Partial Class ucr_DOSBox_Config
 		CType(Me.BTA_p_sblaster_oplmode, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.cmb_p_sblaster_sbtype.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.tpg_MIDI_Patches.SuspendLayout()
-		CType(Me.spn_p_midi_mt32_partials.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.spn_p_midi_mt32_reverb_level.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.spn_p_midi_mt32_reverb_time.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.cmb_p_midi_mt32_reverb_mode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.BTA_p_midi_mt32_reverb_mode, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.tcl_p_midi, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.tcl_p_midi.SuspendLayout()
+		Me.tpg_p_midi_mt32.SuspendLayout()
 		CType(Me.cmb_p_midi_mt32_dac.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BTA_p_midi_mt32_dac, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.chb_p_midi_mt32_thread.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.chb_p_midi_mt32_verbose.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.chb_p_midi_mt32_niceampramp.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.chb_p_midi_mt32_reverse_stereo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.chb_p_midi_mt32_verbose.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.cmb_p_midi_mt32_src_quality.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BTA_p_midi_mt32_src_quality, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.chb_p_midi_mt32_thread.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.cmb_p_midi_mt32_reverb_mode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BTA_p_midi_mt32_reverb_mode, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.cmb_p_midi_mt32_rate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BTA_p_midi_mt32_rate, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_midi_mt32_reverb_time.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_midi_mt32_reverb_level.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.cmb_p_midi_mt32_partials.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BTA_p_midi_mt32_partials, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_midi_mt32_prebuffer.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_midi_mt32_chunk.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.cmb_p_midi_mt32_analog.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BTA_p_midi_mt32_analog, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.txb_p_midi_mt32_romdir.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.tpg_p_midi_fluidsynth.SuspendLayout()
+		CType(Me.chb_p_midi_fluid_reverb.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_midi_fluid_polyphony.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.cmb_p_midi_fluid_chorus_type.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BTA_p_midi_fluid_chorus_type, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_midi_fluid_periods.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_midi_fluid_periodsize.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_midi_fluid_chorus_depth.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_midi_fluid_chorus_speed.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_midi_fluid_chorus_level.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_midi_fluid_chorus_number.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.cmb_p_midi_fluid_samplerate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BTA_p_midi_fluid_samplerate, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.chb_p_midi_fluid_chorus.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_midi_fluid_gain.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_midi_fluid_reverb_level.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.cmb_p_midi_fluid_cores.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BTA_p_midi_fluid_cores, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_midi_fluid_reverb_width.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_midi_fluid_reverb_roomsize.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.spn_p_midi_fluid_reverb_damping.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.txb_p_midi_midiconfig.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.cmb_p_midi_mididevice.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BTA_p_midi_mididevice, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1558,6 +1885,11 @@ Partial Class ucr_DOSBox_Config
 		CType(Me.DataTable47, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.DataTable48, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BS_DOSBox_Configs_Compare, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.DataTable49, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.DataTable50, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BTA_p_midi_mt32_chunk, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BTA_p_midi_mt32_prebuffer, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.DataTable51, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
 		'
 		'tcl_Dosbox_Config
@@ -1567,12 +1899,14 @@ Partial Class ucr_DOSBox_Config
 		Me.tcl_Dosbox_Config.Name = "tcl_Dosbox_Config"
 		Me.tcl_Dosbox_Config.SelectedTabPage = Me.tpg_DOSBox_Settings
 		Me.tcl_Dosbox_Config.ShowTabHeader = DevExpress.Utils.DefaultBoolean.[True]
-		Me.tcl_Dosbox_Config.Size = New System.Drawing.Size(552, 462)
+		Me.tcl_Dosbox_Config.Size = New System.Drawing.Size(552, 463)
 		Me.tcl_Dosbox_Config.TabIndex = 0
 		Me.tcl_Dosbox_Config.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.tpg_DOSBox_Settings, Me.tpg_CPU, Me.tpg_Memory, Me.tpg_Video, Me.tpg_Keyboard, Me.tpg_Sound, Me.tpg_Volume, Me.tpg_Sound_Blaster, Me.tpg_GUS, Me.tpg_MIDI, Me.tpg_Joystick, Me.tpg_Mount_Options, Me.tpg_Serial, Me.tpg_Serial1, Me.tpg_Serial2, Me.tpg_Serial3, Me.tpg_Serial4, Me.tpg_Patch_Options, Me.tpg_DOSBox_Settings_Patches, Me.tpg_CPU_Patches, Me.tpg_Memory_Patches, Me.tpg_Video_Patches, Me.tpg_Sound_Patches, Me.tpg_Sound_Blaster_Patches, Me.tpg_MIDI_Patches, Me.tpg_SSI_2001_Patches, Me.tpg_PS1_Audio_Patches, Me.tpg_Keyboard_Mouse_Patches, Me.tpg_Parallel_Ports_Patches, Me.tpg_NE2000_Patches, Me.tpg_IDE_Patches})
 		'
 		'tpg_DOSBox_Settings
 		'
+		Me.tpg_DOSBox_Settings.AllowTouchScroll = True
+		Me.tpg_DOSBox_Settings.AutoScroll = True
 		Me.tpg_DOSBox_Settings.Controls.Add(Me.chb_sdl_waitonerror)
 		Me.tpg_DOSBox_Settings.Controls.Add(Me.lbl_sdl_waitonerror)
 		Me.tpg_DOSBox_Settings.Controls.Add(Me.cmb_sdl_priority_2)
@@ -1584,7 +1918,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_DOSBox_Settings.Controls.Add(Me.txb_autoexec_before)
 		Me.tpg_DOSBox_Settings.Controls.Add(Me.txb_ml_customsettings)
 		Me.tpg_DOSBox_Settings.Controls.Add(Me.txb_dosbox_language)
-		Me.tpg_DOSBox_Settings.Controls.Add(Me.Ctl_MKDXLabel1)
+		Me.tpg_DOSBox_Settings.Controls.Add(Me.lbl_autoexec_after)
 		Me.tpg_DOSBox_Settings.Controls.Add(Me.lbl_autoexec_before)
 		Me.tpg_DOSBox_Settings.Controls.Add(Me.lbl_ml_customsettings)
 		Me.tpg_DOSBox_Settings.Controls.Add(Me.lbl_dosbox_language)
@@ -1594,7 +1928,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_DOSBox_Settings.Controls.Add(Me.lbl_ml_showconsole)
 		Me.tpg_DOSBox_Settings.Controls.Add(Me.lbl_ml_autoclose)
 		Me.tpg_DOSBox_Settings.Name = "tpg_DOSBox_Settings"
-		Me.tpg_DOSBox_Settings.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_DOSBox_Settings.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_DOSBox_Settings.Text = "DOSBox Settings"
 		'
 		'chb_sdl_waitonerror
@@ -1785,13 +2119,12 @@ Partial Class ucr_DOSBox_Config
 		'
 		'txb_autoexec_after
 		'
-		Me.txb_autoexec_after.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-						Or System.Windows.Forms.AnchorStyles.Left) _
+		Me.txb_autoexec_after.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
 						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.txb_autoexec_after.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "autoexec-after", True))
 		Me.txb_autoexec_after.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "autoexec-after", True))
 		Me.txb_autoexec_after.Location = New System.Drawing.Point(123, 340)
-		Me.txb_autoexec_after.MKBoundLabel = Me.Ctl_MKDXLabel1
+		Me.txb_autoexec_after.MKBoundLabel = Me.lbl_autoexec_after
 		Me.txb_autoexec_after.MKEditValue_Compare = Nothing
 		Me.txb_autoexec_after.Name = "txb_autoexec_after"
 		Me.txb_autoexec_after.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None
@@ -1806,18 +2139,18 @@ Partial Class ucr_DOSBox_Config
 		Me.txb_autoexec_after.SuperTip = SuperToolTip7
 		Me.txb_autoexec_after.TabIndex = 11
 		'
-		'Ctl_MKDXLabel1
+		'lbl_autoexec_after
 		'
-		Me.Ctl_MKDXLabel1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.Ctl_MKDXLabel1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.Ctl_MKDXLabel1.Location = New System.Drawing.Point(3, 340)
-		Me.Ctl_MKDXLabel1.MKBoundControl1 = Me.txb_autoexec_after
-		Me.Ctl_MKDXLabel1.MKBoundControl2 = Nothing
-		Me.Ctl_MKDXLabel1.MKBoundControl3 = Nothing
-		Me.Ctl_MKDXLabel1.MKBoundControl4 = Nothing
-		Me.Ctl_MKDXLabel1.MKBoundControl5 = Nothing
-		Me.Ctl_MKDXLabel1.Name = "Ctl_MKDXLabel1"
-		Me.Ctl_MKDXLabel1.Size = New System.Drawing.Size(117, 20)
+		Me.lbl_autoexec_after.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_autoexec_after.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_autoexec_after.Location = New System.Drawing.Point(3, 340)
+		Me.lbl_autoexec_after.MKBoundControl1 = Me.txb_autoexec_after
+		Me.lbl_autoexec_after.MKBoundControl2 = Nothing
+		Me.lbl_autoexec_after.MKBoundControl3 = Nothing
+		Me.lbl_autoexec_after.MKBoundControl4 = Nothing
+		Me.lbl_autoexec_after.MKBoundControl5 = Nothing
+		Me.lbl_autoexec_after.Name = "lbl_autoexec_after"
+		Me.lbl_autoexec_after.Size = New System.Drawing.Size(117, 20)
 		ToolTipTitleItem6.Text = "Autoexec Append"
 		ToolTipItem6.LeftIndent = 6
 		ToolTipItem6.Text = "Provide lines here that will appear right after volume, ipx and mount lines in th" &
@@ -1825,9 +2158,9 @@ Partial Class ucr_DOSBox_Config
 		""
 		SuperToolTip6.Items.Add(ToolTipTitleItem6)
 		SuperToolTip6.Items.Add(ToolTipItem6)
-		Me.Ctl_MKDXLabel1.SuperTip = SuperToolTip6
-		Me.Ctl_MKDXLabel1.TabIndex = 16
-		Me.Ctl_MKDXLabel1.Text = "Autoexec Append:"
+		Me.lbl_autoexec_after.SuperTip = SuperToolTip6
+		Me.lbl_autoexec_after.TabIndex = 16
+		Me.lbl_autoexec_after.Text = "Autoexec Append:"
 		'
 		'txb_autoexec_before
 		'
@@ -2063,6 +2396,8 @@ Partial Class ucr_DOSBox_Config
 		'
 		'tpg_CPU
 		'
+		Me.tpg_CPU.AllowTouchScroll = True
+		Me.tpg_CPU.AutoScroll = True
 		Me.tpg_CPU.Controls.Add(Me.lbl_cpu_cycledown_unit)
 		Me.tpg_CPU.Controls.Add(Me.lbl_cpu_cycleup_unit)
 		Me.tpg_CPU.Controls.Add(Me.spn_cpu_cycledown)
@@ -2079,7 +2414,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_CPU.Controls.Add(Me.lbl_cpu_type)
 		Me.tpg_CPU.Controls.Add(Me.lbl_cpu_core)
 		Me.tpg_CPU.Name = "tpg_CPU"
-		Me.tpg_CPU.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_CPU.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_CPU.Text = "CPU"
 		'
 		'lbl_cpu_cycledown_unit
@@ -2382,22 +2717,63 @@ Partial Class ucr_DOSBox_Config
 		'rb_cpu_cycles_auto
 		'
 		Me.rb_cpu_cycles_auto.Location = New System.Drawing.Point(123, 51)
-		Me.rb_cpu_cycles_auto.MKBoundLabel = Nothing
+		Me.rb_cpu_cycles_auto.MKBoundLabel = Me.lbl_p_midi_fluid_soundfont
 		Me.rb_cpu_cycles_auto.MKEditValue_Compare = Nothing
 		Me.rb_cpu_cycles_auto.Name = "rb_cpu_cycles_auto"
 		Me.rb_cpu_cycles_auto.Properties.Caption = "auto"
 		Me.rb_cpu_cycles_auto.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio
 		Me.rb_cpu_cycles_auto.Properties.RadioGroupIndex = 1
 		Me.rb_cpu_cycles_auto.Size = New System.Drawing.Size(54, 19)
-		ToolTipTitleItem30.Text = "CPU Cycles = auto"
-		ToolTipItem30.LeftIndent = 6
-		ToolTipItem30.Text = "Try to guess what a game needs. It usually works, but can fail for certain games." &
+		ToolTipTitleItem32.Text = "CPU Cycles = auto"
+		ToolTipItem32.LeftIndent = 6
+		ToolTipItem32.Text = "Try to guess what a game needs. It usually works, but can fail for certain games." &
 		""
-		SuperToolTip30.Items.Add(ToolTipTitleItem30)
-		SuperToolTip30.Items.Add(ToolTipItem30)
-		Me.rb_cpu_cycles_auto.SuperTip = SuperToolTip30
+		SuperToolTip32.Items.Add(ToolTipTitleItem32)
+		SuperToolTip32.Items.Add(ToolTipItem32)
+		Me.rb_cpu_cycles_auto.SuperTip = SuperToolTip32
 		Me.rb_cpu_cycles_auto.TabIndex = 2
 		Me.rb_cpu_cycles_auto.TabStop = False
+		'
+		'lbl_p_midi_fluid_soundfont
+		'
+		Me.lbl_p_midi_fluid_soundfont.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_soundfont.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_soundfont.Location = New System.Drawing.Point(3, 3)
+		Me.lbl_p_midi_fluid_soundfont.MKBoundControl1 = Me.txb_p_midi_fluid_soundfont
+		Me.lbl_p_midi_fluid_soundfont.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_soundfont.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_soundfont.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_soundfont.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_soundfont.Name = "lbl_p_midi_fluid_soundfont"
+		Me.lbl_p_midi_fluid_soundfont.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem31.Text = "Fluid SoundFont"
+		ToolTipItem31.LeftIndent = 6
+		ToolTipItem31.Text = "SoundFont to use with Fluidsynth. One must be specified."
+		SuperToolTip31.Items.Add(ToolTipTitleItem31)
+		SuperToolTip31.Items.Add(ToolTipItem31)
+		Me.lbl_p_midi_fluid_soundfont.SuperTip = SuperToolTip31
+		Me.lbl_p_midi_fluid_soundfont.TabIndex = 37
+		Me.lbl_p_midi_fluid_soundfont.Text = "Fluid SoundFont:"
+		'
+		'txb_p_midi_fluid_soundfont
+		'
+		Me.txb_p_midi_fluid_soundfont.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.txb_p_midi_fluid_soundfont.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_soundfont", True))
+		Me.txb_p_midi_fluid_soundfont.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_soundfont", True))
+		Me.txb_p_midi_fluid_soundfont.Location = New System.Drawing.Point(123, 3)
+		Me.txb_p_midi_fluid_soundfont.MKBoundLabel = Me.lbl_p_midi_fluid_soundfont
+		Me.txb_p_midi_fluid_soundfont.MKEditValue_Compare = Nothing
+		Me.txb_p_midi_fluid_soundfont.Name = "txb_p_midi_fluid_soundfont"
+		Me.txb_p_midi_fluid_soundfont.Size = New System.Drawing.Size(378, 20)
+		SuperToolTip30.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
+		ToolTipTitleItem30.Text = "Fluid SoundFont"
+		ToolTipItem30.LeftIndent = 6
+		ToolTipItem30.Text = "SoundFont to use with Fluidsynth. One must be specified."
+		SuperToolTip30.Items.Add(ToolTipTitleItem30)
+		SuperToolTip30.Items.Add(ToolTipItem30)
+		Me.txb_p_midi_fluid_soundfont.SuperTip = SuperToolTip30
+		Me.txb_p_midi_fluid_soundfont.TabIndex = 35
 		'
 		'lbl_cpu_cycles
 		'
@@ -2411,18 +2787,20 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_cpu_cycles.MKBoundControl5 = Nothing
 		Me.lbl_cpu_cycles.Name = "lbl_cpu_cycles"
 		Me.lbl_cpu_cycles.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem31.Text = "CPU Cycles"
-		ToolTipItem31.LeftIndent = 6
-		ToolTipItem31.Text = "Amount of instructions DOSBox tries to emulate each millisecond. Setting this val" &
+		ToolTipTitleItem33.Text = "CPU Cycles"
+		ToolTipItem33.LeftIndent = 6
+		ToolTipItem33.Text = "Amount of instructions DOSBox tries to emulate each millisecond. Setting this val" &
 		"ue too high results in sound dropouts and lags."
-		SuperToolTip31.Items.Add(ToolTipTitleItem31)
-		SuperToolTip31.Items.Add(ToolTipItem31)
-		Me.lbl_cpu_cycles.SuperTip = SuperToolTip31
+		SuperToolTip33.Items.Add(ToolTipTitleItem33)
+		SuperToolTip33.Items.Add(ToolTipItem33)
+		Me.lbl_cpu_cycles.SuperTip = SuperToolTip33
 		Me.lbl_cpu_cycles.TabIndex = 11
 		Me.lbl_cpu_cycles.Text = "CPU Cycles:"
 		'
 		'tpg_Memory
 		'
+		Me.tpg_Memory.AllowTouchScroll = True
+		Me.tpg_Memory.AutoScroll = True
 		Me.tpg_Memory.Controls.Add(Me.lbl_dosbox_memsize_unit)
 		Me.tpg_Memory.Controls.Add(Me.spn_ml_loadfix)
 		Me.tpg_Memory.Controls.Add(Me.chb_ml_useloadfix)
@@ -2437,7 +2815,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_Memory.Controls.Add(Me.spn_dosbox_memsize)
 		Me.tpg_Memory.Controls.Add(Me.lbl_dosbox_memsize)
 		Me.tpg_Memory.Name = "tpg_Memory"
-		Me.tpg_Memory.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Memory.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Memory.Text = "Memory"
 		'
 		'lbl_dosbox_memsize_unit
@@ -2471,12 +2849,12 @@ Partial Class ucr_DOSBox_Config
 		Me.spn_ml_loadfix.Properties.MaxValue = New Decimal(New Integer() {512, 0, 0, 0})
 		Me.spn_ml_loadfix.Properties.MinValue = New Decimal(New Integer() {1, 0, 0, 0})
 		Me.spn_ml_loadfix.Size = New System.Drawing.Size(54, 20)
-		ToolTipTitleItem33.Text = "Loadfix Memory (kB)"
-		ToolTipItem33.LeftIndent = 6
-		ToolTipItem33.Text = "Set here, how much memory should be allocated by loadfix."
-		SuperToolTip33.Items.Add(ToolTipTitleItem33)
-		SuperToolTip33.Items.Add(ToolTipItem33)
-		Me.spn_ml_loadfix.SuperTip = SuperToolTip33
+		ToolTipTitleItem35.Text = "Loadfix Memory (kB)"
+		ToolTipItem35.LeftIndent = 6
+		ToolTipItem35.Text = "Set here, how much memory should be allocated by loadfix."
+		SuperToolTip35.Items.Add(ToolTipTitleItem35)
+		SuperToolTip35.Items.Add(ToolTipItem35)
+		Me.spn_ml_loadfix.SuperTip = SuperToolTip35
 		Me.spn_ml_loadfix.TabIndex = 7
 		Me.spn_ml_loadfix.Visible = False
 		'
@@ -2493,12 +2871,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_ml_loadfix.MKBoundControl5 = Nothing
 		Me.lbl_ml_loadfix.Name = "lbl_ml_loadfix"
 		Me.lbl_ml_loadfix.Size = New System.Drawing.Size(106, 20)
-		ToolTipTitleItem32.Text = "Loadfix Memory (kB)"
-		ToolTipItem32.LeftIndent = 6
-		ToolTipItem32.Text = "Set here, how much memory should be allocated by loadfix."
-		SuperToolTip32.Items.Add(ToolTipTitleItem32)
-		SuperToolTip32.Items.Add(ToolTipItem32)
-		Me.lbl_ml_loadfix.SuperTip = SuperToolTip32
+		ToolTipTitleItem34.Text = "Loadfix Memory (kB)"
+		ToolTipItem34.LeftIndent = 6
+		ToolTipItem34.Text = "Set here, how much memory should be allocated by loadfix."
+		SuperToolTip34.Items.Add(ToolTipTitleItem34)
+		SuperToolTip34.Items.Add(ToolTipItem34)
+		Me.lbl_ml_loadfix.SuperTip = SuperToolTip34
 		Me.lbl_ml_loadfix.TabIndex = 6
 		Me.lbl_ml_loadfix.Text = "Loadfix Memory (kB):"
 		Me.lbl_ml_loadfix.Visible = False
@@ -2513,13 +2891,13 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_ml_useloadfix.Name = "chb_ml_useloadfix"
 		Me.chb_ml_useloadfix.Properties.Caption = ""
 		Me.chb_ml_useloadfix.Size = New System.Drawing.Size(54, 19)
-		ToolTipTitleItem35.Text = "Use Loadfix"
-		ToolTipItem35.LeftIndent = 6
-		ToolTipItem35.Text = "LOADFIX is a program to reduce the amount of available conventional memory." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "It" &
+		ToolTipTitleItem37.Text = "Use Loadfix"
+		ToolTipItem37.LeftIndent = 6
+		ToolTipItem37.Text = "LOADFIX is a program to reduce the amount of available conventional memory." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "It" &
 		"'s useful for old programs which don't expect much memory to be free."
-		SuperToolTip35.Items.Add(ToolTipTitleItem35)
-		SuperToolTip35.Items.Add(ToolTipItem35)
-		Me.chb_ml_useloadfix.SuperTip = SuperToolTip35
+		SuperToolTip37.Items.Add(ToolTipTitleItem37)
+		SuperToolTip37.Items.Add(ToolTipItem37)
+		Me.chb_ml_useloadfix.SuperTip = SuperToolTip37
 		Me.chb_ml_useloadfix.TabIndex = 5
 		Me.chb_ml_useloadfix.Visible = False
 		'
@@ -2535,13 +2913,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_ml_useloadfix.MKBoundControl5 = Nothing
 		Me.lbl_ml_useloadfix.Name = "lbl_ml_useloadfix"
 		Me.lbl_ml_useloadfix.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem34.Text = "Use Loadfix"
-		ToolTipItem34.LeftIndent = 6
-		ToolTipItem34.Text = "LOADFIX is a program to reduce the amount of available conventional memory." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "It" &
+		ToolTipTitleItem36.Text = "Use Loadfix"
+		ToolTipItem36.LeftIndent = 6
+		ToolTipItem36.Text = "LOADFIX is a program to reduce the amount of available conventional memory." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "It" &
 		"'s useful for old programs which don't expect much memory to be free."
-		SuperToolTip34.Items.Add(ToolTipTitleItem34)
-		SuperToolTip34.Items.Add(ToolTipItem34)
-		Me.lbl_ml_useloadfix.SuperTip = SuperToolTip34
+		SuperToolTip36.Items.Add(ToolTipTitleItem36)
+		SuperToolTip36.Items.Add(ToolTipItem36)
+		Me.lbl_ml_useloadfix.SuperTip = SuperToolTip36
 		Me.lbl_ml_useloadfix.TabIndex = 16
 		Me.lbl_ml_useloadfix.Text = "Use Loadfix:"
 		Me.lbl_ml_useloadfix.Visible = False
@@ -2556,12 +2934,12 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_dos_umb.Name = "chb_dos_umb"
 		Me.chb_dos_umb.Properties.Caption = ""
 		Me.chb_dos_umb.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem37.Text = "UMB Support"
-		ToolTipItem37.LeftIndent = 6
-		ToolTipItem37.Text = "Enable support for the upper memory block in the upper memory area."
-		SuperToolTip37.Items.Add(ToolTipTitleItem37)
-		SuperToolTip37.Items.Add(ToolTipItem37)
-		Me.chb_dos_umb.SuperTip = SuperToolTip37
+		ToolTipTitleItem39.Text = "UMB Support"
+		ToolTipItem39.LeftIndent = 6
+		ToolTipItem39.Text = "Enable support for the upper memory block in the upper memory area."
+		SuperToolTip39.Items.Add(ToolTipTitleItem39)
+		SuperToolTip39.Items.Add(ToolTipItem39)
+		Me.chb_dos_umb.SuperTip = SuperToolTip39
 		Me.chb_dos_umb.TabIndex = 4
 		'
 		'lbl_dos_umb
@@ -2576,12 +2954,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_dos_umb.MKBoundControl5 = Nothing
 		Me.lbl_dos_umb.Name = "lbl_dos_umb"
 		Me.lbl_dos_umb.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem36.Text = "UMB Support"
-		ToolTipItem36.LeftIndent = 6
-		ToolTipItem36.Text = "Enable support for the upper memory block in the upper memory area."
-		SuperToolTip36.Items.Add(ToolTipTitleItem36)
-		SuperToolTip36.Items.Add(ToolTipItem36)
-		Me.lbl_dos_umb.SuperTip = SuperToolTip36
+		ToolTipTitleItem38.Text = "UMB Support"
+		ToolTipItem38.LeftIndent = 6
+		ToolTipItem38.Text = "Enable support for the upper memory block in the upper memory area."
+		SuperToolTip38.Items.Add(ToolTipTitleItem38)
+		SuperToolTip38.Items.Add(ToolTipItem38)
+		Me.lbl_dos_umb.SuperTip = SuperToolTip38
 		Me.lbl_dos_umb.TabIndex = 16
 		Me.lbl_dos_umb.Text = "UMB Support:"
 		'
@@ -2595,12 +2973,12 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_dos_ems.Name = "chb_dos_ems"
 		Me.chb_dos_ems.Properties.Caption = ""
 		Me.chb_dos_ems.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem39.Text = "EMS Support"
-		ToolTipItem39.LeftIndent = 6
-		ToolTipItem39.Text = "Enable support for expanded memory."
-		SuperToolTip39.Items.Add(ToolTipTitleItem39)
-		SuperToolTip39.Items.Add(ToolTipItem39)
-		Me.chb_dos_ems.SuperTip = SuperToolTip39
+		ToolTipTitleItem41.Text = "EMS Support"
+		ToolTipItem41.LeftIndent = 6
+		ToolTipItem41.Text = "Enable support for expanded memory."
+		SuperToolTip41.Items.Add(ToolTipTitleItem41)
+		SuperToolTip41.Items.Add(ToolTipItem41)
+		Me.chb_dos_ems.SuperTip = SuperToolTip41
 		Me.chb_dos_ems.TabIndex = 3
 		'
 		'lbl_dos_ems
@@ -2615,12 +2993,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_dos_ems.MKBoundControl5 = Nothing
 		Me.lbl_dos_ems.Name = "lbl_dos_ems"
 		Me.lbl_dos_ems.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem38.Text = "EMS Support"
-		ToolTipItem38.LeftIndent = 6
-		ToolTipItem38.Text = "Enable support for expanded memory."
-		SuperToolTip38.Items.Add(ToolTipTitleItem38)
-		SuperToolTip38.Items.Add(ToolTipItem38)
-		Me.lbl_dos_ems.SuperTip = SuperToolTip38
+		ToolTipTitleItem40.Text = "EMS Support"
+		ToolTipItem40.LeftIndent = 6
+		ToolTipItem40.Text = "Enable support for expanded memory."
+		SuperToolTip40.Items.Add(ToolTipTitleItem40)
+		SuperToolTip40.Items.Add(ToolTipItem40)
+		Me.lbl_dos_ems.SuperTip = SuperToolTip40
 		Me.lbl_dos_ems.TabIndex = 15
 		Me.lbl_dos_ems.Text = "EMS Support:"
 		'
@@ -2634,12 +3012,12 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_dos_xms.Name = "chb_dos_xms"
 		Me.chb_dos_xms.Properties.Caption = ""
 		Me.chb_dos_xms.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem41.Text = "XMS Support"
-		ToolTipItem41.LeftIndent = 6
-		ToolTipItem41.Text = "Enable support for extended memory."
-		SuperToolTip41.Items.Add(ToolTipTitleItem41)
-		SuperToolTip41.Items.Add(ToolTipItem41)
-		Me.chb_dos_xms.SuperTip = SuperToolTip41
+		ToolTipTitleItem43.Text = "XMS Support"
+		ToolTipItem43.LeftIndent = 6
+		ToolTipItem43.Text = "Enable support for extended memory."
+		SuperToolTip43.Items.Add(ToolTipTitleItem43)
+		SuperToolTip43.Items.Add(ToolTipItem43)
+		Me.chb_dos_xms.SuperTip = SuperToolTip43
 		Me.chb_dos_xms.TabIndex = 2
 		'
 		'lbl_dos_xms
@@ -2654,12 +3032,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_dos_xms.MKBoundControl5 = Nothing
 		Me.lbl_dos_xms.Name = "lbl_dos_xms"
 		Me.lbl_dos_xms.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem40.Text = "XMS Support"
-		ToolTipItem40.LeftIndent = 6
-		ToolTipItem40.Text = "Enable support for extended memory."
-		SuperToolTip40.Items.Add(ToolTipTitleItem40)
-		SuperToolTip40.Items.Add(ToolTipItem40)
-		Me.lbl_dos_xms.SuperTip = SuperToolTip40
+		ToolTipTitleItem42.Text = "XMS Support"
+		ToolTipItem42.LeftIndent = 6
+		ToolTipItem42.Text = "Enable support for extended memory."
+		SuperToolTip42.Items.Add(ToolTipTitleItem42)
+		SuperToolTip42.Items.Add(ToolTipItem42)
+		Me.lbl_dos_xms.SuperTip = SuperToolTip42
 		Me.lbl_dos_xms.TabIndex = 17
 		Me.lbl_dos_xms.Text = "XMS Support:"
 		'
@@ -2678,12 +3056,12 @@ Partial Class ucr_DOSBox_Config
 		Me.spn_dosbox_memsize.Properties.MaxValue = New Decimal(New Integer() {128, 0, 0, 0})
 		Me.spn_dosbox_memsize.Properties.MinValue = New Decimal(New Integer() {1, 0, 0, 0})
 		Me.spn_dosbox_memsize.Size = New System.Drawing.Size(54, 20)
-		ToolTipTitleItem43.Text = "Memory Size"
-		ToolTipItem43.LeftIndent = 6
-		ToolTipItem43.Text = resources.GetString("ToolTipItem43.Text")
-		SuperToolTip43.Items.Add(ToolTipTitleItem43)
-		SuperToolTip43.Items.Add(ToolTipItem43)
-		Me.spn_dosbox_memsize.SuperTip = SuperToolTip43
+		ToolTipTitleItem45.Text = "Memory Size"
+		ToolTipItem45.LeftIndent = 6
+		ToolTipItem45.Text = resources.GetString("ToolTipItem45.Text")
+		SuperToolTip45.Items.Add(ToolTipTitleItem45)
+		SuperToolTip45.Items.Add(ToolTipItem45)
+		Me.spn_dosbox_memsize.SuperTip = SuperToolTip45
 		Me.spn_dosbox_memsize.TabIndex = 0
 		'
 		'lbl_dosbox_memsize
@@ -2698,17 +3076,19 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_dosbox_memsize.MKBoundControl5 = Nothing
 		Me.lbl_dosbox_memsize.Name = "lbl_dosbox_memsize"
 		Me.lbl_dosbox_memsize.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem42.Text = "Memory Size"
-		ToolTipItem42.LeftIndent = 6
-		ToolTipItem42.Text = resources.GetString("ToolTipItem42.Text")
-		SuperToolTip42.Items.Add(ToolTipTitleItem42)
-		SuperToolTip42.Items.Add(ToolTipItem42)
-		Me.lbl_dosbox_memsize.SuperTip = SuperToolTip42
+		ToolTipTitleItem44.Text = "Memory Size"
+		ToolTipItem44.LeftIndent = 6
+		ToolTipItem44.Text = resources.GetString("ToolTipItem44.Text")
+		SuperToolTip44.Items.Add(ToolTipTitleItem44)
+		SuperToolTip44.Items.Add(ToolTipItem44)
+		Me.lbl_dosbox_memsize.SuperTip = SuperToolTip44
 		Me.lbl_dosbox_memsize.TabIndex = 6
 		Me.lbl_dosbox_memsize.Text = "Memory Size:"
 		'
 		'tpg_Video
 		'
+		Me.tpg_Video.AllowTouchScroll = True
+		Me.tpg_Video.AutoScroll = True
 		Me.tpg_Video.Controls.Add(Me.chb_render_scaler_forced)
 		Me.tpg_Video.Controls.Add(Me.spn_render_frameskip)
 		Me.tpg_Video.Controls.Add(Me.lbl_render_frameskip)
@@ -2730,7 +3110,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_Video.Controls.Add(Me.lbl_sdl_fullresolution)
 		Me.tpg_Video.Controls.Add(Me.lbl_resolution)
 		Me.tpg_Video.Name = "tpg_Video"
-		Me.tpg_Video.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Video.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Video.Text = "Video"
 		'
 		'chb_render_scaler_forced
@@ -2743,13 +3123,13 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_render_scaler_forced.Name = "chb_render_scaler_forced"
 		Me.chb_render_scaler_forced.Properties.Caption = "forced"
 		Me.chb_render_scaler_forced.Size = New System.Drawing.Size(75, 19)
-		ToolTipTitleItem46.Text = "Scaler"
-		ToolTipItem46.LeftIndent = 6
-		ToolTipItem46.Text = "Scaler used to enlarge/enhance low resolution modes. If forced, then the scaler w" &
+		ToolTipTitleItem48.Text = "Scaler"
+		ToolTipItem48.LeftIndent = 6
+		ToolTipItem48.Text = "Scaler used to enlarge/enhance low resolution modes. If forced, then the scaler w" &
 		"ill be used even if the result might not be desired."
-		SuperToolTip46.Items.Add(ToolTipTitleItem46)
-		SuperToolTip46.Items.Add(ToolTipItem46)
-		Me.chb_render_scaler_forced.SuperTip = SuperToolTip46
+		SuperToolTip48.Items.Add(ToolTipTitleItem48)
+		SuperToolTip48.Items.Add(ToolTipItem48)
+		Me.chb_render_scaler_forced.SuperTip = SuperToolTip48
 		Me.chb_render_scaler_forced.TabIndex = 10
 		'
 		'lbl_render_scaler
@@ -2764,13 +3144,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_render_scaler.MKBoundControl5 = Nothing
 		Me.lbl_render_scaler.Name = "lbl_render_scaler"
 		Me.lbl_render_scaler.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem45.Text = "Scaler"
-		ToolTipItem45.LeftIndent = 6
-		ToolTipItem45.Text = "Scaler used to enlarge/enhance low resolution modes. If forced, then the scaler w" &
+		ToolTipTitleItem47.Text = "Scaler"
+		ToolTipItem47.LeftIndent = 6
+		ToolTipItem47.Text = "Scaler used to enlarge/enhance low resolution modes. If forced, then the scaler w" &
 		"ill be used even if the result might not be desired."
-		SuperToolTip45.Items.Add(ToolTipTitleItem45)
-		SuperToolTip45.Items.Add(ToolTipItem45)
-		Me.lbl_render_scaler.SuperTip = SuperToolTip45
+		SuperToolTip47.Items.Add(ToolTipTitleItem47)
+		SuperToolTip47.Items.Add(ToolTipItem47)
+		Me.lbl_render_scaler.SuperTip = SuperToolTip47
 		Me.lbl_render_scaler.TabIndex = 20
 		Me.lbl_render_scaler.Text = "Scaler:"
 		'
@@ -2791,13 +3171,13 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_render_scaler.Properties.ShowHeader = False
 		Me.cmb_render_scaler.Properties.ValueMember = "value"
 		Me.cmb_render_scaler.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem44.Text = "Scaler"
-		ToolTipItem44.LeftIndent = 6
-		ToolTipItem44.Text = "Scaler used to enlarge/enhance low resolution modes. If forced, then the scaler w" &
+		ToolTipTitleItem46.Text = "Scaler"
+		ToolTipItem46.LeftIndent = 6
+		ToolTipItem46.Text = "Scaler used to enlarge/enhance low resolution modes. If forced, then the scaler w" &
 		"ill be used even if the result might not be desired."
-		SuperToolTip44.Items.Add(ToolTipTitleItem44)
-		SuperToolTip44.Items.Add(ToolTipItem44)
-		Me.cmb_render_scaler.SuperTip = SuperToolTip44
+		SuperToolTip46.Items.Add(ToolTipTitleItem46)
+		SuperToolTip46.Items.Add(ToolTipItem46)
+		Me.cmb_render_scaler.SuperTip = SuperToolTip46
 		Me.cmb_render_scaler.TabIndex = 9
 		'
 		'BTA_render_scaler
@@ -2827,12 +3207,12 @@ Partial Class ucr_DOSBox_Config
 		Me.spn_render_frameskip.Properties.Mask.EditMask = "N00"
 		Me.spn_render_frameskip.Properties.MaxValue = New Decimal(New Integer() {20, 0, 0, 0})
 		Me.spn_render_frameskip.Size = New System.Drawing.Size(54, 20)
-		ToolTipTitleItem48.Text = "Frameskip"
-		ToolTipItem48.LeftIndent = 6
-		ToolTipItem48.Text = "How many frames DOSBox skips before drawing one."
-		SuperToolTip48.Items.Add(ToolTipTitleItem48)
-		SuperToolTip48.Items.Add(ToolTipItem48)
-		Me.spn_render_frameskip.SuperTip = SuperToolTip48
+		ToolTipTitleItem50.Text = "Frameskip"
+		ToolTipItem50.LeftIndent = 6
+		ToolTipItem50.Text = "How many frames DOSBox skips before drawing one."
+		SuperToolTip50.Items.Add(ToolTipTitleItem50)
+		SuperToolTip50.Items.Add(ToolTipItem50)
+		Me.spn_render_frameskip.SuperTip = SuperToolTip50
 		Me.spn_render_frameskip.TabIndex = 11
 		'
 		'lbl_render_frameskip
@@ -2847,12 +3227,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_render_frameskip.MKBoundControl5 = Nothing
 		Me.lbl_render_frameskip.Name = "lbl_render_frameskip"
 		Me.lbl_render_frameskip.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem47.Text = "Frameskip"
-		ToolTipItem47.LeftIndent = 6
-		ToolTipItem47.Text = "How many frames DOSBox skips before drawing one."
-		SuperToolTip47.Items.Add(ToolTipTitleItem47)
-		SuperToolTip47.Items.Add(ToolTipItem47)
-		Me.lbl_render_frameskip.SuperTip = SuperToolTip47
+		ToolTipTitleItem49.Text = "Frameskip"
+		ToolTipItem49.LeftIndent = 6
+		ToolTipItem49.Text = "How many frames DOSBox skips before drawing one."
+		SuperToolTip49.Items.Add(ToolTipTitleItem49)
+		SuperToolTip49.Items.Add(ToolTipItem49)
+		Me.lbl_render_frameskip.SuperTip = SuperToolTip49
 		Me.lbl_render_frameskip.TabIndex = 21
 		Me.lbl_render_frameskip.Text = "Frameskip:"
 		'
@@ -2873,12 +3253,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_dosbox_machine.Properties.ShowHeader = False
 		Me.cmb_dosbox_machine.Properties.ValueMember = "value"
 		Me.cmb_dosbox_machine.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem50.Text = "Graphics Adapter"
-		ToolTipItem50.LeftIndent = 6
-		ToolTipItem50.Text = "The type of graphics adapter (machine) emulated by DOSBox."
-		SuperToolTip50.Items.Add(ToolTipTitleItem50)
-		SuperToolTip50.Items.Add(ToolTipItem50)
-		Me.cmb_dosbox_machine.SuperTip = SuperToolTip50
+		ToolTipTitleItem52.Text = "Graphics Adapter"
+		ToolTipItem52.LeftIndent = 6
+		ToolTipItem52.Text = "The type of graphics adapter (machine) emulated by DOSBox."
+		SuperToolTip52.Items.Add(ToolTipTitleItem52)
+		SuperToolTip52.Items.Add(ToolTipItem52)
+		Me.cmb_dosbox_machine.SuperTip = SuperToolTip52
 		Me.cmb_dosbox_machine.TabIndex = 8
 		'
 		'lbl_dosbox_machine
@@ -2893,12 +3273,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_dosbox_machine.MKBoundControl5 = Nothing
 		Me.lbl_dosbox_machine.Name = "lbl_dosbox_machine"
 		Me.lbl_dosbox_machine.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem49.Text = "Graphics Adapter"
-		ToolTipItem49.LeftIndent = 6
-		ToolTipItem49.Text = "The type of graphics adapter (machine) emulated by DOSBox."
-		SuperToolTip49.Items.Add(ToolTipTitleItem49)
-		SuperToolTip49.Items.Add(ToolTipItem49)
-		Me.lbl_dosbox_machine.SuperTip = SuperToolTip49
+		ToolTipTitleItem51.Text = "Graphics Adapter"
+		ToolTipItem51.LeftIndent = 6
+		ToolTipItem51.Text = "The type of graphics adapter (machine) emulated by DOSBox."
+		SuperToolTip51.Items.Add(ToolTipTitleItem51)
+		SuperToolTip51.Items.Add(ToolTipItem51)
+		Me.lbl_dosbox_machine.SuperTip = SuperToolTip51
 		Me.lbl_dosbox_machine.TabIndex = 18
 		Me.lbl_dosbox_machine.Text = "Graphics Adapter:"
 		'
@@ -2932,12 +3312,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_sdl_output.Properties.ShowHeader = False
 		Me.cmb_sdl_output.Properties.ValueMember = "value"
 		Me.cmb_sdl_output.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem52.Text = "Output"
-		ToolTipItem52.LeftIndent = 6
-		ToolTipItem52.Text = "Which video system to use for output."
-		SuperToolTip52.Items.Add(ToolTipTitleItem52)
-		SuperToolTip52.Items.Add(ToolTipItem52)
-		Me.cmb_sdl_output.SuperTip = SuperToolTip52
+		ToolTipTitleItem54.Text = "Output"
+		ToolTipItem54.LeftIndent = 6
+		ToolTipItem54.Text = "Which video system to use for output."
+		SuperToolTip54.Items.Add(ToolTipTitleItem54)
+		SuperToolTip54.Items.Add(ToolTipItem54)
+		Me.cmb_sdl_output.SuperTip = SuperToolTip54
 		Me.cmb_sdl_output.TabIndex = 7
 		'
 		'lbl_sdl_output
@@ -2952,12 +3332,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sdl_output.MKBoundControl5 = Nothing
 		Me.lbl_sdl_output.Name = "lbl_sdl_output"
 		Me.lbl_sdl_output.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem51.Text = "Output"
-		ToolTipItem51.LeftIndent = 6
-		ToolTipItem51.Text = "Which video system to use for output."
-		SuperToolTip51.Items.Add(ToolTipTitleItem51)
-		SuperToolTip51.Items.Add(ToolTipItem51)
-		Me.lbl_sdl_output.SuperTip = SuperToolTip51
+		ToolTipTitleItem53.Text = "Output"
+		ToolTipItem53.LeftIndent = 6
+		ToolTipItem53.Text = "Which video system to use for output."
+		SuperToolTip53.Items.Add(ToolTipTitleItem53)
+		SuperToolTip53.Items.Add(ToolTipItem53)
+		Me.lbl_sdl_output.SuperTip = SuperToolTip53
 		Me.lbl_sdl_output.TabIndex = 16
 		Me.lbl_sdl_output.Text = "Output:"
 		'
@@ -2983,13 +3363,13 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_render_aspect.Name = "chb_render_aspect"
 		Me.chb_render_aspect.Properties.Caption = ""
 		Me.chb_render_aspect.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem54.Text = "Keep Aspect Ratio"
-		ToolTipItem54.LeftIndent = 6
-		ToolTipItem54.Text = "Do aspect correction, if your output method doesn't support scaling this can slow" &
+		ToolTipTitleItem56.Text = "Keep Aspect Ratio"
+		ToolTipItem56.LeftIndent = 6
+		ToolTipItem56.Text = "Do aspect correction, if your output method doesn't support scaling this can slow" &
 		" things down!"
-		SuperToolTip54.Items.Add(ToolTipTitleItem54)
-		SuperToolTip54.Items.Add(ToolTipItem54)
-		Me.chb_render_aspect.SuperTip = SuperToolTip54
+		SuperToolTip56.Items.Add(ToolTipTitleItem56)
+		SuperToolTip56.Items.Add(ToolTipItem56)
+		Me.chb_render_aspect.SuperTip = SuperToolTip56
 		Me.chb_render_aspect.TabIndex = 6
 		'
 		'lbl_render_aspect
@@ -3004,13 +3384,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_render_aspect.MKBoundControl5 = Nothing
 		Me.lbl_render_aspect.Name = "lbl_render_aspect"
 		Me.lbl_render_aspect.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem53.Text = "Keep Aspect Ratio"
-		ToolTipItem53.LeftIndent = 6
-		ToolTipItem53.Text = "Do aspect correction, if your output method doesn't support scaling this can slow" &
+		ToolTipTitleItem55.Text = "Keep Aspect Ratio"
+		ToolTipItem55.LeftIndent = 6
+		ToolTipItem55.Text = "Do aspect correction, if your output method doesn't support scaling this can slow" &
 		" things down!"
-		SuperToolTip53.Items.Add(ToolTipTitleItem53)
-		SuperToolTip53.Items.Add(ToolTipItem53)
-		Me.lbl_render_aspect.SuperTip = SuperToolTip53
+		SuperToolTip55.Items.Add(ToolTipTitleItem55)
+		SuperToolTip55.Items.Add(ToolTipItem55)
+		Me.lbl_render_aspect.SuperTip = SuperToolTip55
 		Me.lbl_render_aspect.TabIndex = 13
 		Me.lbl_render_aspect.Text = "Keep Aspect Ratio:"
 		'
@@ -3024,13 +3404,13 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_sdl_fulldouble.Name = "chb_sdl_fulldouble"
 		Me.chb_sdl_fulldouble.Properties.Caption = ""
 		Me.chb_sdl_fulldouble.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem56.Text = "Double Buffering"
-		ToolTipItem56.LeftIndent = 6
-		ToolTipItem56.Text = "Use double buffering in fullscreen. It can reduce screen flickering, but it can a" &
+		ToolTipTitleItem58.Text = "Double Buffering"
+		ToolTipItem58.LeftIndent = 6
+		ToolTipItem58.Text = "Use double buffering in fullscreen. It can reduce screen flickering, but it can a" &
 		"lso result in a slow DOSBox."
-		SuperToolTip56.Items.Add(ToolTipTitleItem56)
-		SuperToolTip56.Items.Add(ToolTipItem56)
-		Me.chb_sdl_fulldouble.SuperTip = SuperToolTip56
+		SuperToolTip58.Items.Add(ToolTipTitleItem58)
+		SuperToolTip58.Items.Add(ToolTipItem58)
+		Me.chb_sdl_fulldouble.SuperTip = SuperToolTip58
 		Me.chb_sdl_fulldouble.TabIndex = 5
 		'
 		'lbl_sdl_fulldouble
@@ -3045,13 +3425,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sdl_fulldouble.MKBoundControl5 = Nothing
 		Me.lbl_sdl_fulldouble.Name = "lbl_sdl_fulldouble"
 		Me.lbl_sdl_fulldouble.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem55.Text = "Double Buffering"
-		ToolTipItem55.LeftIndent = 6
-		ToolTipItem55.Text = "Use double buffering in fullscreen. It can reduce screen flickering, but it can a" &
+		ToolTipTitleItem57.Text = "Double Buffering"
+		ToolTipItem57.LeftIndent = 6
+		ToolTipItem57.Text = "Use double buffering in fullscreen. It can reduce screen flickering, but it can a" &
 		"lso result in a slow DOSBox."
-		SuperToolTip55.Items.Add(ToolTipTitleItem55)
-		SuperToolTip55.Items.Add(ToolTipItem55)
-		Me.lbl_sdl_fulldouble.SuperTip = SuperToolTip55
+		SuperToolTip57.Items.Add(ToolTipTitleItem57)
+		SuperToolTip57.Items.Add(ToolTipItem57)
+		Me.lbl_sdl_fulldouble.SuperTip = SuperToolTip57
 		Me.lbl_sdl_fulldouble.TabIndex = 11
 		Me.lbl_sdl_fulldouble.Text = "Double Buffering:"
 		'
@@ -3065,12 +3445,12 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_sdl_fullscreen.Name = "chb_sdl_fullscreen"
 		Me.chb_sdl_fullscreen.Properties.Caption = ""
 		Me.chb_sdl_fullscreen.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem58.Text = "Fullscreen"
-		ToolTipItem58.LeftIndent = 6
-		ToolTipItem58.Text = "Start dosbox directly in fullscreen. (Press ALT-Enter to go back)"
-		SuperToolTip58.Items.Add(ToolTipTitleItem58)
-		SuperToolTip58.Items.Add(ToolTipItem58)
-		Me.chb_sdl_fullscreen.SuperTip = SuperToolTip58
+		ToolTipTitleItem60.Text = "Fullscreen"
+		ToolTipItem60.LeftIndent = 6
+		ToolTipItem60.Text = "Start dosbox directly in fullscreen. (Press ALT-Enter to go back)"
+		SuperToolTip60.Items.Add(ToolTipTitleItem60)
+		SuperToolTip60.Items.Add(ToolTipItem60)
+		Me.chb_sdl_fullscreen.SuperTip = SuperToolTip60
 		Me.chb_sdl_fullscreen.TabIndex = 4
 		'
 		'lbl_sdl_fullscreen
@@ -3085,12 +3465,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sdl_fullscreen.MKBoundControl5 = Nothing
 		Me.lbl_sdl_fullscreen.Name = "lbl_sdl_fullscreen"
 		Me.lbl_sdl_fullscreen.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem57.Text = "Fullscreen"
-		ToolTipItem57.LeftIndent = 6
-		ToolTipItem57.Text = "Start dosbox directly in fullscreen. (Press ALT-Enter to go back)"
-		SuperToolTip57.Items.Add(ToolTipTitleItem57)
-		SuperToolTip57.Items.Add(ToolTipItem57)
-		Me.lbl_sdl_fullscreen.SuperTip = SuperToolTip57
+		ToolTipTitleItem59.Text = "Fullscreen"
+		ToolTipItem59.LeftIndent = 6
+		ToolTipItem59.Text = "Start dosbox directly in fullscreen. (Press ALT-Enter to go back)"
+		SuperToolTip59.Items.Add(ToolTipTitleItem59)
+		SuperToolTip59.Items.Add(ToolTipItem59)
+		Me.lbl_sdl_fullscreen.SuperTip = SuperToolTip59
 		Me.lbl_sdl_fullscreen.TabIndex = 9
 		Me.lbl_sdl_fullscreen.Text = "Fullscreen:"
 		'
@@ -3111,13 +3491,13 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_sdl_windowresolution.Properties.ShowHeader = False
 		Me.cmb_sdl_windowresolution.Properties.ValueMember = "value"
 		Me.cmb_sdl_windowresolution.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem60.Text = "Resolution in windowed mode"
-		ToolTipItem60.LeftIndent = 6
-		ToolTipItem60.Text = "Scale the window to this size IF the output device supports hardware scaling." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ou" &
+		ToolTipTitleItem62.Text = "Resolution in windowed mode"
+		ToolTipItem62.LeftIndent = 6
+		ToolTipItem62.Text = "Scale the window to this size IF the output device supports hardware scaling." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ou" &
 		"tput 'surface' does not support hardware scaling!"
-		SuperToolTip60.Items.Add(ToolTipTitleItem60)
-		SuperToolTip60.Items.Add(ToolTipItem60)
-		Me.cmb_sdl_windowresolution.SuperTip = SuperToolTip60
+		SuperToolTip62.Items.Add(ToolTipTitleItem62)
+		SuperToolTip62.Items.Add(ToolTipItem62)
+		Me.cmb_sdl_windowresolution.SuperTip = SuperToolTip62
 		Me.cmb_sdl_windowresolution.TabIndex = 2
 		'
 		'lbl_resolution
@@ -3132,12 +3512,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_resolution.MKBoundControl5 = Nothing
 		Me.lbl_resolution.Name = "lbl_resolution"
 		Me.lbl_resolution.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem63.Text = "Resolutions"
-		ToolTipItem63.LeftIndent = 6
-		ToolTipItem63.Text = "Which resolutions to use for fullscreen and windowed modes."
-		SuperToolTip63.Items.Add(ToolTipTitleItem63)
-		SuperToolTip63.Items.Add(ToolTipItem63)
-		Me.lbl_resolution.SuperTip = SuperToolTip63
+		ToolTipTitleItem65.Text = "Resolutions"
+		ToolTipItem65.LeftIndent = 6
+		ToolTipItem65.Text = "Which resolutions to use for fullscreen and windowed modes."
+		SuperToolTip65.Items.Add(ToolTipTitleItem65)
+		SuperToolTip65.Items.Add(ToolTipItem65)
+		Me.lbl_resolution.SuperTip = SuperToolTip65
 		Me.lbl_resolution.TabIndex = 6
 		Me.lbl_resolution.Text = "Resolutions:"
 		'
@@ -3158,12 +3538,11 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_sdl_fullresolution.Properties.ShowHeader = False
 		Me.cmb_sdl_fullresolution.Properties.ValueMember = "value"
 		Me.cmb_sdl_fullresolution.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem62.Text = "Resolution in fullscreen mode"
-		ToolTipItem62.LeftIndent = 6
-		ToolTipItem62.Text = resources.GetString("ToolTipItem62.Text")
-		SuperToolTip62.Items.Add(ToolTipTitleItem62)
-		SuperToolTip62.Items.Add(ToolTipItem62)
-		Me.cmb_sdl_fullresolution.SuperTip = SuperToolTip62
+		ToolTipTitleItem64.Text = "Resolution in fullscreen mode"
+		ToolTipItem64.LeftIndent = 6
+		SuperToolTip64.Items.Add(ToolTipTitleItem64)
+		SuperToolTip64.Items.Add(ToolTipItem64)
+		Me.cmb_sdl_fullresolution.SuperTip = SuperToolTip64
 		Me.cmb_sdl_fullresolution.TabIndex = 0
 		'
 		'BTA_sdl_fullresolution
@@ -3202,13 +3581,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sdl_windowresolution.MKBoundControl5 = Nothing
 		Me.lbl_sdl_windowresolution.Name = "lbl_sdl_windowresolution"
 		Me.lbl_sdl_windowresolution.Size = New System.Drawing.Size(120, 20)
-		ToolTipTitleItem59.Text = "Resolution in windowed mode"
-		ToolTipItem59.LeftIndent = 6
-		ToolTipItem59.Text = "Scale the window to this size IF the output device supports hardware scaling." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ou" &
+		ToolTipTitleItem61.Text = "Resolution in windowed mode"
+		ToolTipItem61.LeftIndent = 6
+		ToolTipItem61.Text = "Scale the window to this size IF the output device supports hardware scaling." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ou" &
 		"tput 'surface' does not support hardware scaling!"
-		SuperToolTip59.Items.Add(ToolTipTitleItem59)
-		SuperToolTip59.Items.Add(ToolTipItem59)
-		Me.lbl_sdl_windowresolution.SuperTip = SuperToolTip59
+		SuperToolTip61.Items.Add(ToolTipTitleItem61)
+		SuperToolTip61.Items.Add(ToolTipItem61)
+		Me.lbl_sdl_windowresolution.SuperTip = SuperToolTip61
 		Me.lbl_sdl_windowresolution.TabIndex = 3
 		Me.lbl_sdl_windowresolution.Text = "in windowed mode"
 		'
@@ -3224,17 +3603,18 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sdl_fullresolution.MKBoundControl5 = Nothing
 		Me.lbl_sdl_fullresolution.Name = "lbl_sdl_fullresolution"
 		Me.lbl_sdl_fullresolution.Size = New System.Drawing.Size(120, 20)
-		ToolTipTitleItem61.Text = "Resolution in fullscreen mode"
-		ToolTipItem61.LeftIndent = 6
-		ToolTipItem61.Text = resources.GetString("ToolTipItem61.Text")
-		SuperToolTip61.Items.Add(ToolTipTitleItem61)
-		SuperToolTip61.Items.Add(ToolTipItem61)
-		Me.lbl_sdl_fullresolution.SuperTip = SuperToolTip61
+		ToolTipTitleItem63.Text = "Resolution in fullscreen mode"
+		ToolTipItem63.LeftIndent = 6
+		SuperToolTip63.Items.Add(ToolTipTitleItem63)
+		SuperToolTip63.Items.Add(ToolTipItem63)
+		Me.lbl_sdl_fullresolution.SuperTip = SuperToolTip63
 		Me.lbl_sdl_fullresolution.TabIndex = 1
 		Me.lbl_sdl_fullresolution.Text = "in fullscreen mode"
 		'
 		'tpg_Keyboard
 		'
+		Me.tpg_Keyboard.AllowTouchScroll = True
+		Me.tpg_Keyboard.AutoScroll = True
 		Me.tpg_Keyboard.Controls.Add(Me.btn_sdl_mapperfile)
 		Me.tpg_Keyboard.Controls.Add(Me.spn_sdl_sensitivity)
 		Me.tpg_Keyboard.Controls.Add(Me.chb_sdl_autolock)
@@ -3247,22 +3627,22 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_Keyboard.Controls.Add(Me.lbl_dos_keyboardlayout)
 		Me.tpg_Keyboard.Controls.Add(Me.lbl_sdl_usescancodes)
 		Me.tpg_Keyboard.Name = "tpg_Keyboard"
-		Me.tpg_Keyboard.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Keyboard.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Keyboard.Text = "Keyboard & Mouse"
 		'
 		'btn_sdl_mapperfile
 		'
 		Me.btn_sdl_mapperfile.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btn_sdl_mapperfile.Location = New System.Drawing.Point(1081, 50)
+		Me.btn_sdl_mapperfile.Location = New System.Drawing.Point(516, 50)
 		Me.btn_sdl_mapperfile.Name = "btn_sdl_mapperfile"
 		Me.btn_sdl_mapperfile.Size = New System.Drawing.Size(27, 20)
-		ToolTipTitleItem64.Text = "Mapper File"
-		ToolTipItem64.LeftIndent = 6
-		ToolTipItem64.Text = "File used to load/save the key/event mappings from. Resetmapper only works with t" &
+		ToolTipTitleItem66.Text = "Mapper File"
+		ToolTipItem66.LeftIndent = 6
+		ToolTipItem66.Text = "File used to load/save the key/event mappings from. Resetmapper only works with t" &
 		"he default value."
-		SuperToolTip64.Items.Add(ToolTipTitleItem64)
-		SuperToolTip64.Items.Add(ToolTipItem64)
-		Me.btn_sdl_mapperfile.SuperTip = SuperToolTip64
+		SuperToolTip66.Items.Add(ToolTipTitleItem66)
+		SuperToolTip66.Items.Add(ToolTipItem66)
+		Me.btn_sdl_mapperfile.SuperTip = SuperToolTip66
 		Me.btn_sdl_mapperfile.TabIndex = 14
 		Me.btn_sdl_mapperfile.Text = "..."
 		'
@@ -3280,9 +3660,9 @@ Partial Class ucr_DOSBox_Config
 		Me.spn_sdl_sensitivity.Properties.Mask.EditMask = "N00"
 		Me.spn_sdl_sensitivity.Properties.MaxValue = New Decimal(New Integer() {2147483647, 0, 0, 0})
 		Me.spn_sdl_sensitivity.Size = New System.Drawing.Size(54, 20)
-		ToolTipTitleItem66.Text = "Mouse Sensitivity"
-		SuperToolTip66.Items.Add(ToolTipTitleItem66)
-		Me.spn_sdl_sensitivity.SuperTip = SuperToolTip66
+		ToolTipTitleItem68.Text = "Mouse Sensitivity"
+		SuperToolTip68.Items.Add(ToolTipTitleItem68)
+		Me.spn_sdl_sensitivity.SuperTip = SuperToolTip68
 		Me.spn_sdl_sensitivity.TabIndex = 4
 		'
 		'lbl_sdl_sensitivity
@@ -3297,9 +3677,9 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sdl_sensitivity.MKBoundControl5 = Nothing
 		Me.lbl_sdl_sensitivity.Name = "lbl_sdl_sensitivity"
 		Me.lbl_sdl_sensitivity.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem65.Text = "Mouse Sensitivity"
-		SuperToolTip65.Items.Add(ToolTipTitleItem65)
-		Me.lbl_sdl_sensitivity.SuperTip = SuperToolTip65
+		ToolTipTitleItem67.Text = "Mouse Sensitivity"
+		SuperToolTip67.Items.Add(ToolTipTitleItem67)
+		Me.lbl_sdl_sensitivity.SuperTip = SuperToolTip67
 		Me.lbl_sdl_sensitivity.TabIndex = 10
 		Me.lbl_sdl_sensitivity.Text = "Mouse Sensitivity:"
 		'
@@ -3313,13 +3693,13 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_sdl_autolock.Name = "chb_sdl_autolock"
 		Me.chb_sdl_autolock.Properties.Caption = ""
 		Me.chb_sdl_autolock.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem68.Text = "Mouse Autolock"
-		ToolTipItem66.LeftIndent = 6
-		ToolTipItem66.Text = "Mouse will automatically lock, if you click on the screen. (Press CTRL-F10 to unl" &
+		ToolTipTitleItem70.Text = "Mouse Autolock"
+		ToolTipItem68.LeftIndent = 6
+		ToolTipItem68.Text = "Mouse will automatically lock, if you click on the screen. (Press CTRL-F10 to unl" &
 		"ock)"
-		SuperToolTip68.Items.Add(ToolTipTitleItem68)
-		SuperToolTip68.Items.Add(ToolTipItem66)
-		Me.chb_sdl_autolock.SuperTip = SuperToolTip68
+		SuperToolTip70.Items.Add(ToolTipTitleItem70)
+		SuperToolTip70.Items.Add(ToolTipItem68)
+		Me.chb_sdl_autolock.SuperTip = SuperToolTip70
 		Me.chb_sdl_autolock.TabIndex = 3
 		'
 		'lbl_sdl_autolock
@@ -3334,13 +3714,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sdl_autolock.MKBoundControl5 = Nothing
 		Me.lbl_sdl_autolock.Name = "lbl_sdl_autolock"
 		Me.lbl_sdl_autolock.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem67.Text = "Mouse Autolock"
-		ToolTipItem65.LeftIndent = 6
-		ToolTipItem65.Text = "Mouse will automatically lock, if you click on the screen. (Press CTRL-F10 to unl" &
+		ToolTipTitleItem69.Text = "Mouse Autolock"
+		ToolTipItem67.LeftIndent = 6
+		ToolTipItem67.Text = "Mouse will automatically lock, if you click on the screen. (Press CTRL-F10 to unl" &
 		"ock)"
-		SuperToolTip67.Items.Add(ToolTipTitleItem67)
-		SuperToolTip67.Items.Add(ToolTipItem65)
-		Me.lbl_sdl_autolock.SuperTip = SuperToolTip67
+		SuperToolTip69.Items.Add(ToolTipTitleItem69)
+		SuperToolTip69.Items.Add(ToolTipItem67)
+		Me.lbl_sdl_autolock.SuperTip = SuperToolTip69
 		Me.lbl_sdl_autolock.TabIndex = 11
 		Me.lbl_sdl_autolock.Text = "Mouse Autolock:"
 		'
@@ -3354,14 +3734,14 @@ Partial Class ucr_DOSBox_Config
 		Me.txb_sdl_mapperfile.MKBoundLabel = Me.lbl_sdl_mapperfile
 		Me.txb_sdl_mapperfile.MKEditValue_Compare = Nothing
 		Me.txb_sdl_mapperfile.Name = "txb_sdl_mapperfile"
-		Me.txb_sdl_mapperfile.Size = New System.Drawing.Size(420, 20)
-		ToolTipTitleItem70.Text = "Mapper File"
-		ToolTipItem68.LeftIndent = 6
-		ToolTipItem68.Text = "File used to load/save the key/event mappings from. Resetmapper only works with t" &
+		Me.txb_sdl_mapperfile.Size = New System.Drawing.Size(390, 20)
+		ToolTipTitleItem72.Text = "Mapper File"
+		ToolTipItem70.LeftIndent = 6
+		ToolTipItem70.Text = "File used to load/save the key/event mappings from. Resetmapper only works with t" &
 		"he default value."
-		SuperToolTip70.Items.Add(ToolTipTitleItem70)
-		SuperToolTip70.Items.Add(ToolTipItem68)
-		Me.txb_sdl_mapperfile.SuperTip = SuperToolTip70
+		SuperToolTip72.Items.Add(ToolTipTitleItem72)
+		SuperToolTip72.Items.Add(ToolTipItem70)
+		Me.txb_sdl_mapperfile.SuperTip = SuperToolTip72
 		Me.txb_sdl_mapperfile.TabIndex = 2
 		'
 		'lbl_sdl_mapperfile
@@ -3376,13 +3756,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sdl_mapperfile.MKBoundControl5 = Nothing
 		Me.lbl_sdl_mapperfile.Name = "lbl_sdl_mapperfile"
 		Me.lbl_sdl_mapperfile.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem69.Text = "Mapper File"
-		ToolTipItem67.LeftIndent = 6
-		ToolTipItem67.Text = "File used to load/save the key/event mappings from. Resetmapper only works with t" &
+		ToolTipTitleItem71.Text = "Mapper File"
+		ToolTipItem69.LeftIndent = 6
+		ToolTipItem69.Text = "File used to load/save the key/event mappings from. Resetmapper only works with t" &
 		"he default value."
-		SuperToolTip69.Items.Add(ToolTipTitleItem69)
-		SuperToolTip69.Items.Add(ToolTipItem67)
-		Me.lbl_sdl_mapperfile.SuperTip = SuperToolTip69
+		SuperToolTip71.Items.Add(ToolTipTitleItem71)
+		SuperToolTip71.Items.Add(ToolTipItem69)
+		Me.lbl_sdl_mapperfile.SuperTip = SuperToolTip71
 		Me.lbl_sdl_mapperfile.TabIndex = 8
 		Me.lbl_sdl_mapperfile.Text = "Mapper File:"
 		'
@@ -3404,12 +3784,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_dos_keyboardlayout.Properties.ShowHeader = False
 		Me.cmb_dos_keyboardlayout.Properties.ValueMember = "Value"
 		Me.cmb_dos_keyboardlayout.Size = New System.Drawing.Size(157, 20)
-		ToolTipTitleItem72.Text = "Keyboard Layout"
-		ToolTipItem70.LeftIndent = 6
-		ToolTipItem70.Text = "Language code of the keyboard layout."
-		SuperToolTip72.Items.Add(ToolTipTitleItem72)
-		SuperToolTip72.Items.Add(ToolTipItem70)
-		Me.cmb_dos_keyboardlayout.SuperTip = SuperToolTip72
+		ToolTipTitleItem74.Text = "Keyboard Layout"
+		ToolTipItem72.LeftIndent = 6
+		ToolTipItem72.Text = "Language code of the keyboard layout."
+		SuperToolTip74.Items.Add(ToolTipTitleItem74)
+		SuperToolTip74.Items.Add(ToolTipItem72)
+		Me.cmb_dos_keyboardlayout.SuperTip = SuperToolTip74
 		Me.cmb_dos_keyboardlayout.TabIndex = 1
 		'
 		'lbl_dos_keyboardlayout
@@ -3424,12 +3804,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_dos_keyboardlayout.MKBoundControl5 = Nothing
 		Me.lbl_dos_keyboardlayout.Name = "lbl_dos_keyboardlayout"
 		Me.lbl_dos_keyboardlayout.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem71.Text = "Keyboard Layout"
-		ToolTipItem69.LeftIndent = 6
-		ToolTipItem69.Text = "Language code of the keyboard layout."
-		SuperToolTip71.Items.Add(ToolTipTitleItem71)
-		SuperToolTip71.Items.Add(ToolTipItem69)
-		Me.lbl_dos_keyboardlayout.SuperTip = SuperToolTip71
+		ToolTipTitleItem73.Text = "Keyboard Layout"
+		ToolTipItem71.LeftIndent = 6
+		ToolTipItem71.Text = "Language code of the keyboard layout."
+		SuperToolTip73.Items.Add(ToolTipTitleItem73)
+		SuperToolTip73.Items.Add(ToolTipItem71)
+		Me.lbl_dos_keyboardlayout.SuperTip = SuperToolTip73
 		Me.lbl_dos_keyboardlayout.TabIndex = 5
 		Me.lbl_dos_keyboardlayout.Text = "Keyboard Layout:"
 		'
@@ -3455,12 +3835,12 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_sdl_usescancodes.Name = "chb_sdl_usescancodes"
 		Me.chb_sdl_usescancodes.Properties.Caption = ""
 		Me.chb_sdl_usescancodes.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem74.Text = "Use Scancodes"
-		ToolTipItem72.LeftIndent = 6
-		ToolTipItem72.Text = "Avoid usage of symkeys, might not work on all operating systems."
-		SuperToolTip74.Items.Add(ToolTipTitleItem74)
-		SuperToolTip74.Items.Add(ToolTipItem72)
-		Me.chb_sdl_usescancodes.SuperTip = SuperToolTip74
+		ToolTipTitleItem76.Text = "Use Scancodes"
+		ToolTipItem74.LeftIndent = 6
+		ToolTipItem74.Text = "Avoid usage of symkeys, might not work on all operating systems."
+		SuperToolTip76.Items.Add(ToolTipTitleItem76)
+		SuperToolTip76.Items.Add(ToolTipItem74)
+		Me.chb_sdl_usescancodes.SuperTip = SuperToolTip76
 		Me.chb_sdl_usescancodes.TabIndex = 0
 		'
 		'lbl_sdl_usescancodes
@@ -3475,17 +3855,19 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sdl_usescancodes.MKBoundControl5 = Nothing
 		Me.lbl_sdl_usescancodes.Name = "lbl_sdl_usescancodes"
 		Me.lbl_sdl_usescancodes.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem73.Text = "Use Scancodes"
-		ToolTipItem71.LeftIndent = 6
-		ToolTipItem71.Text = "Avoid usage of symkeys, might not work on all operating systems."
-		SuperToolTip73.Items.Add(ToolTipTitleItem73)
-		SuperToolTip73.Items.Add(ToolTipItem71)
-		Me.lbl_sdl_usescancodes.SuperTip = SuperToolTip73
+		ToolTipTitleItem75.Text = "Use Scancodes"
+		ToolTipItem73.LeftIndent = 6
+		ToolTipItem73.Text = "Avoid usage of symkeys, might not work on all operating systems."
+		SuperToolTip75.Items.Add(ToolTipTitleItem75)
+		SuperToolTip75.Items.Add(ToolTipItem73)
+		Me.lbl_sdl_usescancodes.SuperTip = SuperToolTip75
 		Me.lbl_sdl_usescancodes.TabIndex = 5
 		Me.lbl_sdl_usescancodes.Text = "Use Scancodes:"
 		'
 		'tpg_Sound
 		'
+		Me.tpg_Sound.AllowTouchScroll = True
+		Me.tpg_Sound.AutoScroll = True
 		Me.tpg_Sound.Controls.Add(Me.spn_mixer_prebuffer)
 		Me.tpg_Sound.Controls.Add(Me.cmb_speaker_tandyrate)
 		Me.tpg_Sound.Controls.Add(Me.cmb_speaker_pcrate)
@@ -3505,7 +3887,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_Sound.Controls.Add(Me.chb_mixer_nosound)
 		Me.tpg_Sound.Controls.Add(Me.lbl_mixer_nosound)
 		Me.tpg_Sound.Name = "tpg_Sound"
-		Me.tpg_Sound.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Sound.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Sound.Text = "Sound"
 		'
 		'spn_mixer_prebuffer
@@ -3522,12 +3904,12 @@ Partial Class ucr_DOSBox_Config
 		Me.spn_mixer_prebuffer.Properties.Mask.EditMask = "N00"
 		Me.spn_mixer_prebuffer.Properties.MaxValue = New Decimal(New Integer() {1000, 0, 0, 0})
 		Me.spn_mixer_prebuffer.Size = New System.Drawing.Size(54, 20)
-		ToolTipTitleItem76.Text = "Mixer Prebuffer"
-		ToolTipItem74.LeftIndent = 6
-		ToolTipItem74.Text = "The amount of milliseconds of data to keep on top of the blocksize."
-		SuperToolTip76.Items.Add(ToolTipTitleItem76)
-		SuperToolTip76.Items.Add(ToolTipItem74)
-		Me.spn_mixer_prebuffer.SuperTip = SuperToolTip76
+		ToolTipTitleItem78.Text = "Mixer Prebuffer"
+		ToolTipItem76.LeftIndent = 6
+		ToolTipItem76.Text = "The amount of milliseconds of data to keep on top of the blocksize."
+		SuperToolTip78.Items.Add(ToolTipTitleItem78)
+		SuperToolTip78.Items.Add(ToolTipItem76)
+		Me.spn_mixer_prebuffer.SuperTip = SuperToolTip78
 		Me.spn_mixer_prebuffer.TabIndex = 3
 		'
 		'lbl_mixer_prebuffer
@@ -3542,12 +3924,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_mixer_prebuffer.MKBoundControl5 = Nothing
 		Me.lbl_mixer_prebuffer.Name = "lbl_mixer_prebuffer"
 		Me.lbl_mixer_prebuffer.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem75.Text = "Mixer Prebuffer"
-		ToolTipItem73.LeftIndent = 6
-		ToolTipItem73.Text = "The amount of milliseconds of data to keep on top of the blocksize."
-		SuperToolTip75.Items.Add(ToolTipTitleItem75)
-		SuperToolTip75.Items.Add(ToolTipItem73)
-		Me.lbl_mixer_prebuffer.SuperTip = SuperToolTip75
+		ToolTipTitleItem77.Text = "Mixer Prebuffer"
+		ToolTipItem75.LeftIndent = 6
+		ToolTipItem75.Text = "The amount of milliseconds of data to keep on top of the blocksize."
+		SuperToolTip77.Items.Add(ToolTipTitleItem77)
+		SuperToolTip77.Items.Add(ToolTipItem75)
+		Me.lbl_mixer_prebuffer.SuperTip = SuperToolTip77
 		Me.lbl_mixer_prebuffer.TabIndex = 20
 		Me.lbl_mixer_prebuffer.Text = "Mixer Prebuffer:"
 		'
@@ -3568,12 +3950,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_speaker_tandyrate.Properties.ShowHeader = False
 		Me.cmb_speaker_tandyrate.Properties.ValueMember = "value"
 		Me.cmb_speaker_tandyrate.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem78.Text = "Tandy Rate"
-		ToolTipItem76.LeftIndent = 6
-		ToolTipItem76.Text = "Sample rate of the Tandy 3-Voice generation."
-		SuperToolTip78.Items.Add(ToolTipTitleItem78)
-		SuperToolTip78.Items.Add(ToolTipItem76)
-		Me.cmb_speaker_tandyrate.SuperTip = SuperToolTip78
+		ToolTipTitleItem80.Text = "Tandy Rate"
+		ToolTipItem78.LeftIndent = 6
+		ToolTipItem78.Text = "Sample rate of the Tandy 3-Voice generation."
+		SuperToolTip80.Items.Add(ToolTipTitleItem80)
+		SuperToolTip80.Items.Add(ToolTipItem78)
+		Me.cmb_speaker_tandyrate.SuperTip = SuperToolTip80
 		Me.cmb_speaker_tandyrate.TabIndex = 7
 		'
 		'lbl_speaker_tandyrate
@@ -3588,12 +3970,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_speaker_tandyrate.MKBoundControl5 = Nothing
 		Me.lbl_speaker_tandyrate.Name = "lbl_speaker_tandyrate"
 		Me.lbl_speaker_tandyrate.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem77.Text = "Tandy Rate"
-		ToolTipItem75.LeftIndent = 6
-		ToolTipItem75.Text = "Sample rate of the Tandy 3-Voice generation."
-		SuperToolTip77.Items.Add(ToolTipTitleItem77)
-		SuperToolTip77.Items.Add(ToolTipItem75)
-		Me.lbl_speaker_tandyrate.SuperTip = SuperToolTip77
+		ToolTipTitleItem79.Text = "Tandy Rate"
+		ToolTipItem77.LeftIndent = 6
+		ToolTipItem77.Text = "Sample rate of the Tandy 3-Voice generation."
+		SuperToolTip79.Items.Add(ToolTipTitleItem79)
+		SuperToolTip79.Items.Add(ToolTipItem77)
+		Me.lbl_speaker_tandyrate.SuperTip = SuperToolTip79
 		Me.lbl_speaker_tandyrate.TabIndex = 28
 		Me.lbl_speaker_tandyrate.Text = "Tandy Rate:"
 		'
@@ -3626,12 +4008,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_speaker_pcrate.Properties.ShowHeader = False
 		Me.cmb_speaker_pcrate.Properties.ValueMember = "value"
 		Me.cmb_speaker_pcrate.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem80.Text = "PC-Speaker Rate"
-		ToolTipItem78.LeftIndent = 6
-		ToolTipItem78.Text = "Sample rate of the PC-Speaker sound generation."
-		SuperToolTip80.Items.Add(ToolTipTitleItem80)
-		SuperToolTip80.Items.Add(ToolTipItem78)
-		Me.cmb_speaker_pcrate.SuperTip = SuperToolTip80
+		ToolTipTitleItem82.Text = "PC-Speaker Rate"
+		ToolTipItem80.LeftIndent = 6
+		ToolTipItem80.Text = "Sample rate of the PC-Speaker sound generation."
+		SuperToolTip82.Items.Add(ToolTipTitleItem82)
+		SuperToolTip82.Items.Add(ToolTipItem80)
+		Me.cmb_speaker_pcrate.SuperTip = SuperToolTip82
 		Me.cmb_speaker_pcrate.TabIndex = 5
 		'
 		'lbl_speaker_pcrate
@@ -3646,12 +4028,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_speaker_pcrate.MKBoundControl5 = Nothing
 		Me.lbl_speaker_pcrate.Name = "lbl_speaker_pcrate"
 		Me.lbl_speaker_pcrate.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem79.Text = "PC-Speaker Rate"
-		ToolTipItem77.LeftIndent = 6
-		ToolTipItem77.Text = "Sample rate of the PC-Speaker sound generation."
-		SuperToolTip79.Items.Add(ToolTipTitleItem79)
-		SuperToolTip79.Items.Add(ToolTipItem77)
-		Me.lbl_speaker_pcrate.SuperTip = SuperToolTip79
+		ToolTipTitleItem81.Text = "PC-Speaker Rate"
+		ToolTipItem79.LeftIndent = 6
+		ToolTipItem79.Text = "Sample rate of the PC-Speaker sound generation."
+		SuperToolTip81.Items.Add(ToolTipTitleItem81)
+		SuperToolTip81.Items.Add(ToolTipItem79)
+		Me.lbl_speaker_pcrate.SuperTip = SuperToolTip81
 		Me.lbl_speaker_pcrate.TabIndex = 27
 		Me.lbl_speaker_pcrate.Text = "PC-Speaker Rate:"
 		'
@@ -3684,13 +4066,13 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_speaker_tandy.Properties.ShowHeader = False
 		Me.cmb_speaker_tandy.Properties.ValueMember = "value"
 		Me.cmb_speaker_tandy.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem82.Text = "Tandy"
-		ToolTipItem80.LeftIndent = 6
-		ToolTipItem80.Text = "Enable Tandy Sound System emulation. For 'auto', emulation is present only if mac" &
+		ToolTipTitleItem84.Text = "Tandy"
+		ToolTipItem82.LeftIndent = 6
+		ToolTipItem82.Text = "Enable Tandy Sound System emulation. For 'auto', emulation is present only if mac" &
 		"hine is set to 'tandy'."
-		SuperToolTip82.Items.Add(ToolTipTitleItem82)
-		SuperToolTip82.Items.Add(ToolTipItem80)
-		Me.cmb_speaker_tandy.SuperTip = SuperToolTip82
+		SuperToolTip84.Items.Add(ToolTipTitleItem84)
+		SuperToolTip84.Items.Add(ToolTipItem82)
+		Me.cmb_speaker_tandy.SuperTip = SuperToolTip84
 		Me.cmb_speaker_tandy.TabIndex = 6
 		'
 		'lbl_speaker_tandy
@@ -3705,13 +4087,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_speaker_tandy.MKBoundControl5 = Nothing
 		Me.lbl_speaker_tandy.Name = "lbl_speaker_tandy"
 		Me.lbl_speaker_tandy.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem81.Text = "Tandy"
-		ToolTipItem79.LeftIndent = 6
-		ToolTipItem79.Text = "Enable Tandy Sound System emulation. For 'auto', emulation is present only if mac" &
+		ToolTipTitleItem83.Text = "Tandy"
+		ToolTipItem81.LeftIndent = 6
+		ToolTipItem81.Text = "Enable Tandy Sound System emulation. For 'auto', emulation is present only if mac" &
 		"hine is set to 'tandy'."
-		SuperToolTip81.Items.Add(ToolTipTitleItem81)
-		SuperToolTip81.Items.Add(ToolTipItem79)
-		Me.lbl_speaker_tandy.SuperTip = SuperToolTip81
+		SuperToolTip83.Items.Add(ToolTipTitleItem83)
+		SuperToolTip83.Items.Add(ToolTipItem81)
+		Me.lbl_speaker_tandy.SuperTip = SuperToolTip83
 		Me.lbl_speaker_tandy.TabIndex = 26
 		Me.lbl_speaker_tandy.Text = "Tandy:"
 		'
@@ -3737,13 +4119,13 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_speaker_disney.Name = "chb_speaker_disney"
 		Me.chb_speaker_disney.Properties.Caption = ""
 		Me.chb_speaker_disney.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem84.Text = "Enable Disney"
-		ToolTipItem82.LeftIndent = 6
-		ToolTipItem82.Text = "Enable Disney Sound Source emulation. (Covox Voice Master and Speech Thing compat" &
+		ToolTipTitleItem86.Text = "Enable Disney"
+		ToolTipItem84.LeftIndent = 6
+		ToolTipItem84.Text = "Enable Disney Sound Source emulation. (Covox Voice Master and Speech Thing compat" &
 		"ible)."
-		SuperToolTip84.Items.Add(ToolTipTitleItem84)
-		SuperToolTip84.Items.Add(ToolTipItem82)
-		Me.chb_speaker_disney.SuperTip = SuperToolTip84
+		SuperToolTip86.Items.Add(ToolTipTitleItem86)
+		SuperToolTip86.Items.Add(ToolTipItem84)
+		Me.chb_speaker_disney.SuperTip = SuperToolTip86
 		Me.chb_speaker_disney.TabIndex = 8
 		'
 		'lbl_speaker_disney
@@ -3758,13 +4140,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_speaker_disney.MKBoundControl5 = Nothing
 		Me.lbl_speaker_disney.Name = "lbl_speaker_disney"
 		Me.lbl_speaker_disney.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem83.Text = "Enable Disney"
-		ToolTipItem81.LeftIndent = 6
-		ToolTipItem81.Text = "Enable Disney Sound Source emulation. (Covox Voice Master and Speech Thing compat" &
+		ToolTipTitleItem85.Text = "Enable Disney"
+		ToolTipItem83.LeftIndent = 6
+		ToolTipItem83.Text = "Enable Disney Sound Source emulation. (Covox Voice Master and Speech Thing compat" &
 		"ible)."
-		SuperToolTip83.Items.Add(ToolTipTitleItem83)
-		SuperToolTip83.Items.Add(ToolTipItem81)
-		Me.lbl_speaker_disney.SuperTip = SuperToolTip83
+		SuperToolTip85.Items.Add(ToolTipTitleItem85)
+		SuperToolTip85.Items.Add(ToolTipItem83)
+		Me.lbl_speaker_disney.SuperTip = SuperToolTip85
 		Me.lbl_speaker_disney.TabIndex = 24
 		Me.lbl_speaker_disney.Text = "Enable Disney:"
 		'
@@ -3778,12 +4160,12 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_speaker_pcspeaker.Name = "chb_speaker_pcspeaker"
 		Me.chb_speaker_pcspeaker.Properties.Caption = ""
 		Me.chb_speaker_pcspeaker.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem86.Text = "Enable PC-Speaker"
-		ToolTipItem84.LeftIndent = 6
-		ToolTipItem84.Text = "Enable PC-Speaker emulation."
-		SuperToolTip86.Items.Add(ToolTipTitleItem86)
-		SuperToolTip86.Items.Add(ToolTipItem84)
-		Me.chb_speaker_pcspeaker.SuperTip = SuperToolTip86
+		ToolTipTitleItem88.Text = "Enable PC-Speaker"
+		ToolTipItem86.LeftIndent = 6
+		ToolTipItem86.Text = "Enable PC-Speaker emulation."
+		SuperToolTip88.Items.Add(ToolTipTitleItem88)
+		SuperToolTip88.Items.Add(ToolTipItem86)
+		Me.chb_speaker_pcspeaker.SuperTip = SuperToolTip88
 		Me.chb_speaker_pcspeaker.TabIndex = 4
 		'
 		'lbl_speaker_pcspeaker
@@ -3798,12 +4180,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_speaker_pcspeaker.MKBoundControl5 = Nothing
 		Me.lbl_speaker_pcspeaker.Name = "lbl_speaker_pcspeaker"
 		Me.lbl_speaker_pcspeaker.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem85.Text = "Enable PC-Speaker"
-		ToolTipItem83.LeftIndent = 6
-		ToolTipItem83.Text = "Enable PC-Speaker emulation."
-		SuperToolTip85.Items.Add(ToolTipTitleItem85)
-		SuperToolTip85.Items.Add(ToolTipItem83)
-		Me.lbl_speaker_pcspeaker.SuperTip = SuperToolTip85
+		ToolTipTitleItem87.Text = "Enable PC-Speaker"
+		ToolTipItem85.LeftIndent = 6
+		ToolTipItem85.Text = "Enable PC-Speaker emulation."
+		SuperToolTip87.Items.Add(ToolTipTitleItem87)
+		SuperToolTip87.Items.Add(ToolTipItem85)
+		Me.lbl_speaker_pcspeaker.SuperTip = SuperToolTip87
 		Me.lbl_speaker_pcspeaker.TabIndex = 25
 		Me.lbl_speaker_pcspeaker.Text = "Enable PC-Speaker:"
 		'
@@ -3824,13 +4206,13 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_mixer_blocksize.Properties.ShowHeader = False
 		Me.cmb_mixer_blocksize.Properties.ValueMember = "value"
 		Me.cmb_mixer_blocksize.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem88.Text = "Mixer Blocksize"
-		ToolTipItem86.LeftIndent = 6
-		ToolTipItem86.Text = "Larger blocks might help against sound stuttering but sound will also be more lag" &
+		ToolTipTitleItem90.Text = "Mixer Blocksize"
+		ToolTipItem88.LeftIndent = 6
+		ToolTipItem88.Text = "Larger blocks might help against sound stuttering but sound will also be more lag" &
 		"ged."
-		SuperToolTip88.Items.Add(ToolTipTitleItem88)
-		SuperToolTip88.Items.Add(ToolTipItem86)
-		Me.cmb_mixer_blocksize.SuperTip = SuperToolTip88
+		SuperToolTip90.Items.Add(ToolTipTitleItem90)
+		SuperToolTip90.Items.Add(ToolTipItem88)
+		Me.cmb_mixer_blocksize.SuperTip = SuperToolTip90
 		Me.cmb_mixer_blocksize.TabIndex = 2
 		'
 		'lbl_mixer_blocksize
@@ -3845,13 +4227,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_mixer_blocksize.MKBoundControl5 = Nothing
 		Me.lbl_mixer_blocksize.Name = "lbl_mixer_blocksize"
 		Me.lbl_mixer_blocksize.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem87.Text = "Mixer Blocksize"
-		ToolTipItem85.LeftIndent = 6
-		ToolTipItem85.Text = "Larger blocks might help against sound stuttering but sound will also be more lag" &
+		ToolTipTitleItem89.Text = "Mixer Blocksize"
+		ToolTipItem87.LeftIndent = 6
+		ToolTipItem87.Text = "Larger blocks might help against sound stuttering but sound will also be more lag" &
 		"ged."
-		SuperToolTip87.Items.Add(ToolTipTitleItem87)
-		SuperToolTip87.Items.Add(ToolTipItem85)
-		Me.lbl_mixer_blocksize.SuperTip = SuperToolTip87
+		SuperToolTip89.Items.Add(ToolTipTitleItem89)
+		SuperToolTip89.Items.Add(ToolTipItem87)
+		Me.lbl_mixer_blocksize.SuperTip = SuperToolTip89
 		Me.lbl_mixer_blocksize.TabIndex = 18
 		Me.lbl_mixer_blocksize.Text = "Mixer Blocksize:"
 		'
@@ -3884,13 +4266,13 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_mixer_rate.Properties.ShowHeader = False
 		Me.cmb_mixer_rate.Properties.ValueMember = "value"
 		Me.cmb_mixer_rate.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem90.Text = "Mixer Sample Rate"
-		ToolTipItem88.LeftIndent = 6
-		ToolTipItem88.Text = "Setting any device's sample rate higher than this will probably lower their sound" &
+		ToolTipTitleItem92.Text = "Mixer Sample Rate"
+		ToolTipItem90.LeftIndent = 6
+		ToolTipItem90.Text = "Setting any device's sample rate higher than this will probably lower their sound" &
 		" quality."
-		SuperToolTip90.Items.Add(ToolTipTitleItem90)
-		SuperToolTip90.Items.Add(ToolTipItem88)
-		Me.cmb_mixer_rate.SuperTip = SuperToolTip90
+		SuperToolTip92.Items.Add(ToolTipTitleItem92)
+		SuperToolTip92.Items.Add(ToolTipItem90)
+		Me.cmb_mixer_rate.SuperTip = SuperToolTip92
 		Me.cmb_mixer_rate.TabIndex = 1
 		'
 		'lbl_mixer_rate
@@ -3905,13 +4287,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_mixer_rate.MKBoundControl5 = Nothing
 		Me.lbl_mixer_rate.Name = "lbl_mixer_rate"
 		Me.lbl_mixer_rate.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem89.Text = "Mixer Sample Rate"
-		ToolTipItem87.LeftIndent = 6
-		ToolTipItem87.Text = "Setting any device's sample rate higher than this will probably lower their sound" &
+		ToolTipTitleItem91.Text = "Mixer Sample Rate"
+		ToolTipItem89.LeftIndent = 6
+		ToolTipItem89.Text = "Setting any device's sample rate higher than this will probably lower their sound" &
 		" quality."
-		SuperToolTip89.Items.Add(ToolTipTitleItem89)
-		SuperToolTip89.Items.Add(ToolTipItem87)
-		Me.lbl_mixer_rate.SuperTip = SuperToolTip89
+		SuperToolTip91.Items.Add(ToolTipTitleItem91)
+		SuperToolTip91.Items.Add(ToolTipItem89)
+		Me.lbl_mixer_rate.SuperTip = SuperToolTip91
 		Me.lbl_mixer_rate.TabIndex = 19
 		Me.lbl_mixer_rate.Text = "Mixer Sample Rate:"
 		'
@@ -3937,12 +4319,12 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_mixer_nosound.Name = "chb_mixer_nosound"
 		Me.chb_mixer_nosound.Properties.Caption = ""
 		Me.chb_mixer_nosound.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem92.Text = "Disable Sound Output"
-		ToolTipItem90.LeftIndent = 6
-		ToolTipItem90.Text = "Sound output will be disabled, sound is still emulated though."
-		SuperToolTip92.Items.Add(ToolTipTitleItem92)
-		SuperToolTip92.Items.Add(ToolTipItem90)
-		Me.chb_mixer_nosound.SuperTip = SuperToolTip92
+		ToolTipTitleItem94.Text = "Disable Sound Output"
+		ToolTipItem92.LeftIndent = 6
+		ToolTipItem92.Text = "Sound output will be disabled, sound is still emulated though."
+		SuperToolTip94.Items.Add(ToolTipTitleItem94)
+		SuperToolTip94.Items.Add(ToolTipItem92)
+		Me.chb_mixer_nosound.SuperTip = SuperToolTip94
 		Me.chb_mixer_nosound.TabIndex = 0
 		'
 		'lbl_mixer_nosound
@@ -3957,17 +4339,19 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_mixer_nosound.MKBoundControl5 = Nothing
 		Me.lbl_mixer_nosound.Name = "lbl_mixer_nosound"
 		Me.lbl_mixer_nosound.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem91.Text = "Disable Sound Output"
-		ToolTipItem89.LeftIndent = 6
-		ToolTipItem89.Text = "Sound output will be disabled, sound is still emulated though."
-		SuperToolTip91.Items.Add(ToolTipTitleItem91)
-		SuperToolTip91.Items.Add(ToolTipItem89)
-		Me.lbl_mixer_nosound.SuperTip = SuperToolTip91
+		ToolTipTitleItem93.Text = "Disable Sound Output"
+		ToolTipItem91.LeftIndent = 6
+		ToolTipItem91.Text = "Sound output will be disabled, sound is still emulated though."
+		SuperToolTip93.Items.Add(ToolTipTitleItem93)
+		SuperToolTip93.Items.Add(ToolTipItem91)
+		Me.lbl_mixer_nosound.SuperTip = SuperToolTip93
 		Me.lbl_mixer_nosound.TabIndex = 13
 		Me.lbl_mixer_nosound.Text = "Disable Sound Output:"
 		'
 		'tpg_Volume
 		'
+		Me.tpg_Volume.AllowTouchScroll = True
+		Me.tpg_Volume.AutoScroll = True
 		Me.tpg_Volume.Controls.Add(Me.gb_PC_Speaker_Volume)
 		Me.tpg_Volume.Controls.Add(Me.gb_CD_Audio_Volume)
 		Me.tpg_Volume.Controls.Add(Me.gb_FM_Volume)
@@ -3976,7 +4360,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_Volume.Controls.Add(Me.gb_Disney_Volume)
 		Me.tpg_Volume.Controls.Add(Me.gb_Master_Volume)
 		Me.tpg_Volume.Name = "tpg_Volume"
-		Me.tpg_Volume.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Volume.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Volume.Text = "Volumes"
 		'
 		'gb_PC_Speaker_Volume
@@ -4019,12 +4403,12 @@ Partial Class ucr_DOSBox_Config
 		Me.Ctl_MKDXLabel17.MKBoundControl5 = Nothing
 		Me.Ctl_MKDXLabel17.Name = "Ctl_MKDXLabel17"
 		Me.Ctl_MKDXLabel17.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem93.Text = "Resolution in fullscreen mode"
-		ToolTipItem91.LeftIndent = 6
-		ToolTipItem91.Text = resources.GetString("ToolTipItem91.Text")
-		SuperToolTip93.Items.Add(ToolTipTitleItem93)
-		SuperToolTip93.Items.Add(ToolTipItem91)
-		Me.Ctl_MKDXLabel17.SuperTip = SuperToolTip93
+		ToolTipTitleItem95.Text = "Resolution in fullscreen mode"
+		ToolTipItem93.LeftIndent = 6
+		ToolTipItem93.Text = resources.GetString("ToolTipItem93.Text")
+		SuperToolTip95.Items.Add(ToolTipTitleItem95)
+		SuperToolTip95.Items.Add(ToolTipItem93)
+		Me.Ctl_MKDXLabel17.SuperTip = SuperToolTip95
 		Me.Ctl_MKDXLabel17.TabIndex = 8
 		Me.Ctl_MKDXLabel17.Text = "Right"
 		'
@@ -4040,12 +4424,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_ml_volume_spkr_right.MKBoundControl5 = Nothing
 		Me.lbl_ml_volume_spkr_right.Name = "lbl_ml_volume_spkr_right"
 		Me.lbl_ml_volume_spkr_right.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem94.Text = "Resolution in fullscreen mode"
-		ToolTipItem92.LeftIndent = 6
-		ToolTipItem92.Text = resources.GetString("ToolTipItem92.Text")
-		SuperToolTip94.Items.Add(ToolTipTitleItem94)
-		SuperToolTip94.Items.Add(ToolTipItem92)
-		Me.lbl_ml_volume_spkr_right.SuperTip = SuperToolTip94
+		ToolTipTitleItem96.Text = "Resolution in fullscreen mode"
+		ToolTipItem94.LeftIndent = 6
+		ToolTipItem94.Text = resources.GetString("ToolTipItem94.Text")
+		SuperToolTip96.Items.Add(ToolTipTitleItem96)
+		SuperToolTip96.Items.Add(ToolTipItem94)
+		Me.lbl_ml_volume_spkr_right.SuperTip = SuperToolTip96
 		Me.lbl_ml_volume_spkr_right.TabIndex = 8
 		Me.lbl_ml_volume_spkr_right.Text = "100"
 		'
@@ -4061,12 +4445,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_ml_volume_spkr_left.MKBoundControl5 = Nothing
 		Me.lbl_ml_volume_spkr_left.Name = "lbl_ml_volume_spkr_left"
 		Me.lbl_ml_volume_spkr_left.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem95.Text = "Resolution in fullscreen mode"
-		ToolTipItem93.LeftIndent = 6
-		ToolTipItem93.Text = resources.GetString("ToolTipItem93.Text")
-		SuperToolTip95.Items.Add(ToolTipTitleItem95)
-		SuperToolTip95.Items.Add(ToolTipItem93)
-		Me.lbl_ml_volume_spkr_left.SuperTip = SuperToolTip95
+		ToolTipTitleItem97.Text = "Resolution in fullscreen mode"
+		ToolTipItem95.LeftIndent = 6
+		ToolTipItem95.Text = resources.GetString("ToolTipItem95.Text")
+		SuperToolTip97.Items.Add(ToolTipTitleItem97)
+		SuperToolTip97.Items.Add(ToolTipItem95)
+		Me.lbl_ml_volume_spkr_left.SuperTip = SuperToolTip97
 		Me.lbl_ml_volume_spkr_left.TabIndex = 8
 		Me.lbl_ml_volume_spkr_left.Text = "100"
 		'
@@ -4082,12 +4466,12 @@ Partial Class ucr_DOSBox_Config
 		Me.Ctl_MKDXLabel20.MKBoundControl5 = Nothing
 		Me.Ctl_MKDXLabel20.Name = "Ctl_MKDXLabel20"
 		Me.Ctl_MKDXLabel20.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem96.Text = "Resolution in fullscreen mode"
-		ToolTipItem94.LeftIndent = 6
-		ToolTipItem94.Text = resources.GetString("ToolTipItem94.Text")
-		SuperToolTip96.Items.Add(ToolTipTitleItem96)
-		SuperToolTip96.Items.Add(ToolTipItem94)
-		Me.Ctl_MKDXLabel20.SuperTip = SuperToolTip96
+		ToolTipTitleItem98.Text = "Resolution in fullscreen mode"
+		ToolTipItem96.LeftIndent = 6
+		ToolTipItem96.Text = resources.GetString("ToolTipItem96.Text")
+		SuperToolTip98.Items.Add(ToolTipTitleItem98)
+		SuperToolTip98.Items.Add(ToolTipItem96)
+		Me.Ctl_MKDXLabel20.SuperTip = SuperToolTip98
 		Me.Ctl_MKDXLabel20.TabIndex = 8
 		Me.Ctl_MKDXLabel20.Text = "Left"
 		'
@@ -4145,12 +4529,12 @@ Partial Class ucr_DOSBox_Config
 		Me.Ctl_MKDXLabel33.MKBoundControl5 = Nothing
 		Me.Ctl_MKDXLabel33.Name = "Ctl_MKDXLabel33"
 		Me.Ctl_MKDXLabel33.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem97.Text = "Resolution in fullscreen mode"
-		ToolTipItem95.LeftIndent = 6
-		ToolTipItem95.Text = resources.GetString("ToolTipItem95.Text")
-		SuperToolTip97.Items.Add(ToolTipTitleItem97)
-		SuperToolTip97.Items.Add(ToolTipItem95)
-		Me.Ctl_MKDXLabel33.SuperTip = SuperToolTip97
+		ToolTipTitleItem99.Text = "Resolution in fullscreen mode"
+		ToolTipItem97.LeftIndent = 6
+		ToolTipItem97.Text = resources.GetString("ToolTipItem97.Text")
+		SuperToolTip99.Items.Add(ToolTipTitleItem99)
+		SuperToolTip99.Items.Add(ToolTipItem97)
+		Me.Ctl_MKDXLabel33.SuperTip = SuperToolTip99
 		Me.Ctl_MKDXLabel33.TabIndex = 8
 		Me.Ctl_MKDXLabel33.Text = "Right"
 		'
@@ -4166,12 +4550,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_ml_volume_cdaudio_right.MKBoundControl5 = Nothing
 		Me.lbl_ml_volume_cdaudio_right.Name = "lbl_ml_volume_cdaudio_right"
 		Me.lbl_ml_volume_cdaudio_right.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem98.Text = "Resolution in fullscreen mode"
-		ToolTipItem96.LeftIndent = 6
-		ToolTipItem96.Text = resources.GetString("ToolTipItem96.Text")
-		SuperToolTip98.Items.Add(ToolTipTitleItem98)
-		SuperToolTip98.Items.Add(ToolTipItem96)
-		Me.lbl_ml_volume_cdaudio_right.SuperTip = SuperToolTip98
+		ToolTipTitleItem100.Text = "Resolution in fullscreen mode"
+		ToolTipItem98.LeftIndent = 6
+		ToolTipItem98.Text = resources.GetString("ToolTipItem98.Text")
+		SuperToolTip100.Items.Add(ToolTipTitleItem100)
+		SuperToolTip100.Items.Add(ToolTipItem98)
+		Me.lbl_ml_volume_cdaudio_right.SuperTip = SuperToolTip100
 		Me.lbl_ml_volume_cdaudio_right.TabIndex = 8
 		Me.lbl_ml_volume_cdaudio_right.Text = "100"
 		'
@@ -4187,12 +4571,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_ml_volume_cdaudio_left.MKBoundControl5 = Nothing
 		Me.lbl_ml_volume_cdaudio_left.Name = "lbl_ml_volume_cdaudio_left"
 		Me.lbl_ml_volume_cdaudio_left.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem99.Text = "Resolution in fullscreen mode"
-		ToolTipItem97.LeftIndent = 6
-		ToolTipItem97.Text = resources.GetString("ToolTipItem97.Text")
-		SuperToolTip99.Items.Add(ToolTipTitleItem99)
-		SuperToolTip99.Items.Add(ToolTipItem97)
-		Me.lbl_ml_volume_cdaudio_left.SuperTip = SuperToolTip99
+		ToolTipTitleItem101.Text = "Resolution in fullscreen mode"
+		ToolTipItem99.LeftIndent = 6
+		ToolTipItem99.Text = resources.GetString("ToolTipItem99.Text")
+		SuperToolTip101.Items.Add(ToolTipTitleItem101)
+		SuperToolTip101.Items.Add(ToolTipItem99)
+		Me.lbl_ml_volume_cdaudio_left.SuperTip = SuperToolTip101
 		Me.lbl_ml_volume_cdaudio_left.TabIndex = 8
 		Me.lbl_ml_volume_cdaudio_left.Text = "100"
 		'
@@ -4208,12 +4592,12 @@ Partial Class ucr_DOSBox_Config
 		Me.Ctl_MKDXLabel36.MKBoundControl5 = Nothing
 		Me.Ctl_MKDXLabel36.Name = "Ctl_MKDXLabel36"
 		Me.Ctl_MKDXLabel36.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem100.Text = "Resolution in fullscreen mode"
-		ToolTipItem98.LeftIndent = 6
-		ToolTipItem98.Text = resources.GetString("ToolTipItem98.Text")
-		SuperToolTip100.Items.Add(ToolTipTitleItem100)
-		SuperToolTip100.Items.Add(ToolTipItem98)
-		Me.Ctl_MKDXLabel36.SuperTip = SuperToolTip100
+		ToolTipTitleItem102.Text = "Resolution in fullscreen mode"
+		ToolTipItem100.LeftIndent = 6
+		ToolTipItem100.Text = resources.GetString("ToolTipItem100.Text")
+		SuperToolTip102.Items.Add(ToolTipTitleItem102)
+		SuperToolTip102.Items.Add(ToolTipItem100)
+		Me.Ctl_MKDXLabel36.SuperTip = SuperToolTip102
 		Me.Ctl_MKDXLabel36.TabIndex = 8
 		Me.Ctl_MKDXLabel36.Text = "Left"
 		'
@@ -4271,12 +4655,12 @@ Partial Class ucr_DOSBox_Config
 		Me.Ctl_MKDXLabel29.MKBoundControl5 = Nothing
 		Me.Ctl_MKDXLabel29.Name = "Ctl_MKDXLabel29"
 		Me.Ctl_MKDXLabel29.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem101.Text = "Resolution in fullscreen mode"
-		ToolTipItem99.LeftIndent = 6
-		ToolTipItem99.Text = resources.GetString("ToolTipItem99.Text")
-		SuperToolTip101.Items.Add(ToolTipTitleItem101)
-		SuperToolTip101.Items.Add(ToolTipItem99)
-		Me.Ctl_MKDXLabel29.SuperTip = SuperToolTip101
+		ToolTipTitleItem103.Text = "Resolution in fullscreen mode"
+		ToolTipItem101.LeftIndent = 6
+		ToolTipItem101.Text = resources.GetString("ToolTipItem101.Text")
+		SuperToolTip103.Items.Add(ToolTipTitleItem103)
+		SuperToolTip103.Items.Add(ToolTipItem101)
+		Me.Ctl_MKDXLabel29.SuperTip = SuperToolTip103
 		Me.Ctl_MKDXLabel29.TabIndex = 8
 		Me.Ctl_MKDXLabel29.Text = "Right"
 		'
@@ -4292,12 +4676,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_ml_volume_fm_right.MKBoundControl5 = Nothing
 		Me.lbl_ml_volume_fm_right.Name = "lbl_ml_volume_fm_right"
 		Me.lbl_ml_volume_fm_right.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem102.Text = "Resolution in fullscreen mode"
-		ToolTipItem100.LeftIndent = 6
-		ToolTipItem100.Text = resources.GetString("ToolTipItem100.Text")
-		SuperToolTip102.Items.Add(ToolTipTitleItem102)
-		SuperToolTip102.Items.Add(ToolTipItem100)
-		Me.lbl_ml_volume_fm_right.SuperTip = SuperToolTip102
+		ToolTipTitleItem104.Text = "Resolution in fullscreen mode"
+		ToolTipItem102.LeftIndent = 6
+		ToolTipItem102.Text = resources.GetString("ToolTipItem102.Text")
+		SuperToolTip104.Items.Add(ToolTipTitleItem104)
+		SuperToolTip104.Items.Add(ToolTipItem102)
+		Me.lbl_ml_volume_fm_right.SuperTip = SuperToolTip104
 		Me.lbl_ml_volume_fm_right.TabIndex = 8
 		Me.lbl_ml_volume_fm_right.Text = "100"
 		'
@@ -4313,12 +4697,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_ml_volume_fm_left.MKBoundControl5 = Nothing
 		Me.lbl_ml_volume_fm_left.Name = "lbl_ml_volume_fm_left"
 		Me.lbl_ml_volume_fm_left.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem103.Text = "Resolution in fullscreen mode"
-		ToolTipItem101.LeftIndent = 6
-		ToolTipItem101.Text = resources.GetString("ToolTipItem101.Text")
-		SuperToolTip103.Items.Add(ToolTipTitleItem103)
-		SuperToolTip103.Items.Add(ToolTipItem101)
-		Me.lbl_ml_volume_fm_left.SuperTip = SuperToolTip103
+		ToolTipTitleItem105.Text = "Resolution in fullscreen mode"
+		ToolTipItem103.LeftIndent = 6
+		ToolTipItem103.Text = resources.GetString("ToolTipItem103.Text")
+		SuperToolTip105.Items.Add(ToolTipTitleItem105)
+		SuperToolTip105.Items.Add(ToolTipItem103)
+		Me.lbl_ml_volume_fm_left.SuperTip = SuperToolTip105
 		Me.lbl_ml_volume_fm_left.TabIndex = 8
 		Me.lbl_ml_volume_fm_left.Text = "100"
 		'
@@ -4334,12 +4718,12 @@ Partial Class ucr_DOSBox_Config
 		Me.Ctl_MKDXLabel32.MKBoundControl5 = Nothing
 		Me.Ctl_MKDXLabel32.Name = "Ctl_MKDXLabel32"
 		Me.Ctl_MKDXLabel32.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem104.Text = "Resolution in fullscreen mode"
-		ToolTipItem102.LeftIndent = 6
-		ToolTipItem102.Text = resources.GetString("ToolTipItem102.Text")
-		SuperToolTip104.Items.Add(ToolTipTitleItem104)
-		SuperToolTip104.Items.Add(ToolTipItem102)
-		Me.Ctl_MKDXLabel32.SuperTip = SuperToolTip104
+		ToolTipTitleItem106.Text = "Resolution in fullscreen mode"
+		ToolTipItem104.LeftIndent = 6
+		ToolTipItem104.Text = resources.GetString("ToolTipItem104.Text")
+		SuperToolTip106.Items.Add(ToolTipTitleItem106)
+		SuperToolTip106.Items.Add(ToolTipItem104)
+		Me.Ctl_MKDXLabel32.SuperTip = SuperToolTip106
 		Me.Ctl_MKDXLabel32.TabIndex = 8
 		Me.Ctl_MKDXLabel32.Text = "Left"
 		'
@@ -4397,12 +4781,12 @@ Partial Class ucr_DOSBox_Config
 		Me.Ctl_MKDXLabel25.MKBoundControl5 = Nothing
 		Me.Ctl_MKDXLabel25.Name = "Ctl_MKDXLabel25"
 		Me.Ctl_MKDXLabel25.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem105.Text = "Resolution in fullscreen mode"
-		ToolTipItem103.LeftIndent = 6
-		ToolTipItem103.Text = resources.GetString("ToolTipItem103.Text")
-		SuperToolTip105.Items.Add(ToolTipTitleItem105)
-		SuperToolTip105.Items.Add(ToolTipItem103)
-		Me.Ctl_MKDXLabel25.SuperTip = SuperToolTip105
+		ToolTipTitleItem107.Text = "Resolution in fullscreen mode"
+		ToolTipItem105.LeftIndent = 6
+		ToolTipItem105.Text = resources.GetString("ToolTipItem105.Text")
+		SuperToolTip107.Items.Add(ToolTipTitleItem107)
+		SuperToolTip107.Items.Add(ToolTipItem105)
+		Me.Ctl_MKDXLabel25.SuperTip = SuperToolTip107
 		Me.Ctl_MKDXLabel25.TabIndex = 8
 		Me.Ctl_MKDXLabel25.Text = "Right"
 		'
@@ -4418,12 +4802,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_ml_volume_gus_right.MKBoundControl5 = Nothing
 		Me.lbl_ml_volume_gus_right.Name = "lbl_ml_volume_gus_right"
 		Me.lbl_ml_volume_gus_right.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem106.Text = "Resolution in fullscreen mode"
-		ToolTipItem104.LeftIndent = 6
-		ToolTipItem104.Text = resources.GetString("ToolTipItem104.Text")
-		SuperToolTip106.Items.Add(ToolTipTitleItem106)
-		SuperToolTip106.Items.Add(ToolTipItem104)
-		Me.lbl_ml_volume_gus_right.SuperTip = SuperToolTip106
+		ToolTipTitleItem108.Text = "Resolution in fullscreen mode"
+		ToolTipItem106.LeftIndent = 6
+		ToolTipItem106.Text = resources.GetString("ToolTipItem106.Text")
+		SuperToolTip108.Items.Add(ToolTipTitleItem108)
+		SuperToolTip108.Items.Add(ToolTipItem106)
+		Me.lbl_ml_volume_gus_right.SuperTip = SuperToolTip108
 		Me.lbl_ml_volume_gus_right.TabIndex = 8
 		Me.lbl_ml_volume_gus_right.Text = "100"
 		'
@@ -4439,12 +4823,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_ml_volume_gus_left.MKBoundControl5 = Nothing
 		Me.lbl_ml_volume_gus_left.Name = "lbl_ml_volume_gus_left"
 		Me.lbl_ml_volume_gus_left.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem107.Text = "Resolution in fullscreen mode"
-		ToolTipItem105.LeftIndent = 6
-		ToolTipItem105.Text = resources.GetString("ToolTipItem105.Text")
-		SuperToolTip107.Items.Add(ToolTipTitleItem107)
-		SuperToolTip107.Items.Add(ToolTipItem105)
-		Me.lbl_ml_volume_gus_left.SuperTip = SuperToolTip107
+		ToolTipTitleItem109.Text = "Resolution in fullscreen mode"
+		ToolTipItem107.LeftIndent = 6
+		ToolTipItem107.Text = resources.GetString("ToolTipItem107.Text")
+		SuperToolTip109.Items.Add(ToolTipTitleItem109)
+		SuperToolTip109.Items.Add(ToolTipItem107)
+		Me.lbl_ml_volume_gus_left.SuperTip = SuperToolTip109
 		Me.lbl_ml_volume_gus_left.TabIndex = 8
 		Me.lbl_ml_volume_gus_left.Text = "100"
 		'
@@ -4460,12 +4844,12 @@ Partial Class ucr_DOSBox_Config
 		Me.Ctl_MKDXLabel28.MKBoundControl5 = Nothing
 		Me.Ctl_MKDXLabel28.Name = "Ctl_MKDXLabel28"
 		Me.Ctl_MKDXLabel28.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem108.Text = "Resolution in fullscreen mode"
-		ToolTipItem106.LeftIndent = 6
-		ToolTipItem106.Text = resources.GetString("ToolTipItem106.Text")
-		SuperToolTip108.Items.Add(ToolTipTitleItem108)
-		SuperToolTip108.Items.Add(ToolTipItem106)
-		Me.Ctl_MKDXLabel28.SuperTip = SuperToolTip108
+		ToolTipTitleItem110.Text = "Resolution in fullscreen mode"
+		ToolTipItem108.LeftIndent = 6
+		ToolTipItem108.Text = resources.GetString("ToolTipItem108.Text")
+		SuperToolTip110.Items.Add(ToolTipTitleItem110)
+		SuperToolTip110.Items.Add(ToolTipItem108)
+		Me.Ctl_MKDXLabel28.SuperTip = SuperToolTip110
 		Me.Ctl_MKDXLabel28.TabIndex = 8
 		Me.Ctl_MKDXLabel28.Text = "Left"
 		'
@@ -4523,12 +4907,12 @@ Partial Class ucr_DOSBox_Config
 		Me.Ctl_MKDXLabel21.MKBoundControl5 = Nothing
 		Me.Ctl_MKDXLabel21.Name = "Ctl_MKDXLabel21"
 		Me.Ctl_MKDXLabel21.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem109.Text = "Resolution in fullscreen mode"
-		ToolTipItem107.LeftIndent = 6
-		ToolTipItem107.Text = resources.GetString("ToolTipItem107.Text")
-		SuperToolTip109.Items.Add(ToolTipTitleItem109)
-		SuperToolTip109.Items.Add(ToolTipItem107)
-		Me.Ctl_MKDXLabel21.SuperTip = SuperToolTip109
+		ToolTipTitleItem111.Text = "Resolution in fullscreen mode"
+		ToolTipItem109.LeftIndent = 6
+		ToolTipItem109.Text = resources.GetString("ToolTipItem109.Text")
+		SuperToolTip111.Items.Add(ToolTipTitleItem111)
+		SuperToolTip111.Items.Add(ToolTipItem109)
+		Me.Ctl_MKDXLabel21.SuperTip = SuperToolTip111
 		Me.Ctl_MKDXLabel21.TabIndex = 8
 		Me.Ctl_MKDXLabel21.Text = "Right"
 		'
@@ -4544,12 +4928,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_ml_volume_sb_right.MKBoundControl5 = Nothing
 		Me.lbl_ml_volume_sb_right.Name = "lbl_ml_volume_sb_right"
 		Me.lbl_ml_volume_sb_right.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem110.Text = "Resolution in fullscreen mode"
-		ToolTipItem108.LeftIndent = 6
-		ToolTipItem108.Text = resources.GetString("ToolTipItem108.Text")
-		SuperToolTip110.Items.Add(ToolTipTitleItem110)
-		SuperToolTip110.Items.Add(ToolTipItem108)
-		Me.lbl_ml_volume_sb_right.SuperTip = SuperToolTip110
+		ToolTipTitleItem112.Text = "Resolution in fullscreen mode"
+		ToolTipItem110.LeftIndent = 6
+		ToolTipItem110.Text = resources.GetString("ToolTipItem110.Text")
+		SuperToolTip112.Items.Add(ToolTipTitleItem112)
+		SuperToolTip112.Items.Add(ToolTipItem110)
+		Me.lbl_ml_volume_sb_right.SuperTip = SuperToolTip112
 		Me.lbl_ml_volume_sb_right.TabIndex = 8
 		Me.lbl_ml_volume_sb_right.Text = "100"
 		'
@@ -4565,12 +4949,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_ml_volume_sb_left.MKBoundControl5 = Nothing
 		Me.lbl_ml_volume_sb_left.Name = "lbl_ml_volume_sb_left"
 		Me.lbl_ml_volume_sb_left.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem111.Text = "Resolution in fullscreen mode"
-		ToolTipItem109.LeftIndent = 6
-		ToolTipItem109.Text = resources.GetString("ToolTipItem109.Text")
-		SuperToolTip111.Items.Add(ToolTipTitleItem111)
-		SuperToolTip111.Items.Add(ToolTipItem109)
-		Me.lbl_ml_volume_sb_left.SuperTip = SuperToolTip111
+		ToolTipTitleItem113.Text = "Resolution in fullscreen mode"
+		ToolTipItem111.LeftIndent = 6
+		ToolTipItem111.Text = resources.GetString("ToolTipItem111.Text")
+		SuperToolTip113.Items.Add(ToolTipTitleItem113)
+		SuperToolTip113.Items.Add(ToolTipItem111)
+		Me.lbl_ml_volume_sb_left.SuperTip = SuperToolTip113
 		Me.lbl_ml_volume_sb_left.TabIndex = 8
 		Me.lbl_ml_volume_sb_left.Text = "100"
 		'
@@ -4586,12 +4970,12 @@ Partial Class ucr_DOSBox_Config
 		Me.Ctl_MKDXLabel24.MKBoundControl5 = Nothing
 		Me.Ctl_MKDXLabel24.Name = "Ctl_MKDXLabel24"
 		Me.Ctl_MKDXLabel24.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem112.Text = "Resolution in fullscreen mode"
-		ToolTipItem110.LeftIndent = 6
-		ToolTipItem110.Text = resources.GetString("ToolTipItem110.Text")
-		SuperToolTip112.Items.Add(ToolTipTitleItem112)
-		SuperToolTip112.Items.Add(ToolTipItem110)
-		Me.Ctl_MKDXLabel24.SuperTip = SuperToolTip112
+		ToolTipTitleItem114.Text = "Resolution in fullscreen mode"
+		ToolTipItem112.LeftIndent = 6
+		ToolTipItem112.Text = resources.GetString("ToolTipItem112.Text")
+		SuperToolTip114.Items.Add(ToolTipTitleItem114)
+		SuperToolTip114.Items.Add(ToolTipItem112)
+		Me.Ctl_MKDXLabel24.SuperTip = SuperToolTip114
 		Me.Ctl_MKDXLabel24.TabIndex = 8
 		Me.Ctl_MKDXLabel24.Text = "Left"
 		'
@@ -4649,12 +5033,12 @@ Partial Class ucr_DOSBox_Config
 		Me.Ctl_MKDXLabel13.MKBoundControl5 = Nothing
 		Me.Ctl_MKDXLabel13.Name = "Ctl_MKDXLabel13"
 		Me.Ctl_MKDXLabel13.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem113.Text = "Resolution in fullscreen mode"
-		ToolTipItem111.LeftIndent = 6
-		ToolTipItem111.Text = resources.GetString("ToolTipItem111.Text")
-		SuperToolTip113.Items.Add(ToolTipTitleItem113)
-		SuperToolTip113.Items.Add(ToolTipItem111)
-		Me.Ctl_MKDXLabel13.SuperTip = SuperToolTip113
+		ToolTipTitleItem115.Text = "Resolution in fullscreen mode"
+		ToolTipItem113.LeftIndent = 6
+		ToolTipItem113.Text = resources.GetString("ToolTipItem113.Text")
+		SuperToolTip115.Items.Add(ToolTipTitleItem115)
+		SuperToolTip115.Items.Add(ToolTipItem113)
+		Me.Ctl_MKDXLabel13.SuperTip = SuperToolTip115
 		Me.Ctl_MKDXLabel13.TabIndex = 8
 		Me.Ctl_MKDXLabel13.Text = "Right"
 		'
@@ -4670,12 +5054,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_ml_volume_disney_right.MKBoundControl5 = Nothing
 		Me.lbl_ml_volume_disney_right.Name = "lbl_ml_volume_disney_right"
 		Me.lbl_ml_volume_disney_right.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem114.Text = "Resolution in fullscreen mode"
-		ToolTipItem112.LeftIndent = 6
-		ToolTipItem112.Text = resources.GetString("ToolTipItem112.Text")
-		SuperToolTip114.Items.Add(ToolTipTitleItem114)
-		SuperToolTip114.Items.Add(ToolTipItem112)
-		Me.lbl_ml_volume_disney_right.SuperTip = SuperToolTip114
+		ToolTipTitleItem116.Text = "Resolution in fullscreen mode"
+		ToolTipItem114.LeftIndent = 6
+		ToolTipItem114.Text = resources.GetString("ToolTipItem114.Text")
+		SuperToolTip116.Items.Add(ToolTipTitleItem116)
+		SuperToolTip116.Items.Add(ToolTipItem114)
+		Me.lbl_ml_volume_disney_right.SuperTip = SuperToolTip116
 		Me.lbl_ml_volume_disney_right.TabIndex = 8
 		Me.lbl_ml_volume_disney_right.Text = "100"
 		'
@@ -4691,12 +5075,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_ml_volume_disney_left.MKBoundControl5 = Nothing
 		Me.lbl_ml_volume_disney_left.Name = "lbl_ml_volume_disney_left"
 		Me.lbl_ml_volume_disney_left.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem115.Text = "Resolution in fullscreen mode"
-		ToolTipItem113.LeftIndent = 6
-		ToolTipItem113.Text = resources.GetString("ToolTipItem113.Text")
-		SuperToolTip115.Items.Add(ToolTipTitleItem115)
-		SuperToolTip115.Items.Add(ToolTipItem113)
-		Me.lbl_ml_volume_disney_left.SuperTip = SuperToolTip115
+		ToolTipTitleItem117.Text = "Resolution in fullscreen mode"
+		ToolTipItem115.LeftIndent = 6
+		ToolTipItem115.Text = resources.GetString("ToolTipItem115.Text")
+		SuperToolTip117.Items.Add(ToolTipTitleItem117)
+		SuperToolTip117.Items.Add(ToolTipItem115)
+		Me.lbl_ml_volume_disney_left.SuperTip = SuperToolTip117
 		Me.lbl_ml_volume_disney_left.TabIndex = 8
 		Me.lbl_ml_volume_disney_left.Text = "100"
 		'
@@ -4712,12 +5096,12 @@ Partial Class ucr_DOSBox_Config
 		Me.Ctl_MKDXLabel16.MKBoundControl5 = Nothing
 		Me.Ctl_MKDXLabel16.Name = "Ctl_MKDXLabel16"
 		Me.Ctl_MKDXLabel16.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem116.Text = "Resolution in fullscreen mode"
-		ToolTipItem114.LeftIndent = 6
-		ToolTipItem114.Text = resources.GetString("ToolTipItem114.Text")
-		SuperToolTip116.Items.Add(ToolTipTitleItem116)
-		SuperToolTip116.Items.Add(ToolTipItem114)
-		Me.Ctl_MKDXLabel16.SuperTip = SuperToolTip116
+		ToolTipTitleItem118.Text = "Resolution in fullscreen mode"
+		ToolTipItem116.LeftIndent = 6
+		ToolTipItem116.Text = resources.GetString("ToolTipItem116.Text")
+		SuperToolTip118.Items.Add(ToolTipTitleItem118)
+		SuperToolTip118.Items.Add(ToolTipItem116)
+		Me.Ctl_MKDXLabel16.SuperTip = SuperToolTip118
 		Me.Ctl_MKDXLabel16.TabIndex = 8
 		Me.Ctl_MKDXLabel16.Text = "Left"
 		'
@@ -4775,12 +5159,12 @@ Partial Class ucr_DOSBox_Config
 		Me.Ctl_MKDXLabel10.MKBoundControl5 = Nothing
 		Me.Ctl_MKDXLabel10.Name = "Ctl_MKDXLabel10"
 		Me.Ctl_MKDXLabel10.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem117.Text = "Resolution in fullscreen mode"
-		ToolTipItem115.LeftIndent = 6
-		ToolTipItem115.Text = resources.GetString("ToolTipItem115.Text")
-		SuperToolTip117.Items.Add(ToolTipTitleItem117)
-		SuperToolTip117.Items.Add(ToolTipItem115)
-		Me.Ctl_MKDXLabel10.SuperTip = SuperToolTip117
+		ToolTipTitleItem119.Text = "Resolution in fullscreen mode"
+		ToolTipItem117.LeftIndent = 6
+		ToolTipItem117.Text = resources.GetString("ToolTipItem117.Text")
+		SuperToolTip119.Items.Add(ToolTipTitleItem119)
+		SuperToolTip119.Items.Add(ToolTipItem117)
+		Me.Ctl_MKDXLabel10.SuperTip = SuperToolTip119
 		Me.Ctl_MKDXLabel10.TabIndex = 8
 		Me.Ctl_MKDXLabel10.Text = "Right"
 		'
@@ -4796,12 +5180,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_ml_volume_master_right.MKBoundControl5 = Nothing
 		Me.lbl_ml_volume_master_right.Name = "lbl_ml_volume_master_right"
 		Me.lbl_ml_volume_master_right.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem118.Text = "Resolution in fullscreen mode"
-		ToolTipItem116.LeftIndent = 6
-		ToolTipItem116.Text = resources.GetString("ToolTipItem116.Text")
-		SuperToolTip118.Items.Add(ToolTipTitleItem118)
-		SuperToolTip118.Items.Add(ToolTipItem116)
-		Me.lbl_ml_volume_master_right.SuperTip = SuperToolTip118
+		ToolTipTitleItem120.Text = "Resolution in fullscreen mode"
+		ToolTipItem118.LeftIndent = 6
+		ToolTipItem118.Text = resources.GetString("ToolTipItem118.Text")
+		SuperToolTip120.Items.Add(ToolTipTitleItem120)
+		SuperToolTip120.Items.Add(ToolTipItem118)
+		Me.lbl_ml_volume_master_right.SuperTip = SuperToolTip120
 		Me.lbl_ml_volume_master_right.TabIndex = 8
 		Me.lbl_ml_volume_master_right.Text = "100"
 		'
@@ -4817,12 +5201,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_ml_volume_master_left.MKBoundControl5 = Nothing
 		Me.lbl_ml_volume_master_left.Name = "lbl_ml_volume_master_left"
 		Me.lbl_ml_volume_master_left.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem119.Text = "Resolution in fullscreen mode"
-		ToolTipItem117.LeftIndent = 6
-		ToolTipItem117.Text = resources.GetString("ToolTipItem117.Text")
-		SuperToolTip119.Items.Add(ToolTipTitleItem119)
-		SuperToolTip119.Items.Add(ToolTipItem117)
-		Me.lbl_ml_volume_master_left.SuperTip = SuperToolTip119
+		ToolTipTitleItem121.Text = "Resolution in fullscreen mode"
+		ToolTipItem119.LeftIndent = 6
+		ToolTipItem119.Text = resources.GetString("ToolTipItem119.Text")
+		SuperToolTip121.Items.Add(ToolTipTitleItem121)
+		SuperToolTip121.Items.Add(ToolTipItem119)
+		Me.lbl_ml_volume_master_left.SuperTip = SuperToolTip121
 		Me.lbl_ml_volume_master_left.TabIndex = 8
 		Me.lbl_ml_volume_master_left.Text = "100"
 		'
@@ -4838,12 +5222,12 @@ Partial Class ucr_DOSBox_Config
 		Me.Ctl_MKDXLabel9.MKBoundControl5 = Nothing
 		Me.Ctl_MKDXLabel9.Name = "Ctl_MKDXLabel9"
 		Me.Ctl_MKDXLabel9.Size = New System.Drawing.Size(45, 20)
-		ToolTipTitleItem120.Text = "Resolution in fullscreen mode"
-		ToolTipItem118.LeftIndent = 6
-		ToolTipItem118.Text = resources.GetString("ToolTipItem118.Text")
-		SuperToolTip120.Items.Add(ToolTipTitleItem120)
-		SuperToolTip120.Items.Add(ToolTipItem118)
-		Me.Ctl_MKDXLabel9.SuperTip = SuperToolTip120
+		ToolTipTitleItem122.Text = "Resolution in fullscreen mode"
+		ToolTipItem120.LeftIndent = 6
+		ToolTipItem120.Text = resources.GetString("ToolTipItem120.Text")
+		SuperToolTip122.Items.Add(ToolTipTitleItem122)
+		SuperToolTip122.Items.Add(ToolTipItem120)
+		Me.Ctl_MKDXLabel9.SuperTip = SuperToolTip122
 		Me.Ctl_MKDXLabel9.TabIndex = 8
 		Me.Ctl_MKDXLabel9.Text = "Left"
 		'
@@ -4863,6 +5247,8 @@ Partial Class ucr_DOSBox_Config
 		'
 		'tpg_Sound_Blaster
 		'
+		Me.tpg_Sound_Blaster.AllowTouchScroll = True
+		Me.tpg_Sound_Blaster.AutoScroll = True
 		Me.tpg_Sound_Blaster.Controls.Add(Me.cmb_sblaster_oplrate)
 		Me.tpg_Sound_Blaster.Controls.Add(Me.cmb_sblaster_oplemu)
 		Me.tpg_Sound_Blaster.Controls.Add(Me.cmb_sblaster_oplmode)
@@ -4882,7 +5268,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_Sound_Blaster.Controls.Add(Me.lbl_sblaster_sbbase)
 		Me.tpg_Sound_Blaster.Controls.Add(Me.lbl_sblaster_sbtype)
 		Me.tpg_Sound_Blaster.Name = "tpg_Sound_Blaster"
-		Me.tpg_Sound_Blaster.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Sound_Blaster.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Sound_Blaster.Text = "Sound Blaster"
 		'
 		'cmb_sblaster_oplrate
@@ -4902,13 +5288,13 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_sblaster_oplrate.Properties.ShowHeader = False
 		Me.cmb_sblaster_oplrate.Properties.ValueMember = "value"
 		Me.cmb_sblaster_oplrate.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem122.Text = "SB OPL Rate"
-		ToolTipItem120.LeftIndent = 6
-		ToolTipItem120.Text = "Sample Rate of OPL music emulation. Use 49716 for highest quality (Set the Mixer " &
+		ToolTipTitleItem124.Text = "SB OPL Rate"
+		ToolTipItem122.LeftIndent = 6
+		ToolTipItem122.Text = "Sample Rate of OPL music emulation. Use 49716 for highest quality (Set the Mixer " &
 		"Rate accordingly)."
-		SuperToolTip122.Items.Add(ToolTipTitleItem122)
-		SuperToolTip122.Items.Add(ToolTipItem120)
-		Me.cmb_sblaster_oplrate.SuperTip = SuperToolTip122
+		SuperToolTip124.Items.Add(ToolTipTitleItem124)
+		SuperToolTip124.Items.Add(ToolTipItem122)
+		Me.cmb_sblaster_oplrate.SuperTip = SuperToolTip124
 		Me.cmb_sblaster_oplrate.TabIndex = 7
 		'
 		'Ctl_MKDXLabel4
@@ -4923,13 +5309,13 @@ Partial Class ucr_DOSBox_Config
 		Me.Ctl_MKDXLabel4.MKBoundControl5 = Nothing
 		Me.Ctl_MKDXLabel4.Name = "Ctl_MKDXLabel4"
 		Me.Ctl_MKDXLabel4.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem121.Text = "SB OPL Rate"
-		ToolTipItem119.LeftIndent = 6
-		ToolTipItem119.Text = "Sample Rate of OPL music emulation. Use 49716 for highest quality (Set the Mixer " &
+		ToolTipTitleItem123.Text = "SB OPL Rate"
+		ToolTipItem121.LeftIndent = 6
+		ToolTipItem121.Text = "Sample Rate of OPL music emulation. Use 49716 for highest quality (Set the Mixer " &
 		"Rate accordingly)."
-		SuperToolTip121.Items.Add(ToolTipTitleItem121)
-		SuperToolTip121.Items.Add(ToolTipItem119)
-		Me.Ctl_MKDXLabel4.SuperTip = SuperToolTip121
+		SuperToolTip123.Items.Add(ToolTipTitleItem123)
+		SuperToolTip123.Items.Add(ToolTipItem121)
+		Me.Ctl_MKDXLabel4.SuperTip = SuperToolTip123
 		Me.Ctl_MKDXLabel4.TabIndex = 26
 		Me.Ctl_MKDXLabel4.Text = "SB OPL Rate:"
 		'
@@ -4962,13 +5348,13 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_sblaster_oplemu.Properties.ShowHeader = False
 		Me.cmb_sblaster_oplemu.Properties.ValueMember = "value"
 		Me.cmb_sblaster_oplemu.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem124.Text = "SB OPL Emulation"
-		ToolTipItem122.LeftIndent = 6
-		ToolTipItem122.Text = "Provider for the OPL Emulation. 'compat' might provide better quality (see SB OPL" &
+		ToolTipTitleItem126.Text = "SB OPL Emulation"
+		ToolTipItem124.LeftIndent = 6
+		ToolTipItem124.Text = "Provider for the OPL Emulation. 'compat' might provide better quality (see SB OPL" &
 		" Rate as well)."
-		SuperToolTip124.Items.Add(ToolTipTitleItem124)
-		SuperToolTip124.Items.Add(ToolTipItem122)
-		Me.cmb_sblaster_oplemu.SuperTip = SuperToolTip124
+		SuperToolTip126.Items.Add(ToolTipTitleItem126)
+		SuperToolTip126.Items.Add(ToolTipItem124)
+		Me.cmb_sblaster_oplemu.SuperTip = SuperToolTip126
 		Me.cmb_sblaster_oplemu.TabIndex = 6
 		'
 		'lbl_sblaster_oplemu
@@ -4983,13 +5369,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sblaster_oplemu.MKBoundControl5 = Nothing
 		Me.lbl_sblaster_oplemu.Name = "lbl_sblaster_oplemu"
 		Me.lbl_sblaster_oplemu.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem123.Text = "SB OPL Emulation"
-		ToolTipItem121.LeftIndent = 6
-		ToolTipItem121.Text = "Provider for the OPL Emulation. 'compat' might provide better quality (see SB OPL" &
+		ToolTipTitleItem125.Text = "SB OPL Emulation"
+		ToolTipItem123.LeftIndent = 6
+		ToolTipItem123.Text = "Provider for the OPL Emulation. 'compat' might provide better quality (see SB OPL" &
 		" Rate as well)."
-		SuperToolTip123.Items.Add(ToolTipTitleItem123)
-		SuperToolTip123.Items.Add(ToolTipItem121)
-		Me.lbl_sblaster_oplemu.SuperTip = SuperToolTip123
+		SuperToolTip125.Items.Add(ToolTipTitleItem125)
+		SuperToolTip125.Items.Add(ToolTipItem123)
+		Me.lbl_sblaster_oplemu.SuperTip = SuperToolTip125
 		Me.lbl_sblaster_oplemu.TabIndex = 29
 		Me.lbl_sblaster_oplemu.Text = "SB OPL Emulation:"
 		'
@@ -5022,13 +5408,13 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_sblaster_oplmode.Properties.ShowHeader = False
 		Me.cmb_sblaster_oplmode.Properties.ValueMember = "value"
 		Me.cmb_sblaster_oplmode.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem126.Text = "SB OPL Mode"
-		ToolTipItem124.LeftIndent = 6
-		ToolTipItem124.Text = "Type of OPL emulation. On 'auto' the mode is determined by SB Type. All OPL modes" &
+		ToolTipTitleItem128.Text = "SB OPL Mode"
+		ToolTipItem126.LeftIndent = 6
+		ToolTipItem126.Text = "Type of OPL emulation. On 'auto' the mode is determined by SB Type. All OPL modes" &
 		" are Adlib-compatible, except for 'cms'."
-		SuperToolTip126.Items.Add(ToolTipTitleItem126)
-		SuperToolTip126.Items.Add(ToolTipItem124)
-		Me.cmb_sblaster_oplmode.SuperTip = SuperToolTip126
+		SuperToolTip128.Items.Add(ToolTipTitleItem128)
+		SuperToolTip128.Items.Add(ToolTipItem126)
+		Me.cmb_sblaster_oplmode.SuperTip = SuperToolTip128
 		Me.cmb_sblaster_oplmode.TabIndex = 5
 		'
 		'lbl_sblaster_oplmode
@@ -5043,13 +5429,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sblaster_oplmode.MKBoundControl5 = Nothing
 		Me.lbl_sblaster_oplmode.Name = "lbl_sblaster_oplmode"
 		Me.lbl_sblaster_oplmode.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem125.Text = "SB OPL Mode"
-		ToolTipItem123.LeftIndent = 6
-		ToolTipItem123.Text = "Type of OPL emulation. On 'auto' the mode is determined by SB Type. All OPL modes" &
+		ToolTipTitleItem127.Text = "SB OPL Mode"
+		ToolTipItem125.LeftIndent = 6
+		ToolTipItem125.Text = "Type of OPL emulation. On 'auto' the mode is determined by SB Type. All OPL modes" &
 		" are Adlib-compatible, except for 'cms'."
-		SuperToolTip125.Items.Add(ToolTipTitleItem125)
-		SuperToolTip125.Items.Add(ToolTipItem123)
-		Me.lbl_sblaster_oplmode.SuperTip = SuperToolTip125
+		SuperToolTip127.Items.Add(ToolTipTitleItem127)
+		SuperToolTip127.Items.Add(ToolTipItem125)
+		Me.lbl_sblaster_oplmode.SuperTip = SuperToolTip127
 		Me.lbl_sblaster_oplmode.TabIndex = 28
 		Me.lbl_sblaster_oplmode.Text = "SB OPL Mode:"
 		'
@@ -5082,12 +5468,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_sblaster_hdma.Properties.ShowHeader = False
 		Me.cmb_sblaster_hdma.Properties.ValueMember = "value"
 		Me.cmb_sblaster_hdma.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem128.Text = "SB High DMA"
-		ToolTipItem126.LeftIndent = 6
-		ToolTipItem126.Text = "The High DMA number of the Sound Blaster."
-		SuperToolTip128.Items.Add(ToolTipTitleItem128)
-		SuperToolTip128.Items.Add(ToolTipItem126)
-		Me.cmb_sblaster_hdma.SuperTip = SuperToolTip128
+		ToolTipTitleItem130.Text = "SB High DMA"
+		ToolTipItem128.LeftIndent = 6
+		ToolTipItem128.Text = "The High DMA number of the Sound Blaster."
+		SuperToolTip130.Items.Add(ToolTipTitleItem130)
+		SuperToolTip130.Items.Add(ToolTipItem128)
+		Me.cmb_sblaster_hdma.SuperTip = SuperToolTip130
 		Me.cmb_sblaster_hdma.TabIndex = 4
 		'
 		'lbl_sblaster_hdma
@@ -5102,12 +5488,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sblaster_hdma.MKBoundControl5 = Nothing
 		Me.lbl_sblaster_hdma.Name = "lbl_sblaster_hdma"
 		Me.lbl_sblaster_hdma.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem127.Text = "SB High DMA"
-		ToolTipItem125.LeftIndent = 6
-		ToolTipItem125.Text = "The High DMA number of the Sound Blaster."
-		SuperToolTip127.Items.Add(ToolTipTitleItem127)
-		SuperToolTip127.Items.Add(ToolTipItem125)
-		Me.lbl_sblaster_hdma.SuperTip = SuperToolTip127
+		ToolTipTitleItem129.Text = "SB High DMA"
+		ToolTipItem127.LeftIndent = 6
+		ToolTipItem127.Text = "The High DMA number of the Sound Blaster."
+		SuperToolTip129.Items.Add(ToolTipTitleItem129)
+		SuperToolTip129.Items.Add(ToolTipItem127)
+		Me.lbl_sblaster_hdma.SuperTip = SuperToolTip129
 		Me.lbl_sblaster_hdma.TabIndex = 22
 		Me.lbl_sblaster_hdma.Text = "SB High DMA:"
 		'
@@ -5140,12 +5526,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_sblaster_dma.Properties.ShowHeader = False
 		Me.cmb_sblaster_dma.Properties.ValueMember = "value"
 		Me.cmb_sblaster_dma.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem130.Text = "SB DMA"
-		ToolTipItem128.LeftIndent = 6
-		ToolTipItem128.Text = "The DMA number of the Sound Blaster."
-		SuperToolTip130.Items.Add(ToolTipTitleItem130)
-		SuperToolTip130.Items.Add(ToolTipItem128)
-		Me.cmb_sblaster_dma.SuperTip = SuperToolTip130
+		ToolTipTitleItem132.Text = "SB DMA"
+		ToolTipItem130.LeftIndent = 6
+		ToolTipItem130.Text = "The DMA number of the Sound Blaster."
+		SuperToolTip132.Items.Add(ToolTipTitleItem132)
+		SuperToolTip132.Items.Add(ToolTipItem130)
+		Me.cmb_sblaster_dma.SuperTip = SuperToolTip132
 		Me.cmb_sblaster_dma.TabIndex = 3
 		'
 		'lbl_sblaster_dma
@@ -5160,12 +5546,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sblaster_dma.MKBoundControl5 = Nothing
 		Me.lbl_sblaster_dma.Name = "lbl_sblaster_dma"
 		Me.lbl_sblaster_dma.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem129.Text = "SB DMA"
-		ToolTipItem127.LeftIndent = 6
-		ToolTipItem127.Text = "The DMA number of the Sound Blaster."
-		SuperToolTip129.Items.Add(ToolTipTitleItem129)
-		SuperToolTip129.Items.Add(ToolTipItem127)
-		Me.lbl_sblaster_dma.SuperTip = SuperToolTip129
+		ToolTipTitleItem131.Text = "SB DMA"
+		ToolTipItem129.LeftIndent = 6
+		ToolTipItem129.Text = "The DMA number of the Sound Blaster."
+		SuperToolTip131.Items.Add(ToolTipTitleItem131)
+		SuperToolTip131.Items.Add(ToolTipItem129)
+		Me.lbl_sblaster_dma.SuperTip = SuperToolTip131
 		Me.lbl_sblaster_dma.TabIndex = 21
 		Me.lbl_sblaster_dma.Text = "SB DMA:"
 		'
@@ -5198,12 +5584,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_sblaster_irq.Properties.ShowHeader = False
 		Me.cmb_sblaster_irq.Properties.ValueMember = "value"
 		Me.cmb_sblaster_irq.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem132.Text = "SB IRQ"
-		ToolTipItem130.LeftIndent = 6
-		ToolTipItem130.Text = "The IRQ number of the Sound Blaster."
-		SuperToolTip132.Items.Add(ToolTipTitleItem132)
-		SuperToolTip132.Items.Add(ToolTipItem130)
-		Me.cmb_sblaster_irq.SuperTip = SuperToolTip132
+		ToolTipTitleItem134.Text = "SB IRQ"
+		ToolTipItem132.LeftIndent = 6
+		ToolTipItem132.Text = "The IRQ number of the Sound Blaster."
+		SuperToolTip134.Items.Add(ToolTipTitleItem134)
+		SuperToolTip134.Items.Add(ToolTipItem132)
+		Me.cmb_sblaster_irq.SuperTip = SuperToolTip134
 		Me.cmb_sblaster_irq.TabIndex = 2
 		'
 		'lbl_sblaster_irq
@@ -5218,12 +5604,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sblaster_irq.MKBoundControl5 = Nothing
 		Me.lbl_sblaster_irq.Name = "lbl_sblaster_irq"
 		Me.lbl_sblaster_irq.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem131.Text = "SB IRQ"
-		ToolTipItem129.LeftIndent = 6
-		ToolTipItem129.Text = "The IRQ number of the Sound Blaster."
-		SuperToolTip131.Items.Add(ToolTipTitleItem131)
-		SuperToolTip131.Items.Add(ToolTipItem129)
-		Me.lbl_sblaster_irq.SuperTip = SuperToolTip131
+		ToolTipTitleItem133.Text = "SB IRQ"
+		ToolTipItem131.LeftIndent = 6
+		ToolTipItem131.Text = "The IRQ number of the Sound Blaster."
+		SuperToolTip133.Items.Add(ToolTipTitleItem133)
+		SuperToolTip133.Items.Add(ToolTipItem131)
+		Me.lbl_sblaster_irq.SuperTip = SuperToolTip133
 		Me.lbl_sblaster_irq.TabIndex = 24
 		Me.lbl_sblaster_irq.Text = "SB IRQ:"
 		'
@@ -5256,12 +5642,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_sblaster_sbbase.Properties.ShowHeader = False
 		Me.cmb_sblaster_sbbase.Properties.ValueMember = "value"
 		Me.cmb_sblaster_sbbase.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem134.Text = "SB Address"
-		ToolTipItem132.LeftIndent = 6
-		ToolTipItem132.Text = "The IO address of the Sound Blaster."
-		SuperToolTip134.Items.Add(ToolTipTitleItem134)
-		SuperToolTip134.Items.Add(ToolTipItem132)
-		Me.cmb_sblaster_sbbase.SuperTip = SuperToolTip134
+		ToolTipTitleItem136.Text = "SB Address"
+		ToolTipItem134.LeftIndent = 6
+		ToolTipItem134.Text = "The IO address of the Sound Blaster."
+		SuperToolTip136.Items.Add(ToolTipTitleItem136)
+		SuperToolTip136.Items.Add(ToolTipItem134)
+		Me.cmb_sblaster_sbbase.SuperTip = SuperToolTip136
 		Me.cmb_sblaster_sbbase.TabIndex = 1
 		'
 		'lbl_sblaster_sbbase
@@ -5276,12 +5662,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sblaster_sbbase.MKBoundControl5 = Nothing
 		Me.lbl_sblaster_sbbase.Name = "lbl_sblaster_sbbase"
 		Me.lbl_sblaster_sbbase.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem133.Text = "SB Address"
-		ToolTipItem131.LeftIndent = 6
-		ToolTipItem131.Text = "The IO address of the Sound Blaster."
-		SuperToolTip133.Items.Add(ToolTipTitleItem133)
-		SuperToolTip133.Items.Add(ToolTipItem131)
-		Me.lbl_sblaster_sbbase.SuperTip = SuperToolTip133
+		ToolTipTitleItem135.Text = "SB Address"
+		ToolTipItem133.LeftIndent = 6
+		ToolTipItem133.Text = "The IO address of the Sound Blaster."
+		SuperToolTip135.Items.Add(ToolTipTitleItem135)
+		SuperToolTip135.Items.Add(ToolTipItem133)
+		Me.lbl_sblaster_sbbase.SuperTip = SuperToolTip135
 		Me.lbl_sblaster_sbbase.TabIndex = 23
 		Me.lbl_sblaster_sbbase.Text = "SB Address:"
 		'
@@ -5314,12 +5700,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_sblaster_sbtype.Properties.ShowHeader = False
 		Me.cmb_sblaster_sbtype.Properties.ValueMember = "value"
 		Me.cmb_sblaster_sbtype.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem136.Text = "SB Type"
-		ToolTipItem134.LeftIndent = 6
-		ToolTipItem134.Text = "Type of Sound Blaster to emulate. gb is Gameblaster."
-		SuperToolTip136.Items.Add(ToolTipTitleItem136)
-		SuperToolTip136.Items.Add(ToolTipItem134)
-		Me.cmb_sblaster_sbtype.SuperTip = SuperToolTip136
+		ToolTipTitleItem138.Text = "SB Type"
+		ToolTipItem136.LeftIndent = 6
+		ToolTipItem136.Text = "Type of Sound Blaster to emulate. gb is Gameblaster."
+		SuperToolTip138.Items.Add(ToolTipTitleItem138)
+		SuperToolTip138.Items.Add(ToolTipItem136)
+		Me.cmb_sblaster_sbtype.SuperTip = SuperToolTip138
 		Me.cmb_sblaster_sbtype.TabIndex = 0
 		'
 		'lbl_sblaster_sbtype
@@ -5334,12 +5720,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sblaster_sbtype.MKBoundControl5 = Nothing
 		Me.lbl_sblaster_sbtype.Name = "lbl_sblaster_sbtype"
 		Me.lbl_sblaster_sbtype.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem135.Text = "SB Type"
-		ToolTipItem133.LeftIndent = 6
-		ToolTipItem133.Text = "Type of Sound Blaster to emulate. gb is Gameblaster."
-		SuperToolTip135.Items.Add(ToolTipTitleItem135)
-		SuperToolTip135.Items.Add(ToolTipItem133)
-		Me.lbl_sblaster_sbtype.SuperTip = SuperToolTip135
+		ToolTipTitleItem137.Text = "SB Type"
+		ToolTipItem135.LeftIndent = 6
+		ToolTipItem135.Text = "Type of Sound Blaster to emulate. gb is Gameblaster."
+		SuperToolTip137.Items.Add(ToolTipTitleItem137)
+		SuperToolTip137.Items.Add(ToolTipItem135)
+		Me.lbl_sblaster_sbtype.SuperTip = SuperToolTip137
 		Me.lbl_sblaster_sbtype.TabIndex = 27
 		Me.lbl_sblaster_sbtype.Text = "SB Type:"
 		'
@@ -5365,12 +5751,12 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_sblaster_sbmixer.Name = "chb_sblaster_sbmixer"
 		Me.chb_sblaster_sbmixer.Properties.Caption = ""
 		Me.chb_sblaster_sbmixer.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem138.Text = "SB Use Mixer"
-		ToolTipItem136.LeftIndent = 6
-		ToolTipItem136.Text = "Allow the Sound Blaster mixer to modify the DOSBox mixer."
-		SuperToolTip138.Items.Add(ToolTipTitleItem138)
-		SuperToolTip138.Items.Add(ToolTipItem136)
-		Me.chb_sblaster_sbmixer.SuperTip = SuperToolTip138
+		ToolTipTitleItem140.Text = "SB Use Mixer"
+		ToolTipItem138.LeftIndent = 6
+		ToolTipItem138.Text = "Allow the Sound Blaster mixer to modify the DOSBox mixer."
+		SuperToolTip140.Items.Add(ToolTipTitleItem140)
+		SuperToolTip140.Items.Add(ToolTipItem138)
+		Me.chb_sblaster_sbmixer.SuperTip = SuperToolTip140
 		Me.chb_sblaster_sbmixer.TabIndex = 8
 		'
 		'lbl_sblaster_sbmixer
@@ -5385,17 +5771,19 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sblaster_sbmixer.MKBoundControl5 = Nothing
 		Me.lbl_sblaster_sbmixer.Name = "lbl_sblaster_sbmixer"
 		Me.lbl_sblaster_sbmixer.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem137.Text = "SB Use Mixer"
-		ToolTipItem135.LeftIndent = 6
-		ToolTipItem135.Text = "Allow the Sound Blaster mixer to modify the DOSBox mixer."
-		SuperToolTip137.Items.Add(ToolTipTitleItem137)
-		SuperToolTip137.Items.Add(ToolTipItem135)
-		Me.lbl_sblaster_sbmixer.SuperTip = SuperToolTip137
+		ToolTipTitleItem139.Text = "SB Use Mixer"
+		ToolTipItem137.LeftIndent = 6
+		ToolTipItem137.Text = "Allow the Sound Blaster mixer to modify the DOSBox mixer."
+		SuperToolTip139.Items.Add(ToolTipTitleItem139)
+		SuperToolTip139.Items.Add(ToolTipItem137)
+		Me.lbl_sblaster_sbmixer.SuperTip = SuperToolTip139
 		Me.lbl_sblaster_sbmixer.TabIndex = 25
 		Me.lbl_sblaster_sbmixer.Text = "SB Use Mixer:"
 		'
 		'tpg_GUS
 		'
+		Me.tpg_GUS.AllowTouchScroll = True
+		Me.tpg_GUS.AutoScroll = True
 		Me.tpg_GUS.Controls.Add(Me.txb_gus_ultradir)
 		Me.tpg_GUS.Controls.Add(Me.cmb_gus_gusdma)
 		Me.tpg_GUS.Controls.Add(Me.cmb_gus_gusirq)
@@ -5409,7 +5797,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_GUS.Controls.Add(Me.lbl_gus_gusrate)
 		Me.tpg_GUS.Controls.Add(Me.lbl_gus_gus)
 		Me.tpg_GUS.Name = "tpg_GUS"
-		Me.tpg_GUS.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_GUS.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_GUS.Text = "GUS"
 		'
 		'txb_gus_ultradir
@@ -5421,14 +5809,14 @@ Partial Class ucr_DOSBox_Config
 		Me.txb_gus_ultradir.MKEditValue_Compare = Nothing
 		Me.txb_gus_ultradir.Name = "txb_gus_ultradir"
 		Me.txb_gus_ultradir.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem140.Text = "GUS Directory"
-		ToolTipItem138.LeftIndent = 6
-		ToolTipItem138.Text = "Path to Ultrasound directory. In this directory there should be a MIDI directory " &
+		ToolTipTitleItem142.Text = "GUS Directory"
+		ToolTipItem140.LeftIndent = 6
+		ToolTipItem140.Text = "Path to Ultrasound directory. In this directory there should be a MIDI directory " &
 		"that contains the patch files for GUS playback. Patch sets used with Timidity sh" &
 		"ould work fine."
-		SuperToolTip140.Items.Add(ToolTipTitleItem140)
-		SuperToolTip140.Items.Add(ToolTipItem138)
-		Me.txb_gus_ultradir.SuperTip = SuperToolTip140
+		SuperToolTip142.Items.Add(ToolTipTitleItem142)
+		SuperToolTip142.Items.Add(ToolTipItem140)
+		Me.txb_gus_ultradir.SuperTip = SuperToolTip142
 		Me.txb_gus_ultradir.TabIndex = 5
 		'
 		'lbl_gus_ultradir
@@ -5443,14 +5831,14 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_gus_ultradir.MKBoundControl5 = Nothing
 		Me.lbl_gus_ultradir.Name = "lbl_gus_ultradir"
 		Me.lbl_gus_ultradir.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem139.Text = "GUS Directory"
-		ToolTipItem137.LeftIndent = 6
-		ToolTipItem137.Text = "Path to Ultrasound directory. In this directory there should be a MIDI directory " &
+		ToolTipTitleItem141.Text = "GUS Directory"
+		ToolTipItem139.LeftIndent = 6
+		ToolTipItem139.Text = "Path to Ultrasound directory. In this directory there should be a MIDI directory " &
 		"that contains the patch files for GUS playback. Patch sets used with Timidity sh" &
 		"ould work fine."
-		SuperToolTip139.Items.Add(ToolTipTitleItem139)
-		SuperToolTip139.Items.Add(ToolTipItem137)
-		Me.lbl_gus_ultradir.SuperTip = SuperToolTip139
+		SuperToolTip141.Items.Add(ToolTipTitleItem141)
+		SuperToolTip141.Items.Add(ToolTipItem139)
+		Me.lbl_gus_ultradir.SuperTip = SuperToolTip141
 		Me.lbl_gus_ultradir.TabIndex = 22
 		Me.lbl_gus_ultradir.Text = "GUS Directory:"
 		'
@@ -5468,12 +5856,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_gus_gusdma.Properties.NullText = ""
 		Me.cmb_gus_gusdma.Properties.ValueMember = "value"
 		Me.cmb_gus_gusdma.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem142.Text = "GUS DMA"
-		ToolTipItem140.LeftIndent = 6
-		ToolTipItem140.Text = "The DMA channel of the Gravis Ultrasound."
-		SuperToolTip142.Items.Add(ToolTipTitleItem142)
-		SuperToolTip142.Items.Add(ToolTipItem140)
-		Me.cmb_gus_gusdma.SuperTip = SuperToolTip142
+		ToolTipTitleItem144.Text = "GUS DMA"
+		ToolTipItem142.LeftIndent = 6
+		ToolTipItem142.Text = "The DMA channel of the Gravis Ultrasound."
+		SuperToolTip144.Items.Add(ToolTipTitleItem144)
+		SuperToolTip144.Items.Add(ToolTipItem142)
+		Me.cmb_gus_gusdma.SuperTip = SuperToolTip144
 		Me.cmb_gus_gusdma.TabIndex = 4
 		'
 		'lbl_gus_gusdma
@@ -5488,12 +5876,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_gus_gusdma.MKBoundControl5 = Nothing
 		Me.lbl_gus_gusdma.Name = "lbl_gus_gusdma"
 		Me.lbl_gus_gusdma.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem141.Text = "GUS DMA"
-		ToolTipItem139.LeftIndent = 6
-		ToolTipItem139.Text = "The DMA channel of the Gravis Ultrasound."
-		SuperToolTip141.Items.Add(ToolTipTitleItem141)
-		SuperToolTip141.Items.Add(ToolTipItem139)
-		Me.lbl_gus_gusdma.SuperTip = SuperToolTip141
+		ToolTipTitleItem143.Text = "GUS DMA"
+		ToolTipItem141.LeftIndent = 6
+		ToolTipItem141.Text = "The DMA channel of the Gravis Ultrasound."
+		SuperToolTip143.Items.Add(ToolTipTitleItem143)
+		SuperToolTip143.Items.Add(ToolTipItem141)
+		Me.lbl_gus_gusdma.SuperTip = SuperToolTip143
 		Me.lbl_gus_gusdma.TabIndex = 23
 		Me.lbl_gus_gusdma.Text = "GUS DMA:"
 		'
@@ -5523,12 +5911,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_gus_gusirq.Properties.NullText = ""
 		Me.cmb_gus_gusirq.Properties.ValueMember = "value"
 		Me.cmb_gus_gusirq.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem144.Text = "GUS IRQ"
-		ToolTipItem142.LeftIndent = 6
-		ToolTipItem142.Text = "The IRQ number of the Gravis Ultrasound."
-		SuperToolTip144.Items.Add(ToolTipTitleItem144)
-		SuperToolTip144.Items.Add(ToolTipItem142)
-		Me.cmb_gus_gusirq.SuperTip = SuperToolTip144
+		ToolTipTitleItem146.Text = "GUS IRQ"
+		ToolTipItem144.LeftIndent = 6
+		ToolTipItem144.Text = "The IRQ number of the Gravis Ultrasound."
+		SuperToolTip146.Items.Add(ToolTipTitleItem146)
+		SuperToolTip146.Items.Add(ToolTipItem144)
+		Me.cmb_gus_gusirq.SuperTip = SuperToolTip146
 		Me.cmb_gus_gusirq.TabIndex = 3
 		'
 		'lbl_gus_gusirq
@@ -5543,12 +5931,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_gus_gusirq.MKBoundControl5 = Nothing
 		Me.lbl_gus_gusirq.Name = "lbl_gus_gusirq"
 		Me.lbl_gus_gusirq.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem143.Text = "GUS IRQ"
-		ToolTipItem141.LeftIndent = 6
-		ToolTipItem141.Text = "The IRQ number of the Gravis Ultrasound."
-		SuperToolTip143.Items.Add(ToolTipTitleItem143)
-		SuperToolTip143.Items.Add(ToolTipItem141)
-		Me.lbl_gus_gusirq.SuperTip = SuperToolTip143
+		ToolTipTitleItem145.Text = "GUS IRQ"
+		ToolTipItem143.LeftIndent = 6
+		ToolTipItem143.Text = "The IRQ number of the Gravis Ultrasound."
+		SuperToolTip145.Items.Add(ToolTipTitleItem145)
+		SuperToolTip145.Items.Add(ToolTipItem143)
+		Me.lbl_gus_gusirq.SuperTip = SuperToolTip145
 		Me.lbl_gus_gusirq.TabIndex = 20
 		Me.lbl_gus_gusirq.Text = "GUS IRQ:"
 		'
@@ -5578,12 +5966,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_gus_gusbase.Properties.NullText = ""
 		Me.cmb_gus_gusbase.Properties.ValueMember = "value"
 		Me.cmb_gus_gusbase.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem146.Text = "GUS Address"
-		ToolTipItem144.LeftIndent = 6
-		ToolTipItem144.Text = "The IO base address of the Gravis Ultrasound."
-		SuperToolTip146.Items.Add(ToolTipTitleItem146)
-		SuperToolTip146.Items.Add(ToolTipItem144)
-		Me.cmb_gus_gusbase.SuperTip = SuperToolTip146
+		ToolTipTitleItem148.Text = "GUS Address"
+		ToolTipItem146.LeftIndent = 6
+		ToolTipItem146.Text = "The IO base address of the Gravis Ultrasound."
+		SuperToolTip148.Items.Add(ToolTipTitleItem148)
+		SuperToolTip148.Items.Add(ToolTipItem146)
+		Me.cmb_gus_gusbase.SuperTip = SuperToolTip148
 		Me.cmb_gus_gusbase.TabIndex = 2
 		'
 		'lbl_gus_gusbase
@@ -5598,12 +5986,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_gus_gusbase.MKBoundControl5 = Nothing
 		Me.lbl_gus_gusbase.Name = "lbl_gus_gusbase"
 		Me.lbl_gus_gusbase.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem145.Text = "GUS Address"
-		ToolTipItem143.LeftIndent = 6
-		ToolTipItem143.Text = "The IO base address of the Gravis Ultrasound."
-		SuperToolTip145.Items.Add(ToolTipTitleItem145)
-		SuperToolTip145.Items.Add(ToolTipItem143)
-		Me.lbl_gus_gusbase.SuperTip = SuperToolTip145
+		ToolTipTitleItem147.Text = "GUS Address"
+		ToolTipItem145.LeftIndent = 6
+		ToolTipItem145.Text = "The IO base address of the Gravis Ultrasound."
+		SuperToolTip147.Items.Add(ToolTipTitleItem147)
+		SuperToolTip147.Items.Add(ToolTipItem145)
+		Me.lbl_gus_gusbase.SuperTip = SuperToolTip147
 		Me.lbl_gus_gusbase.TabIndex = 21
 		Me.lbl_gus_gusbase.Text = "GUS Address:"
 		'
@@ -5633,12 +6021,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_gus_gusrate.Properties.NullText = ""
 		Me.cmb_gus_gusrate.Properties.ValueMember = "value"
 		Me.cmb_gus_gusrate.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem148.Text = "GUS Sample Rate"
-		ToolTipItem146.LeftIndent = 6
-		ToolTipItem146.Text = "Sample Rate of Ultrasound emulation."
-		SuperToolTip148.Items.Add(ToolTipTitleItem148)
-		SuperToolTip148.Items.Add(ToolTipItem146)
-		Me.cmb_gus_gusrate.SuperTip = SuperToolTip148
+		ToolTipTitleItem150.Text = "GUS Sample Rate"
+		ToolTipItem148.LeftIndent = 6
+		ToolTipItem148.Text = "Sample Rate of Ultrasound emulation."
+		SuperToolTip150.Items.Add(ToolTipTitleItem150)
+		SuperToolTip150.Items.Add(ToolTipItem148)
+		Me.cmb_gus_gusrate.SuperTip = SuperToolTip150
 		Me.cmb_gus_gusrate.TabIndex = 1
 		'
 		'lbl_gus_gusrate
@@ -5653,12 +6041,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_gus_gusrate.MKBoundControl5 = Nothing
 		Me.lbl_gus_gusrate.Name = "lbl_gus_gusrate"
 		Me.lbl_gus_gusrate.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem147.Text = "GUS Sample Rate"
-		ToolTipItem145.LeftIndent = 6
-		ToolTipItem145.Text = "Sample Rate of Ultrasound emulation."
-		SuperToolTip147.Items.Add(ToolTipTitleItem147)
-		SuperToolTip147.Items.Add(ToolTipItem145)
-		Me.lbl_gus_gusrate.SuperTip = SuperToolTip147
+		ToolTipTitleItem149.Text = "GUS Sample Rate"
+		ToolTipItem147.LeftIndent = 6
+		ToolTipItem147.Text = "Sample Rate of Ultrasound emulation."
+		SuperToolTip149.Items.Add(ToolTipTitleItem149)
+		SuperToolTip149.Items.Add(ToolTipItem147)
+		Me.lbl_gus_gusrate.SuperTip = SuperToolTip149
 		Me.lbl_gus_gusrate.TabIndex = 18
 		Me.lbl_gus_gusrate.Text = "GUS Sample Rate:"
 		'
@@ -5684,12 +6072,12 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_gus_gus.Name = "chb_gus_gus"
 		Me.chb_gus_gus.Properties.Caption = ""
 		Me.chb_gus_gus.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem150.Text = "Enable GUS"
-		ToolTipItem148.LeftIndent = 6
-		ToolTipItem148.Text = "Enable the Gravis Ultrasound emulation."
-		SuperToolTip150.Items.Add(ToolTipTitleItem150)
-		SuperToolTip150.Items.Add(ToolTipItem148)
-		Me.chb_gus_gus.SuperTip = SuperToolTip150
+		ToolTipTitleItem152.Text = "Enable GUS"
+		ToolTipItem150.LeftIndent = 6
+		ToolTipItem150.Text = "Enable the Gravis Ultrasound emulation."
+		SuperToolTip152.Items.Add(ToolTipTitleItem152)
+		SuperToolTip152.Items.Add(ToolTipItem150)
+		Me.chb_gus_gus.SuperTip = SuperToolTip152
 		Me.chb_gus_gus.TabIndex = 0
 		'
 		'lbl_gus_gus
@@ -5704,17 +6092,19 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_gus_gus.MKBoundControl5 = Nothing
 		Me.lbl_gus_gus.Name = "lbl_gus_gus"
 		Me.lbl_gus_gus.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem149.Text = "Enable GUS"
-		ToolTipItem147.LeftIndent = 6
-		ToolTipItem147.Text = "Enable the Gravis Ultrasound emulation."
-		SuperToolTip149.Items.Add(ToolTipTitleItem149)
-		SuperToolTip149.Items.Add(ToolTipItem147)
-		Me.lbl_gus_gus.SuperTip = SuperToolTip149
+		ToolTipTitleItem151.Text = "Enable GUS"
+		ToolTipItem149.LeftIndent = 6
+		ToolTipItem149.Text = "Enable the Gravis Ultrasound emulation."
+		SuperToolTip151.Items.Add(ToolTipTitleItem151)
+		SuperToolTip151.Items.Add(ToolTipItem149)
+		Me.lbl_gus_gus.SuperTip = SuperToolTip151
 		Me.lbl_gus_gus.TabIndex = 19
 		Me.lbl_gus_gus.Text = "Enable GUS:"
 		'
 		'tpg_MIDI
 		'
+		Me.tpg_MIDI.AllowTouchScroll = True
+		Me.tpg_MIDI.AutoScroll = True
 		Me.tpg_MIDI.Controls.Add(Me.txb_midi_midiconfig)
 		Me.tpg_MIDI.Controls.Add(Me.cmb_midi_mididevice)
 		Me.tpg_MIDI.Controls.Add(Me.cmb_midi_mpu401)
@@ -5722,7 +6112,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_MIDI.Controls.Add(Me.lbl_midi_mididevice)
 		Me.tpg_MIDI.Controls.Add(Me.lbl_midi_mpu401)
 		Me.tpg_MIDI.Name = "tpg_MIDI"
-		Me.tpg_MIDI.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_MIDI.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_MIDI.Text = "MIDI"
 		'
 		'txb_midi_midiconfig
@@ -5734,13 +6124,13 @@ Partial Class ucr_DOSBox_Config
 		Me.txb_midi_midiconfig.MKEditValue_Compare = Nothing
 		Me.txb_midi_midiconfig.Name = "txb_midi_midiconfig"
 		Me.txb_midi_midiconfig.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem152.Text = "MIDI Config"
-		ToolTipItem150.LeftIndent = 6
-		ToolTipItem150.Text = "Special configuration options for the device driver. This is usually the id of th" &
+		ToolTipTitleItem154.Text = "MIDI Config"
+		ToolTipItem152.LeftIndent = 6
+		ToolTipItem152.Text = "Special configuration options for the device driver. This is usually the id of th" &
 		"e device you want to use."
-		SuperToolTip152.Items.Add(ToolTipTitleItem152)
-		SuperToolTip152.Items.Add(ToolTipItem150)
-		Me.txb_midi_midiconfig.SuperTip = SuperToolTip152
+		SuperToolTip154.Items.Add(ToolTipTitleItem154)
+		SuperToolTip154.Items.Add(ToolTipItem152)
+		Me.txb_midi_midiconfig.SuperTip = SuperToolTip154
 		Me.txb_midi_midiconfig.TabIndex = 2
 		'
 		'lbl_midi_midiconfig
@@ -5755,13 +6145,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_midi_midiconfig.MKBoundControl5 = Nothing
 		Me.lbl_midi_midiconfig.Name = "lbl_midi_midiconfig"
 		Me.lbl_midi_midiconfig.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem151.Text = "MIDI Config"
-		ToolTipItem149.LeftIndent = 6
-		ToolTipItem149.Text = "Special configuration options for the device driver. This is usually the id of th" &
+		ToolTipTitleItem153.Text = "MIDI Config"
+		ToolTipItem151.LeftIndent = 6
+		ToolTipItem151.Text = "Special configuration options for the device driver. This is usually the id of th" &
 		"e device you want to use."
-		SuperToolTip151.Items.Add(ToolTipTitleItem151)
-		SuperToolTip151.Items.Add(ToolTipItem149)
-		Me.lbl_midi_midiconfig.SuperTip = SuperToolTip151
+		SuperToolTip153.Items.Add(ToolTipTitleItem153)
+		SuperToolTip153.Items.Add(ToolTipItem151)
+		Me.lbl_midi_midiconfig.SuperTip = SuperToolTip153
 		Me.lbl_midi_midiconfig.TabIndex = 17
 		Me.lbl_midi_midiconfig.Text = "MIDI Config:"
 		'
@@ -5782,12 +6172,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_midi_mididevice.Properties.ShowHeader = False
 		Me.cmb_midi_mididevice.Properties.ValueMember = "value"
 		Me.cmb_midi_mididevice.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem154.Text = "MIDI Device"
-		ToolTipItem152.LeftIndent = 6
-		ToolTipItem152.Text = "Device that will receive the MIDI data from MPU-401."
-		SuperToolTip154.Items.Add(ToolTipTitleItem154)
-		SuperToolTip154.Items.Add(ToolTipItem152)
-		Me.cmb_midi_mididevice.SuperTip = SuperToolTip154
+		ToolTipTitleItem156.Text = "MIDI Device"
+		ToolTipItem154.LeftIndent = 6
+		ToolTipItem154.Text = "Device that will receive the MIDI data from MPU-401."
+		SuperToolTip156.Items.Add(ToolTipTitleItem156)
+		SuperToolTip156.Items.Add(ToolTipItem154)
+		Me.cmb_midi_mididevice.SuperTip = SuperToolTip156
 		Me.cmb_midi_mididevice.TabIndex = 1
 		'
 		'lbl_midi_mididevice
@@ -5802,12 +6192,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_midi_mididevice.MKBoundControl5 = Nothing
 		Me.lbl_midi_mididevice.Name = "lbl_midi_mididevice"
 		Me.lbl_midi_mididevice.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem153.Text = "MIDI Device"
-		ToolTipItem151.LeftIndent = 6
-		ToolTipItem151.Text = "Device that will receive the MIDI data from MPU-401."
-		SuperToolTip153.Items.Add(ToolTipTitleItem153)
-		SuperToolTip153.Items.Add(ToolTipItem151)
-		Me.lbl_midi_mididevice.SuperTip = SuperToolTip153
+		ToolTipTitleItem155.Text = "MIDI Device"
+		ToolTipItem153.LeftIndent = 6
+		ToolTipItem153.Text = "Device that will receive the MIDI data from MPU-401."
+		SuperToolTip155.Items.Add(ToolTipTitleItem155)
+		SuperToolTip155.Items.Add(ToolTipItem153)
+		Me.lbl_midi_mididevice.SuperTip = SuperToolTip155
 		Me.lbl_midi_mididevice.TabIndex = 16
 		Me.lbl_midi_mididevice.Text = "MIDI Device:"
 		'
@@ -5840,12 +6230,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_midi_mpu401.Properties.ShowHeader = False
 		Me.cmb_midi_mpu401.Properties.ValueMember = "value"
 		Me.cmb_midi_mpu401.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem156.Text = "MPU-401"
-		ToolTipItem154.LeftIndent = 6
-		ToolTipItem154.Text = "Type of MPU-401 to emulate."
-		SuperToolTip156.Items.Add(ToolTipTitleItem156)
-		SuperToolTip156.Items.Add(ToolTipItem154)
-		Me.cmb_midi_mpu401.SuperTip = SuperToolTip156
+		ToolTipTitleItem158.Text = "MPU-401"
+		ToolTipItem156.LeftIndent = 6
+		ToolTipItem156.Text = "Type of MPU-401 to emulate."
+		SuperToolTip158.Items.Add(ToolTipTitleItem158)
+		SuperToolTip158.Items.Add(ToolTipItem156)
+		Me.cmb_midi_mpu401.SuperTip = SuperToolTip158
 		Me.cmb_midi_mpu401.TabIndex = 0
 		'
 		'lbl_midi_mpu401
@@ -5860,12 +6250,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_midi_mpu401.MKBoundControl5 = Nothing
 		Me.lbl_midi_mpu401.Name = "lbl_midi_mpu401"
 		Me.lbl_midi_mpu401.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem155.Text = "MPU-401"
-		ToolTipItem153.LeftIndent = 6
-		ToolTipItem153.Text = "Type of MPU-401 to emulate."
-		SuperToolTip155.Items.Add(ToolTipTitleItem155)
-		SuperToolTip155.Items.Add(ToolTipItem153)
-		Me.lbl_midi_mpu401.SuperTip = SuperToolTip155
+		ToolTipTitleItem157.Text = "MPU-401"
+		ToolTipItem155.LeftIndent = 6
+		ToolTipItem155.Text = "Type of MPU-401 to emulate."
+		SuperToolTip157.Items.Add(ToolTipTitleItem157)
+		SuperToolTip157.Items.Add(ToolTipItem155)
+		Me.lbl_midi_mpu401.SuperTip = SuperToolTip157
 		Me.lbl_midi_mpu401.TabIndex = 18
 		Me.lbl_midi_mpu401.Text = "MPU-401:"
 		'
@@ -5883,6 +6273,8 @@ Partial Class ucr_DOSBox_Config
 		'
 		'tpg_Joystick
 		'
+		Me.tpg_Joystick.AllowTouchScroll = True
+		Me.tpg_Joystick.AutoScroll = True
 		Me.tpg_Joystick.Controls.Add(Me.cmb_joystick_joysticktype)
 		Me.tpg_Joystick.Controls.Add(Me.chb_joystick_buttonwrap)
 		Me.tpg_Joystick.Controls.Add(Me.chb_joystick_swap34)
@@ -5894,7 +6286,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_Joystick.Controls.Add(Me.lbl_joystick_autofire)
 		Me.tpg_Joystick.Controls.Add(Me.lbl_joystick_timed)
 		Me.tpg_Joystick.Name = "tpg_Joystick"
-		Me.tpg_Joystick.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Joystick.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Joystick.Text = "Joystick"
 		'
 		'cmb_joystick_joysticktype
@@ -5915,12 +6307,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_joystick_joysticktype.Properties.ShowHeader = False
 		Me.cmb_joystick_joysticktype.Properties.ValueMember = "Value"
 		Me.cmb_joystick_joysticktype.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem158.Text = "Joystick Type"
-		ToolTipItem156.LeftIndent = 6
-		ToolTipItem156.Text = "Type of joystick to emulate."
-		SuperToolTip158.Items.Add(ToolTipTitleItem158)
-		SuperToolTip158.Items.Add(ToolTipItem156)
-		Me.cmb_joystick_joysticktype.SuperTip = SuperToolTip158
+		ToolTipTitleItem160.Text = "Joystick Type"
+		ToolTipItem158.LeftIndent = 6
+		ToolTipItem158.Text = "Type of joystick to emulate."
+		SuperToolTip160.Items.Add(ToolTipTitleItem160)
+		SuperToolTip160.Items.Add(ToolTipItem158)
+		Me.cmb_joystick_joysticktype.SuperTip = SuperToolTip160
 		Me.cmb_joystick_joysticktype.TabIndex = 0
 		'
 		'lbl_joystick_joysticktype
@@ -5935,12 +6327,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_joystick_joysticktype.MKBoundControl5 = Nothing
 		Me.lbl_joystick_joysticktype.Name = "lbl_joystick_joysticktype"
 		Me.lbl_joystick_joysticktype.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem157.Text = "Joystick Type"
-		ToolTipItem155.LeftIndent = 6
-		ToolTipItem155.Text = "Type of joystick to emulate."
-		SuperToolTip157.Items.Add(ToolTipTitleItem157)
-		SuperToolTip157.Items.Add(ToolTipItem155)
-		Me.lbl_joystick_joysticktype.SuperTip = SuperToolTip157
+		ToolTipTitleItem159.Text = "Joystick Type"
+		ToolTipItem157.LeftIndent = 6
+		ToolTipItem157.Text = "Type of joystick to emulate."
+		SuperToolTip159.Items.Add(ToolTipTitleItem159)
+		SuperToolTip159.Items.Add(ToolTipItem157)
+		Me.lbl_joystick_joysticktype.SuperTip = SuperToolTip159
 		Me.lbl_joystick_joysticktype.TabIndex = 18
 		Me.lbl_joystick_joysticktype.Text = "Joystick Type:"
 		'
@@ -5966,12 +6358,12 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_joystick_buttonwrap.Name = "chb_joystick_buttonwrap"
 		Me.chb_joystick_buttonwrap.Properties.Caption = ""
 		Me.chb_joystick_buttonwrap.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem160.Text = "Joystick Button Wrap"
-		ToolTipItem158.LeftIndent = 6
-		ToolTipItem158.Text = "Enable button wrapping at the number of emulated buttons."
-		SuperToolTip160.Items.Add(ToolTipTitleItem160)
-		SuperToolTip160.Items.Add(ToolTipItem158)
-		Me.chb_joystick_buttonwrap.SuperTip = SuperToolTip160
+		ToolTipTitleItem162.Text = "Joystick Button Wrap"
+		ToolTipItem160.LeftIndent = 6
+		ToolTipItem160.Text = "Enable button wrapping at the number of emulated buttons."
+		SuperToolTip162.Items.Add(ToolTipTitleItem162)
+		SuperToolTip162.Items.Add(ToolTipItem160)
+		Me.chb_joystick_buttonwrap.SuperTip = SuperToolTip162
 		Me.chb_joystick_buttonwrap.TabIndex = 4
 		'
 		'lbl_joystick_buttonwrap
@@ -5986,12 +6378,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_joystick_buttonwrap.MKBoundControl5 = Nothing
 		Me.lbl_joystick_buttonwrap.Name = "lbl_joystick_buttonwrap"
 		Me.lbl_joystick_buttonwrap.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem159.Text = "Joystick Button Wrap"
-		ToolTipItem157.LeftIndent = 6
-		ToolTipItem157.Text = "Enable button wrapping at the number of emulated buttons."
-		SuperToolTip159.Items.Add(ToolTipTitleItem159)
-		SuperToolTip159.Items.Add(ToolTipItem157)
-		Me.lbl_joystick_buttonwrap.SuperTip = SuperToolTip159
+		ToolTipTitleItem161.Text = "Joystick Button Wrap"
+		ToolTipItem159.LeftIndent = 6
+		ToolTipItem159.Text = "Enable button wrapping at the number of emulated buttons."
+		SuperToolTip161.Items.Add(ToolTipTitleItem161)
+		SuperToolTip161.Items.Add(ToolTipItem159)
+		Me.lbl_joystick_buttonwrap.SuperTip = SuperToolTip161
 		Me.lbl_joystick_buttonwrap.TabIndex = 14
 		Me.lbl_joystick_buttonwrap.Text = "Joystick Button Wrap:"
 		'
@@ -6005,12 +6397,12 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_joystick_swap34.Name = "chb_joystick_swap34"
 		Me.chb_joystick_swap34.Properties.Caption = ""
 		Me.chb_joystick_swap34.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem162.Text = "Joystick Swap 3/4"
-		ToolTipItem160.LeftIndent = 6
-		ToolTipItem160.Text = "Swap the 3rd and the 4th axis. can be useful for certain joysticks."
-		SuperToolTip162.Items.Add(ToolTipTitleItem162)
-		SuperToolTip162.Items.Add(ToolTipItem160)
-		Me.chb_joystick_swap34.SuperTip = SuperToolTip162
+		ToolTipTitleItem164.Text = "Joystick Swap 3/4"
+		ToolTipItem162.LeftIndent = 6
+		ToolTipItem162.Text = "Swap the 3rd and the 4th axis. can be useful for certain joysticks."
+		SuperToolTip164.Items.Add(ToolTipTitleItem164)
+		SuperToolTip164.Items.Add(ToolTipItem162)
+		Me.chb_joystick_swap34.SuperTip = SuperToolTip164
 		Me.chb_joystick_swap34.TabIndex = 3
 		'
 		'lbl_joystick_swap34
@@ -6025,12 +6417,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_joystick_swap34.MKBoundControl5 = Nothing
 		Me.lbl_joystick_swap34.Name = "lbl_joystick_swap34"
 		Me.lbl_joystick_swap34.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem161.Text = "Joystick Swap 3/4"
-		ToolTipItem159.LeftIndent = 6
-		ToolTipItem159.Text = "Swap the 3rd and the 4th axis. can be useful for certain joysticks."
-		SuperToolTip161.Items.Add(ToolTipTitleItem161)
-		SuperToolTip161.Items.Add(ToolTipItem159)
-		Me.lbl_joystick_swap34.SuperTip = SuperToolTip161
+		ToolTipTitleItem163.Text = "Joystick Swap 3/4"
+		ToolTipItem161.LeftIndent = 6
+		ToolTipItem161.Text = "Swap the 3rd and the 4th axis. can be useful for certain joysticks."
+		SuperToolTip163.Items.Add(ToolTipTitleItem163)
+		SuperToolTip163.Items.Add(ToolTipItem161)
+		Me.lbl_joystick_swap34.SuperTip = SuperToolTip163
 		Me.lbl_joystick_swap34.TabIndex = 15
 		Me.lbl_joystick_swap34.Text = "Joystick Swap 3/4:"
 		'
@@ -6044,12 +6436,12 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_joystick_autofire.Name = "chb_joystick_autofire"
 		Me.chb_joystick_autofire.Properties.Caption = ""
 		Me.chb_joystick_autofire.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem164.Text = "Joystick Autofire"
-		ToolTipItem162.LeftIndent = 6
-		ToolTipItem162.Text = "Continuously fires as long as you keep the button pressed."
-		SuperToolTip164.Items.Add(ToolTipTitleItem164)
-		SuperToolTip164.Items.Add(ToolTipItem162)
-		Me.chb_joystick_autofire.SuperTip = SuperToolTip164
+		ToolTipTitleItem166.Text = "Joystick Autofire"
+		ToolTipItem164.LeftIndent = 6
+		ToolTipItem164.Text = "Continuously fires as long as you keep the button pressed."
+		SuperToolTip166.Items.Add(ToolTipTitleItem166)
+		SuperToolTip166.Items.Add(ToolTipItem164)
+		Me.chb_joystick_autofire.SuperTip = SuperToolTip166
 		Me.chb_joystick_autofire.TabIndex = 2
 		'
 		'lbl_joystick_autofire
@@ -6064,12 +6456,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_joystick_autofire.MKBoundControl5 = Nothing
 		Me.lbl_joystick_autofire.Name = "lbl_joystick_autofire"
 		Me.lbl_joystick_autofire.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem163.Text = "Joystick Autofire"
-		ToolTipItem161.LeftIndent = 6
-		ToolTipItem161.Text = "Continuously fires as long as you keep the button pressed." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-		SuperToolTip163.Items.Add(ToolTipTitleItem163)
-		SuperToolTip163.Items.Add(ToolTipItem161)
-		Me.lbl_joystick_autofire.SuperTip = SuperToolTip163
+		ToolTipTitleItem165.Text = "Joystick Autofire"
+		ToolTipItem163.LeftIndent = 6
+		ToolTipItem163.Text = "Continuously fires as long as you keep the button pressed." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+		SuperToolTip165.Items.Add(ToolTipTitleItem165)
+		SuperToolTip165.Items.Add(ToolTipItem163)
+		Me.lbl_joystick_autofire.SuperTip = SuperToolTip165
 		Me.lbl_joystick_autofire.TabIndex = 16
 		Me.lbl_joystick_autofire.Text = "Joystick Autofire:"
 		'
@@ -6083,13 +6475,13 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_joystick_timed.Name = "chb_joystick_timed"
 		Me.chb_joystick_timed.Properties.Caption = ""
 		Me.chb_joystick_timed.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem166.Text = "Joystick timed Intervals"
-		ToolTipItem164.LeftIndent = 6
-		ToolTipItem164.Text = "Enable timed intervals for axis. Experiment with this option, if your joystick dr" &
+		ToolTipTitleItem168.Text = "Joystick timed Intervals"
+		ToolTipItem166.LeftIndent = 6
+		ToolTipItem166.Text = "Enable timed intervals for axis. Experiment with this option, if your joystick dr" &
 		"ifts (away)."
-		SuperToolTip166.Items.Add(ToolTipTitleItem166)
-		SuperToolTip166.Items.Add(ToolTipItem164)
-		Me.chb_joystick_timed.SuperTip = SuperToolTip166
+		SuperToolTip168.Items.Add(ToolTipTitleItem168)
+		SuperToolTip168.Items.Add(ToolTipItem166)
+		Me.chb_joystick_timed.SuperTip = SuperToolTip168
 		Me.chb_joystick_timed.TabIndex = 1
 		'
 		'lbl_joystick_timed
@@ -6104,21 +6496,23 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_joystick_timed.MKBoundControl5 = Nothing
 		Me.lbl_joystick_timed.Name = "lbl_joystick_timed"
 		Me.lbl_joystick_timed.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem165.Text = "Joystick timed Intervals"
-		ToolTipItem163.LeftIndent = 6
-		ToolTipItem163.Text = "Enable timed intervals for axis. Experiment with this option, if your joystick dr" &
+		ToolTipTitleItem167.Text = "Joystick timed Intervals"
+		ToolTipItem165.LeftIndent = 6
+		ToolTipItem165.Text = "Enable timed intervals for axis. Experiment with this option, if your joystick dr" &
 		"ifts (away)."
-		SuperToolTip165.Items.Add(ToolTipTitleItem165)
-		SuperToolTip165.Items.Add(ToolTipItem163)
-		Me.lbl_joystick_timed.SuperTip = SuperToolTip165
+		SuperToolTip167.Items.Add(ToolTipTitleItem167)
+		SuperToolTip167.Items.Add(ToolTipItem165)
+		Me.lbl_joystick_timed.SuperTip = SuperToolTip167
 		Me.lbl_joystick_timed.TabIndex = 17
 		Me.lbl_joystick_timed.Text = "Joystick timed Int.:"
 		'
 		'tpg_Mount_Options
 		'
+		Me.tpg_Mount_Options.AllowTouchScroll = True
+		Me.tpg_Mount_Options.AutoScroll = True
 		Me.tpg_Mount_Options.Controls.Add(Me.lbl_mount_options)
 		Me.tpg_Mount_Options.Name = "tpg_Mount_Options"
-		Me.tpg_Mount_Options.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Mount_Options.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Mount_Options.Text = "Mount Options"
 		'
 		'lbl_mount_options
@@ -6138,9 +6532,11 @@ Partial Class ucr_DOSBox_Config
 		'
 		'tpg_Serial
 		'
+		Me.tpg_Serial.AllowTouchScroll = True
+		Me.tpg_Serial.AutoScroll = True
 		Me.tpg_Serial.Controls.Add(Me.lbl_serial_ports)
 		Me.tpg_Serial.Name = "tpg_Serial"
-		Me.tpg_Serial.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Serial.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Serial.Text = "Serial Ports"
 		'
 		'lbl_serial_ports
@@ -6160,9 +6556,11 @@ Partial Class ucr_DOSBox_Config
 		'
 		'tpg_Serial1
 		'
+		Me.tpg_Serial1.AllowTouchScroll = True
+		Me.tpg_Serial1.AutoScroll = True
 		Me.tpg_Serial1.Controls.Add(Me.lbl_serial1)
 		Me.tpg_Serial1.Name = "tpg_Serial1"
-		Me.tpg_Serial1.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Serial1.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Serial1.Text = "Serial 1"
 		'
 		'lbl_serial1
@@ -6182,9 +6580,11 @@ Partial Class ucr_DOSBox_Config
 		'
 		'tpg_Serial2
 		'
+		Me.tpg_Serial2.AllowTouchScroll = True
+		Me.tpg_Serial2.AutoScroll = True
 		Me.tpg_Serial2.Controls.Add(Me.lbl_serial2)
 		Me.tpg_Serial2.Name = "tpg_Serial2"
-		Me.tpg_Serial2.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Serial2.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Serial2.Text = "Serial 2"
 		'
 		'lbl_serial2
@@ -6204,9 +6604,11 @@ Partial Class ucr_DOSBox_Config
 		'
 		'tpg_Serial3
 		'
+		Me.tpg_Serial3.AllowTouchScroll = True
+		Me.tpg_Serial3.AutoScroll = True
 		Me.tpg_Serial3.Controls.Add(Me.lbl_serial3)
 		Me.tpg_Serial3.Name = "tpg_Serial3"
-		Me.tpg_Serial3.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Serial3.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Serial3.Text = "Serial 3"
 		'
 		'lbl_serial3
@@ -6226,9 +6628,11 @@ Partial Class ucr_DOSBox_Config
 		'
 		'tpg_Serial4
 		'
+		Me.tpg_Serial4.AllowTouchScroll = True
+		Me.tpg_Serial4.AutoScroll = True
 		Me.tpg_Serial4.Controls.Add(Me.lbl_serial4)
 		Me.tpg_Serial4.Name = "tpg_Serial4"
-		Me.tpg_Serial4.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Serial4.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Serial4.Text = "Serial 4"
 		'
 		'lbl_serial4
@@ -6248,9 +6652,11 @@ Partial Class ucr_DOSBox_Config
 		'
 		'tpg_Patch_Options
 		'
+		Me.tpg_Patch_Options.AllowTouchScroll = True
+		Me.tpg_Patch_Options.AutoScroll = True
 		Me.tpg_Patch_Options.Controls.Add(Me.lbl_patches)
 		Me.tpg_Patch_Options.Name = "tpg_Patch_Options"
-		Me.tpg_Patch_Options.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Patch_Options.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Patch_Options.Text = "Patch Options"
 		'
 		'lbl_patches
@@ -6273,9 +6679,11 @@ Partial Class ucr_DOSBox_Config
 		'
 		'tpg_DOSBox_Settings_Patches
 		'
+		Me.tpg_DOSBox_Settings_Patches.AllowTouchScroll = True
+		Me.tpg_DOSBox_Settings_Patches.AutoScroll = True
 		Me.tpg_DOSBox_Settings_Patches.Controls.Add(Me.lbl_p_dosbox_settings)
 		Me.tpg_DOSBox_Settings_Patches.Name = "tpg_DOSBox_Settings_Patches"
-		Me.tpg_DOSBox_Settings_Patches.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_DOSBox_Settings_Patches.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_DOSBox_Settings_Patches.Text = "DOSBox Settings (Patches)"
 		'
 		'lbl_p_dosbox_settings
@@ -6295,12 +6703,14 @@ Partial Class ucr_DOSBox_Config
 		'
 		'tpg_CPU_Patches
 		'
+		Me.tpg_CPU_Patches.AllowTouchScroll = True
+		Me.tpg_CPU_Patches.AutoScroll = True
 		Me.tpg_CPU_Patches.Controls.Add(Me.cmb_p_dosbox_pit_hack)
 		Me.tpg_CPU_Patches.Controls.Add(Me.lbl_p_dosbox_pit_hack)
 		Me.tpg_CPU_Patches.Controls.Add(Me.cmb_p_cputype)
 		Me.tpg_CPU_Patches.Controls.Add(Me.lbl_p_cpu_cputype)
 		Me.tpg_CPU_Patches.Name = "tpg_CPU_Patches"
-		Me.tpg_CPU_Patches.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_CPU_Patches.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_CPU_Patches.Text = "CPU (Patches)"
 		'
 		'cmb_p_dosbox_pit_hack
@@ -6321,12 +6731,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_p_dosbox_pit_hack.Properties.ShowHeader = False
 		Me.cmb_p_dosbox_pit_hack.Properties.ValueMember = "value"
 		Me.cmb_p_dosbox_pit_hack.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem168.Text = "PIT timer hack"
-		ToolTipItem166.LeftIndent = 6
-		ToolTipItem166.Text = resources.GetString("ToolTipItem166.Text")
-		SuperToolTip168.Items.Add(ToolTipTitleItem168)
-		SuperToolTip168.Items.Add(ToolTipItem166)
-		Me.cmb_p_dosbox_pit_hack.SuperTip = SuperToolTip168
+		ToolTipTitleItem170.Text = "PIT timer hack"
+		ToolTipItem168.LeftIndent = 6
+		ToolTipItem168.Text = resources.GetString("ToolTipItem168.Text")
+		SuperToolTip170.Items.Add(ToolTipTitleItem170)
+		SuperToolTip170.Items.Add(ToolTipItem168)
+		Me.cmb_p_dosbox_pit_hack.SuperTip = SuperToolTip170
 		Me.cmb_p_dosbox_pit_hack.TabIndex = 1
 		'
 		'lbl_p_dosbox_pit_hack
@@ -6341,12 +6751,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_dosbox_pit_hack.MKBoundControl5 = Nothing
 		Me.lbl_p_dosbox_pit_hack.Name = "lbl_p_dosbox_pit_hack"
 		Me.lbl_p_dosbox_pit_hack.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem167.Text = "PIT timer hack"
-		ToolTipItem165.LeftIndent = 6
-		ToolTipItem165.Text = resources.GetString("ToolTipItem165.Text")
-		SuperToolTip167.Items.Add(ToolTipTitleItem167)
-		SuperToolTip167.Items.Add(ToolTipItem165)
-		Me.lbl_p_dosbox_pit_hack.SuperTip = SuperToolTip167
+		ToolTipTitleItem169.Text = "PIT timer hack"
+		ToolTipItem167.LeftIndent = 6
+		ToolTipItem167.Text = resources.GetString("ToolTipItem167.Text")
+		SuperToolTip169.Items.Add(ToolTipTitleItem169)
+		SuperToolTip169.Items.Add(ToolTipItem167)
+		Me.lbl_p_dosbox_pit_hack.SuperTip = SuperToolTip169
 		Me.lbl_p_dosbox_pit_hack.TabIndex = 16
 		Me.lbl_p_dosbox_pit_hack.Text = "PIT timer hack:"
 		'
@@ -6379,13 +6789,13 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_p_cputype.Properties.ShowHeader = False
 		Me.cmb_p_cputype.Properties.ValueMember = "value"
 		Me.cmb_p_cputype.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem170.Text = "CPU Type (Patches)"
-		ToolTipItem168.LeftIndent = 6
-		ToolTipItem168.Text = "Some patches introduce new CPU Types, this setting overrides the (standard) CPU T" &
+		ToolTipTitleItem172.Text = "CPU Type (Patches)"
+		ToolTipItem170.LeftIndent = 6
+		ToolTipItem170.Text = "Some patches introduce new CPU Types, this setting overrides the (standard) CPU T" &
 		"ype setting."
-		SuperToolTip170.Items.Add(ToolTipTitleItem170)
-		SuperToolTip170.Items.Add(ToolTipItem168)
-		Me.cmb_p_cputype.SuperTip = SuperToolTip170
+		SuperToolTip172.Items.Add(ToolTipTitleItem172)
+		SuperToolTip172.Items.Add(ToolTipItem170)
+		Me.cmb_p_cputype.SuperTip = SuperToolTip172
 		Me.cmb_p_cputype.TabIndex = 0
 		'
 		'lbl_p_cpu_cputype
@@ -6400,13 +6810,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_cpu_cputype.MKBoundControl5 = Nothing
 		Me.lbl_p_cpu_cputype.Name = "lbl_p_cpu_cputype"
 		Me.lbl_p_cpu_cputype.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem169.Text = "CPU Type (Patches)"
-		ToolTipItem167.LeftIndent = 6
-		ToolTipItem167.Text = "Some patches introduce new CPU Types, this setting overrides the (standard) CPU T" &
+		ToolTipTitleItem171.Text = "CPU Type (Patches)"
+		ToolTipItem169.LeftIndent = 6
+		ToolTipItem169.Text = "Some patches introduce new CPU Types, this setting overrides the (standard) CPU T" &
 		"ype setting."
-		SuperToolTip169.Items.Add(ToolTipTitleItem169)
-		SuperToolTip169.Items.Add(ToolTipItem167)
-		Me.lbl_p_cpu_cputype.SuperTip = SuperToolTip169
+		SuperToolTip171.Items.Add(ToolTipTitleItem171)
+		SuperToolTip171.Items.Add(ToolTipItem169)
+		Me.lbl_p_cpu_cputype.SuperTip = SuperToolTip171
 		Me.lbl_p_cpu_cputype.TabIndex = 12
 		Me.lbl_p_cpu_cputype.Text = "CPU Type:"
 		'
@@ -6424,11 +6834,13 @@ Partial Class ucr_DOSBox_Config
 		'
 		'tpg_Memory_Patches
 		'
+		Me.tpg_Memory_Patches.AllowTouchScroll = True
+		Me.tpg_Memory_Patches.AutoScroll = True
 		Me.tpg_Memory_Patches.Controls.Add(Me.lbl_p_dosbox_memsizekb2)
 		Me.tpg_Memory_Patches.Controls.Add(Me.spn_p_dosbox_memsizekb)
 		Me.tpg_Memory_Patches.Controls.Add(Me.lbl_p_dosbox_memsizekb)
 		Me.tpg_Memory_Patches.Name = "tpg_Memory_Patches"
-		Me.tpg_Memory_Patches.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Memory_Patches.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Memory_Patches.Text = "Memory (Patches)"
 		'
 		'lbl_p_dosbox_memsizekb2
@@ -6443,12 +6855,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_dosbox_memsizekb2.MKBoundControl5 = Nothing
 		Me.lbl_p_dosbox_memsizekb2.Name = "lbl_p_dosbox_memsizekb2"
 		Me.lbl_p_dosbox_memsizekb2.Size = New System.Drawing.Size(87, 20)
-		ToolTipTitleItem171.Text = "Memory size in kB"
-		ToolTipItem169.LeftIndent = 6
-		ToolTipItem169.Text = resources.GetString("ToolTipItem169.Text")
-		SuperToolTip171.Items.Add(ToolTipTitleItem171)
-		SuperToolTip171.Items.Add(ToolTipItem169)
-		Me.lbl_p_dosbox_memsizekb2.SuperTip = SuperToolTip171
+		ToolTipTitleItem173.Text = "Memory size in kB"
+		ToolTipItem171.LeftIndent = 6
+		ToolTipItem171.Text = resources.GetString("ToolTipItem171.Text")
+		SuperToolTip173.Items.Add(ToolTipTitleItem173)
+		SuperToolTip173.Items.Add(ToolTipItem171)
+		Me.lbl_p_dosbox_memsizekb2.SuperTip = SuperToolTip173
 		Me.lbl_p_dosbox_memsizekb2.TabIndex = 28
 		Me.lbl_p_dosbox_memsizekb2.Text = "kB"
 		'
@@ -6466,12 +6878,12 @@ Partial Class ucr_DOSBox_Config
 		Me.spn_p_dosbox_memsizekb.Properties.Mask.EditMask = "N00"
 		Me.spn_p_dosbox_memsizekb.Properties.MaxValue = New Decimal(New Integer() {999, 0, 0, 0})
 		Me.spn_p_dosbox_memsizekb.Size = New System.Drawing.Size(54, 20)
-		ToolTipTitleItem173.Text = "Memory Size in kB"
-		ToolTipItem171.LeftIndent = 6
-		ToolTipItem171.Text = resources.GetString("ToolTipItem171.Text")
-		SuperToolTip173.Items.Add(ToolTipTitleItem173)
-		SuperToolTip173.Items.Add(ToolTipItem171)
-		Me.spn_p_dosbox_memsizekb.SuperTip = SuperToolTip173
+		ToolTipTitleItem175.Text = "Memory Size in kB"
+		ToolTipItem173.LeftIndent = 6
+		ToolTipItem173.Text = resources.GetString("ToolTipItem173.Text")
+		SuperToolTip175.Items.Add(ToolTipTitleItem175)
+		SuperToolTip175.Items.Add(ToolTipItem173)
+		Me.spn_p_dosbox_memsizekb.SuperTip = SuperToolTip175
 		Me.spn_p_dosbox_memsizekb.TabIndex = 0
 		'
 		'lbl_p_dosbox_memsizekb
@@ -6486,19 +6898,25 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_dosbox_memsizekb.MKBoundControl5 = Nothing
 		Me.lbl_p_dosbox_memsizekb.Name = "lbl_p_dosbox_memsizekb"
 		Me.lbl_p_dosbox_memsizekb.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem172.Text = "Memory Size in kB"
-		ToolTipItem170.LeftIndent = 6
-		ToolTipItem170.Text = resources.GetString("ToolTipItem170.Text")
-		SuperToolTip172.Items.Add(ToolTipTitleItem172)
-		SuperToolTip172.Items.Add(ToolTipItem170)
-		Me.lbl_p_dosbox_memsizekb.SuperTip = SuperToolTip172
+		ToolTipTitleItem174.Text = "Memory Size in kB"
+		ToolTipItem172.LeftIndent = 6
+		ToolTipItem172.Text = resources.GetString("ToolTipItem172.Text")
+		SuperToolTip174.Items.Add(ToolTipTitleItem174)
+		SuperToolTip174.Items.Add(ToolTipItem172)
+		Me.lbl_p_dosbox_memsizekb.SuperTip = SuperToolTip174
 		Me.lbl_p_dosbox_memsizekb.TabIndex = 26
 		Me.lbl_p_dosbox_memsizekb.Text = "Memory Size:"
 		'
 		'tpg_Video_Patches
 		'
+		Me.tpg_Video_Patches.AllowTouchScroll = True
+		Me.tpg_Video_Patches.AutoScroll = True
+		Me.tpg_Video_Patches.Controls.Add(Me.lbl_p_sdl_surfacenp_sharpness_percent)
+		Me.tpg_Video_Patches.Controls.Add(Me.cmb_p_voodoo_voodoomem)
+		Me.tpg_Video_Patches.Controls.Add(Me.lbl_p_voodoo_voodoomem)
 		Me.tpg_Video_Patches.Controls.Add(Me.chb_p_glide_splash)
 		Me.tpg_Video_Patches.Controls.Add(Me.lbl_p_dosbox_forcerate_specific)
+		Me.tpg_Video_Patches.Controls.Add(Me.spn_p_sdl_surfacenp_sharpness)
 		Me.tpg_Video_Patches.Controls.Add(Me.spn_p_vsync_vsyncrate)
 		Me.tpg_Video_Patches.Controls.Add(Me.spn_p_dosbox_forcerate_specific)
 		Me.tpg_Video_Patches.Controls.Add(Me.btn_p_sdl_pixelshader_Clear)
@@ -6506,6 +6924,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_Video_Patches.Controls.Add(Me.rb_p_dosbox_forcerate_pal)
 		Me.tpg_Video_Patches.Controls.Add(Me.rb_p_dosbox_forcerate_ntsc)
 		Me.tpg_Video_Patches.Controls.Add(Me.rb_p_dosbox_forcerate_disabled)
+		Me.tpg_Video_Patches.Controls.Add(Me.chb_p_sdl_surface_collapse_dbl)
 		Me.tpg_Video_Patches.Controls.Add(Me.chb_p_render_autofit)
 		Me.tpg_Video_Patches.Controls.Add(Me.chb_p_sdl_pixelshader_forced)
 		Me.tpg_Video_Patches.Controls.Add(Me.txb_p_sdl_pixelshader)
@@ -6518,11 +6937,13 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_Video_Patches.Controls.Add(Me.cmb_p_dosbox_vmemsize)
 		Me.tpg_Video_Patches.Controls.Add(Me.cmb_p_render_scaler)
 		Me.tpg_Video_Patches.Controls.Add(Me.lbl_p_dosbox_vmemsize_details)
+		Me.tpg_Video_Patches.Controls.Add(Me.lbl_p_sdl_surfacenp_sharpness)
 		Me.tpg_Video_Patches.Controls.Add(Me.lbl_p_vsync_vsyncrate)
 		Me.tpg_Video_Patches.Controls.Add(Me.lbl_p_vsync_vsyncmode)
 		Me.tpg_Video_Patches.Controls.Add(Me.lbl_p_glide_lfb)
 		Me.tpg_Video_Patches.Controls.Add(Me.lbl_p_glide_glide)
 		Me.tpg_Video_Patches.Controls.Add(Me.lbl_p_pci_voodoo)
+		Me.tpg_Video_Patches.Controls.Add(Me.lbl_p_sdl_surface_collapse_dbl)
 		Me.tpg_Video_Patches.Controls.Add(Me.lbl_p_render_autofit)
 		Me.tpg_Video_Patches.Controls.Add(Me.lbl_p_dosbox_forcerate)
 		Me.tpg_Video_Patches.Controls.Add(Me.lbl_p_dosbox_vmemsize)
@@ -6530,32 +6951,117 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_Video_Patches.Controls.Add(Me.cmb_p_sdl_output)
 		Me.tpg_Video_Patches.Controls.Add(Me.lbl_p_sdl_output)
 		Me.tpg_Video_Patches.Name = "tpg_Video_Patches"
-		Me.tpg_Video_Patches.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Video_Patches.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Video_Patches.Text = "Video (Patches)"
+		'
+		'lbl_p_sdl_surfacenp_sharpness_percent
+		'
+		Me.lbl_p_sdl_surfacenp_sharpness_percent.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
+		Me.lbl_p_sdl_surfacenp_sharpness_percent.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_sdl_surfacenp_sharpness_percent.Enabled = False
+		Me.lbl_p_sdl_surfacenp_sharpness_percent.Location = New System.Drawing.Point(180, 72)
+		Me.lbl_p_sdl_surfacenp_sharpness_percent.MKBoundControl1 = Nothing
+		Me.lbl_p_sdl_surfacenp_sharpness_percent.MKBoundControl2 = Nothing
+		Me.lbl_p_sdl_surfacenp_sharpness_percent.MKBoundControl3 = Nothing
+		Me.lbl_p_sdl_surfacenp_sharpness_percent.MKBoundControl4 = Nothing
+		Me.lbl_p_sdl_surfacenp_sharpness_percent.MKBoundControl5 = Nothing
+		Me.lbl_p_sdl_surfacenp_sharpness_percent.Name = "lbl_p_sdl_surfacenp_sharpness_percent"
+		Me.lbl_p_sdl_surfacenp_sharpness_percent.Size = New System.Drawing.Size(19, 20)
+		ToolTipTitleItem176.Text = "Sharpness"
+		ToolTipItem174.LeftIndent = 6
+		ToolTipItem174.Text = "Sharpness for the 'surfacenp' Output type, measured in percent."
+		SuperToolTip176.Items.Add(ToolTipTitleItem176)
+		SuperToolTip176.Items.Add(ToolTipItem174)
+		Me.lbl_p_sdl_surfacenp_sharpness_percent.SuperTip = SuperToolTip176
+		Me.lbl_p_sdl_surfacenp_sharpness_percent.TabIndex = 30
+		Me.lbl_p_sdl_surfacenp_sharpness_percent.Text = "%"
+		'
+		'cmb_p_voodoo_voodoomem
+		'
+		Me.cmb_p_voodoo_voodoomem.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_voodoo_voodoomem", True))
+		Me.cmb_p_voodoo_voodoomem.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_voodoo_voodoomem", True))
+		Me.cmb_p_voodoo_voodoomem.Location = New System.Drawing.Point(123, 322)
+		Me.cmb_p_voodoo_voodoomem.MKBoundLabel = Me.lbl_p_voodoo_voodoomem
+		Me.cmb_p_voodoo_voodoomem.MKEditValue_Compare = Nothing
+		Me.cmb_p_voodoo_voodoomem.Name = "cmb_p_voodoo_voodoomem"
+		Me.cmb_p_voodoo_voodoomem.Properties.AllowFocused = False
+		Me.cmb_p_voodoo_voodoomem.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+		Me.cmb_p_voodoo_voodoomem.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("value", "value", 49, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
+		Me.cmb_p_voodoo_voodoomem.Properties.DataSource = Me.BTA_p_voodoo_voodoomem
+		Me.cmb_p_voodoo_voodoomem.Properties.DisplayMember = "value"
+		Me.cmb_p_voodoo_voodoomem.Properties.NullText = ""
+		Me.cmb_p_voodoo_voodoomem.Properties.ShowFooter = False
+		Me.cmb_p_voodoo_voodoomem.Properties.ShowHeader = False
+		Me.cmb_p_voodoo_voodoomem.Properties.ValueMember = "value"
+		Me.cmb_p_voodoo_voodoomem.Size = New System.Drawing.Size(136, 20)
+		ToolTipTitleItem178.Text = "Voodoo Memory"
+		ToolTipItem176.LeftIndent = 6
+		ToolTipItem176.Text = "Specify VOODOO card memory size." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "'standard'      4MB card (2MB front buffer + " &
+		"1x2MB texture unit)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "'max'           12MB card (4MB front buffer + 2x4MB textu" &
+		"re units)"
+		SuperToolTip178.Items.Add(ToolTipTitleItem178)
+		SuperToolTip178.Items.Add(ToolTipItem176)
+		Me.cmb_p_voodoo_voodoomem.SuperTip = SuperToolTip178
+		Me.cmb_p_voodoo_voodoomem.TabIndex = 27
+		'
+		'lbl_p_voodoo_voodoomem
+		'
+		Me.lbl_p_voodoo_voodoomem.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_voodoo_voodoomem.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_voodoo_voodoomem.Location = New System.Drawing.Point(3, 322)
+		Me.lbl_p_voodoo_voodoomem.MKBoundControl1 = Me.cmb_p_voodoo_voodoomem
+		Me.lbl_p_voodoo_voodoomem.MKBoundControl2 = Nothing
+		Me.lbl_p_voodoo_voodoomem.MKBoundControl3 = Nothing
+		Me.lbl_p_voodoo_voodoomem.MKBoundControl4 = Nothing
+		Me.lbl_p_voodoo_voodoomem.MKBoundControl5 = Nothing
+		Me.lbl_p_voodoo_voodoomem.Name = "lbl_p_voodoo_voodoomem"
+		Me.lbl_p_voodoo_voodoomem.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem177.Text = "Voodoo Memory"
+		ToolTipItem175.LeftIndent = 6
+		ToolTipItem175.Text = "Specify VOODOO card memory size." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "'standard'      4MB card (2MB front buffer + " &
+		"1x2MB texture unit)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "'max'           12MB card (4MB front buffer + 2x4MB textu" &
+		"re units)"
+		SuperToolTip177.Items.Add(ToolTipTitleItem177)
+		SuperToolTip177.Items.Add(ToolTipItem175)
+		Me.lbl_p_voodoo_voodoomem.SuperTip = SuperToolTip177
+		Me.lbl_p_voodoo_voodoomem.TabIndex = 28
+		Me.lbl_p_voodoo_voodoomem.Text = "Voodoo Memory:"
+		'
+		'BTA_p_voodoo_voodoomem
+		'
+		Me.BTA_p_voodoo_voodoomem.AllowDelete = True
+		Me.BTA_p_voodoo_voodoomem.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_p_voodoo_voodoomem.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_p_voodoo_voodoomem.Connection = Nothing
+		Me.BTA_p_voodoo_voodoomem.DSStream = CType(resources.GetObject("BTA_p_voodoo_voodoomem.DSStream"), System.IO.MemoryStream)
+		Me.BTA_p_voodoo_voodoomem.FillMethod = MKNetLib.FillMethod.ValueList
+		Me.BTA_p_voodoo_voodoomem.FillString = "standard;max"
+		Me.BTA_p_voodoo_voodoomem.Position = 0
+		Me.BTA_p_voodoo_voodoomem.Transaction = Nothing
+		Me.BTA_p_voodoo_voodoomem.UpdateTablesStream = CType(resources.GetObject("BTA_p_voodoo_voodoomem.UpdateTablesStream"), System.Collections.Generic.List(Of String))
 		'
 		'chb_p_glide_splash
 		'
 		Me.chb_p_glide_splash.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_glide_splash", True))
 		Me.chb_p_glide_splash.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_DOSBox_Configs, "p_glide_splash", True))
-		Me.chb_p_glide_splash.Location = New System.Drawing.Point(262, 276)
+		Me.chb_p_glide_splash.Location = New System.Drawing.Point(262, 345)
 		Me.chb_p_glide_splash.MKBoundLabel = Me.lbl_p_glide_glide
 		Me.chb_p_glide_splash.MKEditValue_Compare = Nothing
 		Me.chb_p_glide_splash.Name = "chb_p_glide_splash"
 		Me.chb_p_glide_splash.Properties.Caption = "Splash"
 		Me.chb_p_glide_splash.Size = New System.Drawing.Size(60, 19)
-		ToolTipTitleItem176.Text = "GLide Splash"
-		ToolTipItem174.LeftIndent = 6
-		ToolTipItem174.Text = "Show 3dfx splash screen (requires 3dfxSpl2.dll)."
-		SuperToolTip176.Items.Add(ToolTipTitleItem176)
-		SuperToolTip176.Items.Add(ToolTipItem174)
-		Me.chb_p_glide_splash.SuperTip = SuperToolTip176
+		ToolTipTitleItem181.Text = "GLide Splash"
+		ToolTipItem179.LeftIndent = 6
+		ToolTipItem179.Text = "Show 3dfx splash screen (requires 3dfxSpl2.dll)."
+		SuperToolTip181.Items.Add(ToolTipTitleItem181)
+		SuperToolTip181.Items.Add(ToolTipItem179)
+		Me.chb_p_glide_splash.SuperTip = SuperToolTip181
 		Me.chb_p_glide_splash.TabIndex = 19
 		'
 		'lbl_p_glide_glide
 		'
 		Me.lbl_p_glide_glide.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
 		Me.lbl_p_glide_glide.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_glide_glide.Location = New System.Drawing.Point(3, 276)
+		Me.lbl_p_glide_glide.Location = New System.Drawing.Point(3, 345)
 		Me.lbl_p_glide_glide.MKBoundControl1 = Me.cmb_p_glide_glide
 		Me.lbl_p_glide_glide.MKBoundControl2 = Me.chb_p_glide_splash
 		Me.lbl_p_glide_glide.MKBoundControl3 = Nothing
@@ -6563,12 +7069,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_glide_glide.MKBoundControl5 = Nothing
 		Me.lbl_p_glide_glide.Name = "lbl_p_glide_glide"
 		Me.lbl_p_glide_glide.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem175.Text = "GLide Support"
-		ToolTipItem173.LeftIndent = 6
-		ToolTipItem173.Text = "Enable GLide support."
-		SuperToolTip175.Items.Add(ToolTipTitleItem175)
-		SuperToolTip175.Items.Add(ToolTipItem173)
-		Me.lbl_p_glide_glide.SuperTip = SuperToolTip175
+		ToolTipTitleItem180.Text = "GLide Support"
+		ToolTipItem178.LeftIndent = 6
+		ToolTipItem178.Text = "Enable GLide support."
+		SuperToolTip180.Items.Add(ToolTipTitleItem180)
+		SuperToolTip180.Items.Add(ToolTipItem178)
+		Me.lbl_p_glide_glide.SuperTip = SuperToolTip180
 		Me.lbl_p_glide_glide.TabIndex = 24
 		Me.lbl_p_glide_glide.Text = "GLide Support:"
 		'
@@ -6576,7 +7082,7 @@ Partial Class ucr_DOSBox_Config
 		'
 		Me.cmb_p_glide_glide.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_glide_glide", True))
 		Me.cmb_p_glide_glide.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_glide_glide", True))
-		Me.cmb_p_glide_glide.Location = New System.Drawing.Point(123, 276)
+		Me.cmb_p_glide_glide.Location = New System.Drawing.Point(123, 345)
 		Me.cmb_p_glide_glide.MKBoundLabel = Me.lbl_p_glide_glide
 		Me.cmb_p_glide_glide.MKEditValue_Compare = Nothing
 		Me.cmb_p_glide_glide.Name = "cmb_p_glide_glide"
@@ -6590,12 +7096,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_p_glide_glide.Properties.ShowHeader = False
 		Me.cmb_p_glide_glide.Properties.ValueMember = "value"
 		Me.cmb_p_glide_glide.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem174.Text = "GLide Support"
-		ToolTipItem172.LeftIndent = 6
-		ToolTipItem172.Text = "Enable GLide support."
-		SuperToolTip174.Items.Add(ToolTipTitleItem174)
-		SuperToolTip174.Items.Add(ToolTipItem172)
-		Me.cmb_p_glide_glide.SuperTip = SuperToolTip174
+		ToolTipTitleItem179.Text = "GLide Support"
+		ToolTipItem177.LeftIndent = 6
+		ToolTipItem177.Text = "Enable GLide support."
+		SuperToolTip179.Items.Add(ToolTipTitleItem179)
+		SuperToolTip179.Items.Add(ToolTipItem177)
+		Me.cmb_p_glide_glide.SuperTip = SuperToolTip179
 		Me.cmb_p_glide_glide.TabIndex = 18
 		'
 		'BTA_p_glide_glide
@@ -6615,7 +7121,7 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_dosbox_forcerate_specific.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
 		Me.lbl_p_dosbox_forcerate_specific.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
 		Me.lbl_p_dosbox_forcerate_specific.Enabled = False
-		Me.lbl_p_dosbox_forcerate_specific.Location = New System.Drawing.Point(240, 161)
+		Me.lbl_p_dosbox_forcerate_specific.Location = New System.Drawing.Point(240, 207)
 		Me.lbl_p_dosbox_forcerate_specific.MKBoundControl1 = Nothing
 		Me.lbl_p_dosbox_forcerate_specific.MKBoundControl2 = Nothing
 		Me.lbl_p_dosbox_forcerate_specific.MKBoundControl3 = Nothing
@@ -6623,14 +7129,59 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_dosbox_forcerate_specific.MKBoundControl5 = Nothing
 		Me.lbl_p_dosbox_forcerate_specific.Name = "lbl_p_dosbox_forcerate_specific"
 		Me.lbl_p_dosbox_forcerate_specific.Size = New System.Drawing.Size(19, 20)
-		ToolTipTitleItem177.Text = "Force Framerate"
-		ToolTipItem175.LeftIndent = 6
-		ToolTipItem175.Text = "Force the VGA framerate."
-		SuperToolTip177.Items.Add(ToolTipTitleItem177)
-		SuperToolTip177.Items.Add(ToolTipItem175)
-		Me.lbl_p_dosbox_forcerate_specific.SuperTip = SuperToolTip177
+		ToolTipTitleItem182.Text = "Force Framerate"
+		ToolTipItem180.LeftIndent = 6
+		ToolTipItem180.Text = "Force the VGA framerate."
+		SuperToolTip182.Items.Add(ToolTipTitleItem182)
+		SuperToolTip182.Items.Add(ToolTipItem180)
+		Me.lbl_p_dosbox_forcerate_specific.SuperTip = SuperToolTip182
 		Me.lbl_p_dosbox_forcerate_specific.TabIndex = 13
 		Me.lbl_p_dosbox_forcerate_specific.Text = "Hz"
+		'
+		'spn_p_sdl_surfacenp_sharpness
+		'
+		Me.spn_p_sdl_surfacenp_sharpness.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_sdl_surfacenp-sharpness", True))
+		Me.spn_p_sdl_surfacenp_sharpness.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_sdl_surfacenp-sharpness", True))
+		Me.spn_p_sdl_surfacenp_sharpness.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+		Me.spn_p_sdl_surfacenp_sharpness.Enabled = False
+		Me.spn_p_sdl_surfacenp_sharpness.Location = New System.Drawing.Point(123, 72)
+		Me.spn_p_sdl_surfacenp_sharpness.MKBoundLabel = Me.lbl_p_sdl_surfacenp_sharpness
+		Me.spn_p_sdl_surfacenp_sharpness.MKEditValue_Compare = Nothing
+		Me.spn_p_sdl_surfacenp_sharpness.Name = "spn_p_sdl_surfacenp_sharpness"
+		Me.spn_p_sdl_surfacenp_sharpness.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_sdl_surfacenp_sharpness.Properties.IsFloatValue = False
+		Me.spn_p_sdl_surfacenp_sharpness.Properties.Mask.EditMask = "N00"
+		Me.spn_p_sdl_surfacenp_sharpness.Properties.MaxValue = New Decimal(New Integer() {100, 0, 0, 0})
+		Me.spn_p_sdl_surfacenp_sharpness.Size = New System.Drawing.Size(54, 20)
+		ToolTipTitleItem184.Text = "Sharpness"
+		ToolTipItem182.LeftIndent = 6
+		ToolTipItem182.Text = "Sharpness for the 'surfacenp' Output type, measured in percent."
+		SuperToolTip184.Items.Add(ToolTipTitleItem184)
+		SuperToolTip184.Items.Add(ToolTipItem182)
+		Me.spn_p_sdl_surfacenp_sharpness.SuperTip = SuperToolTip184
+		Me.spn_p_sdl_surfacenp_sharpness.TabIndex = 15
+		'
+		'lbl_p_sdl_surfacenp_sharpness
+		'
+		Me.lbl_p_sdl_surfacenp_sharpness.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_sdl_surfacenp_sharpness.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_sdl_surfacenp_sharpness.Enabled = False
+		Me.lbl_p_sdl_surfacenp_sharpness.Location = New System.Drawing.Point(3, 72)
+		Me.lbl_p_sdl_surfacenp_sharpness.MKBoundControl1 = Me.spn_p_sdl_surfacenp_sharpness
+		Me.lbl_p_sdl_surfacenp_sharpness.MKBoundControl2 = Nothing
+		Me.lbl_p_sdl_surfacenp_sharpness.MKBoundControl3 = Nothing
+		Me.lbl_p_sdl_surfacenp_sharpness.MKBoundControl4 = Nothing
+		Me.lbl_p_sdl_surfacenp_sharpness.MKBoundControl5 = Nothing
+		Me.lbl_p_sdl_surfacenp_sharpness.Name = "lbl_p_sdl_surfacenp_sharpness"
+		Me.lbl_p_sdl_surfacenp_sharpness.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem183.Text = "Sharpness"
+		ToolTipItem181.LeftIndent = 6
+		ToolTipItem181.Text = "Sharpness for the 'surfacenp' Output type, measured in percent."
+		SuperToolTip183.Items.Add(ToolTipTitleItem183)
+		SuperToolTip183.Items.Add(ToolTipItem181)
+		Me.lbl_p_sdl_surfacenp_sharpness.SuperTip = SuperToolTip183
+		Me.lbl_p_sdl_surfacenp_sharpness.TabIndex = 24
+		Me.lbl_p_sdl_surfacenp_sharpness.Text = "Sharpness:"
 		'
 		'spn_p_vsync_vsyncrate
 		'
@@ -6638,20 +7189,22 @@ Partial Class ucr_DOSBox_Config
 		Me.spn_p_vsync_vsyncrate.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_vsync_vsyncrate", True))
 		Me.spn_p_vsync_vsyncrate.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
 		Me.spn_p_vsync_vsyncrate.Enabled = False
-		Me.spn_p_vsync_vsyncrate.Location = New System.Drawing.Point(123, 207)
+		Me.spn_p_vsync_vsyncrate.Location = New System.Drawing.Point(123, 253)
 		Me.spn_p_vsync_vsyncrate.MKBoundLabel = Me.lbl_p_vsync_vsyncrate
 		Me.spn_p_vsync_vsyncrate.MKEditValue_Compare = Nothing
 		Me.spn_p_vsync_vsyncrate.Name = "spn_p_vsync_vsyncrate"
 		Me.spn_p_vsync_vsyncrate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_vsync_vsyncrate.Properties.IsFloatValue = False
+		Me.spn_p_vsync_vsyncrate.Properties.Mask.EditMask = "N00"
 		Me.spn_p_vsync_vsyncrate.Properties.MaxValue = New Decimal(New Integer() {999, 0, 0, 0})
 		Me.spn_p_vsync_vsyncrate.Size = New System.Drawing.Size(54, 20)
-		ToolTipTitleItem179.Text = "VSync Rate"
-		ToolTipItem177.LeftIndent = 6
-		ToolTipItem177.Text = "VSync rate used if vsync is enabled. Ignored if VSync Mode is set to host (win32)" &
+		ToolTipTitleItem186.Text = "VSync Rate"
+		ToolTipItem184.LeftIndent = 6
+		ToolTipItem184.Text = "VSync rate used if vsync is enabled. Ignored if VSync Mode is set to host (win32)" &
 		"."
-		SuperToolTip179.Items.Add(ToolTipTitleItem179)
-		SuperToolTip179.Items.Add(ToolTipItem177)
-		Me.spn_p_vsync_vsyncrate.SuperTip = SuperToolTip179
+		SuperToolTip186.Items.Add(ToolTipTitleItem186)
+		SuperToolTip186.Items.Add(ToolTipItem184)
+		Me.spn_p_vsync_vsyncrate.SuperTip = SuperToolTip186
 		Me.spn_p_vsync_vsyncrate.TabIndex = 15
 		'
 		'lbl_p_vsync_vsyncrate
@@ -6659,7 +7212,7 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_vsync_vsyncrate.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
 		Me.lbl_p_vsync_vsyncrate.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
 		Me.lbl_p_vsync_vsyncrate.Enabled = False
-		Me.lbl_p_vsync_vsyncrate.Location = New System.Drawing.Point(3, 207)
+		Me.lbl_p_vsync_vsyncrate.Location = New System.Drawing.Point(3, 253)
 		Me.lbl_p_vsync_vsyncrate.MKBoundControl1 = Me.spn_p_vsync_vsyncrate
 		Me.lbl_p_vsync_vsyncrate.MKBoundControl2 = Nothing
 		Me.lbl_p_vsync_vsyncrate.MKBoundControl3 = Nothing
@@ -6667,13 +7220,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_vsync_vsyncrate.MKBoundControl5 = Nothing
 		Me.lbl_p_vsync_vsyncrate.Name = "lbl_p_vsync_vsyncrate"
 		Me.lbl_p_vsync_vsyncrate.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem178.Text = "VSync Rate"
-		ToolTipItem176.LeftIndent = 6
-		ToolTipItem176.Text = "VSync rate used if vsync is enabled. Ignored if VSync Mode is set to host (win32)" &
+		ToolTipTitleItem185.Text = "VSync Rate"
+		ToolTipItem183.LeftIndent = 6
+		ToolTipItem183.Text = "VSync rate used if vsync is enabled. Ignored if VSync Mode is set to host (win32)" &
 		"."
-		SuperToolTip178.Items.Add(ToolTipTitleItem178)
-		SuperToolTip178.Items.Add(ToolTipItem176)
-		Me.lbl_p_vsync_vsyncrate.SuperTip = SuperToolTip178
+		SuperToolTip185.Items.Add(ToolTipTitleItem185)
+		SuperToolTip185.Items.Add(ToolTipItem183)
+		Me.lbl_p_vsync_vsyncrate.SuperTip = SuperToolTip185
 		Me.lbl_p_vsync_vsyncrate.TabIndex = 24
 		Me.lbl_p_vsync_vsyncrate.Text = "VSync Rate:"
 		'
@@ -6681,19 +7234,21 @@ Partial Class ucr_DOSBox_Config
 		'
 		Me.spn_p_dosbox_forcerate_specific.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
 		Me.spn_p_dosbox_forcerate_specific.Enabled = False
-		Me.spn_p_dosbox_forcerate_specific.Location = New System.Drawing.Point(183, 161)
+		Me.spn_p_dosbox_forcerate_specific.Location = New System.Drawing.Point(183, 207)
 		Me.spn_p_dosbox_forcerate_specific.MKBoundLabel = Nothing
 		Me.spn_p_dosbox_forcerate_specific.MKEditValue_Compare = Nothing
 		Me.spn_p_dosbox_forcerate_specific.Name = "spn_p_dosbox_forcerate_specific"
 		Me.spn_p_dosbox_forcerate_specific.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_dosbox_forcerate_specific.Properties.IsFloatValue = False
+		Me.spn_p_dosbox_forcerate_specific.Properties.Mask.EditMask = "N00"
 		Me.spn_p_dosbox_forcerate_specific.Properties.MaxValue = New Decimal(New Integer() {999, 0, 0, 0})
 		Me.spn_p_dosbox_forcerate_specific.Size = New System.Drawing.Size(54, 20)
-		ToolTipTitleItem180.Text = "Force Framerate"
-		ToolTipItem178.LeftIndent = 6
-		ToolTipItem178.Text = "Force the VGA framerate."
-		SuperToolTip180.Items.Add(ToolTipTitleItem180)
-		SuperToolTip180.Items.Add(ToolTipItem178)
-		Me.spn_p_dosbox_forcerate_specific.SuperTip = SuperToolTip180
+		ToolTipTitleItem187.Text = "Force Framerate"
+		ToolTipItem185.LeftIndent = 6
+		ToolTipItem185.Text = "Force the VGA framerate."
+		SuperToolTip187.Items.Add(ToolTipTitleItem187)
+		SuperToolTip187.Items.Add(ToolTipItem185)
+		Me.spn_p_dosbox_forcerate_specific.SuperTip = SuperToolTip187
 		Me.spn_p_dosbox_forcerate_specific.TabIndex = 12
 		'
 		'btn_p_sdl_pixelshader_Clear
@@ -6701,19 +7256,19 @@ Partial Class ucr_DOSBox_Config
 		Me.btn_p_sdl_pixelshader_Clear.Location = New System.Drawing.Point(300, 26)
 		Me.btn_p_sdl_pixelshader_Clear.Name = "btn_p_sdl_pixelshader_Clear"
 		Me.btn_p_sdl_pixelshader_Clear.Size = New System.Drawing.Size(35, 20)
-		SuperToolTip181.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
-		ToolTipTitleItem181.Text = "Clear Pixelshader"
-		ToolTipItem179.LeftIndent = 6
-		ToolTipItem179.Text = "Clear the pixelshader."
-		SuperToolTip181.Items.Add(ToolTipTitleItem181)
-		SuperToolTip181.Items.Add(ToolTipItem179)
-		Me.btn_p_sdl_pixelshader_Clear.SuperTip = SuperToolTip181
+		SuperToolTip188.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
+		ToolTipTitleItem188.Text = "Clear Pixelshader"
+		ToolTipItem186.LeftIndent = 6
+		ToolTipItem186.Text = "Clear the pixelshader."
+		SuperToolTip188.Items.Add(ToolTipTitleItem188)
+		SuperToolTip188.Items.Add(ToolTipItem186)
+		Me.btn_p_sdl_pixelshader_Clear.SuperTip = SuperToolTip188
 		Me.btn_p_sdl_pixelshader_Clear.TabIndex = 3
 		Me.btn_p_sdl_pixelshader_Clear.Text = "&clear"
 		'
 		'rb_p_dosbox_forcerate_specific
 		'
-		Me.rb_p_dosbox_forcerate_specific.Location = New System.Drawing.Point(121, 161)
+		Me.rb_p_dosbox_forcerate_specific.Location = New System.Drawing.Point(121, 207)
 		Me.rb_p_dosbox_forcerate_specific.MKBoundLabel = Nothing
 		Me.rb_p_dosbox_forcerate_specific.MKEditValue_Compare = Nothing
 		Me.rb_p_dosbox_forcerate_specific.Name = "rb_p_dosbox_forcerate_specific"
@@ -6721,18 +7276,18 @@ Partial Class ucr_DOSBox_Config
 		Me.rb_p_dosbox_forcerate_specific.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio
 		Me.rb_p_dosbox_forcerate_specific.Properties.RadioGroupIndex = 2
 		Me.rb_p_dosbox_forcerate_specific.Size = New System.Drawing.Size(59, 19)
-		ToolTipTitleItem182.Text = "Force Framerate"
-		ToolTipItem180.LeftIndent = 6
-		ToolTipItem180.Text = "Force the VGA framerate."
-		SuperToolTip182.Items.Add(ToolTipTitleItem182)
-		SuperToolTip182.Items.Add(ToolTipItem180)
-		Me.rb_p_dosbox_forcerate_specific.SuperTip = SuperToolTip182
+		ToolTipTitleItem189.Text = "Force Framerate"
+		ToolTipItem187.LeftIndent = 6
+		ToolTipItem187.Text = "Force the VGA framerate."
+		SuperToolTip189.Items.Add(ToolTipTitleItem189)
+		SuperToolTip189.Items.Add(ToolTipItem187)
+		Me.rb_p_dosbox_forcerate_specific.SuperTip = SuperToolTip189
 		Me.rb_p_dosbox_forcerate_specific.TabIndex = 11
 		Me.rb_p_dosbox_forcerate_specific.TabStop = False
 		'
 		'rb_p_dosbox_forcerate_pal
 		'
-		Me.rb_p_dosbox_forcerate_pal.Location = New System.Drawing.Point(121, 139)
+		Me.rb_p_dosbox_forcerate_pal.Location = New System.Drawing.Point(121, 185)
 		Me.rb_p_dosbox_forcerate_pal.MKBoundLabel = Nothing
 		Me.rb_p_dosbox_forcerate_pal.MKEditValue_Compare = Nothing
 		Me.rb_p_dosbox_forcerate_pal.Name = "rb_p_dosbox_forcerate_pal"
@@ -6740,18 +7295,18 @@ Partial Class ucr_DOSBox_Config
 		Me.rb_p_dosbox_forcerate_pal.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio
 		Me.rb_p_dosbox_forcerate_pal.Properties.RadioGroupIndex = 2
 		Me.rb_p_dosbox_forcerate_pal.Size = New System.Drawing.Size(75, 19)
-		ToolTipTitleItem183.Text = "Force Framerate"
-		ToolTipItem181.LeftIndent = 6
-		ToolTipItem181.Text = "Force the VGA framerate."
-		SuperToolTip183.Items.Add(ToolTipTitleItem183)
-		SuperToolTip183.Items.Add(ToolTipItem181)
-		Me.rb_p_dosbox_forcerate_pal.SuperTip = SuperToolTip183
+		ToolTipTitleItem190.Text = "Force Framerate"
+		ToolTipItem188.LeftIndent = 6
+		ToolTipItem188.Text = "Force the VGA framerate."
+		SuperToolTip190.Items.Add(ToolTipTitleItem190)
+		SuperToolTip190.Items.Add(ToolTipItem188)
+		Me.rb_p_dosbox_forcerate_pal.SuperTip = SuperToolTip190
 		Me.rb_p_dosbox_forcerate_pal.TabIndex = 10
 		Me.rb_p_dosbox_forcerate_pal.TabStop = False
 		'
 		'rb_p_dosbox_forcerate_ntsc
 		'
-		Me.rb_p_dosbox_forcerate_ntsc.Location = New System.Drawing.Point(121, 117)
+		Me.rb_p_dosbox_forcerate_ntsc.Location = New System.Drawing.Point(121, 163)
 		Me.rb_p_dosbox_forcerate_ntsc.MKBoundLabel = Nothing
 		Me.rb_p_dosbox_forcerate_ntsc.MKEditValue_Compare = Nothing
 		Me.rb_p_dosbox_forcerate_ntsc.Name = "rb_p_dosbox_forcerate_ntsc"
@@ -6759,18 +7314,18 @@ Partial Class ucr_DOSBox_Config
 		Me.rb_p_dosbox_forcerate_ntsc.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio
 		Me.rb_p_dosbox_forcerate_ntsc.Properties.RadioGroupIndex = 2
 		Me.rb_p_dosbox_forcerate_ntsc.Size = New System.Drawing.Size(75, 19)
-		ToolTipTitleItem184.Text = "Force Framerate"
-		ToolTipItem182.LeftIndent = 6
-		ToolTipItem182.Text = "Force the VGA framerate."
-		SuperToolTip184.Items.Add(ToolTipTitleItem184)
-		SuperToolTip184.Items.Add(ToolTipItem182)
-		Me.rb_p_dosbox_forcerate_ntsc.SuperTip = SuperToolTip184
+		ToolTipTitleItem191.Text = "Force Framerate"
+		ToolTipItem189.LeftIndent = 6
+		ToolTipItem189.Text = "Force the VGA framerate."
+		SuperToolTip191.Items.Add(ToolTipTitleItem191)
+		SuperToolTip191.Items.Add(ToolTipItem189)
+		Me.rb_p_dosbox_forcerate_ntsc.SuperTip = SuperToolTip191
 		Me.rb_p_dosbox_forcerate_ntsc.TabIndex = 9
 		Me.rb_p_dosbox_forcerate_ntsc.TabStop = False
 		'
 		'rb_p_dosbox_forcerate_disabled
 		'
-		Me.rb_p_dosbox_forcerate_disabled.Location = New System.Drawing.Point(121, 95)
+		Me.rb_p_dosbox_forcerate_disabled.Location = New System.Drawing.Point(121, 141)
 		Me.rb_p_dosbox_forcerate_disabled.MKBoundLabel = Nothing
 		Me.rb_p_dosbox_forcerate_disabled.MKEditValue_Compare = Nothing
 		Me.rb_p_dosbox_forcerate_disabled.Name = "rb_p_dosbox_forcerate_disabled"
@@ -6778,39 +7333,82 @@ Partial Class ucr_DOSBox_Config
 		Me.rb_p_dosbox_forcerate_disabled.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio
 		Me.rb_p_dosbox_forcerate_disabled.Properties.RadioGroupIndex = 2
 		Me.rb_p_dosbox_forcerate_disabled.Size = New System.Drawing.Size(75, 19)
-		ToolTipTitleItem185.Text = "Force Framerate"
-		ToolTipItem183.LeftIndent = 6
-		ToolTipItem183.Text = "Force the VGA framerate."
-		SuperToolTip185.Items.Add(ToolTipTitleItem185)
-		SuperToolTip185.Items.Add(ToolTipItem183)
-		Me.rb_p_dosbox_forcerate_disabled.SuperTip = SuperToolTip185
+		ToolTipTitleItem192.Text = "Force Framerate"
+		ToolTipItem190.LeftIndent = 6
+		ToolTipItem190.Text = "Force the VGA framerate."
+		SuperToolTip192.Items.Add(ToolTipTitleItem192)
+		SuperToolTip192.Items.Add(ToolTipItem190)
+		Me.rb_p_dosbox_forcerate_disabled.SuperTip = SuperToolTip192
 		Me.rb_p_dosbox_forcerate_disabled.TabIndex = 8
 		Me.rb_p_dosbox_forcerate_disabled.TabStop = False
+		'
+		'chb_p_sdl_surface_collapse_dbl
+		'
+		Me.chb_p_sdl_surface_collapse_dbl.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_sdl_surface-collapse-dbl", True))
+		Me.chb_p_sdl_surface_collapse_dbl.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_sdl_surface-collapse-dbl", True))
+		Me.chb_p_sdl_surface_collapse_dbl.Enabled = False
+		Me.chb_p_sdl_surface_collapse_dbl.Location = New System.Drawing.Point(123, 95)
+		Me.chb_p_sdl_surface_collapse_dbl.MKBoundLabel = Me.lbl_p_sdl_surface_collapse_dbl
+		Me.chb_p_sdl_surface_collapse_dbl.MKEditValue_Compare = Nothing
+		Me.chb_p_sdl_surface_collapse_dbl.Name = "chb_p_sdl_surface_collapse_dbl"
+		Me.chb_p_sdl_surface_collapse_dbl.Properties.Caption = ""
+		Me.chb_p_sdl_surface_collapse_dbl.Size = New System.Drawing.Size(24, 19)
+		ToolTipTitleItem194.Text = "Collapse Double"
+		ToolTipItem192.LeftIndent = 6
+		ToolTipItem192.Text = "Collapse row and column pairs in double-height and double-width modes when using " &
+		"the 'surface' output with a scaler: 'pp', 'np' or 'nb'."
+		SuperToolTip194.Items.Add(ToolTipTitleItem194)
+		SuperToolTip194.Items.Add(ToolTipItem192)
+		Me.chb_p_sdl_surface_collapse_dbl.SuperTip = SuperToolTip194
+		Me.chb_p_sdl_surface_collapse_dbl.TabIndex = 16
+		'
+		'lbl_p_sdl_surface_collapse_dbl
+		'
+		Me.lbl_p_sdl_surface_collapse_dbl.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_sdl_surface_collapse_dbl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_sdl_surface_collapse_dbl.Enabled = False
+		Me.lbl_p_sdl_surface_collapse_dbl.Location = New System.Drawing.Point(3, 95)
+		Me.lbl_p_sdl_surface_collapse_dbl.MKBoundControl1 = Me.chb_p_sdl_surface_collapse_dbl
+		Me.lbl_p_sdl_surface_collapse_dbl.MKBoundControl2 = Nothing
+		Me.lbl_p_sdl_surface_collapse_dbl.MKBoundControl3 = Nothing
+		Me.lbl_p_sdl_surface_collapse_dbl.MKBoundControl4 = Nothing
+		Me.lbl_p_sdl_surface_collapse_dbl.MKBoundControl5 = Nothing
+		Me.lbl_p_sdl_surface_collapse_dbl.Name = "lbl_p_sdl_surface_collapse_dbl"
+		Me.lbl_p_sdl_surface_collapse_dbl.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem193.Text = "Collapse Double"
+		ToolTipItem191.LeftIndent = 6
+		ToolTipItem191.Text = "Collapse row and column pairs in double-height and double-width modes when using " &
+		"the 'surface' output with a scaler: 'pp', 'np' or 'nb'."
+		SuperToolTip193.Items.Add(ToolTipTitleItem193)
+		SuperToolTip193.Items.Add(ToolTipItem191)
+		Me.lbl_p_sdl_surface_collapse_dbl.SuperTip = SuperToolTip193
+		Me.lbl_p_sdl_surface_collapse_dbl.TabIndex = 24
+		Me.lbl_p_sdl_surface_collapse_dbl.Text = "Collapse Double:"
 		'
 		'chb_p_render_autofit
 		'
 		Me.chb_p_render_autofit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_render_autofit", True))
 		Me.chb_p_render_autofit.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_render_autofit", True))
-		Me.chb_p_render_autofit.Location = New System.Drawing.Point(123, 230)
+		Me.chb_p_render_autofit.Location = New System.Drawing.Point(123, 276)
 		Me.chb_p_render_autofit.MKBoundLabel = Me.lbl_p_render_autofit
 		Me.chb_p_render_autofit.MKEditValue_Compare = Nothing
 		Me.chb_p_render_autofit.Name = "chb_p_render_autofit"
 		Me.chb_p_render_autofit.Properties.Caption = ""
 		Me.chb_p_render_autofit.Size = New System.Drawing.Size(24, 19)
-		ToolTipTitleItem187.Text = "Autofit"
-		ToolTipItem185.LeftIndent = 6
-		ToolTipItem185.Text = "Best fits image to window. Intended for:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- output=direct3d" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- fullresolution=ori" &
+		ToolTipTitleItem196.Text = "Autofit"
+		ToolTipItem194.LeftIndent = 6
+		ToolTipItem194.Text = "Best fits image to window. Intended for:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- output=direct3d" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- fullresolution=ori" &
 		"ginal" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- aspect=true"
-		SuperToolTip187.Items.Add(ToolTipTitleItem187)
-		SuperToolTip187.Items.Add(ToolTipItem185)
-		Me.chb_p_render_autofit.SuperTip = SuperToolTip187
+		SuperToolTip196.Items.Add(ToolTipTitleItem196)
+		SuperToolTip196.Items.Add(ToolTipItem194)
+		Me.chb_p_render_autofit.SuperTip = SuperToolTip196
 		Me.chb_p_render_autofit.TabIndex = 16
 		'
 		'lbl_p_render_autofit
 		'
 		Me.lbl_p_render_autofit.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
 		Me.lbl_p_render_autofit.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_render_autofit.Location = New System.Drawing.Point(3, 230)
+		Me.lbl_p_render_autofit.Location = New System.Drawing.Point(3, 276)
 		Me.lbl_p_render_autofit.MKBoundControl1 = Me.chb_p_render_autofit
 		Me.lbl_p_render_autofit.MKBoundControl2 = Nothing
 		Me.lbl_p_render_autofit.MKBoundControl3 = Nothing
@@ -6818,13 +7416,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_render_autofit.MKBoundControl5 = Nothing
 		Me.lbl_p_render_autofit.Name = "lbl_p_render_autofit"
 		Me.lbl_p_render_autofit.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem186.Text = "Autofit"
-		ToolTipItem184.LeftIndent = 6
-		ToolTipItem184.Text = "Best fits image to window. Intended for:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- output=direct3d" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- fullresolution=ori" &
+		ToolTipTitleItem195.Text = "Autofit"
+		ToolTipItem193.LeftIndent = 6
+		ToolTipItem193.Text = "Best fits image to window. Intended for:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- output=direct3d" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- fullresolution=ori" &
 		"ginal" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- aspect=true"
-		SuperToolTip186.Items.Add(ToolTipTitleItem186)
-		SuperToolTip186.Items.Add(ToolTipItem184)
-		Me.lbl_p_render_autofit.SuperTip = SuperToolTip186
+		SuperToolTip195.Items.Add(ToolTipTitleItem195)
+		SuperToolTip195.Items.Add(ToolTipItem193)
+		Me.lbl_p_render_autofit.SuperTip = SuperToolTip195
 		Me.lbl_p_render_autofit.TabIndex = 24
 		Me.lbl_p_render_autofit.Text = "Autofit:"
 		'
@@ -6838,13 +7436,13 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_p_sdl_pixelshader_forced.Name = "chb_p_sdl_pixelshader_forced"
 		Me.chb_p_sdl_pixelshader_forced.Properties.Caption = "forced"
 		Me.chb_p_sdl_pixelshader_forced.Size = New System.Drawing.Size(60, 19)
-		ToolTipTitleItem190.Text = "Pixelshader"
-		ToolTipItem188.LeftIndent = 6
-		ToolTipItem188.Text = "Pixelshader program (effect file must be in Shaders subdirectory). If forced is a" &
+		ToolTipTitleItem199.Text = "Pixelshader"
+		ToolTipItem197.LeftIndent = 6
+		ToolTipItem197.Text = "Pixelshader program (effect file must be in Shaders subdirectory). If forced is a" &
 		"ctivated, the shader will be used even if the result might not be desired."
-		SuperToolTip190.Items.Add(ToolTipTitleItem190)
-		SuperToolTip190.Items.Add(ToolTipItem188)
-		Me.chb_p_sdl_pixelshader_forced.SuperTip = SuperToolTip190
+		SuperToolTip199.Items.Add(ToolTipTitleItem199)
+		SuperToolTip199.Items.Add(ToolTipItem197)
+		Me.chb_p_sdl_pixelshader_forced.SuperTip = SuperToolTip199
 		Me.chb_p_sdl_pixelshader_forced.TabIndex = 4
 		'
 		'lbl_p_sdl_pixelshader
@@ -6859,13 +7457,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_sdl_pixelshader.MKBoundControl5 = Nothing
 		Me.lbl_p_sdl_pixelshader.Name = "lbl_p_sdl_pixelshader"
 		Me.lbl_p_sdl_pixelshader.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem189.Text = "Pixelshader"
-		ToolTipItem187.LeftIndent = 6
-		ToolTipItem187.Text = "Pixelshader program (effect file must be in Shaders subdirectory). If forced is a" &
+		ToolTipTitleItem198.Text = "Pixelshader"
+		ToolTipItem196.LeftIndent = 6
+		ToolTipItem196.Text = "Pixelshader program (effect file must be in Shaders subdirectory). If forced is a" &
 		"ctivated, the shader will be used even if the result might not be desired."
-		SuperToolTip189.Items.Add(ToolTipTitleItem189)
-		SuperToolTip189.Items.Add(ToolTipItem187)
-		Me.lbl_p_sdl_pixelshader.SuperTip = SuperToolTip189
+		SuperToolTip198.Items.Add(ToolTipTitleItem198)
+		SuperToolTip198.Items.Add(ToolTipItem196)
+		Me.lbl_p_sdl_pixelshader.SuperTip = SuperToolTip198
 		Me.lbl_p_sdl_pixelshader.TabIndex = 26
 		Me.lbl_p_sdl_pixelshader.Text = "Pixelshader:"
 		'
@@ -6879,14 +7477,14 @@ Partial Class ucr_DOSBox_Config
 		Me.txb_p_sdl_pixelshader.Name = "txb_p_sdl_pixelshader"
 		Me.txb_p_sdl_pixelshader.Properties.ReadOnly = True
 		Me.txb_p_sdl_pixelshader.Size = New System.Drawing.Size(136, 20)
-		SuperToolTip188.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
-		ToolTipTitleItem188.Text = "Pixelshader"
-		ToolTipItem186.LeftIndent = 6
-		ToolTipItem186.Text = "Pixelshader program (effect file must be in Shaders subdirectory). If forced is a" &
+		SuperToolTip197.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
+		ToolTipTitleItem197.Text = "Pixelshader"
+		ToolTipItem195.LeftIndent = 6
+		ToolTipItem195.Text = "Pixelshader program (effect file must be in Shaders subdirectory). If forced is a" &
 		"ctivated, the shader will be used even if the result might not be desired."
-		SuperToolTip188.Items.Add(ToolTipTitleItem188)
-		SuperToolTip188.Items.Add(ToolTipItem186)
-		Me.txb_p_sdl_pixelshader.SuperTip = SuperToolTip188
+		SuperToolTip197.Items.Add(ToolTipTitleItem197)
+		SuperToolTip197.Items.Add(ToolTipItem195)
+		Me.txb_p_sdl_pixelshader.SuperTip = SuperToolTip197
 		Me.txb_p_sdl_pixelshader.TabIndex = 1
 		'
 		'btn_p_sdl_pixelshader
@@ -6894,13 +7492,13 @@ Partial Class ucr_DOSBox_Config
 		Me.btn_p_sdl_pixelshader.Location = New System.Drawing.Point(262, 26)
 		Me.btn_p_sdl_pixelshader.Name = "btn_p_sdl_pixelshader"
 		Me.btn_p_sdl_pixelshader.Size = New System.Drawing.Size(35, 20)
-		SuperToolTip191.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
-		ToolTipTitleItem191.Text = "Choose Pixelshader"
-		ToolTipItem189.LeftIndent = 6
-		ToolTipItem189.Text = "Browse the pixelshader program file."
-		SuperToolTip191.Items.Add(ToolTipTitleItem191)
-		SuperToolTip191.Items.Add(ToolTipItem189)
-		Me.btn_p_sdl_pixelshader.SuperTip = SuperToolTip191
+		SuperToolTip200.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
+		ToolTipTitleItem200.Text = "Choose Pixelshader"
+		ToolTipItem198.LeftIndent = 6
+		ToolTipItem198.Text = "Browse the pixelshader program file."
+		SuperToolTip200.Items.Add(ToolTipTitleItem200)
+		SuperToolTip200.Items.Add(ToolTipItem198)
+		Me.btn_p_sdl_pixelshader.SuperTip = SuperToolTip200
 		Me.btn_p_sdl_pixelshader.TabIndex = 2
 		Me.btn_p_sdl_pixelshader.Text = "..."
 		'
@@ -6908,7 +7506,7 @@ Partial Class ucr_DOSBox_Config
 		'
 		Me.cmb_p_glide_lfb.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_glide_lfb", True))
 		Me.cmb_p_glide_lfb.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_glide_lfb", True))
-		Me.cmb_p_glide_lfb.Location = New System.Drawing.Point(123, 299)
+		Me.cmb_p_glide_lfb.Location = New System.Drawing.Point(123, 368)
 		Me.cmb_p_glide_lfb.MKBoundLabel = Me.lbl_p_glide_lfb
 		Me.cmb_p_glide_lfb.MKEditValue_Compare = Nothing
 		Me.cmb_p_glide_lfb.Name = "cmb_p_glide_lfb"
@@ -6922,20 +7520,20 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_p_glide_lfb.Properties.ShowHeader = False
 		Me.cmb_p_glide_lfb.Properties.ValueMember = "value"
 		Me.cmb_p_glide_lfb.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem193.Text = "GLide LFB Access"
-		ToolTipItem191.LeftIndent = 6
-		ToolTipItem191.Text = "OpenGlide does not support locking aux buffer, please use _noaux modes in this ca" &
+		ToolTipTitleItem202.Text = "GLide LFB Access"
+		ToolTipItem200.LeftIndent = 6
+		ToolTipItem200.Text = "OpenGlide does not support locking aux buffer, please use _noaux modes in this ca" &
 		"se."
-		SuperToolTip193.Items.Add(ToolTipTitleItem193)
-		SuperToolTip193.Items.Add(ToolTipItem191)
-		Me.cmb_p_glide_lfb.SuperTip = SuperToolTip193
+		SuperToolTip202.Items.Add(ToolTipTitleItem202)
+		SuperToolTip202.Items.Add(ToolTipItem200)
+		Me.cmb_p_glide_lfb.SuperTip = SuperToolTip202
 		Me.cmb_p_glide_lfb.TabIndex = 20
 		'
 		'lbl_p_glide_lfb
 		'
 		Me.lbl_p_glide_lfb.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
 		Me.lbl_p_glide_lfb.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_glide_lfb.Location = New System.Drawing.Point(3, 299)
+		Me.lbl_p_glide_lfb.Location = New System.Drawing.Point(3, 368)
 		Me.lbl_p_glide_lfb.MKBoundControl1 = Me.cmb_p_glide_lfb
 		Me.lbl_p_glide_lfb.MKBoundControl2 = Nothing
 		Me.lbl_p_glide_lfb.MKBoundControl3 = Nothing
@@ -6943,13 +7541,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_glide_lfb.MKBoundControl5 = Nothing
 		Me.lbl_p_glide_lfb.Name = "lbl_p_glide_lfb"
 		Me.lbl_p_glide_lfb.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem192.Text = "GLide LFB Access"
-		ToolTipItem190.LeftIndent = 6
-		ToolTipItem190.Text = "OpenGlide does not support locking aux buffer, please use _noaux modes in this ca" &
+		ToolTipTitleItem201.Text = "GLide LFB Access"
+		ToolTipItem199.LeftIndent = 6
+		ToolTipItem199.Text = "OpenGlide does not support locking aux buffer, please use _noaux modes in this ca" &
 		"se."
-		SuperToolTip192.Items.Add(ToolTipTitleItem192)
-		SuperToolTip192.Items.Add(ToolTipItem190)
-		Me.lbl_p_glide_lfb.SuperTip = SuperToolTip192
+		SuperToolTip201.Items.Add(ToolTipTitleItem201)
+		SuperToolTip201.Items.Add(ToolTipItem199)
+		Me.lbl_p_glide_lfb.SuperTip = SuperToolTip201
 		Me.lbl_p_glide_lfb.TabIndex = 24
 		Me.lbl_p_glide_lfb.Text = "GLide LFB Access:"
 		'
@@ -6969,7 +7567,7 @@ Partial Class ucr_DOSBox_Config
 		'
 		Me.cmb_p_pci_voodoo.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_voodoo", True))
 		Me.cmb_p_pci_voodoo.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_voodoo", True))
-		Me.cmb_p_pci_voodoo.Location = New System.Drawing.Point(123, 253)
+		Me.cmb_p_pci_voodoo.Location = New System.Drawing.Point(123, 299)
 		Me.cmb_p_pci_voodoo.MKBoundLabel = Me.lbl_p_pci_voodoo
 		Me.cmb_p_pci_voodoo.MKEditValue_Compare = Nothing
 		Me.cmb_p_pci_voodoo.Name = "cmb_p_pci_voodoo"
@@ -6983,19 +7581,19 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_p_pci_voodoo.Properties.ShowHeader = False
 		Me.cmb_p_pci_voodoo.Properties.ValueMember = "value"
 		Me.cmb_p_pci_voodoo.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem195.Text = "Voodoo"
-		ToolTipItem193.LeftIndent = 6
-		ToolTipItem193.Text = "VOODOO support."
-		SuperToolTip195.Items.Add(ToolTipTitleItem195)
-		SuperToolTip195.Items.Add(ToolTipItem193)
-		Me.cmb_p_pci_voodoo.SuperTip = SuperToolTip195
+		ToolTipTitleItem204.Text = "Voodoo"
+		ToolTipItem202.LeftIndent = 6
+		ToolTipItem202.Text = "VOODOO support."
+		SuperToolTip204.Items.Add(ToolTipTitleItem204)
+		SuperToolTip204.Items.Add(ToolTipItem202)
+		Me.cmb_p_pci_voodoo.SuperTip = SuperToolTip204
 		Me.cmb_p_pci_voodoo.TabIndex = 17
 		'
 		'lbl_p_pci_voodoo
 		'
 		Me.lbl_p_pci_voodoo.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
 		Me.lbl_p_pci_voodoo.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_pci_voodoo.Location = New System.Drawing.Point(3, 253)
+		Me.lbl_p_pci_voodoo.Location = New System.Drawing.Point(3, 299)
 		Me.lbl_p_pci_voodoo.MKBoundControl1 = Me.cmb_p_pci_voodoo
 		Me.lbl_p_pci_voodoo.MKBoundControl2 = Nothing
 		Me.lbl_p_pci_voodoo.MKBoundControl3 = Nothing
@@ -7003,12 +7601,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_pci_voodoo.MKBoundControl5 = Nothing
 		Me.lbl_p_pci_voodoo.Name = "lbl_p_pci_voodoo"
 		Me.lbl_p_pci_voodoo.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem194.Text = "Voodoo"
-		ToolTipItem192.LeftIndent = 6
-		ToolTipItem192.Text = "VOODOO support."
-		SuperToolTip194.Items.Add(ToolTipTitleItem194)
-		SuperToolTip194.Items.Add(ToolTipItem192)
-		Me.lbl_p_pci_voodoo.SuperTip = SuperToolTip194
+		ToolTipTitleItem203.Text = "Voodoo"
+		ToolTipItem201.LeftIndent = 6
+		ToolTipItem201.Text = "VOODOO support."
+		SuperToolTip203.Items.Add(ToolTipTitleItem203)
+		SuperToolTip203.Items.Add(ToolTipItem201)
+		Me.lbl_p_pci_voodoo.SuperTip = SuperToolTip203
 		Me.lbl_p_pci_voodoo.TabIndex = 24
 		Me.lbl_p_pci_voodoo.Text = "Voodoo:"
 		'
@@ -7028,7 +7626,7 @@ Partial Class ucr_DOSBox_Config
 		'
 		Me.cmb_p_vsync_vsyncmode.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_vsync_vsyncmode", True))
 		Me.cmb_p_vsync_vsyncmode.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_vsync_vsyncmode", True))
-		Me.cmb_p_vsync_vsyncmode.Location = New System.Drawing.Point(123, 184)
+		Me.cmb_p_vsync_vsyncmode.Location = New System.Drawing.Point(123, 230)
 		Me.cmb_p_vsync_vsyncmode.MKBoundLabel = Me.lbl_p_vsync_vsyncmode
 		Me.cmb_p_vsync_vsyncmode.MKEditValue_Compare = Nothing
 		Me.cmb_p_vsync_vsyncmode.Name = "cmb_p_vsync_vsyncmode"
@@ -7042,20 +7640,20 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_p_vsync_vsyncmode.Properties.ShowHeader = False
 		Me.cmb_p_vsync_vsyncmode.Properties.ValueMember = "value"
 		Me.cmb_p_vsync_vsyncmode.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem197.Text = "VSync"
-		ToolTipItem195.LeftIndent = 6
-		ToolTipItem195.Text = "Synchronize vsync timing to the host display. Requires calibration within dosbox." &
+		ToolTipTitleItem206.Text = "VSync"
+		ToolTipItem204.LeftIndent = 6
+		ToolTipItem204.Text = "Synchronize vsync timing to the host display. Requires calibration within dosbox." &
 		""
-		SuperToolTip197.Items.Add(ToolTipTitleItem197)
-		SuperToolTip197.Items.Add(ToolTipItem195)
-		Me.cmb_p_vsync_vsyncmode.SuperTip = SuperToolTip197
+		SuperToolTip206.Items.Add(ToolTipTitleItem206)
+		SuperToolTip206.Items.Add(ToolTipItem204)
+		Me.cmb_p_vsync_vsyncmode.SuperTip = SuperToolTip206
 		Me.cmb_p_vsync_vsyncmode.TabIndex = 14
 		'
 		'lbl_p_vsync_vsyncmode
 		'
 		Me.lbl_p_vsync_vsyncmode.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
 		Me.lbl_p_vsync_vsyncmode.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_vsync_vsyncmode.Location = New System.Drawing.Point(3, 184)
+		Me.lbl_p_vsync_vsyncmode.Location = New System.Drawing.Point(3, 230)
 		Me.lbl_p_vsync_vsyncmode.MKBoundControl1 = Me.cmb_p_vsync_vsyncmode
 		Me.lbl_p_vsync_vsyncmode.MKBoundControl2 = Nothing
 		Me.lbl_p_vsync_vsyncmode.MKBoundControl3 = Nothing
@@ -7063,13 +7661,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_vsync_vsyncmode.MKBoundControl5 = Nothing
 		Me.lbl_p_vsync_vsyncmode.Name = "lbl_p_vsync_vsyncmode"
 		Me.lbl_p_vsync_vsyncmode.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem196.Text = "VSync"
-		ToolTipItem194.LeftIndent = 6
-		ToolTipItem194.Text = "Synchronize vsync timing to the host display. Requires calibration within dosbox." &
+		ToolTipTitleItem205.Text = "VSync"
+		ToolTipItem203.LeftIndent = 6
+		ToolTipItem203.Text = "Synchronize vsync timing to the host display. Requires calibration within dosbox." &
 		""
-		SuperToolTip196.Items.Add(ToolTipTitleItem196)
-		SuperToolTip196.Items.Add(ToolTipItem194)
-		Me.lbl_p_vsync_vsyncmode.SuperTip = SuperToolTip196
+		SuperToolTip205.Items.Add(ToolTipTitleItem205)
+		SuperToolTip205.Items.Add(ToolTipItem203)
+		Me.lbl_p_vsync_vsyncmode.SuperTip = SuperToolTip205
 		Me.lbl_p_vsync_vsyncmode.TabIndex = 24
 		Me.lbl_p_vsync_vsyncmode.Text = "VSync Mode:"
 		'
@@ -7089,7 +7687,7 @@ Partial Class ucr_DOSBox_Config
 		'
 		Me.cmb_p_dosbox_vmemsize.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_dosbox_vmemsize", True))
 		Me.cmb_p_dosbox_vmemsize.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_dosbox_vmemsize", True))
-		Me.cmb_p_dosbox_vmemsize.Location = New System.Drawing.Point(123, 72)
+		Me.cmb_p_dosbox_vmemsize.Location = New System.Drawing.Point(123, 118)
 		Me.cmb_p_dosbox_vmemsize.MKBoundLabel = Me.lbl_p_dosbox_vmemsize
 		Me.cmb_p_dosbox_vmemsize.MKEditValue_Compare = Nothing
 		Me.cmb_p_dosbox_vmemsize.Name = "cmb_p_dosbox_vmemsize"
@@ -7103,19 +7701,19 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_p_dosbox_vmemsize.Properties.ShowHeader = False
 		Me.cmb_p_dosbox_vmemsize.Properties.ValueMember = "value"
 		Me.cmb_p_dosbox_vmemsize.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem199.Text = "Video Memory size"
-		ToolTipItem197.LeftIndent = 6
-		ToolTipItem197.Text = resources.GetString("ToolTipItem197.Text")
-		SuperToolTip199.Items.Add(ToolTipTitleItem199)
-		SuperToolTip199.Items.Add(ToolTipItem197)
-		Me.cmb_p_dosbox_vmemsize.SuperTip = SuperToolTip199
+		ToolTipTitleItem208.Text = "Video Memory size"
+		ToolTipItem206.LeftIndent = 6
+		ToolTipItem206.Text = resources.GetString("ToolTipItem206.Text")
+		SuperToolTip208.Items.Add(ToolTipTitleItem208)
+		SuperToolTip208.Items.Add(ToolTipItem206)
+		Me.cmb_p_dosbox_vmemsize.SuperTip = SuperToolTip208
 		Me.cmb_p_dosbox_vmemsize.TabIndex = 6
 		'
 		'lbl_p_dosbox_vmemsize
 		'
 		Me.lbl_p_dosbox_vmemsize.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
 		Me.lbl_p_dosbox_vmemsize.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_dosbox_vmemsize.Location = New System.Drawing.Point(3, 72)
+		Me.lbl_p_dosbox_vmemsize.Location = New System.Drawing.Point(3, 118)
 		Me.lbl_p_dosbox_vmemsize.MKBoundControl1 = Me.cmb_p_dosbox_vmemsize
 		Me.lbl_p_dosbox_vmemsize.MKBoundControl2 = Nothing
 		Me.lbl_p_dosbox_vmemsize.MKBoundControl3 = Nothing
@@ -7123,12 +7721,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_dosbox_vmemsize.MKBoundControl5 = Nothing
 		Me.lbl_p_dosbox_vmemsize.Name = "lbl_p_dosbox_vmemsize"
 		Me.lbl_p_dosbox_vmemsize.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem198.Text = "Video Memory size"
-		ToolTipItem196.LeftIndent = 6
-		ToolTipItem196.Text = resources.GetString("ToolTipItem196.Text")
-		SuperToolTip198.Items.Add(ToolTipTitleItem198)
-		SuperToolTip198.Items.Add(ToolTipItem196)
-		Me.lbl_p_dosbox_vmemsize.SuperTip = SuperToolTip198
+		ToolTipTitleItem207.Text = "Video Memory size"
+		ToolTipItem205.LeftIndent = 6
+		ToolTipItem205.Text = resources.GetString("ToolTipItem205.Text")
+		SuperToolTip207.Items.Add(ToolTipTitleItem207)
+		SuperToolTip207.Items.Add(ToolTipItem205)
+		Me.lbl_p_dosbox_vmemsize.SuperTip = SuperToolTip207
 		Me.lbl_p_dosbox_vmemsize.TabIndex = 24
 		Me.lbl_p_dosbox_vmemsize.Text = "Video Memory size:"
 		'
@@ -7161,12 +7759,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_p_render_scaler.Properties.ShowHeader = False
 		Me.cmb_p_render_scaler.Properties.ValueMember = "value"
 		Me.cmb_p_render_scaler.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem201.Text = "Scaler (Patched)"
-		ToolTipItem199.LeftIndent = 6
-		ToolTipItem199.Text = resources.GetString("ToolTipItem199.Text")
-		SuperToolTip201.Items.Add(ToolTipTitleItem201)
-		SuperToolTip201.Items.Add(ToolTipItem199)
-		Me.cmb_p_render_scaler.SuperTip = SuperToolTip201
+		ToolTipTitleItem210.Text = "Scaler (Patched)"
+		ToolTipItem208.LeftIndent = 6
+		ToolTipItem208.Text = resources.GetString("ToolTipItem208.Text")
+		SuperToolTip210.Items.Add(ToolTipTitleItem210)
+		SuperToolTip210.Items.Add(ToolTipItem208)
+		Me.cmb_p_render_scaler.SuperTip = SuperToolTip210
 		Me.cmb_p_render_scaler.TabIndex = 5
 		'
 		'lbl_p_render_scaler
@@ -7181,12 +7779,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_render_scaler.MKBoundControl5 = Nothing
 		Me.lbl_p_render_scaler.Name = "lbl_p_render_scaler"
 		Me.lbl_p_render_scaler.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem200.Text = "Scaler (Patched)"
-		ToolTipItem198.LeftIndent = 6
-		ToolTipItem198.Text = resources.GetString("ToolTipItem198.Text")
-		SuperToolTip200.Items.Add(ToolTipTitleItem200)
-		SuperToolTip200.Items.Add(ToolTipItem198)
-		Me.lbl_p_render_scaler.SuperTip = SuperToolTip200
+		ToolTipTitleItem209.Text = "Scaler (Patched)"
+		ToolTipItem207.LeftIndent = 6
+		ToolTipItem207.Text = resources.GetString("ToolTipItem207.Text")
+		SuperToolTip209.Items.Add(ToolTipTitleItem209)
+		SuperToolTip209.Items.Add(ToolTipItem207)
+		Me.lbl_p_render_scaler.SuperTip = SuperToolTip209
 		Me.lbl_p_render_scaler.TabIndex = 24
 		Me.lbl_p_render_scaler.Text = "Scaler:"
 		'
@@ -7197,38 +7795,37 @@ Partial Class ucr_DOSBox_Config
 		Me.BTA_p_render_scaler.Connection = Nothing
 		Me.BTA_p_render_scaler.DSStream = CType(resources.GetObject("BTA_p_render_scaler.DSStream"), System.IO.MemoryStream)
 		Me.BTA_p_render_scaler.FillMethod = MKNetLib.FillMethod.ValueList
-		Me.BTA_p_render_scaler.FillString = "normal5x;hardware_none;hardware3x;hardware4x;hardware5x;xbrz"
+		Me.BTA_p_render_scaler.FillString = "normal4x;normal5x;normal6x;hardware_none;hardware2x;hardware3x;hardware4x;hardwar" &
+		"e5x;xbrz"
 		Me.BTA_p_render_scaler.Position = 0
 		Me.BTA_p_render_scaler.Transaction = Nothing
 		Me.BTA_p_render_scaler.UpdateTablesStream = CType(resources.GetObject("BTA_p_render_scaler.UpdateTablesStream"), System.Collections.Generic.List(Of String))
 		'
 		'lbl_p_dosbox_vmemsize_details
 		'
-		Me.lbl_p_dosbox_vmemsize_details.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.lbl_p_dosbox_vmemsize_details.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
-		Me.lbl_p_dosbox_vmemsize_details.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_dosbox_vmemsize_details.Location = New System.Drawing.Point(262, 72)
+		Me.lbl_p_dosbox_vmemsize_details.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
+		Me.lbl_p_dosbox_vmemsize_details.Location = New System.Drawing.Point(262, 120)
 		Me.lbl_p_dosbox_vmemsize_details.MKBoundControl1 = Nothing
 		Me.lbl_p_dosbox_vmemsize_details.MKBoundControl2 = Nothing
 		Me.lbl_p_dosbox_vmemsize_details.MKBoundControl3 = Nothing
 		Me.lbl_p_dosbox_vmemsize_details.MKBoundControl4 = Nothing
 		Me.lbl_p_dosbox_vmemsize_details.MKBoundControl5 = Nothing
 		Me.lbl_p_dosbox_vmemsize_details.Name = "lbl_p_dosbox_vmemsize_details"
-		Me.lbl_p_dosbox_vmemsize_details.Size = New System.Drawing.Size(281, 20)
-		ToolTipTitleItem202.Text = "Video Memory size"
-		ToolTipItem200.LeftIndent = 6
-		ToolTipItem200.Text = resources.GetString("ToolTipItem200.Text")
-		SuperToolTip202.Items.Add(ToolTipTitleItem202)
-		SuperToolTip202.Items.Add(ToolTipItem200)
-		Me.lbl_p_dosbox_vmemsize_details.SuperTip = SuperToolTip202
+		Me.lbl_p_dosbox_vmemsize_details.Size = New System.Drawing.Size(0, 13)
+		ToolTipTitleItem211.Text = "Video Memory size"
+		ToolTipItem209.LeftIndent = 6
+		ToolTipItem209.Text = resources.GetString("ToolTipItem209.Text")
+		SuperToolTip211.Items.Add(ToolTipTitleItem211)
+		SuperToolTip211.Items.Add(ToolTipItem209)
+		Me.lbl_p_dosbox_vmemsize_details.SuperTip = SuperToolTip211
 		Me.lbl_p_dosbox_vmemsize_details.TabIndex = 7
 		'
 		'lbl_p_dosbox_forcerate
 		'
 		Me.lbl_p_dosbox_forcerate.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
 		Me.lbl_p_dosbox_forcerate.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_dosbox_forcerate.Location = New System.Drawing.Point(3, 95)
+		Me.lbl_p_dosbox_forcerate.Location = New System.Drawing.Point(3, 141)
 		Me.lbl_p_dosbox_forcerate.MKBoundControl1 = Nothing
 		Me.lbl_p_dosbox_forcerate.MKBoundControl2 = Nothing
 		Me.lbl_p_dosbox_forcerate.MKBoundControl3 = Nothing
@@ -7236,12 +7833,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_dosbox_forcerate.MKBoundControl5 = Nothing
 		Me.lbl_p_dosbox_forcerate.Name = "lbl_p_dosbox_forcerate"
 		Me.lbl_p_dosbox_forcerate.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem203.Text = "Force Framerate"
-		ToolTipItem201.LeftIndent = 6
-		ToolTipItem201.Text = "Force the VGA framerate."
-		SuperToolTip203.Items.Add(ToolTipTitleItem203)
-		SuperToolTip203.Items.Add(ToolTipItem201)
-		Me.lbl_p_dosbox_forcerate.SuperTip = SuperToolTip203
+		ToolTipTitleItem212.Text = "Force Framerate"
+		ToolTipItem210.LeftIndent = 6
+		ToolTipItem210.Text = "Force the VGA framerate."
+		SuperToolTip212.Items.Add(ToolTipTitleItem212)
+		SuperToolTip212.Items.Add(ToolTipItem210)
+		Me.lbl_p_dosbox_forcerate.SuperTip = SuperToolTip212
 		Me.lbl_p_dosbox_forcerate.TabIndex = 24
 		Me.lbl_p_dosbox_forcerate.Text = "Force Framerate:"
 		'
@@ -7262,13 +7859,13 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_p_sdl_output.Properties.ShowHeader = False
 		Me.cmb_p_sdl_output.Properties.ValueMember = "value"
 		Me.cmb_p_sdl_output.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem205.Text = "Output (Patches)"
-		ToolTipItem203.LeftIndent = 6
-		ToolTipItem203.Text = "Some patches introduce new systems for output. This setting overrides the (standa" &
+		ToolTipTitleItem214.Text = "Output (Patches)"
+		ToolTipItem212.LeftIndent = 6
+		ToolTipItem212.Text = "Some patches introduce new systems for output. This setting overrides the (standa" &
 		"rd) Output setting."
-		SuperToolTip205.Items.Add(ToolTipTitleItem205)
-		SuperToolTip205.Items.Add(ToolTipItem203)
-		Me.cmb_p_sdl_output.SuperTip = SuperToolTip205
+		SuperToolTip214.Items.Add(ToolTipTitleItem214)
+		SuperToolTip214.Items.Add(ToolTipItem212)
+		Me.cmb_p_sdl_output.SuperTip = SuperToolTip214
 		Me.cmb_p_sdl_output.TabIndex = 0
 		'
 		'lbl_p_sdl_output
@@ -7283,13 +7880,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_sdl_output.MKBoundControl5 = Nothing
 		Me.lbl_p_sdl_output.Name = "lbl_p_sdl_output"
 		Me.lbl_p_sdl_output.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem204.Text = "Output (Patches)"
-		ToolTipItem202.LeftIndent = 6
-		ToolTipItem202.Text = "Some patches introduce new systems for output. This setting overrides the (standa" &
-		"rd) Output setting."
-		SuperToolTip204.Items.Add(ToolTipTitleItem204)
-		SuperToolTip204.Items.Add(ToolTipItem202)
-		Me.lbl_p_sdl_output.SuperTip = SuperToolTip204
+		ToolTipTitleItem213.Text = "Output (Patches)"
+		ToolTipItem211.LeftIndent = 6
+		ToolTipItem211.Text = resources.GetString("ToolTipItem211.Text")
+		SuperToolTip213.Items.Add(ToolTipTitleItem213)
+		SuperToolTip213.Items.Add(ToolTipItem211)
+		Me.lbl_p_sdl_output.SuperTip = SuperToolTip213
 		Me.lbl_p_sdl_output.TabIndex = 22
 		Me.lbl_p_sdl_output.Text = "Output:"
 		'
@@ -7300,17 +7896,19 @@ Partial Class ucr_DOSBox_Config
 		Me.BTA_p_sdl_output.Connection = Nothing
 		Me.BTA_p_sdl_output.DSStream = CType(resources.GetObject("BTA_p_sdl_output.DSStream"), System.IO.MemoryStream)
 		Me.BTA_p_sdl_output.FillMethod = MKNetLib.FillMethod.ValueList
-		Me.BTA_p_sdl_output.FillString = "direct3d;openglhq"
+		Me.BTA_p_sdl_output.FillString = "direct3d;openglhq;surfacepp;surfacenp;surfacenb"
 		Me.BTA_p_sdl_output.Position = 0
 		Me.BTA_p_sdl_output.Transaction = Nothing
 		Me.BTA_p_sdl_output.UpdateTablesStream = CType(resources.GetObject("BTA_p_sdl_output.UpdateTablesStream"), System.Collections.Generic.List(Of String))
 		'
 		'tpg_Sound_Patches
 		'
+		Me.tpg_Sound_Patches.AllowTouchScroll = True
+		Me.tpg_Sound_Patches.AutoScroll = True
 		Me.tpg_Sound_Patches.Controls.Add(Me.chb_p_mixer_swapstereo)
 		Me.tpg_Sound_Patches.Controls.Add(Me.lbl_p_mixer_swapstereo)
 		Me.tpg_Sound_Patches.Name = "tpg_Sound_Patches"
-		Me.tpg_Sound_Patches.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Sound_Patches.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Sound_Patches.Text = "Sound (Patches)"
 		'
 		'chb_p_mixer_swapstereo
@@ -7323,12 +7921,12 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_p_mixer_swapstereo.Name = "chb_p_mixer_swapstereo"
 		Me.chb_p_mixer_swapstereo.Properties.Caption = ""
 		Me.chb_p_mixer_swapstereo.Size = New System.Drawing.Size(24, 19)
-		ToolTipTitleItem207.Text = "Swap Stereo"
-		ToolTipItem205.LeftIndent = 6
-		ToolTipItem205.Text = "Swaps the left and right stereo channels."
-		SuperToolTip207.Items.Add(ToolTipTitleItem207)
-		SuperToolTip207.Items.Add(ToolTipItem205)
-		Me.chb_p_mixer_swapstereo.SuperTip = SuperToolTip207
+		ToolTipTitleItem216.Text = "Swap Stereo"
+		ToolTipItem214.LeftIndent = 6
+		ToolTipItem214.Text = "Swaps the left and right stereo channels."
+		SuperToolTip216.Items.Add(ToolTipTitleItem216)
+		SuperToolTip216.Items.Add(ToolTipItem214)
+		Me.chb_p_mixer_swapstereo.SuperTip = SuperToolTip216
 		Me.chb_p_mixer_swapstereo.TabIndex = 33
 		'
 		'lbl_p_mixer_swapstereo
@@ -7343,17 +7941,21 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_mixer_swapstereo.MKBoundControl5 = Nothing
 		Me.lbl_p_mixer_swapstereo.Name = "lbl_p_mixer_swapstereo"
 		Me.lbl_p_mixer_swapstereo.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem206.Text = "Swap Stereo"
-		ToolTipItem204.LeftIndent = 6
-		ToolTipItem204.Text = "Swaps the left and right stereo channels."
-		SuperToolTip206.Items.Add(ToolTipTitleItem206)
-		SuperToolTip206.Items.Add(ToolTipItem204)
-		Me.lbl_p_mixer_swapstereo.SuperTip = SuperToolTip206
+		ToolTipTitleItem215.Text = "Swap Stereo"
+		ToolTipItem213.LeftIndent = 6
+		ToolTipItem213.Text = "Swaps the left and right stereo channels."
+		SuperToolTip215.Items.Add(ToolTipTitleItem215)
+		SuperToolTip215.Items.Add(ToolTipItem213)
+		Me.lbl_p_mixer_swapstereo.SuperTip = SuperToolTip215
 		Me.lbl_p_mixer_swapstereo.TabIndex = 32
 		Me.lbl_p_mixer_swapstereo.Text = "Swap Stereo:"
 		'
 		'tpg_Sound_Blaster_Patches
 		'
+		Me.tpg_Sound_Blaster_Patches.AllowTouchScroll = True
+		Me.tpg_Sound_Blaster_Patches.AutoScroll = True
+		Me.tpg_Sound_Blaster_Patches.Controls.Add(Me.cmb_p_sblaster_oplemu)
+		Me.tpg_Sound_Blaster_Patches.Controls.Add(Me.lbl_p_sblaster_oplemu)
 		Me.tpg_Sound_Blaster_Patches.Controls.Add(Me.chb_p_sblaster_goldplay)
 		Me.tpg_Sound_Blaster_Patches.Controls.Add(Me.lbl_p_sblaster_goldplay)
 		Me.tpg_Sound_Blaster_Patches.Controls.Add(Me.cmb_p_sblaster_hardwarebase)
@@ -7363,32 +7965,92 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_Sound_Blaster_Patches.Controls.Add(Me.lbl_p_sblaster_oplmode)
 		Me.tpg_Sound_Blaster_Patches.Controls.Add(Me.lbl_p_sblaster_sbtype)
 		Me.tpg_Sound_Blaster_Patches.Name = "tpg_Sound_Blaster_Patches"
-		Me.tpg_Sound_Blaster_Patches.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Sound_Blaster_Patches.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Sound_Blaster_Patches.Text = "Sound Blaster (Patches)"
+		'
+		'cmb_p_sblaster_oplemu
+		'
+		Me.cmb_p_sblaster_oplemu.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_sblaster_oplemu", True))
+		Me.cmb_p_sblaster_oplemu.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_sblaster_oplemu", True))
+		Me.cmb_p_sblaster_oplemu.Location = New System.Drawing.Point(123, 26)
+		Me.cmb_p_sblaster_oplemu.MKBoundLabel = Me.lbl_p_sblaster_oplemu
+		Me.cmb_p_sblaster_oplemu.MKEditValue_Compare = Nothing
+		Me.cmb_p_sblaster_oplemu.Name = "cmb_p_sblaster_oplemu"
+		Me.cmb_p_sblaster_oplemu.Properties.AllowFocused = False
+		Me.cmb_p_sblaster_oplemu.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)})
+		Me.cmb_p_sblaster_oplemu.Properties.DataSource = Me.BTA_p_sblaster_oplemu
+		Me.cmb_p_sblaster_oplemu.Properties.DisplayMember = "value"
+		Me.cmb_p_sblaster_oplemu.Properties.NullText = "<don't override>"
+		Me.cmb_p_sblaster_oplemu.Properties.ShowFooter = False
+		Me.cmb_p_sblaster_oplemu.Properties.ShowHeader = False
+		Me.cmb_p_sblaster_oplemu.Properties.ValueMember = "value"
+		Me.cmb_p_sblaster_oplemu.Size = New System.Drawing.Size(136, 20)
+		ToolTipTitleItem218.Text = "OPL Emulation"
+		ToolTipItem216.LeftIndent = 6
+		ToolTipItem216.Text = "Some patches introduce new types of OPL emulation. This setting overrides the (st" &
+		"andard) OPL Emulation setting."
+		SuperToolTip218.Items.Add(ToolTipTitleItem218)
+		SuperToolTip218.Items.Add(ToolTipItem216)
+		Me.cmb_p_sblaster_oplemu.SuperTip = SuperToolTip218
+		Me.cmb_p_sblaster_oplemu.TabIndex = 31
+		'
+		'lbl_p_sblaster_oplemu
+		'
+		Me.lbl_p_sblaster_oplemu.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_sblaster_oplemu.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_sblaster_oplemu.Location = New System.Drawing.Point(3, 26)
+		Me.lbl_p_sblaster_oplemu.MKBoundControl1 = Me.cmb_p_sblaster_oplemu
+		Me.lbl_p_sblaster_oplemu.MKBoundControl2 = Nothing
+		Me.lbl_p_sblaster_oplemu.MKBoundControl3 = Nothing
+		Me.lbl_p_sblaster_oplemu.MKBoundControl4 = Nothing
+		Me.lbl_p_sblaster_oplemu.MKBoundControl5 = Nothing
+		Me.lbl_p_sblaster_oplemu.Name = "lbl_p_sblaster_oplemu"
+		Me.lbl_p_sblaster_oplemu.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem217.Text = "OPL Emulation"
+		ToolTipItem215.LeftIndent = 6
+		ToolTipItem215.Text = "Some patches introduce new types of OPL emulation. This setting overrides the (st" &
+		"andard) OPL Emulation setting."
+		SuperToolTip217.Items.Add(ToolTipTitleItem217)
+		SuperToolTip217.Items.Add(ToolTipItem215)
+		Me.lbl_p_sblaster_oplemu.SuperTip = SuperToolTip217
+		Me.lbl_p_sblaster_oplemu.TabIndex = 32
+		Me.lbl_p_sblaster_oplemu.Text = "OPL Emulation:"
+		'
+		'BTA_p_sblaster_oplemu
+		'
+		Me.BTA_p_sblaster_oplemu.AllowDelete = True
+		Me.BTA_p_sblaster_oplemu.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_p_sblaster_oplemu.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_p_sblaster_oplemu.Connection = Nothing
+		Me.BTA_p_sblaster_oplemu.DSStream = CType(resources.GetObject("BTA_p_sblaster_oplemu.DSStream"), System.IO.MemoryStream)
+		Me.BTA_p_sblaster_oplemu.FillMethod = MKNetLib.FillMethod.ValueList
+		Me.BTA_p_sblaster_oplemu.FillString = "nuked"
+		Me.BTA_p_sblaster_oplemu.Position = 0
+		Me.BTA_p_sblaster_oplemu.Transaction = Nothing
+		Me.BTA_p_sblaster_oplemu.UpdateTablesStream = CType(resources.GetObject("BTA_p_sblaster_oplemu.UpdateTablesStream"), System.Collections.Generic.List(Of String))
 		'
 		'chb_p_sblaster_goldplay
 		'
 		Me.chb_p_sblaster_goldplay.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_sblaster_goldplay", True))
 		Me.chb_p_sblaster_goldplay.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_sblaster_goldplay", True))
-		Me.chb_p_sblaster_goldplay.Location = New System.Drawing.Point(123, 49)
+		Me.chb_p_sblaster_goldplay.Location = New System.Drawing.Point(123, 72)
 		Me.chb_p_sblaster_goldplay.MKBoundLabel = Me.lbl_p_sblaster_goldplay
 		Me.chb_p_sblaster_goldplay.MKEditValue_Compare = Nothing
 		Me.chb_p_sblaster_goldplay.Name = "chb_p_sblaster_goldplay"
 		Me.chb_p_sblaster_goldplay.Properties.Caption = ""
 		Me.chb_p_sblaster_goldplay.Size = New System.Drawing.Size(24, 19)
-		ToolTipTitleItem209.Text = "Goldplay"
-		ToolTipItem207.LeftIndent = 6
-		ToolTipItem207.Text = "Enable Goldplay emulation."
-		SuperToolTip209.Items.Add(ToolTipTitleItem209)
-		SuperToolTip209.Items.Add(ToolTipItem207)
-		Me.chb_p_sblaster_goldplay.SuperTip = SuperToolTip209
+		ToolTipTitleItem220.Text = "Goldplay"
+		ToolTipItem218.LeftIndent = 6
+		ToolTipItem218.Text = "Enable Goldplay emulation."
+		SuperToolTip220.Items.Add(ToolTipTitleItem220)
+		SuperToolTip220.Items.Add(ToolTipItem218)
+		Me.chb_p_sblaster_goldplay.SuperTip = SuperToolTip220
 		Me.chb_p_sblaster_goldplay.TabIndex = 3
 		'
 		'lbl_p_sblaster_goldplay
 		'
 		Me.lbl_p_sblaster_goldplay.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
 		Me.lbl_p_sblaster_goldplay.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_sblaster_goldplay.Location = New System.Drawing.Point(3, 49)
+		Me.lbl_p_sblaster_goldplay.Location = New System.Drawing.Point(3, 72)
 		Me.lbl_p_sblaster_goldplay.MKBoundControl1 = Me.chb_p_sblaster_goldplay
 		Me.lbl_p_sblaster_goldplay.MKBoundControl2 = Nothing
 		Me.lbl_p_sblaster_goldplay.MKBoundControl3 = Nothing
@@ -7396,12 +8058,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_sblaster_goldplay.MKBoundControl5 = Nothing
 		Me.lbl_p_sblaster_goldplay.Name = "lbl_p_sblaster_goldplay"
 		Me.lbl_p_sblaster_goldplay.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem208.Text = "Goldplay"
-		ToolTipItem206.LeftIndent = 6
-		ToolTipItem206.Text = "Enable Goldplay emulation."
-		SuperToolTip208.Items.Add(ToolTipTitleItem208)
-		SuperToolTip208.Items.Add(ToolTipItem206)
-		Me.lbl_p_sblaster_goldplay.SuperTip = SuperToolTip208
+		ToolTipTitleItem219.Text = "Goldplay"
+		ToolTipItem217.LeftIndent = 6
+		ToolTipItem217.Text = "Enable Goldplay emulation."
+		SuperToolTip219.Items.Add(ToolTipTitleItem219)
+		SuperToolTip219.Items.Add(ToolTipItem217)
+		Me.lbl_p_sblaster_goldplay.SuperTip = SuperToolTip219
 		Me.lbl_p_sblaster_goldplay.TabIndex = 30
 		Me.lbl_p_sblaster_goldplay.Text = "Goldplay:"
 		'
@@ -7409,7 +8071,7 @@ Partial Class ucr_DOSBox_Config
 		'
 		Me.cmb_p_sblaster_hardwarebase.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_sblaster_hardwarebase", True))
 		Me.cmb_p_sblaster_hardwarebase.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_sblaster_hardwarebase", True))
-		Me.cmb_p_sblaster_hardwarebase.Location = New System.Drawing.Point(123, 26)
+		Me.cmb_p_sblaster_hardwarebase.Location = New System.Drawing.Point(123, 49)
 		Me.cmb_p_sblaster_hardwarebase.MKBoundLabel = Me.lbl_p_sblaster_hardwarebase
 		Me.cmb_p_sblaster_hardwarebase.MKEditValue_Compare = Nothing
 		Me.cmb_p_sblaster_hardwarebase.Name = "cmb_p_sblaster_hardwarebase"
@@ -7423,19 +8085,19 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_p_sblaster_hardwarebase.Properties.ShowHeader = False
 		Me.cmb_p_sblaster_hardwarebase.Properties.ValueMember = "value"
 		Me.cmb_p_sblaster_hardwarebase.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem211.Text = "Hardware Base"
-		ToolTipItem209.LeftIndent = 6
-		ToolTipItem209.Text = "Base address of the real hardware soundblaster."
-		SuperToolTip211.Items.Add(ToolTipTitleItem211)
-		SuperToolTip211.Items.Add(ToolTipItem209)
-		Me.cmb_p_sblaster_hardwarebase.SuperTip = SuperToolTip211
+		ToolTipTitleItem222.Text = "Hardware Base"
+		ToolTipItem220.LeftIndent = 6
+		ToolTipItem220.Text = "Base address of the real hardware soundblaster."
+		SuperToolTip222.Items.Add(ToolTipTitleItem222)
+		SuperToolTip222.Items.Add(ToolTipItem220)
+		Me.cmb_p_sblaster_hardwarebase.SuperTip = SuperToolTip222
 		Me.cmb_p_sblaster_hardwarebase.TabIndex = 2
 		'
 		'lbl_p_sblaster_hardwarebase
 		'
 		Me.lbl_p_sblaster_hardwarebase.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
 		Me.lbl_p_sblaster_hardwarebase.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_sblaster_hardwarebase.Location = New System.Drawing.Point(3, 26)
+		Me.lbl_p_sblaster_hardwarebase.Location = New System.Drawing.Point(3, 49)
 		Me.lbl_p_sblaster_hardwarebase.MKBoundControl1 = Me.cmb_p_sblaster_hardwarebase
 		Me.lbl_p_sblaster_hardwarebase.MKBoundControl2 = Nothing
 		Me.lbl_p_sblaster_hardwarebase.MKBoundControl3 = Nothing
@@ -7443,12 +8105,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_sblaster_hardwarebase.MKBoundControl5 = Nothing
 		Me.lbl_p_sblaster_hardwarebase.Name = "lbl_p_sblaster_hardwarebase"
 		Me.lbl_p_sblaster_hardwarebase.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem210.Text = "Hardware Base"
-		ToolTipItem208.LeftIndent = 6
-		ToolTipItem208.Text = "Base address of the real hardware soundblaster."
-		SuperToolTip210.Items.Add(ToolTipTitleItem210)
-		SuperToolTip210.Items.Add(ToolTipItem208)
-		Me.lbl_p_sblaster_hardwarebase.SuperTip = SuperToolTip210
+		ToolTipTitleItem221.Text = "Hardware Base"
+		ToolTipItem219.LeftIndent = 6
+		ToolTipItem219.Text = "Base address of the real hardware soundblaster."
+		SuperToolTip221.Items.Add(ToolTipTitleItem221)
+		SuperToolTip221.Items.Add(ToolTipItem219)
+		Me.lbl_p_sblaster_hardwarebase.SuperTip = SuperToolTip221
 		Me.lbl_p_sblaster_hardwarebase.TabIndex = 29
 		Me.lbl_p_sblaster_hardwarebase.Text = "Hardware Base:"
 		'
@@ -7482,13 +8144,13 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_p_sblaster_oplmode.Properties.ShowHeader = False
 		Me.cmb_p_sblaster_oplmode.Properties.ValueMember = "value"
 		Me.cmb_p_sblaster_oplmode.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem213.Text = "OPL Mode"
-		ToolTipItem211.LeftIndent = 6
-		ToolTipItem211.Text = "Some patches introduce new types of OPL emulation. This setting overrides the (st" &
+		ToolTipTitleItem224.Text = "OPL Mode"
+		ToolTipItem222.LeftIndent = 6
+		ToolTipItem222.Text = "Some patches introduce new types of OPL emulation. This setting overrides the (st" &
 		"andard) OPL Mode setting."
-		SuperToolTip213.Items.Add(ToolTipTitleItem213)
-		SuperToolTip213.Items.Add(ToolTipItem211)
-		Me.cmb_p_sblaster_oplmode.SuperTip = SuperToolTip213
+		SuperToolTip224.Items.Add(ToolTipTitleItem224)
+		SuperToolTip224.Items.Add(ToolTipItem222)
+		Me.cmb_p_sblaster_oplmode.SuperTip = SuperToolTip224
 		Me.cmb_p_sblaster_oplmode.TabIndex = 0
 		'
 		'lbl_p_sblaster_oplmode
@@ -7503,13 +8165,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_sblaster_oplmode.MKBoundControl5 = Nothing
 		Me.lbl_p_sblaster_oplmode.Name = "lbl_p_sblaster_oplmode"
 		Me.lbl_p_sblaster_oplmode.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem212.Text = "OPL Mode"
-		ToolTipItem210.LeftIndent = 6
-		ToolTipItem210.Text = "Some patches introduce new types of OPL emulation. This setting overrides the (st" &
+		ToolTipTitleItem223.Text = "OPL Mode"
+		ToolTipItem221.LeftIndent = 6
+		ToolTipItem221.Text = "Some patches introduce new types of OPL emulation. This setting overrides the (st" &
 		"andard) OPL Mode setting."
-		SuperToolTip212.Items.Add(ToolTipTitleItem212)
-		SuperToolTip212.Items.Add(ToolTipItem210)
-		Me.lbl_p_sblaster_oplmode.SuperTip = SuperToolTip212
+		SuperToolTip223.Items.Add(ToolTipTitleItem223)
+		SuperToolTip223.Items.Add(ToolTipItem221)
+		Me.lbl_p_sblaster_oplmode.SuperTip = SuperToolTip223
 		Me.lbl_p_sblaster_oplmode.TabIndex = 29
 		Me.lbl_p_sblaster_oplmode.Text = "OPL Mode:"
 		'
@@ -7537,12 +8199,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_p_sblaster_sbtype.Properties.ShowFooter = False
 		Me.cmb_p_sblaster_sbtype.Properties.ShowHeader = False
 		Me.cmb_p_sblaster_sbtype.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem214.Text = "SB Type"
-		ToolTipItem212.LeftIndent = 6
-		ToolTipItem212.Text = "Type of Sound Blaster to emulate. gb is Gameblaster."
-		SuperToolTip214.Items.Add(ToolTipTitleItem214)
-		SuperToolTip214.Items.Add(ToolTipItem212)
-		Me.cmb_p_sblaster_sbtype.SuperTip = SuperToolTip214
+		ToolTipTitleItem225.Text = "SB Type"
+		ToolTipItem223.LeftIndent = 6
+		ToolTipItem223.Text = "Type of Sound Blaster to emulate. gb is Gameblaster."
+		SuperToolTip225.Items.Add(ToolTipTitleItem225)
+		SuperToolTip225.Items.Add(ToolTipItem223)
+		Me.cmb_p_sblaster_sbtype.SuperTip = SuperToolTip225
 		Me.cmb_p_sblaster_sbtype.TabIndex = 1
 		Me.cmb_p_sblaster_sbtype.Visible = False
 		'
@@ -7558,232 +8220,108 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_sblaster_sbtype.MKBoundControl5 = Nothing
 		Me.lbl_p_sblaster_sbtype.Name = "lbl_p_sblaster_sbtype"
 		Me.lbl_p_sblaster_sbtype.Size = New System.Drawing.Size(97, 20)
-		ToolTipTitleItem215.Text = "SB Type"
-		ToolTipItem213.LeftIndent = 6
-		ToolTipItem213.Text = "Type of Sound Blaster to emulate. gb is Gameblaster."
-		SuperToolTip215.Items.Add(ToolTipTitleItem215)
-		SuperToolTip215.Items.Add(ToolTipItem213)
-		Me.lbl_p_sblaster_sbtype.SuperTip = SuperToolTip215
+		ToolTipTitleItem226.Text = "SB Type"
+		ToolTipItem224.LeftIndent = 6
+		ToolTipItem224.Text = "Type of Sound Blaster to emulate. gb is Gameblaster."
+		SuperToolTip226.Items.Add(ToolTipTitleItem226)
+		SuperToolTip226.Items.Add(ToolTipItem224)
+		Me.lbl_p_sblaster_sbtype.SuperTip = SuperToolTip226
 		Me.lbl_p_sblaster_sbtype.TabIndex = 29
 		Me.lbl_p_sblaster_sbtype.Text = "SB Type:"
 		Me.lbl_p_sblaster_sbtype.Visible = False
 		'
 		'tpg_MIDI_Patches
 		'
-		Me.tpg_MIDI_Patches.Controls.Add(Me.spn_p_midi_mt32_partials)
-		Me.tpg_MIDI_Patches.Controls.Add(Me.spn_p_midi_mt32_reverb_level)
-		Me.tpg_MIDI_Patches.Controls.Add(Me.spn_p_midi_mt32_reverb_time)
-		Me.tpg_MIDI_Patches.Controls.Add(Me.cmb_p_midi_mt32_reverb_mode)
-		Me.tpg_MIDI_Patches.Controls.Add(Me.cmb_p_midi_mt32_dac)
-		Me.tpg_MIDI_Patches.Controls.Add(Me.chb_p_midi_mt32_thread)
-		Me.tpg_MIDI_Patches.Controls.Add(Me.chb_p_midi_mt32_verbose)
-		Me.tpg_MIDI_Patches.Controls.Add(Me.chb_p_midi_mt32_reverse_stereo)
-		Me.tpg_MIDI_Patches.Controls.Add(Me.lbl_p_midi_mt32_partials)
-		Me.tpg_MIDI_Patches.Controls.Add(Me.lbl_p_midi_mt32_reverb_level)
-		Me.tpg_MIDI_Patches.Controls.Add(Me.lbl_p_midi_mt32_reverb_time)
-		Me.tpg_MIDI_Patches.Controls.Add(Me.lbl_p_midi_mt32_reverb_mode)
-		Me.tpg_MIDI_Patches.Controls.Add(Me.lbl_p_midi_mt32_dac)
-		Me.tpg_MIDI_Patches.Controls.Add(Me.lbl_p_midi_mt32_thread)
-		Me.tpg_MIDI_Patches.Controls.Add(Me.lbl_p_midi_mt32_verbose)
-		Me.tpg_MIDI_Patches.Controls.Add(Me.lbl_p_midi_mt32_reverse_stereo)
+		Me.tpg_MIDI_Patches.AllowTouchScroll = True
+		Me.tpg_MIDI_Patches.AutoScroll = True
+		Me.tpg_MIDI_Patches.Controls.Add(Me.tcl_p_midi)
 		Me.tpg_MIDI_Patches.Controls.Add(Me.txb_p_midi_midiconfig)
 		Me.tpg_MIDI_Patches.Controls.Add(Me.lbl_p_midi_midiconfig)
 		Me.tpg_MIDI_Patches.Controls.Add(Me.cmb_p_midi_mididevice)
 		Me.tpg_MIDI_Patches.Controls.Add(Me.lbl_p_midi_mididevice)
 		Me.tpg_MIDI_Patches.Name = "tpg_MIDI_Patches"
-		Me.tpg_MIDI_Patches.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_MIDI_Patches.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_MIDI_Patches.Text = "MIDI (Patches)"
 		'
-		'spn_p_midi_mt32_partials
+		'tcl_p_midi
 		'
-		Me.spn_p_midi_mt32_partials.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_partials", True))
-		Me.spn_p_midi_mt32_partials.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_DOSBox_Configs, "p_midi_mt32_partials", True))
-		Me.spn_p_midi_mt32_partials.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-		Me.spn_p_midi_mt32_partials.Enabled = False
-		Me.spn_p_midi_mt32_partials.Location = New System.Drawing.Point(123, 210)
-		Me.spn_p_midi_mt32_partials.MKBoundLabel = Me.lbl_p_midi_mt32_partials
-		Me.spn_p_midi_mt32_partials.MKEditValue_Compare = Nothing
-		Me.spn_p_midi_mt32_partials.Name = "spn_p_midi_mt32_partials"
-		Me.spn_p_midi_mt32_partials.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-		Me.spn_p_midi_mt32_partials.Properties.IsFloatValue = False
-		Me.spn_p_midi_mt32_partials.Properties.Mask.EditMask = "N00"
-		Me.spn_p_midi_mt32_partials.Properties.MaxValue = New Decimal(New Integer() {256, 0, 0, 0})
-		Me.spn_p_midi_mt32_partials.Size = New System.Drawing.Size(54, 20)
-		ToolTipTitleItem217.Text = "MT-32 Partials"
-		ToolTipItem215.LeftIndent = 6
-		ToolTipItem215.Text = "MT-32 max partials allowed"
-		SuperToolTip217.Items.Add(ToolTipTitleItem217)
-		SuperToolTip217.Items.Add(ToolTipItem215)
-		Me.spn_p_midi_mt32_partials.SuperTip = SuperToolTip217
-		Me.spn_p_midi_mt32_partials.TabIndex = 9
+		Me.tcl_p_midi.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.tcl_p_midi.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.tcl_p_midi.BorderStylePage = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.tcl_p_midi.Location = New System.Drawing.Point(3, 50)
+		Me.tcl_p_midi.MinimumSize = New System.Drawing.Size(498, 329)
+		Me.tcl_p_midi.Name = "tcl_p_midi"
+		Me.tcl_p_midi.SelectedTabPage = Me.tpg_p_midi_mt32
+		Me.tcl_p_midi.Size = New System.Drawing.Size(540, 329)
+		Me.tcl_p_midi.TabIndex = 86
+		Me.tcl_p_midi.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.tpg_p_midi_mt32, Me.tpg_p_midi_fluidsynth})
 		'
-		'lbl_p_midi_mt32_partials
+		'tpg_p_midi_mt32
 		'
-		Me.lbl_p_midi_mt32_partials.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_p_midi_mt32_partials.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_midi_mt32_partials.Enabled = False
-		Me.lbl_p_midi_mt32_partials.Location = New System.Drawing.Point(3, 210)
-		Me.lbl_p_midi_mt32_partials.MKBoundControl1 = Me.spn_p_midi_mt32_partials
-		Me.lbl_p_midi_mt32_partials.MKBoundControl2 = Nothing
-		Me.lbl_p_midi_mt32_partials.MKBoundControl3 = Nothing
-		Me.lbl_p_midi_mt32_partials.MKBoundControl4 = Nothing
-		Me.lbl_p_midi_mt32_partials.MKBoundControl5 = Nothing
-		Me.lbl_p_midi_mt32_partials.Name = "lbl_p_midi_mt32_partials"
-		Me.lbl_p_midi_mt32_partials.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem216.Text = "MT-32 Partials"
-		ToolTipItem214.LeftIndent = 6
-		ToolTipItem214.Text = "MT-32 max partials allowed"
-		SuperToolTip216.Items.Add(ToolTipTitleItem216)
-		SuperToolTip216.Items.Add(ToolTipItem214)
-		Me.lbl_p_midi_mt32_partials.SuperTip = SuperToolTip216
-		Me.lbl_p_midi_mt32_partials.TabIndex = 34
-		Me.lbl_p_midi_mt32_partials.Text = "MT-32 Partials:"
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_dac)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.chb_p_midi_mt32_niceampramp)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_reverse_stereo)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_niceampramp)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_verbose)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.cmb_p_midi_mt32_src_quality)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_thread)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_src_quality)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_reverb_mode)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.cmb_p_midi_mt32_rate)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_reverb_time)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_rate)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_reverb_level)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_prebuffer_ms)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_partials)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.spn_p_midi_mt32_prebuffer)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.chb_p_midi_mt32_reverse_stereo)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_chunk_ms)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.chb_p_midi_mt32_verbose)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.spn_p_midi_mt32_chunk)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.chb_p_midi_mt32_thread)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.cmb_p_midi_mt32_analog)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.cmb_p_midi_mt32_dac)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_analog)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.cmb_p_midi_mt32_reverb_mode)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_prebuffer)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.spn_p_midi_mt32_reverb_time)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_chunk)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.spn_p_midi_mt32_reverb_level)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.txb_p_midi_mt32_romdir)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.cmb_p_midi_mt32_partials)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_romdir)
+		Me.tpg_p_midi_mt32.Controls.Add(Me.btn_p_midi_mt32_romdir)
+		Me.tpg_p_midi_mt32.Name = "tpg_p_midi_mt32"
+		Me.tpg_p_midi_mt32.Size = New System.Drawing.Size(534, 301)
+		Me.tpg_p_midi_mt32.Text = "MT-32 Settings"
 		'
-		'spn_p_midi_mt32_reverb_level
+		'lbl_p_midi_mt32_dac
 		'
-		Me.spn_p_midi_mt32_reverb_level.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_reverb_level", True))
-		Me.spn_p_midi_mt32_reverb_level.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_reverb_level", True))
-		Me.spn_p_midi_mt32_reverb_level.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-		Me.spn_p_midi_mt32_reverb_level.Enabled = False
-		Me.spn_p_midi_mt32_reverb_level.Location = New System.Drawing.Point(123, 187)
-		Me.spn_p_midi_mt32_reverb_level.MKBoundLabel = Me.lbl_p_midi_mt32_reverb_level
-		Me.spn_p_midi_mt32_reverb_level.MKEditValue_Compare = Nothing
-		Me.spn_p_midi_mt32_reverb_level.Name = "spn_p_midi_mt32_reverb_level"
-		Me.spn_p_midi_mt32_reverb_level.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-		Me.spn_p_midi_mt32_reverb_level.Properties.IsFloatValue = False
-		Me.spn_p_midi_mt32_reverb_level.Properties.Mask.EditMask = "N00"
-		Me.spn_p_midi_mt32_reverb_level.Properties.MaxValue = New Decimal(New Integer() {7, 0, 0, 0})
-		Me.spn_p_midi_mt32_reverb_level.Size = New System.Drawing.Size(54, 20)
-		ToolTipTitleItem219.Text = "MT-32 Reverb Level"
-		SuperToolTip219.Items.Add(ToolTipTitleItem219)
-		Me.spn_p_midi_mt32_reverb_level.SuperTip = SuperToolTip219
-		Me.spn_p_midi_mt32_reverb_level.TabIndex = 8
-		'
-		'lbl_p_midi_mt32_reverb_level
-		'
-		Me.lbl_p_midi_mt32_reverb_level.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_p_midi_mt32_reverb_level.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_midi_mt32_reverb_level.Enabled = False
-		Me.lbl_p_midi_mt32_reverb_level.Location = New System.Drawing.Point(3, 187)
-		Me.lbl_p_midi_mt32_reverb_level.MKBoundControl1 = Me.spn_p_midi_mt32_reverb_level
-		Me.lbl_p_midi_mt32_reverb_level.MKBoundControl2 = Nothing
-		Me.lbl_p_midi_mt32_reverb_level.MKBoundControl3 = Nothing
-		Me.lbl_p_midi_mt32_reverb_level.MKBoundControl4 = Nothing
-		Me.lbl_p_midi_mt32_reverb_level.MKBoundControl5 = Nothing
-		Me.lbl_p_midi_mt32_reverb_level.Name = "lbl_p_midi_mt32_reverb_level"
-		Me.lbl_p_midi_mt32_reverb_level.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem218.Text = "MT-32 Reverb Level"
-		SuperToolTip218.Items.Add(ToolTipTitleItem218)
-		Me.lbl_p_midi_mt32_reverb_level.SuperTip = SuperToolTip218
-		Me.lbl_p_midi_mt32_reverb_level.TabIndex = 34
-		Me.lbl_p_midi_mt32_reverb_level.Text = "MT-32 Reverb Level:"
-		'
-		'spn_p_midi_mt32_reverb_time
-		'
-		Me.spn_p_midi_mt32_reverb_time.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_reverb_time", True))
-		Me.spn_p_midi_mt32_reverb_time.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_reverb_time", True))
-		Me.spn_p_midi_mt32_reverb_time.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-		Me.spn_p_midi_mt32_reverb_time.Enabled = False
-		Me.spn_p_midi_mt32_reverb_time.Location = New System.Drawing.Point(123, 164)
-		Me.spn_p_midi_mt32_reverb_time.MKBoundLabel = Me.lbl_p_midi_mt32_reverb_time
-		Me.spn_p_midi_mt32_reverb_time.MKEditValue_Compare = Nothing
-		Me.spn_p_midi_mt32_reverb_time.Name = "spn_p_midi_mt32_reverb_time"
-		Me.spn_p_midi_mt32_reverb_time.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-		Me.spn_p_midi_mt32_reverb_time.Properties.IsFloatValue = False
-		Me.spn_p_midi_mt32_reverb_time.Properties.Mask.EditMask = "N00"
-		Me.spn_p_midi_mt32_reverb_time.Properties.MaxValue = New Decimal(New Integer() {7, 0, 0, 0})
-		Me.spn_p_midi_mt32_reverb_time.Size = New System.Drawing.Size(54, 20)
-		ToolTipTitleItem221.Text = "MT-32 Reverb Time"
-		ToolTipItem217.LeftIndent = 6
-		ToolTipItem217.Text = "MT-32 reverb decaying time."
-		SuperToolTip221.Items.Add(ToolTipTitleItem221)
-		SuperToolTip221.Items.Add(ToolTipItem217)
-		Me.spn_p_midi_mt32_reverb_time.SuperTip = SuperToolTip221
-		Me.spn_p_midi_mt32_reverb_time.TabIndex = 7
-		'
-		'lbl_p_midi_mt32_reverb_time
-		'
-		Me.lbl_p_midi_mt32_reverb_time.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_p_midi_mt32_reverb_time.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_midi_mt32_reverb_time.Enabled = False
-		Me.lbl_p_midi_mt32_reverb_time.Location = New System.Drawing.Point(3, 164)
-		Me.lbl_p_midi_mt32_reverb_time.MKBoundControl1 = Me.spn_p_midi_mt32_reverb_time
-		Me.lbl_p_midi_mt32_reverb_time.MKBoundControl2 = Nothing
-		Me.lbl_p_midi_mt32_reverb_time.MKBoundControl3 = Nothing
-		Me.lbl_p_midi_mt32_reverb_time.MKBoundControl4 = Nothing
-		Me.lbl_p_midi_mt32_reverb_time.MKBoundControl5 = Nothing
-		Me.lbl_p_midi_mt32_reverb_time.Name = "lbl_p_midi_mt32_reverb_time"
-		Me.lbl_p_midi_mt32_reverb_time.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem220.Text = "MT-32 Reverb Time"
-		ToolTipItem216.LeftIndent = 6
-		ToolTipItem216.Text = "MT-32 reverb decaying time."
-		SuperToolTip220.Items.Add(ToolTipTitleItem220)
-		SuperToolTip220.Items.Add(ToolTipItem216)
-		Me.lbl_p_midi_mt32_reverb_time.SuperTip = SuperToolTip220
-		Me.lbl_p_midi_mt32_reverb_time.TabIndex = 34
-		Me.lbl_p_midi_mt32_reverb_time.Text = "MT-32 Reverb Time:"
-		'
-		'cmb_p_midi_mt32_reverb_mode
-		'
-		Me.cmb_p_midi_mt32_reverb_mode.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_reverb_mode", True))
-		Me.cmb_p_midi_mt32_reverb_mode.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_reverb_mode", True))
-		Me.cmb_p_midi_mt32_reverb_mode.Enabled = False
-		Me.cmb_p_midi_mt32_reverb_mode.Location = New System.Drawing.Point(123, 141)
-		Me.cmb_p_midi_mt32_reverb_mode.MKBoundLabel = Me.lbl_p_midi_mt32_reverb_mode
-		Me.cmb_p_midi_mt32_reverb_mode.MKEditValue_Compare = Nothing
-		Me.cmb_p_midi_mt32_reverb_mode.Name = "cmb_p_midi_mt32_reverb_mode"
-		Me.cmb_p_midi_mt32_reverb_mode.Properties.AllowFocused = False
-		Me.cmb_p_midi_mt32_reverb_mode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-		Me.cmb_p_midi_mt32_reverb_mode.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("value", "value", 28, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
-		Me.cmb_p_midi_mt32_reverb_mode.Properties.DataSource = Me.BTA_p_midi_mt32_reverb_mode
-		Me.cmb_p_midi_mt32_reverb_mode.Properties.DisplayMember = "value"
-		Me.cmb_p_midi_mt32_reverb_mode.Properties.NullText = ""
-		Me.cmb_p_midi_mt32_reverb_mode.Properties.ShowFooter = False
-		Me.cmb_p_midi_mt32_reverb_mode.Properties.ShowHeader = False
-		Me.cmb_p_midi_mt32_reverb_mode.Properties.ValueMember = "value"
-		Me.cmb_p_midi_mt32_reverb_mode.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem223.Text = "MT-32 Reverb Mode"
-		SuperToolTip223.Items.Add(ToolTipTitleItem223)
-		Me.cmb_p_midi_mt32_reverb_mode.SuperTip = SuperToolTip223
-		Me.cmb_p_midi_mt32_reverb_mode.TabIndex = 6
-		'
-		'lbl_p_midi_mt32_reverb_mode
-		'
-		Me.lbl_p_midi_mt32_reverb_mode.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_p_midi_mt32_reverb_mode.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_midi_mt32_reverb_mode.Enabled = False
-		Me.lbl_p_midi_mt32_reverb_mode.Location = New System.Drawing.Point(3, 141)
-		Me.lbl_p_midi_mt32_reverb_mode.MKBoundControl1 = Me.cmb_p_midi_mt32_reverb_mode
-		Me.lbl_p_midi_mt32_reverb_mode.MKBoundControl2 = Nothing
-		Me.lbl_p_midi_mt32_reverb_mode.MKBoundControl3 = Nothing
-		Me.lbl_p_midi_mt32_reverb_mode.MKBoundControl4 = Nothing
-		Me.lbl_p_midi_mt32_reverb_mode.MKBoundControl5 = Nothing
-		Me.lbl_p_midi_mt32_reverb_mode.Name = "lbl_p_midi_mt32_reverb_mode"
-		Me.lbl_p_midi_mt32_reverb_mode.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem222.Text = "MT-32 Reverb Mode"
-		SuperToolTip222.Items.Add(ToolTipTitleItem222)
-		Me.lbl_p_midi_mt32_reverb_mode.SuperTip = SuperToolTip222
-		Me.lbl_p_midi_mt32_reverb_mode.TabIndex = 34
-		Me.lbl_p_midi_mt32_reverb_mode.Text = "MT-32 Reverb Mode:"
-		'
-		'BTA_p_midi_mt32_reverb_mode
-		'
-		Me.BTA_p_midi_mt32_reverb_mode.AllowDelete = True
-		Me.BTA_p_midi_mt32_reverb_mode.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_p_midi_mt32_reverb_mode.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
-		Me.BTA_p_midi_mt32_reverb_mode.Connection = Nothing
-		Me.BTA_p_midi_mt32_reverb_mode.DSStream = CType(resources.GetObject("BTA_p_midi_mt32_reverb_mode.DSStream"), System.IO.MemoryStream)
-		Me.BTA_p_midi_mt32_reverb_mode.FillMethod = MKNetLib.FillMethod.ValueList
-		Me.BTA_p_midi_mt32_reverb_mode.FillString = "auto;0;1;2;3"
-		Me.BTA_p_midi_mt32_reverb_mode.Position = 0
-		Me.BTA_p_midi_mt32_reverb_mode.Transaction = Nothing
-		Me.BTA_p_midi_mt32_reverb_mode.UpdateTablesStream = CType(resources.GetObject("BTA_p_midi_mt32_reverb_mode.UpdateTablesStream"), System.Collections.Generic.List(Of String))
+		Me.lbl_p_midi_mt32_dac.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_mt32_dac.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_mt32_dac.Location = New System.Drawing.Point(3, 26)
+		Me.lbl_p_midi_mt32_dac.MKBoundControl1 = Me.cmb_p_midi_mt32_dac
+		Me.lbl_p_midi_mt32_dac.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_mt32_dac.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_mt32_dac.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_mt32_dac.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_mt32_dac.Name = "lbl_p_midi_mt32_dac"
+		Me.lbl_p_midi_mt32_dac.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem228.Text = "MT-32 DAC"
+		ToolTipItem226.LeftIndent = 6
+		ToolTipItem226.Text = resources.GetString("ToolTipItem226.Text")
+		SuperToolTip228.Items.Add(ToolTipTitleItem228)
+		SuperToolTip228.Items.Add(ToolTipItem226)
+		Me.lbl_p_midi_mt32_dac.SuperTip = SuperToolTip228
+		Me.lbl_p_midi_mt32_dac.TabIndex = 34
+		Me.lbl_p_midi_mt32_dac.Text = "MT-32 DAC:"
 		'
 		'cmb_p_midi_mt32_dac
 		'
 		Me.cmb_p_midi_mt32_dac.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_dac", True))
 		Me.cmb_p_midi_mt32_dac.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_dac", True))
-		Me.cmb_p_midi_mt32_dac.Enabled = False
-		Me.cmb_p_midi_mt32_dac.Location = New System.Drawing.Point(123, 118)
+		Me.cmb_p_midi_mt32_dac.Location = New System.Drawing.Point(123, 26)
 		Me.cmb_p_midi_mt32_dac.MKBoundLabel = Me.lbl_p_midi_mt32_dac
 		Me.cmb_p_midi_mt32_dac.MKEditValue_Compare = Nothing
 		Me.cmb_p_midi_mt32_dac.Name = "cmb_p_midi_mt32_dac"
@@ -7797,35 +8335,13 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_p_midi_mt32_dac.Properties.ShowHeader = False
 		Me.cmb_p_midi_mt32_dac.Properties.ValueMember = "value"
 		Me.cmb_p_midi_mt32_dac.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem225.Text = "MT-32 DAC"
-		ToolTipItem219.LeftIndent = 6
-		ToolTipItem219.Text = resources.GetString("ToolTipItem219.Text")
-		SuperToolTip225.Items.Add(ToolTipTitleItem225)
-		SuperToolTip225.Items.Add(ToolTipItem219)
-		Me.cmb_p_midi_mt32_dac.SuperTip = SuperToolTip225
+		ToolTipTitleItem227.Text = "MT-32 DAC"
+		ToolTipItem225.LeftIndent = 6
+		ToolTipItem225.Text = resources.GetString("ToolTipItem225.Text")
+		SuperToolTip227.Items.Add(ToolTipTitleItem227)
+		SuperToolTip227.Items.Add(ToolTipItem225)
+		Me.cmb_p_midi_mt32_dac.SuperTip = SuperToolTip227
 		Me.cmb_p_midi_mt32_dac.TabIndex = 5
-		'
-		'lbl_p_midi_mt32_dac
-		'
-		Me.lbl_p_midi_mt32_dac.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_p_midi_mt32_dac.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_midi_mt32_dac.Enabled = False
-		Me.lbl_p_midi_mt32_dac.Location = New System.Drawing.Point(3, 118)
-		Me.lbl_p_midi_mt32_dac.MKBoundControl1 = Me.cmb_p_midi_mt32_dac
-		Me.lbl_p_midi_mt32_dac.MKBoundControl2 = Nothing
-		Me.lbl_p_midi_mt32_dac.MKBoundControl3 = Nothing
-		Me.lbl_p_midi_mt32_dac.MKBoundControl4 = Nothing
-		Me.lbl_p_midi_mt32_dac.MKBoundControl5 = Nothing
-		Me.lbl_p_midi_mt32_dac.Name = "lbl_p_midi_mt32_dac"
-		Me.lbl_p_midi_mt32_dac.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem224.Text = "MT-32 DAC"
-		ToolTipItem218.LeftIndent = 6
-		ToolTipItem218.Text = resources.GetString("ToolTipItem218.Text")
-		SuperToolTip224.Items.Add(ToolTipTitleItem224)
-		SuperToolTip224.Items.Add(ToolTipItem218)
-		Me.lbl_p_midi_mt32_dac.SuperTip = SuperToolTip224
-		Me.lbl_p_midi_mt32_dac.TabIndex = 34
-		Me.lbl_p_midi_mt32_dac.Text = "MT-32 DAC:"
 		'
 		'BTA_p_midi_mt32_dac
 		'
@@ -7839,113 +8355,50 @@ Partial Class ucr_DOSBox_Config
 		Me.BTA_p_midi_mt32_dac.Transaction = Nothing
 		Me.BTA_p_midi_mt32_dac.UpdateTablesStream = CType(resources.GetObject("BTA_p_midi_mt32_dac.UpdateTablesStream"), System.Collections.Generic.List(Of String))
 		'
-		'chb_p_midi_mt32_thread
+		'chb_p_midi_mt32_niceampramp
 		'
-		Me.chb_p_midi_mt32_thread.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_thread", True))
-		Me.chb_p_midi_mt32_thread.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_thread", True))
-		Me.chb_p_midi_mt32_thread.Enabled = False
-		Me.chb_p_midi_mt32_thread.Location = New System.Drawing.Point(123, 95)
-		Me.chb_p_midi_mt32_thread.MKBoundLabel = Me.lbl_p_midi_mt32_thread
-		Me.chb_p_midi_mt32_thread.MKEditValue_Compare = Nothing
-		Me.chb_p_midi_mt32_thread.Name = "chb_p_midi_mt32_thread"
-		Me.chb_p_midi_mt32_thread.Properties.Caption = ""
-		Me.chb_p_midi_mt32_thread.Size = New System.Drawing.Size(24, 19)
-		ToolTipTitleItem227.Text = "MT-32 Thread"
-		ToolTipItem221.LeftIndent = 6
-		ToolTipItem221.Text = "Enable MT-32 rendering in separate thread."
-		SuperToolTip227.Items.Add(ToolTipTitleItem227)
-		SuperToolTip227.Items.Add(ToolTipItem221)
-		Me.chb_p_midi_mt32_thread.SuperTip = SuperToolTip227
-		Me.chb_p_midi_mt32_thread.TabIndex = 4
+		Me.chb_p_midi_mt32_niceampramp.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_niceampramp", True))
+		Me.chb_p_midi_mt32_niceampramp.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_niceampramp", True))
+		Me.chb_p_midi_mt32_niceampramp.Location = New System.Drawing.Point(123, 118)
+		Me.chb_p_midi_mt32_niceampramp.MKBoundLabel = Me.lbl_p_midi_mt32_niceampramp
+		Me.chb_p_midi_mt32_niceampramp.MKEditValue_Compare = Nothing
+		Me.chb_p_midi_mt32_niceampramp.Name = "chb_p_midi_mt32_niceampramp"
+		Me.chb_p_midi_mt32_niceampramp.Properties.Caption = ""
+		Me.chb_p_midi_mt32_niceampramp.Size = New System.Drawing.Size(24, 19)
+		ToolTipTitleItem230.Text = "MT-32 Nice Amp Ramp"
+		ToolTipItem228.LeftIndent = 6
+		ToolTipItem228.Text = resources.GetString("ToolTipItem228.Text")
+		SuperToolTip230.Items.Add(ToolTipTitleItem230)
+		SuperToolTip230.Items.Add(ToolTipItem228)
+		Me.chb_p_midi_mt32_niceampramp.SuperTip = SuperToolTip230
+		Me.chb_p_midi_mt32_niceampramp.TabIndex = 84
 		'
-		'lbl_p_midi_mt32_thread
+		'lbl_p_midi_mt32_niceampramp
 		'
-		Me.lbl_p_midi_mt32_thread.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_p_midi_mt32_thread.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_midi_mt32_thread.Enabled = False
-		Me.lbl_p_midi_mt32_thread.Location = New System.Drawing.Point(3, 95)
-		Me.lbl_p_midi_mt32_thread.MKBoundControl1 = Me.chb_p_midi_mt32_thread
-		Me.lbl_p_midi_mt32_thread.MKBoundControl2 = Nothing
-		Me.lbl_p_midi_mt32_thread.MKBoundControl3 = Nothing
-		Me.lbl_p_midi_mt32_thread.MKBoundControl4 = Nothing
-		Me.lbl_p_midi_mt32_thread.MKBoundControl5 = Nothing
-		Me.lbl_p_midi_mt32_thread.Name = "lbl_p_midi_mt32_thread"
-		Me.lbl_p_midi_mt32_thread.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem226.Text = "MT-32 Thread"
-		ToolTipItem220.LeftIndent = 6
-		ToolTipItem220.Text = "Enable MT-32 rendering in separate thread."
-		SuperToolTip226.Items.Add(ToolTipTitleItem226)
-		SuperToolTip226.Items.Add(ToolTipItem220)
-		Me.lbl_p_midi_mt32_thread.SuperTip = SuperToolTip226
-		Me.lbl_p_midi_mt32_thread.TabIndex = 34
-		Me.lbl_p_midi_mt32_thread.Text = "MT-32 Thread:"
-		'
-		'chb_p_midi_mt32_verbose
-		'
-		Me.chb_p_midi_mt32_verbose.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_verbose", True))
-		Me.chb_p_midi_mt32_verbose.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_verbose", True))
-		Me.chb_p_midi_mt32_verbose.Enabled = False
-		Me.chb_p_midi_mt32_verbose.Location = New System.Drawing.Point(123, 72)
-		Me.chb_p_midi_mt32_verbose.MKBoundLabel = Me.lbl_p_midi_mt32_verbose
-		Me.chb_p_midi_mt32_verbose.MKEditValue_Compare = Nothing
-		Me.chb_p_midi_mt32_verbose.Name = "chb_p_midi_mt32_verbose"
-		Me.chb_p_midi_mt32_verbose.Properties.Caption = ""
-		Me.chb_p_midi_mt32_verbose.Size = New System.Drawing.Size(24, 19)
-		ToolTipTitleItem229.Text = "MT-32 Verbose"
-		ToolTipItem223.LeftIndent = 6
-		ToolTipItem223.Text = "Enable MT-32 debug logging."
+		Me.lbl_p_midi_mt32_niceampramp.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_mt32_niceampramp.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_mt32_niceampramp.Location = New System.Drawing.Point(3, 118)
+		Me.lbl_p_midi_mt32_niceampramp.MKBoundControl1 = Me.chb_p_midi_mt32_niceampramp
+		Me.lbl_p_midi_mt32_niceampramp.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_mt32_niceampramp.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_mt32_niceampramp.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_mt32_niceampramp.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_mt32_niceampramp.Name = "lbl_p_midi_mt32_niceampramp"
+		Me.lbl_p_midi_mt32_niceampramp.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem229.Text = "MT-32 Nice Amp Ramp"
+		ToolTipItem227.LeftIndent = 6
+		ToolTipItem227.Text = resources.GetString("ToolTipItem227.Text")
 		SuperToolTip229.Items.Add(ToolTipTitleItem229)
-		SuperToolTip229.Items.Add(ToolTipItem223)
-		Me.chb_p_midi_mt32_verbose.SuperTip = SuperToolTip229
-		Me.chb_p_midi_mt32_verbose.TabIndex = 3
-		'
-		'lbl_p_midi_mt32_verbose
-		'
-		Me.lbl_p_midi_mt32_verbose.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_p_midi_mt32_verbose.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_midi_mt32_verbose.Enabled = False
-		Me.lbl_p_midi_mt32_verbose.Location = New System.Drawing.Point(3, 72)
-		Me.lbl_p_midi_mt32_verbose.MKBoundControl1 = Me.chb_p_midi_mt32_verbose
-		Me.lbl_p_midi_mt32_verbose.MKBoundControl2 = Nothing
-		Me.lbl_p_midi_mt32_verbose.MKBoundControl3 = Nothing
-		Me.lbl_p_midi_mt32_verbose.MKBoundControl4 = Nothing
-		Me.lbl_p_midi_mt32_verbose.MKBoundControl5 = Nothing
-		Me.lbl_p_midi_mt32_verbose.Name = "lbl_p_midi_mt32_verbose"
-		Me.lbl_p_midi_mt32_verbose.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem228.Text = "MT-32 Verbose"
-		ToolTipItem222.LeftIndent = 6
-		ToolTipItem222.Text = "Enable MT-32 debug logging."
-		SuperToolTip228.Items.Add(ToolTipTitleItem228)
-		SuperToolTip228.Items.Add(ToolTipItem222)
-		Me.lbl_p_midi_mt32_verbose.SuperTip = SuperToolTip228
-		Me.lbl_p_midi_mt32_verbose.TabIndex = 34
-		Me.lbl_p_midi_mt32_verbose.Text = "MT-32 Verbose:"
-		'
-		'chb_p_midi_mt32_reverse_stereo
-		'
-		Me.chb_p_midi_mt32_reverse_stereo.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_reverse_stereo", True))
-		Me.chb_p_midi_mt32_reverse_stereo.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_reverse_stereo", True))
-		Me.chb_p_midi_mt32_reverse_stereo.Enabled = False
-		Me.chb_p_midi_mt32_reverse_stereo.Location = New System.Drawing.Point(123, 49)
-		Me.chb_p_midi_mt32_reverse_stereo.MKBoundLabel = Me.lbl_p_midi_mt32_reverse_stereo
-		Me.chb_p_midi_mt32_reverse_stereo.MKEditValue_Compare = Nothing
-		Me.chb_p_midi_mt32_reverse_stereo.Name = "chb_p_midi_mt32_reverse_stereo"
-		Me.chb_p_midi_mt32_reverse_stereo.Properties.Caption = ""
-		Me.chb_p_midi_mt32_reverse_stereo.Size = New System.Drawing.Size(24, 19)
-		ToolTipTitleItem231.Text = "MT-32 Reverse Stereo"
-		ToolTipItem225.LeftIndent = 6
-		ToolTipItem225.Text = "Reverse stereo channels for MT-32 output."
-		SuperToolTip231.Items.Add(ToolTipTitleItem231)
-		SuperToolTip231.Items.Add(ToolTipItem225)
-		Me.chb_p_midi_mt32_reverse_stereo.SuperTip = SuperToolTip231
-		Me.chb_p_midi_mt32_reverse_stereo.TabIndex = 2
+		SuperToolTip229.Items.Add(ToolTipItem227)
+		Me.lbl_p_midi_mt32_niceampramp.SuperTip = SuperToolTip229
+		Me.lbl_p_midi_mt32_niceampramp.TabIndex = 85
+		Me.lbl_p_midi_mt32_niceampramp.Text = "MT-32 Nice Amp Ramp:"
 		'
 		'lbl_p_midi_mt32_reverse_stereo
 		'
 		Me.lbl_p_midi_mt32_reverse_stereo.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
 		Me.lbl_p_midi_mt32_reverse_stereo.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_p_midi_mt32_reverse_stereo.Enabled = False
-		Me.lbl_p_midi_mt32_reverse_stereo.Location = New System.Drawing.Point(3, 49)
+		Me.lbl_p_midi_mt32_reverse_stereo.Location = New System.Drawing.Point(3, 141)
 		Me.lbl_p_midi_mt32_reverse_stereo.MKBoundControl1 = Me.chb_p_midi_mt32_reverse_stereo
 		Me.lbl_p_midi_mt32_reverse_stereo.MKBoundControl2 = Nothing
 		Me.lbl_p_midi_mt32_reverse_stereo.MKBoundControl3 = Nothing
@@ -7953,14 +8406,1552 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_midi_mt32_reverse_stereo.MKBoundControl5 = Nothing
 		Me.lbl_p_midi_mt32_reverse_stereo.Name = "lbl_p_midi_mt32_reverse_stereo"
 		Me.lbl_p_midi_mt32_reverse_stereo.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem230.Text = "MT-32 Reverse Stereo"
-		ToolTipItem224.LeftIndent = 6
-		ToolTipItem224.Text = "Reverse stereo channels for MT-32 output."
-		SuperToolTip230.Items.Add(ToolTipTitleItem230)
-		SuperToolTip230.Items.Add(ToolTipItem224)
-		Me.lbl_p_midi_mt32_reverse_stereo.SuperTip = SuperToolTip230
+		ToolTipTitleItem232.Text = "MT-32 Reverse Stereo"
+		ToolTipItem230.LeftIndent = 6
+		ToolTipItem230.Text = "Reverse stereo channels for MT-32 output."
+		SuperToolTip232.Items.Add(ToolTipTitleItem232)
+		SuperToolTip232.Items.Add(ToolTipItem230)
+		Me.lbl_p_midi_mt32_reverse_stereo.SuperTip = SuperToolTip232
 		Me.lbl_p_midi_mt32_reverse_stereo.TabIndex = 34
 		Me.lbl_p_midi_mt32_reverse_stereo.Text = "MT-32 Reverse Stereo:"
+		'
+		'chb_p_midi_mt32_reverse_stereo
+		'
+		Me.chb_p_midi_mt32_reverse_stereo.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_reverse_stereo", True))
+		Me.chb_p_midi_mt32_reverse_stereo.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_reverse_stereo", True))
+		Me.chb_p_midi_mt32_reverse_stereo.Location = New System.Drawing.Point(123, 141)
+		Me.chb_p_midi_mt32_reverse_stereo.MKBoundLabel = Me.lbl_p_midi_mt32_reverse_stereo
+		Me.chb_p_midi_mt32_reverse_stereo.MKEditValue_Compare = Nothing
+		Me.chb_p_midi_mt32_reverse_stereo.Name = "chb_p_midi_mt32_reverse_stereo"
+		Me.chb_p_midi_mt32_reverse_stereo.Properties.Caption = ""
+		Me.chb_p_midi_mt32_reverse_stereo.Size = New System.Drawing.Size(24, 19)
+		ToolTipTitleItem231.Text = "MT-32 Reverse Stereo"
+		ToolTipItem229.LeftIndent = 6
+		ToolTipItem229.Text = "Reverse stereo channels for MT-32 output."
+		SuperToolTip231.Items.Add(ToolTipTitleItem231)
+		SuperToolTip231.Items.Add(ToolTipItem229)
+		Me.chb_p_midi_mt32_reverse_stereo.SuperTip = SuperToolTip231
+		Me.chb_p_midi_mt32_reverse_stereo.TabIndex = 2
+		'
+		'lbl_p_midi_mt32_verbose
+		'
+		Me.lbl_p_midi_mt32_verbose.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_mt32_verbose.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_mt32_verbose.Location = New System.Drawing.Point(3, 164)
+		Me.lbl_p_midi_mt32_verbose.MKBoundControl1 = Me.chb_p_midi_mt32_verbose
+		Me.lbl_p_midi_mt32_verbose.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_mt32_verbose.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_mt32_verbose.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_mt32_verbose.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_mt32_verbose.Name = "lbl_p_midi_mt32_verbose"
+		Me.lbl_p_midi_mt32_verbose.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem234.Text = "MT-32 Verbose"
+		ToolTipItem232.LeftIndent = 6
+		ToolTipItem232.Text = "Enable MT-32 debug logging."
+		SuperToolTip234.Items.Add(ToolTipTitleItem234)
+		SuperToolTip234.Items.Add(ToolTipItem232)
+		Me.lbl_p_midi_mt32_verbose.SuperTip = SuperToolTip234
+		Me.lbl_p_midi_mt32_verbose.TabIndex = 34
+		Me.lbl_p_midi_mt32_verbose.Text = "MT-32 Verbose:"
+		'
+		'chb_p_midi_mt32_verbose
+		'
+		Me.chb_p_midi_mt32_verbose.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_verbose", True))
+		Me.chb_p_midi_mt32_verbose.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_verbose", True))
+		Me.chb_p_midi_mt32_verbose.Location = New System.Drawing.Point(123, 164)
+		Me.chb_p_midi_mt32_verbose.MKBoundLabel = Me.lbl_p_midi_mt32_verbose
+		Me.chb_p_midi_mt32_verbose.MKEditValue_Compare = Nothing
+		Me.chb_p_midi_mt32_verbose.Name = "chb_p_midi_mt32_verbose"
+		Me.chb_p_midi_mt32_verbose.Properties.Caption = ""
+		Me.chb_p_midi_mt32_verbose.Size = New System.Drawing.Size(24, 19)
+		ToolTipTitleItem233.Text = "MT-32 Verbose"
+		ToolTipItem231.LeftIndent = 6
+		ToolTipItem231.Text = "Enable MT-32 debug logging."
+		SuperToolTip233.Items.Add(ToolTipTitleItem233)
+		SuperToolTip233.Items.Add(ToolTipItem231)
+		Me.chb_p_midi_mt32_verbose.SuperTip = SuperToolTip233
+		Me.chb_p_midi_mt32_verbose.TabIndex = 3
+		'
+		'cmb_p_midi_mt32_src_quality
+		'
+		Me.cmb_p_midi_mt32_src_quality.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_src_quality", True))
+		Me.cmb_p_midi_mt32_src_quality.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_src_quality", True))
+		Me.cmb_p_midi_mt32_src_quality.Location = New System.Drawing.Point(123, 95)
+		Me.cmb_p_midi_mt32_src_quality.MKBoundLabel = Me.lbl_p_midi_mt32_src_quality
+		Me.cmb_p_midi_mt32_src_quality.MKEditValue_Compare = Nothing
+		Me.cmb_p_midi_mt32_src_quality.Name = "cmb_p_midi_mt32_src_quality"
+		Me.cmb_p_midi_mt32_src_quality.Properties.AllowFocused = False
+		Me.cmb_p_midi_mt32_src_quality.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+		Me.cmb_p_midi_mt32_src_quality.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("value", "value", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("displaytext", "displaytext", 5, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
+		Me.cmb_p_midi_mt32_src_quality.Properties.DataSource = Me.BTA_p_midi_mt32_src_quality
+		Me.cmb_p_midi_mt32_src_quality.Properties.DisplayMember = "displaytext"
+		Me.cmb_p_midi_mt32_src_quality.Properties.NullText = ""
+		Me.cmb_p_midi_mt32_src_quality.Properties.ShowFooter = False
+		Me.cmb_p_midi_mt32_src_quality.Properties.ShowHeader = False
+		Me.cmb_p_midi_mt32_src_quality.Properties.ValueMember = "value"
+		Me.cmb_p_midi_mt32_src_quality.Size = New System.Drawing.Size(107, 20)
+		ToolTipTitleItem236.Text = "MT-32 Source Quality"
+		ToolTipItem234.LeftIndent = 6
+		ToolTipItem234.Text = "MT-32 sample rate conversion quality"
+		SuperToolTip236.Items.Add(ToolTipTitleItem236)
+		SuperToolTip236.Items.Add(ToolTipItem234)
+		Me.cmb_p_midi_mt32_src_quality.SuperTip = SuperToolTip236
+		Me.cmb_p_midi_mt32_src_quality.TabIndex = 82
+		'
+		'lbl_p_midi_mt32_src_quality
+		'
+		Me.lbl_p_midi_mt32_src_quality.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_mt32_src_quality.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_mt32_src_quality.Location = New System.Drawing.Point(3, 95)
+		Me.lbl_p_midi_mt32_src_quality.MKBoundControl1 = Me.cmb_p_midi_mt32_src_quality
+		Me.lbl_p_midi_mt32_src_quality.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_mt32_src_quality.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_mt32_src_quality.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_mt32_src_quality.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_mt32_src_quality.Name = "lbl_p_midi_mt32_src_quality"
+		Me.lbl_p_midi_mt32_src_quality.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem235.Text = "MT-32 Source Quality"
+		ToolTipItem233.LeftIndent = 6
+		ToolTipItem233.Text = "MT-32 sample rate conversion quality"
+		SuperToolTip235.Items.Add(ToolTipTitleItem235)
+		SuperToolTip235.Items.Add(ToolTipItem233)
+		Me.lbl_p_midi_mt32_src_quality.SuperTip = SuperToolTip235
+		Me.lbl_p_midi_mt32_src_quality.TabIndex = 83
+		Me.lbl_p_midi_mt32_src_quality.Text = "MT-32 Source Quality:"
+		'
+		'BTA_p_midi_mt32_src_quality
+		'
+		Me.BTA_p_midi_mt32_src_quality.AllowDelete = True
+		Me.BTA_p_midi_mt32_src_quality.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_p_midi_mt32_src_quality.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_p_midi_mt32_src_quality.Connection = Nothing
+		Me.BTA_p_midi_mt32_src_quality.DSStream = CType(resources.GetObject("BTA_p_midi_mt32_src_quality.DSStream"), System.IO.MemoryStream)
+		Me.BTA_p_midi_mt32_src_quality.FillMethod = MKNetLib.FillMethod.ValueList
+		Me.BTA_p_midi_mt32_src_quality.FillString = "0;0 - fastest, worst;1;1 - faster, worse;2;2 - slower, better;3;3 - slowest, best" &
+		""
+		Me.BTA_p_midi_mt32_src_quality.Position = 0
+		Me.BTA_p_midi_mt32_src_quality.Transaction = Nothing
+		Me.BTA_p_midi_mt32_src_quality.UpdateTablesStream = CType(resources.GetObject("BTA_p_midi_mt32_src_quality.UpdateTablesStream"), System.Collections.Generic.List(Of String))
+		'
+		'lbl_p_midi_mt32_thread
+		'
+		Me.lbl_p_midi_mt32_thread.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_mt32_thread.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_mt32_thread.Location = New System.Drawing.Point(262, 26)
+		Me.lbl_p_midi_mt32_thread.MKBoundControl1 = Me.chb_p_midi_mt32_thread
+		Me.lbl_p_midi_mt32_thread.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_mt32_thread.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_mt32_thread.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_mt32_thread.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_mt32_thread.Name = "lbl_p_midi_mt32_thread"
+		Me.lbl_p_midi_mt32_thread.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem238.Text = "MT-32 Thread"
+		ToolTipItem236.LeftIndent = 6
+		ToolTipItem236.Text = "Enable MT-32 rendering in separate thread."
+		SuperToolTip238.Items.Add(ToolTipTitleItem238)
+		SuperToolTip238.Items.Add(ToolTipItem236)
+		Me.lbl_p_midi_mt32_thread.SuperTip = SuperToolTip238
+		Me.lbl_p_midi_mt32_thread.TabIndex = 34
+		Me.lbl_p_midi_mt32_thread.Text = "MT-32 Thread:"
+		'
+		'chb_p_midi_mt32_thread
+		'
+		Me.chb_p_midi_mt32_thread.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_thread", True))
+		Me.chb_p_midi_mt32_thread.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_thread", True))
+		Me.chb_p_midi_mt32_thread.Location = New System.Drawing.Point(382, 26)
+		Me.chb_p_midi_mt32_thread.MKBoundLabel = Me.lbl_p_midi_mt32_thread
+		Me.chb_p_midi_mt32_thread.MKEditValue_Compare = Nothing
+		Me.chb_p_midi_mt32_thread.Name = "chb_p_midi_mt32_thread"
+		Me.chb_p_midi_mt32_thread.Properties.Caption = ""
+		Me.chb_p_midi_mt32_thread.Size = New System.Drawing.Size(24, 19)
+		ToolTipTitleItem237.Text = "MT-32 Thread"
+		ToolTipItem235.LeftIndent = 6
+		ToolTipItem235.Text = "Enable MT-32 rendering in separate thread."
+		SuperToolTip237.Items.Add(ToolTipTitleItem237)
+		SuperToolTip237.Items.Add(ToolTipItem235)
+		Me.chb_p_midi_mt32_thread.SuperTip = SuperToolTip237
+		Me.chb_p_midi_mt32_thread.TabIndex = 4
+		'
+		'lbl_p_midi_mt32_reverb_mode
+		'
+		Me.lbl_p_midi_mt32_reverb_mode.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_mt32_reverb_mode.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_mt32_reverb_mode.Location = New System.Drawing.Point(262, 95)
+		Me.lbl_p_midi_mt32_reverb_mode.MKBoundControl1 = Me.cmb_p_midi_mt32_reverb_mode
+		Me.lbl_p_midi_mt32_reverb_mode.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_mt32_reverb_mode.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_mt32_reverb_mode.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_mt32_reverb_mode.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_mt32_reverb_mode.Name = "lbl_p_midi_mt32_reverb_mode"
+		Me.lbl_p_midi_mt32_reverb_mode.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem240.Text = "MT-32 Reverb Mode"
+		SuperToolTip240.Items.Add(ToolTipTitleItem240)
+		Me.lbl_p_midi_mt32_reverb_mode.SuperTip = SuperToolTip240
+		Me.lbl_p_midi_mt32_reverb_mode.TabIndex = 34
+		Me.lbl_p_midi_mt32_reverb_mode.Text = "MT-32 Reverb Mode:"
+		'
+		'cmb_p_midi_mt32_reverb_mode
+		'
+		Me.cmb_p_midi_mt32_reverb_mode.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_reverb_mode", True))
+		Me.cmb_p_midi_mt32_reverb_mode.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_reverb_mode", True))
+		Me.cmb_p_midi_mt32_reverb_mode.Location = New System.Drawing.Point(382, 95)
+		Me.cmb_p_midi_mt32_reverb_mode.MKBoundLabel = Me.lbl_p_midi_mt32_reverb_mode
+		Me.cmb_p_midi_mt32_reverb_mode.MKEditValue_Compare = Nothing
+		Me.cmb_p_midi_mt32_reverb_mode.Name = "cmb_p_midi_mt32_reverb_mode"
+		Me.cmb_p_midi_mt32_reverb_mode.Properties.AllowFocused = False
+		Me.cmb_p_midi_mt32_reverb_mode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+		Me.cmb_p_midi_mt32_reverb_mode.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("value", "value", 28, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
+		Me.cmb_p_midi_mt32_reverb_mode.Properties.DataSource = Me.BTA_p_midi_mt32_reverb_mode
+		Me.cmb_p_midi_mt32_reverb_mode.Properties.DisplayMember = "value"
+		Me.cmb_p_midi_mt32_reverb_mode.Properties.NullText = ""
+		Me.cmb_p_midi_mt32_reverb_mode.Properties.ShowFooter = False
+		Me.cmb_p_midi_mt32_reverb_mode.Properties.ShowHeader = False
+		Me.cmb_p_midi_mt32_reverb_mode.Properties.ValueMember = "value"
+		Me.cmb_p_midi_mt32_reverb_mode.Size = New System.Drawing.Size(136, 20)
+		ToolTipTitleItem239.Text = "MT-32 Reverb Mode"
+		SuperToolTip239.Items.Add(ToolTipTitleItem239)
+		Me.cmb_p_midi_mt32_reverb_mode.SuperTip = SuperToolTip239
+		Me.cmb_p_midi_mt32_reverb_mode.TabIndex = 6
+		'
+		'BTA_p_midi_mt32_reverb_mode
+		'
+		Me.BTA_p_midi_mt32_reverb_mode.AllowDelete = True
+		Me.BTA_p_midi_mt32_reverb_mode.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_p_midi_mt32_reverb_mode.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_p_midi_mt32_reverb_mode.Connection = Nothing
+		Me.BTA_p_midi_mt32_reverb_mode.DSStream = CType(resources.GetObject("BTA_p_midi_mt32_reverb_mode.DSStream"), System.IO.MemoryStream)
+		Me.BTA_p_midi_mt32_reverb_mode.FillMethod = MKNetLib.FillMethod.ValueList
+		Me.BTA_p_midi_mt32_reverb_mode.FillString = "auto;0;1;2;3"
+		Me.BTA_p_midi_mt32_reverb_mode.Position = 0
+		Me.BTA_p_midi_mt32_reverb_mode.Transaction = Nothing
+		Me.BTA_p_midi_mt32_reverb_mode.UpdateTablesStream = CType(resources.GetObject("BTA_p_midi_mt32_reverb_mode.UpdateTablesStream"), System.Collections.Generic.List(Of String))
+		'
+		'cmb_p_midi_mt32_rate
+		'
+		Me.cmb_p_midi_mt32_rate.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_rate", True))
+		Me.cmb_p_midi_mt32_rate.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_rate", True))
+		Me.cmb_p_midi_mt32_rate.Location = New System.Drawing.Point(123, 72)
+		Me.cmb_p_midi_mt32_rate.MKBoundLabel = Me.lbl_p_midi_mt32_rate
+		Me.cmb_p_midi_mt32_rate.MKEditValue_Compare = Nothing
+		Me.cmb_p_midi_mt32_rate.Name = "cmb_p_midi_mt32_rate"
+		Me.cmb_p_midi_mt32_rate.Properties.AllowFocused = False
+		Me.cmb_p_midi_mt32_rate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+		Me.cmb_p_midi_mt32_rate.Properties.DataSource = Me.BTA_p_midi_mt32_rate
+		Me.cmb_p_midi_mt32_rate.Properties.DisplayMember = "value"
+		Me.cmb_p_midi_mt32_rate.Properties.NullText = ""
+		Me.cmb_p_midi_mt32_rate.Properties.ShowFooter = False
+		Me.cmb_p_midi_mt32_rate.Properties.ShowHeader = False
+		Me.cmb_p_midi_mt32_rate.Properties.ValueMember = "value"
+		Me.cmb_p_midi_mt32_rate.Size = New System.Drawing.Size(107, 20)
+		ToolTipTitleItem242.Text = "MT-32 Sample Rate"
+		ToolTipItem238.LeftIndent = 6
+		ToolTipItem238.Text = "Sample rate of MT-32 emulation."
+		SuperToolTip242.Items.Add(ToolTipTitleItem242)
+		SuperToolTip242.Items.Add(ToolTipItem238)
+		Me.cmb_p_midi_mt32_rate.SuperTip = SuperToolTip242
+		Me.cmb_p_midi_mt32_rate.TabIndex = 80
+		'
+		'lbl_p_midi_mt32_rate
+		'
+		Me.lbl_p_midi_mt32_rate.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_mt32_rate.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_mt32_rate.Location = New System.Drawing.Point(3, 72)
+		Me.lbl_p_midi_mt32_rate.MKBoundControl1 = Me.cmb_p_midi_mt32_rate
+		Me.lbl_p_midi_mt32_rate.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_mt32_rate.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_mt32_rate.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_mt32_rate.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_mt32_rate.Name = "lbl_p_midi_mt32_rate"
+		Me.lbl_p_midi_mt32_rate.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem241.Text = "MT-32 Sample Rate"
+		ToolTipItem237.LeftIndent = 6
+		ToolTipItem237.Text = "Sample rate of MT-32 emulation."
+		SuperToolTip241.Items.Add(ToolTipTitleItem241)
+		SuperToolTip241.Items.Add(ToolTipItem237)
+		Me.lbl_p_midi_mt32_rate.SuperTip = SuperToolTip241
+		Me.lbl_p_midi_mt32_rate.TabIndex = 81
+		Me.lbl_p_midi_mt32_rate.Text = "MT-32 Sampe Rate:"
+		'
+		'BTA_p_midi_mt32_rate
+		'
+		Me.BTA_p_midi_mt32_rate.AllowDelete = True
+		Me.BTA_p_midi_mt32_rate.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_p_midi_mt32_rate.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_p_midi_mt32_rate.Connection = Nothing
+		Me.BTA_p_midi_mt32_rate.DSStream = CType(resources.GetObject("BTA_p_midi_mt32_rate.DSStream"), System.IO.MemoryStream)
+		Me.BTA_p_midi_mt32_rate.FillMethod = MKNetLib.FillMethod.ValueList
+		Me.BTA_p_midi_mt32_rate.FillString = "49716;48000;44100;32000;22050;16000;11025;8000"
+		Me.BTA_p_midi_mt32_rate.Position = 0
+		Me.BTA_p_midi_mt32_rate.Transaction = Nothing
+		Me.BTA_p_midi_mt32_rate.UpdateTablesStream = CType(resources.GetObject("BTA_p_midi_mt32_rate.UpdateTablesStream"), System.Collections.Generic.List(Of String))
+		'
+		'lbl_p_midi_mt32_reverb_time
+		'
+		Me.lbl_p_midi_mt32_reverb_time.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_mt32_reverb_time.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_mt32_reverb_time.Location = New System.Drawing.Point(262, 118)
+		Me.lbl_p_midi_mt32_reverb_time.MKBoundControl1 = Me.spn_p_midi_mt32_reverb_time
+		Me.lbl_p_midi_mt32_reverb_time.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_mt32_reverb_time.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_mt32_reverb_time.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_mt32_reverb_time.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_mt32_reverb_time.Name = "lbl_p_midi_mt32_reverb_time"
+		Me.lbl_p_midi_mt32_reverb_time.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem244.Text = "MT-32 Reverb Time"
+		ToolTipItem240.LeftIndent = 6
+		ToolTipItem240.Text = "MT-32 reverb decaying time."
+		SuperToolTip244.Items.Add(ToolTipTitleItem244)
+		SuperToolTip244.Items.Add(ToolTipItem240)
+		Me.lbl_p_midi_mt32_reverb_time.SuperTip = SuperToolTip244
+		Me.lbl_p_midi_mt32_reverb_time.TabIndex = 34
+		Me.lbl_p_midi_mt32_reverb_time.Text = "MT-32 Reverb Time:"
+		'
+		'spn_p_midi_mt32_reverb_time
+		'
+		Me.spn_p_midi_mt32_reverb_time.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_reverb_time", True))
+		Me.spn_p_midi_mt32_reverb_time.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_reverb_time", True))
+		Me.spn_p_midi_mt32_reverb_time.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+		Me.spn_p_midi_mt32_reverb_time.Location = New System.Drawing.Point(382, 118)
+		Me.spn_p_midi_mt32_reverb_time.MKBoundLabel = Me.lbl_p_midi_mt32_reverb_time
+		Me.spn_p_midi_mt32_reverb_time.MKEditValue_Compare = Nothing
+		Me.spn_p_midi_mt32_reverb_time.Name = "spn_p_midi_mt32_reverb_time"
+		Me.spn_p_midi_mt32_reverb_time.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_midi_mt32_reverb_time.Properties.IsFloatValue = False
+		Me.spn_p_midi_mt32_reverb_time.Properties.Mask.EditMask = "N00"
+		Me.spn_p_midi_mt32_reverb_time.Properties.MaxValue = New Decimal(New Integer() {7, 0, 0, 0})
+		Me.spn_p_midi_mt32_reverb_time.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem243.Text = "MT-32 Reverb Time"
+		ToolTipItem239.LeftIndent = 6
+		ToolTipItem239.Text = "MT-32 reverb decaying time."
+		SuperToolTip243.Items.Add(ToolTipTitleItem243)
+		SuperToolTip243.Items.Add(ToolTipItem239)
+		Me.spn_p_midi_mt32_reverb_time.SuperTip = SuperToolTip243
+		Me.spn_p_midi_mt32_reverb_time.TabIndex = 7
+		'
+		'lbl_p_midi_mt32_reverb_level
+		'
+		Me.lbl_p_midi_mt32_reverb_level.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_mt32_reverb_level.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_mt32_reverb_level.Location = New System.Drawing.Point(262, 141)
+		Me.lbl_p_midi_mt32_reverb_level.MKBoundControl1 = Me.spn_p_midi_mt32_reverb_level
+		Me.lbl_p_midi_mt32_reverb_level.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_mt32_reverb_level.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_mt32_reverb_level.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_mt32_reverb_level.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_mt32_reverb_level.Name = "lbl_p_midi_mt32_reverb_level"
+		Me.lbl_p_midi_mt32_reverb_level.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem246.Text = "MT-32 Reverb Level"
+		SuperToolTip246.Items.Add(ToolTipTitleItem246)
+		Me.lbl_p_midi_mt32_reverb_level.SuperTip = SuperToolTip246
+		Me.lbl_p_midi_mt32_reverb_level.TabIndex = 34
+		Me.lbl_p_midi_mt32_reverb_level.Text = "MT-32 Reverb Level:"
+		'
+		'spn_p_midi_mt32_reverb_level
+		'
+		Me.spn_p_midi_mt32_reverb_level.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_reverb_level", True))
+		Me.spn_p_midi_mt32_reverb_level.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_reverb_level", True))
+		Me.spn_p_midi_mt32_reverb_level.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+		Me.spn_p_midi_mt32_reverb_level.Location = New System.Drawing.Point(382, 141)
+		Me.spn_p_midi_mt32_reverb_level.MKBoundLabel = Me.lbl_p_midi_mt32_reverb_level
+		Me.spn_p_midi_mt32_reverb_level.MKEditValue_Compare = Nothing
+		Me.spn_p_midi_mt32_reverb_level.Name = "spn_p_midi_mt32_reverb_level"
+		Me.spn_p_midi_mt32_reverb_level.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_midi_mt32_reverb_level.Properties.IsFloatValue = False
+		Me.spn_p_midi_mt32_reverb_level.Properties.Mask.EditMask = "N00"
+		Me.spn_p_midi_mt32_reverb_level.Properties.MaxValue = New Decimal(New Integer() {7, 0, 0, 0})
+		Me.spn_p_midi_mt32_reverb_level.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem245.Text = "MT-32 Reverb Level"
+		SuperToolTip245.Items.Add(ToolTipTitleItem245)
+		Me.spn_p_midi_mt32_reverb_level.SuperTip = SuperToolTip245
+		Me.spn_p_midi_mt32_reverb_level.TabIndex = 8
+		'
+		'lbl_p_midi_mt32_prebuffer_ms
+		'
+		Me.lbl_p_midi_mt32_prebuffer_ms.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
+		Me.lbl_p_midi_mt32_prebuffer_ms.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_mt32_prebuffer_ms.Location = New System.Drawing.Point(447, 71)
+		Me.lbl_p_midi_mt32_prebuffer_ms.MKBoundControl1 = Nothing
+		Me.lbl_p_midi_mt32_prebuffer_ms.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_mt32_prebuffer_ms.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_mt32_prebuffer_ms.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_mt32_prebuffer_ms.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_mt32_prebuffer_ms.Name = "lbl_p_midi_mt32_prebuffer_ms"
+		Me.lbl_p_midi_mt32_prebuffer_ms.Size = New System.Drawing.Size(42, 20)
+		ToolTipTitleItem247.Text = "MT-32 Chunk"
+		ToolTipItem241.LeftIndent = 6
+		ToolTipItem241.Text = resources.GetString("ToolTipItem241.Text")
+		SuperToolTip247.Items.Add(ToolTipTitleItem247)
+		SuperToolTip247.Items.Add(ToolTipItem241)
+		Me.lbl_p_midi_mt32_prebuffer_ms.SuperTip = SuperToolTip247
+		Me.lbl_p_midi_mt32_prebuffer_ms.TabIndex = 79
+		Me.lbl_p_midi_mt32_prebuffer_ms.Text = "ms"
+		'
+		'lbl_p_midi_mt32_partials
+		'
+		Me.lbl_p_midi_mt32_partials.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_mt32_partials.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_mt32_partials.Location = New System.Drawing.Point(262, 164)
+		Me.lbl_p_midi_mt32_partials.MKBoundControl1 = Me.cmb_p_midi_mt32_partials
+		Me.lbl_p_midi_mt32_partials.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_mt32_partials.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_mt32_partials.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_mt32_partials.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_mt32_partials.Name = "lbl_p_midi_mt32_partials"
+		Me.lbl_p_midi_mt32_partials.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem249.Text = "MT-32 Partials"
+		ToolTipItem243.LeftIndent = 6
+		ToolTipItem243.Text = "MT-32 max partials allowed"
+		SuperToolTip249.Items.Add(ToolTipTitleItem249)
+		SuperToolTip249.Items.Add(ToolTipItem243)
+		Me.lbl_p_midi_mt32_partials.SuperTip = SuperToolTip249
+		Me.lbl_p_midi_mt32_partials.TabIndex = 34
+		Me.lbl_p_midi_mt32_partials.Text = "MT-32 Partials:"
+		'
+		'cmb_p_midi_mt32_partials
+		'
+		Me.cmb_p_midi_mt32_partials.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_partials", True))
+		Me.cmb_p_midi_mt32_partials.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_partials", True))
+		Me.cmb_p_midi_mt32_partials.Location = New System.Drawing.Point(382, 164)
+		Me.cmb_p_midi_mt32_partials.MKBoundLabel = Me.lbl_p_midi_mt32_partials
+		Me.cmb_p_midi_mt32_partials.MKEditValue_Compare = Nothing
+		Me.cmb_p_midi_mt32_partials.Name = "cmb_p_midi_mt32_partials"
+		Me.cmb_p_midi_mt32_partials.Properties.AllowFocused = False
+		Me.cmb_p_midi_mt32_partials.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+		Me.cmb_p_midi_mt32_partials.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("value", "value", 28, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
+		Me.cmb_p_midi_mt32_partials.Properties.DataSource = Me.BTA_p_midi_mt32_partials
+		Me.cmb_p_midi_mt32_partials.Properties.DisplayMember = "value"
+		Me.cmb_p_midi_mt32_partials.Properties.NullText = ""
+		Me.cmb_p_midi_mt32_partials.Properties.ShowFooter = False
+		Me.cmb_p_midi_mt32_partials.Properties.ShowHeader = False
+		Me.cmb_p_midi_mt32_partials.Properties.ValueMember = "value"
+		Me.cmb_p_midi_mt32_partials.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem248.Text = "MT-32 Partials"
+		ToolTipItem242.LeftIndent = 6
+		ToolTipItem242.Text = "MT-32 max partials allowed"
+		SuperToolTip248.Items.Add(ToolTipTitleItem248)
+		SuperToolTip248.Items.Add(ToolTipItem242)
+		Me.cmb_p_midi_mt32_partials.SuperTip = SuperToolTip248
+		Me.cmb_p_midi_mt32_partials.TabIndex = 66
+		'
+		'BTA_p_midi_mt32_partials
+		'
+		Me.BTA_p_midi_mt32_partials.AllowDelete = True
+		Me.BTA_p_midi_mt32_partials.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_p_midi_mt32_partials.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_p_midi_mt32_partials.Connection = Nothing
+		Me.BTA_p_midi_mt32_partials.DSStream = CType(resources.GetObject("BTA_p_midi_mt32_partials.DSStream"), System.IO.MemoryStream)
+		Me.BTA_p_midi_mt32_partials.FillMethod = MKNetLib.FillMethod.ValueList
+		Me.BTA_p_midi_mt32_partials.FillString = "8;9;32;255;256"
+		Me.BTA_p_midi_mt32_partials.Position = 0
+		Me.BTA_p_midi_mt32_partials.Transaction = Nothing
+		Me.BTA_p_midi_mt32_partials.UpdateTablesStream = CType(resources.GetObject("BTA_p_midi_mt32_partials.UpdateTablesStream"), System.Collections.Generic.List(Of String))
+		'
+		'spn_p_midi_mt32_prebuffer
+		'
+		Me.spn_p_midi_mt32_prebuffer.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_prebuffer", True))
+		Me.spn_p_midi_mt32_prebuffer.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_prebuffer", True))
+		Me.spn_p_midi_mt32_prebuffer.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+		Me.spn_p_midi_mt32_prebuffer.Location = New System.Drawing.Point(382, 72)
+		Me.spn_p_midi_mt32_prebuffer.MKBoundLabel = Me.lbl_p_midi_mt32_prebuffer
+		Me.spn_p_midi_mt32_prebuffer.MKEditValue_Compare = Nothing
+		Me.spn_p_midi_mt32_prebuffer.Name = "spn_p_midi_mt32_prebuffer"
+		Me.spn_p_midi_mt32_prebuffer.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_midi_mt32_prebuffer.Properties.IsFloatValue = False
+		Me.spn_p_midi_mt32_prebuffer.Properties.Mask.EditMask = "N00"
+		Me.spn_p_midi_mt32_prebuffer.Properties.MaxValue = New Decimal(New Integer() {1000, 0, 0, 0})
+		Me.spn_p_midi_mt32_prebuffer.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem251.Text = "MT-32 Pre-Buffer"
+		ToolTipItem245.LeftIndent = 6
+		ToolTipItem245.Text = resources.GetString("ToolTipItem245.Text")
+		SuperToolTip251.Items.Add(ToolTipTitleItem251)
+		SuperToolTip251.Items.Add(ToolTipItem245)
+		Me.spn_p_midi_mt32_prebuffer.SuperTip = SuperToolTip251
+		Me.spn_p_midi_mt32_prebuffer.TabIndex = 78
+		'
+		'lbl_p_midi_mt32_prebuffer
+		'
+		Me.lbl_p_midi_mt32_prebuffer.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_mt32_prebuffer.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_mt32_prebuffer.Location = New System.Drawing.Point(262, 72)
+		Me.lbl_p_midi_mt32_prebuffer.MKBoundControl1 = Me.spn_p_midi_mt32_prebuffer
+		Me.lbl_p_midi_mt32_prebuffer.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_mt32_prebuffer.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_mt32_prebuffer.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_mt32_prebuffer.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_mt32_prebuffer.Name = "lbl_p_midi_mt32_prebuffer"
+		Me.lbl_p_midi_mt32_prebuffer.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem250.Text = "MT-32 Pre-Buffer"
+		ToolTipItem244.LeftIndent = 6
+		ToolTipItem244.Text = resources.GetString("ToolTipItem244.Text")
+		SuperToolTip250.Items.Add(ToolTipTitleItem250)
+		SuperToolTip250.Items.Add(ToolTipItem244)
+		Me.lbl_p_midi_mt32_prebuffer.SuperTip = SuperToolTip250
+		Me.lbl_p_midi_mt32_prebuffer.TabIndex = 72
+		Me.lbl_p_midi_mt32_prebuffer.Text = "MT-32 Pre-Buffer:"
+		'
+		'lbl_p_midi_mt32_chunk_ms
+		'
+		Me.lbl_p_midi_mt32_chunk_ms.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
+		Me.lbl_p_midi_mt32_chunk_ms.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_mt32_chunk_ms.Location = New System.Drawing.Point(447, 48)
+		Me.lbl_p_midi_mt32_chunk_ms.MKBoundControl1 = Nothing
+		Me.lbl_p_midi_mt32_chunk_ms.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_mt32_chunk_ms.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_mt32_chunk_ms.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_mt32_chunk_ms.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_mt32_chunk_ms.Name = "lbl_p_midi_mt32_chunk_ms"
+		Me.lbl_p_midi_mt32_chunk_ms.Size = New System.Drawing.Size(42, 20)
+		ToolTipTitleItem252.Text = "MT-32 Chunk"
+		ToolTipItem246.LeftIndent = 6
+		ToolTipItem246.Text = resources.GetString("ToolTipItem246.Text")
+		SuperToolTip252.Items.Add(ToolTipTitleItem252)
+		SuperToolTip252.Items.Add(ToolTipItem246)
+		Me.lbl_p_midi_mt32_chunk_ms.SuperTip = SuperToolTip252
+		Me.lbl_p_midi_mt32_chunk_ms.TabIndex = 77
+		Me.lbl_p_midi_mt32_chunk_ms.Text = "ms"
+		'
+		'spn_p_midi_mt32_chunk
+		'
+		Me.spn_p_midi_mt32_chunk.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_chunk", True))
+		Me.spn_p_midi_mt32_chunk.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_chunk", True))
+		Me.spn_p_midi_mt32_chunk.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+		Me.spn_p_midi_mt32_chunk.Location = New System.Drawing.Point(382, 49)
+		Me.spn_p_midi_mt32_chunk.MKBoundLabel = Me.lbl_p_midi_mt32_chunk
+		Me.spn_p_midi_mt32_chunk.MKEditValue_Compare = Nothing
+		Me.spn_p_midi_mt32_chunk.Name = "spn_p_midi_mt32_chunk"
+		Me.spn_p_midi_mt32_chunk.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_midi_mt32_chunk.Properties.IsFloatValue = False
+		Me.spn_p_midi_mt32_chunk.Properties.Mask.EditMask = "N00"
+		Me.spn_p_midi_mt32_chunk.Properties.MaxValue = New Decimal(New Integer() {1000, 0, 0, 0})
+		Me.spn_p_midi_mt32_chunk.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem254.Text = "MT-32 Chunk"
+		ToolTipItem248.LeftIndent = 6
+		ToolTipItem248.Text = resources.GetString("ToolTipItem248.Text")
+		SuperToolTip254.Items.Add(ToolTipTitleItem254)
+		SuperToolTip254.Items.Add(ToolTipItem248)
+		Me.spn_p_midi_mt32_chunk.SuperTip = SuperToolTip254
+		Me.spn_p_midi_mt32_chunk.TabIndex = 76
+		'
+		'lbl_p_midi_mt32_chunk
+		'
+		Me.lbl_p_midi_mt32_chunk.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_mt32_chunk.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_mt32_chunk.Location = New System.Drawing.Point(262, 49)
+		Me.lbl_p_midi_mt32_chunk.MKBoundControl1 = Me.spn_p_midi_mt32_chunk
+		Me.lbl_p_midi_mt32_chunk.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_mt32_chunk.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_mt32_chunk.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_mt32_chunk.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_mt32_chunk.Name = "lbl_p_midi_mt32_chunk"
+		Me.lbl_p_midi_mt32_chunk.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem253.Text = "MT-32 Chunk"
+		ToolTipItem247.LeftIndent = 6
+		ToolTipItem247.Text = resources.GetString("ToolTipItem247.Text")
+		SuperToolTip253.Items.Add(ToolTipTitleItem253)
+		SuperToolTip253.Items.Add(ToolTipItem247)
+		Me.lbl_p_midi_mt32_chunk.SuperTip = SuperToolTip253
+		Me.lbl_p_midi_mt32_chunk.TabIndex = 70
+		Me.lbl_p_midi_mt32_chunk.Text = "MT-32 Chunk:"
+		'
+		'cmb_p_midi_mt32_analog
+		'
+		Me.cmb_p_midi_mt32_analog.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_mt32_dac", True))
+		Me.cmb_p_midi_mt32_analog.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_mt32_dac", True))
+		Me.cmb_p_midi_mt32_analog.Location = New System.Drawing.Point(123, 49)
+		Me.cmb_p_midi_mt32_analog.MKBoundLabel = Me.lbl_p_midi_mt32_analog
+		Me.cmb_p_midi_mt32_analog.MKEditValue_Compare = Nothing
+		Me.cmb_p_midi_mt32_analog.Name = "cmb_p_midi_mt32_analog"
+		Me.cmb_p_midi_mt32_analog.Properties.AllowFocused = False
+		Me.cmb_p_midi_mt32_analog.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+		Me.cmb_p_midi_mt32_analog.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("value", "value", 28, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("displaytext", "displaytext", 77, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
+		Me.cmb_p_midi_mt32_analog.Properties.DataSource = Me.BTA_p_midi_mt32_analog
+		Me.cmb_p_midi_mt32_analog.Properties.DisplayMember = "displaytext"
+		Me.cmb_p_midi_mt32_analog.Properties.NullText = ""
+		Me.cmb_p_midi_mt32_analog.Properties.ShowFooter = False
+		Me.cmb_p_midi_mt32_analog.Properties.ShowHeader = False
+		Me.cmb_p_midi_mt32_analog.Properties.ValueMember = "value"
+		Me.cmb_p_midi_mt32_analog.Size = New System.Drawing.Size(107, 20)
+		ToolTipTitleItem256.Text = "MT-32 Analog"
+		ToolTipItem250.LeftIndent = 6
+		ToolTipItem250.Text = resources.GetString("ToolTipItem250.Text")
+		SuperToolTip256.Items.Add(ToolTipTitleItem256)
+		SuperToolTip256.Items.Add(ToolTipItem250)
+		Me.cmb_p_midi_mt32_analog.SuperTip = SuperToolTip256
+		Me.cmb_p_midi_mt32_analog.TabIndex = 74
+		'
+		'lbl_p_midi_mt32_analog
+		'
+		Me.lbl_p_midi_mt32_analog.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_mt32_analog.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_mt32_analog.Location = New System.Drawing.Point(3, 49)
+		Me.lbl_p_midi_mt32_analog.MKBoundControl1 = Me.cmb_p_midi_mt32_analog
+		Me.lbl_p_midi_mt32_analog.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_mt32_analog.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_mt32_analog.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_mt32_analog.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_mt32_analog.Name = "lbl_p_midi_mt32_analog"
+		Me.lbl_p_midi_mt32_analog.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem255.Text = "MT-32 Analog"
+		ToolTipItem249.LeftIndent = 6
+		ToolTipItem249.Text = resources.GetString("ToolTipItem249.Text")
+		SuperToolTip255.Items.Add(ToolTipTitleItem255)
+		SuperToolTip255.Items.Add(ToolTipItem249)
+		Me.lbl_p_midi_mt32_analog.SuperTip = SuperToolTip255
+		Me.lbl_p_midi_mt32_analog.TabIndex = 75
+		Me.lbl_p_midi_mt32_analog.Text = "MT-32 Analog:"
+		'
+		'BTA_p_midi_mt32_analog
+		'
+		Me.BTA_p_midi_mt32_analog.AllowDelete = True
+		Me.BTA_p_midi_mt32_analog.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_p_midi_mt32_analog.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_p_midi_mt32_analog.Connection = Nothing
+		Me.BTA_p_midi_mt32_analog.DSStream = CType(resources.GetObject("BTA_p_midi_mt32_analog.DSStream"), System.IO.MemoryStream)
+		Me.BTA_p_midi_mt32_analog.FillMethod = MKNetLib.FillMethod.ValueList
+		Me.BTA_p_midi_mt32_analog.FillString = "0;0 - Digital;1;1 - Coarse;2;2 - Accurate;3;3 - Oversampled"
+		Me.BTA_p_midi_mt32_analog.Position = 0
+		Me.BTA_p_midi_mt32_analog.Transaction = Nothing
+		Me.BTA_p_midi_mt32_analog.UpdateTablesStream = CType(resources.GetObject("BTA_p_midi_mt32_analog.UpdateTablesStream"), System.Collections.Generic.List(Of String))
+		'
+		'txb_p_midi_mt32_romdir
+		'
+		Me.txb_p_midi_mt32_romdir.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.txb_p_midi_mt32_romdir.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "dosbox-language", True))
+		Me.txb_p_midi_mt32_romdir.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "dosbox-language", True))
+		Me.txb_p_midi_mt32_romdir.Location = New System.Drawing.Point(123, 3)
+		Me.txb_p_midi_mt32_romdir.MKBoundLabel = Me.lbl_p_midi_mt32_romdir
+		Me.txb_p_midi_mt32_romdir.MKEditValue_Compare = Nothing
+		Me.txb_p_midi_mt32_romdir.Name = "txb_p_midi_mt32_romdir"
+		Me.txb_p_midi_mt32_romdir.Size = New System.Drawing.Size(378, 20)
+		SuperToolTip258.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
+		ToolTipTitleItem258.Text = "MT-32 ROM Directory"
+		ToolTipItem252.LeftIndent = 6
+		ToolTipItem252.Text = resources.GetString("ToolTipItem252.Text")
+		SuperToolTip258.Items.Add(ToolTipTitleItem258)
+		SuperToolTip258.Items.Add(ToolTipItem252)
+		Me.txb_p_midi_mt32_romdir.SuperTip = SuperToolTip258
+		Me.txb_p_midi_mt32_romdir.TabIndex = 67
+		'
+		'lbl_p_midi_mt32_romdir
+		'
+		Me.lbl_p_midi_mt32_romdir.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_mt32_romdir.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_mt32_romdir.Location = New System.Drawing.Point(3, 3)
+		Me.lbl_p_midi_mt32_romdir.MKBoundControl1 = Me.txb_p_midi_mt32_romdir
+		Me.lbl_p_midi_mt32_romdir.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_mt32_romdir.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_mt32_romdir.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_mt32_romdir.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_mt32_romdir.Name = "lbl_p_midi_mt32_romdir"
+		Me.lbl_p_midi_mt32_romdir.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem257.Text = "MT-32 ROM Directory"
+		ToolTipItem251.LeftIndent = 6
+		ToolTipItem251.Text = resources.GetString("ToolTipItem251.Text")
+		SuperToolTip257.Items.Add(ToolTipTitleItem257)
+		SuperToolTip257.Items.Add(ToolTipItem251)
+		Me.lbl_p_midi_mt32_romdir.SuperTip = SuperToolTip257
+		Me.lbl_p_midi_mt32_romdir.TabIndex = 69
+		Me.lbl_p_midi_mt32_romdir.Text = "MT-32 ROM Directory:"
+		'
+		'btn_p_midi_mt32_romdir
+		'
+		Me.btn_p_midi_mt32_romdir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.btn_p_midi_mt32_romdir.Location = New System.Drawing.Point(504, 3)
+		Me.btn_p_midi_mt32_romdir.Name = "btn_p_midi_mt32_romdir"
+		Me.btn_p_midi_mt32_romdir.Size = New System.Drawing.Size(27, 20)
+		SuperToolTip259.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
+		ToolTipTitleItem259.Text = "MT-32 ROM Directory"
+		ToolTipItem253.LeftIndent = 6
+		ToolTipItem253.Text = "Browse for the MT-32 ROM Directory"
+		SuperToolTip259.Items.Add(ToolTipTitleItem259)
+		SuperToolTip259.Items.Add(ToolTipItem253)
+		Me.btn_p_midi_mt32_romdir.SuperTip = SuperToolTip259
+		Me.btn_p_midi_mt32_romdir.TabIndex = 68
+		Me.btn_p_midi_mt32_romdir.Text = "..."
+		'
+		'tpg_p_midi_fluidsynth
+		'
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_soundfont)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_chorus_depth_ms)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_reverb)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_chorus_speed_hz)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_polyphony)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.cmb_p_midi_fluid_chorus_type)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_periods)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_chorus_type)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_periodsize)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.spn_p_midi_fluid_chorus_depth)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.chb_p_midi_fluid_reverb)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_chorus_depth)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.spn_p_midi_fluid_polyphony)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.spn_p_midi_fluid_chorus_speed)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.spn_p_midi_fluid_periods)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_chorus_speed)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.spn_p_midi_fluid_periodsize)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.spn_p_midi_fluid_chorus_level)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.btn_p_midi_fluid_soundfont)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_chorus_level)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.txb_p_midi_fluid_soundfont)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.spn_p_midi_fluid_chorus_number)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_samplerate)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_chorus_number)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.cmb_p_midi_fluid_samplerate)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.chb_p_midi_fluid_chorus)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_gain)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_chorus)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.spn_p_midi_fluid_gain)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.spn_p_midi_fluid_reverb_level)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_cores)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_reverb_level)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.cmb_p_midi_fluid_cores)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.spn_p_midi_fluid_reverb_width)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_reverb_roomsize)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_reverb_width)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.spn_p_midi_fluid_reverb_roomsize)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.spn_p_midi_fluid_reverb_damping)
+		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_reverb_damping)
+		Me.tpg_p_midi_fluidsynth.Name = "tpg_p_midi_fluidsynth"
+		Me.tpg_p_midi_fluidsynth.Size = New System.Drawing.Size(534, 301)
+		Me.tpg_p_midi_fluidsynth.Text = "Fluidsynth Settings"
+		'
+		'lbl_p_midi_fluid_chorus_depth_ms
+		'
+		Me.lbl_p_midi_fluid_chorus_depth_ms.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
+		Me.lbl_p_midi_fluid_chorus_depth_ms.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_chorus_depth_ms.Location = New System.Drawing.Point(421, 255)
+		Me.lbl_p_midi_fluid_chorus_depth_ms.MKBoundControl1 = Nothing
+		Me.lbl_p_midi_fluid_chorus_depth_ms.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_chorus_depth_ms.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_chorus_depth_ms.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_chorus_depth_ms.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_chorus_depth_ms.Name = "lbl_p_midi_fluid_chorus_depth_ms"
+		Me.lbl_p_midi_fluid_chorus_depth_ms.Size = New System.Drawing.Size(42, 20)
+		ToolTipTitleItem260.Text = "Fluid Chorus Depth"
+		ToolTipItem254.LeftIndent = 6
+		ToolTipItem254.Text = "Fluidsynth chorus modulation depth"
+		SuperToolTip260.Items.Add(ToolTipTitleItem260)
+		SuperToolTip260.Items.Add(ToolTipItem254)
+		Me.lbl_p_midi_fluid_chorus_depth_ms.SuperTip = SuperToolTip260
+		Me.lbl_p_midi_fluid_chorus_depth_ms.TabIndex = 65
+		Me.lbl_p_midi_fluid_chorus_depth_ms.Text = "ms"
+		'
+		'lbl_p_midi_fluid_reverb
+		'
+		Me.lbl_p_midi_fluid_reverb.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_reverb.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_reverb.Location = New System.Drawing.Point(3, 164)
+		Me.lbl_p_midi_fluid_reverb.MKBoundControl1 = Me.chb_p_midi_fluid_reverb
+		Me.lbl_p_midi_fluid_reverb.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_reverb.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_reverb.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_reverb.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_reverb.Name = "lbl_p_midi_fluid_reverb"
+		Me.lbl_p_midi_fluid_reverb.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem262.Text = "Fluid Use Reverb"
+		ToolTipItem256.LeftIndent = 6
+		ToolTipItem256.Text = resources.GetString("ToolTipItem256.Text")
+		SuperToolTip262.Items.Add(ToolTipTitleItem262)
+		SuperToolTip262.Items.Add(ToolTipItem256)
+		Me.lbl_p_midi_fluid_reverb.SuperTip = SuperToolTip262
+		Me.lbl_p_midi_fluid_reverb.TabIndex = 34
+		Me.lbl_p_midi_fluid_reverb.Text = "Fluid Use Reverb:"
+		'
+		'chb_p_midi_fluid_reverb
+		'
+		Me.chb_p_midi_fluid_reverb.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_reverb", True))
+		Me.chb_p_midi_fluid_reverb.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_reverb", True))
+		Me.chb_p_midi_fluid_reverb.Location = New System.Drawing.Point(123, 164)
+		Me.chb_p_midi_fluid_reverb.MKBoundLabel = Me.lbl_p_midi_fluid_reverb
+		Me.chb_p_midi_fluid_reverb.MKEditValue_Compare = Nothing
+		Me.chb_p_midi_fluid_reverb.Name = "chb_p_midi_fluid_reverb"
+		Me.chb_p_midi_fluid_reverb.Properties.Caption = ""
+		Me.chb_p_midi_fluid_reverb.Size = New System.Drawing.Size(24, 19)
+		ToolTipTitleItem261.Text = "Fluid Use Reverb"
+		ToolTipItem255.LeftIndent = 6
+		ToolTipItem255.Text = resources.GetString("ToolTipItem255.Text")
+		SuperToolTip261.Items.Add(ToolTipTitleItem261)
+		SuperToolTip261.Items.Add(ToolTipItem255)
+		Me.chb_p_midi_fluid_reverb.SuperTip = SuperToolTip261
+		Me.chb_p_midi_fluid_reverb.TabIndex = 4
+		'
+		'lbl_p_midi_fluid_chorus_speed_hz
+		'
+		Me.lbl_p_midi_fluid_chorus_speed_hz.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
+		Me.lbl_p_midi_fluid_chorus_speed_hz.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_chorus_speed_hz.Location = New System.Drawing.Point(421, 232)
+		Me.lbl_p_midi_fluid_chorus_speed_hz.MKBoundControl1 = Nothing
+		Me.lbl_p_midi_fluid_chorus_speed_hz.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_chorus_speed_hz.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_chorus_speed_hz.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_chorus_speed_hz.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_chorus_speed_hz.Name = "lbl_p_midi_fluid_chorus_speed_hz"
+		Me.lbl_p_midi_fluid_chorus_speed_hz.Size = New System.Drawing.Size(42, 20)
+		ToolTipTitleItem263.Text = "Fluid Chorus Speed"
+		ToolTipItem257.LeftIndent = 6
+		ToolTipItem257.Text = "Fluidsynth chorus speed"
+		SuperToolTip263.Items.Add(ToolTipTitleItem263)
+		SuperToolTip263.Items.Add(ToolTipItem257)
+		Me.lbl_p_midi_fluid_chorus_speed_hz.SuperTip = SuperToolTip263
+		Me.lbl_p_midi_fluid_chorus_speed_hz.TabIndex = 64
+		Me.lbl_p_midi_fluid_chorus_speed_hz.Text = "Hz"
+		'
+		'lbl_p_midi_fluid_polyphony
+		'
+		Me.lbl_p_midi_fluid_polyphony.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_polyphony.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_polyphony.Location = New System.Drawing.Point(3, 72)
+		Me.lbl_p_midi_fluid_polyphony.MKBoundControl1 = Me.spn_p_midi_fluid_polyphony
+		Me.lbl_p_midi_fluid_polyphony.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_polyphony.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_polyphony.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_polyphony.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_polyphony.Name = "lbl_p_midi_fluid_polyphony"
+		Me.lbl_p_midi_fluid_polyphony.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem265.Text = "Fluid Polyphony"
+		ToolTipItem259.LeftIndent = 6
+		ToolTipItem259.Text = resources.GetString("ToolTipItem259.Text")
+		SuperToolTip265.Items.Add(ToolTipTitleItem265)
+		SuperToolTip265.Items.Add(ToolTipItem259)
+		Me.lbl_p_midi_fluid_polyphony.SuperTip = SuperToolTip265
+		Me.lbl_p_midi_fluid_polyphony.TabIndex = 34
+		Me.lbl_p_midi_fluid_polyphony.Text = "Fluid Polyphony:"
+		'
+		'spn_p_midi_fluid_polyphony
+		'
+		Me.spn_p_midi_fluid_polyphony.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_polyphony", True))
+		Me.spn_p_midi_fluid_polyphony.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_polyphony", True))
+		Me.spn_p_midi_fluid_polyphony.EditValue = New Decimal(New Integer() {16, 0, 0, 0})
+		Me.spn_p_midi_fluid_polyphony.Location = New System.Drawing.Point(123, 72)
+		Me.spn_p_midi_fluid_polyphony.MKBoundLabel = Me.lbl_p_midi_fluid_polyphony
+		Me.spn_p_midi_fluid_polyphony.MKEditValue_Compare = Nothing
+		Me.spn_p_midi_fluid_polyphony.Name = "spn_p_midi_fluid_polyphony"
+		Me.spn_p_midi_fluid_polyphony.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_midi_fluid_polyphony.Properties.IsFloatValue = False
+		Me.spn_p_midi_fluid_polyphony.Properties.Mask.EditMask = "N00"
+		Me.spn_p_midi_fluid_polyphony.Properties.MaxValue = New Decimal(New Integer() {4096, 0, 0, 0})
+		Me.spn_p_midi_fluid_polyphony.Properties.MinValue = New Decimal(New Integer() {16, 0, 0, 0})
+		Me.spn_p_midi_fluid_polyphony.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem264.Text = "Fluid Polyphony"
+		ToolTipItem258.LeftIndent = 6
+		ToolTipItem258.Text = resources.GetString("ToolTipItem258.Text")
+		SuperToolTip264.Items.Add(ToolTipTitleItem264)
+		SuperToolTip264.Items.Add(ToolTipItem258)
+		Me.spn_p_midi_fluid_polyphony.SuperTip = SuperToolTip264
+		Me.spn_p_midi_fluid_polyphony.TabIndex = 9
+		'
+		'cmb_p_midi_fluid_chorus_type
+		'
+		Me.cmb_p_midi_fluid_chorus_type.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_chorus_type", True))
+		Me.cmb_p_midi_fluid_chorus_type.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_chorus_type", True))
+		Me.cmb_p_midi_fluid_chorus_type.Location = New System.Drawing.Point(356, 278)
+		Me.cmb_p_midi_fluid_chorus_type.MKBoundLabel = Me.lbl_p_midi_fluid_chorus_type
+		Me.cmb_p_midi_fluid_chorus_type.MKEditValue_Compare = Nothing
+		Me.cmb_p_midi_fluid_chorus_type.Name = "cmb_p_midi_fluid_chorus_type"
+		Me.cmb_p_midi_fluid_chorus_type.Properties.AllowFocused = False
+		Me.cmb_p_midi_fluid_chorus_type.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+		Me.cmb_p_midi_fluid_chorus_type.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("value", "value", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("displaytext", "displaytext", 5, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
+		Me.cmb_p_midi_fluid_chorus_type.Properties.DataSource = Me.BTA_p_midi_fluid_chorus_type
+		Me.cmb_p_midi_fluid_chorus_type.Properties.DisplayMember = "displaytext"
+		Me.cmb_p_midi_fluid_chorus_type.Properties.NullText = ""
+		Me.cmb_p_midi_fluid_chorus_type.Properties.ShowFooter = False
+		Me.cmb_p_midi_fluid_chorus_type.Properties.ShowHeader = False
+		Me.cmb_p_midi_fluid_chorus_type.Properties.ValueMember = "value"
+		Me.cmb_p_midi_fluid_chorus_type.Size = New System.Drawing.Size(107, 20)
+		ToolTipTitleItem267.Text = "Fluid CPU Cores"
+		ToolTipItem261.LeftIndent = 6
+		ToolTipItem261.Text = "Fluidsynth CPU cores to use for multi-core support."
+		SuperToolTip267.Items.Add(ToolTipTitleItem267)
+		SuperToolTip267.Items.Add(ToolTipItem261)
+		Me.cmb_p_midi_fluid_chorus_type.SuperTip = SuperToolTip267
+		Me.cmb_p_midi_fluid_chorus_type.TabIndex = 62
+		'
+		'lbl_p_midi_fluid_chorus_type
+		'
+		Me.lbl_p_midi_fluid_chorus_type.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_chorus_type.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_chorus_type.Location = New System.Drawing.Point(236, 278)
+		Me.lbl_p_midi_fluid_chorus_type.MKBoundControl1 = Me.cmb_p_midi_fluid_chorus_type
+		Me.lbl_p_midi_fluid_chorus_type.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_chorus_type.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_chorus_type.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_chorus_type.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_chorus_type.Name = "lbl_p_midi_fluid_chorus_type"
+		Me.lbl_p_midi_fluid_chorus_type.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem266.Text = "Fluid Chorus Type"
+		ToolTipItem260.LeftIndent = 6
+		ToolTipItem260.Text = "Fluidsynth chorus type"
+		SuperToolTip266.Items.Add(ToolTipTitleItem266)
+		SuperToolTip266.Items.Add(ToolTipItem260)
+		Me.lbl_p_midi_fluid_chorus_type.SuperTip = SuperToolTip266
+		Me.lbl_p_midi_fluid_chorus_type.TabIndex = 63
+		Me.lbl_p_midi_fluid_chorus_type.Text = "Fluid Chorus Type:"
+		'
+		'BTA_p_midi_fluid_chorus_type
+		'
+		Me.BTA_p_midi_fluid_chorus_type.AllowDelete = True
+		Me.BTA_p_midi_fluid_chorus_type.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_p_midi_fluid_chorus_type.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_p_midi_fluid_chorus_type.Connection = Nothing
+		Me.BTA_p_midi_fluid_chorus_type.DSStream = CType(resources.GetObject("BTA_p_midi_fluid_chorus_type.DSStream"), System.IO.MemoryStream)
+		Me.BTA_p_midi_fluid_chorus_type.FillMethod = MKNetLib.FillMethod.ValueList
+		Me.BTA_p_midi_fluid_chorus_type.FillString = "0;0 - sine;1;1 - triangle"
+		Me.BTA_p_midi_fluid_chorus_type.Position = 0
+		Me.BTA_p_midi_fluid_chorus_type.Transaction = Nothing
+		Me.BTA_p_midi_fluid_chorus_type.UpdateTablesStream = CType(resources.GetObject("BTA_p_midi_fluid_chorus_type.UpdateTablesStream"), System.Collections.Generic.List(Of String))
+		'
+		'lbl_p_midi_fluid_periods
+		'
+		Me.lbl_p_midi_fluid_periods.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_periods.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_periods.Location = New System.Drawing.Point(3, 118)
+		Me.lbl_p_midi_fluid_periods.MKBoundControl1 = Me.spn_p_midi_fluid_periods
+		Me.lbl_p_midi_fluid_periods.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_periods.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_periods.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_periods.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_periods.Name = "lbl_p_midi_fluid_periods"
+		Me.lbl_p_midi_fluid_periods.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem269.Text = "Fluid Periods"
+		ToolTipItem263.LeftIndent = 6
+		ToolTipItem263.Text = "Fluidsynth periods" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Count of audio buffers"
+		SuperToolTip269.Items.Add(ToolTipTitleItem269)
+		SuperToolTip269.Items.Add(ToolTipItem263)
+		Me.lbl_p_midi_fluid_periods.SuperTip = SuperToolTip269
+		Me.lbl_p_midi_fluid_periods.TabIndex = 34
+		Me.lbl_p_midi_fluid_periods.Text = "Fluid Periods:"
+		'
+		'spn_p_midi_fluid_periods
+		'
+		Me.spn_p_midi_fluid_periods.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_periods", True))
+		Me.spn_p_midi_fluid_periods.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_periods", True))
+		Me.spn_p_midi_fluid_periods.EditValue = New Decimal(New Integer() {16, 0, 0, 0})
+		Me.spn_p_midi_fluid_periods.Location = New System.Drawing.Point(123, 118)
+		Me.spn_p_midi_fluid_periods.MKBoundLabel = Me.lbl_p_midi_fluid_periods
+		Me.spn_p_midi_fluid_periods.MKEditValue_Compare = Nothing
+		Me.spn_p_midi_fluid_periods.Name = "spn_p_midi_fluid_periods"
+		Me.spn_p_midi_fluid_periods.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_midi_fluid_periods.Properties.IsFloatValue = False
+		Me.spn_p_midi_fluid_periods.Properties.Mask.EditMask = "N00"
+		Me.spn_p_midi_fluid_periods.Properties.MaxValue = New Decimal(New Integer() {64, 0, 0, 0})
+		Me.spn_p_midi_fluid_periods.Properties.MinValue = New Decimal(New Integer() {2, 0, 0, 0})
+		Me.spn_p_midi_fluid_periods.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem268.Text = "Fluid Periods"
+		ToolTipItem262.LeftIndent = 6
+		ToolTipItem262.Text = "Fluidsynth periods" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Count of audio buffers"
+		SuperToolTip268.Items.Add(ToolTipTitleItem268)
+		SuperToolTip268.Items.Add(ToolTipItem262)
+		Me.spn_p_midi_fluid_periods.SuperTip = SuperToolTip268
+		Me.spn_p_midi_fluid_periods.TabIndex = 9
+		'
+		'lbl_p_midi_fluid_periodsize
+		'
+		Me.lbl_p_midi_fluid_periodsize.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_periodsize.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_periodsize.Location = New System.Drawing.Point(3, 141)
+		Me.lbl_p_midi_fluid_periodsize.MKBoundControl1 = Me.spn_p_midi_fluid_periodsize
+		Me.lbl_p_midi_fluid_periodsize.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_periodsize.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_periodsize.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_periodsize.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_periodsize.Name = "lbl_p_midi_fluid_periodsize"
+		Me.lbl_p_midi_fluid_periodsize.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem271.Text = "Fluid Period Size"
+		ToolTipItem265.LeftIndent = 6
+		ToolTipItem265.Text = "Fluidsynth period size" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Period size for audio buffers."
+		SuperToolTip271.Items.Add(ToolTipTitleItem271)
+		SuperToolTip271.Items.Add(ToolTipItem265)
+		Me.lbl_p_midi_fluid_periodsize.SuperTip = SuperToolTip271
+		Me.lbl_p_midi_fluid_periodsize.TabIndex = 34
+		Me.lbl_p_midi_fluid_periodsize.Text = "Fluid Period Size:"
+		'
+		'spn_p_midi_fluid_periodsize
+		'
+		Me.spn_p_midi_fluid_periodsize.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_periodsize", True))
+		Me.spn_p_midi_fluid_periodsize.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_periodsize", True))
+		Me.spn_p_midi_fluid_periodsize.EditValue = New Decimal(New Integer() {64, 0, 0, 0})
+		Me.spn_p_midi_fluid_periodsize.Location = New System.Drawing.Point(123, 141)
+		Me.spn_p_midi_fluid_periodsize.MKBoundLabel = Me.lbl_p_midi_fluid_periodsize
+		Me.spn_p_midi_fluid_periodsize.MKEditValue_Compare = Nothing
+		Me.spn_p_midi_fluid_periodsize.Name = "spn_p_midi_fluid_periodsize"
+		Me.spn_p_midi_fluid_periodsize.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_midi_fluid_periodsize.Properties.IsFloatValue = False
+		Me.spn_p_midi_fluid_periodsize.Properties.Mask.EditMask = "N00"
+		Me.spn_p_midi_fluid_periodsize.Properties.MaxValue = New Decimal(New Integer() {8192, 0, 0, 0})
+		Me.spn_p_midi_fluid_periodsize.Properties.MinValue = New Decimal(New Integer() {64, 0, 0, 0})
+		Me.spn_p_midi_fluid_periodsize.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem270.Text = "Fluid Period Size"
+		ToolTipItem264.LeftIndent = 6
+		ToolTipItem264.Text = "Fluidsynth period size" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Period size for audio buffers."
+		SuperToolTip270.Items.Add(ToolTipTitleItem270)
+		SuperToolTip270.Items.Add(ToolTipItem264)
+		Me.spn_p_midi_fluid_periodsize.SuperTip = SuperToolTip270
+		Me.spn_p_midi_fluid_periodsize.TabIndex = 9
+		'
+		'spn_p_midi_fluid_chorus_depth
+		'
+		Me.spn_p_midi_fluid_chorus_depth.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_chorus_depth", True))
+		Me.spn_p_midi_fluid_chorus_depth.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_chorus_depth", True))
+		Me.spn_p_midi_fluid_chorus_depth.EditValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_chorus_depth.Location = New System.Drawing.Point(356, 255)
+		Me.spn_p_midi_fluid_chorus_depth.MKBoundLabel = Me.lbl_p_midi_fluid_chorus_depth
+		Me.spn_p_midi_fluid_chorus_depth.MKEditValue_Compare = Nothing
+		Me.spn_p_midi_fluid_chorus_depth.Name = "spn_p_midi_fluid_chorus_depth"
+		Me.spn_p_midi_fluid_chorus_depth.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_midi_fluid_chorus_depth.Properties.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+		Me.spn_p_midi_fluid_chorus_depth.Properties.Mask.EditMask = "n3"
+		Me.spn_p_midi_fluid_chorus_depth.Properties.Mask.UseMaskAsDisplayFormat = True
+		Me.spn_p_midi_fluid_chorus_depth.Properties.MaxValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_chorus_depth.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem273.Text = "Fluid Chorus Depth"
+		ToolTipItem267.LeftIndent = 6
+		ToolTipItem267.Text = "Fluidsynth chorus depth"
+		SuperToolTip273.Items.Add(ToolTipTitleItem273)
+		SuperToolTip273.Items.Add(ToolTipItem267)
+		Me.spn_p_midi_fluid_chorus_depth.SuperTip = SuperToolTip273
+		Me.spn_p_midi_fluid_chorus_depth.TabIndex = 60
+		'
+		'lbl_p_midi_fluid_chorus_depth
+		'
+		Me.lbl_p_midi_fluid_chorus_depth.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_chorus_depth.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_chorus_depth.Location = New System.Drawing.Point(236, 255)
+		Me.lbl_p_midi_fluid_chorus_depth.MKBoundControl1 = Me.spn_p_midi_fluid_chorus_depth
+		Me.lbl_p_midi_fluid_chorus_depth.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_chorus_depth.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_chorus_depth.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_chorus_depth.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_chorus_depth.Name = "lbl_p_midi_fluid_chorus_depth"
+		Me.lbl_p_midi_fluid_chorus_depth.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem272.Text = "Fluid Chorus Depth"
+		ToolTipItem266.LeftIndent = 6
+		ToolTipItem266.Text = "Fluidsynth chorus modulation depth"
+		SuperToolTip272.Items.Add(ToolTipTitleItem272)
+		SuperToolTip272.Items.Add(ToolTipItem266)
+		Me.lbl_p_midi_fluid_chorus_depth.SuperTip = SuperToolTip272
+		Me.lbl_p_midi_fluid_chorus_depth.TabIndex = 61
+		Me.lbl_p_midi_fluid_chorus_depth.Text = "Fluid Chorus Depth:"
+		'
+		'spn_p_midi_fluid_chorus_speed
+		'
+		Me.spn_p_midi_fluid_chorus_speed.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_chorus_speed", True))
+		Me.spn_p_midi_fluid_chorus_speed.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_chorus_speed", True))
+		Me.spn_p_midi_fluid_chorus_speed.EditValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_chorus_speed.Location = New System.Drawing.Point(356, 232)
+		Me.spn_p_midi_fluid_chorus_speed.MKBoundLabel = Me.lbl_p_midi_fluid_chorus_speed
+		Me.spn_p_midi_fluid_chorus_speed.MKEditValue_Compare = Nothing
+		Me.spn_p_midi_fluid_chorus_speed.Name = "spn_p_midi_fluid_chorus_speed"
+		Me.spn_p_midi_fluid_chorus_speed.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_midi_fluid_chorus_speed.Properties.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+		Me.spn_p_midi_fluid_chorus_speed.Properties.Mask.EditMask = "n3"
+		Me.spn_p_midi_fluid_chorus_speed.Properties.Mask.UseMaskAsDisplayFormat = True
+		Me.spn_p_midi_fluid_chorus_speed.Properties.MaxValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_chorus_speed.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem275.Text = "Fluid Chorus Speed"
+		ToolTipItem269.LeftIndent = 6
+		ToolTipItem269.Text = "Fluidsynth chorus speed"
+		SuperToolTip275.Items.Add(ToolTipTitleItem275)
+		SuperToolTip275.Items.Add(ToolTipItem269)
+		Me.spn_p_midi_fluid_chorus_speed.SuperTip = SuperToolTip275
+		Me.spn_p_midi_fluid_chorus_speed.TabIndex = 58
+		'
+		'lbl_p_midi_fluid_chorus_speed
+		'
+		Me.lbl_p_midi_fluid_chorus_speed.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_chorus_speed.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_chorus_speed.Location = New System.Drawing.Point(236, 232)
+		Me.lbl_p_midi_fluid_chorus_speed.MKBoundControl1 = Me.spn_p_midi_fluid_chorus_speed
+		Me.lbl_p_midi_fluid_chorus_speed.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_chorus_speed.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_chorus_speed.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_chorus_speed.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_chorus_speed.Name = "lbl_p_midi_fluid_chorus_speed"
+		Me.lbl_p_midi_fluid_chorus_speed.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem274.Text = "Fluid Chorus Speed"
+		ToolTipItem268.LeftIndent = 6
+		ToolTipItem268.Text = "Fluidsynth chorus speed"
+		SuperToolTip274.Items.Add(ToolTipTitleItem274)
+		SuperToolTip274.Items.Add(ToolTipItem268)
+		Me.lbl_p_midi_fluid_chorus_speed.SuperTip = SuperToolTip274
+		Me.lbl_p_midi_fluid_chorus_speed.TabIndex = 59
+		Me.lbl_p_midi_fluid_chorus_speed.Text = "Fluid Chorus Speed:"
+		'
+		'spn_p_midi_fluid_chorus_level
+		'
+		Me.spn_p_midi_fluid_chorus_level.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_chorus_level", True))
+		Me.spn_p_midi_fluid_chorus_level.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_chorus_level", True))
+		Me.spn_p_midi_fluid_chorus_level.EditValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_chorus_level.Location = New System.Drawing.Point(356, 209)
+		Me.spn_p_midi_fluid_chorus_level.MKBoundLabel = Me.lbl_p_midi_fluid_chorus_level
+		Me.spn_p_midi_fluid_chorus_level.MKEditValue_Compare = Nothing
+		Me.spn_p_midi_fluid_chorus_level.Name = "spn_p_midi_fluid_chorus_level"
+		Me.spn_p_midi_fluid_chorus_level.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_midi_fluid_chorus_level.Properties.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+		Me.spn_p_midi_fluid_chorus_level.Properties.Mask.EditMask = "n3"
+		Me.spn_p_midi_fluid_chorus_level.Properties.Mask.UseMaskAsDisplayFormat = True
+		Me.spn_p_midi_fluid_chorus_level.Properties.MaxValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_chorus_level.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem277.Text = "Fluid Chorus Level"
+		ToolTipItem271.LeftIndent = 6
+		ToolTipItem271.Text = "Fluidsynth chorus level"
+		SuperToolTip277.Items.Add(ToolTipTitleItem277)
+		SuperToolTip277.Items.Add(ToolTipItem271)
+		Me.spn_p_midi_fluid_chorus_level.SuperTip = SuperToolTip277
+		Me.spn_p_midi_fluid_chorus_level.TabIndex = 56
+		'
+		'lbl_p_midi_fluid_chorus_level
+		'
+		Me.lbl_p_midi_fluid_chorus_level.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_chorus_level.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_chorus_level.Location = New System.Drawing.Point(236, 209)
+		Me.lbl_p_midi_fluid_chorus_level.MKBoundControl1 = Me.spn_p_midi_fluid_chorus_level
+		Me.lbl_p_midi_fluid_chorus_level.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_chorus_level.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_chorus_level.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_chorus_level.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_chorus_level.Name = "lbl_p_midi_fluid_chorus_level"
+		Me.lbl_p_midi_fluid_chorus_level.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem276.Text = "Fluid Chorus Level"
+		ToolTipItem270.LeftIndent = 6
+		ToolTipItem270.Text = "Fluidsynth chorus level"
+		SuperToolTip276.Items.Add(ToolTipTitleItem276)
+		SuperToolTip276.Items.Add(ToolTipItem270)
+		Me.lbl_p_midi_fluid_chorus_level.SuperTip = SuperToolTip276
+		Me.lbl_p_midi_fluid_chorus_level.TabIndex = 57
+		Me.lbl_p_midi_fluid_chorus_level.Text = "Fluid Chorus Level:"
+		'
+		'btn_p_midi_fluid_soundfont
+		'
+		Me.btn_p_midi_fluid_soundfont.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.btn_p_midi_fluid_soundfont.Location = New System.Drawing.Point(504, 3)
+		Me.btn_p_midi_fluid_soundfont.Name = "btn_p_midi_fluid_soundfont"
+		Me.btn_p_midi_fluid_soundfont.Size = New System.Drawing.Size(27, 20)
+		SuperToolTip278.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
+		ToolTipTitleItem278.Text = "Browse Fluid SoundFont"
+		ToolTipItem272.LeftIndent = 6
+		ToolTipItem272.Text = "Browse for a SoundFont to use with Fluidsynth. One must be specified."
+		SuperToolTip278.Items.Add(ToolTipTitleItem278)
+		SuperToolTip278.Items.Add(ToolTipItem272)
+		Me.btn_p_midi_fluid_soundfont.SuperTip = SuperToolTip278
+		Me.btn_p_midi_fluid_soundfont.TabIndex = 36
+		Me.btn_p_midi_fluid_soundfont.Text = "..."
+		'
+		'spn_p_midi_fluid_chorus_number
+		'
+		Me.spn_p_midi_fluid_chorus_number.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_chorus_number", True))
+		Me.spn_p_midi_fluid_chorus_number.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_chorus_number", True))
+		Me.spn_p_midi_fluid_chorus_number.EditValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_chorus_number.Location = New System.Drawing.Point(356, 186)
+		Me.spn_p_midi_fluid_chorus_number.MKBoundLabel = Me.lbl_p_midi_fluid_chorus_number
+		Me.spn_p_midi_fluid_chorus_number.MKEditValue_Compare = Nothing
+		Me.spn_p_midi_fluid_chorus_number.Name = "spn_p_midi_fluid_chorus_number"
+		Me.spn_p_midi_fluid_chorus_number.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_midi_fluid_chorus_number.Properties.IsFloatValue = False
+		Me.spn_p_midi_fluid_chorus_number.Properties.Mask.EditMask = "N00"
+		Me.spn_p_midi_fluid_chorus_number.Properties.MaxValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_chorus_number.Properties.MinValue = New Decimal(New Integer() {1, 0, 0, 0})
+		Me.spn_p_midi_fluid_chorus_number.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem280.Text = "Fluid Chorus Voice N°"
+		ToolTipItem274.LeftIndent = 6
+		ToolTipItem274.Text = "Fluidsynth chorus number of voices"
+		SuperToolTip280.Items.Add(ToolTipTitleItem280)
+		SuperToolTip280.Items.Add(ToolTipItem274)
+		Me.spn_p_midi_fluid_chorus_number.SuperTip = SuperToolTip280
+		Me.spn_p_midi_fluid_chorus_number.TabIndex = 54
+		'
+		'lbl_p_midi_fluid_chorus_number
+		'
+		Me.lbl_p_midi_fluid_chorus_number.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_chorus_number.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_chorus_number.Location = New System.Drawing.Point(236, 186)
+		Me.lbl_p_midi_fluid_chorus_number.MKBoundControl1 = Me.spn_p_midi_fluid_chorus_number
+		Me.lbl_p_midi_fluid_chorus_number.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_chorus_number.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_chorus_number.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_chorus_number.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_chorus_number.Name = "lbl_p_midi_fluid_chorus_number"
+		Me.lbl_p_midi_fluid_chorus_number.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem279.Text = "Fluid Periods"
+		ToolTipItem273.LeftIndent = 6
+		ToolTipItem273.Text = "Fluidsynth periods" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Count of audio buffers"
+		SuperToolTip279.Items.Add(ToolTipTitleItem279)
+		SuperToolTip279.Items.Add(ToolTipItem273)
+		Me.lbl_p_midi_fluid_chorus_number.SuperTip = SuperToolTip279
+		Me.lbl_p_midi_fluid_chorus_number.TabIndex = 55
+		Me.lbl_p_midi_fluid_chorus_number.Text = "Fluid Chorus Voice N°:"
+		'
+		'lbl_p_midi_fluid_samplerate
+		'
+		Me.lbl_p_midi_fluid_samplerate.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_samplerate.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_samplerate.Location = New System.Drawing.Point(3, 26)
+		Me.lbl_p_midi_fluid_samplerate.MKBoundControl1 = Me.cmb_p_midi_fluid_samplerate
+		Me.lbl_p_midi_fluid_samplerate.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_samplerate.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_samplerate.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_samplerate.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_samplerate.Name = "lbl_p_midi_fluid_samplerate"
+		Me.lbl_p_midi_fluid_samplerate.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem282.Text = "Fluid Sample Rate"
+		ToolTipItem276.LeftIndent = 6
+		ToolTipItem276.Text = resources.GetString("ToolTipItem276.Text")
+		SuperToolTip282.Items.Add(ToolTipTitleItem282)
+		SuperToolTip282.Items.Add(ToolTipItem276)
+		Me.lbl_p_midi_fluid_samplerate.SuperTip = SuperToolTip282
+		Me.lbl_p_midi_fluid_samplerate.TabIndex = 39
+		Me.lbl_p_midi_fluid_samplerate.Text = "Fluid Sample Rate:"
+		'
+		'cmb_p_midi_fluid_samplerate
+		'
+		Me.cmb_p_midi_fluid_samplerate.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_samplerate", True))
+		Me.cmb_p_midi_fluid_samplerate.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_samplerate", True))
+		Me.cmb_p_midi_fluid_samplerate.Location = New System.Drawing.Point(123, 26)
+		Me.cmb_p_midi_fluid_samplerate.MKBoundLabel = Me.lbl_p_midi_fluid_samplerate
+		Me.cmb_p_midi_fluid_samplerate.MKEditValue_Compare = Nothing
+		Me.cmb_p_midi_fluid_samplerate.Name = "cmb_p_midi_fluid_samplerate"
+		Me.cmb_p_midi_fluid_samplerate.Properties.AllowFocused = False
+		Me.cmb_p_midi_fluid_samplerate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+		Me.cmb_p_midi_fluid_samplerate.Properties.DataSource = Me.BTA_p_midi_fluid_samplerate
+		Me.cmb_p_midi_fluid_samplerate.Properties.DisplayMember = "value"
+		Me.cmb_p_midi_fluid_samplerate.Properties.NullText = ""
+		Me.cmb_p_midi_fluid_samplerate.Properties.ShowFooter = False
+		Me.cmb_p_midi_fluid_samplerate.Properties.ShowHeader = False
+		Me.cmb_p_midi_fluid_samplerate.Properties.ValueMember = "value"
+		Me.cmb_p_midi_fluid_samplerate.Size = New System.Drawing.Size(107, 20)
+		ToolTipTitleItem281.Text = "Fluid Sample Rate"
+		ToolTipItem275.LeftIndent = 6
+		ToolTipItem275.Text = resources.GetString("ToolTipItem275.Text")
+		SuperToolTip281.Items.Add(ToolTipTitleItem281)
+		SuperToolTip281.Items.Add(ToolTipItem275)
+		Me.cmb_p_midi_fluid_samplerate.SuperTip = SuperToolTip281
+		Me.cmb_p_midi_fluid_samplerate.TabIndex = 38
+		'
+		'BTA_p_midi_fluid_samplerate
+		'
+		Me.BTA_p_midi_fluid_samplerate.AllowDelete = True
+		Me.BTA_p_midi_fluid_samplerate.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_p_midi_fluid_samplerate.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_p_midi_fluid_samplerate.Connection = Nothing
+		Me.BTA_p_midi_fluid_samplerate.DSStream = CType(resources.GetObject("BTA_p_midi_fluid_samplerate.DSStream"), System.IO.MemoryStream)
+		Me.BTA_p_midi_fluid_samplerate.FillMethod = MKNetLib.FillMethod.ValueList
+		Me.BTA_p_midi_fluid_samplerate.FillString = "96000;49716;48000;44100;32000;22050"
+		Me.BTA_p_midi_fluid_samplerate.Position = 0
+		Me.BTA_p_midi_fluid_samplerate.Transaction = Nothing
+		Me.BTA_p_midi_fluid_samplerate.UpdateTablesStream = CType(resources.GetObject("BTA_p_midi_fluid_samplerate.UpdateTablesStream"), System.Collections.Generic.List(Of String))
+		'
+		'chb_p_midi_fluid_chorus
+		'
+		Me.chb_p_midi_fluid_chorus.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_chorus", True))
+		Me.chb_p_midi_fluid_chorus.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_chorus", True))
+		Me.chb_p_midi_fluid_chorus.Location = New System.Drawing.Point(356, 164)
+		Me.chb_p_midi_fluid_chorus.MKBoundLabel = Me.lbl_p_midi_fluid_chorus
+		Me.chb_p_midi_fluid_chorus.MKEditValue_Compare = Nothing
+		Me.chb_p_midi_fluid_chorus.Name = "chb_p_midi_fluid_chorus"
+		Me.chb_p_midi_fluid_chorus.Properties.Caption = ""
+		Me.chb_p_midi_fluid_chorus.Size = New System.Drawing.Size(24, 19)
+		ToolTipTitleItem284.Text = "Fluid Use Chorus"
+		ToolTipItem278.LeftIndent = 6
+		ToolTipItem278.Text = resources.GetString("ToolTipItem278.Text")
+		SuperToolTip284.Items.Add(ToolTipTitleItem284)
+		SuperToolTip284.Items.Add(ToolTipItem278)
+		Me.chb_p_midi_fluid_chorus.SuperTip = SuperToolTip284
+		Me.chb_p_midi_fluid_chorus.TabIndex = 52
+		'
+		'lbl_p_midi_fluid_chorus
+		'
+		Me.lbl_p_midi_fluid_chorus.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_chorus.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_chorus.Location = New System.Drawing.Point(236, 164)
+		Me.lbl_p_midi_fluid_chorus.MKBoundControl1 = Me.chb_p_midi_fluid_chorus
+		Me.lbl_p_midi_fluid_chorus.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_chorus.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_chorus.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_chorus.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_chorus.Name = "lbl_p_midi_fluid_chorus"
+		Me.lbl_p_midi_fluid_chorus.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem283.Text = "Fluid Use Chorus"
+		ToolTipItem277.LeftIndent = 6
+		ToolTipItem277.Text = resources.GetString("ToolTipItem277.Text")
+		SuperToolTip283.Items.Add(ToolTipTitleItem283)
+		SuperToolTip283.Items.Add(ToolTipItem277)
+		Me.lbl_p_midi_fluid_chorus.SuperTip = SuperToolTip283
+		Me.lbl_p_midi_fluid_chorus.TabIndex = 53
+		Me.lbl_p_midi_fluid_chorus.Text = "Fluid Use Chorus:"
+		'
+		'lbl_p_midi_fluid_gain
+		'
+		Me.lbl_p_midi_fluid_gain.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_gain.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_gain.Location = New System.Drawing.Point(3, 49)
+		Me.lbl_p_midi_fluid_gain.MKBoundControl1 = Me.spn_p_midi_fluid_gain
+		Me.lbl_p_midi_fluid_gain.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_gain.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_gain.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_gain.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_gain.Name = "lbl_p_midi_fluid_gain"
+		Me.lbl_p_midi_fluid_gain.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem286.Text = "Fluid Gain"
+		ToolTipItem280.LeftIndent = 6
+		ToolTipItem280.Text = "Fluidsynth gain" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "The gain is applied to the final or master output of the synth" &
+		"esizer. It is set to a low value by default to avoid the saturation of the outpu" &
+		"t when random MIDI files are played."
+		SuperToolTip286.Items.Add(ToolTipTitleItem286)
+		SuperToolTip286.Items.Add(ToolTipItem280)
+		Me.lbl_p_midi_fluid_gain.SuperTip = SuperToolTip286
+		Me.lbl_p_midi_fluid_gain.TabIndex = 41
+		Me.lbl_p_midi_fluid_gain.Text = "Fluid Gain:"
+		'
+		'spn_p_midi_fluid_gain
+		'
+		Me.spn_p_midi_fluid_gain.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_gain", True))
+		Me.spn_p_midi_fluid_gain.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_gain", True))
+		Me.spn_p_midi_fluid_gain.EditValue = New Decimal(New Integer() {5, 0, 0, 0})
+		Me.spn_p_midi_fluid_gain.Location = New System.Drawing.Point(123, 49)
+		Me.spn_p_midi_fluid_gain.MKBoundLabel = Me.lbl_p_midi_fluid_gain
+		Me.spn_p_midi_fluid_gain.MKEditValue_Compare = Nothing
+		Me.spn_p_midi_fluid_gain.Name = "spn_p_midi_fluid_gain"
+		Me.spn_p_midi_fluid_gain.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_midi_fluid_gain.Properties.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+		Me.spn_p_midi_fluid_gain.Properties.Mask.EditMask = "n3"
+		Me.spn_p_midi_fluid_gain.Properties.Mask.UseMaskAsDisplayFormat = True
+		Me.spn_p_midi_fluid_gain.Properties.MaxValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_gain.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem285.Text = "Fluid Gain"
+		ToolTipItem279.LeftIndent = 6
+		ToolTipItem279.Text = "Fluidsynth gain" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "The gain is applied to the final or master output of the synth" &
+		"esizer. It is set to a low value by default to avoid the saturation of the outpu" &
+		"t when random MIDI files are played."
+		SuperToolTip285.Items.Add(ToolTipTitleItem285)
+		SuperToolTip285.Items.Add(ToolTipItem279)
+		Me.spn_p_midi_fluid_gain.SuperTip = SuperToolTip285
+		Me.spn_p_midi_fluid_gain.TabIndex = 40
+		'
+		'spn_p_midi_fluid_reverb_level
+		'
+		Me.spn_p_midi_fluid_reverb_level.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_reverb_level", True))
+		Me.spn_p_midi_fluid_reverb_level.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_reverb_level", True))
+		Me.spn_p_midi_fluid_reverb_level.EditValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_reverb_level.Location = New System.Drawing.Point(123, 256)
+		Me.spn_p_midi_fluid_reverb_level.MKBoundLabel = Me.lbl_p_midi_fluid_reverb_level
+		Me.spn_p_midi_fluid_reverb_level.MKEditValue_Compare = Nothing
+		Me.spn_p_midi_fluid_reverb_level.Name = "spn_p_midi_fluid_reverb_level"
+		Me.spn_p_midi_fluid_reverb_level.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_midi_fluid_reverb_level.Properties.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+		Me.spn_p_midi_fluid_reverb_level.Properties.Mask.EditMask = "n3"
+		Me.spn_p_midi_fluid_reverb_level.Properties.Mask.UseMaskAsDisplayFormat = True
+		Me.spn_p_midi_fluid_reverb_level.Properties.MaxValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_reverb_level.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem288.Text = "Fluid Reverb Level"
+		ToolTipItem282.LeftIndent = 6
+		ToolTipItem282.Text = "Fluidsynth reverb level"
+		SuperToolTip288.Items.Add(ToolTipTitleItem288)
+		SuperToolTip288.Items.Add(ToolTipItem282)
+		Me.spn_p_midi_fluid_reverb_level.SuperTip = SuperToolTip288
+		Me.spn_p_midi_fluid_reverb_level.TabIndex = 50
+		'
+		'lbl_p_midi_fluid_reverb_level
+		'
+		Me.lbl_p_midi_fluid_reverb_level.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_reverb_level.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_reverb_level.Location = New System.Drawing.Point(3, 256)
+		Me.lbl_p_midi_fluid_reverb_level.MKBoundControl1 = Me.spn_p_midi_fluid_reverb_level
+		Me.lbl_p_midi_fluid_reverb_level.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_reverb_level.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_reverb_level.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_reverb_level.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_reverb_level.Name = "lbl_p_midi_fluid_reverb_level"
+		Me.lbl_p_midi_fluid_reverb_level.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem287.Text = "Fluid Reverb Level"
+		ToolTipItem281.LeftIndent = 6
+		ToolTipItem281.Text = "Fluidsynth reverb level"
+		SuperToolTip287.Items.Add(ToolTipTitleItem287)
+		SuperToolTip287.Items.Add(ToolTipItem281)
+		Me.lbl_p_midi_fluid_reverb_level.SuperTip = SuperToolTip287
+		Me.lbl_p_midi_fluid_reverb_level.TabIndex = 51
+		Me.lbl_p_midi_fluid_reverb_level.Text = "Fluid Reverb Level:"
+		'
+		'lbl_p_midi_fluid_cores
+		'
+		Me.lbl_p_midi_fluid_cores.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_cores.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_cores.Location = New System.Drawing.Point(3, 95)
+		Me.lbl_p_midi_fluid_cores.MKBoundControl1 = Me.cmb_p_midi_fluid_cores
+		Me.lbl_p_midi_fluid_cores.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_cores.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_cores.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_cores.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_cores.Name = "lbl_p_midi_fluid_cores"
+		Me.lbl_p_midi_fluid_cores.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem290.Text = "Fluid CPU Cores"
+		ToolTipItem284.LeftIndent = 6
+		ToolTipItem284.Text = "Fluidsynth CPU cores to use for multi-core support."
+		SuperToolTip290.Items.Add(ToolTipTitleItem290)
+		SuperToolTip290.Items.Add(ToolTipItem284)
+		Me.lbl_p_midi_fluid_cores.SuperTip = SuperToolTip290
+		Me.lbl_p_midi_fluid_cores.TabIndex = 43
+		Me.lbl_p_midi_fluid_cores.Text = "Fluid CPU Cores:"
+		'
+		'cmb_p_midi_fluid_cores
+		'
+		Me.cmb_p_midi_fluid_cores.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_cores", True))
+		Me.cmb_p_midi_fluid_cores.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_cores", True))
+		Me.cmb_p_midi_fluid_cores.Location = New System.Drawing.Point(123, 95)
+		Me.cmb_p_midi_fluid_cores.MKBoundLabel = Me.lbl_p_midi_fluid_cores
+		Me.cmb_p_midi_fluid_cores.MKEditValue_Compare = Nothing
+		Me.cmb_p_midi_fluid_cores.Name = "cmb_p_midi_fluid_cores"
+		Me.cmb_p_midi_fluid_cores.Properties.AllowFocused = False
+		Me.cmb_p_midi_fluid_cores.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+		Me.cmb_p_midi_fluid_cores.Properties.DataSource = Me.BTA_p_midi_fluid_cores
+		Me.cmb_p_midi_fluid_cores.Properties.DisplayMember = "value"
+		Me.cmb_p_midi_fluid_cores.Properties.NullText = ""
+		Me.cmb_p_midi_fluid_cores.Properties.ShowFooter = False
+		Me.cmb_p_midi_fluid_cores.Properties.ShowHeader = False
+		Me.cmb_p_midi_fluid_cores.Properties.ValueMember = "value"
+		Me.cmb_p_midi_fluid_cores.Size = New System.Drawing.Size(107, 20)
+		ToolTipTitleItem289.Text = "Fluid CPU Cores"
+		ToolTipItem283.LeftIndent = 6
+		ToolTipItem283.Text = "Fluidsynth CPU cores to use for multi-core support."
+		SuperToolTip289.Items.Add(ToolTipTitleItem289)
+		SuperToolTip289.Items.Add(ToolTipItem283)
+		Me.cmb_p_midi_fluid_cores.SuperTip = SuperToolTip289
+		Me.cmb_p_midi_fluid_cores.TabIndex = 42
+		'
+		'BTA_p_midi_fluid_cores
+		'
+		Me.BTA_p_midi_fluid_cores.AllowDelete = True
+		Me.BTA_p_midi_fluid_cores.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_p_midi_fluid_cores.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_p_midi_fluid_cores.Connection = Nothing
+		Me.BTA_p_midi_fluid_cores.DSStream = CType(resources.GetObject("BTA_p_midi_fluid_cores.DSStream"), System.IO.MemoryStream)
+		Me.BTA_p_midi_fluid_cores.FillMethod = MKNetLib.FillMethod.ValueList
+		Me.BTA_p_midi_fluid_cores.FillString = "default;1;2;4;8;16;32;64;128;256"
+		Me.BTA_p_midi_fluid_cores.Position = 0
+		Me.BTA_p_midi_fluid_cores.Transaction = Nothing
+		Me.BTA_p_midi_fluid_cores.UpdateTablesStream = CType(resources.GetObject("BTA_p_midi_fluid_cores.UpdateTablesStream"), System.Collections.Generic.List(Of String))
+		'
+		'spn_p_midi_fluid_reverb_width
+		'
+		Me.spn_p_midi_fluid_reverb_width.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_reverb_width", True))
+		Me.spn_p_midi_fluid_reverb_width.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_reverb_width", True))
+		Me.spn_p_midi_fluid_reverb_width.EditValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_reverb_width.Location = New System.Drawing.Point(123, 233)
+		Me.spn_p_midi_fluid_reverb_width.MKBoundLabel = Me.lbl_p_midi_fluid_reverb_width
+		Me.spn_p_midi_fluid_reverb_width.MKEditValue_Compare = Nothing
+		Me.spn_p_midi_fluid_reverb_width.Name = "spn_p_midi_fluid_reverb_width"
+		Me.spn_p_midi_fluid_reverb_width.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_midi_fluid_reverb_width.Properties.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+		Me.spn_p_midi_fluid_reverb_width.Properties.Mask.EditMask = "n3"
+		Me.spn_p_midi_fluid_reverb_width.Properties.Mask.UseMaskAsDisplayFormat = True
+		Me.spn_p_midi_fluid_reverb_width.Properties.MaxValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_reverb_width.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem292.Text = "Fluid Reverb Width"
+		ToolTipItem286.LeftIndent = 6
+		ToolTipItem286.Text = "Fluidsynth reverb width"
+		SuperToolTip292.Items.Add(ToolTipTitleItem292)
+		SuperToolTip292.Items.Add(ToolTipItem286)
+		Me.spn_p_midi_fluid_reverb_width.SuperTip = SuperToolTip292
+		Me.spn_p_midi_fluid_reverb_width.TabIndex = 48
+		'
+		'lbl_p_midi_fluid_reverb_width
+		'
+		Me.lbl_p_midi_fluid_reverb_width.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_reverb_width.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_reverb_width.Location = New System.Drawing.Point(3, 233)
+		Me.lbl_p_midi_fluid_reverb_width.MKBoundControl1 = Me.spn_p_midi_fluid_reverb_width
+		Me.lbl_p_midi_fluid_reverb_width.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_reverb_width.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_reverb_width.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_reverb_width.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_reverb_width.Name = "lbl_p_midi_fluid_reverb_width"
+		Me.lbl_p_midi_fluid_reverb_width.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem291.Text = "Fluid Reverb Width"
+		ToolTipItem285.LeftIndent = 6
+		ToolTipItem285.Text = "Fluidsynth reverb width"
+		SuperToolTip291.Items.Add(ToolTipTitleItem291)
+		SuperToolTip291.Items.Add(ToolTipItem285)
+		Me.lbl_p_midi_fluid_reverb_width.SuperTip = SuperToolTip291
+		Me.lbl_p_midi_fluid_reverb_width.TabIndex = 49
+		Me.lbl_p_midi_fluid_reverb_width.Text = "Fluid Reverb Width:"
+		'
+		'lbl_p_midi_fluid_reverb_roomsize
+		'
+		Me.lbl_p_midi_fluid_reverb_roomsize.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_reverb_roomsize.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_reverb_roomsize.Location = New System.Drawing.Point(3, 187)
+		Me.lbl_p_midi_fluid_reverb_roomsize.MKBoundControl1 = Me.spn_p_midi_fluid_reverb_roomsize
+		Me.lbl_p_midi_fluid_reverb_roomsize.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_reverb_roomsize.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_reverb_roomsize.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_reverb_roomsize.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_reverb_roomsize.Name = "lbl_p_midi_fluid_reverb_roomsize"
+		Me.lbl_p_midi_fluid_reverb_roomsize.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem294.Text = "Fluid Reverb Room Size"
+		ToolTipItem288.LeftIndent = 6
+		ToolTipItem288.Text = "Fluidsynth reverb room size"
+		SuperToolTip294.Items.Add(ToolTipTitleItem294)
+		SuperToolTip294.Items.Add(ToolTipItem288)
+		Me.lbl_p_midi_fluid_reverb_roomsize.SuperTip = SuperToolTip294
+		Me.lbl_p_midi_fluid_reverb_roomsize.TabIndex = 45
+		Me.lbl_p_midi_fluid_reverb_roomsize.Text = "Fluid Reverb Room Size:"
+		'
+		'spn_p_midi_fluid_reverb_roomsize
+		'
+		Me.spn_p_midi_fluid_reverb_roomsize.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_reverb_roomsize", True))
+		Me.spn_p_midi_fluid_reverb_roomsize.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_reverb_roomsize", True))
+		Me.spn_p_midi_fluid_reverb_roomsize.EditValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_reverb_roomsize.Location = New System.Drawing.Point(123, 187)
+		Me.spn_p_midi_fluid_reverb_roomsize.MKBoundLabel = Me.lbl_p_midi_fluid_reverb_roomsize
+		Me.spn_p_midi_fluid_reverb_roomsize.MKEditValue_Compare = Nothing
+		Me.spn_p_midi_fluid_reverb_roomsize.Name = "spn_p_midi_fluid_reverb_roomsize"
+		Me.spn_p_midi_fluid_reverb_roomsize.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_midi_fluid_reverb_roomsize.Properties.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+		Me.spn_p_midi_fluid_reverb_roomsize.Properties.Mask.EditMask = "n3"
+		Me.spn_p_midi_fluid_reverb_roomsize.Properties.Mask.UseMaskAsDisplayFormat = True
+		Me.spn_p_midi_fluid_reverb_roomsize.Properties.MaxValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_reverb_roomsize.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem293.Text = "Fluid Reverb Room Size"
+		ToolTipItem287.LeftIndent = 6
+		ToolTipItem287.Text = "Fluidsynth reverb room size"
+		SuperToolTip293.Items.Add(ToolTipTitleItem293)
+		SuperToolTip293.Items.Add(ToolTipItem287)
+		Me.spn_p_midi_fluid_reverb_roomsize.SuperTip = SuperToolTip293
+		Me.spn_p_midi_fluid_reverb_roomsize.TabIndex = 44
+		'
+		'spn_p_midi_fluid_reverb_damping
+		'
+		Me.spn_p_midi_fluid_reverb_damping.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "p_midi_fluid_reverb_damping", True))
+		Me.spn_p_midi_fluid_reverb_damping.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "p_midi_fluid_reverb_damping", True))
+		Me.spn_p_midi_fluid_reverb_damping.EditValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_reverb_damping.Location = New System.Drawing.Point(123, 210)
+		Me.spn_p_midi_fluid_reverb_damping.MKBoundLabel = Me.lbl_p_midi_fluid_reverb_damping
+		Me.spn_p_midi_fluid_reverb_damping.MKEditValue_Compare = Nothing
+		Me.spn_p_midi_fluid_reverb_damping.Name = "spn_p_midi_fluid_reverb_damping"
+		Me.spn_p_midi_fluid_reverb_damping.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+		Me.spn_p_midi_fluid_reverb_damping.Properties.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+		Me.spn_p_midi_fluid_reverb_damping.Properties.Mask.EditMask = "n3"
+		Me.spn_p_midi_fluid_reverb_damping.Properties.Mask.UseMaskAsDisplayFormat = True
+		Me.spn_p_midi_fluid_reverb_damping.Properties.MaxValue = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.spn_p_midi_fluid_reverb_damping.Size = New System.Drawing.Size(62, 20)
+		ToolTipTitleItem296.Text = "Fluid Reverb Damping"
+		ToolTipItem290.LeftIndent = 6
+		ToolTipItem290.Text = "Fluidsynth reverb damping"
+		SuperToolTip296.Items.Add(ToolTipTitleItem296)
+		SuperToolTip296.Items.Add(ToolTipItem290)
+		Me.spn_p_midi_fluid_reverb_damping.SuperTip = SuperToolTip296
+		Me.spn_p_midi_fluid_reverb_damping.TabIndex = 46
+		'
+		'lbl_p_midi_fluid_reverb_damping
+		'
+		Me.lbl_p_midi_fluid_reverb_damping.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_p_midi_fluid_reverb_damping.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_p_midi_fluid_reverb_damping.Location = New System.Drawing.Point(3, 210)
+		Me.lbl_p_midi_fluid_reverb_damping.MKBoundControl1 = Me.spn_p_midi_fluid_reverb_damping
+		Me.lbl_p_midi_fluid_reverb_damping.MKBoundControl2 = Nothing
+		Me.lbl_p_midi_fluid_reverb_damping.MKBoundControl3 = Nothing
+		Me.lbl_p_midi_fluid_reverb_damping.MKBoundControl4 = Nothing
+		Me.lbl_p_midi_fluid_reverb_damping.MKBoundControl5 = Nothing
+		Me.lbl_p_midi_fluid_reverb_damping.Name = "lbl_p_midi_fluid_reverb_damping"
+		Me.lbl_p_midi_fluid_reverb_damping.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem295.Text = "Fluid Reverb Damping"
+		ToolTipItem289.LeftIndent = 6
+		ToolTipItem289.Text = "Fluidsynth reverb damping"
+		SuperToolTip295.Items.Add(ToolTipTitleItem295)
+		SuperToolTip295.Items.Add(ToolTipItem289)
+		Me.lbl_p_midi_fluid_reverb_damping.SuperTip = SuperToolTip295
+		Me.lbl_p_midi_fluid_reverb_damping.TabIndex = 47
+		Me.lbl_p_midi_fluid_reverb_damping.Text = "Fluid Reverb Damping:"
 		'
 		'txb_p_midi_midiconfig
 		'
@@ -7971,12 +9962,12 @@ Partial Class ucr_DOSBox_Config
 		Me.txb_p_midi_midiconfig.MKEditValue_Compare = Nothing
 		Me.txb_p_midi_midiconfig.Name = "txb_p_midi_midiconfig"
 		Me.txb_p_midi_midiconfig.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem233.Text = "MIDI Config"
-		ToolTipItem227.LeftIndent = 6
-		ToolTipItem227.Text = resources.GetString("ToolTipItem227.Text")
-		SuperToolTip233.Items.Add(ToolTipTitleItem233)
-		SuperToolTip233.Items.Add(ToolTipItem227)
-		Me.txb_p_midi_midiconfig.SuperTip = SuperToolTip233
+		ToolTipTitleItem298.Text = "MIDI Config"
+		ToolTipItem292.LeftIndent = 6
+		ToolTipItem292.Text = resources.GetString("ToolTipItem292.Text")
+		SuperToolTip298.Items.Add(ToolTipTitleItem298)
+		SuperToolTip298.Items.Add(ToolTipItem292)
+		Me.txb_p_midi_midiconfig.SuperTip = SuperToolTip298
 		Me.txb_p_midi_midiconfig.TabIndex = 1
 		'
 		'lbl_p_midi_midiconfig
@@ -7991,12 +9982,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_midi_midiconfig.MKBoundControl5 = Nothing
 		Me.lbl_p_midi_midiconfig.Name = "lbl_p_midi_midiconfig"
 		Me.lbl_p_midi_midiconfig.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem232.Text = "MIDI Config"
-		ToolTipItem226.LeftIndent = 6
-		ToolTipItem226.Text = resources.GetString("ToolTipItem226.Text")
-		SuperToolTip232.Items.Add(ToolTipTitleItem232)
-		SuperToolTip232.Items.Add(ToolTipItem226)
-		Me.lbl_p_midi_midiconfig.SuperTip = SuperToolTip232
+		ToolTipTitleItem297.Text = "MIDI Config"
+		ToolTipItem291.LeftIndent = 6
+		ToolTipItem291.Text = resources.GetString("ToolTipItem291.Text")
+		SuperToolTip297.Items.Add(ToolTipTitleItem297)
+		SuperToolTip297.Items.Add(ToolTipItem291)
+		Me.lbl_p_midi_midiconfig.SuperTip = SuperToolTip297
 		Me.lbl_p_midi_midiconfig.TabIndex = 32
 		Me.lbl_p_midi_midiconfig.Text = "MIDI Config:"
 		'
@@ -8018,13 +10009,13 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_p_midi_mididevice.Properties.ShowHeader = False
 		Me.cmb_p_midi_mididevice.Properties.ValueMember = "value"
 		Me.cmb_p_midi_mididevice.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem235.Text = "MIDI Device"
-		ToolTipItem229.LeftIndent = 6
-		ToolTipItem229.Text = "Some patches introduce new types of MIDI devices. This setting overrides the (sta" &
+		ToolTipTitleItem300.Text = "MIDI Device"
+		ToolTipItem294.LeftIndent = 6
+		ToolTipItem294.Text = "Some patches introduce new types of MIDI devices. This setting overrides the (sta" &
 		"ndard) MIDI device setting."
-		SuperToolTip235.Items.Add(ToolTipTitleItem235)
-		SuperToolTip235.Items.Add(ToolTipItem229)
-		Me.cmb_p_midi_mididevice.SuperTip = SuperToolTip235
+		SuperToolTip300.Items.Add(ToolTipTitleItem300)
+		SuperToolTip300.Items.Add(ToolTipItem294)
+		Me.cmb_p_midi_mididevice.SuperTip = SuperToolTip300
 		Me.cmb_p_midi_mididevice.TabIndex = 0
 		'
 		'lbl_p_midi_mididevice
@@ -8039,13 +10030,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_midi_mididevice.MKBoundControl5 = Nothing
 		Me.lbl_p_midi_mididevice.Name = "lbl_p_midi_mididevice"
 		Me.lbl_p_midi_mididevice.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem234.Text = "MIDI Device"
-		ToolTipItem228.LeftIndent = 6
-		ToolTipItem228.Text = "Some patches introduce new types of MIDI devices. This setting overrides the (sta" &
+		ToolTipTitleItem299.Text = "MIDI Device"
+		ToolTipItem293.LeftIndent = 6
+		ToolTipItem293.Text = "Some patches introduce new types of MIDI devices. This setting overrides the (sta" &
 		"ndard) MIDI device setting."
-		SuperToolTip234.Items.Add(ToolTipTitleItem234)
-		SuperToolTip234.Items.Add(ToolTipItem228)
-		Me.lbl_p_midi_mididevice.SuperTip = SuperToolTip234
+		SuperToolTip299.Items.Add(ToolTipTitleItem299)
+		SuperToolTip299.Items.Add(ToolTipItem293)
+		Me.lbl_p_midi_mididevice.SuperTip = SuperToolTip299
 		Me.lbl_p_midi_mididevice.TabIndex = 31
 		Me.lbl_p_midi_mididevice.Text = "MIDI Device:"
 		'
@@ -8056,16 +10047,18 @@ Partial Class ucr_DOSBox_Config
 		Me.BTA_p_midi_mididevice.Connection = Nothing
 		Me.BTA_p_midi_mididevice.DSStream = CType(resources.GetObject("BTA_p_midi_mididevice.DSStream"), System.IO.MemoryStream)
 		Me.BTA_p_midi_mididevice.FillMethod = MKNetLib.FillMethod.ValueList
-		Me.BTA_p_midi_mididevice.FillString = "mt32;synth;timidity"
+		Me.BTA_p_midi_mididevice.FillString = "mt32;synth;timidity;fluidsynth"
 		Me.BTA_p_midi_mididevice.Position = 0
 		Me.BTA_p_midi_mididevice.Transaction = Nothing
 		Me.BTA_p_midi_mididevice.UpdateTablesStream = CType(resources.GetObject("BTA_p_midi_mididevice.UpdateTablesStream"), System.Collections.Generic.List(Of String))
 		'
 		'tpg_SSI_2001_Patches
 		'
+		Me.tpg_SSI_2001_Patches.AllowTouchScroll = True
+		Me.tpg_SSI_2001_Patches.AutoScroll = True
 		Me.tpg_SSI_2001_Patches.Controls.Add(Me.lbl_p_ssi2001)
 		Me.tpg_SSI_2001_Patches.Name = "tpg_SSI_2001_Patches"
-		Me.tpg_SSI_2001_Patches.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_SSI_2001_Patches.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_SSI_2001_Patches.Text = "SSI-2001 (Patches)"
 		'
 		'lbl_p_ssi2001
@@ -8087,9 +10080,11 @@ Partial Class ucr_DOSBox_Config
 		'
 		'tpg_PS1_Audio_Patches
 		'
+		Me.tpg_PS1_Audio_Patches.AllowTouchScroll = True
+		Me.tpg_PS1_Audio_Patches.AutoScroll = True
 		Me.tpg_PS1_Audio_Patches.Controls.Add(Me.lbl_p_ps1audio)
 		Me.tpg_PS1_Audio_Patches.Name = "tpg_PS1_Audio_Patches"
-		Me.tpg_PS1_Audio_Patches.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_PS1_Audio_Patches.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_PS1_Audio_Patches.Text = "PS/1 Audio (Patches)"
 		'
 		'lbl_p_ps1audio
@@ -8111,12 +10106,14 @@ Partial Class ucr_DOSBox_Config
 		'
 		'tpg_Keyboard_Mouse_Patches
 		'
+		Me.tpg_Keyboard_Mouse_Patches.AllowTouchScroll = True
+		Me.tpg_Keyboard_Mouse_Patches.AutoScroll = True
 		Me.tpg_Keyboard_Mouse_Patches.Controls.Add(Me.cmb_p_keyboard_auxdevice)
 		Me.tpg_Keyboard_Mouse_Patches.Controls.Add(Me.chb_p_keyboard_aux)
 		Me.tpg_Keyboard_Mouse_Patches.Controls.Add(Me.lbl_p_keyboard_auxdevice)
 		Me.tpg_Keyboard_Mouse_Patches.Controls.Add(Me.lbl_p_keyboard_aux)
 		Me.tpg_Keyboard_Mouse_Patches.Name = "tpg_Keyboard_Mouse_Patches"
-		Me.tpg_Keyboard_Mouse_Patches.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Keyboard_Mouse_Patches.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Keyboard_Mouse_Patches.Text = "Keyboard & Mouse (Patches)"
 		'
 		'cmb_p_keyboard_auxdevice
@@ -8138,12 +10135,12 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_p_keyboard_auxdevice.Properties.ShowHeader = False
 		Me.cmb_p_keyboard_auxdevice.Properties.ValueMember = "value"
 		Me.cmb_p_keyboard_auxdevice.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem237.Text = "AUX Device"
-		ToolTipItem231.LeftIndent = 6
-		ToolTipItem231.Text = "Type of PS/2 mouse attached to the AUX port."
-		SuperToolTip237.Items.Add(ToolTipTitleItem237)
-		SuperToolTip237.Items.Add(ToolTipItem231)
-		Me.cmb_p_keyboard_auxdevice.SuperTip = SuperToolTip237
+		ToolTipTitleItem302.Text = "AUX Device"
+		ToolTipItem296.LeftIndent = 6
+		ToolTipItem296.Text = "Type of PS/2 mouse attached to the AUX port."
+		SuperToolTip302.Items.Add(ToolTipTitleItem302)
+		SuperToolTip302.Items.Add(ToolTipItem296)
+		Me.cmb_p_keyboard_auxdevice.SuperTip = SuperToolTip302
 		Me.cmb_p_keyboard_auxdevice.TabIndex = 1
 		'
 		'lbl_p_keyboard_auxdevice
@@ -8159,12 +10156,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_keyboard_auxdevice.MKBoundControl5 = Nothing
 		Me.lbl_p_keyboard_auxdevice.Name = "lbl_p_keyboard_auxdevice"
 		Me.lbl_p_keyboard_auxdevice.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem236.Text = "AUX Device"
-		ToolTipItem230.LeftIndent = 6
-		ToolTipItem230.Text = "Type of PS/2 mouse attached to the AUX port."
-		SuperToolTip236.Items.Add(ToolTipTitleItem236)
-		SuperToolTip236.Items.Add(ToolTipItem230)
-		Me.lbl_p_keyboard_auxdevice.SuperTip = SuperToolTip236
+		ToolTipTitleItem301.Text = "AUX Device"
+		ToolTipItem295.LeftIndent = 6
+		ToolTipItem295.Text = "Type of PS/2 mouse attached to the AUX port."
+		SuperToolTip301.Items.Add(ToolTipTitleItem301)
+		SuperToolTip301.Items.Add(ToolTipItem295)
+		Me.lbl_p_keyboard_auxdevice.SuperTip = SuperToolTip301
 		Me.lbl_p_keyboard_auxdevice.TabIndex = 30
 		Me.lbl_p_keyboard_auxdevice.Text = "AUX Device:"
 		'
@@ -8190,12 +10187,12 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_p_keyboard_aux.Name = "chb_p_keyboard_aux"
 		Me.chb_p_keyboard_aux.Properties.Caption = ""
 		Me.chb_p_keyboard_aux.Size = New System.Drawing.Size(24, 19)
-		ToolTipTitleItem239.Text = "AUX Support"
-		ToolTipItem233.LeftIndent = 6
-		ToolTipItem233.Text = resources.GetString("ToolTipItem233.Text")
-		SuperToolTip239.Items.Add(ToolTipTitleItem239)
-		SuperToolTip239.Items.Add(ToolTipItem233)
-		Me.chb_p_keyboard_aux.SuperTip = SuperToolTip239
+		ToolTipTitleItem304.Text = "AUX Support"
+		ToolTipItem298.LeftIndent = 6
+		ToolTipItem298.Text = resources.GetString("ToolTipItem298.Text")
+		SuperToolTip304.Items.Add(ToolTipTitleItem304)
+		SuperToolTip304.Items.Add(ToolTipItem298)
+		Me.chb_p_keyboard_aux.SuperTip = SuperToolTip304
 		Me.chb_p_keyboard_aux.TabIndex = 0
 		'
 		'lbl_p_keyboard_aux
@@ -8210,20 +10207,22 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_keyboard_aux.MKBoundControl5 = Nothing
 		Me.lbl_p_keyboard_aux.Name = "lbl_p_keyboard_aux"
 		Me.lbl_p_keyboard_aux.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem238.Text = "AUX Support"
-		ToolTipItem232.LeftIndent = 6
-		ToolTipItem232.Text = resources.GetString("ToolTipItem232.Text")
-		SuperToolTip238.Items.Add(ToolTipTitleItem238)
-		SuperToolTip238.Items.Add(ToolTipItem232)
-		Me.lbl_p_keyboard_aux.SuperTip = SuperToolTip238
+		ToolTipTitleItem303.Text = "AUX Support"
+		ToolTipItem297.LeftIndent = 6
+		ToolTipItem297.Text = resources.GetString("ToolTipItem297.Text")
+		SuperToolTip303.Items.Add(ToolTipTitleItem303)
+		SuperToolTip303.Items.Add(ToolTipItem297)
+		Me.lbl_p_keyboard_aux.SuperTip = SuperToolTip303
 		Me.lbl_p_keyboard_aux.TabIndex = 30
 		Me.lbl_p_keyboard_aux.Text = "AUX Support:"
 		'
 		'tpg_Parallel_Ports_Patches
 		'
+		Me.tpg_Parallel_Ports_Patches.AllowTouchScroll = True
+		Me.tpg_Parallel_Ports_Patches.AutoScroll = True
 		Me.tpg_Parallel_Ports_Patches.Controls.Add(Me.lbl_p_parallelports)
 		Me.tpg_Parallel_Ports_Patches.Name = "tpg_Parallel_Ports_Patches"
-		Me.tpg_Parallel_Ports_Patches.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_Parallel_Ports_Patches.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_Parallel_Ports_Patches.Text = "Parallel Ports (Patches)"
 		'
 		'lbl_p_parallelports
@@ -8245,6 +10244,8 @@ Partial Class ucr_DOSBox_Config
 		'
 		'tpg_NE2000_Patches
 		'
+		Me.tpg_NE2000_Patches.AllowTouchScroll = True
+		Me.tpg_NE2000_Patches.AutoScroll = True
 		Me.tpg_NE2000_Patches.Controls.Add(Me.btn_p_ne2000_realnic_clear)
 		Me.tpg_NE2000_Patches.Controls.Add(Me.btn_p_ne2000_realnic)
 		Me.tpg_NE2000_Patches.Controls.Add(Me.txb_p_ne2000_realnic)
@@ -8258,7 +10259,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_NE2000_Patches.Controls.Add(Me.lbl_p_ne2000_nicbase)
 		Me.tpg_NE2000_Patches.Controls.Add(Me.lbl_p_ne2000_ne2000)
 		Me.tpg_NE2000_Patches.Name = "tpg_NE2000_Patches"
-		Me.tpg_NE2000_Patches.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_NE2000_Patches.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_NE2000_Patches.Text = "NE-2000 (Patches)"
 		'
 		'btn_p_ne2000_realnic_clear
@@ -8267,13 +10268,13 @@ Partial Class ucr_DOSBox_Config
 		Me.btn_p_ne2000_realnic_clear.Location = New System.Drawing.Point(508, 95)
 		Me.btn_p_ne2000_realnic_clear.Name = "btn_p_ne2000_realnic_clear"
 		Me.btn_p_ne2000_realnic_clear.Size = New System.Drawing.Size(35, 20)
-		SuperToolTip240.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
-		ToolTipTitleItem240.Text = "Clear Real NIC"
-		ToolTipItem234.LeftIndent = 6
-		ToolTipItem234.Text = "Use this button to reset this setting to the default 'list' value."
-		SuperToolTip240.Items.Add(ToolTipTitleItem240)
-		SuperToolTip240.Items.Add(ToolTipItem234)
-		Me.btn_p_ne2000_realnic_clear.SuperTip = SuperToolTip240
+		SuperToolTip305.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
+		ToolTipTitleItem305.Text = "Clear Real NIC"
+		ToolTipItem299.LeftIndent = 6
+		ToolTipItem299.Text = "Use this button to reset this setting to the default 'list' value."
+		SuperToolTip305.Items.Add(ToolTipTitleItem305)
+		SuperToolTip305.Items.Add(ToolTipItem299)
+		Me.btn_p_ne2000_realnic_clear.SuperTip = SuperToolTip305
 		Me.btn_p_ne2000_realnic_clear.TabIndex = 6
 		Me.btn_p_ne2000_realnic_clear.Text = "&clear"
 		'
@@ -8283,13 +10284,13 @@ Partial Class ucr_DOSBox_Config
 		Me.btn_p_ne2000_realnic.Location = New System.Drawing.Point(470, 95)
 		Me.btn_p_ne2000_realnic.Name = "btn_p_ne2000_realnic"
 		Me.btn_p_ne2000_realnic.Size = New System.Drawing.Size(35, 20)
-		SuperToolTip241.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
-		ToolTipTitleItem241.Text = "Select Real NIC"
-		ToolTipItem235.LeftIndent = 6
-		ToolTipItem235.Text = "Use this button to choose from a list of your current network interface devices."
-		SuperToolTip241.Items.Add(ToolTipTitleItem241)
-		SuperToolTip241.Items.Add(ToolTipItem235)
-		Me.btn_p_ne2000_realnic.SuperTip = SuperToolTip241
+		SuperToolTip306.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
+		ToolTipTitleItem306.Text = "Select Real NIC"
+		ToolTipItem300.LeftIndent = 6
+		ToolTipItem300.Text = "Use this button to choose from a list of your current network interface devices."
+		SuperToolTip306.Items.Add(ToolTipTitleItem306)
+		SuperToolTip306.Items.Add(ToolTipItem300)
+		Me.btn_p_ne2000_realnic.SuperTip = SuperToolTip306
 		Me.btn_p_ne2000_realnic.TabIndex = 5
 		Me.btn_p_ne2000_realnic.Text = "..."
 		'
@@ -8304,14 +10305,14 @@ Partial Class ucr_DOSBox_Config
 		Me.txb_p_ne2000_realnic.MKEditValue_Compare = Nothing
 		Me.txb_p_ne2000_realnic.Name = "txb_p_ne2000_realnic"
 		Me.txb_p_ne2000_realnic.Size = New System.Drawing.Size(344, 20)
-		ToolTipTitleItem243.Text = "Real NIC"
-		ToolTipItem237.LeftIndent = 6
-		ToolTipItem237.Text = "This parameter chooses which of your host's NICs the virtual network card is boun" &
+		ToolTipTitleItem308.Text = "Real NIC"
+		ToolTipItem302.LeftIndent = 6
+		ToolTipItem302.Text = "This parameter chooses which of your host's NICs the virtual network card is boun" &
 		"d to. It can either be identified by number or by a part of it's name (i.e. VIA)" &
 		"."
-		SuperToolTip243.Items.Add(ToolTipTitleItem243)
-		SuperToolTip243.Items.Add(ToolTipItem237)
-		Me.txb_p_ne2000_realnic.SuperTip = SuperToolTip243
+		SuperToolTip308.Items.Add(ToolTipTitleItem308)
+		SuperToolTip308.Items.Add(ToolTipItem302)
+		Me.txb_p_ne2000_realnic.SuperTip = SuperToolTip308
 		Me.txb_p_ne2000_realnic.TabIndex = 4
 		'
 		'lbl_p_ne2000_realnic
@@ -8326,14 +10327,14 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_ne2000_realnic.MKBoundControl5 = Nothing
 		Me.lbl_p_ne2000_realnic.Name = "lbl_p_ne2000_realnic"
 		Me.lbl_p_ne2000_realnic.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem242.Text = "Real NIC"
-		ToolTipItem236.LeftIndent = 6
-		ToolTipItem236.Text = "This parameter chooses which of your host's NICs the virtual network card is boun" &
+		ToolTipTitleItem307.Text = "Real NIC"
+		ToolTipItem301.LeftIndent = 6
+		ToolTipItem301.Text = "This parameter chooses which of your host's NICs the virtual network card is boun" &
 		"d to. It can either be identified by number or by a part of it's name (i.e. VIA)" &
 		"."
-		SuperToolTip242.Items.Add(ToolTipTitleItem242)
-		SuperToolTip242.Items.Add(ToolTipItem236)
-		Me.lbl_p_ne2000_realnic.SuperTip = SuperToolTip242
+		SuperToolTip307.Items.Add(ToolTipTitleItem307)
+		SuperToolTip307.Items.Add(ToolTipItem301)
+		Me.lbl_p_ne2000_realnic.SuperTip = SuperToolTip307
 		Me.lbl_p_ne2000_realnic.TabIndex = 16
 		Me.lbl_p_ne2000_realnic.Text = "Real NIC:"
 		'
@@ -8352,14 +10353,14 @@ Partial Class ucr_DOSBox_Config
 		Me.spn_p_ne2000_nicirq.Properties.Mask.EditMask = "N00"
 		Me.spn_p_ne2000_nicirq.Properties.MaxValue = New Decimal(New Integer() {9, 0, 0, 0})
 		Me.spn_p_ne2000_nicirq.Size = New System.Drawing.Size(54, 20)
-		ToolTipTitleItem245.Text = "NIC IRQ"
-		ToolTipItem239.LeftIndent = 6
-		ToolTipItem239.Text = "Interrupt of the network card. 3 is a default value expected by many drivers, how" &
+		ToolTipTitleItem310.Text = "NIC IRQ"
+		ToolTipItem304.LeftIndent = 6
+		ToolTipItem304.Text = "Interrupt of the network card. 3 is a default value expected by many drivers, how" &
 		"ever if you attempt to use the serial port COM2 simultaneously you need to chang" &
 		"e it."
-		SuperToolTip245.Items.Add(ToolTipTitleItem245)
-		SuperToolTip245.Items.Add(ToolTipItem239)
-		Me.spn_p_ne2000_nicirq.SuperTip = SuperToolTip245
+		SuperToolTip310.Items.Add(ToolTipTitleItem310)
+		SuperToolTip310.Items.Add(ToolTipItem304)
+		Me.spn_p_ne2000_nicirq.SuperTip = SuperToolTip310
 		Me.spn_p_ne2000_nicirq.TabIndex = 2
 		'
 		'lbl_p_ne2000_nicirq
@@ -8374,14 +10375,14 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_ne2000_nicirq.MKBoundControl5 = Nothing
 		Me.lbl_p_ne2000_nicirq.Name = "lbl_p_ne2000_nicirq"
 		Me.lbl_p_ne2000_nicirq.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem244.Text = "NIC IRQ"
-		ToolTipItem238.LeftIndent = 6
-		ToolTipItem238.Text = "Interrupt of the network card. 3 is a default value expected by many drivers, how" &
+		ToolTipTitleItem309.Text = "NIC IRQ"
+		ToolTipItem303.LeftIndent = 6
+		ToolTipItem303.Text = "Interrupt of the network card. 3 is a default value expected by many drivers, how" &
 		"ever if you attempt to use the serial port COM2 simultaneously you need to chang" &
 		"e it."
-		SuperToolTip244.Items.Add(ToolTipTitleItem244)
-		SuperToolTip244.Items.Add(ToolTipItem238)
-		Me.lbl_p_ne2000_nicirq.SuperTip = SuperToolTip244
+		SuperToolTip309.Items.Add(ToolTipTitleItem309)
+		SuperToolTip309.Items.Add(ToolTipItem303)
+		Me.lbl_p_ne2000_nicirq.SuperTip = SuperToolTip309
 		Me.lbl_p_ne2000_nicirq.TabIndex = 16
 		Me.lbl_p_ne2000_nicirq.Text = "NIC IRQ:"
 		'
@@ -8397,12 +10398,12 @@ Partial Class ucr_DOSBox_Config
 		Me.txb_p_ne2000_macaddr.Properties.Mask.IgnoreMaskBlank = False
 		Me.txb_p_ne2000_macaddr.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
 		Me.txb_p_ne2000_macaddr.Size = New System.Drawing.Size(136, 20)
-		ToolTipTitleItem247.Text = "MAC Adress"
-		ToolTipItem241.LeftIndent = 6
-		ToolTipItem241.Text = resources.GetString("ToolTipItem241.Text")
-		SuperToolTip247.Items.Add(ToolTipTitleItem247)
-		SuperToolTip247.Items.Add(ToolTipItem241)
-		Me.txb_p_ne2000_macaddr.SuperTip = SuperToolTip247
+		ToolTipTitleItem312.Text = "MAC Adress"
+		ToolTipItem306.LeftIndent = 6
+		ToolTipItem306.Text = resources.GetString("ToolTipItem306.Text")
+		SuperToolTip312.Items.Add(ToolTipTitleItem312)
+		SuperToolTip312.Items.Add(ToolTipItem306)
+		Me.txb_p_ne2000_macaddr.SuperTip = SuperToolTip312
 		Me.txb_p_ne2000_macaddr.TabIndex = 3
 		'
 		'lbl_p_ne2000_macaddr
@@ -8417,12 +10418,12 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_ne2000_macaddr.MKBoundControl5 = Nothing
 		Me.lbl_p_ne2000_macaddr.Name = "lbl_p_ne2000_macaddr"
 		Me.lbl_p_ne2000_macaddr.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem246.Text = "MAC Address"
-		ToolTipItem240.LeftIndent = 6
-		ToolTipItem240.Text = resources.GetString("ToolTipItem240.Text")
-		SuperToolTip246.Items.Add(ToolTipTitleItem246)
-		SuperToolTip246.Items.Add(ToolTipItem240)
-		Me.lbl_p_ne2000_macaddr.SuperTip = SuperToolTip246
+		ToolTipTitleItem311.Text = "MAC Address"
+		ToolTipItem305.LeftIndent = 6
+		ToolTipItem305.Text = resources.GetString("ToolTipItem305.Text")
+		SuperToolTip311.Items.Add(ToolTipTitleItem311)
+		SuperToolTip311.Items.Add(ToolTipItem305)
+		Me.lbl_p_ne2000_macaddr.SuperTip = SuperToolTip311
 		Me.lbl_p_ne2000_macaddr.TabIndex = 16
 		Me.lbl_p_ne2000_macaddr.Text = "MAC Address:"
 		'
@@ -8435,13 +10436,13 @@ Partial Class ucr_DOSBox_Config
 		Me.txb_p_ne2000_nicbase.MKEditValue_Compare = Nothing
 		Me.txb_p_ne2000_nicbase.Name = "txb_p_ne2000_nicbase"
 		Me.txb_p_ne2000_nicbase.Size = New System.Drawing.Size(54, 20)
-		ToolTipTitleItem249.Text = "NIC Base Address"
-		ToolTipItem243.LeftIndent = 6
-		ToolTipItem243.Text = "The base address of the NE-2000 board. Normally there is no need to change this b" &
+		ToolTipTitleItem314.Text = "NIC Base Address"
+		ToolTipItem308.LeftIndent = 6
+		ToolTipItem308.Text = "The base address of the NE-2000 board. Normally there is no need to change this b" &
 		"ut it is good to know for driver installation."
-		SuperToolTip249.Items.Add(ToolTipTitleItem249)
-		SuperToolTip249.Items.Add(ToolTipItem243)
-		Me.txb_p_ne2000_nicbase.SuperTip = SuperToolTip249
+		SuperToolTip314.Items.Add(ToolTipTitleItem314)
+		SuperToolTip314.Items.Add(ToolTipItem308)
+		Me.txb_p_ne2000_nicbase.SuperTip = SuperToolTip314
 		Me.txb_p_ne2000_nicbase.TabIndex = 1
 		'
 		'lbl_p_ne2000_nicbase
@@ -8456,13 +10457,13 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_ne2000_nicbase.MKBoundControl5 = Nothing
 		Me.lbl_p_ne2000_nicbase.Name = "lbl_p_ne2000_nicbase"
 		Me.lbl_p_ne2000_nicbase.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem248.Text = "NIC Base Address"
-		ToolTipItem242.LeftIndent = 6
-		ToolTipItem242.Text = "The base address of the NE-2000 board. Normally there is no need to change this b" &
+		ToolTipTitleItem313.Text = "NIC Base Address"
+		ToolTipItem307.LeftIndent = 6
+		ToolTipItem307.Text = "The base address of the NE-2000 board. Normally there is no need to change this b" &
 		"ut it is good to know for driver installation."
-		SuperToolTip248.Items.Add(ToolTipTitleItem248)
-		SuperToolTip248.Items.Add(ToolTipItem242)
-		Me.lbl_p_ne2000_nicbase.SuperTip = SuperToolTip248
+		SuperToolTip313.Items.Add(ToolTipTitleItem313)
+		SuperToolTip313.Items.Add(ToolTipItem307)
+		Me.lbl_p_ne2000_nicbase.SuperTip = SuperToolTip313
 		Me.lbl_p_ne2000_nicbase.TabIndex = 16
 		Me.lbl_p_ne2000_nicbase.Text = "NIC Base Address:"
 		'
@@ -8476,12 +10477,12 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_p_ne2000_ne2000.Name = "chb_p_ne2000_ne2000"
 		Me.chb_p_ne2000_ne2000.Properties.Caption = ""
 		Me.chb_p_ne2000_ne2000.Size = New System.Drawing.Size(33, 19)
-		ToolTipTitleItem251.Text = "Enable NE-2000"
-		ToolTipItem245.LeftIndent = 6
-		ToolTipItem245.Text = "Enable Ethernet passthrough. Requires (Win)Pcap."
-		SuperToolTip251.Items.Add(ToolTipTitleItem251)
-		SuperToolTip251.Items.Add(ToolTipItem245)
-		Me.chb_p_ne2000_ne2000.SuperTip = SuperToolTip251
+		ToolTipTitleItem316.Text = "Enable NE-2000"
+		ToolTipItem310.LeftIndent = 6
+		ToolTipItem310.Text = "Enable Ethernet passthrough. Requires (Win)Pcap."
+		SuperToolTip316.Items.Add(ToolTipTitleItem316)
+		SuperToolTip316.Items.Add(ToolTipItem310)
+		Me.chb_p_ne2000_ne2000.SuperTip = SuperToolTip316
 		Me.chb_p_ne2000_ne2000.TabIndex = 0
 		'
 		'lbl_p_ne2000_ne2000
@@ -8496,20 +10497,22 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_p_ne2000_ne2000.MKBoundControl5 = Nothing
 		Me.lbl_p_ne2000_ne2000.Name = "lbl_p_ne2000_ne2000"
 		Me.lbl_p_ne2000_ne2000.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem250.Text = "Enable NE-2000"
-		ToolTipItem244.LeftIndent = 6
-		ToolTipItem244.Text = "Enable Ethernet passthrough. Requires (Win)Pcap."
-		SuperToolTip250.Items.Add(ToolTipTitleItem250)
-		SuperToolTip250.Items.Add(ToolTipItem244)
-		Me.lbl_p_ne2000_ne2000.SuperTip = SuperToolTip250
+		ToolTipTitleItem315.Text = "Enable NE-2000"
+		ToolTipItem309.LeftIndent = 6
+		ToolTipItem309.Text = "Enable Ethernet passthrough. Requires (Win)Pcap."
+		SuperToolTip315.Items.Add(ToolTipTitleItem315)
+		SuperToolTip315.Items.Add(ToolTipItem309)
+		Me.lbl_p_ne2000_ne2000.SuperTip = SuperToolTip315
 		Me.lbl_p_ne2000_ne2000.TabIndex = 16
 		Me.lbl_p_ne2000_ne2000.Text = "Enable NE-2000:"
 		'
 		'tpg_IDE_Patches
 		'
+		Me.tpg_IDE_Patches.AllowTouchScroll = True
+		Me.tpg_IDE_Patches.AutoScroll = True
 		Me.tpg_IDE_Patches.Controls.Add(Me.lbl_p_ide)
 		Me.tpg_IDE_Patches.Name = "tpg_IDE_Patches"
-		Me.tpg_IDE_Patches.Size = New System.Drawing.Size(546, 434)
+		Me.tpg_IDE_Patches.Size = New System.Drawing.Size(546, 435)
 		Me.tpg_IDE_Patches.Text = "IDE (Patches)"
 		'
 		'lbl_p_ide
@@ -8581,12 +10584,12 @@ Partial Class ucr_DOSBox_Config
 		Me.btn_Save_Template.Location = New System.Drawing.Point(524, 1)
 		Me.btn_Save_Template.Name = "btn_Save_Template"
 		Me.btn_Save_Template.Size = New System.Drawing.Size(75, 23)
-		ToolTipTitleItem252.Text = "Save"
-		ToolTipItem246.LeftIndent = 6
-		ToolTipItem246.Text = "Save the current DOSBox configuration."
-		SuperToolTip252.Items.Add(ToolTipTitleItem252)
-		SuperToolTip252.Items.Add(ToolTipItem246)
-		Me.btn_Save_Template.SuperTip = SuperToolTip252
+		ToolTipTitleItem317.Text = "Save"
+		ToolTipItem311.LeftIndent = 6
+		ToolTipItem311.Text = "Save the current DOSBox configuration."
+		SuperToolTip317.Items.Add(ToolTipTitleItem317)
+		SuperToolTip317.Items.Add(ToolTipItem311)
+		Me.btn_Save_Template.SuperTip = SuperToolTip317
 		Me.btn_Save_Template.TabIndex = 0
 		Me.btn_Save_Template.Text = "&Save"
 		'
@@ -8596,7 +10599,7 @@ Partial Class ucr_DOSBox_Config
 		Me.pnl_Bottom.Controls.Add(Me.btn_Cancel_Template)
 		Me.pnl_Bottom.Controls.Add(Me.btn_Save_Template)
 		Me.pnl_Bottom.Dock = System.Windows.Forms.DockStyle.Bottom
-		Me.pnl_Bottom.Location = New System.Drawing.Point(0, 514)
+		Me.pnl_Bottom.Location = New System.Drawing.Point(0, 515)
 		Me.pnl_Bottom.Name = "pnl_Bottom"
 		Me.pnl_Bottom.Size = New System.Drawing.Size(682, 26)
 		Me.pnl_Bottom.TabIndex = 2
@@ -8607,13 +10610,13 @@ Partial Class ucr_DOSBox_Config
 		Me.btn_Cancel_Template.Location = New System.Drawing.Point(602, 1)
 		Me.btn_Cancel_Template.Name = "btn_Cancel_Template"
 		Me.btn_Cancel_Template.Size = New System.Drawing.Size(75, 23)
-		ToolTipTitleItem253.Text = "Cancel"
-		ToolTipItem247.LeftIndent = 6
-		ToolTipItem247.Text = "Cancel changes for the current DOSBox Template and revert back to it's previously" &
+		ToolTipTitleItem318.Text = "Cancel"
+		ToolTipItem312.LeftIndent = 6
+		ToolTipItem312.Text = "Cancel changes for the current DOSBox Template and revert back to it's previously" &
 		" saved configuration."
-		SuperToolTip253.Items.Add(ToolTipTitleItem253)
-		SuperToolTip253.Items.Add(ToolTipItem247)
-		Me.btn_Cancel_Template.SuperTip = SuperToolTip253
+		SuperToolTip318.Items.Add(ToolTipTitleItem318)
+		SuperToolTip318.Items.Add(ToolTipItem312)
+		Me.btn_Cancel_Template.SuperTip = SuperToolTip318
 		Me.btn_Cancel_Template.TabIndex = 1
 		Me.btn_Cancel_Template.Text = "&Close"
 		'
@@ -8626,7 +10629,7 @@ Partial Class ucr_DOSBox_Config
 		Me.spltpnl_Main.Panel1.Text = "Panel1"
 		Me.spltpnl_Main.Panel2.Controls.Add(Me.tcl_Dosbox_Config)
 		Me.spltpnl_Main.Panel2.Text = "Panel2"
-		Me.spltpnl_Main.Size = New System.Drawing.Size(682, 462)
+		Me.spltpnl_Main.Size = New System.Drawing.Size(682, 463)
 		Me.spltpnl_Main.SplitterPosition = 125
 		Me.spltpnl_Main.TabIndex = 4
 		Me.spltpnl_Main.Text = "Ctl_MKDXSplitPanel1"
@@ -8645,7 +10648,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tree_Pages.OptionsView.ShowIndicator = False
 		Me.tree_Pages.OptionsView.ShowVertLines = False
 		Me.tree_Pages.ParentFieldName = "id_Owner"
-		Me.tree_Pages.Size = New System.Drawing.Size(125, 462)
+		Me.tree_Pages.Size = New System.Drawing.Size(125, 463)
 		Me.tree_Pages.TabIndex = 0
 		'
 		'colTabName
@@ -9173,6 +11176,76 @@ Partial Class ucr_DOSBox_Config
 		'
 		Me.DataColumn55.ColumnName = "value"
 		'
+		'DataColumn56
+		'
+		Me.DataColumn56.ColumnName = "dispaytext"
+		'
+		'DataTable49
+		'
+		Me.DataTable49.Columns.AddRange(New System.Data.DataColumn() {Me.DataColumn57, Me.DataColumn58})
+		Me.DataTable49.TableName = "Table1"
+		'
+		'DataColumn57
+		'
+		Me.DataColumn57.ColumnName = "value"
+		Me.DataColumn57.DataType = GetType(Long)
+		'
+		'DataColumn58
+		'
+		Me.DataColumn58.ColumnName = "displaytext"
+		'
+		'DataTable50
+		'
+		Me.DataTable50.Columns.AddRange(New System.Data.DataColumn() {Me.DataColumn59})
+		Me.DataTable50.TableName = "Table1"
+		'
+		'DataColumn59
+		'
+		Me.DataColumn59.ColumnName = "value"
+		Me.DataColumn59.DataType = GetType(Long)
+		'
+		'BTA_p_midi_mt32_chunk
+		'
+		Me.BTA_p_midi_mt32_chunk.AllowDelete = True
+		Me.BTA_p_midi_mt32_chunk.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_p_midi_mt32_chunk.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_p_midi_mt32_chunk.Connection = Nothing
+		Me.BTA_p_midi_mt32_chunk.DSStream = CType(resources.GetObject("BTA_p_midi_mt32_chunk.DSStream"), System.IO.MemoryStream)
+		Me.BTA_p_midi_mt32_chunk.FillMethod = MKNetLib.FillMethod.ValueList
+		Me.BTA_p_midi_mt32_chunk.FillString = "2;3;16;99;100"
+		Me.BTA_p_midi_mt32_chunk.Position = 0
+		Me.BTA_p_midi_mt32_chunk.Transaction = Nothing
+		Me.BTA_p_midi_mt32_chunk.UpdateTablesStream = CType(resources.GetObject("BTA_p_midi_mt32_chunk.UpdateTablesStream"), System.Collections.Generic.List(Of String))
+		'
+		'BTA_p_midi_mt32_prebuffer
+		'
+		Me.BTA_p_midi_mt32_prebuffer.AllowDelete = True
+		Me.BTA_p_midi_mt32_prebuffer.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_p_midi_mt32_prebuffer.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_p_midi_mt32_prebuffer.Connection = Nothing
+		Me.BTA_p_midi_mt32_prebuffer.DSStream = CType(resources.GetObject("BTA_p_midi_mt32_prebuffer.DSStream"), System.IO.MemoryStream)
+		Me.BTA_p_midi_mt32_prebuffer.FillMethod = MKNetLib.FillMethod.ValueList
+		Me.BTA_p_midi_mt32_prebuffer.FillString = "3;4;32;199;200"
+		Me.BTA_p_midi_mt32_prebuffer.Position = 0
+		Me.BTA_p_midi_mt32_prebuffer.Transaction = Nothing
+		Me.BTA_p_midi_mt32_prebuffer.UpdateTablesStream = CType(resources.GetObject("BTA_p_midi_mt32_prebuffer.UpdateTablesStream"), System.Collections.Generic.List(Of String))
+		'
+		'DataColumn60
+		'
+		Me.DataColumn60.ColumnName = "displaytext"
+		'
+		'DataTable51
+		'
+		Me.DataTable51.Columns.AddRange(New System.Data.DataColumn() {Me.DataColumn61, Me.DataColumn62})
+		Me.DataTable51.TableName = "Table1"
+		'
+		'DataColumn61
+		'
+		Me.DataColumn61.ColumnName = "value"
+		Me.DataColumn61.DataType = GetType(Long)
+		'
+		'DataColumn62
+		'
+		Me.DataColumn62.ColumnName = "displaytext"
+		'
 		'ucr_DOSBox_Config
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -9182,7 +11255,7 @@ Partial Class ucr_DOSBox_Config
 		Me.Controls.Add(Me.pnl_Top_Templates)
 		Me.Controls.Add(Me.pnl_Top)
 		Me.Name = "ucr_DOSBox_Config"
-		Me.Size = New System.Drawing.Size(682, 540)
+		Me.Size = New System.Drawing.Size(682, 541)
 		CType(Me.tcl_Dosbox_Config, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.tcl_Dosbox_Config.ResumeLayout(False)
 		Me.tpg_DOSBox_Settings.ResumeLayout(False)
@@ -9212,6 +11285,7 @@ Partial Class ucr_DOSBox_Config
 		CType(Me.rb_cpu_cycles_fixed.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.rb_cpu_cycles_max.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.rb_cpu_cycles_auto.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.txb_p_midi_fluid_soundfont.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.tpg_Memory.ResumeLayout(False)
 		CType(Me.spn_ml_loadfix.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.chb_ml_useloadfix.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -9365,15 +11439,20 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_Memory_Patches.ResumeLayout(False)
 		CType(Me.spn_p_dosbox_memsizekb.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.tpg_Video_Patches.ResumeLayout(False)
+		Me.tpg_Video_Patches.PerformLayout()
+		CType(Me.cmb_p_voodoo_voodoomem.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BTA_p_voodoo_voodoomem, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.chb_p_glide_splash.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.cmb_p_glide_glide.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.BTA_p_glide_glide, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_sdl_surfacenp_sharpness.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.spn_p_vsync_vsyncrate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.spn_p_dosbox_forcerate_specific.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.rb_p_dosbox_forcerate_specific.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.rb_p_dosbox_forcerate_pal.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.rb_p_dosbox_forcerate_ntsc.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.rb_p_dosbox_forcerate_disabled.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.chb_p_sdl_surface_collapse_dbl.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.chb_p_render_autofit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.chb_p_sdl_pixelshader_forced.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.txb_p_sdl_pixelshader.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -9392,6 +11471,8 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_Sound_Patches.ResumeLayout(False)
 		CType(Me.chb_p_mixer_swapstereo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.tpg_Sound_Blaster_Patches.ResumeLayout(False)
+		CType(Me.cmb_p_sblaster_oplemu.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BTA_p_sblaster_oplemu, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.chb_p_sblaster_goldplay.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.cmb_p_sblaster_hardwarebase.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.BTA_p_sblaster_hardwarebase, System.ComponentModel.ISupportInitialize).EndInit()
@@ -9399,16 +11480,51 @@ Partial Class ucr_DOSBox_Config
 		CType(Me.BTA_p_sblaster_oplmode, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.cmb_p_sblaster_sbtype.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.tpg_MIDI_Patches.ResumeLayout(False)
-		CType(Me.spn_p_midi_mt32_partials.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.spn_p_midi_mt32_reverb_level.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.spn_p_midi_mt32_reverb_time.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.cmb_p_midi_mt32_reverb_mode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.BTA_p_midi_mt32_reverb_mode, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.tcl_p_midi, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.tcl_p_midi.ResumeLayout(False)
+		Me.tpg_p_midi_mt32.ResumeLayout(False)
 		CType(Me.cmb_p_midi_mt32_dac.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.BTA_p_midi_mt32_dac, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.chb_p_midi_mt32_thread.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.chb_p_midi_mt32_verbose.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.chb_p_midi_mt32_niceampramp.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.chb_p_midi_mt32_reverse_stereo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.chb_p_midi_mt32_verbose.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.cmb_p_midi_mt32_src_quality.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BTA_p_midi_mt32_src_quality, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.chb_p_midi_mt32_thread.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.cmb_p_midi_mt32_reverb_mode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BTA_p_midi_mt32_reverb_mode, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.cmb_p_midi_mt32_rate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BTA_p_midi_mt32_rate, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_midi_mt32_reverb_time.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_midi_mt32_reverb_level.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.cmb_p_midi_mt32_partials.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BTA_p_midi_mt32_partials, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_midi_mt32_prebuffer.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_midi_mt32_chunk.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.cmb_p_midi_mt32_analog.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BTA_p_midi_mt32_analog, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.txb_p_midi_mt32_romdir.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.tpg_p_midi_fluidsynth.ResumeLayout(False)
+		CType(Me.chb_p_midi_fluid_reverb.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_midi_fluid_polyphony.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.cmb_p_midi_fluid_chorus_type.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BTA_p_midi_fluid_chorus_type, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_midi_fluid_periods.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_midi_fluid_periodsize.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_midi_fluid_chorus_depth.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_midi_fluid_chorus_speed.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_midi_fluid_chorus_level.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_midi_fluid_chorus_number.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.cmb_p_midi_fluid_samplerate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BTA_p_midi_fluid_samplerate, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.chb_p_midi_fluid_chorus.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_midi_fluid_gain.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_midi_fluid_reverb_level.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.cmb_p_midi_fluid_cores.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BTA_p_midi_fluid_cores, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_midi_fluid_reverb_width.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_midi_fluid_reverb_roomsize.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.spn_p_midi_fluid_reverb_damping.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.txb_p_midi_midiconfig.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.cmb_p_midi_mididevice.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.BTA_p_midi_mididevice, System.ComponentModel.ISupportInitialize).EndInit()
@@ -9487,6 +11603,11 @@ Partial Class ucr_DOSBox_Config
 		CType(Me.DataTable47, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.DataTable48, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.BS_DOSBox_Configs_Compare, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.DataTable49, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.DataTable50, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BTA_p_midi_mt32_chunk, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BTA_p_midi_mt32_prebuffer, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.DataTable51, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.ResumeLayout(False)
 
 	End Sub
@@ -9935,7 +12056,6 @@ Partial Class ucr_DOSBox_Config
 	Friend WithEvents BTA_p_midi_mididevice As MKNetLib.cmp_MKBindableTableAdapter
 	Friend WithEvents DataTable46 As System.Data.DataTable
 	Friend WithEvents DataColumn52 As System.Data.DataColumn
-	Friend WithEvents spn_p_midi_mt32_partials As MKNetDXLib.ctl_MKDXSpinEdit
 	Friend WithEvents spn_p_midi_mt32_reverb_level As MKNetDXLib.ctl_MKDXSpinEdit
 	Friend WithEvents spn_p_midi_mt32_reverb_time As MKNetDXLib.ctl_MKDXSpinEdit
 	Friend WithEvents cmb_p_midi_mt32_reverb_mode As MKNetDXLib.ctl_MKDXLookupEdit
@@ -9975,7 +12095,96 @@ Partial Class ucr_DOSBox_Config
 	Friend WithEvents BS_DOSBox_Configs_Compare As System.Windows.Forms.BindingSource
 	Friend WithEvents txb_autoexec_after As MKNetDXLib.ctl_MKDXMemoEdit
 	Friend WithEvents txb_autoexec_before As MKNetDXLib.ctl_MKDXMemoEdit
-	Friend WithEvents Ctl_MKDXLabel1 As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents lbl_autoexec_after As MKNetDXLib.ctl_MKDXLabel
 	Friend WithEvents lbl_autoexec_before As MKNetDXLib.ctl_MKDXLabel
-
+	Friend WithEvents cmb_p_voodoo_voodoomem As MKNetDXLib.ctl_MKDXLookupEdit
+	Friend WithEvents lbl_p_voodoo_voodoomem As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents BTA_p_voodoo_voodoomem As MKNetLib.cmp_MKBindableTableAdapter
+	Friend WithEvents lbl_p_sdl_surfacenp_sharpness_percent As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents spn_p_sdl_surfacenp_sharpness As MKNetDXLib.ctl_MKDXSpinEdit
+	Friend WithEvents lbl_p_sdl_surfacenp_sharpness As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents chb_p_sdl_surface_collapse_dbl As MKNetDXLib.ctl_MKDXCheckEdit
+	Friend WithEvents lbl_p_sdl_surface_collapse_dbl As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents cmb_p_sblaster_oplemu As MKNetDXLib.ctl_MKDXLookupEdit
+	Friend WithEvents lbl_p_sblaster_oplemu As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents BTA_p_sblaster_oplemu As MKNetLib.cmp_MKBindableTableAdapter
+	Friend WithEvents txb_p_midi_fluid_soundfont As MKNetDXLib.ctl_MKDXTextEdit
+	Friend WithEvents lbl_p_midi_fluid_soundfont As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents btn_p_midi_fluid_soundfont As MKNetDXLib.ctl_MKDXSimpleButton
+	Friend WithEvents cmb_p_midi_fluid_samplerate As MKNetDXLib.ctl_MKDXLookupEdit
+	Friend WithEvents lbl_p_midi_fluid_samplerate As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents BTA_p_midi_fluid_samplerate As MKNetLib.cmp_MKBindableTableAdapter
+	Friend WithEvents spn_p_midi_fluid_gain As MKNetDXLib.ctl_MKDXSpinEdit
+	Friend WithEvents lbl_p_midi_fluid_gain As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents spn_p_midi_fluid_polyphony As MKNetDXLib.ctl_MKDXSpinEdit
+	Friend WithEvents lbl_p_midi_fluid_polyphony As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents cmb_p_midi_fluid_cores As MKNetDXLib.ctl_MKDXLookupEdit
+	Friend WithEvents lbl_p_midi_fluid_cores As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents BTA_p_midi_fluid_cores As MKNetLib.cmp_MKBindableTableAdapter
+	Friend WithEvents spn_p_midi_fluid_periods As MKNetDXLib.ctl_MKDXSpinEdit
+	Friend WithEvents lbl_p_midi_fluid_periods As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents spn_p_midi_fluid_periodsize As MKNetDXLib.ctl_MKDXSpinEdit
+	Friend WithEvents lbl_p_midi_fluid_periodsize As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents spn_p_midi_fluid_reverb_width As MKNetDXLib.ctl_MKDXSpinEdit
+	Friend WithEvents lbl_p_midi_fluid_reverb_width As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents spn_p_midi_fluid_reverb_damping As MKNetDXLib.ctl_MKDXSpinEdit
+	Friend WithEvents lbl_p_midi_fluid_reverb_damping As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents spn_p_midi_fluid_reverb_roomsize As MKNetDXLib.ctl_MKDXSpinEdit
+	Friend WithEvents lbl_p_midi_fluid_reverb_roomsize As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents chb_p_midi_fluid_reverb As MKNetDXLib.ctl_MKDXCheckEdit
+	Friend WithEvents lbl_p_midi_fluid_reverb As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents spn_p_midi_fluid_reverb_level As MKNetDXLib.ctl_MKDXSpinEdit
+	Friend WithEvents lbl_p_midi_fluid_reverb_level As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents spn_p_midi_fluid_chorus_depth As MKNetDXLib.ctl_MKDXSpinEdit
+	Friend WithEvents lbl_p_midi_fluid_chorus_depth As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents spn_p_midi_fluid_chorus_speed As MKNetDXLib.ctl_MKDXSpinEdit
+	Friend WithEvents lbl_p_midi_fluid_chorus_speed As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents spn_p_midi_fluid_chorus_level As MKNetDXLib.ctl_MKDXSpinEdit
+	Friend WithEvents lbl_p_midi_fluid_chorus_level As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents spn_p_midi_fluid_chorus_number As MKNetDXLib.ctl_MKDXSpinEdit
+	Friend WithEvents lbl_p_midi_fluid_chorus_number As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents chb_p_midi_fluid_chorus As MKNetDXLib.ctl_MKDXCheckEdit
+	Friend WithEvents lbl_p_midi_fluid_chorus As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents cmb_p_midi_fluid_chorus_type As MKNetDXLib.ctl_MKDXLookupEdit
+	Friend WithEvents lbl_p_midi_fluid_chorus_type As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents BTA_p_midi_fluid_chorus_type As MKNetLib.cmp_MKBindableTableAdapter
+	Friend WithEvents DataColumn56 As DataColumn
+	Friend WithEvents DataTable49 As DataTable
+	Friend WithEvents DataColumn57 As DataColumn
+	Friend WithEvents DataColumn58 As DataColumn
+	Friend WithEvents lbl_p_midi_fluid_chorus_depth_ms As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents lbl_p_midi_fluid_chorus_speed_hz As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents cmb_p_midi_mt32_partials As MKNetDXLib.ctl_MKDXLookupEdit
+	Friend WithEvents BTA_p_midi_mt32_partials As MKNetLib.cmp_MKBindableTableAdapter
+	Friend WithEvents DataTable50 As DataTable
+	Friend WithEvents DataColumn59 As DataColumn
+	Friend WithEvents txb_p_midi_mt32_romdir As MKNetDXLib.ctl_MKDXTextEdit
+	Friend WithEvents lbl_p_midi_mt32_romdir As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents btn_p_midi_mt32_romdir As MKNetDXLib.ctl_MKDXSimpleButton
+	Friend WithEvents lbl_p_midi_mt32_chunk As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents BTA_p_midi_mt32_chunk As MKNetLib.cmp_MKBindableTableAdapter
+	Friend WithEvents lbl_p_midi_mt32_prebuffer As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents BTA_p_midi_mt32_prebuffer As MKNetLib.cmp_MKBindableTableAdapter
+	Friend WithEvents lbl_p_midi_mt32_prebuffer_ms As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents spn_p_midi_mt32_prebuffer As MKNetDXLib.ctl_MKDXSpinEdit
+	Friend WithEvents spn_p_midi_mt32_chunk As MKNetDXLib.ctl_MKDXSpinEdit
+	Friend WithEvents lbl_p_midi_mt32_chunk_ms As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents cmb_p_midi_mt32_analog As MKNetDXLib.ctl_MKDXLookupEdit
+	Friend WithEvents lbl_p_midi_mt32_analog As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents BTA_p_midi_mt32_analog As MKNetLib.cmp_MKBindableTableAdapter
+	Friend WithEvents chb_p_midi_mt32_niceampramp As MKNetDXLib.ctl_MKDXCheckEdit
+	Friend WithEvents lbl_p_midi_mt32_niceampramp As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents cmb_p_midi_mt32_src_quality As MKNetDXLib.ctl_MKDXLookupEdit
+	Friend WithEvents lbl_p_midi_mt32_src_quality As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents cmb_p_midi_mt32_rate As MKNetDXLib.ctl_MKDXLookupEdit
+	Friend WithEvents lbl_p_midi_mt32_rate As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents BTA_p_midi_mt32_rate As MKNetLib.cmp_MKBindableTableAdapter
+	Friend WithEvents tcl_p_midi As MKNetDXLib.ctl_MKDXTabControl
+	Friend WithEvents tpg_p_midi_mt32 As DevExpress.XtraTab.XtraTabPage
+	Friend WithEvents tpg_p_midi_fluidsynth As DevExpress.XtraTab.XtraTabPage
+	Friend WithEvents DataColumn60 As DataColumn
+	Friend WithEvents BTA_p_midi_mt32_src_quality As MKNetLib.cmp_MKBindableTableAdapter
+	Friend WithEvents DataTable51 As DataTable
+	Friend WithEvents DataColumn61 As DataColumn
+	Friend WithEvents DataColumn62 As DataColumn
 End Class

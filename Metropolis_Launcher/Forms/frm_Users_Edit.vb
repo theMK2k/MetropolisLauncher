@@ -53,7 +53,7 @@
 
 	Private Sub btn_OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_OK.Click
 		If Me._tbl_Users.Select("Username = " & TC.getSQLFormat(Me.txb_Username.EditValue) & " AND id_Users <> " & Me._id_Users).Length > 0 Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("This Username is already used, please choose another one.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+			MKDXHelper.MessageBox("This Username is already used, please choose another one.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 			Return
 		End If
 

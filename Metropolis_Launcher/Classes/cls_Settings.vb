@@ -93,7 +93,7 @@
 
 	Public Shared Function Check_DOSBox_CWD(Optional ByRef tran As SQLite.SQLiteTransaction = Nothing) As Boolean
 		If Not Alphaleonis.Win32.Filesystem.Directory.Exists(Get_DOSBox_CWD(tran)) Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("The DOSBox Working Directory cannot be found, please set one up in the Settings section!", "DOSBox Working Directory not found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+			MKDXHelper.MessageBox("The DOSBox Working Directory cannot be found, please set one up in the Settings section!", "DOSBox Working Directory not found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 			Return False
 		End If
 
@@ -141,8 +141,8 @@ Public Class cls_Skins
 
 	Public Shared Sub LoadSkin(ByVal index As Integer)
 		Try
-            MKNetDXLib.cls_MKDXSkin.LoadSkin(Skins(index, 0))
-        Catch ex As Exception
+			MKNetDXLib.cls_MKDXSkin.LoadSkin(Skins(index, 0))
+		Catch ex As Exception
 
 		End Try
 	End Sub

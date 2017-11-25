@@ -45,6 +45,7 @@ Partial Class frm_ROMBase_Manager
 		Me.colmd5 = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.colsha1 = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.colCustomIdentifier = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.coldeprecated = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.Ctl_MKDXSplitter1 = New MKNetDXLib.ctl_MKDXSplitter()
 		Me.pnl_Right = New MKNetDXLib.ctl_MKDXPanel()
 		Me.grd_Moby_Releases = New MKNetDXLib.ctl_MKDXGrid()
@@ -55,6 +56,8 @@ Partial Class frm_ROMBase_Manager
 		Me.colcreated = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.colDeveloper = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.colPublisher = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.coldeprecated1 = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.colcompilation = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.BS_Moby_Platforms_gv2 = New System.Windows.Forms.BindingSource(Me.components)
 		Me.barmng = New MKNetDXLib.ctl_MKDXBarManager()
 		Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
@@ -78,8 +81,6 @@ Partial Class frm_ROMBase_Manager
 		Me.bbi_Add_Games_from_DAT = New DevExpress.XtraBars.BarButtonItem()
 		Me.popmnu_Rombase = New MKNetDXLib.cmp_MKDXPopupMenu()
 		Me.popmnu_Moby_Games = New MKNetDXLib.cmp_MKDXPopupMenu()
-		Me.coldeprecated = New DevExpress.XtraGrid.Columns.GridColumn()
-		Me.coldeprecated1 = New DevExpress.XtraGrid.Columns.GridColumn()
 		CType(Me.pnl_Left, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.pnl_Left.SuspendLayout()
 		CType(Me.cmb_Platform.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -113,7 +114,7 @@ Partial Class frm_ROMBase_Manager
 		Me.pnl_Left.Dock = System.Windows.Forms.DockStyle.Left
 		Me.pnl_Left.Location = New System.Drawing.Point(0, 0)
 		Me.pnl_Left.Name = "pnl_Left"
-		Me.pnl_Left.Size = New System.Drawing.Size(497, 669)
+		Me.pnl_Left.Size = New System.Drawing.Size(497, 661)
 		Me.pnl_Left.TabIndex = 0
 		'
 		'btn_Save
@@ -184,7 +185,7 @@ Partial Class frm_ROMBase_Manager
 		Me.grd_DAT.MainView = Me.gv_DAT
 		Me.grd_DAT.Name = "grd_DAT"
 		Me.grd_DAT.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Moby_Release, Me.rpi_Moby_Platforms_gv1})
-		Me.grd_DAT.Size = New System.Drawing.Size(491, 640)
+		Me.grd_DAT.Size = New System.Drawing.Size(491, 632)
 		Me.grd_DAT.TabIndex = 2
 		Me.grd_DAT.UseEmbeddedNavigator = True
 		Me.grd_DAT.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_DAT})
@@ -299,11 +300,20 @@ Partial Class frm_ROMBase_Manager
 		Me.colCustomIdentifier.OptionsColumn.AllowEdit = False
 		Me.colCustomIdentifier.OptionsColumn.ReadOnly = True
 		'
+		'coldeprecated
+		'
+		Me.coldeprecated.FieldName = "deprecated"
+		Me.coldeprecated.Name = "coldeprecated"
+		Me.coldeprecated.OptionsColumn.AllowEdit = False
+		Me.coldeprecated.OptionsColumn.ReadOnly = True
+		Me.coldeprecated.ToolTip = "indicates that the MobyGame link may be deprecated (nothing really to worry here," &
+		" the meta data is still there)"
+		'
 		'Ctl_MKDXSplitter1
 		'
 		Me.Ctl_MKDXSplitter1.Location = New System.Drawing.Point(497, 0)
 		Me.Ctl_MKDXSplitter1.Name = "Ctl_MKDXSplitter1"
-		Me.Ctl_MKDXSplitter1.Size = New System.Drawing.Size(5, 669)
+		Me.Ctl_MKDXSplitter1.Size = New System.Drawing.Size(5, 661)
 		Me.Ctl_MKDXSplitter1.TabIndex = 1
 		Me.Ctl_MKDXSplitter1.TabStop = False
 		'
@@ -314,7 +324,7 @@ Partial Class frm_ROMBase_Manager
 		Me.pnl_Right.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.pnl_Right.Location = New System.Drawing.Point(502, 0)
 		Me.pnl_Right.Name = "pnl_Right"
-		Me.pnl_Right.Size = New System.Drawing.Size(512, 669)
+		Me.pnl_Right.Size = New System.Drawing.Size(482, 661)
 		Me.pnl_Right.TabIndex = 2
 		'
 		'grd_Moby_Releases
@@ -332,14 +342,14 @@ Partial Class frm_ROMBase_Manager
 		Me.grd_Moby_Releases.Location = New System.Drawing.Point(3, 26)
 		Me.grd_Moby_Releases.MainView = Me.gv_Moby_Releases
 		Me.grd_Moby_Releases.Name = "grd_Moby_Releases"
-		Me.grd_Moby_Releases.Size = New System.Drawing.Size(505, 640)
+		Me.grd_Moby_Releases.Size = New System.Drawing.Size(475, 632)
 		Me.grd_Moby_Releases.TabIndex = 0
 		Me.grd_Moby_Releases.UseEmbeddedNavigator = True
 		Me.grd_Moby_Releases.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Moby_Releases})
 		'
 		'gv_Moby_Releases
 		'
-		Me.gv_Moby_Releases.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colGamename, Me.colHighlighted, Me.colYear, Me.colcreated, Me.colDeveloper, Me.colPublisher, Me.coldeprecated1})
+		Me.gv_Moby_Releases.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colGamename, Me.colHighlighted, Me.colYear, Me.colcreated, Me.colDeveloper, Me.colPublisher, Me.coldeprecated1, Me.colcompilation})
 		Me.gv_Moby_Releases.GridControl = Me.grd_Moby_Releases
 		Me.gv_Moby_Releases.Name = "gv_Moby_Releases"
 		Me.gv_Moby_Releases.OptionsBehavior.AllowIncrementalSearch = True
@@ -402,6 +412,26 @@ Partial Class frm_ROMBase_Manager
 		Me.colPublisher.Visible = True
 		Me.colPublisher.VisibleIndex = 4
 		'
+		'coldeprecated1
+		'
+		Me.coldeprecated1.FieldName = "deprecated"
+		Me.coldeprecated1.Name = "coldeprecated1"
+		Me.coldeprecated1.OptionsColumn.AllowEdit = False
+		Me.coldeprecated1.OptionsColumn.ReadOnly = True
+		Me.coldeprecated1.ToolTip = "indicates that the MobyGame may be deprecated (nothing really to worry here, the " &
+		"meta data is still there)"
+		'
+		'colcompilation
+		'
+		Me.colcompilation.Caption = "Compilation"
+		Me.colcompilation.FieldName = "compilation"
+		Me.colcompilation.Name = "colcompilation"
+		Me.colcompilation.OptionsColumn.AllowEdit = False
+		Me.colcompilation.OptionsColumn.ReadOnly = True
+		Me.colcompilation.ToolTip = "indicates that this is a compilation of multiple games"
+		Me.colcompilation.Visible = True
+		Me.colcompilation.VisibleIndex = 5
+		'
 		'BS_Moby_Platforms_gv2
 		'
 		Me.BS_Moby_Platforms_gv2.DataMember = "tbl_Moby_Platforms"
@@ -422,28 +452,28 @@ Partial Class frm_ROMBase_Manager
 		Me.barDockControlTop.CausesValidation = False
 		Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
 		Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-		Me.barDockControlTop.Size = New System.Drawing.Size(1014, 0)
+		Me.barDockControlTop.Size = New System.Drawing.Size(984, 0)
 		'
 		'barDockControlBottom
 		'
 		Me.barDockControlBottom.CausesValidation = False
 		Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-		Me.barDockControlBottom.Location = New System.Drawing.Point(0, 669)
-		Me.barDockControlBottom.Size = New System.Drawing.Size(1014, 0)
+		Me.barDockControlBottom.Location = New System.Drawing.Point(0, 661)
+		Me.barDockControlBottom.Size = New System.Drawing.Size(984, 0)
 		'
 		'barDockControlLeft
 		'
 		Me.barDockControlLeft.CausesValidation = False
 		Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
 		Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
-		Me.barDockControlLeft.Size = New System.Drawing.Size(0, 669)
+		Me.barDockControlLeft.Size = New System.Drawing.Size(0, 661)
 		'
 		'barDockControlRight
 		'
 		Me.barDockControlRight.CausesValidation = False
 		Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-		Me.barDockControlRight.Location = New System.Drawing.Point(1014, 0)
-		Me.barDockControlRight.Size = New System.Drawing.Size(0, 669)
+		Me.barDockControlRight.Location = New System.Drawing.Point(984, 0)
+		Me.barDockControlRight.Size = New System.Drawing.Size(0, 661)
 		'
 		'bbi_Copy_Name_to_Clipboard
 		'
@@ -567,27 +597,9 @@ Partial Class frm_ROMBase_Manager
 		Me.popmnu_Moby_Games.Manager = Me.barmng
 		Me.popmnu_Moby_Games.Name = "popmnu_Moby_Games"
 		'
-		'coldeprecated
-		'
-		Me.coldeprecated.FieldName = "deprecated"
-		Me.coldeprecated.Name = "coldeprecated"
-		Me.coldeprecated.OptionsColumn.AllowEdit = False
-		Me.coldeprecated.OptionsColumn.ReadOnly = True
-		Me.coldeprecated.ToolTip = "indicates that the MobyGame link may be deprecated (nothing really to worry here," &
-		" the meta data is still there)"
-		'
-		'coldeprecated1
-		'
-		Me.coldeprecated1.FieldName = "deprecated"
-		Me.coldeprecated1.Name = "coldeprecated1"
-		Me.coldeprecated1.OptionsColumn.AllowEdit = False
-		Me.coldeprecated1.OptionsColumn.ReadOnly = True
-		Me.coldeprecated1.ToolTip = "indicates that the MobyGame link may be deprecated (nothing really to worry here," &
-		" the meta data is still there)"
-		'
 		'frm_ROMBase_Manager
 		'
-		Me.ClientSize = New System.Drawing.Size(1014, 669)
+		Me.ClientSize = New System.Drawing.Size(984, 661)
 		Me.Controls.Add(Me.pnl_Right)
 		Me.Controls.Add(Me.Ctl_MKDXSplitter1)
 		Me.Controls.Add(Me.pnl_Left)
@@ -681,4 +693,5 @@ Partial Class frm_ROMBase_Manager
 	Friend WithEvents colPublisher As DevExpress.XtraGrid.Columns.GridColumn
 	Friend WithEvents coldeprecated As DevExpress.XtraGrid.Columns.GridColumn
 	Friend WithEvents coldeprecated1 As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents colcompilation As DevExpress.XtraGrid.Columns.GridColumn
 End Class

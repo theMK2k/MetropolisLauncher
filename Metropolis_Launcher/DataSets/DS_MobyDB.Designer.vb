@@ -3407,6 +3407,8 @@ Partial Public Class DS_MobyDB
         
         Private columnid_Moby_Platforms As Global.System.Data.DataColumn
         
+        Private columnMoby_Platforms_URLPart As Global.System.Data.DataColumn
+        
         Private columnSoundex As Global.System.Data.DataColumn
         
         Private columnMoby_Games_URLPart As Global.System.Data.DataColumn
@@ -3427,7 +3429,11 @@ Partial Public Class DS_MobyDB
         
         Private columnPublisher As Global.System.Data.DataColumn
         
+        Private columnPlatform As Global.System.Data.DataColumn
+        
         Private columndeprecated As Global.System.Data.DataColumn
+        
+        Private columncompilation As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -3485,6 +3491,14 @@ Partial Public Class DS_MobyDB
         Public ReadOnly Property id_Moby_PlatformsColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnid_Moby_Platforms
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Moby_Platforms_URLPartColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMoby_Platforms_URLPart
             End Get
         End Property
         
@@ -3570,9 +3584,25 @@ Partial Public Class DS_MobyDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PlatformColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPlatform
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property deprecatedColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columndeprecated
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property compilationColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncompilation
             End Get
         End Property
         
@@ -3613,9 +3643,26 @@ Partial Public Class DS_MobyDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addsrc_Moby_ReleasesRow(ByVal id_Moby_Releases As Long, ByVal Gamename As String, ByVal id_Moby_Platforms As Long, ByVal Soundex As String, ByVal Moby_Games_URLPart As String, ByVal Year As String, ByVal created As Date, ByVal Highlighted As Boolean, ByVal tmp_Gamename_Filtered As String, ByVal Developer_id_Moby_Companies As Long, ByVal Developer As String, ByVal Publisher_id_Moby_Companies As Long, ByVal Publisher As String, ByVal deprecated As Boolean) As src_Moby_ReleasesRow
+        Public Overloads Function Addsrc_Moby_ReleasesRow( _
+                    ByVal id_Moby_Releases As Long,  _
+                    ByVal Gamename As String,  _
+                    ByVal id_Moby_Platforms As Long,  _
+                    ByVal Moby_Platforms_URLPart As String,  _
+                    ByVal Soundex As String,  _
+                    ByVal Moby_Games_URLPart As String,  _
+                    ByVal Year As String,  _
+                    ByVal created As Date,  _
+                    ByVal Highlighted As Boolean,  _
+                    ByVal tmp_Gamename_Filtered As String,  _
+                    ByVal Developer_id_Moby_Companies As Long,  _
+                    ByVal Developer As String,  _
+                    ByVal Publisher_id_Moby_Companies As Long,  _
+                    ByVal Publisher As String,  _
+                    ByVal Platform As String,  _
+                    ByVal deprecated As Boolean,  _
+                    ByVal compilation As Boolean) As src_Moby_ReleasesRow
             Dim rowsrc_Moby_ReleasesRow As src_Moby_ReleasesRow = CType(Me.NewRow,src_Moby_ReleasesRow)
-            Dim columnValuesArray() As Object = New Object() {id_Moby_Releases, Gamename, id_Moby_Platforms, Soundex, Moby_Games_URLPart, Year, created, Highlighted, tmp_Gamename_Filtered, Developer_id_Moby_Companies, Developer, Publisher_id_Moby_Companies, Publisher, deprecated}
+            Dim columnValuesArray() As Object = New Object() {id_Moby_Releases, Gamename, id_Moby_Platforms, Moby_Platforms_URLPart, Soundex, Moby_Games_URLPart, Year, created, Highlighted, tmp_Gamename_Filtered, Developer_id_Moby_Companies, Developer, Publisher_id_Moby_Companies, Publisher, Platform, deprecated, compilation}
             rowsrc_Moby_ReleasesRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowsrc_Moby_ReleasesRow)
             Return rowsrc_Moby_ReleasesRow
@@ -3641,6 +3688,7 @@ Partial Public Class DS_MobyDB
             Me.columnid_Moby_Releases = MyBase.Columns("id_Moby_Releases")
             Me.columnGamename = MyBase.Columns("Gamename")
             Me.columnid_Moby_Platforms = MyBase.Columns("id_Moby_Platforms")
+            Me.columnMoby_Platforms_URLPart = MyBase.Columns("Moby_Platforms_URLPart")
             Me.columnSoundex = MyBase.Columns("Soundex")
             Me.columnMoby_Games_URLPart = MyBase.Columns("Moby_Games_URLPart")
             Me.columnYear = MyBase.Columns("Year")
@@ -3651,7 +3699,9 @@ Partial Public Class DS_MobyDB
             Me.columnDeveloper = MyBase.Columns("Developer")
             Me.columnPublisher_id_Moby_Companies = MyBase.Columns("Publisher_id_Moby_Companies")
             Me.columnPublisher = MyBase.Columns("Publisher")
+            Me.columnPlatform = MyBase.Columns("Platform")
             Me.columndeprecated = MyBase.Columns("deprecated")
+            Me.columncompilation = MyBase.Columns("compilation")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3663,6 +3713,8 @@ Partial Public Class DS_MobyDB
             MyBase.Columns.Add(Me.columnGamename)
             Me.columnid_Moby_Platforms = New Global.System.Data.DataColumn("id_Moby_Platforms", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_Moby_Platforms)
+            Me.columnMoby_Platforms_URLPart = New Global.System.Data.DataColumn("Moby_Platforms_URLPart", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMoby_Platforms_URLPart)
             Me.columnSoundex = New Global.System.Data.DataColumn("Soundex", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnSoundex)
             Me.columnMoby_Games_URLPart = New Global.System.Data.DataColumn("Moby_Games_URLPart", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -3683,8 +3735,12 @@ Partial Public Class DS_MobyDB
             MyBase.Columns.Add(Me.columnPublisher_id_Moby_Companies)
             Me.columnPublisher = New Global.System.Data.DataColumn("Publisher", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPublisher)
+            Me.columnPlatform = New Global.System.Data.DataColumn("Platform", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPlatform)
             Me.columndeprecated = New Global.System.Data.DataColumn("deprecated", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndeprecated)
+            Me.columncompilation = New Global.System.Data.DataColumn("compilation", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncompilation)
             Me.columnHighlighted.DefaultValue = CType(false,Boolean)
         End Sub
         
@@ -5018,6 +5074,22 @@ Partial Public Class DS_MobyDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Moby_Platforms_URLPart() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_Moby_Releases.Moby_Platforms_URLPartColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Moby_Platforms_URLPart in Tabelle src_Moby_Releases ist DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_Moby_Releases.Moby_Platforms_URLPartColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Soundex() As String
             Get
                 Try 
@@ -5171,6 +5243,21 @@ Partial Public Class DS_MobyDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Platform() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_Moby_Releases.PlatformColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Platform in Tabelle src_Moby_Releases ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_Moby_Releases.PlatformColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property deprecated() As Boolean
             Get
                 Try 
@@ -5181,6 +5268,21 @@ Partial Public Class DS_MobyDB
             End Get
             Set
                 Me(Me.tablesrc_Moby_Releases.deprecatedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property compilation() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_Moby_Releases.compilationColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte compilation in Tabelle src_Moby_Releases ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_Moby_Releases.compilationColumn) = value
             End Set
         End Property
         
@@ -5218,6 +5320,18 @@ Partial Public Class DS_MobyDB
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Setid_Moby_PlatformsNull()
             Me(Me.tablesrc_Moby_Releases.id_Moby_PlatformsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMoby_Platforms_URLPartNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_Moby_Releases.Moby_Platforms_URLPartColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMoby_Platforms_URLPartNull()
+            Me(Me.tablesrc_Moby_Releases.Moby_Platforms_URLPartColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5342,6 +5456,18 @@ Partial Public Class DS_MobyDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPlatformNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_Moby_Releases.PlatformColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPlatformNull()
+            Me(Me.tablesrc_Moby_Releases.PlatformColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsdeprecatedNull() As Boolean
             Return Me.IsNull(Me.tablesrc_Moby_Releases.deprecatedColumn)
         End Function
@@ -5350,6 +5476,18 @@ Partial Public Class DS_MobyDB
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetdeprecatedNull()
             Me(Me.tablesrc_Moby_Releases.deprecatedColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscompilationNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_Moby_Releases.compilationColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcompilationNull()
+            Me(Me.tablesrc_Moby_Releases.compilationColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     

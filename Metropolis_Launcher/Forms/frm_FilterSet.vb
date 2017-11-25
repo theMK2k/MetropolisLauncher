@@ -154,12 +154,12 @@
 
 	Private Sub btn_OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_OK.Click
 		If TC.IsNullNothingOrEmpty(Me.txb_Name.EditValue) Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("Please provide a name of the filterset.", "Name is missing", MessageBoxButtons.OK)
+			MKDXHelper.MessageBox("Please provide a name of the filterset.", "Name is missing", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 			Return
 		End If
 
 		If 0 < DataAccess.FireProcedureReturnScalar(cls_Globals.Conn, 0, "SELECT COUNT(1) FROM tbl_FilterSets WHERE [Name] = " & TC.getSQLFormat(txb_Name.EditValue) & IIf(TC.NZ(Me.id_FilterSet, 0) > 0, " AND id_FilterSets <> " & TC.getSQLFormat(Me.id_FilterSet), "")) Then
-			DevExpress.XtraEditors.XtraMessageBox.Show("The name is already used.", "Name is used", MessageBoxButtons.OK)
+			MKDXHelper.MessageBox("The name is already used.", "Name is used", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 			Return
 		End If
 

@@ -12,7 +12,7 @@
   <xs:element name="DS_Rombase" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_Rombase" msprop:Generator_UserDSName="DS_Rombase">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tbl_Rombase" msprop:Generator_TableClassName="tbl_RombaseDataTable" msprop:Generator_TableVarName="tabletbl_Rombase" msprop:Generator_TablePropName="tbl_Rombase" msprop:Generator_RowDeletingName="tbl_RombaseRowDeleting" msprop:Generator_RowChangingName="tbl_RombaseRowChanging" msprop:Generator_RowEvHandlerName="tbl_RombaseRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_RombaseRowDeleted" msprop:Generator_UserTableName="tbl_Rombase" msprop:Generator_RowChangedName="tbl_RombaseRowChanged" msprop:Generator_RowEvArgName="tbl_RombaseRowChangeEvent" msprop:Generator_RowClassName="tbl_RombaseRow">
+        <xs:element name="tbl_Rombase" msprop:Generator_TableClassName="tbl_RombaseDataTable" msprop:Generator_TableVarName="tabletbl_Rombase" msprop:Generator_RowChangedName="tbl_RombaseRowChanged" msprop:Generator_TablePropName="tbl_Rombase" msprop:Generator_RowDeletingName="tbl_RombaseRowDeleting" msprop:Generator_RowChangingName="tbl_RombaseRowChanging" msprop:Generator_RowEvHandlerName="tbl_RombaseRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_RombaseRowDeleted" msprop:Generator_RowClassName="tbl_RombaseRow" msprop:Generator_UserTableName="tbl_Rombase" msprop:Generator_RowEvArgName="tbl_RombaseRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_rombase" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_rombase" msprop:Generator_ColumnPropNameInRow="id_rombase" msprop:Generator_ColumnPropNameInTable="id_rombaseColumn" msprop:Generator_UserColumnName="id_rombase" type="xs:long" />
@@ -55,11 +55,64 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="tbl_Rombase_Known_Emulators" msprop:Generator_TableClassName="tbl_Rombase_Known_EmulatorsDataTable" msprop:Generator_TableVarName="tabletbl_Rombase_Known_Emulators" msprop:Generator_RowChangedName="tbl_Rombase_Known_EmulatorsRowChanged" msprop:Generator_TablePropName="tbl_Rombase_Known_Emulators" msprop:Generator_RowDeletingName="tbl_Rombase_Known_EmulatorsRowDeleting" msprop:Generator_RowChangingName="tbl_Rombase_Known_EmulatorsRowChanging" msprop:Generator_RowEvHandlerName="tbl_Rombase_Known_EmulatorsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Rombase_Known_EmulatorsRowDeleted" msprop:Generator_RowClassName="tbl_Rombase_Known_EmulatorsRow" msprop:Generator_UserTableName="tbl_Rombase_Known_Emulators" msprop:Generator_RowEvArgName="tbl_Rombase_Known_EmulatorsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Rombase_Known_Emulators" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Rombase_Known_Emulators" msprop:Generator_ColumnPropNameInRow="id_Rombase_Known_Emulators" msprop:Generator_ColumnPropNameInTable="id_Rombase_Known_EmulatorsColumn" msprop:Generator_UserColumnName="id_Rombase_Known_Emulators" type="xs:long" />
+              <xs:element name="Identifier" msprop:Generator_ColumnVarNameInTable="columnIdentifier" msprop:Generator_ColumnPropNameInRow="Identifier" msprop:Generator_ColumnPropNameInTable="IdentifierColumn" msprop:Generator_UserColumnName="Identifier" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="Autoconfig_Note" msprop:Generator_ColumnVarNameInTable="columnAutoconfig_Note" msprop:Generator_ColumnPropNameInRow="Autoconfig_Note" msprop:Generator_ColumnPropNameInTable="Autoconfig_NoteColumn" msprop:Generator_UserColumnName="Autoconfig_Note" type="xs:string" minOccurs="0" />
+              <xs:element name="Exe_Identifier_Regex" msprop:Generator_ColumnVarNameInTable="columnExe_Identifier_Regex" msprop:Generator_ColumnPropNameInRow="Exe_Identifier_Regex" msprop:Generator_ColumnPropNameInTable="Exe_Identifier_RegexColumn" msprop:Generator_UserColumnName="Exe_Identifier_Regex" type="xs:string" minOccurs="0" />
+              <xs:element name="URL_Website" msprop:Generator_ColumnVarNameInTable="columnURL_Website" msprop:Generator_ColumnPropNameInRow="URL_Website" msprop:Generator_ColumnPropNameInTable="URL_WebsiteColumn" msprop:Generator_UserColumnName="URL_Website" type="xs:string" minOccurs="0" />
+              <xs:element name="URL_Download" msprop:Generator_ColumnVarNameInTable="columnURL_Download" msprop:Generator_ColumnPropNameInRow="URL_Download" msprop:Generator_ColumnPropNameInTable="URL_DownloadColumn" msprop:Generator_UserColumnName="URL_Download" type="xs:string" minOccurs="0" />
+              <xs:element name="StartupParameter" msprop:Generator_ColumnVarNameInTable="columnStartupParameter" msprop:Generator_ColumnPropNameInRow="StartupParameter" msprop:Generator_ColumnPropNameInTable="StartupParameterColumn" msprop:Generator_UserColumnName="StartupParameter" type="xs:string" minOccurs="0" />
+              <xs:element name="ScreenshotDirectory" msprop:Generator_ColumnVarNameInTable="columnScreenshotDirectory" msprop:Generator_ColumnPropNameInRow="ScreenshotDirectory" msprop:Generator_ColumnPropNameInTable="ScreenshotDirectoryColumn" msprop:Generator_UserColumnName="ScreenshotDirectory" type="xs:string" minOccurs="0" />
+              <xs:element name="id_List_Generators" msprop:Generator_ColumnVarNameInTable="columnid_List_Generators" msprop:Generator_ColumnPropNameInRow="id_List_Generators" msprop:Generator_ColumnPropNameInTable="id_List_GeneratorsColumn" msprop:Generator_UserColumnName="id_List_Generators" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Rombase_Known_Emulators_Moby_Platforms" msprop:Generator_TableClassName="tbl_Rombase_Known_Emulators_Moby_PlatformsDataTable" msprop:Generator_TableVarName="tabletbl_Rombase_Known_Emulators_Moby_Platforms" msprop:Generator_RowChangedName="tbl_Rombase_Known_Emulators_Moby_PlatformsRowChanged" msprop:Generator_TablePropName="tbl_Rombase_Known_Emulators_Moby_Platforms" msprop:Generator_RowDeletingName="tbl_Rombase_Known_Emulators_Moby_PlatformsRowDeleting" msprop:Generator_RowChangingName="tbl_Rombase_Known_Emulators_Moby_PlatformsRowChanging" msprop:Generator_RowEvHandlerName="tbl_Rombase_Known_Emulators_Moby_PlatformsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Rombase_Known_Emulators_Moby_PlatformsRowDeleted" msprop:Generator_RowClassName="tbl_Rombase_Known_Emulators_Moby_PlatformsRow" msprop:Generator_UserTableName="tbl_Rombase_Known_Emulators_Moby_Platforms" msprop:Generator_RowEvArgName="tbl_Rombase_Known_Emulators_Moby_PlatformsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Rombase_Known_Emulators_Moby_Platforms" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Rombase_Known_Emulators_Moby_Platforms" msprop:Generator_ColumnPropNameInRow="id_Rombase_Known_Emulators_Moby_Platforms" msprop:Generator_ColumnPropNameInTable="id_Rombase_Known_Emulators_Moby_PlatformsColumn" msprop:Generator_UserColumnName="id_Rombase_Known_Emulators_Moby_Platforms" type="xs:long" />
+              <xs:element name="id_Rombase_Known_Emulators" msprop:Generator_ColumnVarNameInTable="columnid_Rombase_Known_Emulators" msprop:Generator_ColumnPropNameInRow="id_Rombase_Known_Emulators" msprop:Generator_ColumnPropNameInTable="id_Rombase_Known_EmulatorsColumn" msprop:Generator_UserColumnName="id_Rombase_Known_Emulators" type="xs:long" minOccurs="0" />
+              <xs:element name="id_Moby_Platforms" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Platforms" msprop:Generator_ColumnPropNameInRow="id_Moby_Platforms" msprop:Generator_ColumnPropNameInTable="id_Moby_PlatformsColumn" msprop:Generator_UserColumnName="id_Moby_Platforms" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="src_frm_Known_Emulators_Moby_Platforms" msprop:Generator_TableClassName="src_frm_Known_Emulators_Moby_PlatformsDataTable" msprop:Generator_TableVarName="tablesrc_frm_Known_Emulators_Moby_Platforms" msprop:Generator_RowChangedName="src_frm_Known_Emulators_Moby_PlatformsRowChanged" msprop:Generator_TablePropName="src_frm_Known_Emulators_Moby_Platforms" msprop:Generator_RowDeletingName="src_frm_Known_Emulators_Moby_PlatformsRowDeleting" msprop:Generator_RowChangingName="src_frm_Known_Emulators_Moby_PlatformsRowChanging" msprop:Generator_RowEvHandlerName="src_frm_Known_Emulators_Moby_PlatformsRowChangeEventHandler" msprop:Generator_RowDeletedName="src_frm_Known_Emulators_Moby_PlatformsRowDeleted" msprop:Generator_RowClassName="src_frm_Known_Emulators_Moby_PlatformsRow" msprop:Generator_UserTableName="src_frm_Known_Emulators_Moby_Platforms" msprop:Generator_RowEvArgName="src_frm_Known_Emulators_Moby_PlatformsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Moby_Platforms" msprop:Generator_ColumnVarNameInTable="columnid_Moby_Platforms" msprop:Generator_ColumnPropNameInRow="id_Moby_Platforms" msprop:Generator_ColumnPropNameInTable="id_Moby_PlatformsColumn" msprop:Generator_UserColumnName="id_Moby_Platforms" type="xs:int" minOccurs="0" />
+              <xs:element name="Supported" msprop:Generator_ColumnVarNameInTable="columnSupported" msprop:Generator_ColumnPropNameInRow="Supported" msprop:Generator_ColumnPropNameInTable="SupportedColumn" msprop:Generator_UserColumnName="Supported" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Display_Name" msprop:Generator_ColumnVarNameInTable="columnDisplay_Name" msprop:Generator_ColumnPropNameInRow="Display_Name" msprop:Generator_ColumnPropNameInTable="Display_NameColumn" msprop:Generator_UserColumnName="Display_Name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_Rombase_Known_Emulators_Multivolume_Parameters" msprop:Generator_TableClassName="tbl_Rombase_Known_Emulators_Multivolume_ParametersDataTable" msprop:Generator_TableVarName="tabletbl_Rombase_Known_Emulators_Multivolume_Parameters" msprop:Generator_RowChangedName="tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChanged" msprop:Generator_TablePropName="tbl_Rombase_Known_Emulators_Multivolume_Parameters" msprop:Generator_RowDeletingName="tbl_Rombase_Known_Emulators_Multivolume_ParametersRowDeleting" msprop:Generator_RowChangingName="tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChanging" msprop:Generator_RowEvHandlerName="tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Rombase_Known_Emulators_Multivolume_ParametersRowDeleted" msprop:Generator_RowClassName="tbl_Rombase_Known_Emulators_Multivolume_ParametersRow" msprop:Generator_UserTableName="tbl_Rombase_Known_Emulators_Multivolume_Parameters" msprop:Generator_RowEvArgName="tbl_Rombase_Known_Emulators_Multivolume_ParametersRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Rombase_Known_Emulators_Multivolume_Parameters" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="id_Emulators_Multivolume_Parameters" msprop:Generator_ColumnVarNameInTable="columnid_Rombase_Known_Emulators_Multivolume_Parameters" msprop:Generator_ColumnPropNameInRow="id_Rombase_Known_Emulators_Multivolume_Parameters" msprop:Generator_ColumnPropNameInTable="id_Rombase_Known_Emulators_Multivolume_ParametersColumn" msprop:Generator_UserColumnName="id_Rombase_Known_Emulators_Multivolume_Parameters" type="xs:long" />
+              <xs:element name="id_Rombase_Known_Emulators" msdata:Caption="id_Emulators" msprop:Generator_ColumnVarNameInTable="columnid_Rombase_Known_Emulators" msprop:Generator_ColumnPropNameInRow="id_Rombase_Known_Emulators" msprop:Generator_ColumnPropNameInTable="id_Rombase_Known_EmulatorsColumn" msprop:Generator_UserColumnName="id_Rombase_Known_Emulators" type="xs:long" minOccurs="0" />
+              <xs:element name="Volume_Number" msprop:Generator_ColumnVarNameInTable="columnVolume_Number" msprop:Generator_ColumnPropNameInRow="Volume_Number" msprop:Generator_ColumnPropNameInTable="Volume_NumberColumn" msprop:Generator_UserColumnName="Volume_Number" type="xs:long" minOccurs="0" />
+              <xs:element name="Parameter" msprop:Generator_ColumnVarNameInTable="columnParameter" msprop:Generator_ColumnPropNameInRow="Parameter" msprop:Generator_ColumnPropNameInTable="ParameterColumn" msprop:Generator_UserColumnName="Parameter" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:tbl_Rombase" />
       <xs:field xpath="mstns:id_rombase" />
+    </xs:unique>
+    <xs:unique name="tbl_Rombase_Known_Emulators_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:tbl_Rombase_Known_Emulators" />
+      <xs:field xpath="mstns:id_Rombase_Known_Emulators" />
+    </xs:unique>
+    <xs:unique name="tbl_Rombase_Known_Emulators_Moby_Platforms_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:tbl_Rombase_Known_Emulators_Moby_Platforms" />
+      <xs:field xpath="mstns:id_Rombase_Known_Emulators_Moby_Platforms" />
     </xs:unique>
   </xs:element>
 </xs:schema>

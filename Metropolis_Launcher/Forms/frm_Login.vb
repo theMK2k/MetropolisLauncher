@@ -46,7 +46,7 @@
 		If Not _IgnorePassword Then
 			If TC.NZ(BS_Users.Current("Password"), "") <> "" Then
 				If cls_Globals.Encode_Password(TC.NZ(txb_Password.EditValue, "")) <> BS_Users.Current("Password") Then
-					DevExpress.XtraEditors.XtraMessageBox.Show("The password is not correct.", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+					MKDXHelper.MessageBox("The password is not correct.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 					Return
 				End If
 			End If

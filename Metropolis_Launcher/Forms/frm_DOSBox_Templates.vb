@@ -39,7 +39,7 @@ Public Class frm_DOSBox_Templates
 		If ucr_DOSBox_Config.HasChanges Then
 			Dim res As DialogResult = Windows.Forms.DialogResult.Yes
 			If ShowMessage Then
-				res = DevExpress.XtraEditors.XtraMessageBox.Show(Message_Text, Message_Title, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+				res = MKDXHelper.MessageBox(Message_Text, Message_Title, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
 			End If
 
 			If res = Windows.Forms.DialogResult.Yes Then
@@ -79,7 +79,7 @@ Public Class frm_DOSBox_Templates
 			End Using
 
 			If TC.NZ(DataAccess.FireProcedureReturnScalar(cls_Globals.Conn, 0, "SELECT COUNT(1) FROM main.tbl_DOSBox_Configs WHERE Displayname = " & TC.getSQLFormat(sNewTemplateName)), 0) > 0 Then
-				Dim res As DialogResult = DevExpress.XtraEditors.XtraMessageBox.Show("There already exists a Template with the name '" & sNewTemplateName & "'. Do you really want to create a template with the same name?", "Add Template", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+				Dim res As DialogResult = MKDXHelper.MessageBox("There already exists a Template with the name '" & sNewTemplateName & "'. Do you really want to create a template with the same name?", "Add Template", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
 				If res = Windows.Forms.DialogResult.Cancel Then
 					Return
 				End If
@@ -106,7 +106,7 @@ Public Class frm_DOSBox_Templates
 
 		If TC.NZ(BS_DOSBox_Configs.Current("id_Rombase_DOSBox_Configs"), 0) <> 0 Then
 			Cursor = Cursors.Default
-			DevExpress.XtraEditors.XtraMessageBox.Show("This template cannot be deleted because it is part of the Metropolis Launcher installation. You can however modify it as you like.", "Delete Template", MessageBoxButtons.OK, MessageBoxIcon.Information)
+			MKDXHelper.MessageBox("This template cannot be deleted because it is part of the Metropolis Launcher installation. You can however modify it as you like.", "Delete Template", MessageBoxButtons.OK, MessageBoxIcon.Information)
 			Return
 		End If
 
@@ -114,7 +114,7 @@ Public Class frm_DOSBox_Templates
 
 		Cursor = Cursors.Default
 
-		If DevExpress.XtraEditors.XtraMessageBox.Show("Do you really want to delete template '" & BS_DOSBox_Configs.Current("Displayname") & "'?" & IIf(iNumChildren > 0, ControlChars.CrLf & ControlChars.CrLf & "WARNING: " & iNumChildren & " DOSBox configurations rely on this template and will be assigned to the Default Template!", ""), "Delete Template", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+		If MKDXHelper.MessageBox("Do you really want to delete template '" & BS_DOSBox_Configs.Current("Displayname") & "'?" & IIf(iNumChildren > 0, ControlChars.CrLf & ControlChars.CrLf & "WARNING: " & iNumChildren & " DOSBox configurations rely on this template and will be assigned to the Default Template!", ""), "Delete Template", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
 			Cursor = Cursors.WaitCursor
 
 			Dim id_Rombase_DOSBox_Configs As Integer = TC.NZ(DataAccess.FireProcedureReturnScalar(cls_Globals.Conn, 0, "SELECT id_Rombase_DOSBox_Configs FROM rombase.tbl_Rombase_DOSBox_Configs WHERE isDefault = 1 LIMIT 1"), 0)
@@ -123,12 +123,12 @@ Public Class frm_DOSBox_Templates
 
 			If id_DOSBox_Configs = 0 Then
 				Cursor = Cursors.Default
-				DevExpress.XtraEditors.XtraMessageBox.Show("Error: unable to find the Default Template, aborting.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+				MKDXHelper.MessageBox("Error: unable to find the Default Template, aborting.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 				Return
 			Else
 				If Not DataAccess.FireProcedure(cls_Globals.Conn, 0, "UPDATE tbl_Emu_Games SET id_DOSBox_Configs_Template = " & TC.getSQLFormat(id_DOSBox_Configs) & " WHERE id_DOSBox_Configs_Template = " & TC.getSQLFormat(BS_DOSBox_Configs.Current("id_DOSBox_Configs"))) Then
 					Cursor = Cursors.Default
-					DevExpress.XtraEditors.XtraMessageBox.Show("Error: can't assign the Default Template, aborting.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+					MKDXHelper.MessageBox("Error: can't assign the Default Template, aborting.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 					Return
 				End If
 			End If
@@ -156,7 +156,7 @@ Public Class frm_DOSBox_Templates
 			End Using
 
 			If TC.NZ(DataAccess.FireProcedureReturnScalar(cls_Globals.Conn, 0, "SELECT COUNT(1) FROM main.tbl_DOSBox_Configs WHERE Displayname = " & TC.getSQLFormat(sNewTemplateName)), 0) > 0 Then
-				Dim res As DialogResult = DevExpress.XtraEditors.XtraMessageBox.Show("There already exists a Template with the name '" & sNewTemplateName & "'. Do you really want to create a template with the same name?", "Add Template", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+				Dim res As DialogResult = MKDXHelper.MessageBox("There already exists a Template with the name '" & sNewTemplateName & "'. Do you really want to create a template with the same name?", "Add Template", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
 				If res = Windows.Forms.DialogResult.Cancel Then
 					Return
 				End If

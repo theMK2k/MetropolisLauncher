@@ -45,6 +45,7 @@ Partial Class frm_Moby_Auto_Link
 		Me.colMatch_Moby_created = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
 		Me.colPublisher1 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
 		Me.colMatch_Moby_Gamename_Filtered = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
+		Me.coldeprecated = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
 		Me.rpi_Moby_Release = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
 		Me.rpi_Moby_Platforms_gv1 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
 		Me.grd_Moby_Releases = New MKNetDXLib.ctl_MKDXGrid()
@@ -56,6 +57,8 @@ Partial Class frm_Moby_Auto_Link
 		Me.colHighlighted = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.colYear = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.colcreated = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.colDeprecated1 = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.colPlatform = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.lbl_Moby_Releases = New MKNetDXLib.ctl_MKDXLabel()
 		Me.btn_Cancel = New MKNetDXLib.ctl_MKDXSimpleButton()
 		Me.btn_OK = New MKNetDXLib.ctl_MKDXSimpleButton()
@@ -69,8 +72,6 @@ Partial Class frm_Moby_Auto_Link
 		Me.bbi_Apply_False = New DevExpress.XtraBars.BarButtonItem()
 		Me.popmnu_Moby_Games = New MKNetDXLib.cmp_MKDXPopupMenu()
 		Me.popmnu_Link = New MKNetDXLib.cmp_MKDXPopupMenu()
-		Me.coldeprecated = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-		Me.colDeprecated1 = New DevExpress.XtraGrid.Columns.GridColumn()
 		CType(Me.pnl_Main, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.pnl_Main.SuspendLayout()
 		CType(Me.spltpnl_Main, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -105,7 +106,7 @@ Partial Class frm_Moby_Auto_Link
 		Me.lbl_Explanation.MKBoundControl5 = Nothing
 		Me.lbl_Explanation.Name = "lbl_Explanation"
 		Me.lbl_Explanation.Padding = New System.Windows.Forms.Padding(3)
-		Me.lbl_Explanation.Size = New System.Drawing.Size(1065, 6)
+		Me.lbl_Explanation.Size = New System.Drawing.Size(984, 6)
 		Me.lbl_Explanation.TabIndex = 8
 		'
 		'pnl_Main
@@ -117,7 +118,7 @@ Partial Class frm_Moby_Auto_Link
 		Me.pnl_Main.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.pnl_Main.Location = New System.Drawing.Point(0, 6)
 		Me.pnl_Main.Name = "pnl_Main"
-		Me.pnl_Main.Size = New System.Drawing.Size(1065, 723)
+		Me.pnl_Main.Size = New System.Drawing.Size(984, 655)
 		Me.pnl_Main.TabIndex = 1
 		'
 		'spltpnl_Main
@@ -133,7 +134,7 @@ Partial Class frm_Moby_Auto_Link
 		Me.spltpnl_Main.Panel2.Controls.Add(Me.grd_Moby_Releases)
 		Me.spltpnl_Main.Panel2.Controls.Add(Me.lbl_Moby_Releases)
 		Me.spltpnl_Main.Panel2.Text = "Panel2"
-		Me.spltpnl_Main.Size = New System.Drawing.Size(1058, 691)
+		Me.spltpnl_Main.Size = New System.Drawing.Size(977, 623)
 		Me.spltpnl_Main.SplitterPosition = 324
 		Me.spltpnl_Main.TabIndex = 11
 		Me.spltpnl_Main.Text = "Ctl_MKDXSplitPanel1"
@@ -152,7 +153,7 @@ Partial Class frm_Moby_Auto_Link
 		Me.grd_Moby_Auto_Link.MainView = Me.abgvMoby_Auto_Link
 		Me.grd_Moby_Auto_Link.Name = "grd_Moby_Auto_Link"
 		Me.grd_Moby_Auto_Link.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Moby_Release, Me.rpi_Moby_Platforms_gv1, Me.rpi_Apply})
-		Me.grd_Moby_Auto_Link.Size = New System.Drawing.Size(729, 691)
+		Me.grd_Moby_Auto_Link.Size = New System.Drawing.Size(648, 623)
 		Me.grd_Moby_Auto_Link.TabIndex = 3
 		Me.grd_Moby_Auto_Link.UseEmbeddedNavigator = True
 		Me.grd_Moby_Auto_Link.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.abgvMoby_Auto_Link})
@@ -346,6 +347,15 @@ Partial Class frm_Moby_Auto_Link
 		Me.colMatch_Moby_Gamename_Filtered.Visible = True
 		Me.colMatch_Moby_Gamename_Filtered.Width = 208
 		'
+		'coldeprecated
+		'
+		Me.coldeprecated.FieldName = "deprecated"
+		Me.coldeprecated.Name = "coldeprecated"
+		Me.coldeprecated.OptionsColumn.AllowEdit = False
+		Me.coldeprecated.OptionsColumn.ReadOnly = True
+		Me.coldeprecated.ToolTip = "indicates that the MobyGame link may be deprecated (nothing really to worry here," &
+		" the meta data is still there)"
+		'
 		'rpi_Moby_Release
 		'
 		Me.rpi_Moby_Release.AutoHeight = False
@@ -376,14 +386,14 @@ Partial Class frm_Moby_Auto_Link
 		Me.grd_Moby_Releases.Location = New System.Drawing.Point(0, 42)
 		Me.grd_Moby_Releases.MainView = Me.gv_Moby_Releases
 		Me.grd_Moby_Releases.Name = "grd_Moby_Releases"
-		Me.grd_Moby_Releases.Size = New System.Drawing.Size(324, 649)
+		Me.grd_Moby_Releases.Size = New System.Drawing.Size(324, 581)
 		Me.grd_Moby_Releases.TabIndex = 4
 		Me.grd_Moby_Releases.UseEmbeddedNavigator = True
 		Me.grd_Moby_Releases.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Moby_Releases})
 		'
 		'gv_Moby_Releases
 		'
-		Me.gv_Moby_Releases.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colPublisher, Me.colDeveloper, Me.GridColumn1, Me.colHighlighted, Me.colYear, Me.colcreated, Me.colDeprecated1})
+		Me.gv_Moby_Releases.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colPublisher, Me.colDeveloper, Me.GridColumn1, Me.colHighlighted, Me.colYear, Me.colcreated, Me.colDeprecated1, Me.colPlatform})
 		Me.gv_Moby_Releases.GridControl = Me.grd_Moby_Releases
 		Me.gv_Moby_Releases.Name = "gv_Moby_Releases"
 		Me.gv_Moby_Releases.OptionsBehavior.AllowIncrementalSearch = True
@@ -448,6 +458,26 @@ Partial Class frm_Moby_Auto_Link
 		Me.colcreated.VisibleIndex = 5
 		Me.colcreated.Width = 99
 		'
+		'colDeprecated1
+		'
+		Me.colDeprecated1.Caption = "deprecated"
+		Me.colDeprecated1.FieldName = "deprecated"
+		Me.colDeprecated1.Name = "colDeprecated1"
+		Me.colDeprecated1.OptionsColumn.AllowEdit = False
+		Me.colDeprecated1.OptionsColumn.ReadOnly = True
+		Me.colDeprecated1.ToolTip = "indicates that the MobyGame link may be deprecated (nothing really to worry here," &
+		" the meta data is still there)"
+		Me.colDeprecated1.Visible = True
+		Me.colDeprecated1.VisibleIndex = 0
+		'
+		'colPlatform
+		'
+		Me.colPlatform.Caption = "Platform"
+		Me.colPlatform.FieldName = "Platform"
+		Me.colPlatform.Name = "colPlatform"
+		Me.colPlatform.OptionsColumn.AllowEdit = False
+		Me.colPlatform.OptionsColumn.ReadOnly = True
+		'
 		'lbl_Moby_Releases
 		'
 		Me.lbl_Moby_Releases.Appearance.Font = New System.Drawing.Font("Segoe UI", 16.0!)
@@ -468,7 +498,7 @@ Partial Class frm_Moby_Auto_Link
 		'
 		Me.btn_Cancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-		Me.btn_Cancel.Location = New System.Drawing.Point(987, 697)
+		Me.btn_Cancel.Location = New System.Drawing.Point(906, 629)
 		Me.btn_Cancel.Name = "btn_Cancel"
 		Me.btn_Cancel.Size = New System.Drawing.Size(75, 23)
 		Me.btn_Cancel.TabIndex = 10
@@ -478,7 +508,7 @@ Partial Class frm_Moby_Auto_Link
 		'
 		Me.btn_OK.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.btn_OK.DialogResult = System.Windows.Forms.DialogResult.OK
-		Me.btn_OK.Location = New System.Drawing.Point(909, 697)
+		Me.btn_OK.Location = New System.Drawing.Point(828, 629)
 		Me.btn_OK.Name = "btn_OK"
 		Me.btn_OK.Size = New System.Drawing.Size(75, 23)
 		Me.btn_OK.TabIndex = 9
@@ -499,28 +529,28 @@ Partial Class frm_Moby_Auto_Link
 		Me.barDockControlTop.CausesValidation = False
 		Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
 		Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-		Me.barDockControlTop.Size = New System.Drawing.Size(1065, 0)
+		Me.barDockControlTop.Size = New System.Drawing.Size(984, 0)
 		'
 		'barDockControlBottom
 		'
 		Me.barDockControlBottom.CausesValidation = False
 		Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-		Me.barDockControlBottom.Location = New System.Drawing.Point(0, 729)
-		Me.barDockControlBottom.Size = New System.Drawing.Size(1065, 0)
+		Me.barDockControlBottom.Location = New System.Drawing.Point(0, 661)
+		Me.barDockControlBottom.Size = New System.Drawing.Size(984, 0)
 		'
 		'barDockControlLeft
 		'
 		Me.barDockControlLeft.CausesValidation = False
 		Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
 		Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
-		Me.barDockControlLeft.Size = New System.Drawing.Size(0, 729)
+		Me.barDockControlLeft.Size = New System.Drawing.Size(0, 661)
 		'
 		'barDockControlRight
 		'
 		Me.barDockControlRight.CausesValidation = False
 		Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-		Me.barDockControlRight.Location = New System.Drawing.Point(1065, 0)
-		Me.barDockControlRight.Size = New System.Drawing.Size(0, 729)
+		Me.barDockControlRight.Location = New System.Drawing.Point(984, 0)
+		Me.barDockControlRight.Size = New System.Drawing.Size(0, 661)
 		'
 		'bbi_Open_Moby_Page
 		'
@@ -555,32 +585,11 @@ Partial Class frm_Moby_Auto_Link
 		Me.popmnu_Link.Manager = Me.barmng
 		Me.popmnu_Link.Name = "popmnu_Link"
 		'
-		'coldeprecated
-		'
-		Me.coldeprecated.FieldName = "deprecated"
-		Me.coldeprecated.Name = "coldeprecated"
-		Me.coldeprecated.OptionsColumn.AllowEdit = False
-		Me.coldeprecated.OptionsColumn.ReadOnly = True
-		Me.coldeprecated.ToolTip = "indicates that the MobyGame link may be deprecated (nothing really to worry here," &
-		" the meta data is still there)"
-		'
-		'colDeprecated1
-		'
-		Me.colDeprecated1.Caption = "deprecated"
-		Me.colDeprecated1.FieldName = "deprecated"
-		Me.colDeprecated1.Name = "colDeprecated1"
-		Me.colDeprecated1.OptionsColumn.AllowEdit = False
-		Me.colDeprecated1.OptionsColumn.ReadOnly = True
-		Me.colDeprecated1.ToolTip = "indicates that the MobyGame link may be deprecated (nothing really to worry here," &
-		" the meta data is still there)"
-		Me.colDeprecated1.Visible = True
-		Me.colDeprecated1.VisibleIndex = 0
-		'
 		'frm_Moby_Auto_Link
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.ClientSize = New System.Drawing.Size(1065, 729)
+		Me.ClientSize = New System.Drawing.Size(984, 661)
 		Me.Controls.Add(Me.pnl_Main)
 		Me.Controls.Add(Me.lbl_Explanation)
 		Me.Controls.Add(Me.barDockControlLeft)
@@ -660,4 +669,5 @@ Partial Class frm_Moby_Auto_Link
 	Friend WithEvents popmnu_Link As MKNetDXLib.cmp_MKDXPopupMenu
 	Friend WithEvents coldeprecated As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
 	Friend WithEvents colDeprecated1 As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents colPlatform As DevExpress.XtraGrid.Columns.GridColumn
 End Class

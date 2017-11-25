@@ -117,6 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ToolTipItem7.Text" xml:space="preserve">
+    <value>mameinfo.dat contains infos about :
+    - Reported bugs from the MAME Testing Project
+    - Source/Whatsnew/Readme.txt from MAME
+    - MAME-Listinfo 0.34RC1-present
+    - WIP informations from all MAME DEVs
+    - MAME Work-In-Progress (WIP)
+    - Notes about Setup, Service, Test Mode and Known issues
+    - Game LEVELS
+    - Category and Recommended Games
+    - 'PLAY INSTRUCTIONS' and 'STORY'
+    - 'ARCADE RELEASE' dates
+    - Game Drivers (TODO, NOTES)
+    - Source code (drivers/vidhrdw/sndhrdw)
+    - Version releases for all original games
+    - Samples
+    - Romset and Harddisk/CD
+    - Games with different language
+    - Tips and TODO</value>
+  </data>
+  <data name="ToolTipItem8.Text" xml:space="preserve">
+    <value>mameinfo.dat contains infos about :
+    - Reported bugs from the MAME Testing Project
+    - Source/Whatsnew/Readme.txt from MAME
+    - MAME-Listinfo 0.34RC1-present
+    - WIP informations from all MAME DEVs
+    - MAME Work-In-Progress (WIP)
+    - Notes about Setup, Service, Test Mode and Known issues
+    - Game LEVELS
+    - Category and Recommended Games
+    - 'PLAY INSTRUCTIONS' and 'STORY'
+    - 'ARCADE RELEASE' dates
+    - Game Drivers (TODO, NOTES)
+    - Source code (drivers/vidhrdw/sndhrdw)
+    - Version releases for all original games
+    - Samples
+    - Romset and Harddisk/CD
+    - Games with different language
+    - Tips and TODO</value>
+  </data>
   <data name="ToolTipItem9.Text" xml:space="preserve">
     <value>Category files, such as nplayers.ini, catlist.ini etc. provide multiple categories for M.A.M.E. games.
 
@@ -139,5 +179,21 @@ http://www.progettoemma.net/?catlist</value>
     <value>If Auto-Import is active, every known category from the file will be automatically imported without user interaction. If the category is not known, you will have to select appropriate attributes for that category.
 
 If Auto-Import is not selected, for every category found within the file the Game Editor will be displayed.</value>
+  </data>
+  <data name="ToolTipItem14.Text" xml:space="preserve">
+    <value>Provide here an .ini file for filtering the Arcade games. Only games referenced in the .ini will be kept. The rest will be removed (e.g. slot machines, MESS software list games etc.)
+
+Recommended .ini files are (choose one):
+- Non Mechanicals Arcade.ini
+- Originals Arcade.ini
+- Working Arcade.ini</value>
+  </data>
+  <data name="ToolTipItem15.Text" xml:space="preserve">
+    <value>Provide here an .ini file for filtering the Arcade games. Only games referenced in the .ini will be kept. The rest will be removed (e.g. slot machines, MESS software list games etc.)
+
+Recommended .ini files are (choose one):
+- Non Mechanicals Arcade.ini
+- Originals Arcade.ini
+- Working Arcade.ini</value>
   </data>
 </root>
