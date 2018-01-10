@@ -547,12 +547,6 @@
     <Compile Include="Forms\frm_DOSBox_Templates.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_Emu_Game_Screenshotviewer.Designer.vb">
-      <DependentUpon>frm_Emu_Game_Screenshotviewer.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frm_Emu_Game_Screenshotviewer.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\frm_Export.Designer.vb">
       <DependentUpon>frm_Export.vb</DependentUpon>
     </Compile>
@@ -660,12 +654,6 @@
     </Compile>
     <Compile Include="Forms\frm_Main.Designer.vb">
       <DependentUpon>frm_Main.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frm_Moby_Import.Designer.vb">
-      <DependentUpon>frm_Moby_Import.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frm_Moby_Import.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frm_Screenshot_Edit.Designer.vb">
@@ -844,9 +832,6 @@
     <EmbeddedResource Include="Forms\frm_DOSBox_Templates.resx">
       <DependentUpon>frm_DOSBox_Templates.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_Emu_Game_Screenshotviewer.resx">
-      <DependentUpon>frm_Emu_Game_Screenshotviewer.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_Export.resx">
       <DependentUpon>frm_Export.vb</DependentUpon>
     </EmbeddedResource>
@@ -901,9 +886,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_Main.resx">
       <DependentUpon>frm_Main.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_Moby_Import.resx">
-      <DependentUpon>frm_Moby_Import.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_Screenshot_Edit.resx">
       <DependentUpon>frm_Screenshot_Edit.vb</DependentUpon>
