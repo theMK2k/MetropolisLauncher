@@ -189,8 +189,22 @@
 			For Each tabpg As DevExpress.XtraTab.XtraTabPage In tcl_Dosbox_Config.TabPages
 				If tabpg.Text = BTA_Tabs.Current("TabName") Then
 					tcl_Dosbox_Config.SelectedTabPage = tabpg
+
+					'Workaround for "MIDI (Patches)" Tab visibility
+					If tabpg.Text = "MIDI (Patches)" Then
+						Me.p_midi_EditValueChanged(Nothing, Nothing)
+
+						'	My.Application.DoEvents()
+						'	Dim chosen_mididevice As Object = Me.cmb_p_midi_mididevice.EditValue
+						'	Me.cmb_p_midi_mididevice.EditValue = "mt32"
+						'	My.Application.DoEvents()
+						'	Me.cmb_p_midi_mididevice.EditValue = "fluidsynth"
+						'	My.Application.DoEvents()
+						'	Me.cmb_p_midi_mididevice.EditValue = chosen_mididevice
+						'	My.Application.DoEvents()
+					End If
 				End If
-			Next
+      Next
 		End If
 	End Sub
 
@@ -394,8 +408,13 @@
 		Else
 			Me.tcl_p_midi.Visible = True
 
+			Me.tpg_p_midi_empty.PageVisible = False
 			Me.tpg_p_midi_fluidsynth.PageVisible = False
 			Me.tpg_p_midi_mt32.PageVisible = False
+
+			'Workaround: garbaged visibility of tab page content
+			Me.tpg_p_midi_empty.PageVisible = True
+			Me.tpg_p_midi_empty.PageVisible = False
 
 			If {"mt32"}.Contains(TC.NZ(cmb_p_midi_mididevice.EditValue, "")) Then
 				Me.tpg_p_midi_mt32.PageVisible = True

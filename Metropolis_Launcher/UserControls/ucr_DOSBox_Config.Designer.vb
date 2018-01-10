@@ -202,21 +202,21 @@ Partial Class ucr_DOSBox_Config
 		Dim SuperToolTip59 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem59 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem59 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip62 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem62 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem62 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip65 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem65 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem65 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip63 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem63 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem63 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip64 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem64 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem64 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip61 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem61 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem61 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip63 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem63 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem63 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip65 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem65 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem65 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip62 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem62 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem62 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip66 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem66 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem66 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
@@ -1052,12 +1052,12 @@ Partial Class ucr_DOSBox_Config
 		Me.chb_sdl_fullscreen = New MKNetDXLib.ctl_MKDXCheckEdit()
 		Me.lbl_sdl_fullscreen = New MKNetDXLib.ctl_MKDXLabel()
 		Me.cmb_sdl_windowresolution = New MKNetDXLib.ctl_MKDXLookupEdit()
-		Me.lbl_resolution = New MKNetDXLib.ctl_MKDXLabel()
-		Me.cmb_sdl_fullresolution = New MKNetDXLib.ctl_MKDXLookupEdit()
-		Me.BTA_sdl_fullresolution = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
-		Me.BTA_sdl_windowresolution = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
 		Me.lbl_sdl_windowresolution = New MKNetDXLib.ctl_MKDXLabel()
+		Me.BTA_sdl_windowresolution = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
+		Me.cmb_sdl_fullresolution = New MKNetDXLib.ctl_MKDXLookupEdit()
 		Me.lbl_sdl_fullresolution = New MKNetDXLib.ctl_MKDXLabel()
+		Me.BTA_sdl_fullresolution = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
+		Me.lbl_resolution = New MKNetDXLib.ctl_MKDXLabel()
 		Me.tpg_Keyboard = New DevExpress.XtraTab.XtraTabPage()
 		Me.btn_sdl_mapperfile = New MKNetDXLib.ctl_MKDXSimpleButton()
 		Me.spn_sdl_sensitivity = New MKNetDXLib.ctl_MKDXSpinEdit()
@@ -1546,6 +1546,7 @@ Partial Class ucr_DOSBox_Config
 		Me.DataTable51 = New System.Data.DataTable()
 		Me.DataColumn61 = New System.Data.DataColumn()
 		Me.DataColumn62 = New System.Data.DataColumn()
+		Me.tpg_p_midi_empty = New DevExpress.XtraTab.XtraTabPage()
 		CType(Me.tcl_Dosbox_Config, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.tcl_Dosbox_Config.SuspendLayout()
 		Me.tpg_DOSBox_Settings.SuspendLayout()
@@ -1596,9 +1597,9 @@ Partial Class ucr_DOSBox_Config
 		CType(Me.chb_sdl_fulldouble.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.chb_sdl_fullscreen.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.cmb_sdl_windowresolution.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BTA_sdl_windowresolution, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.cmb_sdl_fullresolution.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BTA_sdl_fullresolution, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.BTA_sdl_windowresolution, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.tpg_Keyboard.SuspendLayout()
 		CType(Me.spn_sdl_sensitivity.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.chb_sdl_autolock.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -3479,7 +3480,7 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_sdl_windowresolution.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "sdl-windowresolution", True))
 		Me.cmb_sdl_windowresolution.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "sdl-windowresolution", True))
 		Me.cmb_sdl_windowresolution.Location = New System.Drawing.Point(123, 27)
-		Me.cmb_sdl_windowresolution.MKBoundLabel = Me.lbl_sdl_windowresolution
+		Me.cmb_sdl_windowresolution.MKBoundLabel = Me.lbl_resolution
 		Me.cmb_sdl_windowresolution.MKEditValue_Compare = Nothing
 		Me.cmb_sdl_windowresolution.Name = "cmb_sdl_windowresolution"
 		Me.cmb_sdl_windowresolution.Properties.AllowFocused = False
@@ -3491,83 +3492,14 @@ Partial Class ucr_DOSBox_Config
 		Me.cmb_sdl_windowresolution.Properties.ShowHeader = False
 		Me.cmb_sdl_windowresolution.Properties.ValueMember = "value"
 		Me.cmb_sdl_windowresolution.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem62.Text = "Resolution in windowed mode"
-		ToolTipItem62.LeftIndent = 6
-		ToolTipItem62.Text = "Scale the window to this size IF the output device supports hardware scaling." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ou" &
+		ToolTipTitleItem63.Text = "Resolution in windowed mode"
+		ToolTipItem63.LeftIndent = 6
+		ToolTipItem63.Text = "Scale the window to this size IF the output device supports hardware scaling." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ou" &
 		"tput 'surface' does not support hardware scaling!"
-		SuperToolTip62.Items.Add(ToolTipTitleItem62)
-		SuperToolTip62.Items.Add(ToolTipItem62)
-		Me.cmb_sdl_windowresolution.SuperTip = SuperToolTip62
+		SuperToolTip63.Items.Add(ToolTipTitleItem63)
+		SuperToolTip63.Items.Add(ToolTipItem63)
+		Me.cmb_sdl_windowresolution.SuperTip = SuperToolTip63
 		Me.cmb_sdl_windowresolution.TabIndex = 2
-		'
-		'lbl_resolution
-		'
-		Me.lbl_resolution.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_resolution.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_resolution.Location = New System.Drawing.Point(3, 4)
-		Me.lbl_resolution.MKBoundControl1 = Me.cmb_sdl_fullresolution
-		Me.lbl_resolution.MKBoundControl2 = Me.cmb_sdl_windowresolution
-		Me.lbl_resolution.MKBoundControl3 = Nothing
-		Me.lbl_resolution.MKBoundControl4 = Nothing
-		Me.lbl_resolution.MKBoundControl5 = Nothing
-		Me.lbl_resolution.Name = "lbl_resolution"
-		Me.lbl_resolution.Size = New System.Drawing.Size(117, 20)
-		ToolTipTitleItem65.Text = "Resolutions"
-		ToolTipItem65.LeftIndent = 6
-		ToolTipItem65.Text = "Which resolutions to use for fullscreen and windowed modes."
-		SuperToolTip65.Items.Add(ToolTipTitleItem65)
-		SuperToolTip65.Items.Add(ToolTipItem65)
-		Me.lbl_resolution.SuperTip = SuperToolTip65
-		Me.lbl_resolution.TabIndex = 6
-		Me.lbl_resolution.Text = "Resolutions:"
-		'
-		'cmb_sdl_fullresolution
-		'
-		Me.cmb_sdl_fullresolution.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "sdl-fullresolution", True))
-		Me.cmb_sdl_fullresolution.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "sdl-fullresolution", True))
-		Me.cmb_sdl_fullresolution.Location = New System.Drawing.Point(123, 4)
-		Me.cmb_sdl_fullresolution.MKBoundLabel = Me.lbl_sdl_fullresolution
-		Me.cmb_sdl_fullresolution.MKEditValue_Compare = Nothing
-		Me.cmb_sdl_fullresolution.Name = "cmb_sdl_fullresolution"
-		Me.cmb_sdl_fullresolution.Properties.AllowFocused = False
-		Me.cmb_sdl_fullresolution.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-		Me.cmb_sdl_fullresolution.Properties.DataSource = Me.BTA_sdl_fullresolution
-		Me.cmb_sdl_fullresolution.Properties.DisplayMember = "value"
-		Me.cmb_sdl_fullresolution.Properties.NullText = ""
-		Me.cmb_sdl_fullresolution.Properties.ShowFooter = False
-		Me.cmb_sdl_fullresolution.Properties.ShowHeader = False
-		Me.cmb_sdl_fullresolution.Properties.ValueMember = "value"
-		Me.cmb_sdl_fullresolution.Size = New System.Drawing.Size(107, 20)
-		ToolTipTitleItem64.Text = "Resolution in fullscreen mode"
-		ToolTipItem64.LeftIndent = 6
-		SuperToolTip64.Items.Add(ToolTipTitleItem64)
-		SuperToolTip64.Items.Add(ToolTipItem64)
-		Me.cmb_sdl_fullresolution.SuperTip = SuperToolTip64
-		Me.cmb_sdl_fullresolution.TabIndex = 0
-		'
-		'BTA_sdl_fullresolution
-		'
-		Me.BTA_sdl_fullresolution.AllowDelete = True
-		Me.BTA_sdl_fullresolution.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_sdl_fullresolution.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
-		Me.BTA_sdl_fullresolution.Connection = Nothing
-		Me.BTA_sdl_fullresolution.DSStream = CType(resources.GetObject("BTA_sdl_fullresolution.DSStream"), System.IO.MemoryStream)
-		Me.BTA_sdl_fullresolution.FillMethod = MKNetLib.FillMethod.ValueList
-		Me.BTA_sdl_fullresolution.FillString = resources.GetString("BTA_sdl_fullresolution.FillString")
-		Me.BTA_sdl_fullresolution.Position = 0
-		Me.BTA_sdl_fullresolution.Transaction = Nothing
-		Me.BTA_sdl_fullresolution.UpdateTablesStream = CType(resources.GetObject("BTA_sdl_fullresolution.UpdateTablesStream"), System.Collections.Generic.List(Of String))
-		'
-		'BTA_sdl_windowresolution
-		'
-		Me.BTA_sdl_windowresolution.AllowDelete = True
-		Me.BTA_sdl_windowresolution.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_sdl_windowresolution.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
-		Me.BTA_sdl_windowresolution.Connection = Nothing
-		Me.BTA_sdl_windowresolution.DSStream = CType(resources.GetObject("BTA_sdl_windowresolution.DSStream"), System.IO.MemoryStream)
-		Me.BTA_sdl_windowresolution.FillMethod = MKNetLib.FillMethod.ValueList
-		Me.BTA_sdl_windowresolution.FillString = resources.GetString("BTA_sdl_windowresolution.FillString")
-		Me.BTA_sdl_windowresolution.Position = 0
-		Me.BTA_sdl_windowresolution.Transaction = Nothing
-		Me.BTA_sdl_windowresolution.UpdateTablesStream = CType(resources.GetObject("BTA_sdl_windowresolution.UpdateTablesStream"), System.Collections.Generic.List(Of String))
 		'
 		'lbl_sdl_windowresolution
 		'
@@ -3581,15 +3513,51 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sdl_windowresolution.MKBoundControl5 = Nothing
 		Me.lbl_sdl_windowresolution.Name = "lbl_sdl_windowresolution"
 		Me.lbl_sdl_windowresolution.Size = New System.Drawing.Size(120, 20)
-		ToolTipTitleItem61.Text = "Resolution in windowed mode"
-		ToolTipItem61.LeftIndent = 6
-		ToolTipItem61.Text = "Scale the window to this size IF the output device supports hardware scaling." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ou" &
+		ToolTipTitleItem64.Text = "Resolution in windowed mode"
+		ToolTipItem64.LeftIndent = 6
+		ToolTipItem64.Text = "Scale the window to this size IF the output device supports hardware scaling." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ou" &
 		"tput 'surface' does not support hardware scaling!"
-		SuperToolTip61.Items.Add(ToolTipTitleItem61)
-		SuperToolTip61.Items.Add(ToolTipItem61)
-		Me.lbl_sdl_windowresolution.SuperTip = SuperToolTip61
+		SuperToolTip64.Items.Add(ToolTipTitleItem64)
+		SuperToolTip64.Items.Add(ToolTipItem64)
+		Me.lbl_sdl_windowresolution.SuperTip = SuperToolTip64
 		Me.lbl_sdl_windowresolution.TabIndex = 3
 		Me.lbl_sdl_windowresolution.Text = "in windowed mode"
+		'
+		'BTA_sdl_windowresolution
+		'
+		Me.BTA_sdl_windowresolution.AllowDelete = True
+		Me.BTA_sdl_windowresolution.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_sdl_windowresolution.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_sdl_windowresolution.Connection = Nothing
+		Me.BTA_sdl_windowresolution.DSStream = CType(resources.GetObject("BTA_sdl_windowresolution.DSStream"), System.IO.MemoryStream)
+		Me.BTA_sdl_windowresolution.FillMethod = MKNetLib.FillMethod.ValueList
+		Me.BTA_sdl_windowresolution.FillString = resources.GetString("BTA_sdl_windowresolution.FillString")
+		Me.BTA_sdl_windowresolution.Position = 0
+		Me.BTA_sdl_windowresolution.Transaction = Nothing
+		Me.BTA_sdl_windowresolution.UpdateTablesStream = CType(resources.GetObject("BTA_sdl_windowresolution.UpdateTablesStream"), System.Collections.Generic.List(Of String))
+		'
+		'cmb_sdl_fullresolution
+		'
+		Me.cmb_sdl_fullresolution.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_DOSBox_Configs, "sdl-fullresolution", True))
+		Me.cmb_sdl_fullresolution.DataBindings.Add(New System.Windows.Forms.Binding("MKEditValue_Compare", Me.BS_Templates, "sdl-fullresolution", True))
+		Me.cmb_sdl_fullresolution.Location = New System.Drawing.Point(123, 4)
+		Me.cmb_sdl_fullresolution.MKBoundLabel = Me.lbl_resolution
+		Me.cmb_sdl_fullresolution.MKEditValue_Compare = Nothing
+		Me.cmb_sdl_fullresolution.Name = "cmb_sdl_fullresolution"
+		Me.cmb_sdl_fullresolution.Properties.AllowFocused = False
+		Me.cmb_sdl_fullresolution.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+		Me.cmb_sdl_fullresolution.Properties.DataSource = Me.BTA_sdl_fullresolution
+		Me.cmb_sdl_fullresolution.Properties.DisplayMember = "value"
+		Me.cmb_sdl_fullresolution.Properties.NullText = ""
+		Me.cmb_sdl_fullresolution.Properties.ShowFooter = False
+		Me.cmb_sdl_fullresolution.Properties.ShowHeader = False
+		Me.cmb_sdl_fullresolution.Properties.ValueMember = "value"
+		Me.cmb_sdl_fullresolution.Size = New System.Drawing.Size(107, 20)
+		ToolTipTitleItem61.Text = "Resolution in fullscreen mode"
+		ToolTipItem61.LeftIndent = 6
+		SuperToolTip61.Items.Add(ToolTipTitleItem61)
+		SuperToolTip61.Items.Add(ToolTipItem61)
+		Me.cmb_sdl_fullresolution.SuperTip = SuperToolTip61
+		Me.cmb_sdl_fullresolution.TabIndex = 0
 		'
 		'lbl_sdl_fullresolution
 		'
@@ -3603,13 +3571,46 @@ Partial Class ucr_DOSBox_Config
 		Me.lbl_sdl_fullresolution.MKBoundControl5 = Nothing
 		Me.lbl_sdl_fullresolution.Name = "lbl_sdl_fullresolution"
 		Me.lbl_sdl_fullresolution.Size = New System.Drawing.Size(120, 20)
-		ToolTipTitleItem63.Text = "Resolution in fullscreen mode"
-		ToolTipItem63.LeftIndent = 6
-		SuperToolTip63.Items.Add(ToolTipTitleItem63)
-		SuperToolTip63.Items.Add(ToolTipItem63)
-		Me.lbl_sdl_fullresolution.SuperTip = SuperToolTip63
+		ToolTipTitleItem65.Text = "Resolution in fullscreen mode"
+		ToolTipItem65.LeftIndent = 6
+		SuperToolTip65.Items.Add(ToolTipTitleItem65)
+		SuperToolTip65.Items.Add(ToolTipItem65)
+		Me.lbl_sdl_fullresolution.SuperTip = SuperToolTip65
 		Me.lbl_sdl_fullresolution.TabIndex = 1
 		Me.lbl_sdl_fullresolution.Text = "in fullscreen mode"
+		'
+		'BTA_sdl_fullresolution
+		'
+		Me.BTA_sdl_fullresolution.AllowDelete = True
+		Me.BTA_sdl_fullresolution.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_sdl_fullresolution.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_sdl_fullresolution.Connection = Nothing
+		Me.BTA_sdl_fullresolution.DSStream = CType(resources.GetObject("BTA_sdl_fullresolution.DSStream"), System.IO.MemoryStream)
+		Me.BTA_sdl_fullresolution.FillMethod = MKNetLib.FillMethod.ValueList
+		Me.BTA_sdl_fullresolution.FillString = resources.GetString("BTA_sdl_fullresolution.FillString")
+		Me.BTA_sdl_fullresolution.Position = 0
+		Me.BTA_sdl_fullresolution.Transaction = Nothing
+		Me.BTA_sdl_fullresolution.UpdateTablesStream = CType(resources.GetObject("BTA_sdl_fullresolution.UpdateTablesStream"), System.Collections.Generic.List(Of String))
+		'
+		'lbl_resolution
+		'
+		Me.lbl_resolution.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_resolution.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_resolution.Location = New System.Drawing.Point(3, 4)
+		Me.lbl_resolution.MKBoundControl1 = Me.cmb_sdl_fullresolution
+		Me.lbl_resolution.MKBoundControl2 = Me.cmb_sdl_windowresolution
+		Me.lbl_resolution.MKBoundControl3 = Nothing
+		Me.lbl_resolution.MKBoundControl4 = Nothing
+		Me.lbl_resolution.MKBoundControl5 = Nothing
+		Me.lbl_resolution.Name = "lbl_resolution"
+		Me.lbl_resolution.Size = New System.Drawing.Size(117, 20)
+		ToolTipTitleItem62.Text = "Resolutions"
+		ToolTipItem62.LeftIndent = 6
+		ToolTipItem62.Text = "Which resolutions to use for fullscreen and windowed modes."
+		SuperToolTip62.Items.Add(ToolTipTitleItem62)
+		SuperToolTip62.Items.Add(ToolTipItem62)
+		Me.lbl_resolution.SuperTip = SuperToolTip62
+		Me.lbl_resolution.TabIndex = 6
+		Me.lbl_resolution.Text = "Resolutions:"
 		'
 		'tpg_Keyboard
 		'
@@ -8255,7 +8256,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tcl_p_midi.SelectedTabPage = Me.tpg_p_midi_mt32
 		Me.tcl_p_midi.Size = New System.Drawing.Size(540, 329)
 		Me.tcl_p_midi.TabIndex = 86
-		Me.tcl_p_midi.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.tpg_p_midi_mt32, Me.tpg_p_midi_fluidsynth})
+		Me.tcl_p_midi.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.tpg_p_midi_empty, Me.tpg_p_midi_mt32, Me.tpg_p_midi_fluidsynth})
 		'
 		'tpg_p_midi_mt32
 		'
@@ -8293,6 +8294,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_p_midi_mt32.Controls.Add(Me.lbl_p_midi_mt32_romdir)
 		Me.tpg_p_midi_mt32.Controls.Add(Me.btn_p_midi_mt32_romdir)
 		Me.tpg_p_midi_mt32.Name = "tpg_p_midi_mt32"
+		Me.tpg_p_midi_mt32.PageVisible = False
 		Me.tpg_p_midi_mt32.Size = New System.Drawing.Size(534, 301)
 		Me.tpg_p_midi_mt32.Text = "MT-32 Settings"
 		'
@@ -9107,6 +9109,7 @@ Partial Class ucr_DOSBox_Config
 		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.spn_p_midi_fluid_reverb_damping)
 		Me.tpg_p_midi_fluidsynth.Controls.Add(Me.lbl_p_midi_fluid_reverb_damping)
 		Me.tpg_p_midi_fluidsynth.Name = "tpg_p_midi_fluidsynth"
+		Me.tpg_p_midi_fluidsynth.PageVisible = False
 		Me.tpg_p_midi_fluidsynth.Size = New System.Drawing.Size(534, 301)
 		Me.tpg_p_midi_fluidsynth.Text = "Fluidsynth Settings"
 		'
@@ -11246,6 +11249,12 @@ Partial Class ucr_DOSBox_Config
 		'
 		Me.DataColumn62.ColumnName = "displaytext"
 		'
+		'tpg_p_midi_empty
+		'
+		Me.tpg_p_midi_empty.Name = "tpg_p_midi_empty"
+		Me.tpg_p_midi_empty.PageVisible = False
+		Me.tpg_p_midi_empty.Size = New System.Drawing.Size(534, 301)
+		'
 		'ucr_DOSBox_Config
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -11306,9 +11315,9 @@ Partial Class ucr_DOSBox_Config
 		CType(Me.chb_sdl_fulldouble.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.chb_sdl_fullscreen.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.cmb_sdl_windowresolution.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BTA_sdl_windowresolution, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.cmb_sdl_fullresolution.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.BTA_sdl_fullresolution, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.BTA_sdl_windowresolution, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.tpg_Keyboard.ResumeLayout(False)
 		CType(Me.spn_sdl_sensitivity.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.chb_sdl_autolock.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -12187,4 +12196,5 @@ Partial Class ucr_DOSBox_Config
 	Friend WithEvents DataTable51 As DataTable
 	Friend WithEvents DataColumn61 As DataColumn
 	Friend WithEvents DataColumn62 As DataColumn
+	Friend WithEvents tpg_p_midi_empty As DevExpress.XtraTab.XtraTabPage
 End Class

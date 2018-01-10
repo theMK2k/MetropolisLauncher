@@ -24,8 +24,13 @@
 
 		Dim Game As String = TC.NZ(row_Emu_Game("Game"), "<Unknown Game>")
 
-		If al_Screenshots Is Nothing OrElse al_Screenshots.Count = 0 OrElse al_Screenshots.Item(0).GetType Is GetType(Bitmap) Then
-			_al_Screenshots = al_Screenshots
+		If al_Screenshots Is Nothing OrElse al_Screenshots.Count = 0 Then
+			_al_Screenshots = New ArrayList
+
+			Me.Text = "Manage USER Extras for " & Game
+		ElseIf al_Screenshots.Item(0).GetType Is GetType(Bitmap) Then
+			'ArrayList al_Screenshots contains bitmaps
+			_al_Screenshots = al_Screenshots.Clone
 
 			For i = 0 To _al_Screenshots.Count - 1
 				Dim row As DataRow = DS_Screenshots.Tables("tbl_Screenshots").NewRow
@@ -33,7 +38,7 @@
 				DS_Screenshots.Tables("tbl_Screenshots").Rows.Add(row)
 			Next
 
-			Me.Text = "New Screenshots for " & Game
+			Me.Text = "New USER Extras for " & Game
 		Else
 			'ArrayList al_Screenshots contains cls_Extras_Result Objects
 			_al_Screenshots = New ArrayList
@@ -62,7 +67,7 @@
 				End Try
 			Next
 
-			Me.Text = "Extras for " & Game
+			Me.Text = "Manage USER Extras for " & Game
 		End If
 
 		Dim FileNameX As String = ""
@@ -171,8 +176,10 @@
 		If img.PhysicalDimension.Width > 1 And img.PhysicalDimension.Height > 1 Then
 			Dim row As DataRow = DS_Screenshots.Tables("tbl_Screenshots").NewRow
 			row("Sort") = row("id")
-			DS_Screenshots.Tables("tbl_Screenshots").Rows.Add(row)
+
 			_al_Screenshots.Add(img)
+
+			DS_Screenshots.Tables("tbl_Screenshots").Rows.Add(row)
 		End If
 	End Sub
 
