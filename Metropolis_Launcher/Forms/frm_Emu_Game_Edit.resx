@@ -132,9 +132,6 @@
   <metadata name="DS_J2K.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>151, 56</value>
   </metadata>
-  <data name="ToolTipItem5.Text" xml:space="preserve">
-    <value>If you want to use J2K as a keyboard to joystick mapper for this emulator, choose your preset here. J2K will be launched accordingly on startup of the emulator and will be set to the "Empty" J2K preset afterwards.</value>
-  </data>
   <metadata name="BS_DefaultEmu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>

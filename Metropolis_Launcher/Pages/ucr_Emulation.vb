@@ -11,15 +11,48 @@ Public Class ucr_Emulation
 		Moby = 1
 	End Enum
 
+	Public Enum enm_RetroAchievements_Steps
+		RA_Cheevos_for_Game_01_Login
+		RA_Cheevos_for_Game_02_Get_GameID_for_Hash
+		RA_Cheevos_for_Game_03_Get_Cheevos_for_GameID
+		RA_Cheevos_for_Game_04_Get_Casual_Unlocked_Cheevos_for_GameID
+		RA_Cheevos_for_Game_05_Get_Hardcore_Unlocked_Cheevos_for_GameID
+		RA_Cheevos_for_Game_06_STOP
+	End Enum
+
+	Public Enum enm_RetroAchievements_Unlock
+		Remaining = 0
+		Casual = 1
+		Hardcore = 2
+	End Enum
+
+	Public Class cls_PrePost_Launch_Command
+		Public Directory As String
+		Public Executable As String
+		Public Parameters As String
+		Public Minimized As Boolean
+		Public WaitForExit As Boolean
+
+		Public Sub New(ByVal Directory As String, ByVal Executable As String, ByVal Parameters As String, ByVal Minimized As Boolean, ByVal WaitForExit As Boolean)
+			Me.Directory = Directory
+			Me.Executable = Executable
+			Me.Parameters = Parameters
+			Me.Minimized = Minimized
+			Me.WaitForExit = WaitForExit
+		End Sub
+	End Class
+
 	Public Class cls_Emu_Game_ProcInfo
 		Public id_Emu_Games As Integer
 		Public Snapshot_Directory As String
 		Public Platform As cls_Globals.enm_Moby_Platforms
+		Public Post_Launch_Commands As ArrayList
 
-		Public Sub New(ByVal id_Emu_Games As Integer, ByVal Snapshot_Directory As String, ByVal Platform As cls_Globals.enm_Moby_Platforms)
+		Public Sub New(ByVal id_Emu_Games As Integer, ByVal Snapshot_Directory As String, ByVal Platform As cls_Globals.enm_Moby_Platforms, ByVal Post_Launch_Commands As ArrayList)
 			Me.id_Emu_Games = id_Emu_Games
 			Me.Snapshot_Directory = Snapshot_Directory
 			Me.Platform = Platform
+			Me.Post_Launch_Commands = Post_Launch_Commands
 		End Sub
 	End Class
 
@@ -29,14 +62,76 @@ Public Class ucr_Emulation
 		Public Description As String = ""
 		Public ApplyExtraDescription As Boolean = False
 		Public Payload As Object = Nothing
+		Public isArchiveOrg As Boolean = False
 
-		Public Sub New(ByVal url As String, filepath As String, Optional ByVal description As String = "", Optional ByVal applyDescription As Boolean = False, Optional ByRef Payload As Object = Nothing)
+		Public Sub New(ByVal url As String, filepath As String, Optional ByVal description As String = "", Optional ByVal applyDescription As Boolean = False, Optional ByRef Payload As Object = Nothing, Optional ByVal isArchiveOrg As Boolean = False)
 			Me.URL = url
 			Me.Filepath = filepath
 			Me.Description = description
 			Me.ApplyExtraDescription = applyDescription
 			Me.Payload = Payload
+			Me.isArchiveOrg = isArchiveOrg
 		End Sub
+	End Class
+
+	''' <summary>
+	''' Rom/Game entry within cls_Launch_Data's ar_Rom_Entries
+	''' </summary>
+	Public Class cls_Launch_Data_Rom_Entry
+		Public mlROMDIR As String = ""
+		Public mlROMFILE As String = ""
+		Public mlROMEXTENSION As String = ""
+		Public mlROMFULLPATH As String = ""
+
+		Public Sub New(ByVal romdir As String, ByVal romfile As String, ByVal romextension As String, ByVal romfullpath As String)
+			Me.mlROMDIR = romdir
+			Me.mlROMEXTENSION = romextension
+			Me.mlROMFILE = romfile
+			Me.mlROMFULLPATH = romfullpath
+		End Sub
+	End Class
+
+	''' <summary>
+	''' All the metadata (emulator path, rom paths etc.) collected upon launch
+	''' Used for enhanced scripting (AutoIt, AutoHotKey)
+	''' </summary>
+	Public Class cls_Launch_Data
+		Public mlEMUDIR As String = ""
+		Public mlEMUEXE As String = ""
+
+		Public _mlEMUFULLPATH As String = ""
+		Public Property mlEMUFULLPATH As String
+			Get
+				Return _mlEMUFULLPATH
+			End Get
+			Set(value As String)
+				_mlEMUFULLPATH = value
+				Try
+					mlEMUDIR = Alphaleonis.Win32.Filesystem.Path.GetDirectoryName(_mlEMUFULLPATH)
+					mlEMUEXE = Alphaleonis.Win32.Filesystem.Path.GetFileName(_mlEMUFULLPATH)
+				Catch ex As Exception
+
+				End Try
+			End Set
+		End Property
+
+		Public mlLISTFILE As String = ""
+		Public mlLIBRETROCORE As String = ""
+		Public mlCONFIGFILE As String = ""
+
+		Public mlGAMEID As String = ""
+		Public mlGAMENAME As String = ""
+		Public mlREGIONS As String = ""
+		Public mlLANGUAGES As String = ""
+		Public mlMOBYRANK As String = ""
+		Public mlMOBYSCORE As String = ""
+		Public mlYEAR As String = ""
+		Public mlPUBLISHER As String = ""
+		Public mlDEVELOPER As String = ""
+		Public mlMINPLAYERS As String = ""
+		Public mlMAXPLAYERS As String = ""
+
+		Public ar_Rom_Entries As New ArrayList
 	End Class
 
 	Public Event E_Hide()
@@ -70,10 +165,49 @@ Public Class ucr_Emulation
 	Private _al_Screenshots_EmuGames As New ArrayList
 	Private _al_Screenshots As New ArrayList
 
+	Private _check_RetroAchievements_and_Challenge_for_Current_Game As Boolean
+
 	'Watching the clipboard could be viewed as a security issue - temp. disabled
 	'Private WithEvents _ClipboardWatcher As MKNetLib.cls_MKClipboardWatcher = MKNetLib.cls_MKClipboardWatcher.ClipboardWatcher
 
 	Private _bbi_Show_Similarity_Feature_Columns_Caption As String = ""
+
+	'RetroAchievements
+	Public Class cls_RetroAchievements_DataRetrieval
+		Public currentStep As enm_RetroAchievements_Steps = enm_RetroAchievements_Steps.RA_Cheevos_for_Game_01_Login
+
+		Public MD5 As String = ""
+		Public Token As String = ""
+		Public GameID As String = ""
+		Public tbl_Cheevos As DataTable
+
+
+		Public Sub New()
+			Me.Init("")
+		End Sub
+
+		Public Sub Init(md5 As String)
+			Me.currentStep = enm_RetroAchievements_Steps.RA_Cheevos_for_Game_01_Login
+
+			Me.MD5 = md5
+
+			Me.Token = ""
+			Me.GameID = ""
+
+			tbl_Cheevos = New DataTable
+			tbl_Cheevos.Columns.Add("GameName", GetType(System.String))
+			tbl_Cheevos.Columns.Add("ID", GetType(System.String))
+			tbl_Cheevos.Columns.Add("Title", GetType(System.String))
+			tbl_Cheevos.Columns.Add("Description", GetType(System.String))
+			tbl_Cheevos.Columns.Add("Points", GetType(System.Int32))
+			tbl_Cheevos.Columns.Add("BadgeName", GetType(System.String))
+			tbl_Cheevos.Columns.Add("Flags", GetType(System.Int32))
+			tbl_Cheevos.Columns.Add("id_RetroAchievements_Unlock", GetType(System.Int32))
+		End Sub
+	End Class
+
+	Private RetroAchievements_DataRetrieval As New cls_RetroAchievements_DataRetrieval
+	Private WithEvents RetroAchievements_WebClient As New System.Net.WebClient
 
 	Public Sub New()
 		InitializeComponent()
@@ -99,6 +233,7 @@ Public Class ucr_Emulation
 			Me.cmb_Filterset.EditValue = CLng(0)
 			Me.cmb_Groups.EditValue = CLng(0)
 			Me.cmb_Staff.EditValue = CLng(0)
+			Me.cmb_Challenges.EditValue = CLng(0)
 			'Me.DS_ML.Fill_src_ucr_Emulation_Games(tran, Me.DS_ML.src_ucr_Emulation_Games)
 
 			_Slideshow = TC.NZ(cls_Settings.GetSetting("Emu_Slideshow", cls_Settings.enm_Settingmodes.Per_User, tran), "0") = "1"
@@ -114,10 +249,31 @@ Public Class ucr_Emulation
 		barmng.SetPopupContextMenu(grd_Staff, popmnu_Staff)
 		barmng.SetPopupContextMenu(pic_Game, popmnu_Extras)
 		barmng.SetPopupContextMenu(grd_Statistics, popmnu_Statistics)
+		'barmng.SetPopupContextMenu(grd_RetroAchievements, popmnu_Cheevos)
 
 		cmb_Platform.EditValue = TC.NZ(cls_Settings.GetSetting("ucr_Emulation-Platform", cls_Settings.enm_Settingmodes.Per_User), CLng(-1))
 		cmb_Groups.EditValue = TC.NZ(cls_Settings.GetSetting("ucr_Emulation-Group", cls_Settings.enm_Settingmodes.Per_User), CLng(0))
 		cmb_Staff.EditValue = TC.NZ(cls_Settings.GetSetting("ucr_Emulation-Developer", cls_Settings.enm_Settingmodes.Per_User), CLng(0))
+
+		If cls_Globals.MultiUserMode Then
+			If cls_Globals.id_Cheevo_Challenges > 0L Then
+				cmb_Challenges.EditValue = cls_Globals.id_Cheevo_Challenges
+				cmb_Challenges.ReadOnly = True
+				chb_Cheevo_Challenges_Show_Completed.Enabled = False
+			End If
+		Else
+			cmb_Challenges.EditValue = TC.NZ(cls_Settings.GetSetting("ucr_Emulation-Cheevo_Challenge", cls_Settings.enm_Settingmodes.Per_User), CLng(0))
+			chb_Cheevo_Challenges_Show_Completed.Checked = TC.NZ(cls_Settings.GetSetting("ucr_Emulation-Cheevo_Challenge_ShowCompleted", cls_Settings.enm_Settingmodes.Per_User), True)
+		End If
+
+		Dim sDetailsTabPageName As String = TC.NZ(cls_Settings.GetSetting("ucr_Emulation-Details_Tab_Page", cls_Settings.enm_Settingmodes.Per_User), "")
+		If sDetailsTabPageName <> "" Then
+			For Each tpg As DevExpress.XtraTab.XtraTabPage In Me.tcl_Details.TabPages
+				If tpg.Name = sDetailsTabPageName Then
+					Me.tcl_Details.SelectedTabPage = tpg
+				End If
+			Next
+		End If
 
 		Apply_cmb_Similarity_Calculation_Results_Buttons_Enabled()
 
@@ -251,12 +407,70 @@ Public Class ucr_Emulation
 		Return False
 	End Function
 
+	Private Function Get_Pre_Post_Launch_Commands(ByVal id_Emulators As Int64, ByVal isPreLaunch As Boolean) As ArrayList
+		Dim ar_Result As New ArrayList
+
+		Dim dt As New DataTable
+		Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
+			DS_ML.Fill_ttb_Emulators_Pre_Post_Launch_Commands(tran, dt, id_Emulators, isPreLaunch)
+		End Using
+
+		For Each row As DataRow In dt.Rows
+			Dim entry As New cls_PrePost_Launch_Command(TC.NZ(row("Directory"), ""), TC.NZ(row("Executable"), ""), TC.NZ(row("Parameter"), ""), TC.NZ(row("Minimized"), False), TC.NZ(row("WaitForExit"), False))
+			ar_Result.Add(entry)
+		Next
+
+		Return ar_Result
+	End Function
+
+	Private Sub Pre_Post_Launch_Commands_Replace(ByRef ar_PreLaunch As ArrayList, ByRef ar_PostLaunch As ArrayList, ByVal oldString As String, ByVal newString As String)
+		If ar_PreLaunch IsNot Nothing AndAlso ar_PreLaunch.Count > 0 Then
+			For Each entry As cls_PrePost_Launch_Command In ar_PreLaunch
+				entry.Parameters = entry.Parameters.Replace(oldString, newString)
+			Next
+		End If
+		If ar_PostLaunch IsNot Nothing AndAlso ar_PostLaunch.Count > 0 Then
+			For Each entry As cls_PrePost_Launch_Command In ar_PostLaunch
+				entry.Parameters = entry.Parameters.Replace(oldString, newString)
+			Next
+		End If
+	End Sub
+
+	Private Sub Run_Pre_Post_Launch_Commands(ByRef ar_Commands As ArrayList)
+		If ar_Commands Is Nothing OrElse ar_Commands.Count = 0 Then
+			Return
+		End If
+
+		For Each command As cls_PrePost_Launch_Command In ar_Commands
+			Try
+				Dim proc As New System.Diagnostics.Process
+				proc.StartInfo.FileName = command.Directory & "\" & command.Executable
+				proc.StartInfo.Arguments = command.Parameters
+
+				proc.StartInfo.UseShellExecute = True
+
+				If command.Minimized Then
+					proc.StartInfo.WindowStyle = ProcessWindowStyle.Minimized
+					'proc.StartInfo.CreateNoWindow = True
+				End If
+
+				proc.Start()
+
+				If command.WaitForExit Then
+					proc.WaitForExit()
+				End If
+			Catch ex As Exception
+
+			End Try
+		Next
+	End Sub
+
 	''' <summary>
 	''' Prepare the DOSBox config for launching the game
 	''' </summary>
 	''' <returns>DOSBox startup parameters (incl. temp. DOSBox config), else empty String</returns>
 	''' <remarks></remarks>
-	Private Function Prepare_DOSBox(ByVal row_Emulators As DataRow, ByVal row_Emu_Game As DataRow, Optional ByVal id_Rombase_DOSBox_Exe_Types As Integer = 0) As String
+	Private Function Prepare_DOSBox(ByVal row_Emulators As DataRow, ByVal row_Emu_Game As DataRow, ByVal id_Rombase_DOSBox_Exe_Types As Integer, ByRef ar_PreLaunch As ArrayList, ByRef ar_PostLaunch As ArrayList, ByRef launchData As cls_Launch_Data) As String
 		Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
 			Try
 				Dim tbl_patches As New DS_ML.src_frm_Emulators_DOSBox_PatchesDataTable
@@ -306,9 +520,9 @@ Public Class ucr_Emulation
 				Dim p_sdl_output As String = TC.NZ(row_DOSBox_Config("p_sdl_output"), "")
 				If p_sdl_output.Length > 0 Then
 					If (p_sdl_output = "direct3d" AndAlso isDOSBoxPatchActivated(tbl_patches, "direct3d_with_pixelshader")) _
-					 OrElse (p_sdl_output = "openglhq" AndAlso isDOSBoxPatchActivated(tbl_patches, "hq2x_openglhq")) _
-					 OrElse ({"surfacepp", "surfacenp", "surfacepb"}.Contains(p_sdl_output) AndAlso isDOSBoxPatchActivated(tbl_patches, "pixelperfect")) _
-					 Then
+						OrElse (p_sdl_output = "openglhq" AndAlso isDOSBoxPatchActivated(tbl_patches, "hq2x_openglhq")) _
+						OrElse ({"surfacepp", "surfacenp", "surfacepb"}.Contains(p_sdl_output) AndAlso isDOSBoxPatchActivated(tbl_patches, "pixelperfect")) _
+						Then
 						sdl_output = p_sdl_output
 					End If
 				End If
@@ -390,10 +604,10 @@ Public Class ucr_Emulation
 				Dim p_midi_mididevice As String = TC.NZ(row_DOSBox_Config("p_midi_mididevice"), "default")
 				If p_midi_mididevice.Length > 0 Then
 					If (p_midi_mididevice = "mt32" AndAlso isDOSBoxPatchActivated(tbl_patches, "mt32")) _
-					 OrElse (p_midi_mididevice = "synth" AndAlso isDOSBoxPatchActivated(tbl_patches, "mididevice_synth")) _
-					 OrElse (p_midi_mididevice = "timidity" AndAlso isDOSBoxPatchActivated(tbl_patches, "mididevice_timidity")) _
-					 OrElse (p_midi_mididevice = "fluidsynth" AndAlso isDOSBoxPatchActivated(tbl_patches, "mididevice_fluidsynth")) _
-					 Then
+						OrElse (p_midi_mididevice = "synth" AndAlso isDOSBoxPatchActivated(tbl_patches, "mididevice_synth")) _
+						OrElse (p_midi_mididevice = "timidity" AndAlso isDOSBoxPatchActivated(tbl_patches, "mididevice_timidity")) _
+						OrElse (p_midi_mididevice = "fluidsynth" AndAlso isDOSBoxPatchActivated(tbl_patches, "mididevice_fluidsynth")) _
+						Then
 						midi_mididevice = p_midi_mididevice
 					End If
 				End If
@@ -423,23 +637,23 @@ Public Class ucr_Emulation
 				If isDOSBoxPatchActivated(tbl_patches, "mididevice_fluidsynth") Then
 					sb_midi.AppendLine("fluid.soundfont=" & TC.NZ(row_DOSBox_Config("p_midi_fluid_soundfont"), ""))
 					sb_midi.AppendLine("fluid.samplerate=" & TC.NZ(row_DOSBox_Config("p_midi_fluid_samplerate"), 48000).ToString)
-					sb_midi.AppendLine("fluid.gain=" & TC.NZ(MKNetLib.cls_MKStringSupport.Clean_Left(row_DOSBox_Config("p_midi_fluid_gain"), 0.6).ToString.Replace(",", "."), "0"))
+					sb_midi.AppendLine("fluid.gain=" & MKNetLib.cls_MKStringSupport.Clean_Left(TC.NZ(row_DOSBox_Config("p_midi_fluid_gain"), 0.6).ToString.Replace(",", "."), "0"))
 					sb_midi.AppendLine("fluid.polyphony=" & TC.NZ(row_DOSBox_Config("p_midi_fluid_polyphony"), 256).ToString)
 					sb_midi.AppendLine("fluid.cores=" & TC.NZ(row_DOSBox_Config("p_midi_fluid_cores"), "default"))
 					sb_midi.AppendLine("fluid.periods=" & TC.NZ(row_DOSBox_Config("p_midi_fluid_periods"), 8).ToString)
 					sb_midi.AppendLine("fluid.periodsize=" & TC.NZ(row_DOSBox_Config("p_midi_fluid_periodsize"), 512).ToString)
 
 					sb_midi.AppendLine("fluid.reverb=" & IIf(TC.NZ(row_DOSBox_Config("p_midi_fluid_reverb"), True), "yes", "no"))
-					sb_midi.AppendLine("fluid.reverb,roomsize=" & TC.NZ(MKNetLib.cls_MKStringSupport.Clean_Left(row_DOSBox_Config("p_midi_fluid_reverb_roomsize"), 0.61).ToString.Replace(",", "."), "0"))
-					sb_midi.AppendLine("fluid.reverb.damping=" & TC.NZ(MKNetLib.cls_MKStringSupport.Clean_Left(row_DOSBox_Config("p_midi_fluid_reverb_damping"), 0.23).ToString.Replace(",", "."), "0"))
-					sb_midi.AppendLine("fluid.reverb.width=" & TC.NZ(MKNetLib.cls_MKStringSupport.Clean_Left(row_DOSBox_Config("p_midi_fluid_reverb_width"), 0.76).ToString.Replace(",", "."), "0"))
-					sb_midi.AppendLine("fluid.reverb.level=" & TC.NZ(MKNetLib.cls_MKStringSupport.Clean_Left(row_DOSBox_Config("p_midi_fluid_reverb_level"), 0.57).ToString.Replace(",", "."), "0"))
+					sb_midi.AppendLine("fluid.reverb,roomsize=" & MKNetLib.cls_MKStringSupport.Clean_Left(TC.NZ(row_DOSBox_Config("p_midi_fluid_reverb_roomsize"), 0.61).ToString.Replace(",", "."), "0"))
+					sb_midi.AppendLine("fluid.reverb.damping=" & MKNetLib.cls_MKStringSupport.Clean_Left(TC.NZ(row_DOSBox_Config("p_midi_fluid_reverb_damping"), 0.23).ToString.Replace(",", "."), "0"))
+					sb_midi.AppendLine("fluid.reverb.width=" & MKNetLib.cls_MKStringSupport.Clean_Left(TC.NZ(row_DOSBox_Config("p_midi_fluid_reverb_width"), 0.76).ToString.Replace(",", "."), "0"))
+					sb_midi.AppendLine("fluid.reverb.level=" & MKNetLib.cls_MKStringSupport.Clean_Left(TC.NZ(row_DOSBox_Config("p_midi_fluid_reverb_level"), 0.57).ToString.Replace(",", "."), "0"))
 
 					sb_midi.AppendLine("fluid.chorus=" & IIf(TC.NZ(row_DOSBox_Config("p_midi_fluid_chorus"), True), "yes", "no"))
 					sb_midi.AppendLine("fluid.chorus.number=" & TC.NZ(row_DOSBox_Config("p_midi_fluid_chorus_number"), 3).ToString)
-					sb_midi.AppendLine("fluid.chorus.level=" & TC.NZ(MKNetLib.cls_MKStringSupport.Clean_Left(row_DOSBox_Config("p_midi_fluid_chorus_level"), 1.2).ToString.Replace(",", "."), "0"))
-					sb_midi.AppendLine("fluid.chorus.speed=" & TC.NZ(MKNetLib.cls_MKStringSupport.Clean_Left(row_DOSBox_Config("p_midi_fluid_chorus_speed"), 0.3).ToString.Replace(",", "."), "0"))
-					sb_midi.AppendLine("fluid.chorus.depth=" & TC.NZ(MKNetLib.cls_MKStringSupport.Clean_Left(row_DOSBox_Config("p_midi_fluid_chorus_depth"), 8.0).ToString.Replace(",", "."), "0"))
+					sb_midi.AppendLine("fluid.chorus.level=" & MKNetLib.cls_MKStringSupport.Clean_Left(TC.NZ(row_DOSBox_Config("p_midi_fluid_chorus_level"), 1.2).ToString.Replace(",", "."), "0"))
+					sb_midi.AppendLine("fluid.chorus.speed=" & MKNetLib.cls_MKStringSupport.Clean_Left(TC.NZ(row_DOSBox_Config("p_midi_fluid_chorus_speed"), 0.3).ToString.Replace(",", "."), "0"))
+					sb_midi.AppendLine("fluid.chorus.depth=" & MKNetLib.cls_MKStringSupport.Clean_Left(TC.NZ(row_DOSBox_Config("p_midi_fluid_chorus_depth"), 8.0).ToString.Replace(",", "."), "0"))
 					sb_midi.AppendLine("fluid.chorus.type=" & TC.NZ(row_DOSBox_Config("p_midi_fluid_chorus_type"), 0).ToString)
 				End If
 
@@ -802,6 +1016,7 @@ Public Class ucr_Emulation
 						For Each row_Mount_Destination In rows_Mount_Destination
 							If TC.NZ(row_Mount_Destination("id_Rombase_DOSBox_Filetypes"), 0) = cls_Globals.enm_Rombase_DOSBox_Filetypes.iso Then 'Only CD Images
 								Mount_Command &= " """ & row_Mount_Destination("Folder") & "\" & row_Mount_Destination("File") & """"
+								launchData.ar_Rom_Entries.Add(New cls_Launch_Data_Rom_Entry(row_Mount_Destination("Folder"), row_Mount_Destination("File"), Alphaleonis.Win32.Filesystem.Path.GetExtension(row_Mount_Destination("File")), row_Mount_Destination("Folder") & "\" & row_Mount_Destination("File")))
 							End If
 						Next
 
@@ -818,6 +1033,7 @@ Public Class ucr_Emulation
 						For Each row_Mount_Destination In rows_Mount_Destination
 							If {cls_Globals.enm_Rombase_DOSBox_Filetypes.img, cls_Globals.enm_Rombase_DOSBox_Filetypes.img_boot}.Contains(TC.NZ(row_Mount_Destination("id_Rombase_DOSBox_Filetypes"), 0)) Then  'Only Floppy or Booter Images
 								Mount_Command &= " """ & row_Mount_Destination("Folder") & "\" & row_Mount_Destination("File") & """"
+								launchData.ar_Rom_Entries.Add(New cls_Launch_Data_Rom_Entry(row_Mount_Destination("Folder"), row_Mount_Destination("File"), Alphaleonis.Win32.Filesystem.Path.GetExtension(row_Mount_Destination("File")), row_Mount_Destination("Folder") & "\" & row_Mount_Destination("File")))
 							End If
 						Next
 
@@ -832,6 +1048,8 @@ Public Class ucr_Emulation
 										Dim sb_shortpath As New System.Text.StringBuilder(256)
 										MKNetLib.cls_MKFileSupport.GetShortPathName(row_Mount_Destination("Folder"), sb_shortpath, sb_shortpath.Capacity)
 
+										launchData.ar_Rom_Entries.Add(New cls_Launch_Data_Rom_Entry(row_Mount_Destination("Folder"), "", "", row_Mount_Destination("Folder")))
+
 										Mount_Command &= sb_shortpath.ToString & ":"
 									End If
 								Next
@@ -841,6 +1059,8 @@ Public Class ucr_Emulation
 								If TC.NZ(row_Mount_Destination("id_Rombase_DOSBox_Filetypes"), 0) = cls_Globals.enm_Rombase_DOSBox_Filetypes.zip Then 'Only Packed Content
 									Dim sb_shortpath As New System.Text.StringBuilder(256)
 									MKNetLib.cls_MKFileSupport.GetShortPathName(row_Mount_Destination("Folder") & "\" & row_Mount_Destination("File"), sb_shortpath, sb_shortpath.Capacity)
+
+									launchData.ar_Rom_Entries.Add(New cls_Launch_Data_Rom_Entry(row_Mount_Destination("Folder"), row_Mount_Destination("File"), Alphaleonis.Win32.Filesystem.Path.GetExtension(row_Mount_Destination("File")), row_Mount_Destination("Folder") & "\" & row_Mount_Destination("File")))
 
 									Mount_Command &= sb_shortpath.ToString & ":"
 								End If
@@ -859,6 +1079,8 @@ Public Class ucr_Emulation
 						MKNetLib.cls_MKFileSupport.GetShortPathName(rows_Mount_Destination(0)("Folder"), sb_shortpath, sb_shortpath.Capacity)
 
 						Mount_Command = "mount " & Mount_Destination & " """ & sb_shortpath.ToString & """"
+
+						launchData.ar_Rom_Entries.Add(New cls_Launch_Data_Rom_Entry(rows_Mount_Destination(0)("Folder"), "", "", rows_Mount_Destination(0)("Folder")))
 					End If
 
 					sb_autoexec.AppendLine(Mount_Command)
@@ -879,11 +1101,20 @@ Public Class ucr_Emulation
 
 					Dim Exe_Type As String = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "SELECT Displayname FROM rombase.tbl_Rombase_DOSBox_Exe_Types WHERE id_Rombase_DOSBox_Exe_Types = " & TC.getSQLFormat(id_Rombase_DOSBox_Exe_Types), tran), "")
 
+					'Format the DOSBox_DisplayText of the file entries
+					DS_ML.Prepare_tmp_DOSBox_DisplayText(dt_Files)
+
 					If rows_Exe.Length = 0 Then
 						'No exe of the wanted type could be found
-						'Using frm As New frm_DOSBox_Choose_Exe(Exe_Type.ToUpper & " executable", "id_Rombase_DOSBox_Filetypes = " & TC.getSQLFormat(cls_Globals.enm_Rombase_DOSBox_Filetypes.exe), dt_Files, "Please select a file for autostart as the " & Exe_Type & " executable in the list below and press OK. If you choose 'Just mount', DOSBox will start but won't autostart an executable.")
-						Using frm As New frm_DOSBox_Choose_Exe(Exe_Type.ToUpper, "id_Rombase_DOSBox_Filetypes = " & TC.getSQLFormat(cls_Globals.enm_Rombase_DOSBox_Filetypes.exe), dt_Files)
-							If frm.ShowDialog(Me.ParentForm) = DialogResult.OK Then
+						Using frm As New frm_DOSBox_Choose_Exe(Exe_Type.ToUpper, "id_Rombase_DOSBox_Filetypes = " & TC.getSQLFormat(cls_Globals.enm_Rombase_DOSBox_Filetypes.exe), dt_Files, row_Emu_Game)
+							Dim res As DialogResult = frm.ShowDialog(Me.ParentForm)
+
+							If res = DialogResult.Cancel Then
+								'User just closed the window - don't launch anything
+								Return ""
+							End If
+
+							If res = DialogResult.OK Then
 								If frm.BS_DOSBox_Files_and_Folders.Current IsNot Nothing Then
 									row_Exe = frm.BS_DOSBox_Files_and_Folders.Current.Row
 									DataAccess.FireProcedure(tran.Connection, 0, "UPDATE tbl_Emu_Games SET id_Rombase_DOSBox_Exe_Types = " & TC.getSQLFormat(id_Rombase_DOSBox_Exe_Types) & " WHERE id_Emu_Games = " & TC.getSQLFormat(row_Exe("id_Emu_Games")), tran)
@@ -893,9 +1124,15 @@ Public Class ucr_Emulation
 					Else
 						If rows_Exe.Length > 1 Then
 							'More than one exe of that type found
-							'Using frm As New frm_DOSBox_Choose_Exe(Exe_Type.ToUpper & " executable", "id_Rombase_DOSBox_Exe_Types = " & id_Rombase_DOSBox_Exe_Types, dt_Files, "Please select a file for autostart as the " & Exe_Type & " executable in the list below and press OK. If you choose 'Just mount', DOSBox will start but won't autostart an executable.")
-							Using frm As New frm_DOSBox_Choose_Exe(Exe_Type.ToUpper, "id_Rombase_DOSBox_Exe_Types = " & id_Rombase_DOSBox_Exe_Types, dt_Files)
-								If frm.ShowDialog(Me.ParentForm) = DialogResult.OK Then
+							Using frm As New frm_DOSBox_Choose_Exe(Exe_Type.ToUpper, "id_Rombase_DOSBox_Exe_Types = " & id_Rombase_DOSBox_Exe_Types, dt_Files, row_Emu_Game)
+								Dim res As DialogResult = frm.ShowDialog(Me.ParentForm)
+
+								If res = DialogResult.Cancel Then
+									'User just closed the window - don't launch anything
+									Return ""
+								End If
+
+								If res = DialogResult.OK Then
 									If frm.BS_DOSBox_Files_and_Folders.Current IsNot Nothing Then
 										For Each row_Exe_Chosen As DataRow In rows_Exe
 											If row_Exe_Chosen Is frm.BS_DOSBox_Files_and_Folders.Current.Row Then
@@ -905,6 +1142,8 @@ Public Class ucr_Emulation
 										Next
 									End If
 								End If
+
+
 							End Using
 						Else
 							row_Exe = rows_Exe(0)
@@ -930,6 +1169,9 @@ Public Class ucr_Emulation
 									Else
 										sb_autoexec.AppendLine(Alphaleonis.Win32.Filesystem.Path.GetFileName(Exe_Path))
 									End If
+
+									launchData.ar_Rom_Entries.Add(New cls_Launch_Data_Rom_Entry(Alphaleonis.Win32.Filesystem.Path.GetDirectoryName(Exe_Path), Alphaleonis.Win32.Filesystem.Path.GetFileName(Exe_Path), Alphaleonis.Win32.Filesystem.Path.GetExtension(Exe_Path), Exe_Path))
+
 									Autostart_Exe = True
 									Exit For
 								End If
@@ -953,6 +1195,9 @@ Public Class ucr_Emulation
 									Else
 										sb_autoexec.AppendLine(Alphaleonis.Win32.Filesystem.Path.GetFileName(Exe_Path))
 									End If
+
+									launchData.ar_Rom_Entries.Add(New cls_Launch_Data_Rom_Entry(Alphaleonis.Win32.Filesystem.Path.GetDirectoryName(Exe_Path), Alphaleonis.Win32.Filesystem.Path.GetFileName(Exe_Path), Alphaleonis.Win32.Filesystem.Path.GetExtension(Exe_Path), Exe_Path))
+
 									Autostart_Exe = True
 									Exit For
 								End If
@@ -1020,6 +1265,13 @@ Public Class ucr_Emulation
 				'Save Config and create startup parameters
 				Dim TempDir As String = MKNetLib.cls_MKFileSupport.CreateTempDir("ml_") 'One temp dir for all extracted roms
 				Dim ConfFile As String = TempDir & "\" & Alphaleonis.Win32.Filesystem.Path.GetFileNameWithoutExtension(row_Emu_Game("File")) & ".conf"
+
+				launchData.mlCONFIGFILE = ConfFile
+
+				Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%configdir%", TempDir)
+				Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%configfile%", Alphaleonis.Win32.Filesystem.Path.GetFileName(ConfFile))
+				Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%configfullpath%", ConfFile)
+
 				If MKNetLib.cls_MKFileSupport.SaveTextToFile(sb_DOSBox_Config.ToString, ConfFile) Then
 					'Startup params
 					If TC.NZ(row_DOSBox_Config("ml-showconsole"), False) = False Then
@@ -1053,7 +1305,7 @@ Public Class ucr_Emulation
 	''' </summary>
 	''' <returns>ScummVM startup parameters (incl. temp. ScummVM config), else empty String</returns>
 	''' <remarks></remarks>
-	Private Function Prepare_ScummVM(ByVal row_Emulators As DataRow, ByVal row_Emu_Game As DataRow) As String
+	Private Function Prepare_ScummVM(ByVal row_Emulators As DataRow, ByVal row_Emu_Game As DataRow, ByRef launchData As cls_Launch_Data, ByRef ar_PreLaunch As ArrayList, ByRef ar_PostLaunch As ArrayList) As String
 		Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
 			Try
 				'Get the config for the game
@@ -1170,11 +1422,26 @@ Public Class ucr_Emulation
 					gameid = CustomIdentifier.Split(":")(1)
 				End If
 
+				launchData.ar_Rom_Entries.Add(New cls_Launch_Data_Rom_Entry(gamepath, gameid, "", gamepath))
+
 				Dim sb_Startup As New System.Text.StringBuilder
 
 				'Save Config and create startup parameters
 				Dim TempDir As String = MKNetLib.cls_MKFileSupport.CreateTempDir("ml_") 'One temp dir for all extracted roms
+
 				Dim ConfFile As String = TempDir & "\scummvm.ini"
+
+				'Pre/Post Launch & Scripting
+				Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%gameid%", gameid)
+				Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%romdir%", gamepath)
+				Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%romfile%", gamepath)
+				Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%romfullpath%", gamepath)
+				Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%configdir%", TempDir)
+				Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%configfile%", "scummvm.ini")
+				Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%configfullpath%", ConfFile)
+
+				launchData.mlCONFIGFILE = ConfFile
+
 				If MKNetLib.cls_MKFileSupport.SaveTextToFile(sb_ScummVM_Config.ToString, ConfFile) Then
 					'Startup params
 					sb_Startup.Append("--config=""" & ConfFile & """ --path=""" & gamepath & """")
@@ -1203,6 +1470,248 @@ Public Class ucr_Emulation
 				Return ""
 			End Try
 		End Using
+	End Function
+
+	''' <summary>
+	''' Inject variable content into script file
+	''' </summary>
+	''' <param name="launchData"></param>
+	''' <param name="scriptType"></param>
+	''' <param name="sbNewScriptContent"></param>
+	''' <returns></returns>
+	Private Function Inject_Scripting(ByRef launchData As cls_Launch_Data, ByVal scriptType As cls_Globals.enm_Script_Types, ByRef sbNewScriptContent As System.Text.StringBuilder) As Boolean
+		'static comment
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("; values injected by Metropolis Launcher")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("; values injected by Metropolis Launcher")
+		End If
+
+		sbNewScriptContent.AppendLine()
+
+		'mlEMUDIR
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlEMUDIR = """ & launchData.mlEMUDIR.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlEMUDIR := """ & launchData.mlEMUDIR.Replace("""", """""") & """")
+		End If
+
+		'mlEMUEXE
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlEMUEXE = """ & launchData.mlEMUEXE.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlEMUEXE := """ & launchData.mlEMUEXE.Replace("""", """""") & """")
+		End If
+
+		'mlEMUFULLPATH
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlEMUFULLPATH = """ & launchData.mlEMUFULLPATH.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlEMUFULLPATH := """ & launchData.mlEMUFULLPATH.Replace("""", """""") & """")
+		End If
+
+		'mlLISTFILE
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlLISTFILE = """ & launchData.mlLISTFILE.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlLISTFILE := """ & launchData.mlLISTFILE.Replace("""", """""") & """")
+		End If
+
+		'mlLIBRETROCORE
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlLIBRETROCORE = """ & launchData.mlLIBRETROCORE.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlLIBRETROCORE := """ & launchData.mlLIBRETROCORE.Replace("""", """""") & """")
+		End If
+
+		'mlCONFIGFILE
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlCONFIGFILE = """ & launchData.mlCONFIGFILE.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlCONFIGFILE := """ & launchData.mlCONFIGFILE.Replace("""", """""") & """")
+		End If
+
+		'mlNUMBEROFROMS (derived from ar_Rom_Entries.Count)
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlNUMBEROFROMS = " & launchData.ar_Rom_Entries.Count)
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlNUMBEROFROMS := " & launchData.ar_Rom_Entries.Count)
+		End If
+
+		Dim iRomNum As Integer = 0
+		For Each romEntry As cls_Launch_Data_Rom_Entry In launchData.ar_Rom_Entries
+			sbNewScriptContent.AppendLine()
+
+			'mlROMDIR
+			If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+				sbNewScriptContent.AppendLine("$mlROMDIR[" & iRomNum & "] = """ & romEntry.mlROMDIR.Replace("""", """""") & """")
+			ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+				sbNewScriptContent.AppendLine("mlROMDIR" & iRomNum & " := """ & romEntry.mlROMDIR.Replace("""", """""") & """")
+			End If
+
+			'mlROMFILE
+			If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+				sbNewScriptContent.AppendLine("$mlROMFILE[" & iRomNum & "] = """ & romEntry.mlROMFILE.Replace("""", """""") & """")
+			ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+				sbNewScriptContent.AppendLine("mlROMFILE" & iRomNum & " := """ & romEntry.mlROMFILE.Replace("""", """""") & """")
+			End If
+
+			'mlROMEXTENSION
+			If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+				sbNewScriptContent.AppendLine("$mlROMEXTENSION[" & iRomNum & "] = """ & romEntry.mlROMEXTENSION.Replace("""", """""") & """")
+			ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+				sbNewScriptContent.AppendLine("mlROMEXTENSION" & iRomNum & " := """ & romEntry.mlROMEXTENSION.Replace("""", """""") & """")
+			End If
+
+			'mlROMFULLPATH
+			If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+				sbNewScriptContent.AppendLine("$mlROMFULLPATH[" & iRomNum & "] = """ & romEntry.mlROMFULLPATH.Replace("""", """""") & """")
+			ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+				sbNewScriptContent.AppendLine("mlROMFULLPATH" & iRomNum & " := """ & romEntry.mlROMFULLPATH.Replace("""", """""") & """")
+			End If
+
+			iRomNum += 1
+		Next
+
+		sbNewScriptContent.AppendLine()
+
+		'mlGAMEID
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlGAMEID = """ & launchData.mlGAMEID.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlGAMEID := """ & launchData.mlGAMEID.Replace("""", """""") & """")
+		End If
+
+		'mlGAMENAME
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlGAMENAME = """ & launchData.mlGAMENAME.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlGAMENAME := """ & launchData.mlGAMENAME.Replace("""", """""") & """")
+		End If
+
+		'mlREGIONS
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlREGIONS = """ & launchData.mlREGIONS.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlREGIONS := """ & launchData.mlREGIONS.Replace("""", """""") & """")
+		End If
+
+		'mlLANGUAGES
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlLANGUAGES = """ & launchData.mlLANGUAGES.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlLANGUAGES := """ & launchData.mlLANGUAGES.Replace("""", """""") & """")
+		End If
+
+		'mlMOBYRANK
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlMOBYRANK = """ & launchData.mlMOBYRANK.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlMOBYRANK := """ & launchData.mlMOBYRANK.Replace("""", """""") & """")
+		End If
+
+		'mlMOBYSCORE
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlMOBYSCORE = """ & launchData.mlMOBYSCORE.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlMOBYSCORE := """ & launchData.mlMOBYSCORE.Replace("""", """""") & """")
+		End If
+
+		'mlYEAR
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlYEAR = """ & launchData.mlYEAR.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlYEAR := """ & launchData.mlYEAR.Replace("""", """""") & """")
+		End If
+
+		'mlPUBLISHER
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlPUBLISHER = """ & launchData.mlPUBLISHER.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlPUBLISHER := """ & launchData.mlPUBLISHER.Replace("""", """""") & """")
+		End If
+
+		'mlDEVELOPER
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlDEVELOPER = """ & launchData.mlDEVELOPER.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlDEVELOPER := """ & launchData.mlDEVELOPER.Replace("""", """""") & """")
+		End If
+
+		'mlMINPLAYERS
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlMINPLAYERS = """ & launchData.mlMINPLAYERS.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlMINPLAYERS := """ & launchData.mlMINPLAYERS.Replace("""", """""") & """")
+		End If
+
+		'mlMAXPLAYERS
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sbNewScriptContent.AppendLine("$mlMAXPLAYERS = """ & launchData.mlMAXPLAYERS.Replace("""", """""") & """")
+		ElseIf scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sbNewScriptContent.AppendLine("mlMAXPLAYERS := """ & launchData.mlMAXPLAYERS.Replace("""", """""") & """")
+		End If
+
+		sbNewScriptContent.AppendLine()
+
+		Return True
+	End Function
+
+
+	''' <summary>
+	''' Prepare a temporary Script file from the scriptTemplate and the proc for launching the script engine with the file
+	''' </summary>
+	''' <param name="launchData"></param>
+	''' <param name="proc"></param>
+	''' <param name="scriptType"></param>
+	''' <param name="scriptEnginePath"></param>
+	''' <param name="scriptTemplatePath"></param>
+	''' <returns></returns>
+	Private Function Prepare_Scripting(ByRef launchData As cls_Launch_Data, ByRef proc As System.Diagnostics.Process, ByVal scriptType As cls_Globals.enm_Script_Types, ByVal sScriptType As String, ByVal scriptEnginePath As String, ByVal scriptTemplatePath As String, ByVal TempDir As String) As Boolean
+		Dim sScriptContent As String = MKNetLib.cls_MKFileSupport.GetFileContents(scriptTemplatePath)
+
+		Dim sbNewScriptContent As New System.Text.StringBuilder
+
+		Dim arScriptContentLines As String() = sScriptContent.Split(ControlChars.Lf)
+
+		Dim bINJECT As Boolean = False
+
+		For Each sLine As String In arScriptContentLines
+			If sLine.Contains("ML") AndAlso sLine.Contains("INJECT") AndAlso sLine.Contains("START") Then
+				sbNewScriptContent.AppendLine(sLine.Trim)
+				bINJECT = True
+				Inject_Scripting(launchData, scriptType, sbNewScriptContent)
+			End If
+
+			If sLine.Contains("ML") AndAlso sLine.Contains("INJECT") AndAlso sLine.Contains("END") Then
+				bINJECT = False
+			End If
+
+			If Not bINJECT Then
+				sbNewScriptContent.AppendLine(sLine.Trim)
+			End If
+		Next
+
+		Dim scriptPath As String = ""
+
+		'write to temp. script file
+		If Not Alphaleonis.Win32.Filesystem.Directory.Exists(TempDir) Then
+			TempDir = MKNetLib.cls_MKFileSupport.CreateTempDir("ml_")
+			scriptPath = TempDir & "\" & Alphaleonis.Win32.Filesystem.Path.GetFileName(scriptTemplatePath)
+
+			Dim ErrInfo As String = ""
+			MKNetLib.cls_MKFileSupport.SaveTextToFile(sbNewScriptContent.ToString, scriptPath, ErrInfo)
+
+			If ErrInfo <> "" Then
+				MKDXHelper.MessageBox("An error occured while saving the script file to '" & scriptPath & "':" & ControlChars.CrLf & ControlChars.CrLf & ErrInfo, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+				Return False
+			End If
+		End If
+
+		proc.StartInfo.FileName = scriptEnginePath
+		proc.StartInfo.Arguments = """" & scriptPath & """"
+
+		Return True
 	End Function
 
 	Private Sub Launch_Game(Optional ByVal id_Emulators As Object = Nothing, Optional ByVal id_Rombase_DOSBox_Exe_Types As Integer = cls_Globals.enm_Rombase_DOSBox_Exe_Types.main)
@@ -1236,42 +1745,13 @@ Public Class ucr_Emulation
 	Private Sub Launch_Game_ScummVM(ByRef proc As System.Diagnostics.Process, ByVal id_Emulators As Object)
 		Dim bShiftKeyPressed As Boolean = My.Computer.Keyboard.ShiftKeyDown
 
-		Dim sSQL_Emulator As String = "	SELECT" & ControlChars.CrLf
-		sSQL_Emulator &= "		EMU.id_Emulators" & ControlChars.CrLf
-		sSQL_Emulator &= "		, EMU.Displayname" & ControlChars.CrLf
-		sSQL_Emulator &= "		, EMU.InstallDirectory" & ControlChars.CrLf
-		sSQL_Emulator &= "		, EMU.Executable" & ControlChars.CrLf
-		sSQL_Emulator &= "		, EMU.StartupParameter" & ControlChars.CrLf
-		sSQL_Emulator &= "		, EMU.AutoItScript" & ControlChars.CrLf
-		sSQL_Emulator &= "		, EMU.J2KPreset" & ControlChars.CrLf
-		sSQL_Emulator &= "		, EMU.ScreenshotDirectory" & ControlChars.CrLf
-		sSQL_Emulator &= "		, EMU.Libretro_Core" & ControlChars.CrLf
-		sSQL_Emulator &= "		, EMU.id_List_Generators" & ControlChars.CrLf
-		sSQL_Emulator &= "		, LGEN.Name AS LGEN_Name" & ControlChars.CrLf
-		sSQL_Emulator &= "		, LGEN.Main_Template AS LGEN_Main_Template" & ControlChars.CrLf
-		sSQL_Emulator &= "		, LGEN.File_Entry_Template AS LGEN_File_Entry_Template" & ControlChars.CrLf
-		sSQL_Emulator &= "		, LGEN.Sort AS LGEN_Sort" & ControlChars.CrLf
-		sSQL_Emulator &= "	FROM tbl_Emulators_Moby_Platforms EMUPLTFM" & ControlChars.CrLf
-		sSQL_Emulator &= "	LEFT JOIN tbl_Emulators EMU ON EMUPLTFM.id_Emulators = EMU.id_Emulators" & ControlChars.CrLf
-		sSQL_Emulator &= "	LEFT JOIN tbl_List_Generators LGEN ON EMU.id_List_Generators = LGEN.id_List_Generators" & ControlChars.CrLf
+		Dim launchData As New cls_Launch_Data
 
-		If id_Emulators Is Nothing Then
-			sSQL_Emulator &= "	WHERE EMUPLTFM.id_Emulators = (" & ControlChars.CrLf
-			sSQL_Emulator &= "			SELECT id_Emulators" & ControlChars.CrLf
-			sSQL_Emulator &= "			FROM tbl_Emu_Games" & ControlChars.CrLf
-			sSQL_Emulator &= "			WHERE id_Emu_Games = " & BS_Emu_Games.Current("id_Emu_Games") & ControlChars.CrLf
-			sSQL_Emulator &= "		) OR (" & ControlChars.CrLf
-			sSQL_Emulator &= "			EMUPLTFM.DefaultEmulator = 1" & ControlChars.CrLf
-			sSQL_Emulator &= "			AND id_Moby_Platforms = " & TC.getSQLFormat(BS_Emu_Games.Current("id_Moby_Platforms")) & ControlChars.CrLf
-			sSQL_Emulator &= "		)" & ControlChars.CrLf
-			sSQL_Emulator &= "	ORDER BY EMUPLTFM.DefaultEmulator" & ControlChars.CrLf
-		Else
-			sSQL_Emulator &= "	WHERE EMU.id_Emulators = " & TC.getSQLFormat(id_Emulators) & ControlChars.CrLf
-		End If
+		Me.FillLaunchDataWithMetaData(launchData, BS_Emu_Games.Current.Row)
 
-		sSQL_Emulator &= "	LIMIT 1"
+		Dim id_Moby_Platforms As Integer = BS_Emu_Games.Current("id_Moby_Platforms")
 
-		Dim dt_Emulators As DataTable = DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL_Emulator)
+		Dim dt_Emulators As DataTable = get_Default_Emulator(id_Moby_Platforms, id_Emulators)
 
 		If TC.NZ(id_Emulators, 0) <= 0 Then
 			If dt_Emulators Is Nothing OrElse dt_Emulators.Rows.Count < 1 Then
@@ -1296,6 +1776,7 @@ Public Class ucr_Emulation
 			MKDXHelper.MessageBox("The emulator's executable has not been found: " & emufullpath, "Emulator not found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 			Return
 		End If
+		launchData.mlEMUFULLPATH = emufullpath
 
 		Dim snapdir As String = TC.NZ(dt_Emulators.Rows(0)("ScreenshotDirectory"), "")
 		MKNetLib.cls_MKFileSupport.DeleteContainedFiles(snapdir, cls_Extras._SupportedExtensions_Masks, IO.SearchOption.TopDirectoryOnly, FileIO.UIOption.OnlyErrorDialogs)
@@ -1303,17 +1784,66 @@ Public Class ucr_Emulation
 		Dim emuexe As String = Alphaleonis.Win32.Filesystem.Path.GetFileName(emufullpath)
 		Dim emudir As String = Alphaleonis.Win32.Filesystem.Path.GetDirectoryName(emufullpath)
 
+		'Prepare Pre- and Post-Launch Commands
+		Dim ar_PreLaunch As ArrayList = Get_Pre_Post_Launch_Commands(id_Emulators, True)
+		Dim ar_PostLaunch As ArrayList = Get_Pre_Post_Launch_Commands(id_Emulators, False)
+
+		Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%emudir%", emudir)
+		Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%emuexe%", emuexe)
+		Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%emufullpath%", emufullpath)
+
 		'Generate Config
-		Dim Args As String = Prepare_ScummVM(dt_Emulators.Rows(0), BS_Emu_Games.Current.Row)
+		Dim Args As String = Prepare_ScummVM(dt_Emulators.Rows(0), BS_Emu_Games.Current.Row, launchData, ar_PreLaunch, ar_PostLaunch)
 
 		If TC.IsNullNothingOrEmpty(Args) Then
 			Return
 		End If
 
-		proc.StartInfo.FileName = emufullpath
-		proc.StartInfo.WorkingDirectory = emudir
+		'Run Pre-Launch Commands
+		Me.Run_Pre_Post_Launch_Commands(ar_PreLaunch)
 
-		proc.StartInfo.Arguments = Args
+		'Determine if we have to use enhanced Scripting and set up necessary variables
+		Dim scriptType As cls_Globals.enm_Script_Types = TC.NZ(dt_Emulators.Rows(0)("ScriptType"), 0)
+		Dim scriptEnginePath As String = ""
+
+		Dim sScriptType As String = ""
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sScriptType = "AutoIt"
+			scriptEnginePath = TC.NZ(cls_Settings.GetSetting("Path_AutoIt"), "")
+		End If
+		If scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sScriptType = "AutoHotKey"
+			scriptEnginePath = TC.NZ(cls_Settings.GetSetting("Path_AutoHotKey"), "")
+		End If
+		Dim scriptTemplatePath As String = TC.NZ(dt_Emulators.Rows(0)("ScriptPath"), "")
+
+		If scriptType <> cls_Globals.enm_Script_Types.NONE AndAlso scriptEnginePath = "" Then
+			MKDXHelper.MessageBox("You chose to use enhanced scripting with " & sScriptType & ", but the " & sScriptType & " executable is missing. Please set up the " & sScriptType & " executable in the Settings.", sScriptType & " Executable missing", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+			Return
+		End If
+		If scriptType <> cls_Globals.enm_Script_Types.NONE AndAlso Not Alphaleonis.Win32.Filesystem.File.Exists(scriptEnginePath) Then
+			MKDXHelper.MessageBox("You chose to use enhanced scripting with " & sScriptType & ", but the " & sScriptType & " executable '" & scriptEnginePath & "' cannot be found. Please set up the " & sScriptType & " executable in the Settings.", sScriptType & " Executable not found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+			Return
+		End If
+
+		If scriptType <> cls_Globals.enm_Script_Types.NONE AndAlso Not Alphaleonis.Win32.Filesystem.File.Exists(scriptTemplatePath) Then
+			MKDXHelper.MessageBox("You chose to use enhanced scripting with " & sScriptType & ", but the script file '" & scriptTemplatePath & "' cannot be found. Please check your settings in the Emulators dialog.", "Script File not found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+			Return
+		End If
+
+		'Run the MAIN process
+		If scriptType <> cls_Globals.enm_Script_Types.NONE Then
+			'Use enhanced scripting
+			If Not Prepare_Scripting(launchData, proc, scriptType, sScriptType, scriptEnginePath, scriptTemplatePath, "") Then
+				Return
+			End If
+		Else
+			'Launch regularly
+			proc.StartInfo.FileName = emufullpath
+			proc.StartInfo.WorkingDirectory = emudir
+
+			proc.StartInfo.Arguments = Args
+		End If
 
 		proc.StartInfo.UseShellExecute = True
 
@@ -1342,17 +1872,23 @@ Public Class ucr_Emulation
 		proc.Start()
 
 		Try
-			dict_Proc_EmuGames.Add(proc.Id, New cls_Emu_Game_ProcInfo(BS_Emu_Games.Current("id_Emu_Games"), snapdir, cls_Globals.enm_Moby_Platforms.scummvm))
+			dict_Proc_EmuGames.Add(proc.Id, New cls_Emu_Game_ProcInfo(BS_Emu_Games.Current("id_Emu_Games"), snapdir, cls_Globals.enm_Moby_Platforms.scummvm, ar_PostLaunch))
 		Catch ex As Exception
 
 		End Try
 	End Sub
 
-
-	Private Sub Launch_Game_EMU(ByRef proc As System.Diagnostics.Process, ByVal id_Emulators As Object)
-		Dim bShiftKeyPressed As Boolean = My.Computer.Keyboard.ShiftKeyDown
-
-		Dim id_Moby_Platforms As Integer = BS_Emu_Games.Current("id_Moby_Platforms")
+	''' <summary>
+	''' Get default Emulator to run based on the platform (or a specific one defined by id_Emulators
+	''' </summary>
+	''' <param name="id_Emulators"></param>
+	''' <param name="id_Moby_Platforms"></param>
+	''' <returns></returns>
+	Private Function get_Default_Emulator(ByVal id_Moby_Platforms As Integer, ByVal id_Emulators As Object) As DataTable
+		Dim id_Users As Object = Nothing
+		If cls_Globals.MultiUserMode = True AndAlso cls_Globals.Admin = False Then
+			id_Users = cls_Globals.id_Users
+		End If
 
 		Dim sSQL_Emulator As String = "	SELECT" & ControlChars.CrLf
 		sSQL_Emulator &= "		EMU.id_Emulators" & ControlChars.CrLf
@@ -1369,7 +1905,10 @@ Public Class ucr_Emulation
 		sSQL_Emulator &= "		, IFNULL(RBLGEN.Main_Template, LGEN.Main_Template) AS LGEN_Main_Template" & ControlChars.CrLf
 		sSQL_Emulator &= "		, IFNULL(RBLGEN.File_Entry_Template, LGEN.File_Entry_Template) AS LGEN_File_Entry_Template" & ControlChars.CrLf
 		sSQL_Emulator &= "		, IFNULL(RBLGEN.Sort, LGEN.Sort) AS LGEN_Sort" & ControlChars.CrLf
+		sSQL_Emulator &= "		, EMU.ScriptType" & ControlChars.CrLf
+		sSQL_Emulator &= "		, EMU.ScriptPath" & ControlChars.CrLf
 		sSQL_Emulator &= "	FROM tbl_Emulators_Moby_Platforms EMUPLTFM" & ControlChars.CrLf
+		sSQL_Emulator &= "	LEFT JOIN tbl_Users_Emulators_Moby_Platforms UEMUPLTFM ON UEMUPLTFM.id_Users = " & TC.getSQLFormat(TC.NZ(id_Users, 0)) & " AND EMUPLTFM.id_Moby_Platforms = UEMUPLTFM.id_Moby_Platforms AND UEMUPLTFM.id_Emulators = EMUPLTFM.id_Emulators" & ControlChars.CrLf
 		sSQL_Emulator &= "	LEFT JOIN tbl_Emulators EMU ON EMUPLTFM.id_Emulators = EMU.id_Emulators" & ControlChars.CrLf
 		sSQL_Emulator &= "	LEFT JOIN tbl_List_Generators LGEN ON EMU.id_List_Generators = LGEN.id_List_Generators" & ControlChars.CrLf
 		sSQL_Emulator &= "	LEFT JOIN rombase.tbl_Rombase_List_Generators RBLGEN ON -EMU.id_List_Generators = RBLGEN.id_Rombase_List_Generators" & ControlChars.CrLf
@@ -1380,8 +1919,12 @@ Public Class ucr_Emulation
 			sSQL_Emulator &= "			FROM tbl_Emu_Games" & ControlChars.CrLf
 			sSQL_Emulator &= "			WHERE id_Emu_Games = " & BS_Emu_Games.Current("id_Emu_Games") & ControlChars.CrLf
 			sSQL_Emulator &= "		) OR (" & ControlChars.CrLf
-			sSQL_Emulator &= "			EMUPLTFM.DefaultEmulator = 1" & ControlChars.CrLf
-			sSQL_Emulator &= "			AND id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms) & ControlChars.CrLf
+			sSQL_Emulator &= "			UEMUPLTFM.id_Users_Emulators_Moby_Platforms IS NULL" & ControlChars.CrLf
+			sSQL_Emulator &= "			AND EMUPLTFM.DefaultEmulator = 1" & ControlChars.CrLf
+			sSQL_Emulator &= "			AND EMUPLTFM.id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms) & ControlChars.CrLf
+			sSQL_Emulator &= "		) OR (" & ControlChars.CrLf
+			sSQL_Emulator &= "			UEMUPLTFM.DefaultEmulator = 1" & ControlChars.CrLf
+			sSQL_Emulator &= "			AND UEMUPLTFM.id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms) & ControlChars.CrLf
 			sSQL_Emulator &= "		)" & ControlChars.CrLf
 			sSQL_Emulator &= "	ORDER BY EMUPLTFM.DefaultEmulator" & ControlChars.CrLf
 		Else
@@ -1390,7 +1933,234 @@ Public Class ucr_Emulation
 
 		sSQL_Emulator &= "	LIMIT 1"
 
-		Dim dt_Emulators As DataTable = DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL_Emulator)
+		Return DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL_Emulator)
+	End Function
+
+	Private Function PrepareMultiVolume(ByRef row_Emulators As DataRow, ByVal id_Emulators As Int64, ByVal emuexe As String, ByVal emudir As String, ByVal emufullpath As String, ByRef TempDir As String) As String
+		Dim sMultiVolume As String = ""
+
+		Dim iMaxVol As Integer = 0
+
+		Dim dt_MV_Params As New DS_ML.tbl_Emulators_Multivolume_ParametersDataTable
+		Dim dt_Emu_Games_Volumes As New DS_ML.src_ucr_Emulation_GamesDataTable
+
+		Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
+			DS_ML.Fill_src_frm_Emulators_Multivolume_Parameters(tran, dt_MV_Params, id_Emulators)
+
+			If dt_MV_Params.Select("Volume_Number = 1").Length = 0 Then
+				MKDXHelper.MessageBox("A parameter setup for volume 1 could not be found, please check your emulator settings for " & row_Emulators("Displayname") & ".", "No entry set up for volume 1", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+				tran.Commit()
+				Return ""
+			End If
+
+			iMaxVol = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "Select MAX(Volume_Number) FROM tbl_Emulators_Multivolume_Parameters WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators), tran), 0)
+
+			DS_ML.Fill_src_ucr_Emulation_Games(tran, dt_Emu_Games_Volumes, Nothing, Nothing, Nothing, BS_Emu_Games.Current("id_Emu_Games"), True, 0, True)
+
+			tran.Commit()
+		End Using
+
+		For iVol As Integer = 1 To iMaxVol
+			Dim rowsVolParam() As DataRow = dt_MV_Params.Select("Volume_Number = " & TC.getSQLFormat(iVol))
+
+			If rowsVolParam.Length > 0 Then
+				Dim rowsVolGames() As DataRow = dt_Emu_Games_Volumes.Select("Volume_Number = " & TC.getSQLFormat(iVol))
+
+				If iVol = 1 AndAlso rowsVolGames.Length = 0 Then
+					rowsVolGames = dt_Emu_Games_Volumes.Select("Volume_Number IS NULL")
+				End If
+
+				If iVol = 1 AndAlso rowsVolGames.Length = 0 Then
+					MKDXHelper.MessageBox("The first disc/volume of the game could not be found, please check the Rom Manager.", "First disc/volume missing", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+					Me.Set_Current_Emu_Game_Unavailable(True)
+					Return ""
+				End If
+
+				Me.Set_Current_Emu_Game_Unavailable(False)
+
+				If rowsVolGames.Length > 0 Then
+					Dim sParam As String = rowsVolParam(0)("Parameter")
+
+					sParam = sParam.Replace("%emudir%", emudir)
+					sParam = sParam.Replace("%emuexe%", emuexe)
+					sParam = sParam.Replace("%emufullpath%", emufullpath)
+
+					'If sParam.Contains("%rom") Then
+					If Not Alphaleonis.Win32.Filesystem.Directory.Exists(TempDir) Then TempDir = MKNetLib.cls_MKFileSupport.CreateTempDir("ml_") 'One temp dir for all extracted roms
+
+					Dim rfdVol As New cls_Romfiledata(TC.NZ(rowsVolGames(0)("Folder"), "") & "\" & TC.NZ(rowsVolGames(0)("File"), ""), TC.NZ(rowsVolGames(0)("Innerfile"), ""), TempDir)
+
+					If Not rfdVol.IsValid Then Return ""
+
+					sParam = sParam.Replace("%romdir%", rfdVol.DirName)
+					sParam = sParam.Replace("%romfile%", rfdVol.FileName)
+					sParam = sParam.Replace("%romfullpath%", rfdVol.Fullpath)
+
+					'End If
+
+					sMultiVolume &= sParam
+				End If
+			End If
+		Next
+
+		Return sMultiVolume
+	End Function
+
+	Private Function PrepareFileListContent(ByRef row_Emulators As DataRow, ByVal emudir As String, ByVal emuexe As String, ByVal emufullpath As String, ByRef TempDir As String, ByRef Args As String, ByRef ar_PreLaunch As ArrayList, ByRef ar_PostLaunch As ArrayList) As String
+		Dim iMaxVol As Integer = 0
+		Dim iStartVol As Integer = 1
+		Dim iEndVol As Integer = 1
+		Dim iStep As Integer = 1
+
+		'TODO: Checks (Main_Template, File_Entry_Template)
+
+		Dim dt_Emu_Games_Volumes As New DS_ML.src_ucr_Emulation_GamesDataTable
+
+		Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
+			iMaxVol = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "Select MAX(Volume_Number) FROM tbl_Emu_Games WHERE id_Emu_Games = " & BS_Emu_Games.Current("id_Emu_Games") & " OR id_Emu_Games_Owner = " & BS_Emu_Games.Current("id_Emu_Games"), tran), 0)
+
+			DS_ML.Fill_src_ucr_Emulation_Games(tran, dt_Emu_Games_Volumes, Nothing, Nothing, Nothing, BS_Emu_Games.Current("id_Emu_Games"), True, 0, True)
+
+			'tran.Commit()
+		End Using
+
+		If TC.NZ(row_Emulators("LGEN_Sort"), 1) = 2 Then
+			'Descending Sort
+			iStartVol = iMaxVol
+			iEndVol = 1
+			iStep = -1
+		Else
+			'Ascending Sort
+			iStartVol = 1
+			iEndVol = iMaxVol
+			iStep = 1
+		End If
+
+		Dim sEntries As String = ""
+
+		For iVol As Integer = iStartVol To iEndVol Step iStep
+			Dim rowsVolGames() As DataRow = dt_Emu_Games_Volumes.Select("Volume_Number = " & TC.getSQLFormat(iVol))
+
+			If iVol = 1 AndAlso rowsVolGames.Length = 0 Then
+				rowsVolGames = dt_Emu_Games_Volumes.Select("Volume_Number IS NULL")
+			End If
+
+			If iVol = 1 AndAlso rowsVolGames.Length = 0 Then
+				MKDXHelper.MessageBox("The first disc/volume of the game could not be found, please check the Rom Manager.", "First disc/volume missing", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+				Me.Set_Current_Emu_Game_Unavailable(True)
+				Return ""
+			End If
+
+			Me.Set_Current_Emu_Game_Unavailable(False)
+
+			If rowsVolGames.Length > 0 Then
+				Dim sEntry As String = TC.NZ(row_Emulators("LGEN_File_Entry_Template"), "")
+
+				sEntry = sEntry.Replace("%emudir%", emudir)
+				sEntry = sEntry.Replace("%emuexe%", emuexe)
+				sEntry = sEntry.Replace("%emufullpath%", emufullpath)
+
+				If sEntry.Contains("%rom") Then
+					If Not Alphaleonis.Win32.Filesystem.Directory.Exists(TempDir) Then TempDir = MKNetLib.cls_MKFileSupport.CreateTempDir("ml_") 'One temp dir for all extracted roms
+
+					Dim rfdVol As New cls_Romfiledata(TC.NZ(rowsVolGames(0)("Folder"), "") & "\" & TC.NZ(rowsVolGames(0)("File"), ""), TC.NZ(rowsVolGames(0)("Innerfile"), ""), TempDir)
+
+					If Not rfdVol.IsValid Then Return ""
+
+					sEntry = sEntry.Replace("%romdir%", rfdVol.DirName)
+					sEntry = sEntry.Replace("%romfile%", rfdVol.FileName)
+					sEntry = sEntry.Replace("%romfullpath%", rfdVol.Fullpath)
+				End If
+
+				sEntries &= sEntry
+			End If
+		Next
+
+		Dim sFileListContent As String = TC.NZ(row_Emulators("LGEN_Main_Template"), "").Replace("%entries%", sEntries)
+
+		Dim sVariable As String = MKNetLib.cls_MKRegex.GetMatches(Args, "%listfile.*?%")(0).Value
+
+		Dim sFileExtension = ".txt"
+
+		If sVariable.Contains(".") Then
+			sFileExtension = MKNetLib.cls_MKRegex.GetMatches(sVariable, "(\..*?)%")(0).Value.Replace("%", "")
+		End If
+
+		'Create the listfile
+		If Not Alphaleonis.Win32.Filesystem.Directory.Exists(TempDir) Then TempDir = MKNetLib.cls_MKFileSupport.CreateTempDir("ml_") 'One temp dir for all extracted roms and the listfile
+
+		Dim sFileListPath As String = TempDir & "\" & "filelist" & sFileExtension
+
+		MKNetLib.cls_MKFileSupport.SaveTextToFile(sFileListContent, sFileListPath)
+
+		Args = Args.Replace(sVariable, sFileListPath)
+		Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, sVariable, sFileListPath)
+
+		Return sFileListPath
+	End Function
+
+
+	Private Function PrepareLaunchDataRomInfos(ByRef row_Emulators As DataRow, ByRef TempDir As String, ByRef launchData As cls_Launch_Data) As Boolean
+		Dim iMaxVol As Integer = 0
+		Dim iStartVol As Integer = 1
+		Dim iEndVol As Integer = 1
+		Dim iStep As Integer = 1
+
+		Dim dt_Emu_Games_Volumes As New DS_ML.src_ucr_Emulation_GamesDataTable
+
+		Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
+			iMaxVol = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "Select MAX(Volume_Number) FROM tbl_Emu_Games WHERE id_Emu_Games = " & BS_Emu_Games.Current("id_Emu_Games") & " OR id_Emu_Games_Owner = " & BS_Emu_Games.Current("id_Emu_Games"), tran), 1)
+
+			DS_ML.Fill_src_ucr_Emulation_Games(tran, dt_Emu_Games_Volumes, Nothing, Nothing, Nothing, BS_Emu_Games.Current("id_Emu_Games"), True, 0, True)
+		End Using
+
+		'Ascending Sort
+		iStartVol = 1
+		iEndVol = iMaxVol
+		iStep = 1
+
+		Dim sEntries As String = ""
+
+		For iVol As Integer = iStartVol To iEndVol Step iStep
+			Dim rowsVolGames() As DataRow = dt_Emu_Games_Volumes.Select("Volume_Number = " & TC.getSQLFormat(iVol))
+
+			If iVol = 1 AndAlso rowsVolGames.Length = 0 Then
+				rowsVolGames = dt_Emu_Games_Volumes.Select("Volume_Number IS NULL")
+			End If
+
+			If iVol = 1 AndAlso rowsVolGames.Length = 0 Then
+				MKDXHelper.MessageBox("The first disc/volume of the game could not be found, please check the Rom Manager.", "First disc/volume missing", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+				Me.Set_Current_Emu_Game_Unavailable(True)
+				Return False
+			End If
+
+			Me.Set_Current_Emu_Game_Unavailable(False)
+
+			If rowsVolGames.Length > 0 Then
+				If Not Alphaleonis.Win32.Filesystem.Directory.Exists(TempDir) Then TempDir = MKNetLib.cls_MKFileSupport.CreateTempDir("ml_") 'One temp dir for all extracted roms
+
+				Dim rfdVol As New cls_Romfiledata(TC.NZ(rowsVolGames(0)("Folder"), "") & "\" & TC.NZ(rowsVolGames(0)("File"), ""), TC.NZ(rowsVolGames(0)("Innerfile"), ""), TempDir)
+
+				If Not rfdVol.IsValid Then Return False
+
+				launchData.ar_Rom_Entries.Add(New cls_Launch_Data_Rom_Entry(rfdVol.DirName, rfdVol.FileName, Alphaleonis.Win32.Filesystem.Path.GetExtension(rfdVol.FileName), rfdVol.Fullpath))
+			End If
+		Next
+
+		Return True
+	End Function
+
+
+	Private Sub Launch_Game_EMU(ByRef proc As System.Diagnostics.Process, ByVal id_Emulators As Object)
+		Dim bShiftKeyPressed As Boolean = My.Computer.Keyboard.ShiftKeyDown
+
+		Dim launchData As New cls_Launch_Data
+
+		Me.FillLaunchDataWithMetaData(launchData, BS_Emu_Games.Current.Row)
+
+		Dim id_Moby_Platforms As Integer = BS_Emu_Games.Current("id_Moby_Platforms")
+
+		Dim dt_Emulators As DataTable = get_Default_Emulator(id_Moby_Platforms, id_Emulators)
 
 		If TC.NZ(id_Emulators, 0) <= 0 Then
 			If dt_Emulators Is Nothing OrElse dt_Emulators.Rows.Count < 1 Then
@@ -1408,24 +2178,33 @@ Public Class ucr_Emulation
 			End If
 		End If
 
-		id_Emulators = TC.NZ(dt_Emulators.Rows(0)("id_Emulators"), 0)
+		Dim row_Emulators As DataRow = dt_Emulators.Rows(0)
+		id_Emulators = TC.NZ(row_Emulators("id_Emulators"), 0)
 
-		Dim emufullpath As String = TC.NZ(dt_Emulators.Rows(0)("InstallDirectory"), "") & "\" & TC.NZ(dt_Emulators.Rows(0)("Executable"), "")
+		Dim emufullpath As String = TC.NZ(row_Emulators("InstallDirectory"), "") & "\" & TC.NZ(row_Emulators("Executable"), "")
 		If Not Alphaleonis.Win32.Filesystem.File.Exists(emufullpath) Then
 			MKDXHelper.MessageBox("The emulator's executable has not been found: " & emufullpath, "Emulator not found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 			Return
 		End If
+		launchData.mlEMUFULLPATH = emufullpath
 
-		Dim snapdir As String = TC.NZ(dt_Emulators.Rows(0)("ScreenshotDirectory"), "")
+		Dim snapdir As String = TC.NZ(row_Emulators("ScreenshotDirectory"), "")
 		MKNetLib.cls_MKFileSupport.DeleteContainedFiles(snapdir, cls_Extras._SupportedExtensions_Masks, IO.SearchOption.TopDirectoryOnly, FileIO.UIOption.OnlyErrorDialogs)
 
 		Dim emuexe As String = Alphaleonis.Win32.Filesystem.Path.GetFileName(emufullpath)
 		Dim emudir As String = Alphaleonis.Win32.Filesystem.Path.GetDirectoryName(emufullpath)
 
-		Dim Args As String = dt_Emulators.Rows(0)("StartupParameter")
+		'Prepare Pre- and Post-Launch Commands
+		Dim ar_PreLaunch As ArrayList = Get_Pre_Post_Launch_Commands(id_Emulators, True)
+		Dim ar_PostLaunch As ArrayList = Get_Pre_Post_Launch_Commands(id_Emulators, False)
+
+		Dim Args As String = row_Emulators("StartupParameter")
 		Args = Args.Replace("%emudir%", emudir)
+		Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%emudir%", emudir)
 		Args = Args.Replace("%emuexe%", emuexe)
+		Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%emuexe%", emuexe)
 		Args = Args.Replace("%emufullpath%", emufullpath)
+		Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%emufullpath%", emufullpath)
 
 		Dim TempDir As String = ""
 
@@ -1443,183 +2222,78 @@ Public Class ucr_Emulation
 			Me.Set_Current_Emu_Game_Unavailable(False)
 
 			Args = Args.Replace("%romdir%", rfd.DirName)
+			Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%romdir%", rfd.DirName)
 			Args = Args.Replace("%romfile%", rfd.FileName)
+			Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%romfile%", rfd.FileName)
 			Args = Args.Replace("%romfullpath%", rfd.Fullpath)
+			Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%romfullpath%", rfd.Fullpath)
 		End If
 
 		If Args.Contains("%multivolume%") Then
 			If BS_Emu_Games.Current("MultiVolume") = True Then
-				Dim sMultiVolume As String = ""
+				Dim sMultiVolume As String = PrepareMultiVolume(row_Emulators, id_Emulators, emuexe, emudir, emufullpath, TempDir)
 
-				Dim iMaxVol As Integer = 0
-
-				Dim dt_MV_Params As New DS_ML.tbl_Emulators_Multivolume_ParametersDataTable
-				Dim dt_Emu_Games_Volumes As New DS_ML.src_ucr_Emulation_GamesDataTable
-
-				Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
-					DS_ML.Fill_src_frm_Emulators_Multivolume_Parameters(tran, dt_MV_Params, id_Emulators)
-
-					If dt_MV_Params.Select("Volume_Number = 1").Length = 0 Then
-						MKDXHelper.MessageBox("A parameter setup for volume 1 could not be found, please check your emulator settings for " & dt_Emulators.Rows(0)("Displayname") & ".", "No entry set up for volume 1", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-						tran.Commit()
-						Return
-					End If
-
-					iMaxVol = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "Select MAX(Volume_Number) FROM tbl_Emulators_Multivolume_Parameters WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators), tran), 0)
-
-					DS_ML.Fill_src_ucr_Emulation_Games(tran, dt_Emu_Games_Volumes, Nothing, Nothing, Nothing, BS_Emu_Games.Current("id_Emu_Games"), True, 0, True)
-
-					tran.Commit()
-				End Using
-
-				For iVol As Integer = 1 To iMaxVol
-					Dim rowsVolParam() As DataRow = dt_MV_Params.Select("Volume_Number = " & TC.getSQLFormat(iVol))
-
-					If rowsVolParam.Length > 0 Then
-						Dim rowsVolGames() As DataRow = dt_Emu_Games_Volumes.Select("Volume_Number = " & TC.getSQLFormat(iVol))
-
-						If iVol = 1 AndAlso rowsVolGames.Length = 0 Then
-							rowsVolGames = dt_Emu_Games_Volumes.Select("Volume_Number IS NULL")
-						End If
-
-						If iVol = 1 AndAlso rowsVolGames.Length = 0 Then
-							MKDXHelper.MessageBox("The first disc/volume of the game could not be found, please check the Rom Manager.", "First disc/volume missing", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-							Me.Set_Current_Emu_Game_Unavailable(True)
-							Return
-						End If
-
-						Me.Set_Current_Emu_Game_Unavailable(False)
-
-						If rowsVolGames.Length > 0 Then
-							Dim sParam As String = rowsVolParam(0)("Parameter")
-
-							sParam = sParam.Replace("%emudir%", emudir)
-							sParam = sParam.Replace("%emuexe%", emuexe)
-							sParam = sParam.Replace("%emufullpath%", emufullpath)
-
-							If sParam.Contains("%rom") Then
-								If Not Alphaleonis.Win32.Filesystem.Directory.Exists(TempDir) Then TempDir = MKNetLib.cls_MKFileSupport.CreateTempDir("ml_") 'One temp dir for all extracted roms
-
-								Dim rfdVol As New cls_Romfiledata(TC.NZ(rowsVolGames(0)("Folder"), "") & "\" & TC.NZ(rowsVolGames(0)("File"), ""), TC.NZ(rowsVolGames(0)("Innerfile"), ""), TempDir)
-
-								If Not rfdVol.IsValid Then Return
-
-								sParam = sParam.Replace("%romdir%", rfdVol.DirName)
-								sParam = sParam.Replace("%romfile%", rfdVol.FileName)
-								sParam = sParam.Replace("%romfullpath%", rfdVol.Fullpath)
-							End If
-
-							sMultiVolume &= sParam
-						End If
-					End If
-				Next
+				If sMultiVolume = "" Then Return
 
 				Args = Args.Replace("%multivolume%", sMultiVolume)
+				Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%multivolume%", sMultiVolume)
+
 			Else
 				Args = Args.Replace("%multivolume%", "")
+				Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%multivolume%", "")
 			End If
 		End If
 
-		'Generate a file list text file and provide it as a startup parameter
 		If Args.Contains("%listfile") Then
-			Dim iMaxVol As Integer = 0
-			Dim iStartVol As Integer = 1
-			Dim iEndVol As Integer = 1
-			Dim iStep As Integer = 1
+			'Generate a file list text file and provide it as a startup parameter
+			Dim sFileListPath As String = PrepareFileListContent(row_Emulators, emudir, emuexe, emufullpath, TempDir, Args, ar_PreLaunch, ar_PostLaunch)
 
-			'TODO: Checks (Main_Template, File_Entry_Template)
+			If sFileListPath = "" Then Return
 
-			Dim dt_Emu_Games_Volumes As New DS_ML.src_ucr_Emulation_GamesDataTable
-
-			Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
-				iMaxVol = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "Select MAX(Volume_Number) FROM tbl_Emu_Games WHERE id_Emu_Games = " & BS_Emu_Games.Current("id_Emu_Games") & " OR id_Emu_Games_Owner = " & BS_Emu_Games.Current("id_Emu_Games"), tran), 0)
-
-				DS_ML.Fill_src_ucr_Emulation_Games(tran, dt_Emu_Games_Volumes, Nothing, Nothing, Nothing, BS_Emu_Games.Current("id_Emu_Games"), True, 0, True)
-
-				'tran.Commit()
-			End Using
-
-			If TC.NZ(dt_Emulators.Rows(0)("LGEN_Sort"), 1) = 2 Then
-				'Descending Sort
-				iStartVol = iMaxVol
-				iEndVol = 1
-				iStep = -1
-			Else
-				'Ascending Sort
-				iStartVol = 1
-				iEndVol = iMaxVol
-				iStep = 1
-			End If
-
-			Dim sEntries As String = ""
-
-			For iVol As Integer = iStartVol To iEndVol Step iStep
-				Dim rowsVolGames() As DataRow = dt_Emu_Games_Volumes.Select("Volume_Number = " & TC.getSQLFormat(iVol))
-
-				If iVol = 1 AndAlso rowsVolGames.Length = 0 Then
-					rowsVolGames = dt_Emu_Games_Volumes.Select("Volume_Number IS NULL")
-				End If
-
-				If iVol = 1 AndAlso rowsVolGames.Length = 0 Then
-					MKDXHelper.MessageBox("The first disc/volume of the game could not be found, please check the Rom Manager.", "First disc/volume missing", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-					Me.Set_Current_Emu_Game_Unavailable(True)
-					Return
-				End If
-
-				Me.Set_Current_Emu_Game_Unavailable(False)
-
-				If rowsVolGames.Length > 0 Then
-					Dim sEntry As String = TC.NZ(dt_Emulators.Rows(0)("LGEN_File_Entry_Template"), "")
-
-					sEntry = sEntry.Replace("%emudir%", emudir)
-					sEntry = sEntry.Replace("%emuexe%", emuexe)
-					sEntry = sEntry.Replace("%emufullpath%", emufullpath)
-
-					If sEntry.Contains("%rom") Then
-						If Not Alphaleonis.Win32.Filesystem.Directory.Exists(TempDir) Then TempDir = MKNetLib.cls_MKFileSupport.CreateTempDir("ml_") 'One temp dir for all extracted roms
-
-						Dim rfdVol As New cls_Romfiledata(TC.NZ(rowsVolGames(0)("Folder"), "") & "\" & TC.NZ(rowsVolGames(0)("File"), ""), TC.NZ(rowsVolGames(0)("Innerfile"), ""), TempDir)
-
-						If Not rfdVol.IsValid Then Return
-
-						sEntry = sEntry.Replace("%romdir%", rfdVol.DirName)
-						sEntry = sEntry.Replace("%romfile%", rfdVol.FileName)
-						sEntry = sEntry.Replace("%romfullpath%", rfdVol.Fullpath)
-					End If
-
-					sEntries &= sEntry
-				End If
-			Next
-
-			Dim sFileListContent As String = TC.NZ(dt_Emulators.Rows(0)("LGEN_Main_Template"), "").Replace("%entries%", sEntries)
-
-			'TODO: Args = Args.Replace("%listfile%", sMultiVolume)
-			Dim sVariable As String = MKNetLib.cls_MKRegex.GetMatches(Args, "%listfile.*?%")(0).Value
-
-			Dim sFileExtension = ".txt"
-
-			If sVariable.Contains(".") Then
-				sFileExtension = MKNetLib.cls_MKRegex.GetMatches(sVariable, "(\..*?)%")(0).Value.Replace("%", "")
-			End If
-
-			'Create the listfile
-			If Not Alphaleonis.Win32.Filesystem.Directory.Exists(TempDir) Then TempDir = MKNetLib.cls_MKFileSupport.CreateTempDir("ml_") 'One temp dir for all extracted roms and the listfile
-
-			Dim sFileListPath As String = TempDir & "\" & "filelist" & sFileExtension
-
-			MKNetLib.cls_MKFileSupport.SaveTextToFile(sFileListContent, sFileListPath)
-
-			Args = Args.Replace(sVariable, sFileListPath)
+			launchData.mlLISTFILE = sFileListPath
 		End If
 
-		If Not TC.IsNullNothingOrEmpty(dt_Emulators.Rows(0)("Libretro_Core")) Then
-			Args = "-L cores\" & dt_Emulators.Rows(0)("Libretro_Core").Trim & (IIf(Args <> "", " ", "")) & Args
+		If Not TC.IsNullNothingOrEmpty(row_Emulators("Libretro_Core")) Then
+			Dim libretroCore As String = row_Emulators("Libretro_Core").Trim
+			Args = "-L cores\" & libretroCore & (IIf(Args <> "", " ", "")) & Args
+			launchData.mlLIBRETROCORE = libretroCore
 		End If
 
-		proc.StartInfo.FileName = emufullpath
-		proc.StartInfo.WorkingDirectory = emudir
+		'Run Pre-Launch Commands
+		Run_Pre_Post_Launch_Commands(ar_PreLaunch)
 
-		proc.StartInfo.Arguments = Args
+		'Determine if we have to use enhanced Scripting and set up necessary variables
+		Dim scriptType As cls_Globals.enm_Script_Types = TC.NZ(row_Emulators("ScriptType"), 0)
+		Dim scriptEnginePath As String = ""
+
+		Dim sScriptType As String = ""
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sScriptType = "AutoIt"
+			scriptEnginePath = TC.NZ(cls_Settings.GetSetting("Path_AutoIt"), "")
+		End If
+		If scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sScriptType = "AutoHotKey"
+			scriptEnginePath = TC.NZ(cls_Settings.GetSetting("Path_AutoHotKey"), "")
+		End If
+		Dim scriptTemplatePath As String = TC.NZ(row_Emulators("ScriptPath"), "")
+
+		'Run the MAIN process
+		If scriptType <> cls_Globals.enm_Script_Types.NONE Then
+			'Use enhanced scripting
+			If Not PrepareLaunchDataRomInfos(row_Emulators, TempDir, launchData) Then
+				Return
+			End If
+
+			If Not Prepare_Scripting(launchData, proc, scriptType, sScriptType, scriptEnginePath, scriptTemplatePath, "") Then
+				Return
+			End If
+		Else
+			'Launch regularly
+			proc.StartInfo.FileName = emufullpath
+			proc.StartInfo.WorkingDirectory = emudir
+
+			proc.StartInfo.Arguments = Args
+		End If
 
 		proc.StartInfo.UseShellExecute = True
 
@@ -1637,7 +2311,7 @@ Public Class ucr_Emulation
 			End Using
 		End If
 
-		Dim J2K_Preset = TC.NZ(dt_Emulators.Rows(0)("J2KPreset"), "")
+		Dim J2K_Preset = TC.NZ(row_Emulators("J2KPreset"), "")
 
 		If TC.NZ(BS_Emu_Games.Current("J2KPreset"), "").Length > 0 Then
 			J2K_Preset = TC.NZ(BS_Emu_Games.Current("J2KPreset"), "")
@@ -1648,30 +2322,34 @@ Public Class ucr_Emulation
 		proc.Start()
 
 		Try
-			dict_Proc_EmuGames.Add(proc.Id, New cls_Emu_Game_ProcInfo(BS_Emu_Games.Current("id_Emu_Games"), snapdir, id_Moby_Platforms))
+			dict_Proc_EmuGames.Add(proc.Id, New cls_Emu_Game_ProcInfo(BS_Emu_Games.Current("id_Emu_Games"), snapdir, id_Moby_Platforms, ar_PostLaunch))
 		Catch ex As Exception
 
 		End Try
 	End Sub
 
-	Private Sub Launch_Game_DOS(ByRef proc As System.Diagnostics.Process, ByVal id_Emulators As Object, ByVal id_Rombase_DOSBox_Exe_Types As Integer)
-		Dim sSQL_DefaultEmu As String = "	SELECT" & ControlChars.CrLf &
-				"		EMU.id_Emulators" & ControlChars.CrLf &
-				"		, EMU.Displayname" & ControlChars.CrLf &
-				"		, EMU.InstallDirectory" & ControlChars.CrLf &
-				"		, EMU.Executable" & ControlChars.CrLf &
-				"		, EMU.StartupParameter" & ControlChars.CrLf &
-				"		, EMU.AutoItScript" & ControlChars.CrLf &
-				"		, EMU.J2KPreset" & ControlChars.CrLf &
-				"		, EMU.ScreenshotDirectory" & ControlChars.CrLf &
-				"		, EMU.DOSBox_Patch_NE2000_Ethernet" & ControlChars.CrLf &
-				"		, EMU.DOSBox_Patch_ZIP_Mount" & ControlChars.CrLf &
-				"	FROM tbl_Emulators_Moby_Platforms EMUPLTFM" & ControlChars.CrLf &
-				"	LEFT JOIN tbl_Emulators EMU ON EMUPLTFM.id_Emulators = EMU.id_Emulators" & ControlChars.CrLf &
-				IIf(id_Emulators Is Nothing, "	WHERE EMUPLTFM.id_Emulators = (SELECT id_Emulators FROM tbl_Emu_Games WHERE id_Emu_Games = " & BS_Emu_Games.Current("id_Emu_Games") & ") OR (EMUPLTFM.DefaultEmulator = 1 AND id_Moby_Platforms = " & TC.getSQLFormat(BS_Emu_Games.Current("id_Moby_Platforms")) & ") ORDER BY EMUPLTFM.DefaultEmulator ", "	WHERE EMU.id_Emulators = " & TC.getSQLFormat(id_Emulators)) & ControlChars.CrLf &
-				"	LIMIT 1"
+	Private Sub FillLaunchDataWithMetaData(ByRef launchData As cls_Launch_Data, ByRef row_Emu_Games As DataRow)
+		launchData.mlGAMEID = TC.NZ(row_Emu_Games("id_Emu_Games"), 0).ToString
+		launchData.mlGAMENAME = TC.NZ(row_Emu_Games("Game"), "")
+		launchData.mlREGIONS = TC.NZ(row_Emu_Games("Regions"), "")
+		launchData.mlLANGUAGES = TC.NZ(row_Emu_Games("Languages"), "")
+		launchData.mlMOBYRANK = TC.NZ(row_Emu_Games("Rank"), "")
+		launchData.mlMOBYSCORE = TC.NZ(row_Emu_Games("Score"), "")
+		launchData.mlYEAR = TC.NZ(row_Emu_Games("Year"), "")
+		launchData.mlPUBLISHER = TC.NZ(row_Emu_Games("Publisher"), "")
+		launchData.mlDEVELOPER = TC.NZ(row_Emu_Games("Developer"), "")
+		launchData.mlMINPLAYERS = TC.NZ(row_Emu_Games("MinPlayers"), "")
+		launchData.mlMAXPLAYERS = TC.NZ(row_Emu_Games("MaxPlayers"), "")
+	End Sub
 
-		Dim dt_Emulators As DataTable = DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL_DefaultEmu)
+	Private Sub Launch_Game_DOS(ByRef proc As System.Diagnostics.Process, ByVal id_Emulators As Object, ByVal id_Rombase_DOSBox_Exe_Types As Integer)
+		Dim launchData As New cls_Launch_Data
+
+		Me.FillLaunchDataWithMetaData(launchData, BS_Emu_Games.Current.Row)
+
+		Dim id_Moby_Platforms As Integer = BS_Emu_Games.Current("id_Moby_Platforms")
+
+		Dim dt_Emulators As DataTable = get_Default_Emulator(id_Moby_Platforms, id_Emulators)
 
 		If TC.NZ(id_Emulators, 0) <= 0 Then
 			If dt_Emulators Is Nothing OrElse dt_Emulators.Rows.Count < 1 Then
@@ -1696,6 +2374,7 @@ Public Class ucr_Emulation
 			MKDXHelper.MessageBox("The DOSBox executable has not been found: " & emufullpath, "DOSBox exe not found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 			Return
 		End If
+		launchData.mlEMUFULLPATH = emufullpath
 
 		Dim snapdir As String = TC.NZ(dt_Emulators.Rows(0)("ScreenshotDirectory"), "")
 		MKNetLib.cls_MKFileSupport.DeleteContainedFiles(snapdir, cls_Extras._SupportedExtensions_Masks, IO.SearchOption.TopDirectoryOnly, FileIO.UIOption.OnlyErrorDialogs)
@@ -1703,18 +2382,66 @@ Public Class ucr_Emulation
 		Dim emuexe As String = Alphaleonis.Win32.Filesystem.Path.GetFileName(emufullpath)
 		Dim emudir As String = Alphaleonis.Win32.Filesystem.Path.GetDirectoryName(emufullpath)
 
-		Dim Args As String = Prepare_DOSBox(dt_Emulators.Rows(0), BS_Emu_Games.Current.Row, id_Rombase_DOSBox_Exe_Types) 'Autolaunch Main exe
+		'Prepare Pre- and Post-Launch Commands
+		Dim ar_PreLaunch As ArrayList = Get_Pre_Post_Launch_Commands(id_Emulators, True)
+		Dim ar_PostLaunch As ArrayList = Get_Pre_Post_Launch_Commands(id_Emulators, False)
+
+		Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%emudir%", emudir)
+		Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%emuexe%", emuexe)
+		Pre_Post_Launch_Commands_Replace(ar_PreLaunch, ar_PostLaunch, "%emufullpath%", emufullpath)
+
+		'Generate Config
+		Dim Args As String = Prepare_DOSBox(dt_Emulators.Rows(0), BS_Emu_Games.Current.Row, id_Rombase_DOSBox_Exe_Types, ar_PreLaunch, ar_PostLaunch, launchData) 'Autolaunch Main exe
 
 		If Args = "" Then
 			Return  'DOSBox Preparation had an error or has been cancelled
 		End If
 
-		Dim TempDir As String = ""
+		'Run Pre-Launch Commands
+		Run_Pre_Post_Launch_Commands(ar_PreLaunch)
 
-		proc.StartInfo.FileName = emufullpath
-		proc.StartInfo.WorkingDirectory = emudir
+		'Determine if we have to use enhanced Scripting and set up necessary variables
+		Dim scriptType As cls_Globals.enm_Script_Types = TC.NZ(dt_Emulators.Rows(0)("ScriptType"), 0)
+		Dim scriptEnginePath As String = ""
 
-		proc.StartInfo.Arguments = Args
+		Dim sScriptType As String = ""
+		If scriptType = cls_Globals.enm_Script_Types.AutoIt Then
+			sScriptType = "AutoIt"
+			scriptEnginePath = TC.NZ(cls_Settings.GetSetting("Path_AutoIt"), "")
+		End If
+		If scriptType = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sScriptType = "AutoHotKey"
+			scriptEnginePath = TC.NZ(cls_Settings.GetSetting("Path_AutoHotKey"), "")
+		End If
+		Dim scriptTemplatePath As String = TC.NZ(dt_Emulators.Rows(0)("ScriptPath"), "")
+
+		If scriptType <> cls_Globals.enm_Script_Types.NONE AndAlso scriptEnginePath = "" Then
+			MKDXHelper.MessageBox("You chose to use enhanced scripting with " & sScriptType & ", but the " & sScriptType & " executable is missing. Please set up the " & sScriptType & " executable in the Settings.", sScriptType & " Executable missing", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+			Return
+		End If
+		If scriptType <> cls_Globals.enm_Script_Types.NONE AndAlso Not Alphaleonis.Win32.Filesystem.File.Exists(scriptEnginePath) Then
+			MKDXHelper.MessageBox("You chose to use enhanced scripting with " & sScriptType & ", but the " & sScriptType & " executable '" & scriptEnginePath & "' cannot be found. Please set up the " & sScriptType & " executable in the Settings.", sScriptType & " Executable not found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+			Return
+		End If
+
+		If scriptType <> cls_Globals.enm_Script_Types.NONE AndAlso Not Alphaleonis.Win32.Filesystem.File.Exists(scriptTemplatePath) Then
+			MKDXHelper.MessageBox("You chose to use enhanced scripting with " & sScriptType & ", but the script file '" & scriptTemplatePath & "' cannot be found. Please check your settings in the Emulators dialog.", "Script File not found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+			Return
+		End If
+
+		'Run the MAIN process
+		If scriptType <> cls_Globals.enm_Script_Types.NONE Then
+			'Use enhanced scripting
+			If Not Prepare_Scripting(launchData, proc, scriptType, sScriptType, scriptEnginePath, scriptTemplatePath, "") Then
+				Return
+			End If
+		Else
+			'Launch regularly
+			proc.StartInfo.FileName = emufullpath
+			proc.StartInfo.WorkingDirectory = emudir
+
+			proc.StartInfo.Arguments = Args
+		End If
 
 		proc.StartInfo.UseShellExecute = True
 
@@ -1735,7 +2462,7 @@ Public Class ucr_Emulation
 		proc.Start()
 
 		Try
-			dict_Proc_EmuGames.Add(proc.Id, New cls_Emu_Game_ProcInfo(BS_Emu_Games.Current("id_Emu_Games"), snapdir, cls_Globals.enm_Moby_Platforms.dos))
+			dict_Proc_EmuGames.Add(proc.Id, New cls_Emu_Game_ProcInfo(BS_Emu_Games.Current("id_Emu_Games"), snapdir, cls_Globals.enm_Moby_Platforms.dos, ar_PostLaunch))
 		Catch ex As Exception
 
 		End Try
@@ -1798,7 +2525,7 @@ Public Class ucr_Emulation
 		End Try
 
 		Try
-			dict_Proc_EmuGames.Add(proc.Id, New cls_Emu_Game_ProcInfo(BS_Emu_Games.Current("id_Emu_Games"), "", cls_Globals.enm_Moby_Platforms.win))
+			dict_Proc_EmuGames.Add(proc.Id, New cls_Emu_Game_ProcInfo(BS_Emu_Games.Current("id_Emu_Games"), "", cls_Globals.enm_Moby_Platforms.win, Nothing))
 		Catch ex As Exception
 
 		End Try
@@ -1830,7 +2557,7 @@ Public Class ucr_Emulation
 		proc.Start()
 
 		Try
-			dict_Proc_EmuGames.Add(proc.Id, New cls_Emu_Game_ProcInfo(BS_Emu_Games.Current("id_Emu_Games"), "", cls_Globals.enm_Moby_Platforms.mame))
+			dict_Proc_EmuGames.Add(proc.Id, New cls_Emu_Game_ProcInfo(BS_Emu_Games.Current("id_Emu_Games"), "", cls_Globals.enm_Moby_Platforms.mame, Nothing))
 		Catch ex As Exception
 
 		End Try
@@ -1858,6 +2585,12 @@ Public Class ucr_Emulation
 
 		dict_Proc_EmuGames.Remove(proc.Id)
 
+		'Re-fetch RetroAchievements data if the selected game is the exited game
+		If BS_Emu_Games.Current IsNot Nothing And pi.id_Emu_Games = BS_Emu_Games.Current("id_Emu_Games") Then
+			_check_RetroAchievements_and_Challenge_for_Current_Game = True
+		End If
+
+		'Update Usage Stats
 		If TC.NZ(cls_Settings.GetSetting("Stats_Enabled", cls_Settings.enm_Settingmodes.Per_User), True) Then
 			Dim MinTime As Integer = TC.NZ(cls_Settings.GetSetting("Stats_MinTime", cls_Settings.enm_Settingmodes.Per_User), 0)
 
@@ -1866,12 +2599,15 @@ Public Class ucr_Emulation
 			End If
 		End If
 
-		_al_Screenshots_EmuGames.Add(New cls_Emu_Game_ProcInfo(id_Emu_Games, snapdir, pi.Platform))
+		_al_Screenshots_EmuGames.Add(New cls_Emu_Game_ProcInfo(id_Emu_Games, snapdir, pi.Platform, Nothing))
 
 		'Rescan DOSBox Working Directory (an installer could have been used!)
 		If pi.Platform = cls_Globals.enm_Moby_Platforms.dos Then
 			frm_Rom_Manager.Rescan_DOSBox_Game(id_Emu_Games)
 		End If
+
+		'Run Post-Launch Commands
+		Run_Pre_Post_Launch_Commands(pi.Post_Launch_Commands)
 	End Sub
 
 	Private Function Get_DOSBox_Exe_Type() As Integer
@@ -1916,11 +2652,27 @@ Public Class ucr_Emulation
 		Me.gv_Emu_Games.SelectRow(Me.gv_Emu_Games.FocusedRowHandle)
 	End Sub
 
+	Public Function get_Current_Challenge_Tier() As Int64
+		If TC.NZ(cmb_Challenges.EditValue, 0) = 0 Then
+			Return 0L
+		End If
+
+		Dim currentTier As Int64 = 1L
+		For Each row_Challenge As DataRow In Me.DS_ML.ttb_Open_Challenges.Rows
+			If row_Challenge("id_Cheevo_Challenges") = Me.cmb_Challenges.EditValue Then
+				currentTier = row_Challenge("Tier")
+			End If
+		Next
+
+		Return currentTier
+	End Function
+
 	Public Sub Refill_Emu_Games()
 		Cursor.Current = Cursors.WaitCursor
 
 		If TC.IsNullNothingOrEmpty(cmb_Platform.EditValue) Then
 			DS_ML.src_ucr_Emulation_Games.Clear()
+			Update_Cheevo_Challenges_Cheevos()
 			Return
 		End If
 
@@ -1932,7 +2684,8 @@ Public Class ucr_Emulation
 			End If
 
 			_Platform_Changing = True
-			DS_ML.Fill_src_ucr_Emulation_Games(tran, Me.DS_ML.src_ucr_Emulation_Games, cmb_Platform.EditValue, txb_Search.EditValue, cmb_Filterset.EditValue, Nothing, False, cmb_Groups.EditValue, False, cmb_Staff.EditValue, cmb_Similarity_Calculation_Results.EditValue)
+
+			DS_ML.Fill_src_ucr_Emulation_Games(tran, Me.DS_ML.src_ucr_Emulation_Games, cmb_Platform.EditValue, txb_Search.EditValue, cmb_Filterset.EditValue, Nothing, False, cmb_Groups.EditValue, False, cmb_Staff.EditValue, cmb_Similarity_Calculation_Results.EditValue, cmb_Challenges.EditValue, get_Current_Challenge_Tier, chb_Cheevo_Challenges_Show_Completed.Checked)
 
 			If id_Emu_Games IsNot Nothing AndAlso BS_Emu_Games.Current IsNot Nothing Then
 				BS_Emu_Games.Position = BS_Emu_Games.Find("id_Emu_Games", id_Emu_Games)
@@ -1983,7 +2736,13 @@ Public Class ucr_Emulation
 		End If
 
 		Prepare_filteringUIContext_QueryRangeData()
+
+		Dim activeFilterString As String = Me.gv_Emu_Games.ActiveFilterString
 		filteringUIContext.UpdateMemberBindings()
+		Me.gv_Emu_Games.ActiveFilterString = activeFilterString
+
+
+		Update_Cheevo_Challenges_Cheevos()
 
 		Cursor.Current = Cursors.Default
 	End Sub
@@ -2140,6 +2899,107 @@ Public Class ucr_Emulation
 		End Using
 
 		ApplyFirstExtra()
+
+		Get_RetroAchievements_for_Current_Game()
+
+		Check_Challenge_Runtime_Unlock()
+	End Sub
+
+	Private Sub Check_Challenge_Runtime_Unlock()
+		If BS_Emu_Games.Current Is Nothing Then
+			Return
+		End If
+
+		Dim id_Users As Object = Nothing
+		If cls_Globals.MultiUserMode AndAlso Not cls_Globals.Admin AndAlso cls_Globals.id_Users > 0 Then
+			id_Users = cls_Globals.id_Users
+		End If
+
+		Dim ar_Unlocks As New ArrayList
+
+		For Each row_Cheevo As DS_ML.ttb_Open_Challenges_CheevosRow In Me.DS_ML.ttb_Open_Challenges_Cheevos.Rows
+			If row_Cheevo.CheevoType = cls_Globals.enm_CheevoTypes.TotalRuntime Then
+				If row_Cheevo.id_Emu_Games = BS_Emu_Games.Current("id_Emu_Games") Then
+					If row_Cheevo.Runtime < BS_Emu_Games.Current("Num_Runtime") Then
+						ar_Unlocks.Add(row_Cheevo)
+					End If
+				End If
+			End If
+		Next
+
+		'Back up the old challenges (so we can compare to new challenges after save)
+		Dim ttb_Open_Challenges_Old As New DS_ML.ttb_Open_ChallengesDataTable
+		For Each row As DataRow In Me.DS_ML.ttb_Open_Challenges.Rows
+			ttb_Open_Challenges_Old.ImportRow(row)
+		Next
+
+		If ar_Unlocks.Count > 0 Then
+			For Each row As DataRow In ar_Unlocks
+				If TC.NZ(row("id_Users_Cheevo_Challenges_Cheevos"), 0) = 0 Then
+					'INSERT
+					Dim sSQLInsertCasual As String = ""
+					sSQLInsertCasual &= "INSERT INTO tbl_Users_Cheevo_Challenges_Cheevos (id_Users, id_Cheevo_Challenges_Cheevos, Unlocked_Casual, Unlocked_Hardcore) VALUES (" & ControlChars.CrLf
+					sSQLInsertCasual &= TC.getSQLParameter(id_Users, row("id_Cheevo_Challenges_Cheevos"), True, True) & ControlChars.CrLf
+					sSQLInsertCasual &= ")"
+
+					DataAccess.FireProcedure(cls_Globals.Conn, 0, sSQLInsertCasual)
+				Else
+					'UPDATE
+					Dim sSQLUpdateCasual As String = ""
+					sSQLUpdateCasual &= "UPDATE tbl_Users_Cheevo_Challenges_Cheevos SET Unlocked_Casual = 1, Unlocked_Hardcore = 1" & ControlChars.CrLf
+					sSQLUpdateCasual &= "WHERE id_Users_Cheevo_Challenges_Cheevos = " & TC.getSQLFormat(row("id_Users_Cheevo_Challenges_Cheevos"))
+
+					DataAccess.FireProcedure(cls_Globals.Conn, 0, sSQLUpdateCasual)
+				End If
+			Next
+		End If
+
+		If ar_Unlocks.Count > 0 Then
+			Dim messageText As String = "You successfully unlocked the following achievement" & IIf(ar_Unlocks.Count > 1, "s", "") & ":" & ControlChars.CrLf & ControlChars.CrLf
+
+			For Each row As DataRow In ar_Unlocks
+				messageText &= "Challenge:      " & row("Challenge_Name") & " Tier " & row("Tier") & ControlChars.CrLf
+				messageText &= "Game:             " & row("Cheevo_GameName") & ControlChars.CrLf
+				messageText &= "Achievement: " & row("Cheevo_Title") & ControlChars.CrLf
+
+				messageText &= ControlChars.CrLf
+			Next
+
+			MKNetDXLib.cls_MKDXHelper.MessageBox(messageText, "Challenges", MessageBoxButtons.OK, MessageBoxIcon.Information)
+		End If
+
+		Refill_Cheevo_Open_Challenges()
+
+		Dim challengeCompleteMessageText = ""
+
+		For Each row_old As DataRow In ttb_Open_Challenges_Old.Rows
+			If row_old("Name") = "None" OrElse TC.NZ(row_old("Tier"), 0) = -1 Then
+				Continue For
+			End If
+
+			Dim bIsCompleted As Boolean = True  'The Challenge is completed if there is no row in the current ttb_Open_Challenges with same ID
+
+			For Each row_new As DataRow In Me.DS_ML.ttb_Open_Challenges
+				If TC.NZ(row_old("id_Cheevo_Challenges"), 0) = TC.NZ(row_new("id_Cheevo_Challenges"), 0) AndAlso TC.NZ(row_new("Tier"), 0) > -1 Then
+					bIsCompleted = False
+
+					If TC.NZ(row_old("Tier"), 0) <> TC.NZ(row_new("Tier"), 0) Then
+						challengeCompleteMessageText &= "You successfully mastered tier " & row_old("Tier") & " of the '" & row_old("Name") & "' challenge. Tier " & row_new("Tier") & " is now unlocked, good luck!" & ControlChars.CrLf & ControlChars.CrLf
+					End If
+				End If
+			Next
+
+			If bIsCompleted Then
+				challengeCompleteMessageText &= "You successfully mastered the '" & row_old("Name") & "' challenge. Nice one!" & ControlChars.CrLf & ControlChars.CrLf
+			End If
+		Next
+
+		If challengeCompleteMessageText <> "" Then
+			challengeCompleteMessageText = "Congratulations!" & ControlChars.CrLf & ControlChars.CrLf & challengeCompleteMessageText
+			MKNetDXLib.cls_MKDXHelper.MessageBox(challengeCompleteMessageText, "RetroAchievements Challenges", MessageBoxButtons.OK, MessageBoxIcon.Information)
+		End If
+
+		Update_Cheevo_Challenges_Cheevos()
 	End Sub
 
 	Private Sub pic_Game_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pic_Game.Click
@@ -2200,6 +3060,8 @@ Public Class ucr_Emulation
 	''' </summary>
 	''' <remarks></remarks>
 	Private Sub ApplyNextExtra(ByVal SkipToNextImmediately As Boolean, Optional ByVal DoRecurse As Boolean = True, Optional ByVal ApplyExtraDescription As Boolean = False)
+		Me.lbl_MobyDownload_Error.Text = ""
+
 		If ApplyExtraDescription Then
 			Me.lbl_Extras_Description.Text = ""
 		End If
@@ -2225,7 +3087,7 @@ Public Class ucr_Emulation
 				Return
 			Else
 				Debug.WriteLine("EXTRAS: Image found, loading for display")
-				pic_Game.Image = Image.FromStream(New IO.MemoryStream(Alphaleonis.Win32.Filesystem.File.ReadAllBytes(res._Path))) 'Image.FromFile(res._Path)
+				pic_Game.Image = cls_Extras.LoadImageFromStreamSafe(res._Path, False) 'Image.FromFile(res._Path)
 				Me.ExtraType = res._ExtraType
 				Me.ExtraNum = res._ExtraNum
 			End If
@@ -2240,8 +3102,9 @@ Public Class ucr_Emulation
 			End If
 
 			If Me.DS_ML.src_ucr_Emulation_Moby_Releases_Cover_Art.Rows.Count = 0 AndAlso Me.DS_ML.src_ucr_Emulation_Moby_Releases_Screenshots.Rows.Count = 0 Then
-				Debug.WriteLine("EXTRAS: no Cover Art and no Screenshots found, aborting")
+				Debug.WriteLine("EXTRAS: no Cover Art and no Screenshots found, reverting to USER mode")
 				Me.Extras_Mode = enm_ExtrasMode.User
+				Me.ExtraNum = 0
 				If DoRecurse Then ApplyNextExtra(False, False)
 				Return
 			Else
@@ -2262,7 +3125,7 @@ Public Class ucr_Emulation
 			Dim extranum As Integer = Me.Moby_ExtraNum
 
 			If Me.DS_ML.src_ucr_Emulation_Moby_Releases_Cover_Art.Rows.Count > extranum Then
-				'>> Cover Art <<
+				'>> Moby Cover Art <<
 				Debug.WriteLine("EXTRAS: using Cover Art")
 
 				Dim row_Cover_Art As DS_ML.src_ucr_Emulation_Moby_Releases_Cover_ArtRow = Me.DS_ML.src_ucr_Emulation_Moby_Releases_Cover_Art.Rows(extranum)
@@ -2325,7 +3188,7 @@ Public Class ucr_Emulation
 				If cls_Extras.EnsureExtrasFile(filepath) Then
 					'Apply here
 					Debug.WriteLine("EXTRAS: Extra found, loading for display")
-					pic_Game.Image = Image.FromStream(New IO.MemoryStream(Alphaleonis.Win32.Filesystem.File.ReadAllBytes(filepath)))
+					pic_Game.Image = cls_Extras.LoadImageFromStreamSafe(filepath)
 				Else
 					'Run the Downloader
 					Debug.WriteLine("EXTRAS: Extra not found, starting the download")
@@ -2334,11 +3197,11 @@ Public Class ucr_Emulation
 			Else
 				Debug.WriteLine("EXTRAS: using Screenshots")
 
-				'>> Screenshots <<
+				'>> Moby Screenshots <<
 				extranum = extranum - DS_ML.src_ucr_Emulation_Moby_Releases_Cover_Art.Rows.Count
 
 				If Not DS_ML.src_ucr_Emulation_Moby_Releases_Screenshots.Rows.Count > extranum Then
-					Debug.WriteLine("EXTRAS: we hit the ceiling, switching to User now")
+					Debug.WriteLine("EXTRAS: we hit the ceiling, switching to USER mode now")
 					Me.Moby_ExtraNum = 0
 					Me.ExtraNum = 0
 					Me.Extras_Mode = enm_ExtrasMode.User
@@ -2406,7 +3269,7 @@ Public Class ucr_Emulation
 				If cls_Extras.EnsureExtrasFile(filepath) Then
 					'Apply here
 					Debug.WriteLine("EXTRAS: Extra found, loading for display")
-					pic_Game.Image = Image.FromStream(New IO.MemoryStream(Alphaleonis.Win32.Filesystem.File.ReadAllBytes(filepath)))
+					pic_Game.Image = cls_Extras.LoadImageFromStreamSafe(filepath)
 				Else
 					'Run the Downloader
 					Debug.WriteLine("EXTRAS: Extra not found, starting the download")
@@ -2422,14 +3285,14 @@ Public Class ucr_Emulation
 				Return
 			End If
 		Catch ex As Exception
-
+			Return
 		End Try
 
 		Me.pic_Game.Cursor = Cursors.WaitCursor
 		Me.prg_Extras_Download.EditValue = 0
 		Me.prg_Extras_Download.Visible = True
 
-		Me.Moby_Download_Info = New cls_Moby_Download_Info(url, filepath, description, applyDescription)
+		Me.Moby_Download_Info = New cls_Moby_Download_Info(url, filepath, description, applyDescription, isArchiveOrg:=False)
 
 		Me.Moby_Extras_Downloader.DownloadFileAsync(New Uri("http://www.mobygames.com" & url), filepath)
 	End Sub
@@ -2448,9 +3311,23 @@ Public Class ucr_Emulation
 
 		If e.Error IsNot Nothing Then
 			Debug.WriteLine("EXTRAS: Download has errored: " & e.Error.Message & e.Error.StackTrace)
+
+			If Me.Moby_Download_Info IsNot Nothing AndAlso Not Me.Moby_Download_Info.isArchiveOrg Then
+				'Retry from archive.org directly
+				Me.Moby_Download_Info.isArchiveOrg = True
+
+				Dim archiveOrgUrl As String = "http://web.archive.org/web/http://www.mobygames.com" & Me.Moby_Download_Info.URL
+				'Dim archiveOrgUrl As String = "http://web.archive.org/web/http%3A%2F%2Fwww.mobygames.com" & url.ToString.Replace("/", "%2F")
+				'does not work: Dim archiveOrgUrl As String = "https://archive.org/download/www.mobygames.com" & url
+
+				Me.Moby_Extras_Downloader.DownloadFileAsync(New Uri(archiveOrgUrl), Me.Moby_Download_Info.Filepath)
+			Else
+				Me.lbl_MobyDownload_Error.Text = "Error while downloading: " & e.Error.Message
+				Me.pic_Game.Image = Nothing
+			End If
+
 			Return
 		End If
-
 
 		If Me.Moby_Download_Info Is Nothing Then
 			Debug.WriteLine("EXTRAS: After Download: Game has changed, aborting")
@@ -2460,12 +3337,43 @@ Public Class ucr_Emulation
 
 		If Not Alphaleonis.Win32.Filesystem.File.Exists(Me.Moby_Download_Info.Filepath) Then
 			Debug.WriteLine("EXTRAS: After Download: File not found, aborting")
+			Me.pic_Game.Image = Nothing
 			Return
 		End If
 
+		Debug.WriteLine("EXTRAS: After Download: try to load as Image")
+		Dim img As System.Drawing.Image = cls_Extras.LoadImageFromStreamSafe(Me.Moby_Download_Info.Filepath, False)
+
+		If img Is Nothing Then
+			Debug.WriteLine("EXTRAS: After Download: it is NOT an image")
+
+			If Me.Moby_Download_Info.isArchiveOrg Then
+				Debug.WriteLine("EXTRAS: After Download: archive.org may have sent just html with the image embedded")
+				'Load the file contents as HTML and check for "real" download URL
+				Dim sContent As String = MKNetLib.cls_MKFileSupport.GetFileContents(Me.Moby_Download_Info.Filepath)
+
+				Try
+					Dim newURL As String = MKNetLib.cls_MKRegex.GetMatches(sContent, "<iframe.*src=""(.*?)"".*?>")(0).Groups(1).Value
+
+					Debug.WriteLine("EXTRAS: After Download: fetching from " & newURL)
+					Me.Moby_Extras_Downloader.DownloadFileAsync(New Uri(newURL), Me.Moby_Download_Info.Filepath)
+				Catch ex As Exception
+					Debug.WriteLine("EXTRAS: After Download: Failed reading the HTML")
+				End Try
+			Else
+				Debug.WriteLine("EXTRAS: Removing file")
+				Try
+					Alphaleonis.Win32.Filesystem.File.Delete(Me.Moby_Download_Info.Filepath)
+				Catch ex As Exception
+
+				End Try
+			End If
+		End If
+
 		Debug.WriteLine("EXTRAS: After Download: Loading for display")
+
 		If cls_Extras.EnsureExtrasFile(Me.Moby_Download_Info.Filepath) Then
-			pic_Game.Image = Image.FromStream(New IO.MemoryStream(Alphaleonis.Win32.Filesystem.File.ReadAllBytes(Me.Moby_Download_Info.Filepath)))
+			pic_Game.Image = cls_Extras.LoadImageFromStreamSafe(Me.Moby_Download_Info.Filepath)
 		End If
 
 		If Me.Moby_Download_Info.ApplyExtraDescription Then
@@ -2673,6 +3581,7 @@ Public Class ucr_Emulation
 		bbi_DOSBox_Templates.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
 		bbi_DOSBox_Clear_Exe_Config.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
 		bbi_ScummVM_Templates.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+		bbi_Create_TDL_Menu.Visibility = BarItemVisibility.Never
 
 
 		bbi_Edit_Game.Enabled = False
@@ -2695,7 +3604,22 @@ Public Class ucr_Emulation
 		bbi_Show_Similarity_Feature_Columns.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
 		bbi_Open_Similarity_Details.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
 
+		bbi_Export_TDL.Visibility = BarItemVisibility.Never
+
 		If MKNetDXLib.ctl_MKDXGrid.GetGridViewSelectedDataRowHandles(gv_Emu_Games).Length > 0 Then
+			For Each row As DataRow In MKNetDXLib.ctl_MKDXGrid.GetGridViewSelectedDataRows(gv_Emu_Games)
+				If row("id_Moby_Platforms") = cls_Globals.enm_Moby_Platforms.dos Then
+					bbi_Export_TDL.Visibility = BarItemVisibility.Always
+					Exit For
+				End If
+			Next
+
+			Me.bbi_Edit_Game.Caption = "Edit Game"
+
+			If MKNetDXLib.ctl_MKDXGrid.GetGridViewSelectedDataRowHandles(gv_Emu_Games).Length > 1 Then
+				Me.bbi_Edit_Game.Caption = "Edit Selected Games"
+			End If
+
 			If BS_Emu_Games.Current IsNot Nothing Then
 				bbi_Edit_Game.Enabled = True
 				bbi_Edit_Multiple_Games.Enabled = True
@@ -2722,13 +3646,19 @@ Public Class ucr_Emulation
 				If {cls_Globals.enm_Moby_Platforms.dos, cls_Globals.enm_Moby_Platforms.pcboot}.Contains(TC.NZ(BS_Emu_Games.Current("id_Moby_Platforms"), 0)) Then 'DOS or PC Booter
 					bbi_DOSBox_Templates.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
 					bbi_DOSBox_Clear_Exe_Config.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+					bbi_Create_TDL_Menu.Visibility = BarItemVisibility.Always
 				End If
 
 				If {cls_Globals.enm_Moby_Platforms.scummvm}.Contains(TC.NZ(BS_Emu_Games.Current("id_Moby_Platforms"), 0)) Then
 					bbi_ScummVM_Templates.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
 				End If
 
-				If Not TC.IsNullNothingOrEmpty(BS_Emu_Games.Current("File")) Then
+				If Not TC.IsNullNothingOrEmpty(BS_Emu_Games.Current("File")) OrElse {cls_Globals.enm_Moby_Platforms.scummvm}.Contains(TC.NZ(BS_Emu_Games.Current("id_Moby_Platforms"), 0)) Then
+
+					Dim id_Users As Object = Nothing
+					If cls_Globals.MultiUserMode AndAlso Not cls_Globals.Admin AndAlso cls_Globals.id_Users > 0 Then
+						id_Users = cls_Globals.id_Users
+					End If
 
 					Dim sSQL_Emus As String = "	SELECT" & ControlChars.CrLf &
 					"		EMU.id_Emulators" & ControlChars.CrLf &
@@ -2739,9 +3669,10 @@ Public Class ucr_Emulation
 					"		, EMU.AutoItScript" & ControlChars.CrLf &
 					"		, EMU.J2KPreset" & ControlChars.CrLf &
 					"		, EMU.ScreenshotDirectory" & ControlChars.CrLf &
-					"		, EMUPLTFM.DefaultEmulator AS DefaultEmulator_Global" & ControlChars.CrLf &
+					"		, IFNULL(UEMUPLTFM.DefaultEmulator, EMUPLTFM.DefaultEmulator) AS DefaultEmulator_Global" & ControlChars.CrLf &
 					"		, CASE WHEN EMU.id_Emulators = EMUGAME.id_Emulators THEN 1 ELSE 0 END AS DefaultEmulator" & ControlChars.CrLf &
 					"	FROM tbl_Emulators_Moby_Platforms EMUPLTFM" & ControlChars.CrLf &
+					"	LEFT JOIN tbl_Users_Emulators_Moby_Platforms UEMUPLTFM ON UEMUPLTFM.id_Users = " & TC.getSQLFormat(id_Users) & " AND UEMUPLTFM.id_Moby_Platforms = EMUPLTFM.id_Moby_Platforms AND UEMUPLTFM.id_Emulators = EMUPLTFM.id_Emulators" & ControlChars.CrLf &
 					"	LEFT JOIN tbl_Emulators EMU ON EMUPLTFM.id_Emulators = EMU.id_Emulators" & ControlChars.CrLf &
 					"	LEFT JOIN tbl_Emu_Games EMUGAME ON EMUGAME.id_Emu_Games = " & TC.getSQLFormat(BS_Emu_Games.Current("id_Emu_Games")) & ControlChars.CrLf &
 					"	WHERE EMUPLTFM.id_Moby_Platforms = " & TC.getSQLFormat(BS_Emu_Games.Current("id_Moby_Platforms")) & ControlChars.CrLf &
@@ -2804,9 +3735,9 @@ Public Class ucr_Emulation
 			bbi_ScummVM_Templates.Enabled = False
 			bbi_Edit_Game.Enabled = False
 			bbi_Edit_Multiple_Games.Enabled = False
-			bbi_Emu_Settings.Enabled = False
 			bbi_Rom_Manager.Enabled = False
 			bbi_Rombase_Manager.Enabled = False
+			bbi_Add_to_Challenge.Enabled = False
 			bsi_Export.Enabled = False
 		End If
 	End Sub
@@ -2934,6 +3865,10 @@ Public Class ucr_Emulation
 		If _Initializing Then Return
 	End Sub
 
+	Private Sub cmb_Challenges_Validated(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmb_Challenges.Validated
+		If _Initializing Then Return
+	End Sub
+
 	Private Sub BS_FilterSets_CurrentChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles BS_FilterSets.CurrentChanged
 		If BS_FilterSets.Current Is Nothing OrElse BS_FilterSets.Current("id_FilterSets") = 0 Then
 			cmb_Filterset.Properties.Buttons(2).Enabled = False
@@ -2989,13 +3924,38 @@ Public Class ucr_Emulation
 	Private Sub bbi_Edit_Game_ItemClick(ByVal sender As System.Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs) Handles bbi_Edit_Game.ItemClick
 		If BS_Emu_Games.Current Is Nothing Then Return
 
-		Dim id_Emu_Games As Integer = TC.getSQLFormat(BS_Emu_Games.Current("id_Emu_Games"))
+		Dim iRowHandles As Integer() = MKNetDXLib.ctl_MKDXGrid.GetGridViewSelectedDataRowHandles(gv_Emu_Games)
+		Dim iNumRows As Integer = iRowHandles.Length
 
-		Using frm As New frm_Emu_Game_Edit(id_Emu_Games)
-			If frm.ShowDialog(Me.ParentForm) = DialogResult.OK Then
-				Refill_Emu_Games()
-			End If
-		End Using
+		If iNumRows <= 0 Then
+			Return
+		End If
+
+		If iNumRows = 1 Then
+			Dim id_Emu_Games As Integer = TC.getSQLFormat(BS_Emu_Games.Current("id_Emu_Games"))
+
+			Using frm As New frm_Emu_Game_Edit(id_Emu_Games)
+				If frm.ShowDialog(Me.ParentForm) = DialogResult.OK Then
+					Refill_Emu_Games()
+				End If
+			End Using
+
+		Else
+			Dim al_id_Emu_Games As New ArrayList
+
+			For Each iRowHandle As Integer In iRowHandles
+				Dim row As DataRow = gv_Emu_Games.GetRow(iRowHandle).Row
+				al_id_Emu_Games.Add(CInt(row("id_Emu_Games")))
+			Next
+
+			Dim id_Emu_Games_Int As Integer() = CType(al_id_Emu_Games.ToArray(GetType(Integer)), Integer())
+
+			Using frm As New frm_Emu_Game_Edit(id_Emu_Games_Int, "Edit " & iRowHandles.Length & " Games", "", False, IIf(TC.NZ(cmb_Platform.EditValue, 0) > 0, TC.NZ(cmb_Platform.EditValue, 0), Nothing))
+				If frm.ShowDialog(Me.ParentForm) = DialogResult.OK Then
+					Refill_Emu_Games()
+				End If
+			End Using
+		End If
 	End Sub
 
 	Private Sub bbi_Edit_Multiple_Games_ItemClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs) Handles bbi_Edit_Multiple_Games.ItemClick
@@ -3095,6 +4055,10 @@ Public Class ucr_Emulation
 		cls_Settings.SetSetting("ucr_Emulation-Group", cmb_Groups.EditValue, cls_Settings.enm_Settingmodes.Per_User)
 		cls_Settings.SetSetting("ucr_Emulation-Developer", cmb_Staff.EditValue, cls_Settings.enm_Settingmodes.Per_User)
 		cls_Settings.SetSetting("ucr_Emulation-Filterset", cmb_Filterset.EditValue, cls_Settings.enm_Settingmodes.Per_User)
+		cls_Settings.SetSetting("ucr_Emulation-Cheevo_Challenge", cmb_Challenges.EditValue, cls_Settings.enm_Settingmodes.Per_User)
+		cls_Settings.SetSetting("ucr_Emulation-Cheevo_Challenge_ShowCompleted", chb_Cheevo_Challenges_Show_Completed.Checked, cls_Settings.enm_Settingmodes.Per_User)
+		cls_Settings.SetSetting("ucr_Emulation-Details_Tab_Page", tcl_Details.SelectedTabPage.Name, cls_Settings.enm_Settingmodes.Per_User)
+
 
 		Save_EmuGame_Position()
 	End Sub
@@ -3148,9 +4112,9 @@ Public Class ucr_Emulation
 					If ext = "bmp" OrElse ext = "png" OrElse ext = "jpg" OrElse ext = "tif" Then
 						Try
 							'Dim img As New Bitmap(file)
-							Dim img As Bitmap = Image.FromStream(New IO.MemoryStream(Alphaleonis.Win32.Filesystem.File.ReadAllBytes(file)))
+							Dim img As Bitmap = cls_Extras.LoadImageFromStreamSafe(file, False)
 
-							If img.PhysicalDimension.Width > 1 And img.PhysicalDimension.Height > 1 Then
+							If img IsNot Nothing AndAlso img.PhysicalDimension.Width > 1 AndAlso img.PhysicalDimension.Height > 1 Then
 								al_Screenshots.Add(img)
 							End If
 						Catch ex As Exception
@@ -3165,6 +4129,7 @@ Public Class ucr_Emulation
 
 		Using frm As New frm_USER_Extras_Manager(id_Emu_Games, al_Screenshots)
 			frm.Name = frm.Name & "_ADD"
+			frm.Text = ""
 			If frm.ShowDialog(Me.ParentForm) = DialogResult.OK Then
 				For Each row As DataRow In frm.DS_Screenshots.Tables("tbl_Screenshots").Select("", "Sort")
 					If TC.NZ(row("Use"), False) = False Then Continue For
@@ -3248,6 +4213,8 @@ Public Class ucr_Emulation
 					Catch ex As Exception
 
 					End Try
+
+					'Check_Challenge_Runtime_Unlock()
 				End Using
 			Next
 
@@ -3274,6 +4241,13 @@ Public Class ucr_Emulation
 			'AddNewScreenshots(id_Emu_Games, al_Shots, snapdir)
 			AddNewScreenshots(id_Emu_Games, al_Shots, New String() {snapdir, cls_Globals.Dir_Screenshot})
 		End If
+
+		If _check_RetroAchievements_and_Challenge_for_Current_Game Then
+			Get_RetroAchievements_for_Current_Game()
+			_check_RetroAchievements_and_Challenge_for_Current_Game = False
+			Check_Challenge_Runtime_Unlock()
+		End If
+
 	End Sub
 
 	Private Sub grd_Emu_Games_DDAfterSaveSettings(ByVal Sender As Object, ByVal e As MKNetDXLib.cls_DDSettingHandlerDelegates(Of MKNetDXLib.ctl_MKDXGrid).SettingEventArg_WithResult) Handles grd_Emu_Games.DDAfterSaveSettings
@@ -3294,6 +4268,8 @@ Public Class ucr_Emulation
 
 		filteringUIContext.RetrieveFields()
 		'accordion_FilterUI.ExpandAll()
+
+		Refill_Cheevo_Open_Challenges()
 
 		_Initializing = False
 	End Sub
@@ -3508,9 +4484,18 @@ Public Class ucr_Emulation
 				Dim iAdded As Integer = 0
 				Dim iSkipped As Integer = 0
 				Dim iDeleted As Integer = 0
+
+				Dim ar_id_Moby_Platforms As New ArrayList 'Save distinct all involved platforms (for chache update)
+				ar_id_Moby_Platforms.Add(-1L) 'Definitely add the "All Platforms" platform
+
 				Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
 					For Each iRowHandle As Integer In iRowHandles
 						Dim row_Emu_Games As DS_ML.src_ucr_Emulation_GamesRow = gv_Emu_Games.GetRow(iRowHandle).Row
+
+						If Not ar_id_Moby_Platforms.Contains(row_Emu_Games("id_Moby_Platforms")) Then
+							ar_id_Moby_Platforms.Add(row_Emu_Games("id_Moby_Platforms"))
+						End If
+
 						Dim id_Users_Emu_Games As Integer = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "SELECT id_Users_Emu_Games FROM tbl_Users_Emu_Games WHERE id_Users = " & TC.getSQLFormat(id_Users) & " AND id_Emu_Games = " & TC.getSQLFormat(row_Emu_Games("id_Emu_Games")), tran), 0)
 						If id_Users_Emu_Games > 0 Then
 							If Not bAdd Then
@@ -3529,14 +4514,28 @@ Public Class ucr_Emulation
 						End If
 					Next
 
-					DS_ML.Update_Platform_NumGames_Cache(tran, Me.cmb_Platform.EditValue, id_Users)
+					For Each id_Moby_Platforms In ar_id_Moby_Platforms
+						DS_ML.Update_Platform_NumGames_Cache(tran, id_Moby_Platforms, id_Users)
+					Next
 
 					tran.Commit()
 
 					If bAdd Then
-						MKDXHelper.MessageBox("For the restricted user ' " & frm.cmb_Users.Text & "' out of " & iRowHandles.Length & " selected games " & iAdded & " have been added and " & iSkipped & " have been skipped (because they were already added to this user).", "Add selected games to restricted user", MessageBoxButtons.OK, MessageBoxIcon.Information)
+						Dim sMessage = "Add games to restricted user '" & frm.cmb_Users.Text & "'" & ControlChars.CrLf
+						sMessage &= ControlChars.CrLf
+						sMessage &= iRowHandles.Length & " games selected" & ControlChars.CrLf
+						sMessage &= iAdded & " games added" & ControlChars.CrLf
+						sMessage &= iSkipped & " already added games skipped" & ControlChars.CrLf
+
+						MKDXHelper.MessageBox(sMessage, "Add selected games to restricted user", MessageBoxButtons.OK, MessageBoxIcon.Information)
 					Else
-						MKDXHelper.MessageBox("For the restricted user ' " & frm.cmb_Users.Text & "' out of " & iRowHandles.Length & " selected games " & iDeleted & " have been removed and " & iSkipped & " have been skipped (because they were not added to this user in the first place).", "Remove selected games from restricted user", MessageBoxButtons.OK, MessageBoxIcon.Information)
+						Dim sMessage = "Remove games from restricted user '" & frm.cmb_Users.Text & "'" & ControlChars.CrLf
+						sMessage &= ControlChars.CrLf
+						sMessage &= iRowHandles.Length & " games selected" & ControlChars.CrLf
+						sMessage &= iAdded & " games removed" & ControlChars.CrLf
+						sMessage &= iSkipped & " games skipped (they weren't added to the user)" & ControlChars.CrLf
+
+						MKDXHelper.MessageBox(sMessage, "Remove selected games from restricted user", MessageBoxButtons.OK, MessageBoxIcon.Information)
 					End If
 				End Using
 			End If
@@ -3576,6 +4575,9 @@ Public Class ucr_Emulation
 			End Using
 
 			Me.Cursor = Cursors.Default
+
+			MKDXHelper.MessageBox("All games of the restricted user are now displayed in bold font and the Highlighted field is checked (you can filter by that field, too).", "Show Games of restricted user", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
 		End Using
 	End Sub
 
@@ -3742,14 +4744,30 @@ Public Class ucr_Emulation
 			Return
 		End If
 
+		Dim iCount As Integer = 0
+		Dim bFound As Boolean = False
+
 		Dim rnd As New Random(Environment.TickCount)
-		Dim iChosen As Integer = rnd.Next() Mod iMaxRow
 
-		Dim rowChosen As DataRow = gv_Emu_Games.GetRow(iChosen).Row
+		While Not bFound AndAlso iCount < 10
+			Dim iChosen As Integer = rnd.Next() Mod iMaxRow
 
-		MKNetLib.cls_MKClientSupport.SetBindingSourcePosition(BS_Emu_Games, "id_Emu_Games", rowChosen("id_Emu_Games"))
+			Dim rowChosen As DataRow = gv_Emu_Games.GetRow(iChosen).Row
 
-		Launch_Game()
+			If Not TC.NZ(rowChosen("Unavailable"), False) Then
+				bFound = True
+				MKNetLib.cls_MKClientSupport.SetBindingSourcePosition(BS_Emu_Games, "id_Emu_Games", rowChosen("id_Emu_Games"))
+				Launch_Game()
+				Return
+			End If
+
+			iCount += 1
+		End While
+
+		If Not bFound Then
+			MKDXHelper.MessageBox("After 10 tries, only unavailable entries have been found, aborting.", "Launch Random Game", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+		End If
+
 	End Sub
 
 	Private Sub bbi_USER_Extras_Manager_ItemClick(sender As Object, e As ItemClickEventArgs) Handles bbi_USER_Extras_Manager.ItemClick
@@ -3759,7 +4777,7 @@ Public Class ucr_Emulation
 
 		Using frm As New frm_USER_Extras_Manager(BS_Emu_Games.Current("id_Emu_Games"), ar_Extras)
 			If frm.ShowDialog(Me.ParentForm) = DialogResult.OK Then
-				For Each old_extra As cls_Extras.cls_Extras_Result In ar_Extras
+				For Each old_extra As Object In ar_Extras
 					Try
 						If Not old_extra._NoExtraFound Then
 							Alphaleonis.Win32.Filesystem.File.Delete(old_extra._Path)
@@ -3819,6 +4837,19 @@ Public Class ucr_Emulation
 	Private Sub popmnu_Statistics_BeforePopup(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles popmnu_Statistics.BeforePopup
 		If Not grd_Statistics.Allow_Popup OrElse BS_Emu_Games_History.Current Is Nothing Then
 			e.Cancel = True
+		End If
+	End Sub
+
+	Private Sub popmnu_Cheevos_BeforePopup(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles popmnu_Cheevos.BeforePopup
+		If Not grd_RetroAchievements.Allow_Popup Then
+			e.Cancel = True
+			Return
+		End If
+
+		If BS_RetroAchievements.Current Is Nothing Then
+			bbi_Cheevo_add_to_Challenge.Visibility = BarItemVisibility.Never
+		Else
+			bbi_Cheevo_add_to_Challenge.Visibility = BarItemVisibility.Always
 		End If
 	End Sub
 
@@ -4102,4 +5133,668 @@ Public Class ucr_Emulation
 			End If
 		End Using
 	End Sub
+
+	Private Sub bbi_Export_TDL_ItemClick(sender As Object, e As ItemClickEventArgs) Handles bbi_Export_TDL.ItemClick
+		Dim arGames As New ArrayList
+
+		Dim arSelected As ArrayList = MKNetDXLib.ctl_MKDXGrid.GetGridViewSelectedDataRows(gv_Emu_Games)
+
+		For Each row As DataRow In arSelected
+			If row("id_Moby_Platforms") = cls_Globals.enm_Moby_Platforms.dos AndAlso Alphaleonis.Win32.Filesystem.Path.GetExtension(TC.NZ(row("File"), "")).ToLower = ".zip" Then
+				If Alphaleonis.Win32.Filesystem.File.Exists(TC.NZ(row("Folder"), "") & "\" & TC.NZ(row("File"), "")) Then
+					arGames.Add(row)
+				End If
+			End If
+		Next
+
+		If arGames.Count = 0 Then
+			MKDXHelper.MessageBox("Currently, the Total DOS Launcher export only supports DOS games in .zip files. None of the selected games match this criteria or could not be found, sorry.", "Export as Total DOS Launcher Collection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+			Return
+		End If
+
+		If arGames.Count > 32767 Then
+			MKDXHelper.MessageBox("Currently, Total DOS Launcher does not support more than 32767 entries, aborting.", "Export as Total DOS Launcher Collection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+			Return
+		End If
+
+		If arGames.Count > 16383 Then
+			MKDXHelper.MessageBox("You selected more than 16383 entries. This may cause the Total DOS Launcher to operate slower than normal due to the titles index not being able to be cached in memory. Total DOS Launcher will still run, but might require a very fast I/O device for acceptable speed.", "Export as Total DOS Launcher Collection", MessageBoxButtons.OK, MessageBoxIcon.Information)
+		End If
+
+		Using frm As New frm_Export_TDL(arGames, arSelected.Count)
+			frm.ShowDialog()
+		End Using
+	End Sub
+
+	Private Sub bbi_Create_TDL_Menu_ItemClick(sender As Object, e As ItemClickEventArgs) Handles bbi_Create_TDL_Menu.ItemClick
+		Using frm_TDL_Create_Menu As New frm_TDL_Create_Menu(BS_Emu_Games.Current.Row)
+			frm_TDL_Create_Menu.ShowDialog()
+		End Using
+	End Sub
+
+
+#Region "RetroAchievements"
+	Public Sub Get_RetroAchievements_for_Current_Game()
+		Console.WriteLine("Get_RetroAchievements_for_Current_Game START")
+
+		'Init display stuff here
+		If Me.RetroAchievements_WebClient.IsBusy Then
+			Me.RetroAchievements_WebClient.CancelAsync()
+			Me.RetroAchievements_WebClient = New WebClient
+		End If
+
+		Me.gb_Cheevos.Visible = False
+		Me.lbl_RetroAchievements_Message.Visible = False
+		Me.prg_RetroAchievements_Download.EditValue = 0
+		Me.prg_RetroAchievements_Download.Visible = True
+
+		If TC.NZ(BS_Emu_Games.Current("Platform_RetroAchievements"), False) = False Then
+			Me.RetroAchievements_ShowMessage("The game's platform isn't supported by retroachievements.org.")
+			Return
+		End If
+
+		Me.RetroAchievements_DataRetrieval.Init(TC.NZ(BS_Emu_Games.Current("MD5"), ""))
+
+		Me.RetroAchievements_Fetch_Step()
+	End Sub
+
+	Public Sub RetroAchievements_Fetch_Step()
+		If Me.RetroAchievements_WebClient.IsBusy Then
+			Return
+		End If
+
+		Select Case Me.RetroAchievements_DataRetrieval.currentStep
+			Case enm_RetroAchievements_Steps.RA_Cheevos_for_Game_01_Login
+				RetroAchievements_Login_Async()
+			Case enm_RetroAchievements_Steps.RA_Cheevos_for_Game_02_Get_GameID_for_Hash
+				RetroAchievements_Get_GameID_for_Hash_Async()
+			Case enm_RetroAchievements_Steps.RA_Cheevos_for_Game_03_Get_Cheevos_for_GameID
+				RetroAchievements_Get_Cheevos_for_GameID_Async()
+			Case enm_RetroAchievements_Steps.RA_Cheevos_for_Game_04_Get_Casual_Unlocked_Cheevos_for_GameID
+				RetroAchievements_Get_Casual_Unlocked_Cheevos_for_GameID_Async()
+			Case enm_RetroAchievements_Steps.RA_Cheevos_for_Game_05_Get_Hardcore_Unlocked_Cheevos_for_GameID
+				RetroAchievements_Get_Hardcore_Unlocked_Cheevos_for_GameID_Async()
+		End Select
+	End Sub
+
+	Public Sub RetroAchievements_Login_Async()
+		Console.WriteLine("RetroAchievements_Login_Async START")
+
+		If cls_Globals.RetroAchievements_User = "" OrElse cls_Globals.RetroAchievements_Pass = "" Then
+			Me.RetroAchievements_ShowMessage("In order to use RetroAchievements, go to retroachievements.org and sign up, then go to the Settings page in Metropolis Launcher and provide the username and password.")
+			Return
+		End If
+
+		Me.RetroAchievements_WebClient.DownloadDataAsync(New Uri("http://retroachievements.org/dorequest.php?r=login&u=" & System.Web.HttpUtility.UrlEncode(cls_Globals.RetroAchievements_User) & "&p=" & System.Web.HttpUtility.UrlEncode(cls_Globals.RetroAchievements_Pass)), Me.RetroAchievements_DataRetrieval.currentStep)
+	End Sub
+
+	Public Sub RetroAchievements_Get_GameID_for_Hash_Async()
+		Console.WriteLine("RetroAchievements_Get_GameID_for_Hash_Async START")
+
+		If Me.RetroAchievements_DataRetrieval.MD5 = "" Then
+			'TODO: Display "cannot fetch RetroAchievements for current game, missing md5"
+			Me.RetroAchievements_ShowMessage("This game doesn't provide an MD5 checksum, RetroAchievments can't be queried.")
+			Return
+		End If
+
+		If Me.RetroAchievements_DataRetrieval.Token = "" Then
+			Me.RetroAchievements_ShowMessage("Login was not successful (Token missing).")
+			Return
+		End If
+
+		Me.prg_RetroAchievements_Download.EditValue = 20
+		Me.prg_RetroAchievements_Download.Visible = True
+
+		Me.RetroAchievements_WebClient.DownloadDataAsync(New Uri("http://retroachievements.org/dorequest.php?r=gameid&m=" & System.Web.HttpUtility.UrlEncode(Me.RetroAchievements_DataRetrieval.MD5)), Me.RetroAchievements_DataRetrieval.currentStep)
+	End Sub
+
+	Public Sub RetroAchievements_Get_Cheevos_for_GameID_Async()
+		Console.WriteLine("RetroAchievements_Get_Cheevos_for_GameID_Async START")
+
+		If Me.RetroAchievements_DataRetrieval.GameID = "" Then
+			Me.RetroAchievements_ShowMessage("Cannot query RetroAchievements for current game, missing GameID.")
+			Return
+		End If
+
+		If Me.RetroAchievements_DataRetrieval.Token = "" Then
+			Me.RetroAchievements_ShowMessage("Login was not successful (Token missing).")
+			Return
+		End If
+
+		Me.prg_RetroAchievements_Download.EditValue = 40
+		Me.prg_RetroAchievements_Download.Visible = True
+
+		Me.RetroAchievements_WebClient.DownloadDataAsync(New Uri("http://retroachievements.org/dorequest.php?r=patch&u=" & System.Web.HttpUtility.UrlEncode(cls_Globals.RetroAchievements_User) & "&g=" & System.Web.HttpUtility.UrlEncode(Me.RetroAchievements_DataRetrieval.GameID) & "&f=3&l=1&t=" & System.Web.HttpUtility.UrlEncode(Me.RetroAchievements_DataRetrieval.Token)), Me.RetroAchievements_DataRetrieval.currentStep)
+	End Sub
+
+	Public Sub RetroAchievements_Get_Casual_Unlocked_Cheevos_for_GameID_Async()
+		Console.WriteLine("RetroAchievements_Get_Casual_Unlocked_Cheevos_for_GameID_Async START")
+
+		If Me.RetroAchievements_DataRetrieval.GameID = "" Then
+			Me.RetroAchievements_ShowMessage("Cannot query RetroAchievements for current game, missing GameID.")
+			Return
+		End If
+
+		If Me.RetroAchievements_DataRetrieval.Token = "" Then
+			Me.RetroAchievements_ShowMessage("Login was not successful (Token missing).")
+			Return
+		End If
+
+		Me.prg_RetroAchievements_Download.EditValue = 60
+		Me.prg_RetroAchievements_Download.Visible = True
+
+		Me.RetroAchievements_WebClient.DownloadDataAsync(New Uri("http://retroachievements.org/dorequest.php?r=unlocks&u=" & System.Web.HttpUtility.UrlEncode(cls_Globals.RetroAchievements_User) & "&g=" & System.Web.HttpUtility.UrlEncode(Me.RetroAchievements_DataRetrieval.GameID) & "&h=0&t=" & System.Web.HttpUtility.UrlEncode(Me.RetroAchievements_DataRetrieval.Token)), Me.RetroAchievements_DataRetrieval.currentStep)
+	End Sub
+
+	Public Sub RetroAchievements_Get_Hardcore_Unlocked_Cheevos_for_GameID_Async()
+		Console.WriteLine("RetroAchievements_Get_Hardcore_Unlocked_Cheevos_for_GameID_Async START")
+
+		If Me.RetroAchievements_DataRetrieval.GameID = "" Then
+			Me.RetroAchievements_ShowMessage("Cannot query RetroAchievements for current game, missing GameID.")
+			Return
+		End If
+
+		If Me.RetroAchievements_DataRetrieval.Token = "" Then
+			Me.RetroAchievements_ShowMessage("Login was not successful (Token missing).")
+			Return
+		End If
+
+		Me.prg_RetroAchievements_Download.EditValue = 80
+		Me.prg_RetroAchievements_Download.Visible = True
+
+		Me.RetroAchievements_WebClient.DownloadDataAsync(New Uri("http://retroachievements.org/dorequest.php?r=unlocks&u=" & System.Web.HttpUtility.UrlEncode(cls_Globals.RetroAchievements_User) & "&g=" & System.Web.HttpUtility.UrlEncode(Me.RetroAchievements_DataRetrieval.GameID) & "&h=1&t=" & System.Web.HttpUtility.UrlEncode(Me.RetroAchievements_DataRetrieval.Token)), Me.RetroAchievements_DataRetrieval.currentStep)
+	End Sub
+
+	Private Sub RetroAchievements_WebClient_DownloadDataCompleted(sender As Object, e As DownloadDataCompletedEventArgs) Handles RetroAchievements_WebClient.DownloadDataCompleted
+		Console.WriteLine("RetroAchievements_WebClient_DownloadDataCompleted START")
+
+		If e.Cancelled Then
+			Me.lbl_RetroAchievements_Message.Visible = False
+			Me.gb_Cheevos.Visible = False
+			Me.prg_RetroAchievements_Download.Visible = False
+			Return
+		End If
+
+		If e.Error IsNot Nothing Then
+			Me.RetroAchievements_ShowMessage("Error while fetching data from the web:" & ControlChars.CrLf & e.Error.Message & e.Error.StackTrace)
+			Return
+		End If
+
+		'If e.UserState <> Me.RetroAchievements_DataRetrieval.currentStep Then
+		'	Console.WriteLine("RetroAchievements_WebClient_DownloadDataCompleted CANCELLED due to mismatch in step")
+		'	Return
+		'End If
+
+		Dim AnalysisResult As Boolean = False
+
+		Select Case e.UserState
+			Case enm_RetroAchievements_Steps.RA_Cheevos_for_Game_01_Login
+				AnalysisResult = RetroAchievements_Analyze_LoginData(e.Result)
+			Case enm_RetroAchievements_Steps.RA_Cheevos_for_Game_02_Get_GameID_for_Hash
+				AnalysisResult = RetroAchievements_Analyze_GameID(e.Result)
+			Case enm_RetroAchievements_Steps.RA_Cheevos_for_Game_03_Get_Cheevos_for_GameID
+				AnalysisResult = RetroAchievements_Analyze_Cheevos(e.Result)
+			Case enm_RetroAchievements_Steps.RA_Cheevos_for_Game_04_Get_Casual_Unlocked_Cheevos_for_GameID
+				AnalysisResult = RetroAchievements_Analyze_Unlocks(e.Result, False)
+			Case enm_RetroAchievements_Steps.RA_Cheevos_for_Game_05_Get_Hardcore_Unlocked_Cheevos_for_GameID
+				AnalysisResult = RetroAchievements_Analyze_Unlocks(e.Result, True)
+		End Select
+
+		If Not AnalysisResult Then
+			Return
+		End If
+
+		If RetroAchievements_DataRetrieval.currentStep <> enm_RetroAchievements_Steps.RA_Cheevos_for_Game_06_STOP Then
+			RetroAchievements_Fetch_Step()
+		End If
+	End Sub
+
+	Private Function RetroAchievements_Analyze_LoginData(result As Byte()) As Boolean
+		Console.WriteLine("RetroAchievements_Analyze_LoginData START")
+
+		Try
+			Dim dictResult As New Dictionary(Of String, String)
+			Dim sResult As String = System.Text.Encoding.UTF8.GetString(result)
+			dictResult = Newtonsoft.Json.JsonConvert.DeserializeObject(Of Dictionary(Of String, String))(sResult)
+
+			If dictResult("Success").ToLower = "true" Then
+				Debug.WriteLine("Login to retroachievements.org was successful!")
+				Me.RetroAchievements_DataRetrieval.Token = dictResult("Token")
+				Me.RetroAchievements_DataRetrieval.currentStep = enm_RetroAchievements_Steps.RA_Cheevos_for_Game_02_Get_GameID_for_Hash
+				Return True
+			Else
+				Me.RetroAchievements_ShowMessage("Login to retroachievements.org failed!")
+				RetroAchievements_Token = ""
+				Return False
+			End If
+		Catch ex As Exception
+			Me.RetroAchievements_ShowMessage("RetroAchievements_Analyze_LoginData EXCEPTION: " & ex.Message & ex.StackTrace)
+			Return False
+		End Try
+	End Function
+
+	Private Function RetroAchievements_Analyze_GameID(result As Byte()) As Boolean
+		Console.WriteLine("RetroAchievements_Analyze_GameID START")
+
+		Try
+			Dim dictResult As New Dictionary(Of String, String)
+			Dim sResult As String = System.Text.Encoding.UTF8.GetString(result)
+			dictResult = Newtonsoft.Json.JsonConvert.DeserializeObject(Of Dictionary(Of String, String))(sResult)
+
+			If dictResult("Success").ToLower = "true" Then
+				Debug.WriteLine("Fetching GameID was successful!")
+
+				If dictResult("GameID") <> "0" Then
+					Me.RetroAchievements_DataRetrieval.GameID = dictResult("GameID")
+					Me.RetroAchievements_DataRetrieval.currentStep = enm_RetroAchievements_Steps.RA_Cheevos_for_Game_03_Get_Cheevos_for_GameID
+					Return True
+				Else
+					Me.RetroAchievements_ShowMessage("This game isn't available on retroachievements.org.")
+					Return False
+				End If
+			Else
+				Me.RetroAchievements_ShowMessage("Fetching GameID from retroachievments.org failed!")
+				Return False
+			End If
+		Catch ex As Exception
+			Me.RetroAchievements_ShowMessage("RetroAchievements_Analyze_LoginData EXCEPTION: " & ex.Message & ex.StackTrace)
+			Return False
+		End Try
+	End Function
+
+	Private Function RetroAchievements_Analyze_Cheevos(result As Byte()) As Boolean
+		Console.WriteLine("RetroAchievements_Analyze_Cheevos START")
+
+		Try
+			Dim sResult As String = System.Text.Encoding.UTF8.GetString(result)
+			Dim doc As System.Xml.XmlDocument = Newtonsoft.Json.JsonConvert.DeserializeXmlNode("{""root"":" & sResult & "}")
+
+			Dim isSuccess As Boolean = False
+
+			For Each childRoot As System.Xml.XmlNode In doc.ChildNodes(0).ChildNodes
+				If childRoot.Name = "Success" Then
+					If childRoot.InnerText = "true" Then
+						isSuccess = True
+					End If
+
+					Exit For
+				End If
+			Next
+
+			If Not isSuccess Then
+				Me.RetroAchievements_ShowMessage("Fetching Achievements data from retroachievements.org was NOT successful!")
+				Return False
+			End If
+
+			Console.WriteLine("Fetching Cheevos was successful")
+
+			For Each childRoot As System.Xml.XmlNode In doc.ChildNodes(0).ChildNodes
+				If childRoot.Name = "PatchData" Then
+					For Each childPatchData As System.Xml.XmlNode In childRoot.ChildNodes
+						If childPatchData.Name = "Achievements" Then
+							Dim row As DataRow = Me.RetroAchievements_DataRetrieval.tbl_Cheevos.NewRow
+
+							For Each childAchievements As System.Xml.XmlNode In childPatchData.ChildNodes
+								Dim colName As String = childAchievements.Name
+								If MKNetLib.cls_MKSQLDataAccess.HasColumn(row, colName) Then
+									row(colName) = childAchievements.InnerText.Trim
+								End If
+
+							Next
+
+							row("id_RetroAchievements_Unlock") = enm_RetroAchievements_Unlock.Remaining
+
+							row("Title") = row("Title") & " (" & row("Points") & ")"
+
+							Me.RetroAchievements_DataRetrieval.tbl_Cheevos.Rows.Add(row)
+						End If
+					Next
+				End If
+			Next
+
+			Me.RetroAchievements_DataRetrieval.currentStep = enm_RetroAchievements_Steps.RA_Cheevos_for_Game_04_Get_Casual_Unlocked_Cheevos_for_GameID
+
+			Return True
+		Catch ex As Exception
+			Me.RetroAchievements_ShowMessage("RetroAchievements_Analyze_Cheevos EXCEPTION: " & ex.Message & ex.StackTrace)
+			Return False
+		End Try
+	End Function
+
+	Private Function RetroAchievements_Analyze_Unlocks(result As Byte(), ByVal Hardcore As Boolean) As Boolean
+		Console.WriteLine("RetroAchievements_Analyze_Unlocks Hardcore=" & Hardcore & " START")
+
+		If Hardcore Then
+			Me.prg_RetroAchievements_Download.EditValue = 100
+		End If
+
+		Try
+			Dim sResult As String = System.Text.Encoding.UTF8.GetString(result)
+			Dim doc As System.Xml.XmlDocument = Newtonsoft.Json.JsonConvert.DeserializeXmlNode("{""root"":" & sResult & "}")
+
+			Dim isSuccess As Boolean = False
+
+			For Each childRoot As System.Xml.XmlNode In doc.ChildNodes(0).ChildNodes
+				If childRoot.Name = "Success" Then
+					If childRoot.InnerText = "true" Then
+						isSuccess = True
+					End If
+
+					Exit For
+				End If
+			Next
+
+			If Not isSuccess Then
+				Me.RetroAchievements_ShowMessage("Fetching Unlocks from retroachievements.org was not successful.")
+				Return False
+			End If
+
+			Console.WriteLine("Fetching Unlocks was successful")
+
+			For Each childRoot As System.Xml.XmlNode In doc.ChildNodes(0).ChildNodes
+				If childRoot.Name = "UserUnlocks" Then
+					For Each row As DataRow In Me.RetroAchievements_DataRetrieval.tbl_Cheevos.Rows
+						If row("ID") = childRoot.InnerText Then
+							If Hardcore Then
+								row("id_RetroAchievements_Unlock") = enm_RetroAchievements_Unlock.Hardcore
+							Else
+								row("id_RetroAchievements_Unlock") = enm_RetroAchievements_Unlock.Casual
+							End If
+						End If
+					Next
+				End If
+			Next
+
+			If Not Hardcore Then
+				Me.RetroAchievements_DataRetrieval.currentStep = enm_RetroAchievements_Steps.RA_Cheevos_for_Game_05_Get_Hardcore_Unlocked_Cheevos_for_GameID
+			Else
+				Me.RetroAchievements_DataRetrieval.currentStep = enm_RetroAchievements_Steps.RA_Cheevos_for_Game_06_STOP
+
+				'Wrap up and display in UI
+				If Me.RetroAchievements_DataRetrieval.tbl_Cheevos.Rows.Count = 0 Then
+					Me.RetroAchievements_ShowMessage("There are no RetroAchievements available for this game.")
+					Return False
+				End If
+
+				Me.RetroAchievements_ShowGrid()
+
+				Me.Cheevo_Challenges_Analyze_Unlocks()
+			End If
+
+			Return True
+		Catch ex As Exception
+			Me.RetroAchievements_ShowMessage("RetroAchievements_Analyze_Unlocks Hardcore=" & Hardcore & " EXCEPTION: " & ex.Message & ex.StackTrace)
+			Return False
+		End Try
+	End Function
+
+	Private Sub Cheevo_Challenges_Analyze_Unlocks()
+		Dim ar_Unlocked_Casual As New ArrayList
+		Dim ar_Unlocked_Hardcore As New ArrayList
+		Dim iSuccessfulUnlocks As Integer = 0
+		Dim ar_Challenge_Cheevos As New ArrayList
+
+		'Check current achievements if they unlock any open Challenge's Achievements
+		For Each row_Cheevo As DataRow In Me.RetroAchievements_DataRetrieval.tbl_Cheevos.Rows
+			For Each row_Challenge_Cheevo In Me.DS_ML.ttb_Open_Challenges_Cheevos
+				If row_Challenge_Cheevo("CheevoType") <> cls_Globals.enm_CheevoTypes.RetroAchievements Then
+					Continue For
+				End If
+
+				If row_Cheevo("ID") = row_Challenge_Cheevo("Cheevo_ID") Then
+					If TC.NZ(row_Cheevo("id_RetroAchievements_Unlock"), 0) = 1 Then
+						'Casual Unlock
+						If Not TC.NZ(row_Challenge_Cheevo("Unlocked_Casual"), False) Then
+							ar_Unlocked_Casual.Add(row_Challenge_Cheevo)
+
+							If Not row_Challenge_Cheevo("Hardcore") Then
+								ar_Challenge_Cheevos.Add(row_Challenge_Cheevo)
+								iSuccessfulUnlocks += 1
+							End If
+						End If
+					End If
+
+					If TC.NZ(row_Cheevo("id_RetroAchievements_Unlock"), 0) = 2 Then
+						'Hardcore Unlock
+						If Not TC.NZ(row_Challenge_Cheevo("Unlocked_Hardcore"), False) Then
+							ar_Unlocked_Hardcore.Add(row_Challenge_Cheevo)
+
+							ar_Challenge_Cheevos.Add(row_Challenge_Cheevo)
+							iSuccessfulUnlocks += 1
+						End If
+					End If
+				End If
+			Next
+		Next
+
+		Dim id_Users As Object = Nothing
+		If cls_Globals.MultiUserMode AndAlso Not cls_Globals.Admin AndAlso cls_Globals.id_Users > 0 Then
+			id_Users = cls_Globals.id_Users
+		End If
+
+		'Back up the old challenges (so we can compare to new challenges after save)
+		Dim ttb_Open_Challenges_Old As New DS_ML.ttb_Open_ChallengesDataTable
+		For Each row As DataRow In Me.DS_ML.ttb_Open_Challenges.Rows
+			ttb_Open_Challenges_Old.ImportRow(row)
+		Next
+
+		If ar_Unlocked_Casual.Count > 0 Then
+			For Each row As DataRow In ar_Unlocked_Casual
+				If TC.NZ(row("id_Users_Cheevo_Challenges_Cheevos"), 0) = 0 Then
+					'INSERT
+					Dim sSQLInsertCasual As String = ""
+					sSQLInsertCasual &= "INSERT INTO tbl_Users_Cheevo_Challenges_Cheevos (id_Users, id_Cheevo_Challenges_Cheevos, Unlocked_Casual, Unlocked_Hardcore) VALUES (" & ControlChars.CrLf
+					sSQLInsertCasual &= TC.getSQLParameter(id_Users, row("id_Cheevo_Challenges_Cheevos"), True, False) & ControlChars.CrLf
+					sSQLInsertCasual &= ")"
+
+					DataAccess.FireProcedure(cls_Globals.Conn, 0, sSQLInsertCasual)
+				Else
+					'UPDATE
+					Dim sSQLUpdateCasual As String = ""
+					sSQLUpdateCasual &= "UPDATE tbl_Users_Cheevo_Challenges_Cheevos SET Unlocked_Casual = 1" & ControlChars.CrLf
+					sSQLUpdateCasual &= "WHERE id_Users_Cheevo_Challenges_Cheevos = " & TC.getSQLFormat(row("id_Users_Cheevo_Challenges_Cheevos"))
+
+					DataAccess.FireProcedure(cls_Globals.Conn, 0, sSQLUpdateCasual)
+				End If
+			Next
+		End If
+
+		If ar_Unlocked_Hardcore.Count > 0 Then
+			For Each row As DataRow In ar_Unlocked_Hardcore
+				If TC.NZ(row("id_Users_Cheevo_Challenges_Cheevos"), 0) = 0 Then
+					'INSERT
+					Dim sSQLInsertHardcore As String = ""
+					sSQLInsertHardcore &= "INSERT INTO tbl_Users_Cheevo_Challenges_Cheevos (id_Users, id_Cheevo_Challenges_Cheevos, Unlocked_Casual, Unlocked_Hardcore) VALUES (" & ControlChars.CrLf
+					sSQLInsertHardcore &= TC.getSQLParameter(id_Users, row("id_Cheevo_Challenges_Cheevos"), True, True) & ControlChars.CrLf
+					sSQLInsertHardcore &= ")"
+
+					DataAccess.FireProcedure(cls_Globals.Conn, 0, sSQLInsertHardcore)
+				Else
+					'UPDATE
+					Dim sSQLUpdateHardcore As String = ""
+					sSQLUpdateHardcore &= "UPDATE tbl_Users_Cheevo_Challenges_Cheevos SET Unlocked_Casual = 1, Unlocked_Hardcore = 1" & ControlChars.CrLf
+					sSQLUpdateHardcore &= "WHERE id_Users_Cheevo_Challenges_Cheevos = " & TC.getSQLFormat(row("id_Users_Cheevo_Challenges_Cheevos"))
+
+					DataAccess.FireProcedure(cls_Globals.Conn, 0, sSQLUpdateHardcore)
+				End If
+			Next
+		End If
+
+		If ar_Challenge_Cheevos.Count > 0 Then
+			Dim messageText As String = "You successfully unlocked the following achievement" & IIf(iSuccessfulUnlocks > 1, "s", "") & ":" & ControlChars.CrLf & ControlChars.CrLf
+
+			For Each row As DataRow In ar_Challenge_Cheevos
+				messageText &= "Challenge:      " & row("Challenge_Name") & " Tier " & row("Tier") & ControlChars.CrLf
+				messageText &= "Game:             " & row("Cheevo_GameName") & ControlChars.CrLf
+				messageText &= "Achievement: " & row("Cheevo_Title") & ControlChars.CrLf
+
+				messageText &= ControlChars.CrLf
+			Next
+
+			MKNetDXLib.cls_MKDXHelper.MessageBox(messageText, "RetroAchievements Challenges", MessageBoxButtons.OK, MessageBoxIcon.Information)
+		End If
+
+		Refill_Cheevo_Open_Challenges()
+
+		Dim challengeCompleteMessageText = ""
+
+		For Each row_old As DataRow In ttb_Open_Challenges_Old.Rows
+			If row_old("Name") = "None" OrElse TC.NZ(row_old("Tier"), 0) = -1 Then
+				Continue For
+			End If
+
+			Dim bIsCompleted As Boolean = True  'The Challenge is completed if there is no row in the current ttb_Open_Challenges with same ID
+
+			For Each row_new As DataRow In Me.DS_ML.ttb_Open_Challenges
+				If TC.NZ(row_old("id_Cheevo_Challenges"), 0) = TC.NZ(row_new("id_Cheevo_Challenges"), 0) AndAlso TC.NZ(row_new("Tier"), 0) > -1 Then
+					bIsCompleted = False
+
+					If TC.NZ(row_old("Tier"), 0) <> TC.NZ(row_new("Tier"), 0) Then
+						challengeCompleteMessageText &= "You successfully mastered tier " & row_old("Tier") & " of the '" & row_old("Name") & "' challenge. Tier " & row_new("Tier") & " is now unlocked, good luck!" & ControlChars.CrLf & ControlChars.CrLf
+					End If
+				End If
+			Next
+
+			If bIsCompleted Then
+				challengeCompleteMessageText &= "You successfully mastered the '" & row_old("Name") & "' challenge. Nice one!" & ControlChars.CrLf & ControlChars.CrLf
+			End If
+		Next
+
+		If challengeCompleteMessageText <> "" Then
+			challengeCompleteMessageText = "Congratulations!" & ControlChars.CrLf & ControlChars.CrLf & challengeCompleteMessageText
+			MKNetDXLib.cls_MKDXHelper.MessageBox(challengeCompleteMessageText, "RetroAchievements Challenges", MessageBoxButtons.OK, MessageBoxIcon.Information)
+		End If
+
+		Update_Cheevo_Challenges_Cheevos()
+	End Sub
+
+	Private Sub RetroAchievements_ShowMessage(MessageText)
+		Me.lbl_RetroAchievements_Message.Text = MessageText
+		Me.lbl_RetroAchievements_Message.Visible = True
+		Me.prg_RetroAchievements_Download.Visible = False
+	End Sub
+
+	Private Sub RetroAchievements_ShowGrid()
+		Dim iTotalAchievements = Me.RetroAchievements_DataRetrieval.tbl_Cheevos.Rows.Count
+		Dim iRemainingAchievements = Me.RetroAchievements_DataRetrieval.tbl_Cheevos.Select("id_RetroAchievements_Unlock = 0").Length
+		Dim iCasualAchievements = Me.RetroAchievements_DataRetrieval.tbl_Cheevos.Select("id_RetroAchievements_Unlock = 1").Length
+		Dim iHardcoreAchievements = Me.RetroAchievements_DataRetrieval.tbl_Cheevos.Select("id_RetroAchievements_Unlock = 2").Length
+
+		Me.BTA_RetroAchievement_Unlocks.FillString = "0;""Remaining Achievements [" & iRemainingAchievements & "/" & iTotalAchievements & "]"";1;""Unlocked Achievements (Casual) [" & iCasualAchievements & "/" & iTotalAchievements & "]"";2;""Unlocked Achievements (Hardcore) [" & iHardcoreAchievements & "/" & iTotalAchievements & "]"""
+
+		Me.BS_RetroAchievements.DataSource = Me.RetroAchievements_DataRetrieval.tbl_Cheevos
+		Me.agv_RetroAchievements.ExpandAllGroups()
+		Me.agv_RetroAchievements.TopRowIndex = 0
+
+		Me.prg_RetroAchievements_Download.Visible = False
+		Me.gb_Cheevos.Visible = True
+	End Sub
+
+	Private Sub bbi_Cheevo_add_to_Challenge_ItemClick(sender As Object, e As EventArgs) Handles bbi_Cheevo_add_to_Challenge.ItemClick, mni_Cheevos_Add_Challenge.Click
+		Using frm As New frm_Cheevo_Challenges_Add(cls_Globals.enm_CheevoTypes.RetroAchievements, Me.BS_Emu_Games.Current("id_Emu_Games"), Me.BS_Emu_Games.Current("Game"), BS_RetroAchievements.Current.Row)
+			If frm.ShowDialog() = DialogResult.OK Then
+				Refill_Cheevo_Open_Challenges()
+				MKNetDXLib.cls_MKDXHelper.MessageBox("The achievement has been added to the challenge.", "Add Achievement to Challenge", MessageBoxButtons.OK, MessageBoxIcon.Information)
+			End If
+		End Using
+	End Sub
+
+	Private Sub bbi_Cheevo_Manage_Challenges_ItemClick(sender As Object, e As EventArgs) Handles bbi_Cheevo_Manage_Challenges.ItemClick, mni_Cheevos_Manage_Challenges.Click
+		Using frm As New frm_Cheevo_Challenges_Edit
+			frm.ShowDialog()
+
+			Refill_Cheevo_Open_Challenges()
+		End Using
+	End Sub
+
+	Private Sub agv_RetroAchievements_PopupMenuShowing(sender As Object, e As DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs) Handles agv_RetroAchievements.PopupMenuShowing
+		Debug.WriteLine("agv_RetroAchievements PopupMenuShowing Control.MousePosition: " & Control.MousePosition.ToString())
+		Me.popmnu_Cheevos.ShowPopup(Control.MousePosition)
+	End Sub
+
+	Private Sub Refill_Cheevo_Open_Challenges()
+		DS_ML.Fill_ttb_Open_Challenges(Me.DS_ML.ttb_Open_Challenges)
+		DS_ML.Fill_ttb_Open_Challenges_Cheevos(Me.DS_ML.ttb_Open_Challenges_Cheevos)
+		Me.Update_Cheevo_Challenges_Cheevos()
+	End Sub
+
+	Private Sub cmb_Challenges_EditValueChanged(sender As Object, e As EventArgs) Handles cmb_Challenges.EditValueChanged
+		For Each btn As DevExpress.XtraEditors.Controls.EditorButton In cmb_Challenges.Properties.Buttons
+			If btn.Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis Then
+				If TC.NZ(cmb_Challenges.EditValue, 0) = 0 Then
+					btn.Enabled = False
+				Else
+					btn.Enabled = True
+				End If
+			End If
+		Next
+
+		If _Initializing Then Return
+		Refill_Emu_Games()
+	End Sub
+
+	Private Sub Update_Cheevo_Challenges_Cheevos()
+		If TC.NZ(Me.cmb_Challenges.EditValue, 0) = 0 OrElse BS_Challenges.Current Is Nothing OrElse BS_Emu_Games.Current Is Nothing Then
+			Me.splt_Achievements.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2
+			Me.BS_Open_Challenges_Cheevos.Filter = "Tier = 0"
+			Return
+		End If
+
+		Me.BS_Open_Challenges_Cheevos.Filter = "id_Emu_Games = " & BS_Emu_Games.Current("id_Emu_Games") & " AND Tier = " & get_Current_Challenge_Tier()
+
+		If Me.BS_Open_Challenges_Cheevos.Count = 0 Then
+			Me.lbl_Challenge_Cheevos_Unlocked.Visible = True
+			Me.grd_Challenge_Cheevos.Visible = False
+		Else
+			Me.lbl_Challenge_Cheevos_Unlocked.Visible = False
+			Me.grd_Challenge_Cheevos.Visible = True
+		End If
+
+		Me.splt_Achievements.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Both
+	End Sub
+
+	Private Sub cmb_Challenges_ButtonPressed(sender As Object, e As ButtonPressedEventArgs) Handles cmb_Challenges.ButtonPressed
+		If TC.NZ(cmb_Challenges.EditValue, 0) = 0 Then
+			Return
+		End If
+
+		If e.Button.Kind = ButtonPredefines.Ellipsis Then
+			Using frm As New frm_Cheevo_Challenges_Edit(cmb_Challenges.EditValue)
+				frm.ShowDialog()
+				Refill_Cheevo_Open_Challenges()
+			End Using
+		End If
+	End Sub
+
+	Private Sub cxm_Cheevo_Challenges_Cheevos_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles cxm_Cheevo_Challenges_Cheevos.ItemClicked
+		Using frm As New frm_Cheevo_Challenges_Edit(TC.NZ(cmb_Challenges.EditValue, 0L))
+			frm.ShowDialog()
+		End Using
+	End Sub
+
+	Private Sub chb_Cheevo_Challenges_Show_Completed_CheckedChanged(sender As Object, e As EventArgs) Handles chb_Cheevo_Challenges_Show_Completed.CheckedChanged
+		Me.Refill_Emu_Games()
+	End Sub
+
+	Private Sub bbi_Add_to_Challenge_ItemClick(sender As Object, e As ItemClickEventArgs) Handles bbi_Add_to_Challenge.ItemClick
+		'Add to Challenge (runtime-based)
+		Using frm As New frm_Cheevo_Challenges_Add(cls_Globals.enm_CheevoTypes.TotalRuntime, Me.BS_Emu_Games.Current("id_Emu_Games"), Me.BS_Emu_Games.Current("Game"))
+			If frm.ShowDialog() = DialogResult.OK Then
+				Refill_Cheevo_Open_Challenges()
+				MKNetDXLib.cls_MKDXHelper.MessageBox("The game has been added to the challenge.", "Add Game to Challenge", MessageBoxButtons.OK, MessageBoxIcon.Information)
+			End If
+		End Using
+
+	End Sub
+
+	Private Sub cxm_Cheevos_Opening(sender As Object, e As CancelEventArgs) Handles cxm_Cheevos.Opening
+		If cls_Globals.MultiUserMode = True AndAlso cls_Globals.Admin = False Then
+			Me.mni_Cheevos_Add_Challenge.Enabled = False
+		Else
+			Me.mni_Cheevos_Add_Challenge.Enabled = True
+		End If
+	End Sub
+
+#End Region
+
 End Class

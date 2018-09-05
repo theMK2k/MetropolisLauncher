@@ -8,6 +8,8 @@ Public Class frm_Emulators
 		DS_Rombase.Fill_tbl_Rombase_Known_Emulators(Me.DS_Rombase.tbl_Rombase_Known_Emulators)
 
 		barmng.SetPopupContextMenu(grd_Emulators, popmnu_Emulators)
+		barmng.SetPopupContextMenu(grd_PreLaunch, popmnu_PreLaunch)
+		barmng.SetPopupContextMenu(grd_PostLaunch, popmnu_PostLaunch)
 
 		Cursor.Current = Cursors.WaitCursor
 
@@ -26,6 +28,16 @@ Public Class frm_Emulators
 		Cursor.Current = Cursors.Default
 
 		BS_Emulators_CurrentChanged(Nothing, Nothing)
+
+		If cls_Globals.MultiUserMode = True AndAlso cls_Globals.Admin = False Then
+			pnl_Emulators_Buttons.Enabled = False
+			pnl_Settings_Settings.Enabled = False
+			pnl_Settings_MV.Enabled = False
+			splt_DOSBox_Patches.Enabled = False
+		End If
+
+		PrePost_Launch_CurrentChanged(True)
+		PrePost_Launch_CurrentChanged(False)
 	End Sub
 
 	Private _J2KPreset_Original As Object
@@ -114,10 +126,16 @@ Public Class frm_Emulators
 			btn_Duplicate_Emulator.Enabled = True
 			btn_Delete_Emulator.Enabled = True
 
-			Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
-				Me.DS_ML.Fill_src_frm_Emulators_Moby_Platforms(tran, Me.DS_ML.src_frm_Emulators_Moby_Platforms, BS_Emulators.Current("id_Emulators"))
-				Me.DS_ML.Fill_src_frm_Emulators_Multivolume_Parameters(tran, Me.DS_ML.tbl_Emulators_Multivolume_Parameters, BS_Emulators.Current("id_Emulators"))
+			Dim id_Users As Object = Nothing
+			If cls_Globals.MultiUserMode = True AndAlso cls_Globals.Admin = False Then
+				id_Users = cls_Globals.id_Users
+			End If
 
+			Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
+				Me.DS_ML.Fill_src_frm_Emulators_Moby_Platforms(tran, Me.DS_ML.src_frm_Emulators_Moby_Platforms, BS_Emulators.Current("id_Emulators"), id_Users)
+				Me.DS_ML.Fill_src_frm_Emulators_Multivolume_Parameters(tran, Me.DS_ML.tbl_Emulators_Multivolume_Parameters, BS_Emulators.Current("id_Emulators"))
+				Me.DS_ML.Fill_ttb_Emulators_Pre_Post_Launch_Commands(tran, Me.DS_ML.ttb_Emulators_PreLaunch_Commands, BS_Emulators.Current("id_Emulators"), True)
+				Me.DS_ML.Fill_ttb_Emulators_Pre_Post_Launch_Commands(tran, Me.DS_ML.ttb_Emulators_PostLaunch_Commands, BS_Emulators.Current("id_Emulators"), False)
 				tran.Commit()
 			End Using
 
@@ -128,8 +146,6 @@ Public Class frm_Emulators
 				cmb_List_Generator.Visible = False
 				tpg_DOSBox_Patches.PageVisible = True
 				tpg_MV_Settings.PageVisible = False
-				'lbl_AutoItScript.Visible = False
-				'memo_AutItScript.Visible = False
 				BS_Platforms.Filter = "id_Moby_Platforms IN (2, 4)"
 				Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
 					DS_ML.Fill_src_frm_Emulators_DOSBox_Patches(tran, DS_ML.src_frm_Emulators_DOSBox_Patches, BS_Emulators.Current("id_Emulators"))
@@ -156,8 +172,6 @@ Public Class frm_Emulators
 				cmb_List_Generator.Visible = False
 				tpg_DOSBox_Patches.PageVisible = False
 				tpg_MV_Settings.PageVisible = False
-				'lbl_AutoItScript.Visible = False
-				'memo_AutItScript.Visible = False
 				BS_Platforms.Filter = "id_Moby_Platforms IN (-3)"
 
 				'Automatically check Supported for the DOS Platform
@@ -175,8 +189,6 @@ Public Class frm_Emulators
 				cmb_List_Generator.Visible = True
 				tpg_DOSBox_Patches.PageVisible = False
 				tpg_MV_Settings.PageVisible = True
-				'lbl_AutoItScript.Visible = True
-				'memo_AutItScript.Visible = True
 				BS_Platforms.Filter = ""
 				DS_ML.src_frm_Emulators_DOSBox_Patches_Categories.Clear()
 				DS_ML.src_frm_Emulators_DOSBox_Patches.Clear()
@@ -215,6 +227,8 @@ Public Class frm_Emulators
 		Debug.WriteLine("CheckSave START")
 
 		Me.BS_Emulators.EndEdit()
+		Me.BS_PreLaunch_Commands.EndEdit()
+		Me.BS_PostLaunch_Commands.EndEdit()
 
 		If row Is Nothing AndAlso BS_Emulators IsNot Nothing Then
 			row = BS_Emulators.Current.row
@@ -254,6 +268,16 @@ Public Class frm_Emulators
 
 		If DS_ML.tbl_Emulators_Multivolume_Parameters.GetChanges IsNot Nothing Then
 			Debug.WriteLine("	Change detected in DS_ML.tbl_Emulators_Multivolume_Parameters.GetChanges")
+			hasChanges = True
+		End If
+
+		If DS_ML.ttb_Emulators_PreLaunch_Commands.GetChanges IsNot Nothing Then
+			Debug.WriteLine("	Change detected in DS_ML.ttb_Emulators_PreLaunch_Commands.GetChanges")
+			hasChanges = True
+		End If
+
+		If DS_ML.ttb_Emulators_PostLaunch_Commands.GetChanges IsNot Nothing Then
+			Debug.WriteLine("	Change detected in DS_ML.ttb_Emulators_PostLaunch_Commands.GetChanges")
 			hasChanges = True
 		End If
 
@@ -325,7 +349,9 @@ Public Class frm_Emulators
 			If id_Emulators > 0 Then
 				DataAccess.FireProcedure(cls_Globals.Conn, 0, "DELETE FROM tbl_Emulators WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators))
 				DataAccess.FireProcedure(cls_Globals.Conn, 0, "DELETE FROM tbl_Emulators_Moby_Platforms WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators))
+				DataAccess.FireProcedure(cls_Globals.Conn, 0, "DELETE FROM tbl_Users_Emulators_Moby_Platforms WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators))
 				DataAccess.FireProcedure(cls_Globals.Conn, 0, "DELETE FROM tbl_Emulators_Multivolume_Parameters WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators))
+				DataAccess.FireProcedure(cls_Globals.Conn, 0, "DELETE FROM tbl_Emulators_Pre_Post_Launch_Commands WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators))
 			End If
 		End If
 	End Sub
@@ -350,13 +376,24 @@ Public Class frm_Emulators
 		End If
 
 		If Me.txb_StartupParameter.Text.ToLower.Contains("%listfile") AndAlso TC.NZ(Me.cmb_List_Generator.EditValue, 0) = 0 Then
-			If Not MKDXHelper.MessageBox("You apparently want to generate and use a list file as a Startup Parameter, but you didn't chose a List Generator. Do you still want to save?", "Missing Libretro Core", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
+			If Not MKDXHelper.MessageBox("You apparently want to generate and use a list file as a Startup Parameter, but you didn't choose a List Generator. Do you still want to save?", "Missing Libretro Core", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
 				Return False
 			End If
 		End If
 
 		If TC.NZ(Me.cmb_List_Generator.EditValue, 0) > 0 AndAlso Not Me.txb_StartupParameter.Text.ToLower.Contains("%listfile") Then
 			If Not MKDXHelper.MessageBox("You chose a List Generator but you didn't provide the %listfile.ext% variable in the Startup Parameter. Do you still want to save?", "Missing Libretro Core", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
+				Return False
+			End If
+		End If
+
+		If TC.NZ(Me.cmb_Scripting.EditValue, 0) > 0 AndAlso Me.txb_Script_File.Text = "" Then
+			If Not MKDXHelper.MessageBox("You chose to use Enhanced Scripting but you didn't provide a script file. Do you still want to save?", "Missing Script File", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
+				Return False
+			End If
+		End If
+		If TC.NZ(Me.cmb_Scripting.EditValue, 0) > 0 AndAlso Not Alphaleonis.Win32.Filesystem.File.Exists(Me.txb_Script_File.Text) Then
+			If Not MKDXHelper.MessageBox("You chose to use Enhanced Scripting but the script file '" & Me.txb_Script_File.Text & "' cannot be found. Do you still want to save?", "Missing Script File", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
 				Return False
 			End If
 		End If
@@ -378,24 +415,65 @@ Public Class frm_Emulators
 		Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
 			Try
 				If id_Emulators_Current < 0 Then
-					id_Emulators_Current = DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "INSERT INTO tbl_Emulators(Displayname, InstallDirectory, Executable, StartupParameter, AutoItScript, J2KPreset, ScreenshotDirectory, Libretro_Core, id_List_Generators) VALUES (" & TC.getSQLParameter(rowCurrent("Displayname"), rowCurrent("InstallDirectory"), rowCurrent("Executable"), rowCurrent("StartupParameter"), rowCurrent("AutoItScript"), rowCurrent("J2KPreset"), rowCurrent("ScreenshotDirectory"), rowCurrent("Libretro_Core"), rowCurrent("id_List_Generators")) & "); SELECT last_insert_rowid()", tran)
+					id_Emulators_Current = DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "INSERT INTO tbl_Emulators (Displayname, InstallDirectory, Executable, StartupParameter, AutoItScript, J2KPreset, ScreenshotDirectory, Libretro_Core, id_List_Generators, ScriptType, ScriptPath) VALUES (" & TC.getSQLParameter(rowCurrent("Displayname"), rowCurrent("InstallDirectory"), rowCurrent("Executable"), rowCurrent("StartupParameter"), rowCurrent("AutoItScript"), rowCurrent("J2KPreset"), rowCurrent("ScreenshotDirectory"), rowCurrent("Libretro_Core"), rowCurrent("id_List_Generators"), rowCurrent("ScriptType"), rowCurrent("ScriptPath")) & "); SELECT last_insert_rowid()", tran)
 					rowCurrent("id_Emulators") = id_Emulators_Current
 				Else
-					DataAccess.FireProcedure(tran.Connection, 0, "UPDATE tbl_Emulators SET Displayname = " & TC.getSQLFormat(rowCurrent("Displayname")) & ", InstallDirectory = " & TC.getSQLFormat(rowCurrent("InstallDirectory")) & ", Executable = " & TC.getSQLFormat(rowCurrent("Executable")) & ", StartupParameter = " & TC.getSQLFormat(rowCurrent("StartupParameter")) & ", AutoItScript = " & TC.getSQLFormat(rowCurrent("AutoItScript")) & ", J2KPreset = " & TC.getSQLFormat(rowCurrent("J2KPreset")) & ", ScreenshotDirectory = " & TC.getSQLFormat(rowCurrent("ScreenshotDirectory")) & ", Libretro_Core = " & TC.getSQLFormat(rowCurrent("Libretro_Core")) & ", id_List_Generators = " & TC.getSQLFormat(rowCurrent("id_List_Generators")) & " WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators_Current), tran)
+					DataAccess.FireProcedure(tran.Connection, 0, "UPDATE tbl_Emulators SET Displayname = " & TC.getSQLFormat(rowCurrent("Displayname")) & ", InstallDirectory = " & TC.getSQLFormat(rowCurrent("InstallDirectory")) & ", Executable = " & TC.getSQLFormat(rowCurrent("Executable")) & ", StartupParameter = " & TC.getSQLFormat(rowCurrent("StartupParameter")) & ", AutoItScript = " & TC.getSQLFormat(rowCurrent("AutoItScript")) & ", J2KPreset = " & TC.getSQLFormat(rowCurrent("J2KPreset")) & ", ScreenshotDirectory = " & TC.getSQLFormat(rowCurrent("ScreenshotDirectory")) & ", Libretro_Core = " & TC.getSQLFormat(rowCurrent("Libretro_Core")) & ", id_List_Generators = " & TC.getSQLFormat(rowCurrent("id_List_Generators")) & ", ScriptType = " & TC.getSQLFormat(rowCurrent("ScriptType")) & ", ScriptPath = " & TC.getSQLFormat(rowCurrent("ScriptPath")) & " WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators_Current), tran)
 				End If
 				rowCurrent.AcceptChanges()
 
-				DataAccess.FireProcedure(tran.Connection, 0, "DELETE FROM tbl_Emulators_Moby_Platforms WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators_Current), tran)
-				For Each row As DataRow In DS_ML.src_frm_Emulators_Moby_Platforms.Rows
-					If TC.NZ(row("Supported"), False) = True Then
-						If TC.NZ(row("DefaultEmulator"), False) = True Then
-							DataAccess.FireProcedure(tran.Connection, 0, "UPDATE tbl_Emulators_Moby_Platforms SET DefaultEmulator = 0 WHERE id_Moby_Platforms = " & row("id_Moby_Platforms"), tran)
+				Dim id_Users As Object = Nothing
+				If cls_Globals.MultiUserMode = True AndAlso cls_Globals.Admin = False Then
+					id_Users = cls_Globals.id_Users
+				End If
+
+				If TC.NZ(id_Users, 0) = 0 Then
+					'The Admin writes to tbl_Emulators_Moby_Platforms
+
+					'delete all entries for this platform (they will be written later)
+					DataAccess.FireProcedure(tran.Connection, 0, "DELETE FROM tbl_Emulators_Moby_Platforms WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators_Current), tran)
+
+					For Each row As DataRow In DS_ML.src_frm_Emulators_Moby_Platforms.Rows
+						If TC.NZ(row("Supported"), False) = True Then
+							If TC.NZ(row("DefaultEmulator"), False) = True Then
+								'Set all of Admin's Emulators as Default = 0 for this platform
+								DataAccess.FireProcedure(tran.Connection, 0, "UPDATE tbl_Emulators_Moby_Platforms SET DefaultEmulator = 0 WHERE id_Moby_Platforms = " & row("id_Moby_Platforms"), tran)
+
+								'add/set this Emulator default = 0 for every user, who already has a default emulator with this platform
+								DS_ML.Upsert_tbl_Users_Emulators_Moby_Platforms_Enforce_Not_Default(tran, id_Moby_Platforms:=row("id_Moby_Platforms"), id_Emulators:=id_Emulators_Current)
+							End If
+
+							DataAccess.FireProcedure(tran.Connection, 0, "INSERT INTO tbl_Emulators_Moby_Platforms (id_Emulators, id_Moby_Platforms, DefaultEmulator) VALUES (" & TC.getSQLParameter(id_Emulators_Current, row("id_Moby_Platforms"), row("DefaultEmulator")) & ")", tran)
+						Else
+							'Emulator is not supported for the platform -> delete from tbl_Users_Emulators_Moby_Platforms
+							DataAccess.FireProcedure(tran.Connection, 0, "DELETE FROM tbl_Users_Emulators_Moby_Platforms WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators_Current) & " AND id_Moby_Platforms = " & TC.getSQLFormat(row("id_Moby_Platforms")), tran)
 						End If
-						DataAccess.FireProcedure(tran.Connection, 0, "INSERT INTO tbl_Emulators_Moby_Platforms (id_Emulators, id_Moby_Platforms, DefaultEmulator) VALUES (" & TC.getSQLParameter(id_Emulators_Current, row("id_Moby_Platforms"), row("DefaultEmulator")) & ")", tran)
-					End If
-					row.AcceptChanges()
-				Next
-				DS_ML.src_frm_Emulators_Moby_Platforms.AcceptChanges()
+						row.AcceptChanges()
+					Next
+
+					DS_ML.src_frm_Emulators_Moby_Platforms.AcceptChanges()
+				Else
+					'Restricted Users have their own table
+
+					'delete all entries for this platform (they will be written later)
+					DataAccess.FireProcedure(tran.Connection, 0, "DELETE FROM tbl_Users_Emulators_Moby_Platforms WHERE id_Users = " & TC.getSQLFormat(id_Users) & " AND id_Emulators = " & TC.getSQLFormat(id_Emulators_Current), tran)
+
+					For Each row As DataRow In DS_ML.src_frm_Emulators_Moby_Platforms.Rows
+						If TC.NZ(row("Supported"), False) = True Then
+							If TC.NZ(row("DefaultEmulator"), False) = True Then
+								'Set all of User's Emulators as Default = 0 for this platform (UPDATE is not enough, we also should INSERT)
+								DataAccess.FireProcedure(tran.Connection, 0, "UPDATE tbl_Users_Emulators_Moby_Platforms SET DefaultEmulator = 0 WHERE id_Users = " & TC.getSQLFormat(id_Users) & " AND id_Moby_Platforms = " & row("id_Moby_Platforms"), tran)
+
+								'INSERT emulators that are not in tbl_Users_Emulators_Moby_Platforms for this platform AND not the current Emulator AND not already present
+								DS_ML.Upsert_tbl_Users_Emulators_Moby_Platforms_Enforce_Not_Default_All_Emulators_For_Platform(tran, id_Users, row("id_Moby_Platforms"), id_Emulators_Current)
+							End If
+							DataAccess.FireProcedure(tran.Connection, 0, "INSERT INTO tbl_Users_Emulators_Moby_Platforms (id_Users, id_Emulators, id_Moby_Platforms, DefaultEmulator) VALUES (" & TC.getSQLParameter(id_Users, id_Emulators_Current, row("id_Moby_Platforms"), row("DefaultEmulator")) & ")", tran)
+						End If
+						row.AcceptChanges()
+					Next
+					DS_ML.src_frm_Emulators_Moby_Platforms.AcceptChanges()
+
+				End If
 
 				DataAccess.FireProcedure(tran.Connection, 0, "DELETE FROM tbl_Emulators_Multivolume_Parameters WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators_Current), tran)
 				For Each row As DataRow In DS_ML.tbl_Emulators_Multivolume_Parameters.Rows
@@ -420,6 +498,67 @@ Public Class frm_Emulators
 				Next
 				DS_ML.src_frm_Emulators_DOSBox_Patches.AcceptChanges()
 
+				'Save Pre- and Post Launch Commands
+				For isPreLaunch As Integer = 0 To 1
+					Dim dt As DataTable = Nothing
+
+					If isPreLaunch = 0 Then
+						dt = Me.DS_ML.ttb_Emulators_PostLaunch_Commands
+					Else
+						dt = Me.DS_ML.ttb_Emulators_PreLaunch_Commands
+					End If
+
+					Dim arRemove As New ArrayList
+					For Each row As DataRow In dt.Rows
+						If row.RowState = DataRowState.Deleted Then
+							arRemove.Add(row)
+						End If
+
+						If row.RowState = DataRowState.Added Then
+							'INSERT
+							Dim sSQLInsert As String = ""
+							sSQLInsert &= "INSERT INTO tbl_Emulators_Pre_Post_Launch_Commands" & ControlChars.CrLf
+							sSQLInsert &= "(" & ControlChars.CrLf
+							sSQLInsert &= "		id_Emulators" & ControlChars.CrLf
+							sSQLInsert &= "		, PreLaunch" & ControlChars.CrLf
+							sSQLInsert &= "		, PostLaunch" & ControlChars.CrLf
+							sSQLInsert &= "		, Sort" & ControlChars.CrLf
+							sSQLInsert &= "		, Directory" & ControlChars.CrLf
+							sSQLInsert &= "		, Executable" & ControlChars.CrLf
+							sSQLInsert &= "		, Parameter" & ControlChars.CrLf
+							sSQLInsert &= "		, Minimized" & ControlChars.CrLf
+							sSQLInsert &= "		, WaitForExit" & ControlChars.CrLf
+							sSQLInsert &= ") VALUES (" & ControlChars.CrLf
+							sSQLInsert &= TC.getSQLParameter(id_Emulators_Current, IIf(isPreLaunch = 0, False, True), IIf(isPreLaunch = 0, True, False), row("Sort"), row("Directory"), row("Executable"), row("Parameter"), row("Minimized"), row("WaitForExit")) & ControlChars.CrLf
+							sSQLInsert &= ")" & ControlChars.CrLf
+							sSQLInsert &= "; SELECT last_insert_rowid()" & ControlChars.CrLf
+
+							Dim id_Emulators_Pre_Post_Launch_Commands As Int64 = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, sSQLInsert, tran), 0L)
+							row("id_Emulators_Pre_Post_Launch_Commands") = id_Emulators_Pre_Post_Launch_Commands
+						End If
+						If row.RowState = DataRowState.Modified Then
+							'UPDATE
+							Dim sSQLUpdate As String = ""
+							sSQLUpdate &= "UPDATE tbl_Emulators_Pre_Post_Launch_Commands SET" & ControlChars.CrLf
+							sSQLUpdate &= "	Sort = " & TC.getSQLFormat(row("Sort")) & ControlChars.CrLf
+							sSQLUpdate &= "	, Directory = " & TC.getSQLFormat(row("Directory")) & ControlChars.CrLf
+							sSQLUpdate &= "	, Executable = " & TC.getSQLFormat(row("Executable")) & ControlChars.CrLf
+							sSQLUpdate &= "	, Parameter = " & TC.getSQLFormat(row("Parameter")) & ControlChars.CrLf
+							sSQLUpdate &= "	, Minimized = " & TC.getSQLFormat(row("Minimized")) & ControlChars.CrLf
+							sSQLUpdate &= "	, WaitForExit = " & TC.getSQLFormat(row("WaitForExit")) & ControlChars.CrLf
+							sSQLUpdate &= "	WHERE id_Emulators_Pre_Post_Launch_Commands = " & TC.getSQLFormat(row("id_Emulators_Pre_Post_Launch_Commands")) & ControlChars.CrLf
+
+							DataAccess.FireProcedure(tran.Connection, 0, sSQLUpdate, tran)
+						End If
+					Next
+
+					For Each row_remove As DataRow In arRemove
+						DataAccess.FireProcedure(tran.Connection, 0, "DELETE FROM tbl_Emulators_Pre_Post_Launch_Commands WHERE id_Emulators_Pre_Post_Launch_Commands = " & TC.getSQLFormat(row_remove("id_Emulators_Pre_Post_Launch_Commands", DataRowVersion.Original)), tran)
+					Next
+
+					dt.AcceptChanges()
+				Next
+
 				tran.Commit()
 			Catch ex As Exception
 				tran.Rollback()
@@ -436,7 +575,7 @@ Public Class frm_Emulators
 	End Sub
 
 	Private Sub btn_EmulatorFileOpen_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_EmulatorFileOpen.Click
-		Dim sFullPath As String = MKNetLib.cls_MKFileSupport.OpenFileDialog("Open Emulator", "Executables (*.exe;*.bat;*.cmd;*.lnk)|*.exe;*.bat;*.cmd;*.lnk", InitialDirectory:=Alphaleonis.Win32.Filesystem.Path.GetDirectoryName(txb_Directory.Text), ParentForm:=Me)
+		Dim sFullPath As String = MKNetLib.cls_MKFileSupport.OpenFileDialog("Open Emulator", "Executables (*.exe;*.bat;*.cmd;*.lnk)|*.exe;*.bat;*.cmd;*.lnk", ParentForm:=Me)
 
 		If Not Alphaleonis.Win32.Filesystem.File.Exists(sFullPath) Then
 			Return
@@ -583,6 +722,11 @@ Public Class frm_Emulators
 			Return
 		End If
 
+		If cls_Globals.MultiUserMode = True AndAlso cls_Globals.Admin = False Then
+			e.Cancel = True
+			Return
+		End If
+
 		bbi_Add.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
 		bbi_Delete.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
 		bbi_Duplicate.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
@@ -613,10 +757,11 @@ Public Class frm_Emulators
 			Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction()
 				Try
 
-					Dim id_Emulators_New As Integer = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "INSERT INTO tbl_Emulators (Displayname, InstallDirectory, Executable, StartupParameter, AutoItScript, J2KPreset, ScreenshotDirectory, Libretro_Core) SELECT Displayname || ' Copy', InstallDirectory, Executable, StartupParameter, AutoItScript, J2KPreset, ScreenshotDirectory, Libretro_Core FROM tbl_Emulators WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators) & "; SELECT last_insert_rowid()", tran), 0)
+					Dim id_Emulators_New As Integer = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "INSERT INTO tbl_Emulators (Displayname, InstallDirectory, Executable, StartupParameter, AutoItScript, J2KPreset, ScreenshotDirectory, Libretro_Core, ScriptType, ScriptPath) SELECT Displayname || ' Copy', InstallDirectory, Executable, StartupParameter, AutoItScript, J2KPreset, ScreenshotDirectory, Libretro_Core, ScriptType, ScriptPath FROM tbl_Emulators WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators) & "; SELECT last_insert_rowid()", tran), 0)
 					If id_Emulators_New > 0 Then
 						DataAccess.FireProcedure(tran.Connection, 0, "INSERT INTO tbl_Emulators_Moby_Platforms (id_Emulators, id_Moby_Platforms, DefaultEmulator) SELECT " & TC.getSQLFormat(id_Emulators_New) & ", id_Moby_Platforms, NULL FROM tbl_Emulators_Moby_Platforms WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators), tran)
 						DataAccess.FireProcedure(tran.Connection, 0, "INSERT INTO tbl_Emulators_Multivolume_Parameters (id_Emulators, Volume_Number, Parameter) SELECT " & TC.getSQLFormat(id_Emulators_New) & ", Volume_Number, Parameter FROM tbl_Emulators_Multivolume_Parameters WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators), tran)
+						DataAccess.FireProcedure(tran.Connection, 0, "INSERT INTO tbl_Emulators_Pre_Post_Launch_Commands (id_Emulators, PreLaunch, PostLaunch, Sort, Directory, Executable, Parameter, Minimized, WaitForExit) SELECT " & TC.getSQLFormat(id_Emulators_New) & ", PreLaunch, PostLaunch, Sort, Directory, Executable, Parameter, Minimized, WaitForExit FROM tbl_Emulators_Pre_Post_Launch_Commands WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators), tran)
 
 						frm_Tag_Parser_Edit.Fill_Tag_Parser_Volumes(Me.DS_ML.ttb_Tag_Parser_Volumes)
 
@@ -697,7 +842,6 @@ Public Class frm_Emulators
 				'Add List Generator
 				Using frm As New frm_List_Generator_Edit
 					If frm.ShowDialog = DialogResult.OK Then
-						'TODO: Save to tbl_List_Generators, set id_List_Generators within this Emulator and reload the list of List_Generators
 						Dim id_List_Generators As Int64 = 0L
 						Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
 							id_List_Generators = DS_ML.Upsert_tbl_List_Generators(tran, frm.txb_Name.EditValue.Trim, frm.cmb_Sort.EditValue, frm.txb_Main_Template.EditValue, frm.txb_File_Entry_Template.EditValue)
@@ -939,6 +1083,345 @@ Public Class frm_Emulators
 				btn.Enabled = edutButtonsEnabled
 			End If
 		Next
+	End Sub
+
+	Private Sub rpi_Supported_EditValueChanging(sender As Object, e As DevExpress.XtraEditors.Controls.ChangingEventArgs) Handles rpi_Supported.EditValueChanging
+		'Only Admins may change the Supported flag
+		If cls_Globals.MultiUserMode = True AndAlso cls_Globals.Admin = False Then
+			e.Cancel = True
+			Return
+		End If
+	End Sub
+
+	Private Sub rpi_DefaultEmulator_EditValueChanging(sender As Object, e As DevExpress.XtraEditors.Controls.ChangingEventArgs) Handles rpi_DefaultEmulator.EditValueChanging
+		'as a non-Admin User, only allow to set Default if Supported is already true
+		If cls_Globals.MultiUserMode = True AndAlso cls_Globals.Admin = False Then
+			If BS_Platforms.Current Is Nothing OrElse TC.NZ(BS_Platforms.Current("Supported"), False) = False Then
+				e.Cancel = True
+				Return
+			End If
+		End If
+	End Sub
+
+	Private Sub PrePost_Launch_Add(ByVal isPreLaunch As Boolean)
+
+		Using frm As New frm_Emulators_Pre_Post_Launch_Command_Edit("Add new " & IIf(isPreLaunch, "Pre", "Post") & "-Launch Command")
+			If frm.ShowDialog = DialogResult.OK Then
+				Dim maxSort As Int64 = 1
+
+				Dim rows_old As DataRowCollection = Nothing
+				If isPreLaunch Then
+					rows_old = Me.DS_ML.ttb_Emulators_PreLaunch_Commands.Rows
+				Else
+					rows_old = Me.DS_ML.ttb_Emulators_PostLaunch_Commands.Rows
+				End If
+
+				For Each row_old As DataRow In rows_old
+					If maxSort <= row_old("Sort") Then
+						maxSort = row_old("Sort") + 1
+					End If
+				Next
+
+				Dim dt As DataTable = Nothing
+				If isPreLaunch Then
+					dt = Me.DS_ML.ttb_Emulators_PreLaunch_Commands
+				Else
+					dt = Me.DS_ML.ttb_Emulators_PostLaunch_Commands
+				End If
+
+				Dim row As DataRow = dt.NewRow
+				row("Directory") = frm.txb_Directory.Text
+				row("Executable") = frm.txb_Executable.Text
+				row("Parameter") = frm.txb_StartupParameter.Text
+				row("Minimized") = frm.chb_Minimized.Checked
+				row("WaitForExit") = frm.chb_WaitForExit.Checked
+				row("Sort") = maxSort
+
+				dt.Rows.Add(row)
+			End If
+		End Using
+	End Sub
+
+	Private Sub bbi_PreLaunch_Add_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles bbi_PreLaunch_Add.ItemClick
+		PrePost_Launch_Add(True)
+	End Sub
+
+	Private Sub bbi_PostLaunch_Add_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles bbi_PostLaunch_Add.ItemClick
+		PrePost_Launch_Add(False)
+	End Sub
+
+	Private Sub PrePost_Launch_Edit(ByVal isPreLaunch As Boolean)
+		Dim bs As BindingSource = Nothing
+		If isPreLaunch Then
+			bs = Me.BS_PreLaunch_Commands
+		Else
+			bs = Me.BS_PostLaunch_Commands
+		End If
+
+		If bs.Current Is Nothing Then
+			Return
+		End If
+
+		Using frm As New frm_Emulators_Pre_Post_Launch_Command_Edit("Edit " & IIf(isPreLaunch, "Pre", "Post") & "-Launch Command", bs.Current("Directory"), bs.Current("Executable"), bs.Current("Parameter"), bs.Current("WaitForExit"), bs.Current("Minimized"))
+			If frm.ShowDialog = DialogResult.OK Then
+				bs.Current("Directory") = frm.txb_Directory.EditValue
+				bs.Current("Executable") = frm.txb_Executable.EditValue
+				bs.Current("Parameter") = frm.txb_StartupParameter.Text
+				bs.Current("Minimized") = frm.chb_Minimized.Checked
+				bs.Current("WaitForExit") = frm.chb_WaitForExit.Checked
+			End If
+
+			PrePost_Launch_CurrentChanged(isPreLaunch)
+		End Using
+	End Sub
+
+	Private Sub bbi_PreLaunch_Edit_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles bbi_PreLaunch_Edit.ItemClick
+		PrePost_Launch_Edit(True)
+	End Sub
+
+	Private Sub bbi_PostLaunch_Edit_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles bbi_PostLaunch_Edit.ItemClick
+		PrePost_Launch_Edit(False)
+	End Sub
+
+	Private Sub bbi_PreLaunch_Delete_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles bbi_PreLaunch_Delete.ItemClick
+		If BS_PreLaunch_Commands.Current Is Nothing Then
+			Return
+		End If
+
+		BS_PreLaunch_Commands.RemoveCurrent()
+		PrePost_Launch_CurrentChanged(False)
+	End Sub
+
+	Private Sub bbi_PostLaunch_Delete_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles bbi_PostLaunch_Delete.ItemClick
+		If BS_PostLaunch_Commands.Current Is Nothing Then
+			Return
+		End If
+
+		BS_PostLaunch_Commands.RemoveCurrent()
+		PrePost_Launch_CurrentChanged(False)
+	End Sub
+
+	Private Sub popmnu_PreLaunch_BeforePopup(sender As Object, e As CancelEventArgs) Handles popmnu_PreLaunch.BeforePopup
+		If BS_PreLaunch_Commands.Current Is Nothing Then
+			Me.bbi_PreLaunch_Delete.Enabled = False
+			Me.bbi_PreLaunch_Edit.Enabled = False
+		Else
+			Me.bbi_PreLaunch_Delete.Enabled = True
+			Me.bbi_PreLaunch_Edit.Enabled = True
+		End If
+	End Sub
+
+	Private Sub popmnu_PostLaunch_BeforePopup(sender As Object, e As CancelEventArgs) Handles popmnu_PostLaunch.BeforePopup
+		If BS_PostLaunch_Commands.Current Is Nothing Then
+			Me.bbi_PostLaunch_Delete.Enabled = False
+			Me.bbi_PostLaunch_Edit.Enabled = False
+		Else
+			Me.bbi_PostLaunch_Delete.Enabled = True
+			Me.bbi_PostLaunch_Edit.Enabled = True
+		End If
+	End Sub
+
+	Private Sub PrePost_Launch_CurrentChanged(ByVal isPreLaunch As Boolean)
+		Dim bs As BindingSource = Nothing
+		Dim btnUp As MKNetDXLib.ctl_MKDXSimpleButton = Nothing
+		Dim btnDown As MKNetDXLib.ctl_MKDXSimpleButton = Nothing
+		Dim dt As DataTable = Nothing
+
+		If isPreLaunch Then
+			bs = BS_PreLaunch_Commands
+			btnUp = Me.btn_PreLaunch_MoveUp
+			btnDown = Me.btn_PreLaunch_MoveDown
+			dt = Me.DS_ML.ttb_Emulators_PreLaunch_Commands
+		Else
+			bs = BS_PostLaunch_Commands
+			btnUp = Me.btn_PostLaunch_MoveUp
+			btnDown = Me.btn_PostLaunch_MoveDown
+			dt = Me.DS_ML.ttb_Emulators_PostLaunch_Commands
+		End If
+
+		btnUp.Enabled = False
+		btnDown.Enabled = False
+
+		If bs.Current Is Nothing Then
+			Return
+		End If
+
+
+		Dim currentSort As Int64 = bs.Current("Sort")
+
+		For Each row As DataRow In dt.Rows
+			If row.RowState <> DataRowState.Deleted AndAlso row.RowState <> DataRowState.Detached Then
+				If row("Sort") > currentSort Then
+					btnDown.Enabled = True
+				End If
+
+				If row("Sort") < currentSort Then
+					btnUp.Enabled = True
+				End If
+			End If
+		Next
+	End Sub
+
+	Private Sub BS_PreLaunch_Commands_CurrentChanged(sender As Object, e As EventArgs) Handles BS_PreLaunch_Commands.CurrentChanged
+		PrePost_Launch_CurrentChanged(True)
+	End Sub
+
+	Private Sub BS_PostLaunch_Commands_CurrentChanged(sender As Object, e As EventArgs) Handles BS_PostLaunch_Commands.CurrentChanged
+		PrePost_Launch_CurrentChanged(False)
+	End Sub
+
+	Private Sub PrePost_MoveUpDown(ByVal isPreLaunch As Boolean, ByVal isMoveUp As Boolean)
+		Dim bs As BindingSource = Nothing
+		Dim dt As DataTable = Nothing
+
+		If isPreLaunch Then
+			bs = BS_PreLaunch_Commands
+			dt = Me.DS_ML.ttb_Emulators_PreLaunch_Commands
+		Else
+			bs = BS_PostLaunch_Commands
+			dt = Me.DS_ML.ttb_Emulators_PostLaunch_Commands
+		End If
+
+		Dim currentSort As Int64 = bs.Current("Sort")
+		Dim nextSort As Int64 = currentSort
+		Dim nextRow As DataRow = Nothing
+
+		For Each row As DataRow In dt.Rows
+			If row.RowState <> DataRowState.Deleted AndAlso row.RowState <> DataRowState.Detached Then
+				If isMoveUp Then
+					If row("Sort") < currentSort Then
+						If nextSort = currentSort OrElse nextSort < row("Sort") Then
+							nextSort = row("Sort")
+							nextRow = row
+						End If
+					End If
+				Else
+					If row("Sort") > currentSort Then
+						If nextSort = currentSort OrElse nextSort > row("Sort") Then
+							nextSort = row("Sort")
+							nextRow = row
+						End If
+					End If
+				End If
+			End If
+		Next
+
+		If nextRow IsNot Nothing Then
+			bs.Current("Sort") = nextRow("Sort")
+			nextRow("Sort") = currentSort
+		End If
+	End Sub
+
+	Private Sub btn_PreLaunch_MoveUp_Click(sender As Object, e As EventArgs) Handles btn_PreLaunch_MoveUp.Click
+		PrePost_MoveUpDown(True, True)
+	End Sub
+
+	Private Sub btn_PostLaunch_MoveUp_Click(sender As Object, e As EventArgs) Handles btn_PostLaunch_MoveUp.Click
+		PrePost_MoveUpDown(False, True)
+	End Sub
+
+	Private Sub btn_PreLaunch_MoveDown_Click(sender As Object, e As EventArgs) Handles btn_PreLaunch_MoveDown.Click
+		PrePost_MoveUpDown(True, False)
+	End Sub
+
+	Private Sub btn_PostLaunch_MoveDown_Click(sender As Object, e As EventArgs) Handles btn_PostLaunch_MoveDown.Click
+		PrePost_MoveUpDown(False, False)
+	End Sub
+
+	Private Sub cmb_Scripting_EditValueChanged(sender As Object, e As EventArgs) Handles cmb_Scripting.EditValueChanged
+		If TC.NZ(cmb_Scripting.EditValue, 0) > 0 Then
+			Me.pnl_Script_File.Visible = True
+		Else
+			Me.pnl_Script_File.Visible = False
+		End If
+	End Sub
+
+	Private Sub btn_Browse_Script_File_Click(sender As Object, e As EventArgs) Handles btn_Browse_Script_File.Click
+		If BS_Emulators.Current Is Nothing Then
+			Return
+		End If
+
+		Dim sScriptType As String = ""
+		Dim sAllowedExtensions As String = "All Files (*.*)|*.*"
+		Dim sDefaultExt As String = ""
+
+		If TC.NZ(cmb_Scripting.EditValue, 0) = cls_Globals.enm_Script_Types.AutoIt Then
+			sScriptType = "AutoIt"
+			sAllowedExtensions = "AutoIt Files (*.au3)|*.au3"
+		ElseIf TC.NZ(cmb_Scripting.EditValue, 0) = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sScriptType = "AutoHotKey"
+			sAllowedExtensions = "AutoHotKey Files (*.ahk)|*.ahk"
+		Else
+			'
+		End If
+
+		Dim sFilePath As String = MKNetLib.cls_MKFileSupport.OpenFileDialog("Browse " & sScriptType & " Script File", sAllowedExtensions)
+		If Alphaleonis.Win32.Filesystem.File.Exists(sFilePath) Then
+			Me.BS_Emulators.Current("ScriptPath") = sFilePath
+			Me.BS_Emulators.EndEdit()
+		End If
+	End Sub
+
+	Private Sub btn_Create_Script_File_Click(sender As Object, e As EventArgs) Handles btn_Create_Script_File.Click
+		If BS_Emulators.Current Is Nothing Then
+			Return
+		End If
+
+		If TC.NZ(cmb_Scripting.EditValue, 0) = 0 Then
+			MKDXHelper.MessageBox("Please select a script type from the Enhanced Scripting dropdown first.", "Create Script File", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+			Return
+		End If
+
+		Dim sScriptContent As String = ""
+		Dim sScriptType As String = ""
+		Dim sAllowedExtensions As String = "All Files (*.*)|*.*"
+		Dim sDefaultExt As String = ""
+		Dim sFileNameSuggestion As String = ""
+
+		If TC.NZ(cmb_Scripting.EditValue, 0) = cls_Globals.enm_Script_Types.AutoIt Then
+			sScriptType = "AutoIt"
+			sScriptContent = My.Resources.ml_autoit_template
+			sAllowedExtensions = "AutoIt Files (*.au3)|*.au3"
+			sDefaultExt = ".au3"
+			sFileNameSuggestion = "ml_autoit_template.au3"
+		ElseIf TC.NZ(cmb_Scripting.EditValue, 0) = cls_Globals.enm_Script_Types.AutoHotKey Then
+			sScriptType = "AutoHotKey"
+			sScriptContent = My.Resources.ml_autohotkey_template
+			sAllowedExtensions = "AutoHotKey Files (*.ahk)|*.ahk"
+			sDefaultExt = ".ahk"
+			sFileNameSuggestion = "ml_autohotkey_template.ahk"
+		Else
+			MKDXHelper.MessageBox("The script type is not supported.", "Create Script File", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+			Return
+		End If
+
+		Dim sFilePath As String = MKNetLib.cls_MKFileSupport.SaveFileDialog("Create " & sScriptType & " Script File", sAllowedExtensions, 0, sDefaultExt, "", sFileNameSuggestion)
+
+		If sFilePath = "" Then
+			Return
+		End If
+
+		Dim sError As String = ""
+
+		MKNetLib.cls_MKFileSupport.SaveTextToFile(sScriptContent, sFilePath, sError)
+
+		If sError <> "" Then
+			MKDXHelper.MessageBox("An error occured while writing the file:" & ControlChars.CrLf & ControlChars.CrLf & sError, "Create Script File", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+			Return
+		End If
+
+		Me.BS_Emulators.Current("ScriptPath") = sFilePath
+		Me.BS_Emulators.EndEdit()
+
+		MKDXHelper.MessageBox("The " & sScriptType & " script file has been created.", "Create Script File", MessageBoxButtons.OK, MessageBoxIcon.Information)
+	End Sub
+
+	Private Sub cmb_Scripting_ButtonPressed(sender As Object, e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles cmb_Scripting.ButtonPressed
+		If e.Button.Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Delete Then
+			BS_Emulators.Current("ScriptType") = DBNull.Value
+			BS_Emulators.Current("ScriptPath") = ""
+			BS_Emulators.EndEdit()
+		End If
 	End Sub
 #End Region
 End Class

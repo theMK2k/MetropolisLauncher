@@ -43,6 +43,7 @@ Partial Class frm_MOBY_Extras_Manager
 		Me.btn_Move_Down = New MKNetDXLib.ctl_MKDXSimpleButton()
 		Me.btn_Move_Up = New MKNetDXLib.ctl_MKDXSimpleButton()
 		Me.chb_Download = New MKNetDXLib.ctl_MKDXCheckEdit()
+		Me.lbl_MobyDownload_Error = New MKNetDXLib.ctl_MKDXLabel()
 		CType(Me.splt_Main, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.splt_Main.SuspendLayout()
 		CType(Me.grd_Extras, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,6 +65,7 @@ Partial Class frm_MOBY_Extras_Manager
 		Me.splt_Main.Name = "splt_Main"
 		Me.splt_Main.Panel1.Controls.Add(Me.grd_Extras)
 		Me.splt_Main.Panel1.Text = "Panel1"
+		Me.splt_Main.Panel2.Controls.Add(Me.lbl_MobyDownload_Error)
 		Me.splt_Main.Panel2.Controls.Add(Me.prg_Extras_Download)
 		Me.splt_Main.Panel2.Controls.Add(Me.pic_Game)
 		Me.splt_Main.Panel2.Text = "Panel2"
@@ -247,6 +249,20 @@ Partial Class frm_MOBY_Extras_Manager
 		Me.chb_Download.Size = New System.Drawing.Size(184, 19)
 		Me.chb_Download.TabIndex = 9
 		'
+		'lbl_MobyDownload_Error
+		'
+		Me.lbl_MobyDownload_Error.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical
+		Me.lbl_MobyDownload_Error.Dock = System.Windows.Forms.DockStyle.Bottom
+		Me.lbl_MobyDownload_Error.Location = New System.Drawing.Point(0, 362)
+		Me.lbl_MobyDownload_Error.MKBoundControl1 = Nothing
+		Me.lbl_MobyDownload_Error.MKBoundControl2 = Nothing
+		Me.lbl_MobyDownload_Error.MKBoundControl3 = Nothing
+		Me.lbl_MobyDownload_Error.MKBoundControl4 = Nothing
+		Me.lbl_MobyDownload_Error.MKBoundControl5 = Nothing
+		Me.lbl_MobyDownload_Error.Name = "lbl_MobyDownload_Error"
+		Me.lbl_MobyDownload_Error.Size = New System.Drawing.Size(380, 0)
+		Me.lbl_MobyDownload_Error.TabIndex = 8
+		'
 		'frm_MOBY_Extras_Manager
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -292,4 +308,5 @@ Partial Class frm_MOBY_Extras_Manager
 	Friend WithEvents btn_Move_Up As MKNetDXLib.ctl_MKDXSimpleButton
 	Friend WithEvents chb_Download As MKNetDXLib.ctl_MKDXCheckEdit
 	Friend WithEvents prg_Extras_Download As MKNetDXLib.ctl_MKDXProgressBarControl
+	Friend WithEvents lbl_MobyDownload_Error As MKNetDXLib.ctl_MKDXLabel
 End Class

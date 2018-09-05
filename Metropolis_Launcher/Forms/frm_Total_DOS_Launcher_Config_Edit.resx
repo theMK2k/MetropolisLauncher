@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="BS_Total_DOS_Launcher_Configs.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>106, 17</value>
+  </metadata>
+  <metadata name="DS_ML.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="ToolTipItem3.Text" xml:space="preserve">
+    <value>PATH-like variable that specifies where TDL can find the archive files prepared by the Total DOS Launcher export and copied over to the vintage system. Multiple locations are allowed to get past the FAT16 2-gigabyte limit. Use semi colons to separate multiple locations.
+
+DOS limitations cap this path string at 80 characters -- do not exceed!</value>
+  </data>
+  <data name="ToolTipItem4.Text" xml:space="preserve">
+    <value>PATH-like variable that specifies where TDL can find the archive files prepared by the Total DOS Launcher export and copied over to the vintage system. Multiple locations are allowed to get past the FAT16 2-gigabyte limit. Use semi colons to separate multiple locations.
+
+DOS limitations cap this path string at 80 characters -- do not exceed!</value>
+  </data>
+  <data name="ToolTipItem5.Text" xml:space="preserve">
+    <value>Cache directory location. This is where archives (.zip files, etc.) are decompressed into.  If you want to save your game, hi scores, etc., then this should be a permanent directory on a hard disk. If you don't care about retaining files, you can put this on a RAM disk.</value>
+  </data>
+  <data name="ToolTipItem6.Text" xml:space="preserve">
+    <value>Cache directory location. This is where archives (.zip files, etc.) are decompressed into.  If you want to save your game, hi scores, etc., then this should be a permanent directory on a hard disk. If you don't care about retaining files, you can put this on a RAM disk.</value>
+  </data>
+  <data name="ToolTipItem7.Text" xml:space="preserve">
+    <value>TDL can operate in three user modes:
+
+- REGULAR is the default and recommended mode, where the TDL will try to make educated decisions where applicable.
+
+- POWER displays more messages, copies the debug log to a text logfile, and generally gives more control.
+
+- KIOSK is meant for shows, conventions, and museums it disables features that could confuse novice users, and makes as many decisions on behalf of the user as possible. ctrl-alt-delete is trapped and disabled. Finally, the TDL cannot be exited in this mode.
+
+It is highly recommended you run in regular mode unless instructed otherwise.</value>
+  </data>
+  <metadata name="BTA_userlevel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>373, 17</value>
+  </metadata>
+  <data name="BTA_userlevel.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
+        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
+        bmRlcnRfdm9uCw==
+</value>
+  </data>
+  <data name="BTA_userlevel.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAGwIAABsCAAAmBAAAAQEBAQoPAgAAACYEAAACH4sIAAAAAAAEAJ1UW2/TMBRut3Wi
+        DHjhgVcrz23SsBuLmk1ikxBiK2gtaG+Tm5y2HrFdfOnljb/DrxzHjdttVSckHMl2zuX7Ph9fKtVKpXKP
+        zY2uvdrCrtOdawM8vKCGNsgPUJpJkR6ELfc1yLktjFWQCrBG0aJBvtl+wbIvMO/JnyDS/vExPcwOj+KT
+        /QNofTipOfC3jzAXXRfMNtrf+Xl4DVwaJoaern7Di242Ak73cHbBBoNPivLtavWNB/JxTm/dAe3uYPen
+        1j6b8YJMvOYgDlsBAZHJHKHTwJpBMz4Kzk5fv2zPdKIXBITladCBqVcSEEQQOg38JJnhfGTMOImi6XQa
+        TvdDqYbR+1Yrjm6uLkuRy1iuc0RBIiU8um5ylimp5cA0M8kTjGuWUQGqIMTpgAI4CEME5fBUShmZfNbe
+        kgZGWVjZv2s4t0ph7qXMaAHevQAuoZFyXMCsNx+Dt3r7SLIMCGfia5ZZhUvEQnE6W/5Z0ZdW5JAHq7RN
+        Wnu0X0D8OOZ52gevhl8WN2XdtYmA5QExiJIGLs8o3MbV6g1VQzAdjNNjmoHbsafrida5o+fIF57Nohcu
+        L+qhhNGqhstib0JYyy35F8fidLeG5/V3tZ3j0R6qpBwo/59z5HNKiH/lLImak9gVaMfdnbU75W7S7u0V
+        vZMKBybc8NGyIq/fXsOEuRD3VrzAtuXfjXvf9v4CCdwZhlIEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAACw==
+</value>
+  </data>
+  <data name="BTA_userlevel.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
+</value>
+  </data>
+  <data name="ToolTipItem8.Text" xml:space="preserve">
+    <value>TDL can operate in three user modes:
+
+- REGULAR is the default and recommended mode, where the TDL will try to make educated decisions where applicable.
+
+- POWER displays more messages, copies the debug log to a text logfile, and generally gives more control.
+
+- KIOSK is meant for shows, conventions, and museums it disables features that could confuse novice users, and makes as many decisions on behalf of the user as possible. ctrl-alt-delete is trapped and disabled. Finally, the TDL cannot be exited in this mode.
+
+It is highly recommended you run in regular mode unless instructed otherwise.</value>
+  </data>
+  <data name="ToolTipItem11.Text" xml:space="preserve">
+    <value>TDL swaps itself into EMS, XMS, extended memory, or disk when launching a program. If you suspect this is causing problems, you can turn it off, but you will have less DOS RAM available for running your program.</value>
+  </data>
+  <data name="ToolTipItem12.Text" xml:space="preserve">
+    <value>TDL swaps itself into EMS, XMS, extended memory, or disk when launching a program. If you suspect this is causing problems, you can turn it off, but you will have less DOS RAM available for running your program.</value>
+  </data>
+  <data name="ToolTipItem13.Text" xml:space="preserve">
+    <value>TDL normally preloads data into system RAM to increase operating speed. If you have a very large number of titles loaded (over 10,000) and do not have any EMS or XMS memory configured, you might run out of low DOS RAM. You can disable preloading to force the TDL to work, but if your hard disk is a slow device, it could operate very slowly.
+
+(Generally, don't disable preloading unless you experience memory errors.)</value>
+  </data>
+  <data name="ToolTipItem14.Text" xml:space="preserve">
+    <value>TDL normally preloads data into system RAM to increase operating speed. If you have a very large number of titles loaded (over 10,000) and do not have any EMS or XMS memory configured, you might run out of low DOS RAM. You can disable preloading to force the TDL to work, but if your hard disk is a slow device, it could operate very slowly.
+
+(Generally, don't disable preloading unless you experience memory errors.)</value>
+  </data>
+  <metadata name="BTA_VESA_Modes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>499, 17</value>
+  </metadata>
+  <data name="BTA_VESA_Modes.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
+        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
+        bmRlcnRfdm9uCw==
+</value>
+  </data>
+  <data name="BTA_VESA_Modes.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAKAIAACgCAABABAAAAQEBAQoPAgAAAEAEAAACH4sIAAAAAAAEAK1UW2/TMBRud6ko
+        A1544NXyc5s07MaiZpNYJYTYCloL2tvkJqetR2wXX9r0jf/ADx5243Zb1QmEcCTbOZfv++yTk0q1Uqnc
+        2eFWN15s2anbmysNLOgQTRroG0hFBU8OgpZ7Gujc5NpISDgYLUneQF/MIKfpJ5j3xXfgyeD4mBymh0fR
+        yf4BtN6d7Drw1w8wF1MP9La1v/H74AqY0JSPPF39muW9dAyM7Nldhw6HHyRh29XqKw/k45zeugOq7djp
+        V619VrAcTb1mHAUtjICnIrPQCTZ62IyO8Nnpy+ftQsVqQYBoluAuzLwSjCwCVwn2m7iw+7HWkzgMZ7NZ
+        MNsPhByFb1utKLy+vChFLmOZyiyKJZLco6smo6kUSgx1MxUstnHNMgpbFQg5HZADA64RJwweSykj44/K
+        WxKspYGV/auCcyOlzb0QKcnBuxfAJbSlnORQ9OcT8FZvHwuaAmKUf05TI+0R7UUxUizfDB8IwzPI8Cpt
+        k9Y+GeQQPYx5mvbeq+CHsUVZd20ioBlG2qIk2OVpacu4Or0mcgS6a+PUhKTgKvb4POFfEHSomuRk3odC
+        /0emdvjUMReezdezcHl198UKV9ValnUTwlpuyb/4AE9ru7YzflbbmW2ikYzLhbB/+WJ9Tgnxp5wlUXMa
+        uQvacV261r2uZ2s3l+RWSLtQ7pb3huZZ/eYKptSFuL/SMzu2/B/qzo+938G6L+68BAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL
+</value>
+  </data>
+  <data name="BTA_VESA_Modes.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
+</value>
+  </data>
+</root>

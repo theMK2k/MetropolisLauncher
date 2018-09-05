@@ -23,6 +23,7 @@ Partial Class frm_Users_Setup
 	<System.Diagnostics.DebuggerStepThrough()> _
 	Private Sub InitializeComponent()
 		Me.components = New System.ComponentModel.Container()
+		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_Users_Setup))
 		Me.DS_ML = New Metropolis_Launcher.DS_ML()
 		Me.BS_Users = New System.Windows.Forms.BindingSource(Me.components)
 		Me.grd_Users = New MKNetDXLib.ctl_MKDXGrid()
@@ -42,12 +43,17 @@ Partial Class frm_Users_Setup
 		Me.bbi_Delete_User = New DevExpress.XtraBars.BarButtonItem()
 		Me.bbi_Edit_User = New DevExpress.XtraBars.BarButtonItem()
 		Me.popmnu_Users = New MKNetDXLib.cmp_MKDXPopupMenu()
+		Me.colid_Cheevo_Challenges = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.BTA_Challenges = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
+		Me.rpiChallenges = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
 		CType(Me.DS_ML, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BS_Users, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.grd_Users, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.gv_Users, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.barmng_Users, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.popmnu_Users, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BTA_Challenges, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.rpiChallenges, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
 		'
 		'DS_ML
@@ -69,13 +75,14 @@ Partial Class frm_Users_Setup
 		Me.grd_Users.Location = New System.Drawing.Point(3, 3)
 		Me.grd_Users.MainView = Me.gv_Users
 		Me.grd_Users.Name = "grd_Users"
-		Me.grd_Users.Size = New System.Drawing.Size(468, 342)
+		Me.grd_Users.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpiChallenges})
+		Me.grd_Users.Size = New System.Drawing.Size(596, 342)
 		Me.grd_Users.TabIndex = 0
 		Me.grd_Users.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Users})
 		'
 		'gv_Users
 		'
-		Me.gv_Users.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colUsername, Me.colPassword, Me.colAdmin, Me.colRestricted})
+		Me.gv_Users.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colUsername, Me.colPassword, Me.colAdmin, Me.colRestricted, Me.colid_Cheevo_Challenges})
 		Me.gv_Users.GridControl = Me.grd_Users
 		Me.gv_Users.Name = "gv_Users"
 		Me.gv_Users.OptionsBehavior.AllowIncrementalSearch = True
@@ -108,6 +115,7 @@ Partial Class frm_Users_Setup
 		Me.colAdmin.Name = "colAdmin"
 		Me.colAdmin.OptionsColumn.AllowEdit = False
 		Me.colAdmin.OptionsColumn.ReadOnly = True
+		Me.colAdmin.ToolTip = "The user is the administrator"
 		Me.colAdmin.Visible = True
 		Me.colAdmin.VisibleIndex = 2
 		'
@@ -117,6 +125,7 @@ Partial Class frm_Users_Setup
 		Me.colRestricted.Name = "colRestricted"
 		Me.colRestricted.OptionsColumn.AllowEdit = False
 		Me.colRestricted.OptionsColumn.ReadOnly = True
+		Me.colRestricted.ToolTip = "User is restricted to certain games"
 		Me.colRestricted.Visible = True
 		Me.colRestricted.VisibleIndex = 3
 		'
@@ -124,7 +133,7 @@ Partial Class frm_Users_Setup
 		'
 		Me.btn_Cancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-		Me.btn_Cancel.Location = New System.Drawing.Point(396, 348)
+		Me.btn_Cancel.Location = New System.Drawing.Point(524, 348)
 		Me.btn_Cancel.Name = "btn_Cancel"
 		Me.btn_Cancel.Size = New System.Drawing.Size(75, 23)
 		Me.btn_Cancel.TabIndex = 2
@@ -133,7 +142,7 @@ Partial Class frm_Users_Setup
 		'btn_OK
 		'
 		Me.btn_OK.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btn_OK.Location = New System.Drawing.Point(318, 348)
+		Me.btn_OK.Location = New System.Drawing.Point(446, 348)
 		Me.btn_OK.Name = "btn_OK"
 		Me.btn_OK.Size = New System.Drawing.Size(75, 23)
 		Me.btn_OK.TabIndex = 1
@@ -154,14 +163,14 @@ Partial Class frm_Users_Setup
 		Me.barDockControlTop.CausesValidation = False
 		Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
 		Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-		Me.barDockControlTop.Size = New System.Drawing.Size(483, 0)
+		Me.barDockControlTop.Size = New System.Drawing.Size(611, 0)
 		'
 		'barDockControlBottom
 		'
 		Me.barDockControlBottom.CausesValidation = False
 		Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
 		Me.barDockControlBottom.Location = New System.Drawing.Point(0, 383)
-		Me.barDockControlBottom.Size = New System.Drawing.Size(483, 0)
+		Me.barDockControlBottom.Size = New System.Drawing.Size(611, 0)
 		'
 		'barDockControlLeft
 		'
@@ -174,7 +183,7 @@ Partial Class frm_Users_Setup
 		'
 		Me.barDockControlRight.CausesValidation = False
 		Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-		Me.barDockControlRight.Location = New System.Drawing.Point(483, 0)
+		Me.barDockControlRight.Location = New System.Drawing.Point(611, 0)
 		Me.barDockControlRight.Size = New System.Drawing.Size(0, 383)
 		'
 		'bbi_Add_User
@@ -204,11 +213,43 @@ Partial Class frm_Users_Setup
 		Me.popmnu_Users.Manager = Me.barmng_Users
 		Me.popmnu_Users.Name = "popmnu_Users"
 		'
+		'colid_Cheevo_Challenges
+		'
+		Me.colid_Cheevo_Challenges.Caption = "Challenge"
+		Me.colid_Cheevo_Challenges.ColumnEdit = Me.rpiChallenges
+		Me.colid_Cheevo_Challenges.FieldName = "id_Cheevo_Challenges"
+		Me.colid_Cheevo_Challenges.Name = "colid_Cheevo_Challenges"
+		Me.colid_Cheevo_Challenges.OptionsColumn.AllowEdit = False
+		Me.colid_Cheevo_Challenges.OptionsColumn.ReadOnly = True
+		Me.colid_Cheevo_Challenges.ToolTip = "User is bound to a challenge"
+		Me.colid_Cheevo_Challenges.Visible = True
+		Me.colid_Cheevo_Challenges.VisibleIndex = 4
+		Me.colid_Cheevo_Challenges.Width = 197
+		'
+		'BTA_Challenges
+		'
+		Me.BTA_Challenges.AllowDelete = True
+		Me.BTA_Challenges.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_Challenges.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_Challenges.Connection = Nothing
+		Me.BTA_Challenges.DSStream = CType(resources.GetObject("BTA_Challenges.DSStream"), System.IO.MemoryStream)
+		Me.BTA_Challenges.FillString = ""
+		Me.BTA_Challenges.Transaction = Nothing
+		Me.BTA_Challenges.UpdateTablesStream = CType(resources.GetObject("BTA_Challenges.UpdateTablesStream"), System.Collections.Generic.List(Of String))
+		'
+		'rpiChallenges
+		'
+		Me.rpiChallenges.AutoHeight = False
+		Me.rpiChallenges.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+		Me.rpiChallenges.DataSource = Me.BTA_Challenges
+		Me.rpiChallenges.DisplayMember = "Name"
+		Me.rpiChallenges.Name = "rpiChallenges"
+		Me.rpiChallenges.ValueMember = "id_Cheevo_Challenges"
+		'
 		'frm_Users_Setup
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.ClientSize = New System.Drawing.Size(483, 383)
+		Me.ClientSize = New System.Drawing.Size(611, 383)
 		Me.Controls.Add(Me.btn_Cancel)
 		Me.Controls.Add(Me.btn_OK)
 		Me.Controls.Add(Me.grd_Users)
@@ -226,6 +267,8 @@ Partial Class frm_Users_Setup
 		CType(Me.gv_Users, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.barmng_Users, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.popmnu_Users, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BTA_Challenges, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.rpiChallenges, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.ResumeLayout(False)
 		Me.PerformLayout()
 
@@ -249,4 +292,7 @@ Partial Class frm_Users_Setup
 	Friend WithEvents bbi_Delete_User As DevExpress.XtraBars.BarButtonItem
 	Friend WithEvents bbi_Edit_User As DevExpress.XtraBars.BarButtonItem
 	Friend WithEvents popmnu_Users As MKNetDXLib.cmp_MKDXPopupMenu
+	Friend WithEvents colid_Cheevo_Challenges As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents BTA_Challenges As MKNetLib.cmp_MKBindableTableAdapter
+	Friend WithEvents rpiChallenges As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
 End Class

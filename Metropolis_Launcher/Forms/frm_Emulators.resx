@@ -123,21 +123,89 @@
   <metadata name="DS_ML.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="DS_ML.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="BS_Platforms.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>230, 17</value>
   </metadata>
+  <metadata name="BTA_Script_Types.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>736, 95</value>
+  </metadata>
+  <data name="BTA_Script_Types.ColumnUpdateBlacklistStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAFAAAAAAAAABEDAAAABQAAAAYEAAAAAlRTBgUA
+        AAALZXJzdGVsbHRfYW0GBgAAAAxlcnN0ZWxsdF92b24GBwAAAAxnZWFlbmRlcnRfYW0GCAAAAA1nZWFl
+        bmRlcnRfdm9uCw==
+</value>
+  </data>
+  <data name="BTA_Script_Types.DSStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAALAIAACwCAABIBAAAAQEBAQoPAgAAAEgEAAACH4sIAAAAAAAEAKVUW2/TMBRud6ko
+        A1544NXyc5s07MaiZpNYJYTYCloL2tvkJqedhy/Fdtr0jb/ALx5243Zd1QkEjmQ75/J9n31yUqlWKpV7
+        O9zqxostO3V7M22ABx1iSAN9A6WpFMlB0HJPA53nzOQKEgG5UYQ10Jd8wGj6CWZ9+R1EMjg+Jofp4VF0
+        sn8ArXcnuw789QrmfOqB2bb2N34fXAGXhoqRp6tfc9ZLb4GTPbvr0OHwgyJ8u1p95YF8nNNbd0C1HTv9
+        qrXPCs7QxGvGUdDCCEQqMwud4NwMm9ERPjt9+bxd6FjPCRDNEtyFqVeCkUUQOsF+Exd2f2vMOA7D6XQa
+        TPcDqUbh21YrCq8vL0qRi1iuM4tiiZTw6LrJaaqklkPTTCWPbVyzjMJWBUJOBzDgIAwShMNjKWVk/FF7
+        S4KNymFp/6rhPFfK5l7IlDDw7jlwCW0pxwyK/mwM3urtt5KmgDgVn9M0V/aI9qI4KRZvuRjIXGSQ4WXa
+        Jq19MmAQrcY8Tfvg1fAjt0VZd20ioBlGxqIk2LqYFKPl2Q1RIzBdG6XHJAVXr8enCf8CvkP1mJFZHwqz
+        wqONov/D1A6fOuTcs/ly5i6v7qFU4bJWi6JuQljLLfnnn99pbdf2xc9qO7MtNFJxuRD+L9+rzykh/pSz
+        IGpOIndBO65H13rXdWzt5pLcSWUXKtzyPqcsq99cwYS6EPdPembHlv8/3fux9xvXh5geugQAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAs=
+</value>
+  </data>
+  <data name="BTA_Script_Types.UpdateTablesStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
+        ZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0sIG1zY29ybGliLCBWZXJzaW9u
+        PTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUB
+        AAAAMFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU3lzdGVtLlN0cmluZwMAAAAGX2l0
+        ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
+</value>
+  </data>
+  <data name="ToolTipItem28.Text" xml:space="preserve">
+    <value>If you want to use J2K as a keyboard to joystick mapper for this emulator, choose your preset here. J2K will be launched accordingly on startup of the emulator and will be set to the "Empty" J2K preset afterwards.</value>
+  </data>
   <metadata name="BS_List_Generators.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>744, 56</value>
   </metadata>
-  <data name="ToolTipItem6.Text" xml:space="preserve">
+  <data name="ToolTipItem33.Text" xml:space="preserve">
     <value>Metropolis Launcher can generate a text-based file list upon startup and feed the generated textfile to the Emulator as the startup parameter %listfile%.
 
 The List Generator defines how the file list should be created.</value>
   </data>
-  <data name="ToolTipItem7.Text" xml:space="preserve">
+  <data name="ToolTipItem9.Text" xml:space="preserve">
     <value>Metropolis Launcher can generate a text-based file list upon startup and feed the generated textfile to the Emulator as the startup parameter %listfile%.
 
 The List Generator defines how the file list should be created.</value>
+  </data>
+  <data name="ToolTipItem10.Text" xml:space="preserve">
+    <value>Define the startup parameters in this field. 
+
+Available variables are:
+%emudir% (directory of the emulator)
+%emuexe% (executable of the emulator)
+%emufullpath% (full path to the emulator incl. executable)
+%romdir% (directory of the rom)
+%romfile% (filename of the rom)
+%romfullpath% (full path to the rom incl. filename)
+%multivolume% (all the applicable parameters for multiple volumes, see "Multiple Volumes" tab)
+%listfile% (using a List Generator a textfile is built containing the game files, use this startup parameter to feed it to the launched emulator, optionally you define the file extension using %listfile.ext%, default is .txt)</value>
   </data>
   <metadata name="BTA_Libretro_Core.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>820, 17</value>
@@ -188,12 +256,12 @@ The List Generator defines how the file list should be created.</value>
         ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgCAAAACQMAAAAAAAAAAAAAABEDAAAAAAAAAAs=
 </value>
   </data>
-  <data name="ToolTipItem8.Text" xml:space="preserve">
+  <data name="ToolTipItem11.Text" xml:space="preserve">
     <value>The emulator appears to be RetroArch. Select here the Libretro Core to be used for this emulator configuration.
 
 All cores in this list are found in the \cores subdirectory. If there are none, run the emulator and us it's Online Updater to download cores.</value>
   </data>
-  <data name="ToolTipItem9.Text" xml:space="preserve">
+  <data name="ToolTipItem12.Text" xml:space="preserve">
     <value>The emulator appears to be RetroArch. Select here the Libretro Core to be used for this emulator configuration.
 
 All cores in this list are found in the \cores subdirectory. If there are none, run the emulator and us it's Online Updater to download cores.</value>
@@ -204,7 +272,7 @@ All cores in this list are found in the \cores subdirectory. If there are none, 
   <metadata name="DS_J2K.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>972, 17</value>
   </metadata>
-  <data name="ToolTipItem14.Text" xml:space="preserve">
+  <data name="ToolTipItem35.Text" xml:space="preserve">
     <value>Define the startup parameters in this field. 
 
 Available variables are:
@@ -217,33 +285,35 @@ Available variables are:
 %multivolume% (all the applicable parameters for multiple volumes, see "Multiple Volumes" tab)
 %listfile% (using a List Generator a textfile is built containing the game files, use this startup parameter to feed it to the launched emulator, optionally you define the file extension using %listfile.ext%, default is .txt)</value>
   </data>
-  <data name="ToolTipItem15.Text" xml:space="preserve">
-    <value>Define the startup parameters in this field. 
-
-Available variables are:
-%emudir% (directory of the emulator)
-%emuexe% (executable of the emulator)
-%emufullpath% (full path to the emulator incl. executable)
-%romdir% (directory of the rom)
-%romfile% (filename of the rom)
-%romfullpath% (full path to the rom incl. filename)
-%multivolume% (all the applicable parameters for multiple volumes, see "Multiple Volumes" tab)
-%listfile% (using a List Generator a textfile is built containing the game files, use this startup parameter to feed it to the launched emulator, optionally you define the file extension using %listfile.ext%, default is .txt)</value>
-  </data>
-  <data name="ToolTipItem17.Text" xml:space="preserve">
-    <value>If you want to use J2K as a keyboard to joystick mapper for this emulator, choose your preset here. J2K will be launched accordingly on startup of the emulator and will be set to the "Empty" J2K preset afterwards.</value>
-  </data>
+  <metadata name="BS_DOSBox_Patches_Categories.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>106, 56</value>
+  </metadata>
+  <metadata name="BS_DOSBox_Patches.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>331, 56</value>
+  </metadata>
+  <metadata name="DS_J2K.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>972, 17</value>
+  </metadata>
   <metadata name="BS_MV.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>613, 17</value>
   </metadata>
   <metadata name="BS_Volumes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>702, 17</value>
   </metadata>
-  <metadata name="BS_DOSBox_Patches_Categories.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>106, 56</value>
+  <metadata name="BS_Volumes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>702, 17</value>
   </metadata>
-  <metadata name="BS_DOSBox_Patches.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>331, 56</value>
+  <metadata name="BS_PostLaunch_Commands.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>371, 95</value>
+  </metadata>
+  <metadata name="barmng.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>650, 56</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>140</value>
+  </metadata>
+  <metadata name="BS_PreLaunch_Commands.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>177, 95</value>
   </metadata>
   <metadata name="BS_rpi_Platforms.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>352, 17</value>
@@ -254,13 +324,13 @@ Available variables are:
   <metadata name="popmnu_Emulators.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>493, 56</value>
   </metadata>
-  <metadata name="barmng.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>650, 56</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>109</value>
-  </metadata>
   <metadata name="DS_Rombase.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>898, 56</value>
+  </metadata>
+  <metadata name="popmnu_PreLaunch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <metadata name="popmnu_PostLaunch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>571, 95</value>
   </metadata>
 </root>

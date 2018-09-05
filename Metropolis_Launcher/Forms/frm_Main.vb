@@ -21,6 +21,8 @@ Public Class frm_Main
 	Private WithEvents btn_Help As New DevExpress.XtraBars.Docking2010.WindowsUIButton
 	Private WithEvents btn_Logout As New DevExpress.XtraBars.Docking2010.WindowsUIButton
 
+	Private isDBSynced As Boolean = False
+
 	Public Sub New()
 		If Alphaleonis.Win32.Filesystem.File.Exists(System.Windows.Forms.Application.StartupPath & "\log.me") Then cls_Globals.Logging = True
 		If Alphaleonis.Win32.Filesystem.File.Exists(System.Windows.Forms.Application.StartupPath & "\debug.me") Then MsgBox("Attach Debugger now...")
@@ -170,6 +172,10 @@ Public Class frm_Main
 				End Using
 
 			End If
+
+			cls_Settings.SetSetting("MainWindowState", Me.WindowState)
+			cls_Settings.SetSetting("MainWindowSize", Me.Size.Width & "," & Me.Size.Height)
+			cls_Settings.SetSetting("MainWindowLocation", Me.Location.X & "," & Me.Location.Y)
 		Catch ex As Exception
 
 		End Try
@@ -350,7 +356,8 @@ Public Class frm_Main
 
 		If Not Me.Open_DB() Then
 			_Immediate_Close = True
-			Me.Close()
+			'Me.Close()
+			Me.BeginInvoke(New MethodInvoker(AddressOf Me.Close))
 			Return
 		End If
 
@@ -362,12 +369,47 @@ Public Class frm_Main
 		'Apply Settings to the current runtime instance
 		cls_Settings.Apply_Settings()
 
+		'Load Window State, Location and Size
+		Try
+			If Not My.Computer.Keyboard.ShiftKeyDown Then
+				Dim oWindowState As Object = cls_Settings.GetSetting("MainWindowState")
+				If Not TC.IsNullNothingOrEmpty(oWindowState) Then
+					Me.WindowState = CType(oWindowState, FormWindowState)
+
+					Dim oWindowSize As Object = cls_Settings.GetSetting("MainWindowSize")
+					Dim oWindowLocation As Object = cls_Settings.GetSetting("MainWindowLocation")
+
+					If Not TC.IsNullNothingOrEmpty(oWindowSize) Then
+						Me.Size = New Drawing.Size(oWindowSize.Split(",")(0), oWindowSize.Split(",")(1))
+					End If
+					If Not TC.IsNullNothingOrEmpty(oWindowLocation) Then
+						Me.Location = New Drawing.Point(oWindowLocation.Split(",")(0), oWindowLocation.Split(",")(1))
+					End If
+				Else
+					Me.WindowState = FormWindowState.Maximized
+				End If
+			End If
+		Catch ex As Exception
+
+		End Try
+
+		'UpdateDB
+		Me.DBSync()
+
 		If cls_Globals.MultiUserMode Then
 			Using frm As New frm_Login
 				If frm.ShowDialog(Me) = DialogResult.Cancel Then
-					Me.Close()
+					'Me.Close()
+					Me.BeginInvoke(New MethodInvoker(AddressOf Me.Close))
+					Return
 				Else
 					Me.Text = "Metropolis Launcher - " & frm.BS_Users.Current("Username") & IIf(cls_Globals.Restricted, " (Restricted)", "")
+
+					Me.doc_Emulation.Caption = "Games & Emulation"
+
+					If cls_Globals.id_Cheevo_Challenges > 0L Then
+						Me.doc_Emulation.Caption = "Games & Emulation - Challenge: " & TC.NZ(DataAccess.FireProcedureReturnScalar(cls_Globals.Conn, 0, "SELECT Name FROM tbl_Cheevo_Challenges WHERE id_Cheevo_Challenges = " & TC.getSQLFormat(cls_Globals.id_Cheevo_Challenges)), "<no name>")
+					End If
 
 					'Apply Settings for the logged in user
 					cls_Settings.Apply_Settings()
@@ -438,8 +480,10 @@ Public Class frm_Main
 		Me.Show()
 	End Sub
 
-	Private Sub frm_Main_Shown(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Shown
-		If Me.IsDisposed Then Return
+	Private Sub DBSync()
+		If Me.isDBSynced Then
+			Return
+		End If
 
 		'Run DB Sync
 		Dim blacklist As MKNetLib.cls_MKSQLiteDBSync.cls_MKContentSync_BlacklistItem() = {New MKNetLib.cls_MKSQLiteDBSync.cls_MKContentSync_BlacklistItem("created", "*"),
@@ -454,7 +498,8 @@ Public Class frm_Main
 		Catch ex As Exception
 			MKDXHelper.MessageBox("Error while synchronizing databases:" & ControlChars.CrLf & dbsync._SyncLog, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 			_Immediate_Close = True
-			Me.Close()
+			'Me.Close()
+			Me.BeginInvoke(New MethodInvoker(AddressOf Me.Close))
 			Return
 		End Try
 
@@ -575,6 +620,12 @@ Public Class frm_Main
 		'Migrate new DOSBox/ScummVM Profiles from Rombase
 		DS_ML.Migrate_Rombase_DOSBox_Configs(cls_Globals.Conn)
 		DS_ML.Migrate_Rombase_ScummVM_Configs(cls_Globals.Conn)
+
+		Me.isDBSynced = True
+	End Sub
+
+	Private Sub frm_Main_Shown(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Shown
+		If Me.IsDisposed Then Return
 
 #If PreRelease Then
 		MKDXHelper.MessageBox("Hi, you are using this PreRelease of Metropolis Launcher, because you agreed in helping the project or have otherwise been deemed worthy." & ControlChars.CrLf & ControlChars.CrLf & "This is build " & Alphaleonis.Win32.Filesystem.File.GetLastWriteTime(System.Reflection.Assembly.GetEntryAssembly().Location).ToString("yyyyMMdd-HHmmss") & ControlChars.CrLf & ControlChars.CrLf & "PLEASE DO NOT REDISTRIBUTE - The final version will be released as freeware when it's done.", "Metropolis Launcher PreRelease", MessageBoxButtons.OK, MessageBoxIcon.Information)

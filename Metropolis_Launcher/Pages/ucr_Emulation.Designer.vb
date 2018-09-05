@@ -20,97 +20,112 @@ Partial Class ucr_Emulation
 	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
 		Me.components = New System.ComponentModel.Container()
+		Dim SuperToolTip2 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem2 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim SuperToolTip1 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem1 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem1 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip2 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem2 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip3 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem3 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem2 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SerializableAppearanceObject1 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject2 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject3 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject4 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SuperToolTip3 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem3 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem3 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip4 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem4 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip5 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem5 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem3 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip6 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem6 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem4 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SerializableAppearanceObject5 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject6 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject7 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject8 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SuperToolTip5 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem5 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim SerializableAppearanceObject9 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject10 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject11 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject12 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SuperToolTip6 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem6 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim SuperToolTip7 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem7 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem5 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip8 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem8 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem6 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SerializableAppearanceObject9 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject10 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject11 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject12 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SuperToolTip9 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem9 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim SerializableAppearanceObject13 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject14 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject15 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject16 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SuperToolTip9 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem9 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim SuperToolTip10 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem10 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem7 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip11 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem11 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem7 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip12 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem12 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem8 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SerializableAppearanceObject17 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject18 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject19 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject20 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SuperToolTip12 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem12 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip13 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem13 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip14 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem14 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem9 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip15 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem15 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem10 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SerializableAppearanceObject21 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject22 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject23 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject24 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SuperToolTip13 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem13 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip16 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem16 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim SerializableAppearanceObject25 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject26 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject27 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject28 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SuperToolTip14 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem14 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim SuperToolTip15 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem15 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem9 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip16 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem16 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem10 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip17 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem17 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim SerializableAppearanceObject29 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject30 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject31 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject32 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SuperToolTip17 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem17 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim SuperToolTip18 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem18 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem11 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip19 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem19 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem11 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip20 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem20 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem12 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SerializableAppearanceObject33 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject34 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject35 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
 		Dim SerializableAppearanceObject36 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SuperToolTip20 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem20 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim SuperToolTip21 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem21 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip22 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem22 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem13 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip23 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem23 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem14 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SerializableAppearanceObject37 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject38 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject39 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject40 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SuperToolTip24 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem24 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip25 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem25 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem15 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucr_Emulation))
 		Dim ScaleIndicatorState1 As DevExpress.XtraGauges.Core.Model.ScaleIndicatorState = New DevExpress.XtraGauges.Core.Model.ScaleIndicatorState()
 		Dim ScaleIndicatorState2 As DevExpress.XtraGauges.Core.Model.ScaleIndicatorState = New DevExpress.XtraGauges.Core.Model.ScaleIndicatorState()
 		Dim ScaleIndicatorState3 As DevExpress.XtraGauges.Core.Model.ScaleIndicatorState = New DevExpress.XtraGauges.Core.Model.ScaleIndicatorState()
@@ -162,13 +177,85 @@ Partial Class ucr_Emulation
 		Dim ScaleIndicatorState49 As DevExpress.XtraGauges.Core.Model.ScaleIndicatorState = New DevExpress.XtraGauges.Core.Model.ScaleIndicatorState()
 		Dim ScaleIndicatorState50 As DevExpress.XtraGauges.Core.Model.ScaleIndicatorState = New DevExpress.XtraGauges.Core.Model.ScaleIndicatorState()
 		Me.pnl_Emu_Games = New MKNetDXLib.ctl_MKDXPanel()
+		Me.splt_left = New MKNetDXLib.ctl_MKDXSplitPanel()
+		Me.tlp_Combos = New System.Windows.Forms.TableLayoutPanel()
+		Me.Ctl_MKDXPanel1 = New MKNetDXLib.ctl_MKDXPanel()
+		Me.chb_Cheevo_Challenges_Show_Completed = New MKNetDXLib.ctl_MKDXCheckEdit()
+		Me.barmng = New MKNetDXLib.ctl_MKDXBarManager()
+		Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
+		Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
+		Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
+		Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
+		Me.bbi_Contribute_TechInfo = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Open_Moby_Page = New DevExpress.XtraBars.BarButtonItem()
+		Me.bsi_Launch = New DevExpress.XtraBars.BarSubItem()
+		Me.bbi_Edit_Game = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_DOSBox_Clear_Exe_Config = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Rom_Manager = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Rombase_Manager = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Edit_Multiple_Games = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Export = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Emu_Settings = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_DOSBox_Templates = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Analyze_Missing_Extras = New DevExpress.XtraBars.BarButtonItem()
+		Me.bsi_MultiUser = New DevExpress.XtraBars.BarSubItem()
+		Me.bbi_MultiUser_Add_Games = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_MultiUser_Remove_Games = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_MultiUser_Show_Games = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Staff_Info = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Staff_Filter = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Similarity_Calculation = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Show_Similarity_Feature_Columns = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Open_Similarity_Details = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Launch_Random = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_USER_Extras_Manager = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Extras_Viewer_Settings = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_GameGroup_Info = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_GameGroup_Filter = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Statistics_Remove = New DevExpress.XtraBars.BarButtonItem()
+		Me.bsi_Export = New DevExpress.XtraBars.BarSubItem()
+		Me.bbi_Export_CSV = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Export_XLSX = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Export_TDL = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_ScummVM_Templates = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_MOBY_Extras_Manager = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Create_TDL_Menu = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Cheevo_add_to_Challenge = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Cheevo_Manage_Challenges = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Add_to_Challenge = New DevExpress.XtraBars.BarButtonItem()
+		Me.lbl_Challenges = New MKNetDXLib.ctl_MKDXLabel()
+		Me.cmb_Challenges = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.BS_Challenges = New System.Windows.Forms.BindingSource(Me.components)
+		Me.DS_ML = New Metropolis_Launcher.DS_ML()
+		Me.pnl_31 = New MKNetDXLib.ctl_MKDXPanel()
+		Me.lbl_Search = New MKNetDXLib.ctl_MKDXLabel()
+		Me.txb_Search = New MKNetDXLib.ctl_MKDXButtonEdit()
+		Me.pnl_32 = New MKNetDXLib.ctl_MKDXPanel()
+		Me.lbl_Similarity = New MKNetDXLib.ctl_MKDXLabel()
+		Me.cmb_Similarity_Calculation_Results = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.BS_Similarity_Calculation_Results = New System.Windows.Forms.BindingSource(Me.components)
+		Me.pnl_22 = New MKNetDXLib.ctl_MKDXPanel()
+		Me.lbl_Group = New MKNetDXLib.ctl_MKDXLabel()
+		Me.cmb_Groups = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.BS_Group = New System.Windows.Forms.BindingSource(Me.components)
+		Me.pnl_12 = New MKNetDXLib.ctl_MKDXPanel()
+		Me.lbl_Filterset = New MKNetDXLib.ctl_MKDXLabel()
+		Me.cmb_Filterset = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.BS_FilterSets = New System.Windows.Forms.BindingSource(Me.components)
+		Me.pnl_21 = New MKNetDXLib.ctl_MKDXPanel()
+		Me.lbl_Staff = New MKNetDXLib.ctl_MKDXLabel()
+		Me.cmb_Staff = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.BS_Developer = New System.Windows.Forms.BindingSource(Me.components)
+		Me.pnl_11 = New MKNetDXLib.ctl_MKDXPanel()
+		Me.lbl_Platform = New MKNetDXLib.ctl_MKDXLabel()
+		Me.cmb_Platform = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.BS_Platforms = New System.Windows.Forms.BindingSource(Me.components)
 		Me.splt_FilterUI_grdMain = New MKNetDXLib.ctl_MKDXSplitPanel()
 		Me.accordion_FilterUI = New DevExpress.XtraBars.Navigation.AccordionControl()
 		Me.AccordionControlElement2 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
 		Me.lbl_QuickFilter = New MKNetDXLib.ctl_MKDXLabel()
 		Me.grd_Emu_Games = New MKNetDXLib.ctl_MKDXGrid()
 		Me.BS_Emu_Games = New System.Windows.Forms.BindingSource(Me.components)
-		Me.DS_ML = New Metropolis_Launcher.DS_ML()
 		Me.gv_Emu_Games = New DevExpress.XtraGrid.Views.Grid.GridView()
 		Me.colSimilarity = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.colPlatform_Short = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -277,71 +364,41 @@ Partial Class ucr_Emulation
 		Me.colid_Moby_Releases = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.colid_DOSBox_Configs = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.colid_DOSBox_Configs_Template = New DevExpress.XtraGrid.Columns.GridColumn()
-		Me.barmng = New MKNetDXLib.ctl_MKDXBarManager()
-		Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
-		Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
-		Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
-		Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
-		Me.bbi_Contribute_TechInfo = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Open_Moby_Page = New DevExpress.XtraBars.BarButtonItem()
-		Me.bsi_Launch = New DevExpress.XtraBars.BarSubItem()
-		Me.bbi_Edit_Game = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_DOSBox_Clear_Exe_Config = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Rom_Manager = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Rombase_Manager = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Edit_Multiple_Games = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Export = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Emu_Settings = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_DOSBox_Templates = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Analyze_Missing_Extras = New DevExpress.XtraBars.BarButtonItem()
-		Me.bsi_MultiUser = New DevExpress.XtraBars.BarSubItem()
-		Me.bbi_MultiUser_Add_Games = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_MultiUser_Remove_Games = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_MultiUser_Show_Games = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Staff_Info = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Staff_Filter = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Similarity_Calculation = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Show_Similarity_Feature_Columns = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Open_Similarity_Details = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Launch_Random = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_USER_Extras_Manager = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Extras_Viewer_Settings = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_GameGroup_Info = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_GameGroup_Filter = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Statistics_Remove = New DevExpress.XtraBars.BarButtonItem()
-		Me.bsi_Export = New DevExpress.XtraBars.BarSubItem()
-		Me.bbi_Export_CSV = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Export_XLSX = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_ScummVM_Templates = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_MOBY_Extras_Manager = New DevExpress.XtraBars.BarButtonItem()
+		Me.colCRC32 = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.colMD5 = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.colSHA1 = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.ttctl_TecSpec = New DevExpress.Utils.DefaultToolTipController(Me.components)
-		Me.tlp_Combos = New System.Windows.Forms.TableLayoutPanel()
-		Me.pnl_31 = New MKNetDXLib.ctl_MKDXPanel()
-		Me.lbl_Search = New MKNetDXLib.ctl_MKDXLabel()
-		Me.txb_Search = New MKNetDXLib.ctl_MKDXButtonEdit()
-		Me.pnl_32 = New MKNetDXLib.ctl_MKDXPanel()
-		Me.lbl_Similarity = New MKNetDXLib.ctl_MKDXLabel()
-		Me.cmb_Similarity_Calculation_Results = New MKNetDXLib.ctl_MKDXLookupEdit()
-		Me.BS_Similarity_Calculation_Results = New System.Windows.Forms.BindingSource(Me.components)
-		Me.pnl_22 = New MKNetDXLib.ctl_MKDXPanel()
-		Me.lbl_Group = New MKNetDXLib.ctl_MKDXLabel()
-		Me.cmb_Groups = New MKNetDXLib.ctl_MKDXLookupEdit()
-		Me.BS_Group = New System.Windows.Forms.BindingSource(Me.components)
-		Me.pnl_12 = New MKNetDXLib.ctl_MKDXPanel()
-		Me.lbl_Filterset = New MKNetDXLib.ctl_MKDXLabel()
-		Me.cmb_Filterset = New MKNetDXLib.ctl_MKDXLookupEdit()
-		Me.BS_FilterSets = New System.Windows.Forms.BindingSource(Me.components)
-		Me.pnl_21 = New MKNetDXLib.ctl_MKDXPanel()
-		Me.lbl_Staff = New MKNetDXLib.ctl_MKDXLabel()
-		Me.cmb_Staff = New MKNetDXLib.ctl_MKDXLookupEdit()
-		Me.BS_Developer = New System.Windows.Forms.BindingSource(Me.components)
-		Me.pnl_11 = New MKNetDXLib.ctl_MKDXPanel()
-		Me.lbl_Platform = New MKNetDXLib.ctl_MKDXLabel()
-		Me.cmb_Platform = New MKNetDXLib.ctl_MKDXLookupEdit()
-		Me.BS_Platforms = New System.Windows.Forms.BindingSource(Me.components)
 		Me.spnl_Summary = New MKNetDXLib.ctl_MKDXScrollablePanel()
+		Me.cxm_Cheevos = New System.Windows.Forms.ContextMenuStrip(Me.components)
+		Me.mni_Cheevos_Add_Challenge = New System.Windows.Forms.ToolStripMenuItem()
+		Me.mni_Cheevos_Manage_Challenges = New System.Windows.Forms.ToolStripMenuItem()
+		Me.pnl_Achievements = New MKNetDXLib.ctl_MKDXPanel()
+		Me.gb_Cheevos = New MKNetDXLib.ctl_MKDXGroupBox()
+		Me.grd_RetroAchievements = New MKNetDXLib.ctl_MKDXGrid()
+		Me.BS_RetroAchievements = New System.Windows.Forms.BindingSource(Me.components)
+		Me.DS_RetroAchievements = New System.Data.DataSet()
+		Me.DataTable1 = New System.Data.DataTable()
+		Me.DataColumn1 = New System.Data.DataColumn()
+		Me.DataColumn2 = New System.Data.DataColumn()
+		Me.DataColumn3 = New System.Data.DataColumn()
+		Me.DataColumn4 = New System.Data.DataColumn()
+		Me.DataColumn5 = New System.Data.DataColumn()
+		Me.DataColumn6 = New System.Data.DataColumn()
+		Me.DataColumn7 = New System.Data.DataColumn()
+		Me.DataColumn8 = New System.Data.DataColumn()
+		Me.agv_RetroAchievements = New DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView()
+		Me.GridBand1 = New DevExpress.XtraGrid.Views.BandedGrid.GridBand()
+		Me.colTitle = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
+		Me.colDescription1 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
+		Me.colid_RetroAchievements_Unlock = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
+		Me.rpi_RetroAchievements_Unlock = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+		Me.BTA_RetroAchievement_Unlocks = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
+		Me.lbl_RetroAchievements_Message = New MKNetDXLib.ctl_MKDXLabel()
+		Me.prg_RetroAchievements_Download = New MKNetDXLib.ctl_MKDXProgressBarControl()
+		Me.cxm_Cheevo_Challenges_Cheevos = New System.Windows.Forms.ContextMenuStrip(Me.components)
+		Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
 		Me.filteringUIContext = New DevExpress.Utils.Filtering.FilteringUIContext(Me.components)
-		Me.tcl_App = New MKNetDXLib.ctl_MKDXTabControl()
+		Me.tcl_Details = New MKNetDXLib.ctl_MKDXTabControl()
 		Me.tpg_Summary = New DevExpress.XtraTab.XtraTabPage()
 		Me.tpg_TechnicalSpecs = New DevExpress.XtraTab.XtraTabPage()
 		Me.grd_TechnicalSpecs = New MKNetDXLib.ctl_MKDXGrid()
@@ -448,8 +505,20 @@ Partial Class ucr_Emulation
 		Me.colAdditional_Items_id_Moby_Have_Want_List_Item_Detail_Conditions = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.colAdditional_Items_Comments = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.tpg_Want = New DevExpress.XtraTab.XtraTabPage()
+		Me.tpg_RetroAchievements = New DevExpress.XtraTab.XtraTabPage()
+		Me.splt_Achievements = New MKNetDXLib.ctl_MKDXSplitPanel()
+		Me.gb_Challenge_Cheevos = New MKNetDXLib.ctl_MKDXGroupBox()
+		Me.grd_Challenge_Cheevos = New MKNetDXLib.ctl_MKDXGrid()
+		Me.BS_Open_Challenges_Cheevos = New System.Windows.Forms.BindingSource(Me.components)
+		Me.agv_Challenge_Cheevos = New DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView()
+		Me.GridBand2 = New DevExpress.XtraGrid.Views.BandedGrid.GridBand()
+		Me.BandedGridColumn1 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
+		Me.BandedGridColumn2 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
+		Me.RepositoryItemLookUpEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+		Me.lbl_Challenge_Cheevos_Unlocked = New MKNetDXLib.ctl_MKDXLabel()
 		Me.spltpnl_Main = New MKNetDXLib.ctl_MKDXSplitPanel()
 		Me.spltpnl_Details = New MKNetDXLib.ctl_MKDXSplitPanel()
+		Me.lbl_MobyDownload_Error = New MKNetDXLib.ctl_MKDXLabel()
 		Me.prg_Extras_Download = New MKNetDXLib.ctl_MKDXProgressBarControl()
 		Me.pic_Game = New MKNetDXLib.ctl_MKDXPictureEdit()
 		Me.lbl_Displayname = New MKNetDXLib.ctl_MKDXLabel()
@@ -462,22 +531,22 @@ Partial Class ucr_Emulation
 		Me.popmnu_Extras = New MKNetDXLib.cmp_MKDXPopupMenu()
 		Me.popmnu_Statistics = New MKNetDXLib.cmp_MKDXPopupMenu()
 		Me.BS_Want = New System.Windows.Forms.BindingSource(Me.components)
+		Me.DataTable2 = New System.Data.DataTable()
+		Me.DataColumn9 = New System.Data.DataColumn()
+		Me.DataColumn10 = New System.Data.DataColumn()
+		Me.popmnu_Cheevos = New MKNetDXLib.cmp_MKDXPopupMenu()
 		CType(Me.pnl_Emu_Games, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.pnl_Emu_Games.SuspendLayout()
-		CType(Me.splt_FilterUI_grdMain, System.ComponentModel.ISupportInitialize).BeginInit()
-		Me.splt_FilterUI_grdMain.SuspendLayout()
-		CType(Me.accordion_FilterUI, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.grd_Emu_Games, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.BS_Emu_Games, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.DS_ML, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.gv_Emu_Games, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.rpi_Want, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.rpi_Have, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.rpi_Trade, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.rpi_Fav, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.RepositoryItemCheckEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.barmng, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.splt_left, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.splt_left.SuspendLayout()
 		Me.tlp_Combos.SuspendLayout()
+		CType(Me.Ctl_MKDXPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.Ctl_MKDXPanel1.SuspendLayout()
+		CType(Me.chb_Cheevo_Challenges_Show_Completed.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.barmng, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.cmb_Challenges.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BS_Challenges, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.DS_ML, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.pnl_31, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.pnl_31.SuspendLayout()
 		CType(Me.txb_Search.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -501,9 +570,34 @@ Partial Class ucr_Emulation
 		Me.pnl_11.SuspendLayout()
 		CType(Me.cmb_Platform.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BS_Platforms, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.splt_FilterUI_grdMain, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.splt_FilterUI_grdMain.SuspendLayout()
+		CType(Me.accordion_FilterUI, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.grd_Emu_Games, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BS_Emu_Games, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.gv_Emu_Games, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.rpi_Want, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.rpi_Have, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.rpi_Trade, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.rpi_Fav, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.RepositoryItemCheckEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.cxm_Cheevos.SuspendLayout()
+		CType(Me.pnl_Achievements, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.pnl_Achievements.SuspendLayout()
+		CType(Me.gb_Cheevos, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.gb_Cheevos.SuspendLayout()
+		CType(Me.grd_RetroAchievements, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BS_RetroAchievements, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.DS_RetroAchievements, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.DataTable1, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.agv_RetroAchievements, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.rpi_RetroAchievements_Unlock, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BTA_RetroAchievement_Unlocks, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.prg_RetroAchievements_Download.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.cxm_Cheevo_Challenges_Cheevos.SuspendLayout()
 		CType(Me.filteringUIContext, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.tcl_App, System.ComponentModel.ISupportInitialize).BeginInit()
-		Me.tcl_App.SuspendLayout()
+		CType(Me.tcl_Details, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.tcl_Details.SuspendLayout()
 		Me.tpg_Summary.SuspendLayout()
 		Me.tpg_TechnicalSpecs.SuspendLayout()
 		CType(Me.grd_TechnicalSpecs, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -561,6 +655,15 @@ Partial Class ucr_Emulation
 		CType(Me.BS_Have, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.crdv_Have, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.rpi_Have_Comments, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.tpg_RetroAchievements.SuspendLayout()
+		CType(Me.splt_Achievements, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.splt_Achievements.SuspendLayout()
+		CType(Me.gb_Challenge_Cheevos, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.gb_Challenge_Cheevos.SuspendLayout()
+		CType(Me.grd_Challenge_Cheevos, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BS_Open_Challenges_Cheevos, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.agv_Challenge_Cheevos, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.spltpnl_Main, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.spltpnl_Main.SuspendLayout()
 		CType(Me.spltpnl_Details, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -573,19 +676,859 @@ Partial Class ucr_Emulation
 		CType(Me.popmnu_Extras, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.popmnu_Statistics, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BS_Want, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.DataTable2, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.popmnu_Cheevos, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
 		'
 		'pnl_Emu_Games
 		'
 		Me.ttctl_TecSpec.SetAllowHtmlText(Me.pnl_Emu_Games, DevExpress.Utils.DefaultBoolean.[Default])
 		Me.pnl_Emu_Games.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-		Me.pnl_Emu_Games.Controls.Add(Me.splt_FilterUI_grdMain)
-		Me.pnl_Emu_Games.Controls.Add(Me.tlp_Combos)
+		Me.pnl_Emu_Games.Controls.Add(Me.splt_left)
 		Me.pnl_Emu_Games.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.pnl_Emu_Games.Location = New System.Drawing.Point(0, 0)
 		Me.pnl_Emu_Games.Name = "pnl_Emu_Games"
 		Me.pnl_Emu_Games.Size = New System.Drawing.Size(488, 600)
 		Me.pnl_Emu_Games.TabIndex = 0
+		'
+		'splt_left
+		'
+		Me.splt_left.CollapsePanel = DevExpress.XtraEditors.SplitCollapsePanel.Panel1
+		Me.splt_left.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.splt_left.Horizontal = False
+		Me.splt_left.IsSplitterFixed = True
+		Me.splt_left.Location = New System.Drawing.Point(0, 0)
+		Me.splt_left.Name = "splt_left"
+		Me.splt_left.Panel1.Controls.Add(Me.tlp_Combos)
+		Me.splt_left.Panel1.MinSize = 88
+		Me.splt_left.Panel1.Text = "Panel1"
+		Me.splt_left.Panel2.Controls.Add(Me.splt_FilterUI_grdMain)
+		Me.splt_left.Panel2.Text = "Panel2"
+		Me.splt_left.Size = New System.Drawing.Size(488, 600)
+		Me.splt_left.SplitterPosition = 86
+		Me.splt_left.TabIndex = 8
+		Me.splt_left.ToolTipController = Me.ttctl_TecSpec.DefaultController
+		'
+		'tlp_Combos
+		'
+		Me.ttctl_TecSpec.SetAllowHtmlText(Me.tlp_Combos, DevExpress.Utils.DefaultBoolean.[Default])
+		Me.tlp_Combos.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.tlp_Combos.ColumnCount = 2
+		Me.tlp_Combos.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+		Me.tlp_Combos.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+		Me.tlp_Combos.Controls.Add(Me.Ctl_MKDXPanel1, 0, 3)
+		Me.tlp_Combos.Controls.Add(Me.pnl_31, 0, 2)
+		Me.tlp_Combos.Controls.Add(Me.pnl_32, 0, 2)
+		Me.tlp_Combos.Controls.Add(Me.pnl_22, 1, 1)
+		Me.tlp_Combos.Controls.Add(Me.pnl_12, 1, 0)
+		Me.tlp_Combos.Controls.Add(Me.pnl_21, 0, 1)
+		Me.tlp_Combos.Controls.Add(Me.pnl_11, 0, 0)
+		Me.tlp_Combos.Location = New System.Drawing.Point(0, 0)
+		Me.tlp_Combos.Margin = New System.Windows.Forms.Padding(0)
+		Me.tlp_Combos.Name = "tlp_Combos"
+		Me.tlp_Combos.RowCount = 4
+		Me.tlp_Combos.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22.0!))
+		Me.tlp_Combos.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22.0!))
+		Me.tlp_Combos.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22.0!))
+		Me.tlp_Combos.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+		Me.tlp_Combos.Size = New System.Drawing.Size(488, 92)
+		Me.tlp_Combos.TabIndex = 6
+		'
+		'Ctl_MKDXPanel1
+		'
+		Me.ttctl_TecSpec.SetAllowHtmlText(Me.Ctl_MKDXPanel1, DevExpress.Utils.DefaultBoolean.[Default])
+		Me.Ctl_MKDXPanel1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.Ctl_MKDXPanel1.Controls.Add(Me.chb_Cheevo_Challenges_Show_Completed)
+		Me.Ctl_MKDXPanel1.Controls.Add(Me.lbl_Challenges)
+		Me.Ctl_MKDXPanel1.Controls.Add(Me.cmb_Challenges)
+		Me.Ctl_MKDXPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.Ctl_MKDXPanel1.Location = New System.Drawing.Point(0, 66)
+		Me.Ctl_MKDXPanel1.Margin = New System.Windows.Forms.Padding(0)
+		Me.Ctl_MKDXPanel1.Name = "Ctl_MKDXPanel1"
+		Me.Ctl_MKDXPanel1.Size = New System.Drawing.Size(244, 26)
+		Me.Ctl_MKDXPanel1.TabIndex = 10
+		'
+		'chb_Cheevo_Challenges_Show_Completed
+		'
+		Me.chb_Cheevo_Challenges_Show_Completed.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.chb_Cheevo_Challenges_Show_Completed.EditValue = True
+		Me.chb_Cheevo_Challenges_Show_Completed.Location = New System.Drawing.Point(146, 1)
+		Me.chb_Cheevo_Challenges_Show_Completed.MenuManager = Me.barmng
+		Me.chb_Cheevo_Challenges_Show_Completed.MKBoundLabel = Nothing
+		Me.chb_Cheevo_Challenges_Show_Completed.MKEditValue_Compare = Nothing
+		Me.chb_Cheevo_Challenges_Show_Completed.Name = "chb_Cheevo_Challenges_Show_Completed"
+		Me.chb_Cheevo_Challenges_Show_Completed.Properties.Caption = "show completed"
+		Me.chb_Cheevo_Challenges_Show_Completed.Size = New System.Drawing.Size(96, 19)
+		ToolTipTitleItem2.Text = "Also show completed games of the current or previous tiers"
+		SuperToolTip2.Items.Add(ToolTipTitleItem2)
+		Me.chb_Cheevo_Challenges_Show_Completed.SuperTip = SuperToolTip2
+		Me.chb_Cheevo_Challenges_Show_Completed.TabIndex = 2
+		'
+		'barmng
+		'
+		Me.barmng.AllowCustomization = False
+		Me.barmng.AllowMoveBarOnToolbar = False
+		Me.barmng.AllowQuickCustomization = False
+		Me.barmng.DockControls.Add(Me.barDockControlTop)
+		Me.barmng.DockControls.Add(Me.barDockControlBottom)
+		Me.barmng.DockControls.Add(Me.barDockControlLeft)
+		Me.barmng.DockControls.Add(Me.barDockControlRight)
+		Me.barmng.Form = Me
+		Me.barmng.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.bbi_Contribute_TechInfo, Me.bbi_Open_Moby_Page, Me.bsi_Launch, Me.bbi_Edit_Game, Me.bbi_DOSBox_Clear_Exe_Config, Me.bbi_Rom_Manager, Me.bbi_Rombase_Manager, Me.bbi_Edit_Multiple_Games, Me.bbi_Export, Me.bbi_Emu_Settings, Me.bbi_DOSBox_Templates, Me.bbi_Analyze_Missing_Extras, Me.bsi_MultiUser, Me.bbi_MultiUser_Add_Games, Me.bbi_MultiUser_Show_Games, Me.bbi_MultiUser_Remove_Games, Me.bbi_Staff_Info, Me.bbi_Staff_Filter, Me.bbi_Similarity_Calculation, Me.bbi_Show_Similarity_Feature_Columns, Me.bbi_Open_Similarity_Details, Me.bbi_Launch_Random, Me.bbi_USER_Extras_Manager, Me.bbi_Extras_Viewer_Settings, Me.bbi_GameGroup_Info, Me.bbi_GameGroup_Filter, Me.bbi_Statistics_Remove, Me.bsi_Export, Me.bbi_Export_CSV, Me.bbi_Export_XLSX, Me.bbi_ScummVM_Templates, Me.bbi_MOBY_Extras_Manager, Me.bbi_Export_TDL, Me.bbi_Create_TDL_Menu, Me.bbi_Cheevo_add_to_Challenge, Me.bbi_Cheevo_Manage_Challenges, Me.bbi_Add_to_Challenge})
+		Me.barmng.MaxItemId = 36
+		'
+		'barDockControlTop
+		'
+		Me.barDockControlTop.CausesValidation = False
+		Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
+		Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
+		Me.barDockControlTop.Size = New System.Drawing.Size(800, 0)
+		'
+		'barDockControlBottom
+		'
+		Me.barDockControlBottom.CausesValidation = False
+		Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
+		Me.barDockControlBottom.Location = New System.Drawing.Point(0, 600)
+		Me.barDockControlBottom.Size = New System.Drawing.Size(800, 0)
+		'
+		'barDockControlLeft
+		'
+		Me.barDockControlLeft.CausesValidation = False
+		Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
+		Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
+		Me.barDockControlLeft.Size = New System.Drawing.Size(0, 600)
+		'
+		'barDockControlRight
+		'
+		Me.barDockControlRight.CausesValidation = False
+		Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
+		Me.barDockControlRight.Location = New System.Drawing.Point(800, 0)
+		Me.barDockControlRight.Size = New System.Drawing.Size(0, 600)
+		'
+		'bbi_Contribute_TechInfo
+		'
+		Me.bbi_Contribute_TechInfo.AllowRightClickInMenu = False
+		Me.bbi_Contribute_TechInfo.Caption = "&Contribute Tech-Info"
+		Me.bbi_Contribute_TechInfo.Id = 0
+		Me.bbi_Contribute_TechInfo.ImageUri.Uri = "NavigationBar"
+		Me.bbi_Contribute_TechInfo.Name = "bbi_Contribute_TechInfo"
+		'
+		'bbi_Open_Moby_Page
+		'
+		Me.bbi_Open_Moby_Page.AllowRightClickInMenu = False
+		Me.bbi_Open_Moby_Page.Caption = "&Open Moby Page"
+		Me.bbi_Open_Moby_Page.Id = 1
+		Me.bbi_Open_Moby_Page.ImageUri.Uri = "NavigationBar"
+		Me.bbi_Open_Moby_Page.Name = "bbi_Open_Moby_Page"
+		'
+		'bsi_Launch
+		'
+		Me.bsi_Launch.AllowRightClickInMenu = False
+		Me.bsi_Launch.Caption = "&Launch"
+		Me.bsi_Launch.Id = 2
+		Me.bsi_Launch.ImageUri.Uri = "DoubleNext"
+		Me.bsi_Launch.Name = "bsi_Launch"
+		'
+		'bbi_Edit_Game
+		'
+		Me.bbi_Edit_Game.AllowRightClickInMenu = False
+		Me.bbi_Edit_Game.Caption = "&Edit selected Game/s"
+		Me.bbi_Edit_Game.Id = 3
+		Me.bbi_Edit_Game.ImageUri.Uri = "Edit"
+		Me.bbi_Edit_Game.Name = "bbi_Edit_Game"
+		'
+		'bbi_DOSBox_Clear_Exe_Config
+		'
+		Me.bbi_DOSBox_Clear_Exe_Config.AllowRightClickInMenu = False
+		Me.bbi_DOSBox_Clear_Exe_Config.Caption = "&Clear Executables Config"
+		Me.bbi_DOSBox_Clear_Exe_Config.Id = 11
+		Me.bbi_DOSBox_Clear_Exe_Config.ImageUri.Uri = "Clear"
+		Me.bbi_DOSBox_Clear_Exe_Config.Name = "bbi_DOSBox_Clear_Exe_Config"
+		'
+		'bbi_Rom_Manager
+		'
+		Me.bbi_Rom_Manager.AllowRightClickInMenu = False
+		Me.bbi_Rom_Manager.Caption = "Open &Rom Manager"
+		Me.bbi_Rom_Manager.Id = 5
+		Me.bbi_Rom_Manager.ImageUri.Uri = "AddNewDataSource"
+		Me.bbi_Rom_Manager.Name = "bbi_Rom_Manager"
+		'
+		'bbi_Rombase_Manager
+		'
+		Me.bbi_Rombase_Manager.AllowRightClickInMenu = False
+		Me.bbi_Rombase_Manager.Caption = "Open Rom&Base Manager"
+		Me.bbi_Rombase_Manager.Id = 6
+		Me.bbi_Rombase_Manager.ImageUri.Uri = "EditDataSource"
+		Me.bbi_Rombase_Manager.Name = "bbi_Rombase_Manager"
+		'
+		'bbi_Edit_Multiple_Games
+		'
+		Me.bbi_Edit_Multiple_Games.AllowRightClickInMenu = False
+		Me.bbi_Edit_Multiple_Games.Caption = "E&dit Multiple Games"
+		Me.bbi_Edit_Multiple_Games.Id = 7
+		Me.bbi_Edit_Multiple_Games.ImageUri.Uri = "CustomizeGrid"
+		Me.bbi_Edit_Multiple_Games.Name = "bbi_Edit_Multiple_Games"
+		'
+		'bbi_Export
+		'
+		Me.bbi_Export.AllowRightClickInMenu = False
+		Me.bbi_Export.Caption = "Export selected &Games..."
+		Me.bbi_Export.Id = 8
+		Me.bbi_Export.ImageUri.Uri = "ExportToIMG"
+		Me.bbi_Export.Name = "bbi_Export"
+		'
+		'bbi_Emu_Settings
+		'
+		Me.bbi_Emu_Settings.AllowRightClickInMenu = False
+		Me.bbi_Emu_Settings.Caption = "Open Emulator &Settings"
+		Me.bbi_Emu_Settings.Id = 9
+		Me.bbi_Emu_Settings.ImageUri.Uri = "Customization"
+		Me.bbi_Emu_Settings.Name = "bbi_Emu_Settings"
+		'
+		'bbi_DOSBox_Templates
+		'
+		Me.bbi_DOSBox_Templates.AllowRightClickInMenu = False
+		Me.bbi_DOSBox_Templates.Caption = "Open DOSBox &Templates"
+		Me.bbi_DOSBox_Templates.Id = 10
+		Me.bbi_DOSBox_Templates.ImageUri.Uri = "Replace"
+		Me.bbi_DOSBox_Templates.Name = "bbi_DOSBox_Templates"
+		'
+		'bbi_Analyze_Missing_Extras
+		'
+		Me.bbi_Analyze_Missing_Extras.Caption = "Search for missing Extras"
+		Me.bbi_Analyze_Missing_Extras.Id = 10
+		Me.bbi_Analyze_Missing_Extras.ImageUri.Uri = "Find"
+		Me.bbi_Analyze_Missing_Extras.Name = "bbi_Analyze_Missing_Extras"
+		'
+		'bsi_MultiUser
+		'
+		Me.bsi_MultiUser.Caption = "Multi User"
+		Me.bsi_MultiUser.Id = 11
+		Me.bsi_MultiUser.ImageUri.Uri = "Chart"
+		Me.bsi_MultiUser.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_MultiUser_Add_Games), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_MultiUser_Remove_Games), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_MultiUser_Show_Games)})
+		Me.bsi_MultiUser.Name = "bsi_MultiUser"
+		'
+		'bbi_MultiUser_Add_Games
+		'
+		Me.bbi_MultiUser_Add_Games.Caption = "Add selected games to restricted user"
+		Me.bbi_MultiUser_Add_Games.Id = 12
+		Me.bbi_MultiUser_Add_Games.ImageUri.Uri = "Add"
+		Me.bbi_MultiUser_Add_Games.Name = "bbi_MultiUser_Add_Games"
+		'
+		'bbi_MultiUser_Remove_Games
+		'
+		Me.bbi_MultiUser_Remove_Games.Caption = "Remove selected games from restricted user"
+		Me.bbi_MultiUser_Remove_Games.Id = 14
+		Me.bbi_MultiUser_Remove_Games.ImageUri.Uri = "Delete"
+		Me.bbi_MultiUser_Remove_Games.Name = "bbi_MultiUser_Remove_Games"
+		'
+		'bbi_MultiUser_Show_Games
+		'
+		Me.bbi_MultiUser_Show_Games.Caption = "Show Games of restricted user"
+		Me.bbi_MultiUser_Show_Games.Id = 13
+		Me.bbi_MultiUser_Show_Games.ImageUri.Uri = "Show"
+		Me.bbi_MultiUser_Show_Games.Name = "bbi_MultiUser_Show_Games"
+		'
+		'bbi_Staff_Info
+		'
+		Me.bbi_Staff_Info.Caption = "&Open Staff Info"
+		Me.bbi_Staff_Info.Id = 15
+		Me.bbi_Staff_Info.ImageUri.Uri = "Preview"
+		Me.bbi_Staff_Info.Name = "bbi_Staff_Info"
+		'
+		'bbi_Staff_Filter
+		'
+		Me.bbi_Staff_Filter.Caption = "&Filter by this staff member"
+		Me.bbi_Staff_Filter.Id = 16
+		Me.bbi_Staff_Filter.ImageUri.Uri = "Filter"
+		Me.bbi_Staff_Filter.Name = "bbi_Staff_Filter"
+		'
+		'bbi_Similarity_Calculation
+		'
+		Me.bbi_Similarity_Calculation.Caption = "Find Similar Games"
+		Me.bbi_Similarity_Calculation.Id = 17
+		Me.bbi_Similarity_Calculation.ImageUri.Uri = "Find"
+		Me.bbi_Similarity_Calculation.Name = "bbi_Similarity_Calculation"
+		'
+		'bbi_Show_Similarity_Feature_Columns
+		'
+		Me.bbi_Show_Similarity_Feature_Columns.Caption = "{0} Similarity Feature Columns"
+		Me.bbi_Show_Similarity_Feature_Columns.Id = 18
+		Me.bbi_Show_Similarity_Feature_Columns.ImageUri.Uri = "AlignVerticalLeft"
+		Me.bbi_Show_Similarity_Feature_Columns.Name = "bbi_Show_Similarity_Feature_Columns"
+		'
+		'bbi_Open_Similarity_Details
+		'
+		Me.bbi_Open_Similarity_Details.Caption = "Open Similarity Details"
+		Me.bbi_Open_Similarity_Details.Id = 19
+		Me.bbi_Open_Similarity_Details.ImageUri.Uri = "Preview"
+		Me.bbi_Open_Similarity_Details.Name = "bbi_Open_Similarity_Details"
+		'
+		'bbi_Launch_Random
+		'
+		Me.bbi_Launch_Random.Caption = "Launch Random Title"
+		Me.bbi_Launch_Random.Id = 20
+		Me.bbi_Launch_Random.ImageUri.Uri = "DoubleLast"
+		Me.bbi_Launch_Random.Name = "bbi_Launch_Random"
+		ToolTipTitleItem1.Text = "Launch Random Title"
+		ToolTipItem1.LeftIndent = 6
+		ToolTipItem1.Text = "A title within the current list is randomly selected and launched with the defaul" &
+		"t emulator of that title."
+		SuperToolTip1.Items.Add(ToolTipTitleItem1)
+		SuperToolTip1.Items.Add(ToolTipItem1)
+		Me.bbi_Launch_Random.SuperTip = SuperToolTip1
+		'
+		'bbi_USER_Extras_Manager
+		'
+		Me.bbi_USER_Extras_Manager.Caption = "Open USER Extras &Manager"
+		Me.bbi_USER_Extras_Manager.Id = 21
+		Me.bbi_USER_Extras_Manager.ImageUri.Uri = "Zoom2"
+		Me.bbi_USER_Extras_Manager.Name = "bbi_USER_Extras_Manager"
+		'
+		'bbi_Extras_Viewer_Settings
+		'
+		Me.bbi_Extras_Viewer_Settings.Caption = "Open Viewer Settings"
+		Me.bbi_Extras_Viewer_Settings.Id = 22
+		Me.bbi_Extras_Viewer_Settings.ImageUri.Uri = "Customization"
+		Me.bbi_Extras_Viewer_Settings.Name = "bbi_Extras_Viewer_Settings"
+		'
+		'bbi_GameGroup_Info
+		'
+		Me.bbi_GameGroup_Info.Caption = "Open Group Info"
+		Me.bbi_GameGroup_Info.Id = 23
+		Me.bbi_GameGroup_Info.ImageUri.Uri = "Preview"
+		Me.bbi_GameGroup_Info.Name = "bbi_GameGroup_Info"
+		'
+		'bbi_GameGroup_Filter
+		'
+		Me.bbi_GameGroup_Filter.Caption = "Filter by this group"
+		Me.bbi_GameGroup_Filter.Id = 24
+		Me.bbi_GameGroup_Filter.ImageUri.Uri = "Filter"
+		Me.bbi_GameGroup_Filter.Name = "bbi_GameGroup_Filter"
+		'
+		'bbi_Statistics_Remove
+		'
+		Me.bbi_Statistics_Remove.Caption = "&Remove this statistics entry"
+		Me.bbi_Statistics_Remove.Id = 25
+		Me.bbi_Statistics_Remove.ImageUri.Uri = "Delete"
+		Me.bbi_Statistics_Remove.Name = "bbi_Statistics_Remove"
+		'
+		'bsi_Export
+		'
+		Me.bsi_Export.Caption = "Export"
+		Me.bsi_Export.Id = 26
+		Me.bsi_Export.ImageUri.Uri = "SaveAndNew"
+		Me.bsi_Export.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Export), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Export_CSV), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Export_XLSX), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Export_TDL)})
+		Me.bsi_Export.Name = "bsi_Export"
+		'
+		'bbi_Export_CSV
+		'
+		Me.bbi_Export_CSV.Caption = "Export List to CSV"
+		Me.bbi_Export_CSV.Id = 27
+		Me.bbi_Export_CSV.ImageUri.Uri = "ExportToCSV"
+		Me.bbi_Export_CSV.Name = "bbi_Export_CSV"
+		'
+		'bbi_Export_XLSX
+		'
+		Me.bbi_Export_XLSX.Caption = "Export List to Excel (XLSX)"
+		Me.bbi_Export_XLSX.Id = 28
+		Me.bbi_Export_XLSX.ImageUri.Uri = "ExportToXLSX"
+		Me.bbi_Export_XLSX.Name = "bbi_Export_XLSX"
+		'
+		'bbi_Export_TDL
+		'
+		Me.bbi_Export_TDL.Caption = "Export as Total DOS Launcher Collection..."
+		Me.bbi_Export_TDL.Id = 31
+		Me.bbi_Export_TDL.ImageUri.Uri = "SaveAll"
+		Me.bbi_Export_TDL.Name = "bbi_Export_TDL"
+		'
+		'bbi_ScummVM_Templates
+		'
+		Me.bbi_ScummVM_Templates.Caption = "Open ScummVM Templates"
+		Me.bbi_ScummVM_Templates.Id = 29
+		Me.bbi_ScummVM_Templates.ImageUri.Uri = "Replace"
+		Me.bbi_ScummVM_Templates.Name = "bbi_ScummVM_Templates"
+		'
+		'bbi_MOBY_Extras_Manager
+		'
+		Me.bbi_MOBY_Extras_Manager.Caption = "Open MOBY Extras Manager"
+		Me.bbi_MOBY_Extras_Manager.Id = 30
+		Me.bbi_MOBY_Extras_Manager.ImageUri.Uri = "Zoom2"
+		Me.bbi_MOBY_Extras_Manager.Name = "bbi_MOBY_Extras_Manager"
+		'
+		'bbi_Create_TDL_Menu
+		'
+		Me.bbi_Create_TDL_Menu.Caption = "Create Total DOS Launcher Menu"
+		Me.bbi_Create_TDL_Menu.Id = 32
+		Me.bbi_Create_TDL_Menu.ImageUri.Uri = "ListBullets"
+		Me.bbi_Create_TDL_Menu.Name = "bbi_Create_TDL_Menu"
+		'
+		'bbi_Cheevo_add_to_Challenge
+		'
+		Me.bbi_Cheevo_add_to_Challenge.Caption = "&Add to Challenge"
+		Me.bbi_Cheevo_add_to_Challenge.Id = 33
+		Me.bbi_Cheevo_add_to_Challenge.ImageUri.Uri = "Add"
+		Me.bbi_Cheevo_add_to_Challenge.Name = "bbi_Cheevo_add_to_Challenge"
+		'
+		'bbi_Cheevo_Manage_Challenges
+		'
+		Me.bbi_Cheevo_Manage_Challenges.Caption = "Edit Challenges"
+		Me.bbi_Cheevo_Manage_Challenges.Id = 34
+		Me.bbi_Cheevo_Manage_Challenges.ImageUri.Uri = "ListBullets"
+		Me.bbi_Cheevo_Manage_Challenges.Name = "bbi_Cheevo_Manage_Challenges"
+		'
+		'bbi_Add_to_Challenge
+		'
+		Me.bbi_Add_to_Challenge.Caption = "Add to Challenge (Total Runtime)"
+		Me.bbi_Add_to_Challenge.Id = 35
+		Me.bbi_Add_to_Challenge.ImageUri.Uri = "Add"
+		Me.bbi_Add_to_Challenge.Name = "bbi_Add_to_Challenge"
+		'
+		'lbl_Challenges
+		'
+		Me.lbl_Challenges.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_Challenges.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_Challenges.Location = New System.Drawing.Point(0, 0)
+		Me.lbl_Challenges.MKBoundControl1 = Nothing
+		Me.lbl_Challenges.MKBoundControl2 = Nothing
+		Me.lbl_Challenges.MKBoundControl3 = Nothing
+		Me.lbl_Challenges.MKBoundControl4 = Nothing
+		Me.lbl_Challenges.MKBoundControl5 = Nothing
+		Me.lbl_Challenges.Name = "lbl_Challenges"
+		Me.lbl_Challenges.Size = New System.Drawing.Size(53, 20)
+		ToolTipTitleItem3.Text = "Challenge"
+		ToolTipItem2.LeftIndent = 6
+		ToolTipItem2.Text = "Filter by open RetroAchievements challenges"
+		SuperToolTip3.Items.Add(ToolTipTitleItem3)
+		SuperToolTip3.Items.Add(ToolTipItem2)
+		Me.lbl_Challenges.SuperTip = SuperToolTip3
+		Me.lbl_Challenges.TabIndex = 0
+		Me.lbl_Challenges.Text = "Challenge:"
+		'
+		'cmb_Challenges
+		'
+		Me.cmb_Challenges.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.cmb_Challenges.Location = New System.Drawing.Point(56, 0)
+		Me.cmb_Challenges.MKBoundLabel = Nothing
+		Me.cmb_Challenges.MKEditValue_Compare = Nothing
+		Me.cmb_Challenges.Name = "cmb_Challenges"
+		ToolTipTitleItem4.Text = "Edit Challenge"
+		SuperToolTip4.Items.Add(ToolTipTitleItem4)
+		Me.cmb_Challenges.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject1, SerializableAppearanceObject2, SerializableAppearanceObject3, SerializableAppearanceObject4, "", Nothing, SuperToolTip4, True)})
+		Me.cmb_Challenges.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("id_Cheevo_Challenges", "id_Cheevo_Challenges", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 5, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Tier", "Tier", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("MaxTier", "Max Tier", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("DisplayText", "Display Text", 5, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
+		Me.cmb_Challenges.Properties.DataSource = Me.BS_Challenges
+		Me.cmb_Challenges.Properties.DisplayMember = "DisplayText"
+		Me.cmb_Challenges.Properties.NullText = ""
+		Me.cmb_Challenges.Properties.ShowHeader = False
+		Me.cmb_Challenges.Properties.ValueMember = "id_Cheevo_Challenges"
+		Me.cmb_Challenges.Size = New System.Drawing.Size(88, 20)
+		ToolTipTitleItem5.Text = "Challenge"
+		ToolTipItem3.LeftIndent = 6
+		ToolTipItem3.Text = "Filter by open RetroAchievements challenges"
+		SuperToolTip5.Items.Add(ToolTipTitleItem5)
+		SuperToolTip5.Items.Add(ToolTipItem3)
+		Me.cmb_Challenges.SuperTip = SuperToolTip5
+		Me.cmb_Challenges.TabIndex = 1
+		'
+		'BS_Challenges
+		'
+		Me.BS_Challenges.DataMember = "ttb_Open_Challenges"
+		Me.BS_Challenges.DataSource = Me.DS_ML
+		'
+		'DS_ML
+		'
+		Me.DS_ML.DataSetName = "DS_ML"
+		Me.DS_ML.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+		'
+		'pnl_31
+		'
+		Me.ttctl_TecSpec.SetAllowHtmlText(Me.pnl_31, DevExpress.Utils.DefaultBoolean.[Default])
+		Me.pnl_31.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.pnl_31.Controls.Add(Me.lbl_Search)
+		Me.pnl_31.Controls.Add(Me.txb_Search)
+		Me.pnl_31.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.pnl_31.Location = New System.Drawing.Point(0, 44)
+		Me.pnl_31.Margin = New System.Windows.Forms.Padding(0)
+		Me.pnl_31.Name = "pnl_31"
+		Me.pnl_31.Size = New System.Drawing.Size(244, 22)
+		Me.pnl_31.TabIndex = 8
+		'
+		'lbl_Search
+		'
+		Me.lbl_Search.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_Search.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_Search.Location = New System.Drawing.Point(0, 0)
+		Me.lbl_Search.MKBoundControl1 = Nothing
+		Me.lbl_Search.MKBoundControl2 = Nothing
+		Me.lbl_Search.MKBoundControl3 = Nothing
+		Me.lbl_Search.MKBoundControl4 = Nothing
+		Me.lbl_Search.MKBoundControl5 = Nothing
+		Me.lbl_Search.Name = "lbl_Search"
+		Me.lbl_Search.Size = New System.Drawing.Size(53, 20)
+		ToolTipTitleItem6.Text = "Search"
+		ToolTipItem4.LeftIndent = 6
+		ToolTipItem4.Text = "Database-wide search in the following fields:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Name, Alternate Titles, Filename" &
+		", Description, Note and Special Info." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You can also perform a table-wide searc" &
+		"h by pressing CTRL+F."
+		SuperToolTip6.Items.Add(ToolTipTitleItem6)
+		SuperToolTip6.Items.Add(ToolTipItem4)
+		Me.lbl_Search.SuperTip = SuperToolTip6
+		Me.lbl_Search.TabIndex = 0
+		Me.lbl_Search.Text = "Search:"
+		'
+		'txb_Search
+		'
+		Me.txb_Search.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.txb_Search.Location = New System.Drawing.Point(56, 0)
+		Me.txb_Search.Name = "txb_Search"
+		Me.txb_Search.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject5, SerializableAppearanceObject6, SerializableAppearanceObject7, SerializableAppearanceObject8, "Apply Search", Nothing, Nothing, True)})
+		Me.txb_Search.Size = New System.Drawing.Size(187, 20)
+		ToolTipTitleItem7.Text = "Search"
+		ToolTipItem5.LeftIndent = 6
+		ToolTipItem5.Text = "Database-wide search in the following fields:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Name, Alternate Titles, Filename" &
+		", Description, Note and Special Info." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You can always perform a table-wide sea" &
+		"rch by pressing CTRL+F."
+		SuperToolTip7.Items.Add(ToolTipTitleItem7)
+		SuperToolTip7.Items.Add(ToolTipItem5)
+		Me.txb_Search.SuperTip = SuperToolTip7
+		Me.txb_Search.TabIndex = 1
+		'
+		'pnl_32
+		'
+		Me.ttctl_TecSpec.SetAllowHtmlText(Me.pnl_32, DevExpress.Utils.DefaultBoolean.[Default])
+		Me.pnl_32.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.pnl_32.Controls.Add(Me.lbl_Similarity)
+		Me.pnl_32.Controls.Add(Me.cmb_Similarity_Calculation_Results)
+		Me.pnl_32.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.pnl_32.Location = New System.Drawing.Point(244, 44)
+		Me.pnl_32.Margin = New System.Windows.Forms.Padding(0)
+		Me.pnl_32.Name = "pnl_32"
+		Me.pnl_32.Size = New System.Drawing.Size(244, 22)
+		Me.pnl_32.TabIndex = 9
+		'
+		'lbl_Similarity
+		'
+		Me.lbl_Similarity.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_Similarity.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_Similarity.Location = New System.Drawing.Point(2, 0)
+		Me.lbl_Similarity.MKBoundControl1 = Nothing
+		Me.lbl_Similarity.MKBoundControl2 = Nothing
+		Me.lbl_Similarity.MKBoundControl3 = Nothing
+		Me.lbl_Similarity.MKBoundControl4 = Nothing
+		Me.lbl_Similarity.MKBoundControl5 = Nothing
+		Me.lbl_Similarity.Name = "lbl_Similarity"
+		Me.lbl_Similarity.Size = New System.Drawing.Size(53, 20)
+		ToolTipTitleItem8.Text = "Similar to"
+		ToolTipItem6.LeftIndent = 6
+		ToolTipItem6.Text = "Choose from your saved Similarity Calculation results to feed them to the main ta" &
+		"ble"
+		SuperToolTip8.Items.Add(ToolTipTitleItem8)
+		SuperToolTip8.Items.Add(ToolTipItem6)
+		Me.lbl_Similarity.SuperTip = SuperToolTip8
+		Me.lbl_Similarity.TabIndex = 0
+		Me.lbl_Similarity.Text = "Similar to:"
+		'
+		'cmb_Similarity_Calculation_Results
+		'
+		Me.cmb_Similarity_Calculation_Results.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.cmb_Similarity_Calculation_Results.EditValue = 0
+		Me.cmb_Similarity_Calculation_Results.Location = New System.Drawing.Point(58, 0)
+		Me.cmb_Similarity_Calculation_Results.MKBoundLabel = Nothing
+		Me.cmb_Similarity_Calculation_Results.MKEditValue_Compare = Nothing
+		Me.cmb_Similarity_Calculation_Results.Name = "cmb_Similarity_Calculation_Results"
+		ToolTipTitleItem9.Text = "Delete similarity calculation results"
+		SuperToolTip9.Items.Add(ToolTipTitleItem9)
+		ToolTipTitleItem10.Text = "Show similarity calculation results"
+		SuperToolTip10.Items.Add(ToolTipTitleItem10)
+		Me.cmb_Similarity_Calculation_Results.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Minus, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject9, SerializableAppearanceObject10, SerializableAppearanceObject11, SerializableAppearanceObject12, "", Nothing, SuperToolTip9, True), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject13, SerializableAppearanceObject14, SerializableAppearanceObject15, SerializableAppearanceObject16, "", Nothing, SuperToolTip10, True)})
+		Me.cmb_Similarity_Calculation_Results.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("id_Similarity_Calculation_Results", "id_Similarity_Calculation_Results", 5, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 5, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
+		Me.cmb_Similarity_Calculation_Results.Properties.DataSource = Me.BS_Similarity_Calculation_Results
+		Me.cmb_Similarity_Calculation_Results.Properties.DisplayMember = "Name"
+		Me.cmb_Similarity_Calculation_Results.Properties.NullText = ""
+		Me.cmb_Similarity_Calculation_Results.Properties.ShowHeader = False
+		Me.cmb_Similarity_Calculation_Results.Properties.ValueMember = "id_Similarity_Calculation_Results"
+		Me.cmb_Similarity_Calculation_Results.Size = New System.Drawing.Size(184, 20)
+		ToolTipTitleItem11.Text = "Similar to"
+		ToolTipItem7.LeftIndent = 6
+		ToolTipItem7.Text = "Choose from your saved Similarity Calculation results to feed them to the main ta" &
+		"ble"
+		SuperToolTip11.Items.Add(ToolTipTitleItem11)
+		SuperToolTip11.Items.Add(ToolTipItem7)
+		Me.cmb_Similarity_Calculation_Results.SuperTip = SuperToolTip11
+		Me.cmb_Similarity_Calculation_Results.TabIndex = 1
+		'
+		'BS_Similarity_Calculation_Results
+		'
+		Me.BS_Similarity_Calculation_Results.DataMember = "src_ucr_Emulation_cmb_Similarity_Calculation_Results"
+		Me.BS_Similarity_Calculation_Results.DataSource = Me.DS_ML
+		'
+		'pnl_22
+		'
+		Me.ttctl_TecSpec.SetAllowHtmlText(Me.pnl_22, DevExpress.Utils.DefaultBoolean.[Default])
+		Me.pnl_22.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.pnl_22.Controls.Add(Me.lbl_Group)
+		Me.pnl_22.Controls.Add(Me.cmb_Groups)
+		Me.pnl_22.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.pnl_22.Location = New System.Drawing.Point(244, 22)
+		Me.pnl_22.Margin = New System.Windows.Forms.Padding(0)
+		Me.pnl_22.Name = "pnl_22"
+		Me.pnl_22.Size = New System.Drawing.Size(244, 22)
+		Me.pnl_22.TabIndex = 7
+		'
+		'lbl_Group
+		'
+		Me.lbl_Group.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_Group.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_Group.Location = New System.Drawing.Point(2, 0)
+		Me.lbl_Group.MKBoundControl1 = Nothing
+		Me.lbl_Group.MKBoundControl2 = Nothing
+		Me.lbl_Group.MKBoundControl3 = Nothing
+		Me.lbl_Group.MKBoundControl4 = Nothing
+		Me.lbl_Group.MKBoundControl5 = Nothing
+		Me.lbl_Group.Name = "lbl_Group"
+		Me.lbl_Group.Size = New System.Drawing.Size(53, 20)
+		ToolTipTitleItem12.Text = "Group"
+		ToolTipItem8.LeftIndent = 6
+		ToolTipItem8.Text = "Filter by Game Groups"
+		SuperToolTip12.Items.Add(ToolTipTitleItem12)
+		SuperToolTip12.Items.Add(ToolTipItem8)
+		Me.lbl_Group.SuperTip = SuperToolTip12
+		Me.lbl_Group.TabIndex = 0
+		Me.lbl_Group.Text = "Group:"
+		'
+		'cmb_Groups
+		'
+		Me.cmb_Groups.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.cmb_Groups.Location = New System.Drawing.Point(58, 0)
+		Me.cmb_Groups.MKBoundLabel = Nothing
+		Me.cmb_Groups.MKEditValue_Compare = Nothing
+		Me.cmb_Groups.Name = "cmb_Groups"
+		ToolTipTitleItem13.Text = "Show Group info"
+		SuperToolTip13.Items.Add(ToolTipTitleItem13)
+		Me.cmb_Groups.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject17, SerializableAppearanceObject18, SerializableAppearanceObject19, SerializableAppearanceObject20, "", Nothing, SuperToolTip13, True)})
+		Me.cmb_Groups.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("id_Moby_Game_Groups", "id_Moby_Game_Groups", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 5, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
+		Me.cmb_Groups.Properties.DataSource = Me.BS_Group
+		Me.cmb_Groups.Properties.DisplayMember = "Name"
+		Me.cmb_Groups.Properties.NullText = ""
+		Me.cmb_Groups.Properties.ShowHeader = False
+		Me.cmb_Groups.Properties.ValueMember = "id_Moby_Game_Groups"
+		Me.cmb_Groups.Size = New System.Drawing.Size(184, 20)
+		ToolTipTitleItem14.Text = "Group"
+		ToolTipItem9.LeftIndent = 6
+		ToolTipItem9.Text = "Filter by Game Groups"
+		SuperToolTip14.Items.Add(ToolTipTitleItem14)
+		SuperToolTip14.Items.Add(ToolTipItem9)
+		Me.cmb_Groups.SuperTip = SuperToolTip14
+		Me.cmb_Groups.TabIndex = 1
+		'
+		'BS_Group
+		'
+		Me.BS_Group.DataMember = "src_ucr_Emulation_cmb_Groups"
+		Me.BS_Group.DataSource = Me.DS_ML
+		'
+		'pnl_12
+		'
+		Me.ttctl_TecSpec.SetAllowHtmlText(Me.pnl_12, DevExpress.Utils.DefaultBoolean.[Default])
+		Me.pnl_12.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.pnl_12.Controls.Add(Me.lbl_Filterset)
+		Me.pnl_12.Controls.Add(Me.cmb_Filterset)
+		Me.pnl_12.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.pnl_12.Location = New System.Drawing.Point(244, 0)
+		Me.pnl_12.Margin = New System.Windows.Forms.Padding(0)
+		Me.pnl_12.Name = "pnl_12"
+		Me.pnl_12.Size = New System.Drawing.Size(244, 22)
+		Me.pnl_12.TabIndex = 7
+		'
+		'lbl_Filterset
+		'
+		Me.lbl_Filterset.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_Filterset.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_Filterset.Location = New System.Drawing.Point(2, 0)
+		Me.lbl_Filterset.MKBoundControl1 = Nothing
+		Me.lbl_Filterset.MKBoundControl2 = Nothing
+		Me.lbl_Filterset.MKBoundControl3 = Nothing
+		Me.lbl_Filterset.MKBoundControl4 = Nothing
+		Me.lbl_Filterset.MKBoundControl5 = Nothing
+		Me.lbl_Filterset.Name = "lbl_Filterset"
+		Me.lbl_Filterset.Size = New System.Drawing.Size(53, 20)
+		ToolTipTitleItem15.Text = "Filterset"
+		ToolTipItem10.LeftIndent = 6
+		ToolTipItem10.Text = "Organize your filters in saved and re-usable filter sets"
+		SuperToolTip15.Items.Add(ToolTipTitleItem15)
+		SuperToolTip15.Items.Add(ToolTipItem10)
+		Me.lbl_Filterset.SuperTip = SuperToolTip15
+		Me.lbl_Filterset.TabIndex = 0
+		Me.lbl_Filterset.Text = "Filterset:"
+		'
+		'cmb_Filterset
+		'
+		Me.cmb_Filterset.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.cmb_Filterset.Location = New System.Drawing.Point(58, 0)
+		Me.cmb_Filterset.MKBoundLabel = Nothing
+		Me.cmb_Filterset.MKEditValue_Compare = Nothing
+		Me.cmb_Filterset.Name = "cmb_Filterset"
+		ToolTipTitleItem16.Text = "Add a new filterset"
+		SuperToolTip16.Items.Add(ToolTipTitleItem16)
+		ToolTipTitleItem17.Text = "Delete this filterset"
+		SuperToolTip17.Items.Add(ToolTipTitleItem17)
+		ToolTipTitleItem18.Text = "Edit this filterset"
+		SuperToolTip18.Items.Add(ToolTipTitleItem18)
+		Me.cmb_Filterset.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject21, SerializableAppearanceObject22, SerializableAppearanceObject23, SerializableAppearanceObject24, "", Nothing, SuperToolTip16, True), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Minus, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject25, SerializableAppearanceObject26, SerializableAppearanceObject27, SerializableAppearanceObject28, "", Nothing, SuperToolTip17, True), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject29, SerializableAppearanceObject30, SerializableAppearanceObject31, SerializableAppearanceObject32, "", Nothing, SuperToolTip18, True)})
+		Me.cmb_Filterset.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("id_FilterSets", "id_Filter Sets", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Type", "Type", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 5, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ApplyGridFilter", "Apply Grid Filter", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("GridFilter", "Grid Filter", 5, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("id_Moby_Platforms", "id_Moby_Platforms", 5, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Display_Name", "Display_Name", 5, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near)})
+		Me.cmb_Filterset.Properties.DataSource = Me.BS_FilterSets
+		Me.cmb_Filterset.Properties.DisplayMember = "Name"
+		Me.cmb_Filterset.Properties.NullText = ""
+		Me.cmb_Filterset.Properties.ShowHeader = False
+		Me.cmb_Filterset.Properties.ValueMember = "id_FilterSets"
+		Me.cmb_Filterset.Size = New System.Drawing.Size(184, 20)
+		ToolTipTitleItem19.Text = "Filterset"
+		ToolTipItem11.LeftIndent = 6
+		ToolTipItem11.Text = "Organize your filters in saved and re-usable filter sets"
+		SuperToolTip19.Items.Add(ToolTipTitleItem19)
+		SuperToolTip19.Items.Add(ToolTipItem11)
+		Me.cmb_Filterset.SuperTip = SuperToolTip19
+		Me.cmb_Filterset.TabIndex = 1
+		'
+		'BS_FilterSets
+		'
+		Me.BS_FilterSets.DataMember = "tbl_FilterSets"
+		Me.BS_FilterSets.DataSource = Me.DS_ML
+		'
+		'pnl_21
+		'
+		Me.ttctl_TecSpec.SetAllowHtmlText(Me.pnl_21, DevExpress.Utils.DefaultBoolean.[Default])
+		Me.pnl_21.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.pnl_21.Controls.Add(Me.lbl_Staff)
+		Me.pnl_21.Controls.Add(Me.cmb_Staff)
+		Me.pnl_21.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.pnl_21.Location = New System.Drawing.Point(0, 22)
+		Me.pnl_21.Margin = New System.Windows.Forms.Padding(0)
+		Me.pnl_21.Name = "pnl_21"
+		Me.pnl_21.Size = New System.Drawing.Size(244, 22)
+		Me.pnl_21.TabIndex = 7
+		'
+		'lbl_Staff
+		'
+		Me.lbl_Staff.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_Staff.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_Staff.Location = New System.Drawing.Point(0, 0)
+		Me.lbl_Staff.MKBoundControl1 = Nothing
+		Me.lbl_Staff.MKBoundControl2 = Nothing
+		Me.lbl_Staff.MKBoundControl3 = Nothing
+		Me.lbl_Staff.MKBoundControl4 = Nothing
+		Me.lbl_Staff.MKBoundControl5 = Nothing
+		Me.lbl_Staff.Name = "lbl_Staff"
+		Me.lbl_Staff.Size = New System.Drawing.Size(53, 20)
+		ToolTipTitleItem20.Text = "Staff"
+		ToolTipItem12.LeftIndent = 6
+		ToolTipItem12.Text = "Filter by individual staff members"
+		SuperToolTip20.Items.Add(ToolTipTitleItem20)
+		SuperToolTip20.Items.Add(ToolTipItem12)
+		Me.lbl_Staff.SuperTip = SuperToolTip20
+		Me.lbl_Staff.TabIndex = 0
+		Me.lbl_Staff.Text = "Staff:"
+		'
+		'cmb_Staff
+		'
+		Me.cmb_Staff.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.cmb_Staff.Location = New System.Drawing.Point(56, 0)
+		Me.cmb_Staff.MKBoundLabel = Nothing
+		Me.cmb_Staff.MKEditValue_Compare = Nothing
+		Me.cmb_Staff.Name = "cmb_Staff"
+		ToolTipTitleItem21.Text = "Show Staff Info"
+		SuperToolTip21.Items.Add(ToolTipTitleItem21)
+		Me.cmb_Staff.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject33, SerializableAppearanceObject34, SerializableAppearanceObject35, SerializableAppearanceObject36, "", Nothing, SuperToolTip21, True)})
+		Me.cmb_Staff.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("id_Moby_Staff", "id_Moby_Staff", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 5, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
+		Me.cmb_Staff.Properties.DataSource = Me.BS_Developer
+		Me.cmb_Staff.Properties.DisplayMember = "Name"
+		Me.cmb_Staff.Properties.NullText = ""
+		Me.cmb_Staff.Properties.ShowHeader = False
+		Me.cmb_Staff.Properties.ValueMember = "id_Moby_Staff"
+		Me.cmb_Staff.Size = New System.Drawing.Size(187, 20)
+		ToolTipTitleItem22.Text = "Staff"
+		ToolTipItem13.LeftIndent = 6
+		ToolTipItem13.Text = "Filter by individual staff members"
+		SuperToolTip22.Items.Add(ToolTipTitleItem22)
+		SuperToolTip22.Items.Add(ToolTipItem13)
+		Me.cmb_Staff.SuperTip = SuperToolTip22
+		Me.cmb_Staff.TabIndex = 1
+		'
+		'BS_Developer
+		'
+		Me.BS_Developer.DataMember = "src_ucr_Emulation_cmb_Staff"
+		Me.BS_Developer.DataSource = Me.DS_ML
+		'
+		'pnl_11
+		'
+		Me.ttctl_TecSpec.SetAllowHtmlText(Me.pnl_11, DevExpress.Utils.DefaultBoolean.[Default])
+		Me.pnl_11.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.pnl_11.Controls.Add(Me.lbl_Platform)
+		Me.pnl_11.Controls.Add(Me.cmb_Platform)
+		Me.pnl_11.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.pnl_11.Location = New System.Drawing.Point(0, 0)
+		Me.pnl_11.Margin = New System.Windows.Forms.Padding(0)
+		Me.pnl_11.Name = "pnl_11"
+		Me.pnl_11.Size = New System.Drawing.Size(244, 22)
+		Me.pnl_11.TabIndex = 7
+		'
+		'lbl_Platform
+		'
+		Me.lbl_Platform.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_Platform.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_Platform.Location = New System.Drawing.Point(0, 0)
+		Me.lbl_Platform.MKBoundControl1 = Nothing
+		Me.lbl_Platform.MKBoundControl2 = Nothing
+		Me.lbl_Platform.MKBoundControl3 = Nothing
+		Me.lbl_Platform.MKBoundControl4 = Nothing
+		Me.lbl_Platform.MKBoundControl5 = Nothing
+		Me.lbl_Platform.Name = "lbl_Platform"
+		Me.lbl_Platform.Size = New System.Drawing.Size(53, 20)
+		ToolTipTitleItem23.Text = "Platform"
+		ToolTipItem14.LeftIndent = 6
+		ToolTipItem14.Text = "Filter by a specific platform - or choose ""All Platforms"""
+		SuperToolTip23.Items.Add(ToolTipTitleItem23)
+		SuperToolTip23.Items.Add(ToolTipItem14)
+		Me.lbl_Platform.SuperTip = SuperToolTip23
+		Me.lbl_Platform.TabIndex = 0
+		Me.lbl_Platform.Text = "Platform:"
+		'
+		'cmb_Platform
+		'
+		Me.cmb_Platform.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.cmb_Platform.Location = New System.Drawing.Point(56, 0)
+		Me.cmb_Platform.MKBoundLabel = Nothing
+		Me.cmb_Platform.MKEditValue_Compare = Nothing
+		Me.cmb_Platform.Name = "cmb_Platform"
+		ToolTipTitleItem24.Text = "Open the Platform Settings dialog"
+		SuperToolTip24.Items.Add(ToolTipTitleItem24)
+		Me.cmb_Platform.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject37, SerializableAppearanceObject38, SerializableAppearanceObject39, SerializableAppearanceObject40, "", Nothing, SuperToolTip24, True)})
+		Me.cmb_Platform.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("id_Moby_Platforms", "id_Moby_Platforms", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 200, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ShortName", "Short Name", 50, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
+		Me.cmb_Platform.Properties.DataSource = Me.BS_Platforms
+		Me.cmb_Platform.Properties.DisplayMember = "Name"
+		Me.cmb_Platform.Properties.NullText = "[please select]"
+		Me.cmb_Platform.Properties.ShowHeader = False
+		Me.cmb_Platform.Properties.ValueMember = "id_Moby_Platforms"
+		Me.cmb_Platform.Size = New System.Drawing.Size(187, 20)
+		ToolTipTitleItem25.Text = "Platform"
+		ToolTipItem15.LeftIndent = 6
+		ToolTipItem15.Text = "Filter by a specific platform - or choose ""All Platforms"""
+		SuperToolTip25.Items.Add(ToolTipTitleItem25)
+		SuperToolTip25.Items.Add(ToolTipItem15)
+		Me.cmb_Platform.SuperTip = SuperToolTip25
+		Me.cmb_Platform.TabIndex = 1
+		'
+		'BS_Platforms
+		'
+		Me.BS_Platforms.DataMember = "src_ucr_Emulation_Platforms"
+		Me.BS_Platforms.DataSource = Me.DS_ML
 		'
 		'splt_FilterUI_grdMain
 		'
@@ -594,14 +1537,14 @@ Partial Class ucr_Emulation
 						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.splt_FilterUI_grdMain.Collapsed = True
 		Me.splt_FilterUI_grdMain.CollapsePanel = DevExpress.XtraEditors.SplitCollapsePanel.Panel1
-		Me.splt_FilterUI_grdMain.Location = New System.Drawing.Point(3, 70)
+		Me.splt_FilterUI_grdMain.Location = New System.Drawing.Point(3, 4)
 		Me.splt_FilterUI_grdMain.Name = "splt_FilterUI_grdMain"
 		Me.splt_FilterUI_grdMain.Panel1.Controls.Add(Me.accordion_FilterUI)
 		Me.splt_FilterUI_grdMain.Panel1.Controls.Add(Me.lbl_QuickFilter)
 		Me.splt_FilterUI_grdMain.Panel1.Text = "Panel1"
 		Me.splt_FilterUI_grdMain.Panel2.Controls.Add(Me.grd_Emu_Games)
 		Me.splt_FilterUI_grdMain.Panel2.Text = "Panel2"
-		Me.splt_FilterUI_grdMain.Size = New System.Drawing.Size(483, 527)
+		Me.splt_FilterUI_grdMain.Size = New System.Drawing.Size(487, 500)
 		Me.splt_FilterUI_grdMain.SplitterPosition = 171
 		Me.splt_FilterUI_grdMain.TabIndex = 7
 		Me.splt_FilterUI_grdMain.Text = "Ctl_MKDXSplitPanel1"
@@ -663,7 +1606,7 @@ Partial Class ucr_Emulation
 		Me.grd_Emu_Games.MenuManager = Me.barmng
 		Me.grd_Emu_Games.Name = "grd_Emu_Games"
 		Me.grd_Emu_Games.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Fav, Me.RepositoryItemCheckEdit1, Me.rpi_Have, Me.rpi_Want, Me.rpi_Trade})
-		Me.grd_Emu_Games.Size = New System.Drawing.Size(478, 527)
+		Me.grd_Emu_Games.Size = New System.Drawing.Size(482, 500)
 		Me.grd_Emu_Games.TabIndex = 0
 		Me.grd_Emu_Games.UseEmbeddedNavigator = True
 		Me.grd_Emu_Games.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Emu_Games})
@@ -673,14 +1616,9 @@ Partial Class ucr_Emulation
 		Me.BS_Emu_Games.DataMember = "src_ucr_Emulation_Games"
 		Me.BS_Emu_Games.DataSource = Me.DS_ML
 		'
-		'DS_ML
-		'
-		Me.DS_ML.DataSetName = "DS_ML"
-		Me.DS_ML.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-		'
 		'gv_Emu_Games
 		'
-		Me.gv_Emu_Games.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colSimilarity, Me.colPlatform_Short, Me.colGame, Me.colWant, Me.colHave, Me.colTrade, Me.coltmp_Highlighted, Me.colFolder, Me.colFile, Me.colInnerFile, Me.colRegions, Me.colLanguages, Me.colVersion, Me.colRank, Me.colScore, Me.colRating, Me.colYear, Me.colAdded, Me.colNum_Played, Me.colNum_Runtime, Me.colLast_Played, Me.colFavourite, Me.colPlatform_Exclusive, Me.colAge_Pessimistic, Me.colAge_Optimistic, Me.colPublisher, Me.colDeveloper, Me.colBasic_Genres, Me.colPerspectives, Me.colVisual_Presentation, Me.colPacing, Me.colGameplay, Me.colInterface_Control, Me.colSports_Themes, Me.colEducational_Categories, Me.colVehicular_Themes, Me.colSetting, Me.colNarrative_Theme_Topic, Me.colDLC_Addon, Me.colSpecial_Edition, Me.colOther_Attributes, Me.colMinPlayers, Me.colMaxPlayers, Me.colAlt, Me.colTrainer, Me.colTranslation, Me.colHack, Me.colBios, Me.colPrototype, Me.colAlpha, Me.colBeta, Me.colSample, Me.colKiosk, Me.colUnlicensed, Me.colFixed, Me.colPirated, Me.colGood, Me.colBad, Me.colOverdump, Me.colPublicDomain, Me.colRating_Gameplay, Me.colRating_Personal, Me.colRating_Graphics, Me.colRating_Sound, Me.colRating_Story, Me.colMP_GameModes, Me.colMP_Options, Me.col001_Platform, Me.col002_MobyRank, Me.col003_MobyScore, Me.col004_Publisher, Me.col005_Developer, Me.col006_Year, Me.col101_Basic_Genres, Me.col102_Perspectives, Me.col107_Visual_Presentation, Me.col109_Pacing, Me.col108_Gameplay, Me.col113_Interface_Control, Me.col103_Sports_Themes, Me.col105_Educational_Categories, Me.col112_Vehicular_Themes, Me.col111_Setting, Me.col110_Narrative_Theme_Topic, Me.col114_DLC_Addon, Me.col115_Special_Edition, Me.col106_Other_Attributes, Me.col201_MinPlayers, Me.col202_MaxPlayers, Me.col203_AgeO, Me.col204_AgeP, Me.col205_Rating_Descriptors, Me.col207_Multiplayer_Attributes, Me.col206_Other_Attributes, Me.col301_Group_Membership, Me.col401_Staff, Me.colid_Emu_Games, Me.colid_Moby_Games, Me.colid_Moby_Platforms, Me.colid_Moby_Releases, Me.colid_DOSBox_Configs, Me.colid_DOSBox_Configs_Template})
+		Me.gv_Emu_Games.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colSimilarity, Me.colPlatform_Short, Me.colGame, Me.colWant, Me.colHave, Me.colTrade, Me.coltmp_Highlighted, Me.colFolder, Me.colFile, Me.colInnerFile, Me.colRegions, Me.colLanguages, Me.colVersion, Me.colRank, Me.colScore, Me.colRating, Me.colYear, Me.colAdded, Me.colNum_Played, Me.colNum_Runtime, Me.colLast_Played, Me.colFavourite, Me.colPlatform_Exclusive, Me.colAge_Pessimistic, Me.colAge_Optimistic, Me.colPublisher, Me.colDeveloper, Me.colBasic_Genres, Me.colPerspectives, Me.colVisual_Presentation, Me.colPacing, Me.colGameplay, Me.colInterface_Control, Me.colSports_Themes, Me.colEducational_Categories, Me.colVehicular_Themes, Me.colSetting, Me.colNarrative_Theme_Topic, Me.colDLC_Addon, Me.colSpecial_Edition, Me.colOther_Attributes, Me.colMinPlayers, Me.colMaxPlayers, Me.colAlt, Me.colTrainer, Me.colTranslation, Me.colHack, Me.colBios, Me.colPrototype, Me.colAlpha, Me.colBeta, Me.colSample, Me.colKiosk, Me.colUnlicensed, Me.colFixed, Me.colPirated, Me.colGood, Me.colBad, Me.colOverdump, Me.colPublicDomain, Me.colRating_Gameplay, Me.colRating_Personal, Me.colRating_Graphics, Me.colRating_Sound, Me.colRating_Story, Me.colMP_GameModes, Me.colMP_Options, Me.col001_Platform, Me.col002_MobyRank, Me.col003_MobyScore, Me.col004_Publisher, Me.col005_Developer, Me.col006_Year, Me.col101_Basic_Genres, Me.col102_Perspectives, Me.col107_Visual_Presentation, Me.col109_Pacing, Me.col108_Gameplay, Me.col113_Interface_Control, Me.col103_Sports_Themes, Me.col105_Educational_Categories, Me.col112_Vehicular_Themes, Me.col111_Setting, Me.col110_Narrative_Theme_Topic, Me.col114_DLC_Addon, Me.col115_Special_Edition, Me.col106_Other_Attributes, Me.col201_MinPlayers, Me.col202_MaxPlayers, Me.col203_AgeO, Me.col204_AgeP, Me.col205_Rating_Descriptors, Me.col207_Multiplayer_Attributes, Me.col206_Other_Attributes, Me.col301_Group_Membership, Me.col401_Staff, Me.colid_Emu_Games, Me.colid_Moby_Games, Me.colid_Moby_Platforms, Me.colid_Moby_Releases, Me.colid_DOSBox_Configs, Me.colid_DOSBox_Configs_Template, Me.colCRC32, Me.colMD5, Me.colSHA1})
 		Me.gv_Emu_Games.GridControl = Me.grd_Emu_Games
 		Me.gv_Emu_Games.Name = "gv_Emu_Games"
 		Me.gv_Emu_Games.OptionsBehavior.AllowIncrementalSearch = True
@@ -1826,708 +2764,32 @@ Partial Class ucr_Emulation
 		Me.colid_DOSBox_Configs_Template.OptionsColumn.ShowInExpressionEditor = False
 		Me.colid_DOSBox_Configs_Template.ToolTip = "Metropolis Launcher's internal ID of the DOSBox configuration template"
 		'
-		'barmng
+		'colCRC32
 		'
-		Me.barmng.AllowCustomization = False
-		Me.barmng.AllowMoveBarOnToolbar = False
-		Me.barmng.AllowQuickCustomization = False
-		Me.barmng.DockControls.Add(Me.barDockControlTop)
-		Me.barmng.DockControls.Add(Me.barDockControlBottom)
-		Me.barmng.DockControls.Add(Me.barDockControlLeft)
-		Me.barmng.DockControls.Add(Me.barDockControlRight)
-		Me.barmng.Form = Me
-		Me.barmng.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.bbi_Contribute_TechInfo, Me.bbi_Open_Moby_Page, Me.bsi_Launch, Me.bbi_Edit_Game, Me.bbi_DOSBox_Clear_Exe_Config, Me.bbi_Rom_Manager, Me.bbi_Rombase_Manager, Me.bbi_Edit_Multiple_Games, Me.bbi_Export, Me.bbi_Emu_Settings, Me.bbi_DOSBox_Templates, Me.bbi_Analyze_Missing_Extras, Me.bsi_MultiUser, Me.bbi_MultiUser_Add_Games, Me.bbi_MultiUser_Show_Games, Me.bbi_MultiUser_Remove_Games, Me.bbi_Staff_Info, Me.bbi_Staff_Filter, Me.bbi_Similarity_Calculation, Me.bbi_Show_Similarity_Feature_Columns, Me.bbi_Open_Similarity_Details, Me.bbi_Launch_Random, Me.bbi_USER_Extras_Manager, Me.bbi_Extras_Viewer_Settings, Me.bbi_GameGroup_Info, Me.bbi_GameGroup_Filter, Me.bbi_Statistics_Remove, Me.bsi_Export, Me.bbi_Export_CSV, Me.bbi_Export_XLSX, Me.bbi_ScummVM_Templates, Me.bbi_MOBY_Extras_Manager})
-		Me.barmng.MaxItemId = 31
+		Me.colCRC32.FieldName = "CRC32"
+		Me.colCRC32.Name = "colCRC32"
+		Me.colCRC32.OptionsColumn.AllowEdit = False
+		Me.colCRC32.OptionsColumn.ReadOnly = True
 		'
-		'barDockControlTop
+		'colMD5
 		'
-		Me.barDockControlTop.CausesValidation = False
-		Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
-		Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-		Me.barDockControlTop.Size = New System.Drawing.Size(800, 0)
+		Me.colMD5.FieldName = "MD5"
+		Me.colMD5.Name = "colMD5"
+		Me.colMD5.OptionsColumn.AllowEdit = False
+		Me.colMD5.OptionsColumn.ReadOnly = True
 		'
-		'barDockControlBottom
+		'colSHA1
 		'
-		Me.barDockControlBottom.CausesValidation = False
-		Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-		Me.barDockControlBottom.Location = New System.Drawing.Point(0, 600)
-		Me.barDockControlBottom.Size = New System.Drawing.Size(800, 0)
-		'
-		'barDockControlLeft
-		'
-		Me.barDockControlLeft.CausesValidation = False
-		Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-		Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
-		Me.barDockControlLeft.Size = New System.Drawing.Size(0, 600)
-		'
-		'barDockControlRight
-		'
-		Me.barDockControlRight.CausesValidation = False
-		Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-		Me.barDockControlRight.Location = New System.Drawing.Point(800, 0)
-		Me.barDockControlRight.Size = New System.Drawing.Size(0, 600)
-		'
-		'bbi_Contribute_TechInfo
-		'
-		Me.bbi_Contribute_TechInfo.AllowRightClickInMenu = False
-		Me.bbi_Contribute_TechInfo.Caption = "&Contribute Tech-Info"
-		Me.bbi_Contribute_TechInfo.Id = 0
-		Me.bbi_Contribute_TechInfo.ImageUri.Uri = "NavigationBar"
-		Me.bbi_Contribute_TechInfo.Name = "bbi_Contribute_TechInfo"
-		'
-		'bbi_Open_Moby_Page
-		'
-		Me.bbi_Open_Moby_Page.AllowRightClickInMenu = False
-		Me.bbi_Open_Moby_Page.Caption = "&Open Moby Page"
-		Me.bbi_Open_Moby_Page.Id = 1
-		Me.bbi_Open_Moby_Page.ImageUri.Uri = "NavigationBar"
-		Me.bbi_Open_Moby_Page.Name = "bbi_Open_Moby_Page"
-		'
-		'bsi_Launch
-		'
-		Me.bsi_Launch.AllowRightClickInMenu = False
-		Me.bsi_Launch.Caption = "&Launch"
-		Me.bsi_Launch.Id = 2
-		Me.bsi_Launch.ImageUri.Uri = "DoubleNext"
-		Me.bsi_Launch.Name = "bsi_Launch"
-		'
-		'bbi_Edit_Game
-		'
-		Me.bbi_Edit_Game.AllowRightClickInMenu = False
-		Me.bbi_Edit_Game.Caption = "&Edit Game"
-		Me.bbi_Edit_Game.Id = 3
-		Me.bbi_Edit_Game.ImageUri.Uri = "Edit"
-		Me.bbi_Edit_Game.Name = "bbi_Edit_Game"
-		'
-		'bbi_DOSBox_Clear_Exe_Config
-		'
-		Me.bbi_DOSBox_Clear_Exe_Config.AllowRightClickInMenu = False
-		Me.bbi_DOSBox_Clear_Exe_Config.Caption = "&Clear Executables Config"
-		Me.bbi_DOSBox_Clear_Exe_Config.Id = 11
-		Me.bbi_DOSBox_Clear_Exe_Config.ImageUri.Uri = "Clear"
-		Me.bbi_DOSBox_Clear_Exe_Config.Name = "bbi_DOSBox_Clear_Exe_Config"
-		'
-		'bbi_Rom_Manager
-		'
-		Me.bbi_Rom_Manager.AllowRightClickInMenu = False
-		Me.bbi_Rom_Manager.Caption = "Open &Rom Manager"
-		Me.bbi_Rom_Manager.Id = 5
-		Me.bbi_Rom_Manager.ImageUri.Uri = "AddNewDataSource"
-		Me.bbi_Rom_Manager.Name = "bbi_Rom_Manager"
-		'
-		'bbi_Rombase_Manager
-		'
-		Me.bbi_Rombase_Manager.AllowRightClickInMenu = False
-		Me.bbi_Rombase_Manager.Caption = "Open Rom&Base Manager"
-		Me.bbi_Rombase_Manager.Id = 6
-		Me.bbi_Rombase_Manager.ImageUri.Uri = "EditDataSource"
-		Me.bbi_Rombase_Manager.Name = "bbi_Rombase_Manager"
-		'
-		'bbi_Edit_Multiple_Games
-		'
-		Me.bbi_Edit_Multiple_Games.AllowRightClickInMenu = False
-		Me.bbi_Edit_Multiple_Games.Caption = "E&dit Multiple Games"
-		Me.bbi_Edit_Multiple_Games.Id = 7
-		Me.bbi_Edit_Multiple_Games.ImageUri.Uri = "CustomizeGrid"
-		Me.bbi_Edit_Multiple_Games.Name = "bbi_Edit_Multiple_Games"
-		'
-		'bbi_Export
-		'
-		Me.bbi_Export.AllowRightClickInMenu = False
-		Me.bbi_Export.Caption = "Export selected &Games..."
-		Me.bbi_Export.Id = 8
-		Me.bbi_Export.ImageUri.Uri = "ExportToIMG"
-		Me.bbi_Export.Name = "bbi_Export"
-		'
-		'bbi_Emu_Settings
-		'
-		Me.bbi_Emu_Settings.AllowRightClickInMenu = False
-		Me.bbi_Emu_Settings.Caption = "Open Emulator &Settings"
-		Me.bbi_Emu_Settings.Id = 9
-		Me.bbi_Emu_Settings.ImageUri.Uri = "Customization"
-		Me.bbi_Emu_Settings.Name = "bbi_Emu_Settings"
-		'
-		'bbi_DOSBox_Templates
-		'
-		Me.bbi_DOSBox_Templates.AllowRightClickInMenu = False
-		Me.bbi_DOSBox_Templates.Caption = "Open DOSBox &Templates"
-		Me.bbi_DOSBox_Templates.Id = 10
-		Me.bbi_DOSBox_Templates.ImageUri.Uri = "Replace"
-		Me.bbi_DOSBox_Templates.Name = "bbi_DOSBox_Templates"
-		'
-		'bbi_Analyze_Missing_Extras
-		'
-		Me.bbi_Analyze_Missing_Extras.Caption = "Search for missing Extras"
-		Me.bbi_Analyze_Missing_Extras.Id = 10
-		Me.bbi_Analyze_Missing_Extras.ImageUri.Uri = "Find"
-		Me.bbi_Analyze_Missing_Extras.Name = "bbi_Analyze_Missing_Extras"
-		'
-		'bsi_MultiUser
-		'
-		Me.bsi_MultiUser.Caption = "Multi User"
-		Me.bsi_MultiUser.Id = 11
-		Me.bsi_MultiUser.ImageUri.Uri = "Chart"
-		Me.bsi_MultiUser.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_MultiUser_Add_Games), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_MultiUser_Remove_Games), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_MultiUser_Show_Games)})
-		Me.bsi_MultiUser.Name = "bsi_MultiUser"
-		'
-		'bbi_MultiUser_Add_Games
-		'
-		Me.bbi_MultiUser_Add_Games.Caption = "Add selected games to restricted user"
-		Me.bbi_MultiUser_Add_Games.Id = 12
-		Me.bbi_MultiUser_Add_Games.ImageUri.Uri = "Add"
-		Me.bbi_MultiUser_Add_Games.Name = "bbi_MultiUser_Add_Games"
-		'
-		'bbi_MultiUser_Remove_Games
-		'
-		Me.bbi_MultiUser_Remove_Games.Caption = "Remove selected games from restricted user"
-		Me.bbi_MultiUser_Remove_Games.Id = 14
-		Me.bbi_MultiUser_Remove_Games.ImageUri.Uri = "Delete"
-		Me.bbi_MultiUser_Remove_Games.Name = "bbi_MultiUser_Remove_Games"
-		'
-		'bbi_MultiUser_Show_Games
-		'
-		Me.bbi_MultiUser_Show_Games.Caption = "Show Games of restricted user"
-		Me.bbi_MultiUser_Show_Games.Id = 13
-		Me.bbi_MultiUser_Show_Games.ImageUri.Uri = "Show"
-		Me.bbi_MultiUser_Show_Games.Name = "bbi_MultiUser_Show_Games"
-		'
-		'bbi_Staff_Info
-		'
-		Me.bbi_Staff_Info.Caption = "&Open Staff Info"
-		Me.bbi_Staff_Info.Id = 15
-		Me.bbi_Staff_Info.ImageUri.Uri = "Preview"
-		Me.bbi_Staff_Info.Name = "bbi_Staff_Info"
-		'
-		'bbi_Staff_Filter
-		'
-		Me.bbi_Staff_Filter.Caption = "&Filter by this staff member"
-		Me.bbi_Staff_Filter.Id = 16
-		Me.bbi_Staff_Filter.ImageUri.Uri = "Filter"
-		Me.bbi_Staff_Filter.Name = "bbi_Staff_Filter"
-		'
-		'bbi_Similarity_Calculation
-		'
-		Me.bbi_Similarity_Calculation.Caption = "Find Similar Games"
-		Me.bbi_Similarity_Calculation.Id = 17
-		Me.bbi_Similarity_Calculation.ImageUri.Uri = "Find"
-		Me.bbi_Similarity_Calculation.Name = "bbi_Similarity_Calculation"
-		'
-		'bbi_Show_Similarity_Feature_Columns
-		'
-		Me.bbi_Show_Similarity_Feature_Columns.Caption = "{0} Similarity Feature Columns"
-		Me.bbi_Show_Similarity_Feature_Columns.Id = 18
-		Me.bbi_Show_Similarity_Feature_Columns.ImageUri.Uri = "AlignVerticalLeft"
-		Me.bbi_Show_Similarity_Feature_Columns.Name = "bbi_Show_Similarity_Feature_Columns"
-		'
-		'bbi_Open_Similarity_Details
-		'
-		Me.bbi_Open_Similarity_Details.Caption = "Open Similarity Details"
-		Me.bbi_Open_Similarity_Details.Id = 19
-		Me.bbi_Open_Similarity_Details.ImageUri.Uri = "Preview"
-		Me.bbi_Open_Similarity_Details.Name = "bbi_Open_Similarity_Details"
-		'
-		'bbi_Launch_Random
-		'
-		Me.bbi_Launch_Random.Caption = "Launch Random Title"
-		Me.bbi_Launch_Random.Id = 20
-		Me.bbi_Launch_Random.ImageUri.Uri = "DoubleLast"
-		Me.bbi_Launch_Random.Name = "bbi_Launch_Random"
-		ToolTipTitleItem1.Text = "Launch Random Title"
-		ToolTipItem1.LeftIndent = 6
-		ToolTipItem1.Text = "A title within the current list is randomly selected and launched with the defaul" &
-		"t emulator of that title."
-		SuperToolTip1.Items.Add(ToolTipTitleItem1)
-		SuperToolTip1.Items.Add(ToolTipItem1)
-		Me.bbi_Launch_Random.SuperTip = SuperToolTip1
-		'
-		'bbi_USER_Extras_Manager
-		'
-		Me.bbi_USER_Extras_Manager.Caption = "Open USER Extras &Manager"
-		Me.bbi_USER_Extras_Manager.Id = 21
-		Me.bbi_USER_Extras_Manager.ImageUri.Uri = "Zoom2"
-		Me.bbi_USER_Extras_Manager.Name = "bbi_USER_Extras_Manager"
-		'
-		'bbi_Extras_Viewer_Settings
-		'
-		Me.bbi_Extras_Viewer_Settings.Caption = "Open Viewer Settings"
-		Me.bbi_Extras_Viewer_Settings.Id = 22
-		Me.bbi_Extras_Viewer_Settings.ImageUri.Uri = "Customization"
-		Me.bbi_Extras_Viewer_Settings.Name = "bbi_Extras_Viewer_Settings"
-		'
-		'bbi_GameGroup_Info
-		'
-		Me.bbi_GameGroup_Info.Caption = "Open Group Info"
-		Me.bbi_GameGroup_Info.Id = 23
-		Me.bbi_GameGroup_Info.ImageUri.Uri = "Preview"
-		Me.bbi_GameGroup_Info.Name = "bbi_GameGroup_Info"
-		'
-		'bbi_GameGroup_Filter
-		'
-		Me.bbi_GameGroup_Filter.Caption = "Filter by this group"
-		Me.bbi_GameGroup_Filter.Id = 24
-		Me.bbi_GameGroup_Filter.ImageUri.Uri = "Filter"
-		Me.bbi_GameGroup_Filter.Name = "bbi_GameGroup_Filter"
-		'
-		'bbi_Statistics_Remove
-		'
-		Me.bbi_Statistics_Remove.Caption = "&Remove this statistics entry"
-		Me.bbi_Statistics_Remove.Id = 25
-		Me.bbi_Statistics_Remove.ImageUri.Uri = "Delete"
-		Me.bbi_Statistics_Remove.Name = "bbi_Statistics_Remove"
-		'
-		'bsi_Export
-		'
-		Me.bsi_Export.Caption = "Export"
-		Me.bsi_Export.Id = 26
-		Me.bsi_Export.ImageUri.Uri = "SaveAndNew"
-		Me.bsi_Export.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Export), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Export_CSV), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Export_XLSX)})
-		Me.bsi_Export.Name = "bsi_Export"
-		'
-		'bbi_Export_CSV
-		'
-		Me.bbi_Export_CSV.Caption = "Export List to CSV"
-		Me.bbi_Export_CSV.Id = 27
-		Me.bbi_Export_CSV.ImageUri.Uri = "ExportToCSV"
-		Me.bbi_Export_CSV.Name = "bbi_Export_CSV"
-		'
-		'bbi_Export_XLSX
-		'
-		Me.bbi_Export_XLSX.Caption = "Export List to Excel (XLSX)"
-		Me.bbi_Export_XLSX.Id = 28
-		Me.bbi_Export_XLSX.ImageUri.Uri = "ExportToXLSX"
-		Me.bbi_Export_XLSX.Name = "bbi_Export_XLSX"
-		'
-		'bbi_ScummVM_Templates
-		'
-		Me.bbi_ScummVM_Templates.Caption = "Open ScummVM Templates"
-		Me.bbi_ScummVM_Templates.Id = 29
-		Me.bbi_ScummVM_Templates.ImageUri.Uri = "Replace"
-		Me.bbi_ScummVM_Templates.Name = "bbi_ScummVM_Templates"
-		'
-		'bbi_MOBY_Extras_Manager
-		'
-		Me.bbi_MOBY_Extras_Manager.Caption = "Open MOBY Extras Manager"
-		Me.bbi_MOBY_Extras_Manager.Id = 30
-		Me.bbi_MOBY_Extras_Manager.ImageUri.Uri = "Zoom2"
-		Me.bbi_MOBY_Extras_Manager.Name = "bbi_MOBY_Extras_Manager"
+		Me.colSHA1.FieldName = "SHA1"
+		Me.colSHA1.Name = "colSHA1"
+		Me.colSHA1.OptionsColumn.AllowEdit = False
+		Me.colSHA1.OptionsColumn.ReadOnly = True
 		'
 		'ttctl_TecSpec
 		'
 		'
 		'
 		'
-		'
-		'tlp_Combos
-		'
-		Me.ttctl_TecSpec.SetAllowHtmlText(Me.tlp_Combos, DevExpress.Utils.DefaultBoolean.[Default])
-		Me.tlp_Combos.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.tlp_Combos.ColumnCount = 2
-		Me.tlp_Combos.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-		Me.tlp_Combos.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-		Me.tlp_Combos.Controls.Add(Me.pnl_31, 0, 2)
-		Me.tlp_Combos.Controls.Add(Me.pnl_32, 0, 2)
-		Me.tlp_Combos.Controls.Add(Me.pnl_22, 1, 1)
-		Me.tlp_Combos.Controls.Add(Me.pnl_12, 1, 0)
-		Me.tlp_Combos.Controls.Add(Me.pnl_21, 0, 1)
-		Me.tlp_Combos.Controls.Add(Me.pnl_11, 0, 0)
-		Me.tlp_Combos.Location = New System.Drawing.Point(2, 0)
-		Me.tlp_Combos.Margin = New System.Windows.Forms.Padding(0)
-		Me.tlp_Combos.Name = "tlp_Combos"
-		Me.tlp_Combos.RowCount = 3
-		Me.tlp_Combos.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22.0!))
-		Me.tlp_Combos.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22.0!))
-		Me.tlp_Combos.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22.0!))
-		Me.tlp_Combos.Size = New System.Drawing.Size(486, 67)
-		Me.tlp_Combos.TabIndex = 6
-		'
-		'pnl_31
-		'
-		Me.ttctl_TecSpec.SetAllowHtmlText(Me.pnl_31, DevExpress.Utils.DefaultBoolean.[Default])
-		Me.pnl_31.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-		Me.pnl_31.Controls.Add(Me.lbl_Search)
-		Me.pnl_31.Controls.Add(Me.txb_Search)
-		Me.pnl_31.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.pnl_31.Location = New System.Drawing.Point(0, 44)
-		Me.pnl_31.Margin = New System.Windows.Forms.Padding(0)
-		Me.pnl_31.Name = "pnl_31"
-		Me.pnl_31.Size = New System.Drawing.Size(243, 23)
-		Me.pnl_31.TabIndex = 8
-		'
-		'lbl_Search
-		'
-		Me.lbl_Search.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_Search.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_Search.Location = New System.Drawing.Point(0, 0)
-		Me.lbl_Search.MKBoundControl1 = Nothing
-		Me.lbl_Search.MKBoundControl2 = Nothing
-		Me.lbl_Search.MKBoundControl3 = Nothing
-		Me.lbl_Search.MKBoundControl4 = Nothing
-		Me.lbl_Search.MKBoundControl5 = Nothing
-		Me.lbl_Search.Name = "lbl_Search"
-		Me.lbl_Search.Size = New System.Drawing.Size(53, 20)
-		ToolTipTitleItem2.Text = "Search"
-		ToolTipItem2.LeftIndent = 6
-		ToolTipItem2.Text = "Database-wide search in the following fields:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Name, Alternate Titles, Filename" &
-		", Description, Note and Special Info." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You can also perform a table-wide searc" &
-		"h by pressing CTRL+F."
-		SuperToolTip2.Items.Add(ToolTipTitleItem2)
-		SuperToolTip2.Items.Add(ToolTipItem2)
-		Me.lbl_Search.SuperTip = SuperToolTip2
-		Me.lbl_Search.TabIndex = 0
-		Me.lbl_Search.Text = "Search:"
-		'
-		'txb_Search
-		'
-		Me.txb_Search.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.txb_Search.Location = New System.Drawing.Point(56, 0)
-		Me.txb_Search.Name = "txb_Search"
-		Me.txb_Search.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Redo, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject1, SerializableAppearanceObject2, SerializableAppearanceObject3, SerializableAppearanceObject4, "Apply Search", Nothing, Nothing, True)})
-		Me.txb_Search.Size = New System.Drawing.Size(186, 20)
-		ToolTipTitleItem3.Text = "Search"
-		ToolTipItem3.LeftIndent = 6
-		ToolTipItem3.Text = "Database-wide search in the following fields:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Name, Alternate Titles, Filename" &
-		", Description, Note and Special Info." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You can always perform a table-wide sea" &
-		"rch by pressing CTRL+F."
-		SuperToolTip3.Items.Add(ToolTipTitleItem3)
-		SuperToolTip3.Items.Add(ToolTipItem3)
-		Me.txb_Search.SuperTip = SuperToolTip3
-		Me.txb_Search.TabIndex = 1
-		'
-		'pnl_32
-		'
-		Me.ttctl_TecSpec.SetAllowHtmlText(Me.pnl_32, DevExpress.Utils.DefaultBoolean.[Default])
-		Me.pnl_32.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-		Me.pnl_32.Controls.Add(Me.lbl_Similarity)
-		Me.pnl_32.Controls.Add(Me.cmb_Similarity_Calculation_Results)
-		Me.pnl_32.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.pnl_32.Location = New System.Drawing.Point(243, 44)
-		Me.pnl_32.Margin = New System.Windows.Forms.Padding(0)
-		Me.pnl_32.Name = "pnl_32"
-		Me.pnl_32.Size = New System.Drawing.Size(243, 23)
-		Me.pnl_32.TabIndex = 9
-		'
-		'lbl_Similarity
-		'
-		Me.lbl_Similarity.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_Similarity.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_Similarity.Location = New System.Drawing.Point(1, -1)
-		Me.lbl_Similarity.MKBoundControl1 = Nothing
-		Me.lbl_Similarity.MKBoundControl2 = Nothing
-		Me.lbl_Similarity.MKBoundControl3 = Nothing
-		Me.lbl_Similarity.MKBoundControl4 = Nothing
-		Me.lbl_Similarity.MKBoundControl5 = Nothing
-		Me.lbl_Similarity.Name = "lbl_Similarity"
-		Me.lbl_Similarity.Size = New System.Drawing.Size(53, 20)
-		ToolTipTitleItem4.Text = "Similar to"
-		ToolTipItem4.LeftIndent = 6
-		ToolTipItem4.Text = "Choose from your saved Similarity Calculation results to feed them to the main ta" &
-		"ble"
-		SuperToolTip4.Items.Add(ToolTipTitleItem4)
-		SuperToolTip4.Items.Add(ToolTipItem4)
-		Me.lbl_Similarity.SuperTip = SuperToolTip4
-		Me.lbl_Similarity.TabIndex = 0
-		Me.lbl_Similarity.Text = "Similar to:"
-		'
-		'cmb_Similarity_Calculation_Results
-		'
-		Me.cmb_Similarity_Calculation_Results.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.cmb_Similarity_Calculation_Results.EditValue = 0
-		Me.cmb_Similarity_Calculation_Results.Location = New System.Drawing.Point(57, -1)
-		Me.cmb_Similarity_Calculation_Results.MKBoundLabel = Nothing
-		Me.cmb_Similarity_Calculation_Results.MKEditValue_Compare = Nothing
-		Me.cmb_Similarity_Calculation_Results.Name = "cmb_Similarity_Calculation_Results"
-		ToolTipTitleItem5.Text = "Delete similarity calculation results"
-		SuperToolTip5.Items.Add(ToolTipTitleItem5)
-		ToolTipTitleItem6.Text = "Show similarity calculation results"
-		SuperToolTip6.Items.Add(ToolTipTitleItem6)
-		Me.cmb_Similarity_Calculation_Results.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Minus, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject5, SerializableAppearanceObject6, SerializableAppearanceObject7, SerializableAppearanceObject8, "", Nothing, SuperToolTip5, True), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject9, SerializableAppearanceObject10, SerializableAppearanceObject11, SerializableAppearanceObject12, "", Nothing, SuperToolTip6, True)})
-		Me.cmb_Similarity_Calculation_Results.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("id_Similarity_Calculation_Results", "id_Similarity_Calculation_Results", 5, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 5, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
-		Me.cmb_Similarity_Calculation_Results.Properties.DataSource = Me.BS_Similarity_Calculation_Results
-		Me.cmb_Similarity_Calculation_Results.Properties.DisplayMember = "Name"
-		Me.cmb_Similarity_Calculation_Results.Properties.NullText = ""
-		Me.cmb_Similarity_Calculation_Results.Properties.ShowHeader = False
-		Me.cmb_Similarity_Calculation_Results.Properties.ValueMember = "id_Similarity_Calculation_Results"
-		Me.cmb_Similarity_Calculation_Results.Size = New System.Drawing.Size(186, 20)
-		ToolTipTitleItem7.Text = "Similar to"
-		ToolTipItem5.LeftIndent = 6
-		ToolTipItem5.Text = "Choose from your saved Similarity Calculation results to feed them to the main ta" &
-		"ble"
-		SuperToolTip7.Items.Add(ToolTipTitleItem7)
-		SuperToolTip7.Items.Add(ToolTipItem5)
-		Me.cmb_Similarity_Calculation_Results.SuperTip = SuperToolTip7
-		Me.cmb_Similarity_Calculation_Results.TabIndex = 1
-		'
-		'BS_Similarity_Calculation_Results
-		'
-		Me.BS_Similarity_Calculation_Results.DataMember = "src_ucr_Emulation_cmb_Similarity_Calculation_Results"
-		Me.BS_Similarity_Calculation_Results.DataSource = Me.DS_ML
-		'
-		'pnl_22
-		'
-		Me.ttctl_TecSpec.SetAllowHtmlText(Me.pnl_22, DevExpress.Utils.DefaultBoolean.[Default])
-		Me.pnl_22.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-		Me.pnl_22.Controls.Add(Me.lbl_Group)
-		Me.pnl_22.Controls.Add(Me.cmb_Groups)
-		Me.pnl_22.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.pnl_22.Location = New System.Drawing.Point(243, 22)
-		Me.pnl_22.Margin = New System.Windows.Forms.Padding(0)
-		Me.pnl_22.Name = "pnl_22"
-		Me.pnl_22.Size = New System.Drawing.Size(243, 22)
-		Me.pnl_22.TabIndex = 7
-		'
-		'lbl_Group
-		'
-		Me.lbl_Group.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_Group.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_Group.Location = New System.Drawing.Point(1, -1)
-		Me.lbl_Group.MKBoundControl1 = Nothing
-		Me.lbl_Group.MKBoundControl2 = Nothing
-		Me.lbl_Group.MKBoundControl3 = Nothing
-		Me.lbl_Group.MKBoundControl4 = Nothing
-		Me.lbl_Group.MKBoundControl5 = Nothing
-		Me.lbl_Group.Name = "lbl_Group"
-		Me.lbl_Group.Size = New System.Drawing.Size(53, 20)
-		ToolTipTitleItem8.Text = "Group"
-		ToolTipItem6.LeftIndent = 6
-		ToolTipItem6.Text = "Filter by Game Groups"
-		SuperToolTip8.Items.Add(ToolTipTitleItem8)
-		SuperToolTip8.Items.Add(ToolTipItem6)
-		Me.lbl_Group.SuperTip = SuperToolTip8
-		Me.lbl_Group.TabIndex = 0
-		Me.lbl_Group.Text = "Group:"
-		'
-		'cmb_Groups
-		'
-		Me.cmb_Groups.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.cmb_Groups.Location = New System.Drawing.Point(57, -1)
-		Me.cmb_Groups.MKBoundLabel = Nothing
-		Me.cmb_Groups.MKEditValue_Compare = Nothing
-		Me.cmb_Groups.Name = "cmb_Groups"
-		ToolTipTitleItem9.Text = "Show Group info"
-		SuperToolTip9.Items.Add(ToolTipTitleItem9)
-		Me.cmb_Groups.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject13, SerializableAppearanceObject14, SerializableAppearanceObject15, SerializableAppearanceObject16, "", Nothing, SuperToolTip9, True)})
-		Me.cmb_Groups.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("id_Moby_Game_Groups", "id_Moby_Game_Groups", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 5, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
-		Me.cmb_Groups.Properties.DataSource = Me.BS_Group
-		Me.cmb_Groups.Properties.DisplayMember = "Name"
-		Me.cmb_Groups.Properties.NullText = ""
-		Me.cmb_Groups.Properties.ShowHeader = False
-		Me.cmb_Groups.Properties.ValueMember = "id_Moby_Game_Groups"
-		Me.cmb_Groups.Size = New System.Drawing.Size(186, 20)
-		ToolTipTitleItem10.Text = "Group"
-		ToolTipItem7.LeftIndent = 6
-		ToolTipItem7.Text = "Filter by Game Groups"
-		SuperToolTip10.Items.Add(ToolTipTitleItem10)
-		SuperToolTip10.Items.Add(ToolTipItem7)
-		Me.cmb_Groups.SuperTip = SuperToolTip10
-		Me.cmb_Groups.TabIndex = 1
-		'
-		'BS_Group
-		'
-		Me.BS_Group.DataMember = "src_ucr_Emulation_cmb_Groups"
-		Me.BS_Group.DataSource = Me.DS_ML
-		'
-		'pnl_12
-		'
-		Me.ttctl_TecSpec.SetAllowHtmlText(Me.pnl_12, DevExpress.Utils.DefaultBoolean.[Default])
-		Me.pnl_12.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-		Me.pnl_12.Controls.Add(Me.lbl_Filterset)
-		Me.pnl_12.Controls.Add(Me.cmb_Filterset)
-		Me.pnl_12.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.pnl_12.Location = New System.Drawing.Point(243, 0)
-		Me.pnl_12.Margin = New System.Windows.Forms.Padding(0)
-		Me.pnl_12.Name = "pnl_12"
-		Me.pnl_12.Size = New System.Drawing.Size(243, 22)
-		Me.pnl_12.TabIndex = 7
-		'
-		'lbl_Filterset
-		'
-		Me.lbl_Filterset.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_Filterset.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_Filterset.Location = New System.Drawing.Point(1, 0)
-		Me.lbl_Filterset.MKBoundControl1 = Nothing
-		Me.lbl_Filterset.MKBoundControl2 = Nothing
-		Me.lbl_Filterset.MKBoundControl3 = Nothing
-		Me.lbl_Filterset.MKBoundControl4 = Nothing
-		Me.lbl_Filterset.MKBoundControl5 = Nothing
-		Me.lbl_Filterset.Name = "lbl_Filterset"
-		Me.lbl_Filterset.Size = New System.Drawing.Size(53, 20)
-		ToolTipTitleItem11.Text = "Filterset"
-		ToolTipItem8.LeftIndent = 6
-		ToolTipItem8.Text = "Organize your filters in saved and re-usable filter sets"
-		SuperToolTip11.Items.Add(ToolTipTitleItem11)
-		SuperToolTip11.Items.Add(ToolTipItem8)
-		Me.lbl_Filterset.SuperTip = SuperToolTip11
-		Me.lbl_Filterset.TabIndex = 0
-		Me.lbl_Filterset.Text = "Filterset:"
-		'
-		'cmb_Filterset
-		'
-		Me.cmb_Filterset.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.cmb_Filterset.Location = New System.Drawing.Point(57, 0)
-		Me.cmb_Filterset.MKBoundLabel = Nothing
-		Me.cmb_Filterset.MKEditValue_Compare = Nothing
-		Me.cmb_Filterset.Name = "cmb_Filterset"
-		ToolTipTitleItem12.Text = "Add a new filterset"
-		SuperToolTip12.Items.Add(ToolTipTitleItem12)
-		ToolTipTitleItem13.Text = "Delete this filterset"
-		SuperToolTip13.Items.Add(ToolTipTitleItem13)
-		ToolTipTitleItem14.Text = "Edit this filterset"
-		SuperToolTip14.Items.Add(ToolTipTitleItem14)
-		Me.cmb_Filterset.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject17, SerializableAppearanceObject18, SerializableAppearanceObject19, SerializableAppearanceObject20, "", Nothing, SuperToolTip12, True), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Minus, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject21, SerializableAppearanceObject22, SerializableAppearanceObject23, SerializableAppearanceObject24, "", Nothing, SuperToolTip13, True), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject25, SerializableAppearanceObject26, SerializableAppearanceObject27, SerializableAppearanceObject28, "", Nothing, SuperToolTip14, True)})
-		Me.cmb_Filterset.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("id_FilterSets", "id_Filter Sets", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Type", "Type", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 5, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ApplyGridFilter", "Apply Grid Filter", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("GridFilter", "Grid Filter", 5, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("id_Moby_Platforms", "id_Moby_Platforms", 5, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Display_Name", "Display_Name", 5, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near)})
-		Me.cmb_Filterset.Properties.DataSource = Me.BS_FilterSets
-		Me.cmb_Filterset.Properties.DisplayMember = "Name"
-		Me.cmb_Filterset.Properties.NullText = ""
-		Me.cmb_Filterset.Properties.ShowHeader = False
-		Me.cmb_Filterset.Properties.ValueMember = "id_FilterSets"
-		Me.cmb_Filterset.Size = New System.Drawing.Size(186, 20)
-		ToolTipTitleItem15.Text = "Filterset"
-		ToolTipItem9.LeftIndent = 6
-		ToolTipItem9.Text = "Organize your filters in saved and re-usable filter sets"
-		SuperToolTip15.Items.Add(ToolTipTitleItem15)
-		SuperToolTip15.Items.Add(ToolTipItem9)
-		Me.cmb_Filterset.SuperTip = SuperToolTip15
-		Me.cmb_Filterset.TabIndex = 1
-		'
-		'BS_FilterSets
-		'
-		Me.BS_FilterSets.DataMember = "tbl_FilterSets"
-		Me.BS_FilterSets.DataSource = Me.DS_ML
-		'
-		'pnl_21
-		'
-		Me.ttctl_TecSpec.SetAllowHtmlText(Me.pnl_21, DevExpress.Utils.DefaultBoolean.[Default])
-		Me.pnl_21.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-		Me.pnl_21.Controls.Add(Me.lbl_Staff)
-		Me.pnl_21.Controls.Add(Me.cmb_Staff)
-		Me.pnl_21.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.pnl_21.Location = New System.Drawing.Point(0, 22)
-		Me.pnl_21.Margin = New System.Windows.Forms.Padding(0)
-		Me.pnl_21.Name = "pnl_21"
-		Me.pnl_21.Size = New System.Drawing.Size(243, 22)
-		Me.pnl_21.TabIndex = 7
-		'
-		'lbl_Staff
-		'
-		Me.lbl_Staff.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_Staff.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_Staff.Location = New System.Drawing.Point(0, 0)
-		Me.lbl_Staff.MKBoundControl1 = Nothing
-		Me.lbl_Staff.MKBoundControl2 = Nothing
-		Me.lbl_Staff.MKBoundControl3 = Nothing
-		Me.lbl_Staff.MKBoundControl4 = Nothing
-		Me.lbl_Staff.MKBoundControl5 = Nothing
-		Me.lbl_Staff.Name = "lbl_Staff"
-		Me.lbl_Staff.Size = New System.Drawing.Size(53, 20)
-		ToolTipTitleItem16.Text = "Staff"
-		ToolTipItem10.LeftIndent = 6
-		ToolTipItem10.Text = "Filter by individual staff members"
-		SuperToolTip16.Items.Add(ToolTipTitleItem16)
-		SuperToolTip16.Items.Add(ToolTipItem10)
-		Me.lbl_Staff.SuperTip = SuperToolTip16
-		Me.lbl_Staff.TabIndex = 0
-		Me.lbl_Staff.Text = "Staff:"
-		'
-		'cmb_Staff
-		'
-		Me.cmb_Staff.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.cmb_Staff.Location = New System.Drawing.Point(56, 0)
-		Me.cmb_Staff.MKBoundLabel = Nothing
-		Me.cmb_Staff.MKEditValue_Compare = Nothing
-		Me.cmb_Staff.Name = "cmb_Staff"
-		ToolTipTitleItem17.Text = "Show Staff Info"
-		SuperToolTip17.Items.Add(ToolTipTitleItem17)
-		Me.cmb_Staff.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject29, SerializableAppearanceObject30, SerializableAppearanceObject31, SerializableAppearanceObject32, "", Nothing, SuperToolTip17, True)})
-		Me.cmb_Staff.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("id_Moby_Staff", "id_Moby_Staff", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 5, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
-		Me.cmb_Staff.Properties.DataSource = Me.BS_Developer
-		Me.cmb_Staff.Properties.DisplayMember = "Name"
-		Me.cmb_Staff.Properties.NullText = ""
-		Me.cmb_Staff.Properties.ShowHeader = False
-		Me.cmb_Staff.Properties.ValueMember = "id_Moby_Staff"
-		Me.cmb_Staff.Size = New System.Drawing.Size(186, 20)
-		ToolTipTitleItem18.Text = "Developer"
-		ToolTipItem11.LeftIndent = 6
-		ToolTipItem11.Text = "Filter by individual staff members"
-		SuperToolTip18.Items.Add(ToolTipTitleItem18)
-		SuperToolTip18.Items.Add(ToolTipItem11)
-		Me.cmb_Staff.SuperTip = SuperToolTip18
-		Me.cmb_Staff.TabIndex = 1
-		'
-		'BS_Developer
-		'
-		Me.BS_Developer.DataMember = "src_ucr_Emulation_cmb_Staff"
-		Me.BS_Developer.DataSource = Me.DS_ML
-		'
-		'pnl_11
-		'
-		Me.ttctl_TecSpec.SetAllowHtmlText(Me.pnl_11, DevExpress.Utils.DefaultBoolean.[Default])
-		Me.pnl_11.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-		Me.pnl_11.Controls.Add(Me.lbl_Platform)
-		Me.pnl_11.Controls.Add(Me.cmb_Platform)
-		Me.pnl_11.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.pnl_11.Location = New System.Drawing.Point(0, 0)
-		Me.pnl_11.Margin = New System.Windows.Forms.Padding(0)
-		Me.pnl_11.Name = "pnl_11"
-		Me.pnl_11.Size = New System.Drawing.Size(243, 22)
-		Me.pnl_11.TabIndex = 7
-		'
-		'lbl_Platform
-		'
-		Me.lbl_Platform.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_Platform.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_Platform.Location = New System.Drawing.Point(0, 0)
-		Me.lbl_Platform.MKBoundControl1 = Nothing
-		Me.lbl_Platform.MKBoundControl2 = Nothing
-		Me.lbl_Platform.MKBoundControl3 = Nothing
-		Me.lbl_Platform.MKBoundControl4 = Nothing
-		Me.lbl_Platform.MKBoundControl5 = Nothing
-		Me.lbl_Platform.Name = "lbl_Platform"
-		Me.lbl_Platform.Size = New System.Drawing.Size(53, 20)
-		ToolTipTitleItem19.Text = "Platform"
-		ToolTipItem12.LeftIndent = 6
-		ToolTipItem12.Text = "Filter by a specific platform - or choose ""All Platforms"""
-		SuperToolTip19.Items.Add(ToolTipTitleItem19)
-		SuperToolTip19.Items.Add(ToolTipItem12)
-		Me.lbl_Platform.SuperTip = SuperToolTip19
-		Me.lbl_Platform.TabIndex = 0
-		Me.lbl_Platform.Text = "Platform:"
-		'
-		'cmb_Platform
-		'
-		Me.cmb_Platform.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.cmb_Platform.Location = New System.Drawing.Point(56, 0)
-		Me.cmb_Platform.MKBoundLabel = Nothing
-		Me.cmb_Platform.MKEditValue_Compare = Nothing
-		Me.cmb_Platform.Name = "cmb_Platform"
-		ToolTipTitleItem20.Text = "Open the Platform Settings dialog"
-		SuperToolTip20.Items.Add(ToolTipTitleItem20)
-		Me.cmb_Platform.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject33, SerializableAppearanceObject34, SerializableAppearanceObject35, SerializableAppearanceObject36, "", Nothing, SuperToolTip20, True)})
-		Me.cmb_Platform.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("id_Moby_Platforms", "id_Moby_Platforms", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 200, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ShortName", "Short Name", 50, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
-		Me.cmb_Platform.Properties.DataSource = Me.BS_Platforms
-		Me.cmb_Platform.Properties.DisplayMember = "Name"
-		Me.cmb_Platform.Properties.NullText = "[please select]"
-		Me.cmb_Platform.Properties.ShowHeader = False
-		Me.cmb_Platform.Properties.ValueMember = "id_Moby_Platforms"
-		Me.cmb_Platform.Size = New System.Drawing.Size(186, 20)
-		ToolTipTitleItem21.Text = "Platform"
-		ToolTipItem13.LeftIndent = 6
-		ToolTipItem13.Text = "Filter by a specific platform - or choose ""All Platforms"""
-		SuperToolTip21.Items.Add(ToolTipTitleItem21)
-		SuperToolTip21.Items.Add(ToolTipItem13)
-		Me.cmb_Platform.SuperTip = SuperToolTip21
-		Me.cmb_Platform.TabIndex = 1
-		'
-		'BS_Platforms
-		'
-		Me.BS_Platforms.DataMember = "src_ucr_Emulation_Platforms"
-		Me.BS_Platforms.DataSource = Me.DS_ML
 		'
 		'spnl_Summary
 		'
@@ -2539,20 +2801,249 @@ Partial Class ucr_Emulation
 		Me.spnl_Summary.Size = New System.Drawing.Size(301, 299)
 		Me.spnl_Summary.TabIndex = 0
 		'
+		'cxm_Cheevos
+		'
+		Me.ttctl_TecSpec.SetAllowHtmlText(Me.cxm_Cheevos, DevExpress.Utils.DefaultBoolean.[Default])
+		Me.cxm_Cheevos.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mni_Cheevos_Add_Challenge, Me.mni_Cheevos_Manage_Challenges})
+		Me.cxm_Cheevos.Name = "cxm_Cheevos"
+		Me.cxm_Cheevos.Size = New System.Drawing.Size(167, 70)
+		'
+		'mni_Cheevos_Add_Challenge
+		'
+		Me.mni_Cheevos_Add_Challenge.Name = "mni_Cheevos_Add_Challenge"
+		Me.mni_Cheevos_Add_Challenge.Size = New System.Drawing.Size(166, 22)
+		Me.mni_Cheevos_Add_Challenge.Text = "&Add to Challenge"
+		'
+		'mni_Cheevos_Manage_Challenges
+		'
+		Me.mni_Cheevos_Manage_Challenges.Name = "mni_Cheevos_Manage_Challenges"
+		Me.mni_Cheevos_Manage_Challenges.Size = New System.Drawing.Size(166, 22)
+		Me.mni_Cheevos_Manage_Challenges.Text = "&Edit Challenges"
+		'
+		'pnl_Achievements
+		'
+		Me.ttctl_TecSpec.SetAllowHtmlText(Me.pnl_Achievements, DevExpress.Utils.DefaultBoolean.[Default])
+		Me.pnl_Achievements.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.pnl_Achievements.Controls.Add(Me.gb_Cheevos)
+		Me.pnl_Achievements.Controls.Add(Me.lbl_RetroAchievements_Message)
+		Me.pnl_Achievements.Controls.Add(Me.prg_RetroAchievements_Download)
+		Me.pnl_Achievements.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.pnl_Achievements.Location = New System.Drawing.Point(0, 0)
+		Me.pnl_Achievements.Name = "pnl_Achievements"
+		Me.pnl_Achievements.Size = New System.Drawing.Size(301, 174)
+		Me.pnl_Achievements.TabIndex = 9
+		'
+		'gb_Cheevos
+		'
+		Me.gb_Cheevos.Controls.Add(Me.grd_RetroAchievements)
+		Me.gb_Cheevos.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.gb_Cheevos.Location = New System.Drawing.Point(0, 19)
+		Me.gb_Cheevos.Name = "gb_Cheevos"
+		Me.gb_Cheevos.Size = New System.Drawing.Size(301, 142)
+		Me.gb_Cheevos.TabIndex = 9
+		Me.gb_Cheevos.Text = "RetroAchievements"
+		Me.gb_Cheevos.ToolTipController = Me.ttctl_TecSpec.DefaultController
+		'
+		'grd_RetroAchievements
+		'
+		Me.grd_RetroAchievements.ContextMenuStrip = Me.cxm_Cheevos
+		Me.grd_RetroAchievements.DataSource = Me.BS_RetroAchievements
+		Me.grd_RetroAchievements.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.grd_RetroAchievements.Location = New System.Drawing.Point(2, 20)
+		Me.grd_RetroAchievements.MainView = Me.agv_RetroAchievements
+		Me.grd_RetroAchievements.MenuManager = Me.barmng
+		Me.grd_RetroAchievements.Name = "grd_RetroAchievements"
+		Me.grd_RetroAchievements.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_RetroAchievements_Unlock})
+		Me.grd_RetroAchievements.Size = New System.Drawing.Size(297, 120)
+		Me.grd_RetroAchievements.TabIndex = 8
+		Me.grd_RetroAchievements.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.agv_RetroAchievements})
+		'
+		'BS_RetroAchievements
+		'
+		Me.BS_RetroAchievements.DataMember = "tbl_RetroAchievements"
+		Me.BS_RetroAchievements.DataSource = Me.DS_RetroAchievements
+		Me.BS_RetroAchievements.Sort = "id_RetroAchievements_Unlock ASC"
+		'
+		'DS_RetroAchievements
+		'
+		Me.DS_RetroAchievements.DataSetName = "NewDataSet"
+		Me.DS_RetroAchievements.Tables.AddRange(New System.Data.DataTable() {Me.DataTable1})
+		'
+		'DataTable1
+		'
+		Me.DataTable1.Columns.AddRange(New System.Data.DataColumn() {Me.DataColumn1, Me.DataColumn2, Me.DataColumn3, Me.DataColumn4, Me.DataColumn5, Me.DataColumn6, Me.DataColumn7, Me.DataColumn8})
+		Me.DataTable1.TableName = "tbl_RetroAchievements"
+		'
+		'DataColumn1
+		'
+		Me.DataColumn1.ColumnName = "GameName"
+		'
+		'DataColumn2
+		'
+		Me.DataColumn2.ColumnName = "ID"
+		'
+		'DataColumn3
+		'
+		Me.DataColumn3.ColumnName = "Title"
+		'
+		'DataColumn4
+		'
+		Me.DataColumn4.ColumnName = "Description"
+		'
+		'DataColumn5
+		'
+		Me.DataColumn5.ColumnName = "Points"
+		Me.DataColumn5.DataType = GetType(Integer)
+		'
+		'DataColumn6
+		'
+		Me.DataColumn6.ColumnName = "BadgeName"
+		'
+		'DataColumn7
+		'
+		Me.DataColumn7.ColumnName = "Flags"
+		Me.DataColumn7.DataType = GetType(Integer)
+		'
+		'DataColumn8
+		'
+		Me.DataColumn8.ColumnName = "id_RetroAchievements_Unlock"
+		Me.DataColumn8.DataType = GetType(Integer)
+		'
+		'agv_RetroAchievements
+		'
+		Me.agv_RetroAchievements.Bands.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.GridBand() {Me.GridBand1})
+		Me.agv_RetroAchievements.Columns.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn() {Me.colTitle, Me.colDescription1, Me.colid_RetroAchievements_Unlock})
+		Me.agv_RetroAchievements.GridControl = Me.grd_RetroAchievements
+		Me.agv_RetroAchievements.GroupCount = 1
+		Me.agv_RetroAchievements.GroupFormat = "{1}"
+		Me.agv_RetroAchievements.Name = "agv_RetroAchievements"
+		Me.agv_RetroAchievements.OptionsView.ColumnAutoWidth = True
+		Me.agv_RetroAchievements.OptionsView.ShowBands = False
+		Me.agv_RetroAchievements.OptionsView.ShowColumnHeaders = False
+		Me.agv_RetroAchievements.OptionsView.ShowGroupPanel = False
+		Me.agv_RetroAchievements.OptionsView.ShowIndicator = False
+		Me.agv_RetroAchievements.SortInfo.AddRange(New DevExpress.XtraGrid.Columns.GridColumnSortInfo() {New DevExpress.XtraGrid.Columns.GridColumnSortInfo(Me.colid_RetroAchievements_Unlock, DevExpress.Data.ColumnSortOrder.Ascending)})
+		'
+		'GridBand1
+		'
+		Me.GridBand1.Caption = "GridBand1"
+		Me.GridBand1.Columns.Add(Me.colTitle)
+		Me.GridBand1.Columns.Add(Me.colDescription1)
+		Me.GridBand1.Columns.Add(Me.colid_RetroAchievements_Unlock)
+		Me.GridBand1.Name = "GridBand1"
+		Me.GridBand1.VisibleIndex = 0
+		Me.GridBand1.Width = 276
+		'
+		'colTitle
+		'
+		Me.colTitle.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+		Me.colTitle.AppearanceCell.Options.UseFont = True
+		Me.colTitle.FieldName = "Title"
+		Me.colTitle.Name = "colTitle"
+		Me.colTitle.OptionsColumn.AllowEdit = False
+		Me.colTitle.OptionsColumn.AllowFocus = False
+		Me.colTitle.OptionsColumn.ReadOnly = True
+		Me.colTitle.Visible = True
+		Me.colTitle.Width = 276
+		'
+		'colDescription1
+		'
+		Me.colDescription1.AutoFillDown = True
+		Me.colDescription1.FieldName = "Description"
+		Me.colDescription1.Name = "colDescription1"
+		Me.colDescription1.OptionsColumn.AllowEdit = False
+		Me.colDescription1.OptionsColumn.AllowFocus = False
+		Me.colDescription1.OptionsColumn.ReadOnly = True
+		Me.colDescription1.RowIndex = 1
+		Me.colDescription1.Visible = True
+		Me.colDescription1.Width = 276
+		'
+		'colid_RetroAchievements_Unlock
+		'
+		Me.colid_RetroAchievements_Unlock.ColumnEdit = Me.rpi_RetroAchievements_Unlock
+		Me.colid_RetroAchievements_Unlock.FieldName = "id_RetroAchievements_Unlock"
+		Me.colid_RetroAchievements_Unlock.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.Value
+		Me.colid_RetroAchievements_Unlock.Name = "colid_RetroAchievements_Unlock"
+		Me.colid_RetroAchievements_Unlock.RowIndex = 2
+		'
+		'rpi_RetroAchievements_Unlock
+		'
+		Me.rpi_RetroAchievements_Unlock.AutoHeight = False
+		Me.rpi_RetroAchievements_Unlock.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+		Me.rpi_RetroAchievements_Unlock.DataSource = Me.BTA_RetroAchievement_Unlocks
+		Me.rpi_RetroAchievements_Unlock.DisplayMember = "DisplayText"
+		Me.rpi_RetroAchievements_Unlock.Name = "rpi_RetroAchievements_Unlock"
+		Me.rpi_RetroAchievements_Unlock.ValueMember = "id"
+		'
+		'BTA_RetroAchievement_Unlocks
+		'
+		Me.BTA_RetroAchievement_Unlocks.AllowDelete = True
+		Me.BTA_RetroAchievement_Unlocks.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_RetroAchievement_Unlocks.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_RetroAchievement_Unlocks.Connection = Nothing
+		Me.BTA_RetroAchievement_Unlocks.DSStream = CType(resources.GetObject("BTA_RetroAchievement_Unlocks.DSStream"), System.IO.MemoryStream)
+		Me.BTA_RetroAchievement_Unlocks.FillMethod = MKNetLib.FillMethod.ValueList
+		Me.BTA_RetroAchievement_Unlocks.FillString = "0;""Remaining Achievements"";1;""Unlocked Achievements (Casual)"";2;""Unlocked Achieve" &
+		"ments (Hardcore)"""
+		Me.BTA_RetroAchievement_Unlocks.Position = 0
+		Me.BTA_RetroAchievement_Unlocks.Transaction = Nothing
+		Me.BTA_RetroAchievement_Unlocks.UpdateTablesStream = CType(resources.GetObject("BTA_RetroAchievement_Unlocks.UpdateTablesStream"), System.Collections.Generic.List(Of String))
+		'
+		'lbl_RetroAchievements_Message
+		'
+		Me.lbl_RetroAchievements_Message.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical
+		Me.lbl_RetroAchievements_Message.Dock = System.Windows.Forms.DockStyle.Top
+		Me.lbl_RetroAchievements_Message.Location = New System.Drawing.Point(0, 0)
+		Me.lbl_RetroAchievements_Message.MKBoundControl1 = Nothing
+		Me.lbl_RetroAchievements_Message.MKBoundControl2 = Nothing
+		Me.lbl_RetroAchievements_Message.MKBoundControl3 = Nothing
+		Me.lbl_RetroAchievements_Message.MKBoundControl4 = Nothing
+		Me.lbl_RetroAchievements_Message.MKBoundControl5 = Nothing
+		Me.lbl_RetroAchievements_Message.Name = "lbl_RetroAchievements_Message"
+		Me.lbl_RetroAchievements_Message.Padding = New System.Windows.Forms.Padding(3)
+		Me.lbl_RetroAchievements_Message.Size = New System.Drawing.Size(301, 19)
+		Me.lbl_RetroAchievements_Message.TabIndex = 1
+		Me.lbl_RetroAchievements_Message.Text = "RetroAchievements Message"
+		Me.lbl_RetroAchievements_Message.Visible = False
+		'
+		'prg_RetroAchievements_Download
+		'
+		Me.prg_RetroAchievements_Download.Dock = System.Windows.Forms.DockStyle.Bottom
+		Me.prg_RetroAchievements_Download.Location = New System.Drawing.Point(0, 161)
+		Me.prg_RetroAchievements_Download.MenuManager = Me.barmng
+		Me.prg_RetroAchievements_Download.Name = "prg_RetroAchievements_Download"
+		Me.prg_RetroAchievements_Download.Properties.ProgressViewStyle = DevExpress.XtraEditors.Controls.ProgressViewStyle.Solid
+		Me.prg_RetroAchievements_Download.Properties.ShowTitle = True
+		Me.prg_RetroAchievements_Download.Size = New System.Drawing.Size(301, 13)
+		Me.prg_RetroAchievements_Download.TabIndex = 7
+		Me.prg_RetroAchievements_Download.Visible = False
+		'
+		'cxm_Cheevo_Challenges_Cheevos
+		'
+		Me.ttctl_TecSpec.SetAllowHtmlText(Me.cxm_Cheevo_Challenges_Cheevos, DevExpress.Utils.DefaultBoolean.[Default])
+		Me.cxm_Cheevo_Challenges_Cheevos.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2})
+		Me.cxm_Cheevo_Challenges_Cheevos.Name = "cxm_Cheevos"
+		Me.cxm_Cheevo_Challenges_Cheevos.Size = New System.Drawing.Size(156, 26)
+		'
+		'ToolStripMenuItem2
+		'
+		Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+		Me.ToolStripMenuItem2.Size = New System.Drawing.Size(155, 22)
+		Me.ToolStripMenuItem2.Text = "&Edit Challenges"
+		'
 		'filteringUIContext
 		'
 		Me.filteringUIContext.Control = Me.accordion_FilterUI
 		Me.filteringUIContext.ModelType = GetType(Metropolis_Launcher.cls_FilteringModel_Emulation_Games)
 		'
-		'tcl_App
+		'tcl_Details
 		'
-		Me.tcl_App.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.tcl_App.Location = New System.Drawing.Point(0, 0)
-		Me.tcl_App.Name = "tcl_App"
-		Me.tcl_App.SelectedTabPage = Me.tpg_Summary
-		Me.tcl_App.Size = New System.Drawing.Size(307, 327)
-		Me.tcl_App.TabIndex = 0
-		Me.tcl_App.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.tpg_Summary, Me.tpg_TechnicalSpecs, Me.tpg_Stats, Me.tpg_Rating, Me.tpg_Game_Groups, Me.tpg_Staff, Me.tpg_Have, Me.tpg_Want})
+		Me.tcl_Details.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.tcl_Details.Location = New System.Drawing.Point(0, 0)
+		Me.tcl_Details.Name = "tcl_Details"
+		Me.tcl_Details.SelectedTabPage = Me.tpg_Summary
+		Me.tcl_Details.Size = New System.Drawing.Size(307, 327)
+		Me.tcl_Details.TabIndex = 0
+		Me.tcl_Details.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.tpg_Summary, Me.tpg_TechnicalSpecs, Me.tpg_Stats, Me.tpg_Rating, Me.tpg_Game_Groups, Me.tpg_Staff, Me.tpg_Have, Me.tpg_Want, Me.tpg_RetroAchievements})
 		'
 		'tpg_Summary
 		'
@@ -2718,7 +3209,7 @@ Partial Class ucr_Emulation
 		Me.lbl_Emu_Games_Runtime.Padding = New System.Windows.Forms.Padding(3)
 		Me.lbl_Emu_Games_Runtime.Size = New System.Drawing.Size(90, 25)
 		Me.lbl_Emu_Games_Runtime.TabIndex = 7
-		Me.lbl_Emu_Games_Runtime.Text = "Total runtime:"
+		Me.lbl_Emu_Games_Runtime.Text = "Total Runtime:"
 		'
 		'lbl_Emu_Games_Runtime_Value
 		'
@@ -2771,7 +3262,7 @@ Partial Class ucr_Emulation
 		Me.lbl_Emu_Games_Plays.Padding = New System.Windows.Forms.Padding(3)
 		Me.lbl_Emu_Games_Plays.Size = New System.Drawing.Size(89, 25)
 		Me.lbl_Emu_Games_Plays.TabIndex = 6
-		Me.lbl_Emu_Games_Plays.Text = "Total plays:"
+		Me.lbl_Emu_Games_Plays.Text = "Total Plays:"
 		'
 		'tpg_Rating
 		'
@@ -3867,6 +4358,130 @@ Partial Class ucr_Emulation
 		Me.tpg_Want.Size = New System.Drawing.Size(301, 299)
 		Me.tpg_Want.Text = "Want"
 		'
+		'tpg_RetroAchievements
+		'
+		Me.tpg_RetroAchievements.Controls.Add(Me.splt_Achievements)
+		Me.tpg_RetroAchievements.Name = "tpg_RetroAchievements"
+		Me.tpg_RetroAchievements.Size = New System.Drawing.Size(301, 299)
+		Me.tpg_RetroAchievements.Text = "Achievements"
+		'
+		'splt_Achievements
+		'
+		Me.splt_Achievements.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.splt_Achievements.Horizontal = False
+		Me.splt_Achievements.Location = New System.Drawing.Point(0, 0)
+		Me.splt_Achievements.Name = "splt_Achievements"
+		Me.splt_Achievements.Panel1.Controls.Add(Me.gb_Challenge_Cheevos)
+		Me.splt_Achievements.Panel1.Text = "Panel1"
+		Me.splt_Achievements.Panel2.Controls.Add(Me.pnl_Achievements)
+		Me.splt_Achievements.Panel2.Text = "Panel2"
+		Me.splt_Achievements.Size = New System.Drawing.Size(301, 299)
+		Me.splt_Achievements.SplitterPosition = 120
+		Me.splt_Achievements.TabIndex = 10
+		Me.splt_Achievements.Text = "Ctl_MKDXSplitPanel1"
+		Me.splt_Achievements.ToolTipController = Me.ttctl_TecSpec.DefaultController
+		'
+		'gb_Challenge_Cheevos
+		'
+		Me.gb_Challenge_Cheevos.Controls.Add(Me.grd_Challenge_Cheevos)
+		Me.gb_Challenge_Cheevos.Controls.Add(Me.lbl_Challenge_Cheevos_Unlocked)
+		Me.gb_Challenge_Cheevos.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.gb_Challenge_Cheevos.Location = New System.Drawing.Point(0, 0)
+		Me.gb_Challenge_Cheevos.Name = "gb_Challenge_Cheevos"
+		Me.gb_Challenge_Cheevos.Size = New System.Drawing.Size(301, 120)
+		Me.gb_Challenge_Cheevos.TabIndex = 12
+		Me.gb_Challenge_Cheevos.Text = "Open Achievements for the current Challenge/Tier"
+		Me.gb_Challenge_Cheevos.ToolTipController = Me.ttctl_TecSpec.DefaultController
+		'
+		'grd_Challenge_Cheevos
+		'
+		Me.grd_Challenge_Cheevos.ContextMenuStrip = Me.cxm_Cheevo_Challenges_Cheevos
+		Me.grd_Challenge_Cheevos.DataSource = Me.BS_Open_Challenges_Cheevos
+		Me.grd_Challenge_Cheevos.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.grd_Challenge_Cheevos.Location = New System.Drawing.Point(2, 52)
+		Me.grd_Challenge_Cheevos.MainView = Me.agv_Challenge_Cheevos
+		Me.grd_Challenge_Cheevos.Name = "grd_Challenge_Cheevos"
+		Me.grd_Challenge_Cheevos.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit1})
+		Me.grd_Challenge_Cheevos.Size = New System.Drawing.Size(297, 66)
+		Me.grd_Challenge_Cheevos.TabIndex = 11
+		Me.grd_Challenge_Cheevos.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.agv_Challenge_Cheevos})
+		'
+		'BS_Open_Challenges_Cheevos
+		'
+		Me.BS_Open_Challenges_Cheevos.DataMember = "ttb_Open_Challenges_Cheevos"
+		Me.BS_Open_Challenges_Cheevos.DataSource = Me.DS_ML
+		'
+		'agv_Challenge_Cheevos
+		'
+		Me.agv_Challenge_Cheevos.Bands.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.GridBand() {Me.GridBand2})
+		Me.agv_Challenge_Cheevos.Columns.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn() {Me.BandedGridColumn1, Me.BandedGridColumn2})
+		Me.agv_Challenge_Cheevos.GridControl = Me.grd_Challenge_Cheevos
+		Me.agv_Challenge_Cheevos.GroupFormat = "{1}"
+		Me.agv_Challenge_Cheevos.Name = "agv_Challenge_Cheevos"
+		Me.agv_Challenge_Cheevos.OptionsView.ColumnAutoWidth = True
+		Me.agv_Challenge_Cheevos.OptionsView.ShowBands = False
+		Me.agv_Challenge_Cheevos.OptionsView.ShowColumnHeaders = False
+		Me.agv_Challenge_Cheevos.OptionsView.ShowGroupPanel = False
+		Me.agv_Challenge_Cheevos.OptionsView.ShowIndicator = False
+		'
+		'GridBand2
+		'
+		Me.GridBand2.Caption = "GridBand1"
+		Me.GridBand2.Columns.Add(Me.BandedGridColumn1)
+		Me.GridBand2.Columns.Add(Me.BandedGridColumn2)
+		Me.GridBand2.Name = "GridBand2"
+		Me.GridBand2.VisibleIndex = 0
+		Me.GridBand2.Width = 351
+		'
+		'BandedGridColumn1
+		'
+		Me.BandedGridColumn1.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+		Me.BandedGridColumn1.AppearanceCell.Options.UseFont = True
+		Me.BandedGridColumn1.FieldName = "Cheevo_Title"
+		Me.BandedGridColumn1.Name = "BandedGridColumn1"
+		Me.BandedGridColumn1.OptionsColumn.AllowEdit = False
+		Me.BandedGridColumn1.OptionsColumn.AllowFocus = False
+		Me.BandedGridColumn1.OptionsColumn.ReadOnly = True
+		Me.BandedGridColumn1.Visible = True
+		Me.BandedGridColumn1.Width = 173
+		'
+		'BandedGridColumn2
+		'
+		Me.BandedGridColumn2.AutoFillDown = True
+		Me.BandedGridColumn2.FieldName = "Cheevo_Description"
+		Me.BandedGridColumn2.Name = "BandedGridColumn2"
+		Me.BandedGridColumn2.OptionsColumn.AllowEdit = False
+		Me.BandedGridColumn2.OptionsColumn.AllowFocus = False
+		Me.BandedGridColumn2.OptionsColumn.ReadOnly = True
+		Me.BandedGridColumn2.RowIndex = 1
+		Me.BandedGridColumn2.Visible = True
+		Me.BandedGridColumn2.Width = 351
+		'
+		'RepositoryItemLookUpEdit1
+		'
+		Me.RepositoryItemLookUpEdit1.AutoHeight = False
+		Me.RepositoryItemLookUpEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+		Me.RepositoryItemLookUpEdit1.DisplayMember = "DisplayText"
+		Me.RepositoryItemLookUpEdit1.Name = "RepositoryItemLookUpEdit1"
+		Me.RepositoryItemLookUpEdit1.ValueMember = "id"
+		'
+		'lbl_Challenge_Cheevos_Unlocked
+		'
+		Me.lbl_Challenge_Cheevos_Unlocked.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical
+		Me.lbl_Challenge_Cheevos_Unlocked.Dock = System.Windows.Forms.DockStyle.Top
+		Me.lbl_Challenge_Cheevos_Unlocked.Location = New System.Drawing.Point(2, 20)
+		Me.lbl_Challenge_Cheevos_Unlocked.MKBoundControl1 = Nothing
+		Me.lbl_Challenge_Cheevos_Unlocked.MKBoundControl2 = Nothing
+		Me.lbl_Challenge_Cheevos_Unlocked.MKBoundControl3 = Nothing
+		Me.lbl_Challenge_Cheevos_Unlocked.MKBoundControl4 = Nothing
+		Me.lbl_Challenge_Cheevos_Unlocked.MKBoundControl5 = Nothing
+		Me.lbl_Challenge_Cheevos_Unlocked.Name = "lbl_Challenge_Cheevos_Unlocked"
+		Me.lbl_Challenge_Cheevos_Unlocked.Padding = New System.Windows.Forms.Padding(3)
+		Me.lbl_Challenge_Cheevos_Unlocked.Size = New System.Drawing.Size(297, 32)
+		Me.lbl_Challenge_Cheevos_Unlocked.TabIndex = 12
+		Me.lbl_Challenge_Cheevos_Unlocked.Text = "You unlocked all necessary achievements for the current challenge/tier."
+		Me.lbl_Challenge_Cheevos_Unlocked.Visible = False
+		'
 		'spltpnl_Main
 		'
 		Me.spltpnl_Main.CollapsePanel = DevExpress.XtraEditors.SplitCollapsePanel.Panel2
@@ -3890,18 +4505,33 @@ Partial Class ucr_Emulation
 		Me.spltpnl_Details.Horizontal = False
 		Me.spltpnl_Details.Location = New System.Drawing.Point(0, 0)
 		Me.spltpnl_Details.Name = "spltpnl_Details"
+		Me.spltpnl_Details.Panel1.Controls.Add(Me.lbl_MobyDownload_Error)
 		Me.spltpnl_Details.Panel1.Controls.Add(Me.prg_Extras_Download)
 		Me.spltpnl_Details.Panel1.Controls.Add(Me.pic_Game)
 		Me.spltpnl_Details.Panel1.Controls.Add(Me.lbl_Displayname)
 		Me.spltpnl_Details.Panel1.Controls.Add(Me.lbl_Extras_Description)
 		Me.spltpnl_Details.Panel1.Text = "Panel1"
-		Me.spltpnl_Details.Panel2.Controls.Add(Me.tcl_App)
+		Me.spltpnl_Details.Panel2.Controls.Add(Me.tcl_Details)
 		Me.spltpnl_Details.Panel2.Text = "Panel2"
 		Me.spltpnl_Details.Size = New System.Drawing.Size(307, 600)
 		Me.spltpnl_Details.SplitterPosition = 268
 		Me.spltpnl_Details.TabIndex = 3
 		Me.spltpnl_Details.Text = "Ctl_MKDXSplitPanel1"
 		Me.spltpnl_Details.ToolTipController = Me.ttctl_TecSpec.DefaultController
+		'
+		'lbl_MobyDownload_Error
+		'
+		Me.lbl_MobyDownload_Error.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical
+		Me.lbl_MobyDownload_Error.Dock = System.Windows.Forms.DockStyle.Bottom
+		Me.lbl_MobyDownload_Error.Location = New System.Drawing.Point(0, 249)
+		Me.lbl_MobyDownload_Error.MKBoundControl1 = Nothing
+		Me.lbl_MobyDownload_Error.MKBoundControl2 = Nothing
+		Me.lbl_MobyDownload_Error.MKBoundControl3 = Nothing
+		Me.lbl_MobyDownload_Error.MKBoundControl4 = Nothing
+		Me.lbl_MobyDownload_Error.MKBoundControl5 = Nothing
+		Me.lbl_MobyDownload_Error.Name = "lbl_MobyDownload_Error"
+		Me.lbl_MobyDownload_Error.Size = New System.Drawing.Size(307, 0)
+		Me.lbl_MobyDownload_Error.TabIndex = 7
 		'
 		'prg_Extras_Download
 		'
@@ -3976,7 +4606,7 @@ Partial Class ucr_Emulation
 		'
 		'popmnu_Emu
 		'
-		Me.popmnu_Emu.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.bsi_Launch), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Launch_Random), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Edit_Game), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Edit_Multiple_Games), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_DOSBox_Clear_Exe_Config), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Similarity_Calculation), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Open_Similarity_Details), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Show_Similarity_Feature_Columns), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Open_Moby_Page), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Contribute_TechInfo), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Emu_Settings), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_DOSBox_Templates), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_ScummVM_Templates), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Rom_Manager), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Rombase_Manager), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Analyze_Missing_Extras), New DevExpress.XtraBars.LinkPersistInfo(Me.bsi_MultiUser), New DevExpress.XtraBars.LinkPersistInfo(Me.bsi_Export)})
+		Me.popmnu_Emu.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.bsi_Launch), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Launch_Random), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Edit_Game), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_DOSBox_Clear_Exe_Config), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Create_TDL_Menu), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Add_to_Challenge), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Similarity_Calculation), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Open_Similarity_Details), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Show_Similarity_Feature_Columns), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Open_Moby_Page), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Contribute_TechInfo), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Emu_Settings), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_DOSBox_Templates), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_ScummVM_Templates), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Rom_Manager), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Rombase_Manager), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Analyze_Missing_Extras), New DevExpress.XtraBars.LinkPersistInfo(Me.bsi_MultiUser), New DevExpress.XtraBars.LinkPersistInfo(Me.bsi_Export)})
 		Me.popmnu_Emu.Manager = Me.barmng
 		Me.popmnu_Emu.Name = "popmnu_Emu"
 		'
@@ -4012,6 +4642,26 @@ Partial Class ucr_Emulation
 		Me.BS_Want.DataMember = "tbl_Emu_Games_Have_Want_List_Items"
 		Me.BS_Want.DataSource = Me.DS_ML
 		'
+		'DataTable2
+		'
+		Me.DataTable2.Columns.AddRange(New System.Data.DataColumn() {Me.DataColumn9, Me.DataColumn10})
+		Me.DataTable2.TableName = "Table1"
+		'
+		'DataColumn9
+		'
+		Me.DataColumn9.ColumnName = "id"
+		Me.DataColumn9.DataType = GetType(Integer)
+		'
+		'DataColumn10
+		'
+		Me.DataColumn10.ColumnName = "DisplayText"
+		'
+		'popmnu_Cheevos
+		'
+		Me.popmnu_Cheevos.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Cheevo_add_to_Challenge), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Cheevo_Manage_Challenges)})
+		Me.popmnu_Cheevos.Manager = Me.barmng
+		Me.popmnu_Cheevos.Name = "popmnu_Cheevos"
+		'
 		'ucr_Emulation
 		'
 		Me.ttctl_TecSpec.SetAllowHtmlText(Me, DevExpress.Utils.DefaultBoolean.[Default])
@@ -4025,20 +4675,16 @@ Partial Class ucr_Emulation
 		Me.Size = New System.Drawing.Size(800, 600)
 		CType(Me.pnl_Emu_Games, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.pnl_Emu_Games.ResumeLayout(False)
-		CType(Me.splt_FilterUI_grdMain, System.ComponentModel.ISupportInitialize).EndInit()
-		Me.splt_FilterUI_grdMain.ResumeLayout(False)
-		CType(Me.accordion_FilterUI, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.grd_Emu_Games, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.BS_Emu_Games, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.DS_ML, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.gv_Emu_Games, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.rpi_Want, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.rpi_Have, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.rpi_Trade, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.rpi_Fav, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.RepositoryItemCheckEdit1, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.barmng, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.splt_left, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.splt_left.ResumeLayout(False)
 		Me.tlp_Combos.ResumeLayout(False)
+		CType(Me.Ctl_MKDXPanel1, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.Ctl_MKDXPanel1.ResumeLayout(False)
+		CType(Me.chb_Cheevo_Challenges_Show_Completed.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.barmng, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.cmb_Challenges.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BS_Challenges, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.DS_ML, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.pnl_31, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.pnl_31.ResumeLayout(False)
 		CType(Me.txb_Search.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4062,9 +4708,34 @@ Partial Class ucr_Emulation
 		Me.pnl_11.ResumeLayout(False)
 		CType(Me.cmb_Platform.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.BS_Platforms, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.splt_FilterUI_grdMain, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.splt_FilterUI_grdMain.ResumeLayout(False)
+		CType(Me.accordion_FilterUI, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.grd_Emu_Games, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BS_Emu_Games, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.gv_Emu_Games, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.rpi_Want, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.rpi_Have, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.rpi_Trade, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.rpi_Fav, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.RepositoryItemCheckEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.cxm_Cheevos.ResumeLayout(False)
+		CType(Me.pnl_Achievements, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.pnl_Achievements.ResumeLayout(False)
+		CType(Me.gb_Cheevos, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.gb_Cheevos.ResumeLayout(False)
+		CType(Me.grd_RetroAchievements, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BS_RetroAchievements, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.DS_RetroAchievements, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.DataTable1, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.agv_RetroAchievements, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.rpi_RetroAchievements_Unlock, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BTA_RetroAchievement_Unlocks, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.prg_RetroAchievements_Download.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.cxm_Cheevo_Challenges_Cheevos.ResumeLayout(False)
 		CType(Me.filteringUIContext, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.tcl_App, System.ComponentModel.ISupportInitialize).EndInit()
-		Me.tcl_App.ResumeLayout(False)
+		CType(Me.tcl_Details, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.tcl_Details.ResumeLayout(False)
 		Me.tpg_Summary.ResumeLayout(False)
 		Me.tpg_TechnicalSpecs.ResumeLayout(False)
 		CType(Me.grd_TechnicalSpecs, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4122,6 +4793,15 @@ Partial Class ucr_Emulation
 		CType(Me.BS_Have, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.crdv_Have, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.rpi_Have_Comments, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.tpg_RetroAchievements.ResumeLayout(False)
+		CType(Me.splt_Achievements, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.splt_Achievements.ResumeLayout(False)
+		CType(Me.gb_Challenge_Cheevos, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.gb_Challenge_Cheevos.ResumeLayout(False)
+		CType(Me.grd_Challenge_Cheevos, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BS_Open_Challenges_Cheevos, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.agv_Challenge_Cheevos, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.spltpnl_Main, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.spltpnl_Main.ResumeLayout(False)
 		CType(Me.spltpnl_Details, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4134,12 +4814,14 @@ Partial Class ucr_Emulation
 		CType(Me.popmnu_Extras, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.popmnu_Statistics, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.BS_Want, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.DataTable2, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.popmnu_Cheevos, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.ResumeLayout(False)
 		Me.PerformLayout()
 
 	End Sub
 	Friend WithEvents pnl_Emu_Games As MKNetDXLib.ctl_MKDXPanel
-	Friend WithEvents tcl_App As MKNetDXLib.ctl_MKDXTabControl
+	Friend WithEvents tcl_Details As MKNetDXLib.ctl_MKDXTabControl
 	Friend WithEvents tpg_Summary As DevExpress.XtraTab.XtraTabPage
 	Friend WithEvents tpg_Stats As DevExpress.XtraTab.XtraTabPage
 	Friend WithEvents pic_Game As MKNetDXLib.ctl_MKDXPictureEdit
@@ -4439,4 +5121,62 @@ Partial Class ucr_Emulation
 	Friend WithEvents lbl_Extras_Description As MKNetDXLib.ctl_MKDXLabel
 	Friend WithEvents prg_Extras_Download As MKNetDXLib.ctl_MKDXProgressBarControl
 	Friend WithEvents bbi_MOBY_Extras_Manager As DevExpress.XtraBars.BarButtonItem
+	Friend WithEvents colCRC32 As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents colMD5 As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents colSHA1 As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents tpg_RetroAchievements As DevExpress.XtraTab.XtraTabPage
+	Friend WithEvents prg_RetroAchievements_Download As MKNetDXLib.ctl_MKDXProgressBarControl
+	Friend WithEvents lbl_RetroAchievements_Message As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents DS_RetroAchievements As DataSet
+	Friend WithEvents DataTable1 As DataTable
+	Friend WithEvents DataColumn1 As DataColumn
+	Friend WithEvents DataColumn2 As DataColumn
+	Friend WithEvents DataColumn3 As DataColumn
+	Friend WithEvents DataColumn4 As DataColumn
+	Friend WithEvents DataColumn5 As DataColumn
+	Friend WithEvents DataColumn6 As DataColumn
+	Friend WithEvents DataColumn7 As DataColumn
+	Friend WithEvents DataColumn8 As DataColumn
+	Friend WithEvents BTA_RetroAchievement_Unlocks As MKNetLib.cmp_MKBindableTableAdapter
+	Friend WithEvents DataTable2 As DataTable
+	Friend WithEvents DataColumn9 As DataColumn
+	Friend WithEvents DataColumn10 As DataColumn
+	Friend WithEvents BS_RetroAchievements As BindingSource
+	Friend WithEvents grd_RetroAchievements As MKNetDXLib.ctl_MKDXGrid
+	Friend WithEvents agv_RetroAchievements As DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView
+	Friend WithEvents colTitle As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
+	Friend WithEvents colDescription1 As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
+	Friend WithEvents GridBand1 As DevExpress.XtraGrid.Views.BandedGrid.GridBand
+	Friend WithEvents colid_RetroAchievements_Unlock As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
+	Friend WithEvents rpi_RetroAchievements_Unlock As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+	Friend WithEvents bbi_Export_TDL As DevExpress.XtraBars.BarButtonItem
+	Friend WithEvents bbi_Create_TDL_Menu As DevExpress.XtraBars.BarButtonItem
+	Friend WithEvents lbl_MobyDownload_Error As MKNetDXLib.ctl_MKDXLabel
+    Friend WithEvents bbi_Cheevo_add_to_Challenge As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents bbi_Cheevo_Manage_Challenges As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents popmnu_Cheevos As MKNetDXLib.cmp_MKDXPopupMenu
+	Friend WithEvents cxm_Cheevos As ContextMenuStrip
+	Friend WithEvents mni_Cheevos_Add_Challenge As ToolStripMenuItem
+	Friend WithEvents mni_Cheevos_Manage_Challenges As ToolStripMenuItem
+	Friend WithEvents splt_left As MKNetDXLib.ctl_MKDXSplitPanel
+	Friend WithEvents Ctl_MKDXPanel1 As MKNetDXLib.ctl_MKDXPanel
+	Friend WithEvents lbl_Challenges As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents cmb_Challenges As MKNetDXLib.ctl_MKDXLookupEdit
+	Friend WithEvents BS_Challenges As BindingSource
+	Friend WithEvents splt_Achievements As MKNetDXLib.ctl_MKDXSplitPanel
+	Friend WithEvents pnl_Achievements As MKNetDXLib.ctl_MKDXPanel
+	Friend WithEvents grd_Challenge_Cheevos As MKNetDXLib.ctl_MKDXGrid
+	Friend WithEvents agv_Challenge_Cheevos As DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView
+	Friend WithEvents GridBand2 As DevExpress.XtraGrid.Views.BandedGrid.GridBand
+	Friend WithEvents BandedGridColumn1 As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
+	Friend WithEvents BandedGridColumn2 As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
+	Friend WithEvents RepositoryItemLookUpEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+	Friend WithEvents BS_Open_Challenges_Cheevos As BindingSource
+	Friend WithEvents gb_Challenge_Cheevos As MKNetDXLib.ctl_MKDXGroupBox
+	Friend WithEvents gb_Cheevos As MKNetDXLib.ctl_MKDXGroupBox
+	Friend WithEvents cxm_Cheevo_Challenges_Cheevos As ContextMenuStrip
+	Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
+	Friend WithEvents chb_Cheevo_Challenges_Show_Completed As MKNetDXLib.ctl_MKDXCheckEdit
+	Friend WithEvents bbi_Add_to_Challenge As DevExpress.XtraBars.BarButtonItem
+	Friend WithEvents lbl_Challenge_Cheevos_Unlocked As MKNetDXLib.ctl_MKDXLabel
 End Class

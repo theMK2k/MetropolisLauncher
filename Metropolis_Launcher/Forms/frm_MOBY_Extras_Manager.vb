@@ -7,6 +7,7 @@ Public Class frm_MOBY_Extras_Manager
 
 	Private Moby_Download_Info As ucr_Emulation.cls_Moby_Download_Info
 
+
 	Private WithEvents Moby_Extras_Downloader As System.Net.WebClient = New System.Net.WebClient
 
 	Public Sub New(ByVal id_Moby_Releases As Int64, ByVal Platform_Short As String)
@@ -47,7 +48,9 @@ Public Class frm_MOBY_Extras_Manager
 		Me.gv_Extras.ExpandAllGroups()
 	End Sub
 
-	Private Sub BS_Extras_CurrentChanged(sender As Object, e As EventArgs) Handles BS_Extras.CurrentChanged
+	Private Sub BS_Extras_CurrentChanged(sender As Object, e As EventArgs) 'Handles BS_Extras.CurrentChanged
+		Me.lbl_MobyDownload_Error.Text = ""
+
 		If BS_Extras.Current Is Nothing Then
 			Me.pic_Game.Image = Nothing
 		End If
@@ -110,7 +113,7 @@ Public Class frm_MOBY_Extras_Manager
 		Dim filepath As String = dirpath & "\" & filename
 
 		If cls_Extras.EnsureExtrasFile(filepath) Then
-			pic_Game.Image = Image.FromStream(New IO.MemoryStream(Alphaleonis.Win32.Filesystem.File.ReadAllBytes(filepath)))
+			pic_Game.Image = cls_Extras.LoadImageFromStreamSafe(filepath)
 			Me.BS_Extras.Current("tmp_Available") = True
 			Me.gv_Extras.RefreshData()
 			Return
@@ -138,8 +141,8 @@ Public Class frm_MOBY_Extras_Manager
 		Me.prg_Extras_Download.EditValue = 0
 		Me.prg_Extras_Download.Visible = True
 
-		Me.Moby_Download_Info = New ucr_Emulation.cls_Moby_Download_Info(url, filepath, Payload:=row)
-
+		Me.Moby_Download_Info = New ucr_Emulation.cls_Moby_Download_Info(url, filepath, Payload:=row, isArchiveOrg:=False)
+		Debug.WriteLine("Fetching " & "http://www.mobygames.com" & url)
 		Me.Moby_Extras_Downloader.DownloadFileAsync(New Uri("http://www.mobygames.com" & url), filepath)
 	End Sub
 
@@ -296,14 +299,27 @@ Public Class frm_MOBY_Extras_Manager
 			Return
 		End If
 
-		If e.Error IsNot Nothing Then
-			Debug.WriteLine("EXTRAS: Download has errored: " & e.Error.Message & e.Error.StackTrace)
+		If Me.Moby_Download_Info Is Nothing Then
+			Debug.WriteLine("EXTRAS: After Download: Game has changed, aborting")
 			Return
 		End If
 
+		If e.Error IsNot Nothing Then
+			Debug.WriteLine("EXTRAS: Download has errored: " & e.Error.Message & e.Error.StackTrace)
+			If Not Me.Moby_Download_Info.isArchiveOrg Then
+				'Retry from archive.org directly
+				Me.Moby_Download_Info.isArchiveOrg = True
 
-		If Me.Moby_Download_Info Is Nothing Then
-			Debug.WriteLine("EXTRAS: After Download: Game has changed, aborting")
+				Dim archiveOrgUrl As String = "http://web.archive.org/web/http://www.mobygames.com" & Me.Moby_Download_Info.URL
+				'Dim archiveOrgUrl As String = "http://web.archive.org/web/http%3A%2F%2Fwww.mobygames.com" & url.ToString.Replace("/", "%2F")
+				'does not work: Dim archiveOrgUrl As String = "https://archive.org/download/www.mobygames.com" & url
+
+				Me.Moby_Extras_Downloader.DownloadFileAsync(New Uri(archiveOrgUrl), Me.Moby_Download_Info.Filepath)
+			Else
+				Me.lbl_MobyDownload_Error.Text = "Error while downloading: " & e.Error.Message
+				Me.pic_Game.Image = Nothing
+			End If
+
 			Return
 		End If
 
@@ -312,9 +328,39 @@ Public Class frm_MOBY_Extras_Manager
 			Return
 		End If
 
+		Debug.WriteLine("EXTRAS: After Download: try to load as Image")
+		Dim img As System.Drawing.Image = cls_Extras.LoadImageFromStreamSafe(Me.Moby_Download_Info.Filepath, False)
+
+		If img Is Nothing Then
+			Debug.WriteLine("EXTRAS: After Download: it is NOT an image")
+
+			If Me.Moby_Download_Info.isArchiveOrg Then
+				Debug.WriteLine("EXTRAS: After Download: archive.org may have sent just html with the image embedded")
+				'Load the file contents as HTML and check for "real" download URL
+				Dim sContent As String = MKNetLib.cls_MKFileSupport.GetFileContents(Me.Moby_Download_Info.Filepath)
+
+				Try
+					Dim newURL As String = MKNetLib.cls_MKRegex.GetMatches(sContent, "<iframe.*src=""(.*?)"".*?>")(0).Groups(1).Value
+
+					Debug.WriteLine("EXTRAS: After Download: fetching from " & newURL)
+					Me.Moby_Extras_Downloader.DownloadFileAsync(New Uri(newURL), Me.Moby_Download_Info.Filepath)
+				Catch ex As Exception
+					Debug.WriteLine("EXTRAS: After Download: Failed reading the HTML")
+				End Try
+			Else
+				Debug.WriteLine("EXTRAS: Removing file")
+				Try
+					Alphaleonis.Win32.Filesystem.File.Delete(Me.Moby_Download_Info.Filepath)
+				Catch ex As Exception
+
+				End Try
+			End If
+		End If
+
 		Debug.WriteLine("EXTRAS: After Download: Loading for display")
 		If cls_Extras.EnsureExtrasFile(Me.Moby_Download_Info.Filepath) Then
-			pic_Game.Image = Image.FromStream(New IO.MemoryStream(Alphaleonis.Win32.Filesystem.File.ReadAllBytes(Me.Moby_Download_Info.Filepath)))
+			pic_Game.Image = img
+
 		End If
 
 		If Me.Moby_Download_Info.Payload IsNot Nothing Then
@@ -323,4 +369,7 @@ Public Class frm_MOBY_Extras_Manager
 		End If
 	End Sub
 
+	Private Sub gv_Extras_FocusedRowChanged(sender As Object, e As DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs) Handles gv_Extras.FocusedRowChanged
+		BS_Extras_CurrentChanged(Nothing, Nothing)
+	End Sub
 End Class

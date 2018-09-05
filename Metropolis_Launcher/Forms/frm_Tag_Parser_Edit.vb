@@ -628,9 +628,11 @@
 	End Sub
 
 	Private Sub gv_Tag_Parser_RowCellStyle(ByVal sender As System.Object, ByVal e As DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs) Handles gv_Tag_Parser.RowCellStyle
-		Dim row As DataRow = gv_Tag_Parser.GetRow(e.RowHandle).Row
-		If row("id_Tag_Parser") < 0 AndAlso TC.NZ(row("id_Rombase_Tag_Parser"), 0) <= 0 Then
-			e.Appearance.Font = New System.Drawing.Font(e.Appearance.Font.Name, e.Appearance.Font.Size, FontStyle.Bold)
+		If e.RowHandle >= 0 Then
+			Dim row As DataRow = gv_Tag_Parser.GetRow(e.RowHandle).Row
+			If row("id_Tag_Parser") < 0 AndAlso TC.NZ(row("id_Rombase_Tag_Parser"), 0) <= 0 Then
+				e.Appearance.Font = New System.Drawing.Font(e.Appearance.Font.Name, e.Appearance.Font.Size, FontStyle.Bold)
+			End If
 		End If
 	End Sub
 
@@ -1160,11 +1162,15 @@
 		Dim delimiter As String = TC.NZ(BS_Tag_Parser.Current("Content"), "|||")
 		Dim findindex As Integer = filename.IndexOf(delimiter)
 
-		Me.lbl_Found_In_Left.Text = filename.Substring(0, findindex)
-		Me.lbl_Found_In_Middle.Text = delimiter
-		Me.lbl_Found_In_Right.Text = filename.Substring(findindex + delimiter.Length, filename.Length - findindex - delimiter.Length)
+        If findindex <> -1 Then
+            Me.lbl_Found_In_Left.Text = filename.Substring(0, findindex)
+            Me.lbl_Found_In_Middle.Text = delimiter
+            Me.lbl_Found_In_Right.Text = filename.Substring(findindex + delimiter.Length, filename.Length - findindex - delimiter.Length)
+        Else
+            Me.lbl_Found_In_Left.Text = filename
+        End If
 
-	End Sub
+    End Sub
 
 	Private Sub gv_Tag_Parser_MouseMove(sender As Object, e As MouseEventArgs) Handles gv_Tag_Parser.MouseMove
 		Me.grd_Tag_Parser.ShowHandInColumns(gv_Tag_Parser, {"Apply"}, e)

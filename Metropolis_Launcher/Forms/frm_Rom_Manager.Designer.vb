@@ -76,6 +76,8 @@ Partial Class frm_Rom_Manager
 		Me.colMoby_Games_URLPart_Developer = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.rpi_Moby_Developer = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
 		Me.coltmp_Highlighted = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.colCustomIdentifier = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.colName = New DevExpress.XtraGrid.Columns.GridColumn()
 		Me.BS_Moby_Platforms_gv1 = New System.Windows.Forms.BindingSource(Me.components)
 		Me.DS_Rombase = New Metropolis_Launcher.DS_Rombase()
 		Me.BS_Rombase = New System.Windows.Forms.BindingSource(Me.components)
@@ -182,7 +184,6 @@ Partial Class frm_Rom_Manager
 		Me.popmnu_Rom_Manager = New MKNetDXLib.cmp_MKDXPopupMenu()
 		Me.popmnu_DOSBox_Files_and_Folders = New MKNetDXLib.cmp_MKDXPopupMenu()
 		Me.popmnu_Moby_Games = New MKNetDXLib.cmp_MKDXPopupMenu()
-		Me.colCustomIdentifier = New DevExpress.XtraGrid.Columns.GridColumn()
 		CType(Me.rpi_Moby_Release, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BS_Moby_Releases, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.DS_MobyDB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -516,7 +517,7 @@ Partial Class frm_Rom_Manager
 		'
 		'gv_Emu_Games
 		'
-		Me.gv_Emu_Games.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colFolder, Me.colfile, Me.colInnerFile, Me.colMoby_Games_URLPart, Me.colHidden, Me.colAdded, Me.coldeprecated, Me.colMoby_Games_URLPart_Moby_Year, Me.colMoby_Games_URLPart_Publisher, Me.colMoby_Games_URLPart_Developer, Me.coltmp_Highlighted, Me.colCustomIdentifier})
+		Me.gv_Emu_Games.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colFolder, Me.colfile, Me.colInnerFile, Me.colMoby_Games_URLPart, Me.colHidden, Me.colAdded, Me.coldeprecated, Me.colMoby_Games_URLPart_Moby_Year, Me.colMoby_Games_URLPart_Publisher, Me.colMoby_Games_URLPart_Developer, Me.coltmp_Highlighted, Me.colCustomIdentifier, Me.colName})
 		Me.gv_Emu_Games.GridControl = Me.grd_Emu_Games
 		Me.gv_Emu_Games.GroupCount = 1
 		Me.gv_Emu_Games.Name = "gv_Emu_Games"
@@ -672,6 +673,22 @@ Partial Class frm_Rom_Manager
 		Me.coltmp_Highlighted.Caption = "Highlighted"
 		Me.coltmp_Highlighted.FieldName = "tmp_Highlighted"
 		Me.coltmp_Highlighted.Name = "coltmp_Highlighted"
+		'
+		'colCustomIdentifier
+		'
+		Me.colCustomIdentifier.FieldName = "CustomIdentifier"
+		Me.colCustomIdentifier.Name = "colCustomIdentifier"
+		Me.colCustomIdentifier.OptionsColumn.AllowEdit = False
+		Me.colCustomIdentifier.OptionsColumn.ReadOnly = True
+		'
+		'colName
+		'
+		Me.colName.Caption = "Game Name"
+		Me.colName.FieldName = "Name"
+		Me.colName.Name = "colName"
+		Me.colName.OptionsColumn.AllowEdit = False
+		Me.colName.OptionsColumn.ReadOnly = True
+		Me.colName.ToolTip = "The Game's Name (if empty, the MobyGames game name is used or the Filename)"
 		'
 		'BS_Moby_Platforms_gv1
 		'
@@ -1682,13 +1699,6 @@ Partial Class frm_Rom_Manager
 		Me.popmnu_Moby_Games.Manager = Me.barmng
 		Me.popmnu_Moby_Games.Name = "popmnu_Moby_Games"
 		'
-		'colCustomIdentifier
-		'
-		Me.colCustomIdentifier.FieldName = "CustomIdentifier"
-		Me.colCustomIdentifier.Name = "colCustomIdentifier"
-		Me.colCustomIdentifier.OptionsColumn.AllowEdit = False
-		Me.colCustomIdentifier.OptionsColumn.ReadOnly = True
-		'
 		'frm_Rom_Manager
 		'
 		Me.ClientSize = New System.Drawing.Size(984, 661)
@@ -1919,4 +1929,5 @@ Partial Class frm_Rom_Manager
 	Friend WithEvents bbi_Scan_ScummVM_Ini As DevExpress.XtraBars.BarButtonItem
 	Friend WithEvents colPlatform As DevExpress.XtraGrid.Columns.GridColumn
 	Friend WithEvents colCustomIdentifier As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents colName As DevExpress.XtraGrid.Columns.GridColumn
 End Class

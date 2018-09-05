@@ -3,12 +3,34 @@
 	Public Sub New()
 		InitializeComponent()
 
+		Load_Challenges()
+
 		Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
 			DS_ML.Fill_tbl_Users(tran, Me.DS_ML.tbl_Users, 0, False)
 		End Using
 
 		barmng_Users.SetPopupContextMenu(grd_Users, popmnu_Users)
 	End Sub
+
+
+	Private Sub Load_Challenges()
+		Dim sSQL As String = ""
+
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "	CC.id_Cheevo_Challenges AS id_Cheevo_Challenges" & ControlChars.CrLf
+		sSQL &= "	, CC.Name AS Name" & ControlChars.CrLf
+		sSQL &= "	, 1 AS Sort" & ControlChars.CrLf
+		sSQL &= "FROM tbl_Cheevo_Challenges CC" & ControlChars.CrLf
+
+		sSQL &= "	UNION"
+		sSQL &= "	SELECT"
+		sSQL &= "	0 AS id_Cheevo_Challenges"
+		sSQL &= "	, '' AS Name"
+		sSQL &= "	, 0 AS Sort"
+
+		DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, Me.BTA_Challenges.Table)
+	End Sub
+
 
 	Private Sub bbi_Add_User_ItemClick(ByVal sender As System.Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs) Handles bbi_Add_User.ItemClick
 		Dim row As DataRow = Me.DS_ML.tbl_Users.NewRow
@@ -33,11 +55,13 @@
 			frm.lbl_Restricted.Enabled = Not TC.NZ(row("Admin"), False)
 			frm.chb_Restricted.Enabled = Not TC.NZ(row("Admin"), False)
 			frm.chb_Restricted.Checked = TC.NZ(row("Restricted"), False)
+			frm.cmb_Challenges.EditValue = row("id_Cheevo_Challenges")
 
 			If frm.ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
 				row("Username") = frm.txb_Username.EditValue
 				row("Password") = IIf(frm.chb_Password.Checked, IIf(frm.txb_Password.Text.Length > 0, cls_Globals.Encode_Password(frm.txb_Password.EditValue), DBNull.Value), row("Password"))
 				row("Restricted") = frm.chb_Restricted.Checked
+				row("id_Cheevo_Challenges") = TC.NZ(frm.cmb_Challenges.EditValue, 0)
 			End If
 		End Using
 	End Sub

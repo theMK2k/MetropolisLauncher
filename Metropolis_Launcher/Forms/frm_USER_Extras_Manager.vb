@@ -44,7 +44,7 @@
 			_al_Screenshots = New ArrayList
 			For Each old_extra As cls_Extras.cls_Extras_Result In al_Screenshots
 				Try
-					Dim img As Bitmap = Image.FromStream(New IO.MemoryStream(Alphaleonis.Win32.Filesystem.File.ReadAllBytes(old_extra._Path)))
+					Dim img As Bitmap = cls_Extras.LoadImageFromStreamSafe(old_extra._Path, False)
 
 					If img.PhysicalDimension.Width > 1 And img.PhysicalDimension.Height > 1 Then
 						_al_Screenshots.Add(img)
@@ -188,7 +188,8 @@
 		If sFiles IsNot Nothing AndAlso sFiles.Length > 0 Then
 			For Each sFile As String In sFiles
 				Try
-					Dim img As Bitmap = Image.FromStream(New IO.MemoryStream(Alphaleonis.Win32.Filesystem.File.ReadAllBytes(sFile)))
+					Dim img As Bitmap = cls_Extras.LoadImageFromStreamSafe(sFile)
+					'Dim img As Bitmap = Image.FromStream(New IO.MemoryStream(Alphaleonis.Win32.Filesystem.File.ReadAllBytes(sFile)))
 					AddImage(img)
 				Catch ex As Exception
 

@@ -1,4 +1,6 @@
-﻿Public Class cls_Globals
+﻿Imports System.Web
+
+Public Class cls_Globals
 	Public Shared Suppress_MetroUINavigationBarsShowing As Boolean = False
 	Public Shared Conn As SQLite.SQLiteConnection
 	Public Shared ISO_8859_1_Replace As New MKNetLib.cls_MKISO_8859_1_Replace
@@ -14,9 +16,14 @@
 	Public Shared Admin As Boolean = True
 	Public Shared Restricted As Boolean = False
 	Public Shared id_Users As Integer = 0
+	Public Shared id_Cheevo_Challenges As Int64 = 0L
 
 	Public Shared Logging As Boolean = False
 	Public Shared Logfile As String = ""
+
+	Public Shared RetroAchievements_Token As String = ""
+	Public Shared RetroAchievements_User As String = ""
+	Public Shared RetroAchievements_Pass As String = ""
 
 	Public Shared Function GetLogfile() As String
 		If Alphaleonis.Win32.Filesystem.File.Exists(Logfile) Then
@@ -215,6 +222,17 @@
 		Other_Attributes = 14
 	End Enum
 
+	Public Enum enm_Script_Types
+		NONE = 0
+		AutoIt = 1
+		AutoHotKey = 2
+	End Enum
+
+	Public Enum enm_CheevoTypes
+		RetroAchievements = 0 ' Cheevo based on RetroAchievements
+		TotalRuntime = 1      ' Cheevo based on the total runtime (measured by Metropolis Launcher)
+	End Enum
+
 	Public Shared Function TempDir(tran As SQLite.SQLiteTransaction) As String
 		Dim sTempDir As String = TC.NZ(cls_Settings.GetSetting("Dir_Temp", tran:=tran), "")
 
@@ -253,4 +271,15 @@
 
 		Return sBackupDir
 	End Function
+
+	Public Shared Sub OpenURL(URL As String)
+		Try
+			Dim procinfo As New ProcessStartInfo(URL)
+			procinfo.UseShellExecute = True
+			Process.Start(procinfo)
+		Catch ex As Exception
+
+		End Try
+
+	End Sub
 End Class

@@ -117,6 +117,24 @@ Partial Public Class DS_ML
     
     Private tabletbl_Moby_Regions As tbl_Moby_RegionsDataTable
     
+    Private tabletbl_Total_DOS_Launcher_Configs As tbl_Total_DOS_Launcher_ConfigsDataTable
+    
+    Private tabletbl_Cheevo_Challenges As tbl_Cheevo_ChallengesDataTable
+    
+    Private tabletbl_Cheevo_Challenges_Cheevos As tbl_Cheevo_Challenges_CheevosDataTable
+    
+    Private tabletbl_Users_Cheevo_Challenges_Cheevos As tbl_Users_Cheevo_Challenges_CheevosDataTable
+    
+    Private tablettb_Cheevo_Challenges_Tiers As ttb_Cheevo_Challenges_TiersDataTable
+    
+    Private tablettb_Open_Challenges_Cheevos As ttb_Open_Challenges_CheevosDataTable
+    
+    Private tablettb_Open_Challenges As ttb_Open_ChallengesDataTable
+    
+    Private tablettb_Emulators_PreLaunch_Commands As ttb_Emulators_PreLaunch_CommandsDataTable
+    
+    Private tablettb_Emulators_PostLaunch_Commands As ttb_Emulators_PostLaunch_CommandsDataTable
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -283,6 +301,33 @@ Partial Public Class DS_ML
             End If
             If (Not (ds.Tables("tbl_Moby_Regions")) Is Nothing) Then
                 MyBase.Tables.Add(New tbl_Moby_RegionsDataTable(ds.Tables("tbl_Moby_Regions")))
+            End If
+            If (Not (ds.Tables("tbl_Total_DOS_Launcher_Configs")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_Total_DOS_Launcher_ConfigsDataTable(ds.Tables("tbl_Total_DOS_Launcher_Configs")))
+            End If
+            If (Not (ds.Tables("tbl_Cheevo_Challenges")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_Cheevo_ChallengesDataTable(ds.Tables("tbl_Cheevo_Challenges")))
+            End If
+            If (Not (ds.Tables("tbl_Cheevo_Challenges_Cheevos")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_Cheevo_Challenges_CheevosDataTable(ds.Tables("tbl_Cheevo_Challenges_Cheevos")))
+            End If
+            If (Not (ds.Tables("tbl_Users_Cheevo_Challenges_Cheevos")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_Users_Cheevo_Challenges_CheevosDataTable(ds.Tables("tbl_Users_Cheevo_Challenges_Cheevos")))
+            End If
+            If (Not (ds.Tables("ttb_Cheevo_Challenges_Tiers")) Is Nothing) Then
+                MyBase.Tables.Add(New ttb_Cheevo_Challenges_TiersDataTable(ds.Tables("ttb_Cheevo_Challenges_Tiers")))
+            End If
+            If (Not (ds.Tables("ttb_Open_Challenges_Cheevos")) Is Nothing) Then
+                MyBase.Tables.Add(New ttb_Open_Challenges_CheevosDataTable(ds.Tables("ttb_Open_Challenges_Cheevos")))
+            End If
+            If (Not (ds.Tables("ttb_Open_Challenges")) Is Nothing) Then
+                MyBase.Tables.Add(New ttb_Open_ChallengesDataTable(ds.Tables("ttb_Open_Challenges")))
+            End If
+            If (Not (ds.Tables("ttb_Emulators_PreLaunch_Commands")) Is Nothing) Then
+                MyBase.Tables.Add(New ttb_Emulators_PreLaunch_CommandsDataTable(ds.Tables("ttb_Emulators_PreLaunch_Commands")))
+            End If
+            If (Not (ds.Tables("ttb_Emulators_PostLaunch_Commands")) Is Nothing) Then
+                MyBase.Tables.Add(New ttb_Emulators_PostLaunch_CommandsDataTable(ds.Tables("ttb_Emulators_PostLaunch_Commands")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -763,6 +808,96 @@ Partial Public Class DS_ML
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property tbl_Total_DOS_Launcher_Configs() As tbl_Total_DOS_Launcher_ConfigsDataTable
+        Get
+            Return Me.tabletbl_Total_DOS_Launcher_Configs
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property tbl_Cheevo_Challenges() As tbl_Cheevo_ChallengesDataTable
+        Get
+            Return Me.tabletbl_Cheevo_Challenges
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property tbl_Cheevo_Challenges_Cheevos() As tbl_Cheevo_Challenges_CheevosDataTable
+        Get
+            Return Me.tabletbl_Cheevo_Challenges_Cheevos
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property tbl_Users_Cheevo_Challenges_Cheevos() As tbl_Users_Cheevo_Challenges_CheevosDataTable
+        Get
+            Return Me.tabletbl_Users_Cheevo_Challenges_Cheevos
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property ttb_Cheevo_Challenges_Tiers() As ttb_Cheevo_Challenges_TiersDataTable
+        Get
+            Return Me.tablettb_Cheevo_Challenges_Tiers
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property ttb_Open_Challenges_Cheevos() As ttb_Open_Challenges_CheevosDataTable
+        Get
+            Return Me.tablettb_Open_Challenges_Cheevos
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property ttb_Open_Challenges() As ttb_Open_ChallengesDataTable
+        Get
+            Return Me.tablettb_Open_Challenges
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property ttb_Emulators_PreLaunch_Commands() As ttb_Emulators_PreLaunch_CommandsDataTable
+        Get
+            Return Me.tablettb_Emulators_PreLaunch_Commands
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property ttb_Emulators_PostLaunch_Commands() As ttb_Emulators_PostLaunch_CommandsDataTable
+        Get
+            Return Me.tablettb_Emulators_PostLaunch_Commands
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.BrowsableAttribute(true),  _
      Global.System.ComponentModel.DesignerSerializationVisibilityAttribute(Global.System.ComponentModel.DesignerSerializationVisibility.Visible)>  _
     Public Overrides Property SchemaSerializationMode() As Global.System.Data.SchemaSerializationMode
@@ -965,6 +1100,33 @@ Partial Public Class DS_ML
             End If
             If (Not (ds.Tables("tbl_Moby_Regions")) Is Nothing) Then
                 MyBase.Tables.Add(New tbl_Moby_RegionsDataTable(ds.Tables("tbl_Moby_Regions")))
+            End If
+            If (Not (ds.Tables("tbl_Total_DOS_Launcher_Configs")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_Total_DOS_Launcher_ConfigsDataTable(ds.Tables("tbl_Total_DOS_Launcher_Configs")))
+            End If
+            If (Not (ds.Tables("tbl_Cheevo_Challenges")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_Cheevo_ChallengesDataTable(ds.Tables("tbl_Cheevo_Challenges")))
+            End If
+            If (Not (ds.Tables("tbl_Cheevo_Challenges_Cheevos")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_Cheevo_Challenges_CheevosDataTable(ds.Tables("tbl_Cheevo_Challenges_Cheevos")))
+            End If
+            If (Not (ds.Tables("tbl_Users_Cheevo_Challenges_Cheevos")) Is Nothing) Then
+                MyBase.Tables.Add(New tbl_Users_Cheevo_Challenges_CheevosDataTable(ds.Tables("tbl_Users_Cheevo_Challenges_Cheevos")))
+            End If
+            If (Not (ds.Tables("ttb_Cheevo_Challenges_Tiers")) Is Nothing) Then
+                MyBase.Tables.Add(New ttb_Cheevo_Challenges_TiersDataTable(ds.Tables("ttb_Cheevo_Challenges_Tiers")))
+            End If
+            If (Not (ds.Tables("ttb_Open_Challenges_Cheevos")) Is Nothing) Then
+                MyBase.Tables.Add(New ttb_Open_Challenges_CheevosDataTable(ds.Tables("ttb_Open_Challenges_Cheevos")))
+            End If
+            If (Not (ds.Tables("ttb_Open_Challenges")) Is Nothing) Then
+                MyBase.Tables.Add(New ttb_Open_ChallengesDataTable(ds.Tables("ttb_Open_Challenges")))
+            End If
+            If (Not (ds.Tables("ttb_Emulators_PreLaunch_Commands")) Is Nothing) Then
+                MyBase.Tables.Add(New ttb_Emulators_PreLaunch_CommandsDataTable(ds.Tables("ttb_Emulators_PreLaunch_Commands")))
+            End If
+            If (Not (ds.Tables("ttb_Emulators_PostLaunch_Commands")) Is Nothing) Then
+                MyBase.Tables.Add(New ttb_Emulators_PostLaunch_CommandsDataTable(ds.Tables("ttb_Emulators_PostLaunch_Commands")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -1274,6 +1436,60 @@ Partial Public Class DS_ML
                 Me.tabletbl_Moby_Regions.InitVars
             End If
         End If
+        Me.tabletbl_Total_DOS_Launcher_Configs = CType(MyBase.Tables("tbl_Total_DOS_Launcher_Configs"),tbl_Total_DOS_Launcher_ConfigsDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tabletbl_Total_DOS_Launcher_Configs) Is Nothing) Then
+                Me.tabletbl_Total_DOS_Launcher_Configs.InitVars
+            End If
+        End If
+        Me.tabletbl_Cheevo_Challenges = CType(MyBase.Tables("tbl_Cheevo_Challenges"),tbl_Cheevo_ChallengesDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tabletbl_Cheevo_Challenges) Is Nothing) Then
+                Me.tabletbl_Cheevo_Challenges.InitVars
+            End If
+        End If
+        Me.tabletbl_Cheevo_Challenges_Cheevos = CType(MyBase.Tables("tbl_Cheevo_Challenges_Cheevos"),tbl_Cheevo_Challenges_CheevosDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tabletbl_Cheevo_Challenges_Cheevos) Is Nothing) Then
+                Me.tabletbl_Cheevo_Challenges_Cheevos.InitVars
+            End If
+        End If
+        Me.tabletbl_Users_Cheevo_Challenges_Cheevos = CType(MyBase.Tables("tbl_Users_Cheevo_Challenges_Cheevos"),tbl_Users_Cheevo_Challenges_CheevosDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tabletbl_Users_Cheevo_Challenges_Cheevos) Is Nothing) Then
+                Me.tabletbl_Users_Cheevo_Challenges_Cheevos.InitVars
+            End If
+        End If
+        Me.tablettb_Cheevo_Challenges_Tiers = CType(MyBase.Tables("ttb_Cheevo_Challenges_Tiers"),ttb_Cheevo_Challenges_TiersDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tablettb_Cheevo_Challenges_Tiers) Is Nothing) Then
+                Me.tablettb_Cheevo_Challenges_Tiers.InitVars
+            End If
+        End If
+        Me.tablettb_Open_Challenges_Cheevos = CType(MyBase.Tables("ttb_Open_Challenges_Cheevos"),ttb_Open_Challenges_CheevosDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tablettb_Open_Challenges_Cheevos) Is Nothing) Then
+                Me.tablettb_Open_Challenges_Cheevos.InitVars
+            End If
+        End If
+        Me.tablettb_Open_Challenges = CType(MyBase.Tables("ttb_Open_Challenges"),ttb_Open_ChallengesDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tablettb_Open_Challenges) Is Nothing) Then
+                Me.tablettb_Open_Challenges.InitVars
+            End If
+        End If
+        Me.tablettb_Emulators_PreLaunch_Commands = CType(MyBase.Tables("ttb_Emulators_PreLaunch_Commands"),ttb_Emulators_PreLaunch_CommandsDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tablettb_Emulators_PreLaunch_Commands) Is Nothing) Then
+                Me.tablettb_Emulators_PreLaunch_Commands.InitVars
+            End If
+        End If
+        Me.tablettb_Emulators_PostLaunch_Commands = CType(MyBase.Tables("ttb_Emulators_PostLaunch_Commands"),ttb_Emulators_PostLaunch_CommandsDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tablettb_Emulators_PostLaunch_Commands) Is Nothing) Then
+                Me.tablettb_Emulators_PostLaunch_Commands.InitVars
+            End If
+        End If
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1376,6 +1592,24 @@ Partial Public Class DS_ML
         MyBase.Tables.Add(Me.tablesrc_frm_MOBY_Extras_Manager)
         Me.tabletbl_Moby_Regions = New tbl_Moby_RegionsDataTable()
         MyBase.Tables.Add(Me.tabletbl_Moby_Regions)
+        Me.tabletbl_Total_DOS_Launcher_Configs = New tbl_Total_DOS_Launcher_ConfigsDataTable()
+        MyBase.Tables.Add(Me.tabletbl_Total_DOS_Launcher_Configs)
+        Me.tabletbl_Cheevo_Challenges = New tbl_Cheevo_ChallengesDataTable()
+        MyBase.Tables.Add(Me.tabletbl_Cheevo_Challenges)
+        Me.tabletbl_Cheevo_Challenges_Cheevos = New tbl_Cheevo_Challenges_CheevosDataTable()
+        MyBase.Tables.Add(Me.tabletbl_Cheevo_Challenges_Cheevos)
+        Me.tabletbl_Users_Cheevo_Challenges_Cheevos = New tbl_Users_Cheevo_Challenges_CheevosDataTable()
+        MyBase.Tables.Add(Me.tabletbl_Users_Cheevo_Challenges_Cheevos)
+        Me.tablettb_Cheevo_Challenges_Tiers = New ttb_Cheevo_Challenges_TiersDataTable()
+        MyBase.Tables.Add(Me.tablettb_Cheevo_Challenges_Tiers)
+        Me.tablettb_Open_Challenges_Cheevos = New ttb_Open_Challenges_CheevosDataTable()
+        MyBase.Tables.Add(Me.tablettb_Open_Challenges_Cheevos)
+        Me.tablettb_Open_Challenges = New ttb_Open_ChallengesDataTable()
+        MyBase.Tables.Add(Me.tablettb_Open_Challenges)
+        Me.tablettb_Emulators_PreLaunch_Commands = New ttb_Emulators_PreLaunch_CommandsDataTable()
+        MyBase.Tables.Add(Me.tablettb_Emulators_PreLaunch_Commands)
+        Me.tablettb_Emulators_PostLaunch_Commands = New ttb_Emulators_PostLaunch_CommandsDataTable()
+        MyBase.Tables.Add(Me.tablettb_Emulators_PostLaunch_Commands)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1656,6 +1890,60 @@ Partial Public Class DS_ML
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializetbl_Total_DOS_Launcher_Configs() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializetbl_Cheevo_Challenges() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializetbl_Cheevo_Challenges_Cheevos() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializetbl_Users_Cheevo_Challenges_Cheevos() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializettb_Cheevo_Challenges_Tiers() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializettb_Open_Challenges_Cheevos() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializettb_Open_Challenges() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializettb_Emulators_PreLaunch_Commands() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializettb_Emulators_PostLaunch_Commands() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Sub SchemaChanged(ByVal sender As Object, ByVal e As Global.System.ComponentModel.CollectionChangeEventArgs)
         If (e.Action = Global.System.ComponentModel.CollectionChangeAction.Remove) Then
             Me.InitVars
@@ -1850,6 +2138,33 @@ Partial Public Class DS_ML
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub tbl_Moby_RegionsRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_Moby_RegionsRowChangeEvent)
     
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub tbl_Total_DOS_Launcher_ConfigsRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_Total_DOS_Launcher_ConfigsRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub tbl_Cheevo_ChallengesRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_Cheevo_ChallengesRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub tbl_Cheevo_Challenges_CheevosRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_Cheevo_Challenges_CheevosRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub tbl_Users_Cheevo_Challenges_CheevosRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_Users_Cheevo_Challenges_CheevosRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub ttb_Cheevo_Challenges_TiersRowChangeEventHandler(ByVal sender As Object, ByVal e As ttb_Cheevo_Challenges_TiersRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub ttb_Open_Challenges_CheevosRowChangeEventHandler(ByVal sender As Object, ByVal e As ttb_Open_Challenges_CheevosRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub ttb_Open_ChallengesRowChangeEventHandler(ByVal sender As Object, ByVal e As ttb_Open_ChallengesRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub ttb_Emulators_PreLaunch_CommandsRowChangeEventHandler(ByVal sender As Object, ByVal e As ttb_Emulators_PreLaunch_CommandsRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub ttb_Emulators_PostLaunch_CommandsRowChangeEventHandler(ByVal sender As Object, ByVal e As ttb_Emulators_PostLaunch_CommandsRowChangeEvent)
+    
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
@@ -1877,6 +2192,10 @@ Partial Public Class DS_ML
         Private columnLibretro_Core As Global.System.Data.DataColumn
         
         Private columnid_List_Generators As Global.System.Data.DataColumn
+        
+        Private columnScriptType As Global.System.Data.DataColumn
+        
+        Private columnScriptPath As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -1994,6 +2313,22 @@ Partial Public Class DS_ML
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ScriptTypeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnScriptType
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ScriptPathColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnScriptPath
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2030,9 +2365,9 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addtbl_EmulatorsRow(ByVal Displayname As String, ByVal InstallDirectory As String, ByVal Executable As String, ByVal StartupParameter As String, ByVal AutoItScript As String, ByVal J2KPreset As String, ByVal ScreenshotDirectory As String, ByVal Libretro_Core As String, ByVal id_List_Generators As Long) As tbl_EmulatorsRow
+        Public Overloads Function Addtbl_EmulatorsRow(ByVal Displayname As String, ByVal InstallDirectory As String, ByVal Executable As String, ByVal StartupParameter As String, ByVal AutoItScript As String, ByVal J2KPreset As String, ByVal ScreenshotDirectory As String, ByVal Libretro_Core As String, ByVal id_List_Generators As Long, ByVal ScriptType As Long, ByVal ScriptPath As String) As tbl_EmulatorsRow
             Dim rowtbl_EmulatorsRow As tbl_EmulatorsRow = CType(Me.NewRow,tbl_EmulatorsRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Displayname, InstallDirectory, Executable, StartupParameter, AutoItScript, J2KPreset, ScreenshotDirectory, Libretro_Core, id_List_Generators}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Displayname, InstallDirectory, Executable, StartupParameter, AutoItScript, J2KPreset, ScreenshotDirectory, Libretro_Core, id_List_Generators, ScriptType, ScriptPath}
             rowtbl_EmulatorsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_EmulatorsRow)
             Return rowtbl_EmulatorsRow
@@ -2071,6 +2406,8 @@ Partial Public Class DS_ML
             Me.columnScreenshotDirectory = MyBase.Columns("ScreenshotDirectory")
             Me.columnLibretro_Core = MyBase.Columns("Libretro_Core")
             Me.columnid_List_Generators = MyBase.Columns("id_List_Generators")
+            Me.columnScriptType = MyBase.Columns("ScriptType")
+            Me.columnScriptPath = MyBase.Columns("ScriptPath")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2096,6 +2433,10 @@ Partial Public Class DS_ML
             MyBase.Columns.Add(Me.columnLibretro_Core)
             Me.columnid_List_Generators = New Global.System.Data.DataColumn("id_List_Generators", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_List_Generators)
+            Me.columnScriptType = New Global.System.Data.DataColumn("ScriptType", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnScriptType)
+            Me.columnScriptPath = New Global.System.Data.DataColumn("ScriptPath", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnScriptPath)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_Emulators}, true))
             Me.columnid_Emulators.AutoIncrement = true
             Me.columnid_Emulators.AutoIncrementSeed = -1
@@ -3128,6 +3469,12 @@ Partial Public Class DS_ML
         
         Private columnInnerFile As Global.System.Data.DataColumn
         
+        Private columnCRC32 As Global.System.Data.DataColumn
+        
+        Private columnSHA1 As Global.System.Data.DataColumn
+        
+        Private columnMD5 As Global.System.Data.DataColumn
+        
         Private columnWant As Global.System.Data.DataColumn
         
         Private columnHave As Global.System.Data.DataColumn
@@ -3203,6 +3550,8 @@ Partial Public Class DS_ML
         Private columnSpecial_Edition As Global.System.Data.DataColumn
         
         Private columnPlatform_Short As Global.System.Data.DataColumn
+        
+        Private columnPlatform_RetroAchievements As Global.System.Data.DataColumn
         
         Private columnMoby_URL As Global.System.Data.DataColumn
         
@@ -3344,6 +3693,8 @@ Partial Public Class DS_ML
         
         Private column401_Staff As Global.System.Data.DataColumn
         
+        Private columnTDL_Subtitle As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -3456,6 +3807,30 @@ Partial Public Class DS_ML
         Public ReadOnly Property InnerFileColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnInnerFile
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CRC32Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCRC32
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SHA1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSHA1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MD5Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMD5
             End Get
         End Property
         
@@ -3760,6 +4135,14 @@ Partial Public Class DS_ML
         Public ReadOnly Property Platform_ShortColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnPlatform_Short
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Platform_RetroAchievementsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPlatform_RetroAchievements
             End Get
         End Property
         
@@ -4324,6 +4707,14 @@ Partial Public Class DS_ML
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property TDL_SubtitleColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTDL_Subtitle
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -4371,6 +4762,9 @@ Partial Public Class DS_ML
                     ByVal Folder As String,  _
                     ByVal File As String,  _
                     ByVal InnerFile As String,  _
+                    ByVal CRC32 As String,  _
+                    ByVal SHA1 As String,  _
+                    ByVal MD5 As String,  _
                     ByVal Want As Boolean,  _
                     ByVal Have As Boolean,  _
                     ByVal Trade As Boolean,  _
@@ -4409,6 +4803,7 @@ Partial Public Class DS_ML
                     ByVal DLC_Addon As String,  _
                     ByVal Special_Edition As String,  _
                     ByVal Platform_Short As String,  _
+                    ByVal Platform_RetroAchievements As Boolean,  _
                     ByVal Moby_URL As String,  _
                     ByVal Moby_Platforms_URLPart As String,  _
                     ByVal Moby_Games_URLPart As String,  _
@@ -4478,9 +4873,10 @@ Partial Public Class DS_ML
                     ByVal _206_Other_Attributes As Integer,  _
                     ByVal _207_Multiplayer_Attributes As Integer,  _
                     ByVal _301_Group_Membership As Integer,  _
-                    ByVal _401_Staff As Integer) As src_ucr_Emulation_GamesRow
+                    ByVal _401_Staff As Integer,  _
+                    ByVal TDL_Subtitle As String) As src_ucr_Emulation_GamesRow
             Dim rowsrc_ucr_Emulation_GamesRow As src_ucr_Emulation_GamesRow = CType(Me.NewRow,src_ucr_Emulation_GamesRow)
-            Dim columnValuesArray() As Object = New Object() {id_Emu_Games, tmp_Highlighted, id_DOSBox_Configs_Template, id_DOSBox_Configs, CustomIdentifier, Unavailable, Game, Folder, File, InnerFile, Want, Have, Trade, Rank, Score, Year, Num_Played, Num_Runtime, Rating_Gameplay, Rating_Graphics, Rating_Personal, Rating_Sound, Rating_Story, Favourite, Platform, Game_NoPrefix, Age_Pessimistic, Age_Optimistic, Publisher, Developer, Description, Technical_Notes, Alternate_Titles, Basic_Genres, Perspectives, Sports_Themes, Educational_Categories, Other_Attributes, Visual_Presentation, Pacing, Gameplay, Interface_Control, Vehicular_Themes, Setting, Narrative_Theme_Topic, DLC_Addon, Special_Edition, Platform_Short, Moby_URL, Moby_Platforms_URLPart, Moby_Games_URLPart, MinPlayers, MaxPlayers, id_Moby_Platforms, id_Moby_Platforms_Alternative, Rating, Version, Alt, Trainer, Translation, Hack, Bios, Prototype, Alpha, Beta, Sample, Kiosk, Unlicensed, Fixed, Pirated, Good, Bad, Overdump, PublicDomain, Regions, Languages, MP_GameModes, MP_Options, SpecialInfo, id_Moby_Games, Last_Played, created, MultiVolume, Volume_Number, Platform_Exclusive, J2KPreset, id_Moby_Releases, Similarity, _001_Platform, _002_MobyRank, _003_MobyScore, _004_Publisher, _005_Developer, _006_Year, _101_Basic_Genres, _102_Perspectives, _103_Sports_Themes, _104_Non_Sports_Themes, _105_Educational_Categories, _106_Other_Attributes, _107_Visual_Presentation, _108_Gameplay, _109_Pacing, _110_Narrative_Theme_Topic, _111_Setting, _112_Vehicular_Themes, _113_Interface_Control, _114_DLC_Addon, _115_Special_Edition, _201_MinPlayers, _202_MaxPlayers, _203_AgeO, _204_AgeP, _205_Rating_Descriptors, _206_Other_Attributes, _207_Multiplayer_Attributes, _301_Group_Membership, _401_Staff}
+            Dim columnValuesArray() As Object = New Object() {id_Emu_Games, tmp_Highlighted, id_DOSBox_Configs_Template, id_DOSBox_Configs, CustomIdentifier, Unavailable, Game, Folder, File, InnerFile, CRC32, SHA1, MD5, Want, Have, Trade, Rank, Score, Year, Num_Played, Num_Runtime, Rating_Gameplay, Rating_Graphics, Rating_Personal, Rating_Sound, Rating_Story, Favourite, Platform, Game_NoPrefix, Age_Pessimistic, Age_Optimistic, Publisher, Developer, Description, Technical_Notes, Alternate_Titles, Basic_Genres, Perspectives, Sports_Themes, Educational_Categories, Other_Attributes, Visual_Presentation, Pacing, Gameplay, Interface_Control, Vehicular_Themes, Setting, Narrative_Theme_Topic, DLC_Addon, Special_Edition, Platform_Short, Platform_RetroAchievements, Moby_URL, Moby_Platforms_URLPart, Moby_Games_URLPart, MinPlayers, MaxPlayers, id_Moby_Platforms, id_Moby_Platforms_Alternative, Rating, Version, Alt, Trainer, Translation, Hack, Bios, Prototype, Alpha, Beta, Sample, Kiosk, Unlicensed, Fixed, Pirated, Good, Bad, Overdump, PublicDomain, Regions, Languages, MP_GameModes, MP_Options, SpecialInfo, id_Moby_Games, Last_Played, created, MultiVolume, Volume_Number, Platform_Exclusive, J2KPreset, id_Moby_Releases, Similarity, _001_Platform, _002_MobyRank, _003_MobyScore, _004_Publisher, _005_Developer, _006_Year, _101_Basic_Genres, _102_Perspectives, _103_Sports_Themes, _104_Non_Sports_Themes, _105_Educational_Categories, _106_Other_Attributes, _107_Visual_Presentation, _108_Gameplay, _109_Pacing, _110_Narrative_Theme_Topic, _111_Setting, _112_Vehicular_Themes, _113_Interface_Control, _114_DLC_Addon, _115_Special_Edition, _201_MinPlayers, _202_MaxPlayers, _203_AgeO, _204_AgeP, _205_Rating_Descriptors, _206_Other_Attributes, _207_Multiplayer_Attributes, _301_Group_Membership, _401_Staff, TDL_Subtitle}
             rowsrc_ucr_Emulation_GamesRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowsrc_ucr_Emulation_GamesRow)
             Return rowsrc_ucr_Emulation_GamesRow
@@ -4513,6 +4909,9 @@ Partial Public Class DS_ML
             Me.columnFolder = MyBase.Columns("Folder")
             Me.columnFile = MyBase.Columns("File")
             Me.columnInnerFile = MyBase.Columns("InnerFile")
+            Me.columnCRC32 = MyBase.Columns("CRC32")
+            Me.columnSHA1 = MyBase.Columns("SHA1")
+            Me.columnMD5 = MyBase.Columns("MD5")
             Me.columnWant = MyBase.Columns("Want")
             Me.columnHave = MyBase.Columns("Have")
             Me.columnTrade = MyBase.Columns("Trade")
@@ -4551,6 +4950,7 @@ Partial Public Class DS_ML
             Me.columnDLC_Addon = MyBase.Columns("DLC_Addon")
             Me.columnSpecial_Edition = MyBase.Columns("Special_Edition")
             Me.columnPlatform_Short = MyBase.Columns("Platform_Short")
+            Me.columnPlatform_RetroAchievements = MyBase.Columns("Platform_RetroAchievements")
             Me.columnMoby_URL = MyBase.Columns("Moby_URL")
             Me.columnMoby_Platforms_URLPart = MyBase.Columns("Moby_Platforms_URLPart")
             Me.columnMoby_Games_URLPart = MyBase.Columns("Moby_Games_URLPart")
@@ -4621,6 +5021,7 @@ Partial Public Class DS_ML
             Me.column207_Multiplayer_Attributes = MyBase.Columns("207_Multiplayer_Attributes")
             Me.column301_Group_Membership = MyBase.Columns("301_Group_Membership")
             Me.column401_Staff = MyBase.Columns("401_Staff")
+            Me.columnTDL_Subtitle = MyBase.Columns("TDL_Subtitle")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4646,6 +5047,12 @@ Partial Public Class DS_ML
             MyBase.Columns.Add(Me.columnFile)
             Me.columnInnerFile = New Global.System.Data.DataColumn("InnerFile", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnInnerFile)
+            Me.columnCRC32 = New Global.System.Data.DataColumn("CRC32", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCRC32)
+            Me.columnSHA1 = New Global.System.Data.DataColumn("SHA1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSHA1)
+            Me.columnMD5 = New Global.System.Data.DataColumn("MD5", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMD5)
             Me.columnWant = New Global.System.Data.DataColumn("Want", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnWant)
             Me.columnHave = New Global.System.Data.DataColumn("Have", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
@@ -4722,6 +5129,8 @@ Partial Public Class DS_ML
             MyBase.Columns.Add(Me.columnSpecial_Edition)
             Me.columnPlatform_Short = New Global.System.Data.DataColumn("Platform_Short", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPlatform_Short)
+            Me.columnPlatform_RetroAchievements = New Global.System.Data.DataColumn("Platform_RetroAchievements", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPlatform_RetroAchievements)
             Me.columnMoby_URL = New Global.System.Data.DataColumn("Moby_URL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnMoby_URL)
             Me.columnMoby_Platforms_URLPart = New Global.System.Data.DataColumn("Moby_Platforms_URLPart", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -4922,6 +5331,8 @@ Partial Public Class DS_ML
             Me.column401_Staff.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "column401_Staff")
             Me.column401_Staff.ExtendedProperties.Add("Generator_UserColumnName", "401_Staff")
             MyBase.Columns.Add(Me.column401_Staff)
+            Me.columnTDL_Subtitle = New Global.System.Data.DataColumn("TDL_Subtitle", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTDL_Subtitle)
             Me.columntmp_Highlighted.DefaultValue = CType(false,Boolean)
         End Sub
         
@@ -9004,6 +9415,16 @@ Partial Public Class DS_ML
         
         Private columntmp_Highlighted As Global.System.Data.DataColumn
         
+        Private columnTDL_Subtitle As Global.System.Data.DataColumn
+        
+        Private columnTDL_Show_in_Menu As Global.System.Data.DataColumn
+        
+        Private columnTDL_DisplayText As Global.System.Data.DataColumn
+        
+        Private columnTDL_Sort As Global.System.Data.DataColumn
+        
+        Private columntmp_DOSBox_DisplayText As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -9776,6 +10197,46 @@ Partial Public Class DS_ML
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property TDL_SubtitleColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTDL_Subtitle
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property TDL_Show_in_MenuColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTDL_Show_in_Menu
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property TDL_DisplayTextColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTDL_DisplayText
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property TDL_SortColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTDL_Sort
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property tmp_DOSBox_DisplayTextColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntmp_DOSBox_DisplayText
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -9903,9 +10364,14 @@ Partial Public Class DS_ML
                     ByVal id_Emu_Games_Owner As Long,  _
                     ByVal Filtered_Name As String,  _
                     ByVal deprecated As Boolean,  _
-                    ByVal tmp_Highlighted As Boolean) As tbl_Emu_GamesRow
+                    ByVal tmp_Highlighted As Boolean,  _
+                    ByVal TDL_Subtitle As String,  _
+                    ByVal TDL_Show_in_Menu As Boolean,  _
+                    ByVal TDL_DisplayText As String,  _
+                    ByVal TDL_Sort As Integer,  _
+                    ByVal tmp_DOSBox_DisplayText As String) As tbl_Emu_GamesRow
             Dim rowtbl_Emu_GamesRow As tbl_Emu_GamesRow = CType(Me.NewRow,tbl_Emu_GamesRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, id_DOSBox_Configs_Template, id_DOSBox_Configs, id_ScummVM_Configs_Template, id_ScummVM_Configs, id_Rombase_DOSBox_Filetypes, id_Rombase_DOSBox_Exe_Types, Unavailable, DOSBox_Mount_Destination, Hidden, Moby_Games_URLPart, id_Moby_Platforms, id_Moby_Platforms_Alternative, Folder, File, InnerFile, Size, CustomIdentifier, CRC32, SHA1, MD5, Name, Name_Prefix, Note, Publisher, Publisher_id_Moby_Companies, Developer, Developer_id_Moby_Companies, Description, Favourite, Rating_Gameplay, Rating_Graphics, Rating_Sound, Rating_Story, Rating_Personal, Num_Played, Num_Runtime, Year, Version, Alt, Trainer, Translation, Hack, Bios, Prototype, Alpha, Beta, Sample, Kiosk, Unlicensed, Fixed, Pirated, Good, Bad, Overdump, PublicDomain, ROMBASE_id_Moby_Platforms, id_Rombase, id_Emulators, Publisher_USR, Publisher_id_Moby_Companies_USR, Developer_USR, Developer_id_Moby_Companies_USR, Description_USR, Year_USR, Version_USR, Alt_USR, Trainer_USR, Translation_USR, Hack_USR, Bios_USR, Prototype_USR, Alpha_USR, Beta_USR, Sample_USR, Kiosk_USR, Unlicensed_USR, Fixed_USR, Pirated_USR, Good_USR, Bad_USR, Overdump_USR, PublicDomain_USR, Name_USR, Name_Prefix_USR, Note_USR, created, Volume_Number, id_Emu_Games_Owner, Filtered_Name, deprecated, tmp_Highlighted}
+            Dim columnValuesArray() As Object = New Object() {Nothing, id_DOSBox_Configs_Template, id_DOSBox_Configs, id_ScummVM_Configs_Template, id_ScummVM_Configs, id_Rombase_DOSBox_Filetypes, id_Rombase_DOSBox_Exe_Types, Unavailable, DOSBox_Mount_Destination, Hidden, Moby_Games_URLPart, id_Moby_Platforms, id_Moby_Platforms_Alternative, Folder, File, InnerFile, Size, CustomIdentifier, CRC32, SHA1, MD5, Name, Name_Prefix, Note, Publisher, Publisher_id_Moby_Companies, Developer, Developer_id_Moby_Companies, Description, Favourite, Rating_Gameplay, Rating_Graphics, Rating_Sound, Rating_Story, Rating_Personal, Num_Played, Num_Runtime, Year, Version, Alt, Trainer, Translation, Hack, Bios, Prototype, Alpha, Beta, Sample, Kiosk, Unlicensed, Fixed, Pirated, Good, Bad, Overdump, PublicDomain, ROMBASE_id_Moby_Platforms, id_Rombase, id_Emulators, Publisher_USR, Publisher_id_Moby_Companies_USR, Developer_USR, Developer_id_Moby_Companies_USR, Description_USR, Year_USR, Version_USR, Alt_USR, Trainer_USR, Translation_USR, Hack_USR, Bios_USR, Prototype_USR, Alpha_USR, Beta_USR, Sample_USR, Kiosk_USR, Unlicensed_USR, Fixed_USR, Pirated_USR, Good_USR, Bad_USR, Overdump_USR, PublicDomain_USR, Name_USR, Name_Prefix_USR, Note_USR, created, Volume_Number, id_Emu_Games_Owner, Filtered_Name, deprecated, tmp_Highlighted, TDL_Subtitle, TDL_Show_in_Menu, TDL_DisplayText, TDL_Sort, tmp_DOSBox_DisplayText}
             rowtbl_Emu_GamesRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_Emu_GamesRow)
             Return rowtbl_Emu_GamesRow
@@ -10026,6 +10492,11 @@ Partial Public Class DS_ML
             Me.columnFiltered_Name = MyBase.Columns("Filtered_Name")
             Me.columndeprecated = MyBase.Columns("deprecated")
             Me.columntmp_Highlighted = MyBase.Columns("tmp_Highlighted")
+            Me.columnTDL_Subtitle = MyBase.Columns("TDL_Subtitle")
+            Me.columnTDL_Show_in_Menu = MyBase.Columns("TDL_Show_in_Menu")
+            Me.columnTDL_DisplayText = MyBase.Columns("TDL_DisplayText")
+            Me.columnTDL_Sort = MyBase.Columns("TDL_Sort")
+            Me.columntmp_DOSBox_DisplayText = MyBase.Columns("tmp_DOSBox_DisplayText")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -10215,6 +10686,16 @@ Partial Public Class DS_ML
             MyBase.Columns.Add(Me.columndeprecated)
             Me.columntmp_Highlighted = New Global.System.Data.DataColumn("tmp_Highlighted", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntmp_Highlighted)
+            Me.columnTDL_Subtitle = New Global.System.Data.DataColumn("TDL_Subtitle", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTDL_Subtitle)
+            Me.columnTDL_Show_in_Menu = New Global.System.Data.DataColumn("TDL_Show_in_Menu", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTDL_Show_in_Menu)
+            Me.columnTDL_DisplayText = New Global.System.Data.DataColumn("TDL_DisplayText", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTDL_DisplayText)
+            Me.columnTDL_Sort = New Global.System.Data.DataColumn("TDL_Sort", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTDL_Sort)
+            Me.columntmp_DOSBox_DisplayText = New Global.System.Data.DataColumn("tmp_DOSBox_DisplayText", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntmp_DOSBox_DisplayText)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_Emu_Games}, true))
             Me.columnid_Emu_Games.AutoIncrement = true
             Me.columnid_Emu_Games.AutoIncrementSeed = -1
@@ -18002,6 +18483,8 @@ Partial Public Class DS_ML
         
         Private columnRestricted As Global.System.Data.DataColumn
         
+        Private columnid_Cheevo_Challenges As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -18078,6 +18561,14 @@ Partial Public Class DS_ML
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Cheevo_ChallengesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Cheevo_Challenges
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -18114,9 +18605,9 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addtbl_UsersRow(ByVal Admin As Boolean, ByVal Username As String, ByVal Password As String, ByVal Restricted As Boolean) As tbl_UsersRow
+        Public Overloads Function Addtbl_UsersRow(ByVal Admin As Boolean, ByVal Username As String, ByVal Password As String, ByVal Restricted As Boolean, ByVal id_Cheevo_Challenges As Long) As tbl_UsersRow
             Dim rowtbl_UsersRow As tbl_UsersRow = CType(Me.NewRow,tbl_UsersRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Admin, Username, Password, Restricted}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Admin, Username, Password, Restricted, id_Cheevo_Challenges}
             rowtbl_UsersRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_UsersRow)
             Return rowtbl_UsersRow
@@ -18144,6 +18635,7 @@ Partial Public Class DS_ML
             Me.columnUsername = MyBase.Columns("Username")
             Me.columnPassword = MyBase.Columns("Password")
             Me.columnRestricted = MyBase.Columns("Restricted")
+            Me.columnid_Cheevo_Challenges = MyBase.Columns("id_Cheevo_Challenges")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -18159,6 +18651,8 @@ Partial Public Class DS_ML
             MyBase.Columns.Add(Me.columnPassword)
             Me.columnRestricted = New Global.System.Data.DataColumn("Restricted", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnRestricted)
+            Me.columnid_Cheevo_Challenges = New Global.System.Data.DataColumn("id_Cheevo_Challenges", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Cheevo_Challenges)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_Users}, false))
             Me.columnid_Users.AutoIncrement = true
             Me.columnid_Users.AutoIncrementSeed = -1
@@ -24775,6 +25269,3217 @@ Partial Public Class DS_ML
     End Class
     
     '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class tbl_Total_DOS_Launcher_ConfigsDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tbl_Total_DOS_Launcher_ConfigsRow)
+        
+        Private columnid_Total_DOS_Launcher_Configs As Global.System.Data.DataColumn
+        
+        Private columnDisplayName As Global.System.Data.DataColumn
+        
+        Private columnproglocations As Global.System.Data.DataColumn
+        
+        Private columncachelocation As Global.System.Data.DataColumn
+        
+        Private columnuserlevel As Global.System.Data.DataColumn
+        
+        Private columnforcelogging As Global.System.Data.DataColumn
+        
+        Private columnswapping As Global.System.Data.DataColumn
+        
+        Private columnpreloading As Global.System.Data.DataColumn
+        
+        Private columnpauseafterrun As Global.System.Data.DataColumn
+        
+        Private columnVESA As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "tbl_Total_DOS_Launcher_Configs"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Total_DOS_Launcher_ConfigsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Total_DOS_Launcher_Configs
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DisplayNameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDisplayName
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property proglocationsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnproglocations
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property cachelocationColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncachelocation
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property userlevelColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnuserlevel
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property forceloggingColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnforcelogging
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property swappingColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnswapping
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property preloadingColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnpreloading
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property pauseafterrunColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnpauseafterrun
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property VESAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnVESA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_Total_DOS_Launcher_ConfigsRow
+            Get
+                Return CType(Me.Rows(index),tbl_Total_DOS_Launcher_ConfigsRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Total_DOS_Launcher_ConfigsRowChanging As tbl_Total_DOS_Launcher_ConfigsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Total_DOS_Launcher_ConfigsRowChanged As tbl_Total_DOS_Launcher_ConfigsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Total_DOS_Launcher_ConfigsRowDeleting As tbl_Total_DOS_Launcher_ConfigsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Total_DOS_Launcher_ConfigsRowDeleted As tbl_Total_DOS_Launcher_ConfigsRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addtbl_Total_DOS_Launcher_ConfigsRow(ByVal row As tbl_Total_DOS_Launcher_ConfigsRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addtbl_Total_DOS_Launcher_ConfigsRow(ByVal id_Total_DOS_Launcher_Configs As Integer, ByVal DisplayName As String, ByVal proglocations As String, ByVal cachelocation As String, ByVal userlevel As String, ByVal forcelogging As Boolean, ByVal swapping As Boolean, ByVal preloading As Boolean, ByVal pauseafterrun As Boolean, ByVal VESA As String) As tbl_Total_DOS_Launcher_ConfigsRow
+            Dim rowtbl_Total_DOS_Launcher_ConfigsRow As tbl_Total_DOS_Launcher_ConfigsRow = CType(Me.NewRow,tbl_Total_DOS_Launcher_ConfigsRow)
+            Dim columnValuesArray() As Object = New Object() {id_Total_DOS_Launcher_Configs, DisplayName, proglocations, cachelocation, userlevel, forcelogging, swapping, preloading, pauseafterrun, VESA}
+            rowtbl_Total_DOS_Launcher_ConfigsRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtbl_Total_DOS_Launcher_ConfigsRow)
+            Return rowtbl_Total_DOS_Launcher_ConfigsRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As tbl_Total_DOS_Launcher_ConfigsDataTable = CType(MyBase.Clone,tbl_Total_DOS_Launcher_ConfigsDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New tbl_Total_DOS_Launcher_ConfigsDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Total_DOS_Launcher_Configs = MyBase.Columns("id_Total_DOS_Launcher_Configs")
+            Me.columnDisplayName = MyBase.Columns("DisplayName")
+            Me.columnproglocations = MyBase.Columns("proglocations")
+            Me.columncachelocation = MyBase.Columns("cachelocation")
+            Me.columnuserlevel = MyBase.Columns("userlevel")
+            Me.columnforcelogging = MyBase.Columns("forcelogging")
+            Me.columnswapping = MyBase.Columns("swapping")
+            Me.columnpreloading = MyBase.Columns("preloading")
+            Me.columnpauseafterrun = MyBase.Columns("pauseafterrun")
+            Me.columnVESA = MyBase.Columns("VESA")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Total_DOS_Launcher_Configs = New Global.System.Data.DataColumn("id_Total_DOS_Launcher_Configs", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Total_DOS_Launcher_Configs)
+            Me.columnDisplayName = New Global.System.Data.DataColumn("DisplayName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDisplayName)
+            Me.columnproglocations = New Global.System.Data.DataColumn("proglocations", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnproglocations)
+            Me.columncachelocation = New Global.System.Data.DataColumn("cachelocation", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncachelocation)
+            Me.columnuserlevel = New Global.System.Data.DataColumn("userlevel", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnuserlevel)
+            Me.columnforcelogging = New Global.System.Data.DataColumn("forcelogging", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnforcelogging)
+            Me.columnswapping = New Global.System.Data.DataColumn("swapping", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnswapping)
+            Me.columnpreloading = New Global.System.Data.DataColumn("preloading", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnpreloading)
+            Me.columnpauseafterrun = New Global.System.Data.DataColumn("pauseafterrun", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnpauseafterrun)
+            Me.columnVESA = New Global.System.Data.DataColumn("VESA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnVESA)
+            Me.columnid_Total_DOS_Launcher_Configs.AutoIncrementSeed = -1
+            Me.columnid_Total_DOS_Launcher_Configs.AutoIncrementStep = -1
+            Me.columnproglocations.DefaultValue = CType("files;c:\tdlfiles;d:\tdlfiles;e:\tdlfiles;f:\tdlfiles;g:\tdlfiles;h:\tdlfiles",String)
+            Me.columncachelocation.DefaultValue = CType("c:\tdlcache",String)
+            Me.columnuserlevel.DefaultValue = CType("regular",String)
+            Me.columnforcelogging.DefaultValue = CType(true,Boolean)
+            Me.columnswapping.DefaultValue = CType(true,Boolean)
+            Me.columnpreloading.DefaultValue = CType(true,Boolean)
+            Me.columnpauseafterrun.DefaultValue = CType(true,Boolean)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newtbl_Total_DOS_Launcher_ConfigsRow() As tbl_Total_DOS_Launcher_ConfigsRow
+            Return CType(Me.NewRow,tbl_Total_DOS_Launcher_ConfigsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New tbl_Total_DOS_Launcher_ConfigsRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(tbl_Total_DOS_Launcher_ConfigsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.tbl_Total_DOS_Launcher_ConfigsRowChangedEvent) Is Nothing) Then
+                RaiseEvent tbl_Total_DOS_Launcher_ConfigsRowChanged(Me, New tbl_Total_DOS_Launcher_ConfigsRowChangeEvent(CType(e.Row,tbl_Total_DOS_Launcher_ConfigsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.tbl_Total_DOS_Launcher_ConfigsRowChangingEvent) Is Nothing) Then
+                RaiseEvent tbl_Total_DOS_Launcher_ConfigsRowChanging(Me, New tbl_Total_DOS_Launcher_ConfigsRowChangeEvent(CType(e.Row,tbl_Total_DOS_Launcher_ConfigsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.tbl_Total_DOS_Launcher_ConfigsRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tbl_Total_DOS_Launcher_ConfigsRowDeleted(Me, New tbl_Total_DOS_Launcher_ConfigsRowChangeEvent(CType(e.Row,tbl_Total_DOS_Launcher_ConfigsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.tbl_Total_DOS_Launcher_ConfigsRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tbl_Total_DOS_Launcher_ConfigsRowDeleting(Me, New tbl_Total_DOS_Launcher_ConfigsRowChangeEvent(CType(e.Row,tbl_Total_DOS_Launcher_ConfigsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removetbl_Total_DOS_Launcher_ConfigsRow(ByVal row As tbl_Total_DOS_Launcher_ConfigsRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_ML = New DS_ML()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "tbl_Total_DOS_Launcher_ConfigsDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class tbl_Cheevo_ChallengesDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tbl_Cheevo_ChallengesRow)
+        
+        Private columnid_Cheevo_Challenges As Global.System.Data.DataColumn
+        
+        Private columnName As Global.System.Data.DataColumn
+        
+        Private columncreated As Global.System.Data.DataColumn
+        
+        Private columnupdated As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "tbl_Cheevo_Challenges"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Cheevo_ChallengesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Cheevo_Challenges
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnName
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property createdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncreated
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property updatedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnupdated
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_Cheevo_ChallengesRow
+            Get
+                Return CType(Me.Rows(index),tbl_Cheevo_ChallengesRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Cheevo_ChallengesRowChanging As tbl_Cheevo_ChallengesRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Cheevo_ChallengesRowChanged As tbl_Cheevo_ChallengesRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Cheevo_ChallengesRowDeleting As tbl_Cheevo_ChallengesRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Cheevo_ChallengesRowDeleted As tbl_Cheevo_ChallengesRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addtbl_Cheevo_ChallengesRow(ByVal row As tbl_Cheevo_ChallengesRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addtbl_Cheevo_ChallengesRow(ByVal Name As String, ByVal created As Date, ByVal updated As Date) As tbl_Cheevo_ChallengesRow
+            Dim rowtbl_Cheevo_ChallengesRow As tbl_Cheevo_ChallengesRow = CType(Me.NewRow,tbl_Cheevo_ChallengesRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, Name, created, updated}
+            rowtbl_Cheevo_ChallengesRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtbl_Cheevo_ChallengesRow)
+            Return rowtbl_Cheevo_ChallengesRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As tbl_Cheevo_ChallengesDataTable = CType(MyBase.Clone,tbl_Cheevo_ChallengesDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New tbl_Cheevo_ChallengesDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Cheevo_Challenges = MyBase.Columns("id_Cheevo_Challenges")
+            Me.columnName = MyBase.Columns("Name")
+            Me.columncreated = MyBase.Columns("created")
+            Me.columnupdated = MyBase.Columns("updated")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Cheevo_Challenges = New Global.System.Data.DataColumn("id_Cheevo_Challenges", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Cheevo_Challenges)
+            Me.columnName = New Global.System.Data.DataColumn("Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnName)
+            Me.columncreated = New Global.System.Data.DataColumn("created", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncreated)
+            Me.columnupdated = New Global.System.Data.DataColumn("updated", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnupdated)
+            Me.columnid_Cheevo_Challenges.AutoIncrement = true
+            Me.columnid_Cheevo_Challenges.AutoIncrementSeed = -1
+            Me.columnid_Cheevo_Challenges.AutoIncrementStep = -1
+            Me.columnid_Cheevo_Challenges.AllowDBNull = false
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newtbl_Cheevo_ChallengesRow() As tbl_Cheevo_ChallengesRow
+            Return CType(Me.NewRow,tbl_Cheevo_ChallengesRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New tbl_Cheevo_ChallengesRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(tbl_Cheevo_ChallengesRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.tbl_Cheevo_ChallengesRowChangedEvent) Is Nothing) Then
+                RaiseEvent tbl_Cheevo_ChallengesRowChanged(Me, New tbl_Cheevo_ChallengesRowChangeEvent(CType(e.Row,tbl_Cheevo_ChallengesRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.tbl_Cheevo_ChallengesRowChangingEvent) Is Nothing) Then
+                RaiseEvent tbl_Cheevo_ChallengesRowChanging(Me, New tbl_Cheevo_ChallengesRowChangeEvent(CType(e.Row,tbl_Cheevo_ChallengesRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.tbl_Cheevo_ChallengesRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tbl_Cheevo_ChallengesRowDeleted(Me, New tbl_Cheevo_ChallengesRowChangeEvent(CType(e.Row,tbl_Cheevo_ChallengesRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.tbl_Cheevo_ChallengesRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tbl_Cheevo_ChallengesRowDeleting(Me, New tbl_Cheevo_ChallengesRowChangeEvent(CType(e.Row,tbl_Cheevo_ChallengesRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removetbl_Cheevo_ChallengesRow(ByVal row As tbl_Cheevo_ChallengesRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_ML = New DS_ML()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "tbl_Cheevo_ChallengesDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class tbl_Cheevo_Challenges_CheevosDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tbl_Cheevo_Challenges_CheevosRow)
+        
+        Private columnid_Cheevo_Challenges_Cheevos As Global.System.Data.DataColumn
+        
+        Private columnid_Cheevo_Challenges As Global.System.Data.DataColumn
+        
+        Private columnCheevoType As Global.System.Data.DataColumn
+        
+        Private columnTier As Global.System.Data.DataColumn
+        
+        Private columnid_Emu_Games As Global.System.Data.DataColumn
+        
+        Private columnCheevo_GameName As Global.System.Data.DataColumn
+        
+        Private columnCheevo_ID As Global.System.Data.DataColumn
+        
+        Private columnCheevo_Title As Global.System.Data.DataColumn
+        
+        Private columntmp_Cheevo_Title_with_Points As Global.System.Data.DataColumn
+        
+        Private columntmp_Cheevo_Title_with_Points_and_Mode As Global.System.Data.DataColumn
+        
+        Private columnCheevo_Description As Global.System.Data.DataColumn
+        
+        Private columnCheevo_Points As Global.System.Data.DataColumn
+        
+        Private columnCheevo_BadgeName As Global.System.Data.DataColumn
+        
+        Private columnCheevo_Flags As Global.System.Data.DataColumn
+        
+        Private columnHardcore As Global.System.Data.DataColumn
+        
+        Private columnRuntime As Global.System.Data.DataColumn
+        
+        Private columncreated As Global.System.Data.DataColumn
+        
+        Private columnupdated As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "tbl_Cheevo_Challenges_Cheevos"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Cheevo_Challenges_CheevosColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Cheevo_Challenges_Cheevos
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Cheevo_ChallengesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Cheevo_Challenges
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CheevoTypeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCheevoType
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property TierColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTier
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Emu_GamesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Emu_Games
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Cheevo_GameNameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCheevo_GameName
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Cheevo_IDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCheevo_ID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Cheevo_TitleColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCheevo_Title
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property tmp_Cheevo_Title_with_PointsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntmp_Cheevo_Title_with_Points
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property tmp_Cheevo_Title_with_Points_and_ModeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntmp_Cheevo_Title_with_Points_and_Mode
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Cheevo_DescriptionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCheevo_Description
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Cheevo_PointsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCheevo_Points
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Cheevo_BadgeNameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCheevo_BadgeName
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Cheevo_FlagsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCheevo_Flags
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property HardcoreColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHardcore
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property RuntimeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRuntime
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property createdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncreated
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property updatedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnupdated
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_Cheevo_Challenges_CheevosRow
+            Get
+                Return CType(Me.Rows(index),tbl_Cheevo_Challenges_CheevosRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Cheevo_Challenges_CheevosRowChanging As tbl_Cheevo_Challenges_CheevosRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Cheevo_Challenges_CheevosRowChanged As tbl_Cheevo_Challenges_CheevosRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Cheevo_Challenges_CheevosRowDeleting As tbl_Cheevo_Challenges_CheevosRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Cheevo_Challenges_CheevosRowDeleted As tbl_Cheevo_Challenges_CheevosRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addtbl_Cheevo_Challenges_CheevosRow(ByVal row As tbl_Cheevo_Challenges_CheevosRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addtbl_Cheevo_Challenges_CheevosRow( _
+                    ByVal id_Cheevo_Challenges As Long,  _
+                    ByVal CheevoType As Long,  _
+                    ByVal Tier As Long,  _
+                    ByVal id_Emu_Games As Long,  _
+                    ByVal Cheevo_GameName As String,  _
+                    ByVal Cheevo_ID As String,  _
+                    ByVal Cheevo_Title As String,  _
+                    ByVal tmp_Cheevo_Title_with_Points As String,  _
+                    ByVal tmp_Cheevo_Title_with_Points_and_Mode As String,  _
+                    ByVal Cheevo_Description As String,  _
+                    ByVal Cheevo_Points As String,  _
+                    ByVal Cheevo_BadgeName As String,  _
+                    ByVal Cheevo_Flags As String,  _
+                    ByVal Hardcore As Boolean,  _
+                    ByVal Runtime As Long,  _
+                    ByVal created As Date,  _
+                    ByVal updated As Date) As tbl_Cheevo_Challenges_CheevosRow
+            Dim rowtbl_Cheevo_Challenges_CheevosRow As tbl_Cheevo_Challenges_CheevosRow = CType(Me.NewRow,tbl_Cheevo_Challenges_CheevosRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, id_Cheevo_Challenges, CheevoType, Tier, id_Emu_Games, Cheevo_GameName, Cheevo_ID, Cheevo_Title, tmp_Cheevo_Title_with_Points, tmp_Cheevo_Title_with_Points_and_Mode, Cheevo_Description, Cheevo_Points, Cheevo_BadgeName, Cheevo_Flags, Hardcore, Runtime, created, updated}
+            rowtbl_Cheevo_Challenges_CheevosRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtbl_Cheevo_Challenges_CheevosRow)
+            Return rowtbl_Cheevo_Challenges_CheevosRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As tbl_Cheevo_Challenges_CheevosDataTable = CType(MyBase.Clone,tbl_Cheevo_Challenges_CheevosDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New tbl_Cheevo_Challenges_CheevosDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Cheevo_Challenges_Cheevos = MyBase.Columns("id_Cheevo_Challenges_Cheevos")
+            Me.columnid_Cheevo_Challenges = MyBase.Columns("id_Cheevo_Challenges")
+            Me.columnCheevoType = MyBase.Columns("CheevoType")
+            Me.columnTier = MyBase.Columns("Tier")
+            Me.columnid_Emu_Games = MyBase.Columns("id_Emu_Games")
+            Me.columnCheevo_GameName = MyBase.Columns("Cheevo_GameName")
+            Me.columnCheevo_ID = MyBase.Columns("Cheevo_ID")
+            Me.columnCheevo_Title = MyBase.Columns("Cheevo_Title")
+            Me.columntmp_Cheevo_Title_with_Points = MyBase.Columns("tmp_Cheevo_Title_with_Points")
+            Me.columntmp_Cheevo_Title_with_Points_and_Mode = MyBase.Columns("tmp_Cheevo_Title_with_Points_and_Mode")
+            Me.columnCheevo_Description = MyBase.Columns("Cheevo_Description")
+            Me.columnCheevo_Points = MyBase.Columns("Cheevo_Points")
+            Me.columnCheevo_BadgeName = MyBase.Columns("Cheevo_BadgeName")
+            Me.columnCheevo_Flags = MyBase.Columns("Cheevo_Flags")
+            Me.columnHardcore = MyBase.Columns("Hardcore")
+            Me.columnRuntime = MyBase.Columns("Runtime")
+            Me.columncreated = MyBase.Columns("created")
+            Me.columnupdated = MyBase.Columns("updated")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Cheevo_Challenges_Cheevos = New Global.System.Data.DataColumn("id_Cheevo_Challenges_Cheevos", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Cheevo_Challenges_Cheevos)
+            Me.columnid_Cheevo_Challenges = New Global.System.Data.DataColumn("id_Cheevo_Challenges", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Cheevo_Challenges)
+            Me.columnCheevoType = New Global.System.Data.DataColumn("CheevoType", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheevoType)
+            Me.columnTier = New Global.System.Data.DataColumn("Tier", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTier)
+            Me.columnid_Emu_Games = New Global.System.Data.DataColumn("id_Emu_Games", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Emu_Games)
+            Me.columnCheevo_GameName = New Global.System.Data.DataColumn("Cheevo_GameName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheevo_GameName)
+            Me.columnCheevo_ID = New Global.System.Data.DataColumn("Cheevo_ID", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheevo_ID)
+            Me.columnCheevo_Title = New Global.System.Data.DataColumn("Cheevo_Title", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheevo_Title)
+            Me.columntmp_Cheevo_Title_with_Points = New Global.System.Data.DataColumn("tmp_Cheevo_Title_with_Points", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntmp_Cheevo_Title_with_Points)
+            Me.columntmp_Cheevo_Title_with_Points_and_Mode = New Global.System.Data.DataColumn("tmp_Cheevo_Title_with_Points_and_Mode", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntmp_Cheevo_Title_with_Points_and_Mode)
+            Me.columnCheevo_Description = New Global.System.Data.DataColumn("Cheevo_Description", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheevo_Description)
+            Me.columnCheevo_Points = New Global.System.Data.DataColumn("Cheevo_Points", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheevo_Points)
+            Me.columnCheevo_BadgeName = New Global.System.Data.DataColumn("Cheevo_BadgeName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheevo_BadgeName)
+            Me.columnCheevo_Flags = New Global.System.Data.DataColumn("Cheevo_Flags", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheevo_Flags)
+            Me.columnHardcore = New Global.System.Data.DataColumn("Hardcore", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHardcore)
+            Me.columnRuntime = New Global.System.Data.DataColumn("Runtime", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRuntime)
+            Me.columncreated = New Global.System.Data.DataColumn("created", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncreated)
+            Me.columnupdated = New Global.System.Data.DataColumn("updated", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnupdated)
+            Me.columnid_Cheevo_Challenges_Cheevos.AutoIncrement = true
+            Me.columnid_Cheevo_Challenges_Cheevos.AutoIncrementSeed = -1
+            Me.columnid_Cheevo_Challenges_Cheevos.AutoIncrementStep = -1
+            Me.columnid_Cheevo_Challenges_Cheevos.AllowDBNull = false
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newtbl_Cheevo_Challenges_CheevosRow() As tbl_Cheevo_Challenges_CheevosRow
+            Return CType(Me.NewRow,tbl_Cheevo_Challenges_CheevosRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New tbl_Cheevo_Challenges_CheevosRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(tbl_Cheevo_Challenges_CheevosRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.tbl_Cheevo_Challenges_CheevosRowChangedEvent) Is Nothing) Then
+                RaiseEvent tbl_Cheevo_Challenges_CheevosRowChanged(Me, New tbl_Cheevo_Challenges_CheevosRowChangeEvent(CType(e.Row,tbl_Cheevo_Challenges_CheevosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.tbl_Cheevo_Challenges_CheevosRowChangingEvent) Is Nothing) Then
+                RaiseEvent tbl_Cheevo_Challenges_CheevosRowChanging(Me, New tbl_Cheevo_Challenges_CheevosRowChangeEvent(CType(e.Row,tbl_Cheevo_Challenges_CheevosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.tbl_Cheevo_Challenges_CheevosRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tbl_Cheevo_Challenges_CheevosRowDeleted(Me, New tbl_Cheevo_Challenges_CheevosRowChangeEvent(CType(e.Row,tbl_Cheevo_Challenges_CheevosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.tbl_Cheevo_Challenges_CheevosRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tbl_Cheevo_Challenges_CheevosRowDeleting(Me, New tbl_Cheevo_Challenges_CheevosRowChangeEvent(CType(e.Row,tbl_Cheevo_Challenges_CheevosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removetbl_Cheevo_Challenges_CheevosRow(ByVal row As tbl_Cheevo_Challenges_CheevosRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_ML = New DS_ML()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "tbl_Cheevo_Challenges_CheevosDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class tbl_Users_Cheevo_Challenges_CheevosDataTable
+        Inherits Global.System.Data.TypedTableBase(Of tbl_Users_Cheevo_Challenges_CheevosRow)
+        
+        Private columnid_Users_Cheevo_Challenges_Cheevos As Global.System.Data.DataColumn
+        
+        Private columnid_Users As Global.System.Data.DataColumn
+        
+        Private columnCheevo_ID As Global.System.Data.DataColumn
+        
+        Private columnUnlocked_Casual As Global.System.Data.DataColumn
+        
+        Private columnUnlocked_Hardcore As Global.System.Data.DataColumn
+        
+        Private columncreated As Global.System.Data.DataColumn
+        
+        Private columnupdated As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "tbl_Users_Cheevo_Challenges_Cheevos"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Users_Cheevo_Challenges_CheevosColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Users_Cheevo_Challenges_Cheevos
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_UsersColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Users
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Cheevo_IDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCheevo_ID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Unlocked_CasualColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnUnlocked_Casual
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Unlocked_HardcoreColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnUnlocked_Hardcore
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property createdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncreated
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property updatedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnupdated
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As tbl_Users_Cheevo_Challenges_CheevosRow
+            Get
+                Return CType(Me.Rows(index),tbl_Users_Cheevo_Challenges_CheevosRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Users_Cheevo_Challenges_CheevosRowChanging As tbl_Users_Cheevo_Challenges_CheevosRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Users_Cheevo_Challenges_CheevosRowChanged As tbl_Users_Cheevo_Challenges_CheevosRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Users_Cheevo_Challenges_CheevosRowDeleting As tbl_Users_Cheevo_Challenges_CheevosRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event tbl_Users_Cheevo_Challenges_CheevosRowDeleted As tbl_Users_Cheevo_Challenges_CheevosRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addtbl_Users_Cheevo_Challenges_CheevosRow(ByVal row As tbl_Users_Cheevo_Challenges_CheevosRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addtbl_Users_Cheevo_Challenges_CheevosRow(ByVal id_Users As Long, ByVal Cheevo_ID As String, ByVal Unlocked_Casual As Boolean, ByVal Unlocked_Hardcore As Boolean, ByVal created As Date, ByVal updated As Date) As tbl_Users_Cheevo_Challenges_CheevosRow
+            Dim rowtbl_Users_Cheevo_Challenges_CheevosRow As tbl_Users_Cheevo_Challenges_CheevosRow = CType(Me.NewRow,tbl_Users_Cheevo_Challenges_CheevosRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, id_Users, Cheevo_ID, Unlocked_Casual, Unlocked_Hardcore, created, updated}
+            rowtbl_Users_Cheevo_Challenges_CheevosRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtbl_Users_Cheevo_Challenges_CheevosRow)
+            Return rowtbl_Users_Cheevo_Challenges_CheevosRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As tbl_Users_Cheevo_Challenges_CheevosDataTable = CType(MyBase.Clone,tbl_Users_Cheevo_Challenges_CheevosDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New tbl_Users_Cheevo_Challenges_CheevosDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Users_Cheevo_Challenges_Cheevos = MyBase.Columns("id_Users_Cheevo_Challenges_Cheevos")
+            Me.columnid_Users = MyBase.Columns("id_Users")
+            Me.columnCheevo_ID = MyBase.Columns("Cheevo_ID")
+            Me.columnUnlocked_Casual = MyBase.Columns("Unlocked_Casual")
+            Me.columnUnlocked_Hardcore = MyBase.Columns("Unlocked_Hardcore")
+            Me.columncreated = MyBase.Columns("created")
+            Me.columnupdated = MyBase.Columns("updated")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Users_Cheevo_Challenges_Cheevos = New Global.System.Data.DataColumn("id_Users_Cheevo_Challenges_Cheevos", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Users_Cheevo_Challenges_Cheevos)
+            Me.columnid_Users = New Global.System.Data.DataColumn("id_Users", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Users)
+            Me.columnCheevo_ID = New Global.System.Data.DataColumn("Cheevo_ID", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheevo_ID)
+            Me.columnUnlocked_Casual = New Global.System.Data.DataColumn("Unlocked_Casual", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnUnlocked_Casual)
+            Me.columnUnlocked_Hardcore = New Global.System.Data.DataColumn("Unlocked_Hardcore", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnUnlocked_Hardcore)
+            Me.columncreated = New Global.System.Data.DataColumn("created", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncreated)
+            Me.columnupdated = New Global.System.Data.DataColumn("updated", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnupdated)
+            Me.columnid_Users_Cheevo_Challenges_Cheevos.AutoIncrement = true
+            Me.columnid_Users_Cheevo_Challenges_Cheevos.AutoIncrementSeed = -1
+            Me.columnid_Users_Cheevo_Challenges_Cheevos.AutoIncrementStep = -1
+            Me.columnid_Users_Cheevo_Challenges_Cheevos.AllowDBNull = false
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newtbl_Users_Cheevo_Challenges_CheevosRow() As tbl_Users_Cheevo_Challenges_CheevosRow
+            Return CType(Me.NewRow,tbl_Users_Cheevo_Challenges_CheevosRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New tbl_Users_Cheevo_Challenges_CheevosRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(tbl_Users_Cheevo_Challenges_CheevosRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.tbl_Users_Cheevo_Challenges_CheevosRowChangedEvent) Is Nothing) Then
+                RaiseEvent tbl_Users_Cheevo_Challenges_CheevosRowChanged(Me, New tbl_Users_Cheevo_Challenges_CheevosRowChangeEvent(CType(e.Row,tbl_Users_Cheevo_Challenges_CheevosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.tbl_Users_Cheevo_Challenges_CheevosRowChangingEvent) Is Nothing) Then
+                RaiseEvent tbl_Users_Cheevo_Challenges_CheevosRowChanging(Me, New tbl_Users_Cheevo_Challenges_CheevosRowChangeEvent(CType(e.Row,tbl_Users_Cheevo_Challenges_CheevosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.tbl_Users_Cheevo_Challenges_CheevosRowDeletedEvent) Is Nothing) Then
+                RaiseEvent tbl_Users_Cheevo_Challenges_CheevosRowDeleted(Me, New tbl_Users_Cheevo_Challenges_CheevosRowChangeEvent(CType(e.Row,tbl_Users_Cheevo_Challenges_CheevosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.tbl_Users_Cheevo_Challenges_CheevosRowDeletingEvent) Is Nothing) Then
+                RaiseEvent tbl_Users_Cheevo_Challenges_CheevosRowDeleting(Me, New tbl_Users_Cheevo_Challenges_CheevosRowChangeEvent(CType(e.Row,tbl_Users_Cheevo_Challenges_CheevosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removetbl_Users_Cheevo_Challenges_CheevosRow(ByVal row As tbl_Users_Cheevo_Challenges_CheevosRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_ML = New DS_ML()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "tbl_Users_Cheevo_Challenges_CheevosDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class ttb_Cheevo_Challenges_TiersDataTable
+        Inherits Global.System.Data.TypedTableBase(Of ttb_Cheevo_Challenges_TiersRow)
+        
+        Private columnid_Cheevo_Challenges As Global.System.Data.DataColumn
+        
+        Private columnTier As Global.System.Data.DataColumn
+        
+        Private columnDisplayName As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "ttb_Cheevo_Challenges_Tiers"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Cheevo_ChallengesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Cheevo_Challenges
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property TierColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTier
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DisplayNameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDisplayName
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As ttb_Cheevo_Challenges_TiersRow
+            Get
+                Return CType(Me.Rows(index),ttb_Cheevo_Challenges_TiersRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Cheevo_Challenges_TiersRowChanging As ttb_Cheevo_Challenges_TiersRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Cheevo_Challenges_TiersRowChanged As ttb_Cheevo_Challenges_TiersRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Cheevo_Challenges_TiersRowDeleting As ttb_Cheevo_Challenges_TiersRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Cheevo_Challenges_TiersRowDeleted As ttb_Cheevo_Challenges_TiersRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addttb_Cheevo_Challenges_TiersRow(ByVal row As ttb_Cheevo_Challenges_TiersRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addttb_Cheevo_Challenges_TiersRow(ByVal id_Cheevo_Challenges As String, ByVal Tier As String, ByVal DisplayName As String) As ttb_Cheevo_Challenges_TiersRow
+            Dim rowttb_Cheevo_Challenges_TiersRow As ttb_Cheevo_Challenges_TiersRow = CType(Me.NewRow,ttb_Cheevo_Challenges_TiersRow)
+            Dim columnValuesArray() As Object = New Object() {id_Cheevo_Challenges, Tier, DisplayName}
+            rowttb_Cheevo_Challenges_TiersRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowttb_Cheevo_Challenges_TiersRow)
+            Return rowttb_Cheevo_Challenges_TiersRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As ttb_Cheevo_Challenges_TiersDataTable = CType(MyBase.Clone,ttb_Cheevo_Challenges_TiersDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New ttb_Cheevo_Challenges_TiersDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Cheevo_Challenges = MyBase.Columns("id_Cheevo_Challenges")
+            Me.columnTier = MyBase.Columns("Tier")
+            Me.columnDisplayName = MyBase.Columns("DisplayName")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Cheevo_Challenges = New Global.System.Data.DataColumn("id_Cheevo_Challenges", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Cheevo_Challenges)
+            Me.columnTier = New Global.System.Data.DataColumn("Tier", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTier)
+            Me.columnDisplayName = New Global.System.Data.DataColumn("DisplayName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDisplayName)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newttb_Cheevo_Challenges_TiersRow() As ttb_Cheevo_Challenges_TiersRow
+            Return CType(Me.NewRow,ttb_Cheevo_Challenges_TiersRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New ttb_Cheevo_Challenges_TiersRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(ttb_Cheevo_Challenges_TiersRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.ttb_Cheevo_Challenges_TiersRowChangedEvent) Is Nothing) Then
+                RaiseEvent ttb_Cheevo_Challenges_TiersRowChanged(Me, New ttb_Cheevo_Challenges_TiersRowChangeEvent(CType(e.Row,ttb_Cheevo_Challenges_TiersRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.ttb_Cheevo_Challenges_TiersRowChangingEvent) Is Nothing) Then
+                RaiseEvent ttb_Cheevo_Challenges_TiersRowChanging(Me, New ttb_Cheevo_Challenges_TiersRowChangeEvent(CType(e.Row,ttb_Cheevo_Challenges_TiersRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.ttb_Cheevo_Challenges_TiersRowDeletedEvent) Is Nothing) Then
+                RaiseEvent ttb_Cheevo_Challenges_TiersRowDeleted(Me, New ttb_Cheevo_Challenges_TiersRowChangeEvent(CType(e.Row,ttb_Cheevo_Challenges_TiersRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.ttb_Cheevo_Challenges_TiersRowDeletingEvent) Is Nothing) Then
+                RaiseEvent ttb_Cheevo_Challenges_TiersRowDeleting(Me, New ttb_Cheevo_Challenges_TiersRowChangeEvent(CType(e.Row,ttb_Cheevo_Challenges_TiersRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removettb_Cheevo_Challenges_TiersRow(ByVal row As ttb_Cheevo_Challenges_TiersRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_ML = New DS_ML()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "ttb_Cheevo_Challenges_TiersDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class ttb_Open_Challenges_CheevosDataTable
+        Inherits Global.System.Data.TypedTableBase(Of ttb_Open_Challenges_CheevosRow)
+        
+        Private columnid_Users_Cheevo_Challenges_Cheevos As Global.System.Data.DataColumn
+        
+        Private columnid_Cheevo_Challenges_Cheevos As Global.System.Data.DataColumn
+        
+        Private columnid_Cheevo_Challenges As Global.System.Data.DataColumn
+        
+        Private columnCheevoType As Global.System.Data.DataColumn
+        
+        Private columnChallenge_Name As Global.System.Data.DataColumn
+        
+        Private columnTier As Global.System.Data.DataColumn
+        
+        Private columnid_Emu_Games As Global.System.Data.DataColumn
+        
+        Private columnCheevo_GameName As Global.System.Data.DataColumn
+        
+        Private columnCheevo_ID As Global.System.Data.DataColumn
+        
+        Private columnCheevo_Title As Global.System.Data.DataColumn
+        
+        Private columnCheevo_Description As Global.System.Data.DataColumn
+        
+        Private columnRuntime As Global.System.Data.DataColumn
+        
+        Private columnHardcore As Global.System.Data.DataColumn
+        
+        Private columnUnlocked_Casual As Global.System.Data.DataColumn
+        
+        Private columnUnlocked_Hardcore As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "ttb_Open_Challenges_Cheevos"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Users_Cheevo_Challenges_CheevosColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Users_Cheevo_Challenges_Cheevos
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Cheevo_Challenges_CheevosColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Cheevo_Challenges_Cheevos
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Cheevo_ChallengesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Cheevo_Challenges
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CheevoTypeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCheevoType
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Challenge_NameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnChallenge_Name
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property TierColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTier
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Emu_GamesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Emu_Games
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Cheevo_GameNameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCheevo_GameName
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Cheevo_IDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCheevo_ID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Cheevo_TitleColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCheevo_Title
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Cheevo_DescriptionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCheevo_Description
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property RuntimeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRuntime
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property HardcoreColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHardcore
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Unlocked_CasualColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnUnlocked_Casual
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Unlocked_HardcoreColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnUnlocked_Hardcore
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As ttb_Open_Challenges_CheevosRow
+            Get
+                Return CType(Me.Rows(index),ttb_Open_Challenges_CheevosRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Open_Challenges_CheevosRowChanging As ttb_Open_Challenges_CheevosRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Open_Challenges_CheevosRowChanged As ttb_Open_Challenges_CheevosRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Open_Challenges_CheevosRowDeleting As ttb_Open_Challenges_CheevosRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Open_Challenges_CheevosRowDeleted As ttb_Open_Challenges_CheevosRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addttb_Open_Challenges_CheevosRow(ByVal row As ttb_Open_Challenges_CheevosRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addttb_Open_Challenges_CheevosRow(ByVal id_Users_Cheevo_Challenges_Cheevos As Long, ByVal id_Cheevo_Challenges_Cheevos As Long, ByVal id_Cheevo_Challenges As Long, ByVal CheevoType As Long, ByVal Challenge_Name As String, ByVal Tier As Long, ByVal id_Emu_Games As Long, ByVal Cheevo_GameName As String, ByVal Cheevo_ID As String, ByVal Cheevo_Title As String, ByVal Cheevo_Description As String, ByVal Runtime As Long, ByVal Hardcore As Boolean, ByVal Unlocked_Casual As Boolean, ByVal Unlocked_Hardcore As Boolean) As ttb_Open_Challenges_CheevosRow
+            Dim rowttb_Open_Challenges_CheevosRow As ttb_Open_Challenges_CheevosRow = CType(Me.NewRow,ttb_Open_Challenges_CheevosRow)
+            Dim columnValuesArray() As Object = New Object() {id_Users_Cheevo_Challenges_Cheevos, id_Cheevo_Challenges_Cheevos, id_Cheevo_Challenges, CheevoType, Challenge_Name, Tier, id_Emu_Games, Cheevo_GameName, Cheevo_ID, Cheevo_Title, Cheevo_Description, Runtime, Hardcore, Unlocked_Casual, Unlocked_Hardcore}
+            rowttb_Open_Challenges_CheevosRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowttb_Open_Challenges_CheevosRow)
+            Return rowttb_Open_Challenges_CheevosRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As ttb_Open_Challenges_CheevosDataTable = CType(MyBase.Clone,ttb_Open_Challenges_CheevosDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New ttb_Open_Challenges_CheevosDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Users_Cheevo_Challenges_Cheevos = MyBase.Columns("id_Users_Cheevo_Challenges_Cheevos")
+            Me.columnid_Cheevo_Challenges_Cheevos = MyBase.Columns("id_Cheevo_Challenges_Cheevos")
+            Me.columnid_Cheevo_Challenges = MyBase.Columns("id_Cheevo_Challenges")
+            Me.columnCheevoType = MyBase.Columns("CheevoType")
+            Me.columnChallenge_Name = MyBase.Columns("Challenge_Name")
+            Me.columnTier = MyBase.Columns("Tier")
+            Me.columnid_Emu_Games = MyBase.Columns("id_Emu_Games")
+            Me.columnCheevo_GameName = MyBase.Columns("Cheevo_GameName")
+            Me.columnCheevo_ID = MyBase.Columns("Cheevo_ID")
+            Me.columnCheevo_Title = MyBase.Columns("Cheevo_Title")
+            Me.columnCheevo_Description = MyBase.Columns("Cheevo_Description")
+            Me.columnRuntime = MyBase.Columns("Runtime")
+            Me.columnHardcore = MyBase.Columns("Hardcore")
+            Me.columnUnlocked_Casual = MyBase.Columns("Unlocked_Casual")
+            Me.columnUnlocked_Hardcore = MyBase.Columns("Unlocked_Hardcore")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Users_Cheevo_Challenges_Cheevos = New Global.System.Data.DataColumn("id_Users_Cheevo_Challenges_Cheevos", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Users_Cheevo_Challenges_Cheevos)
+            Me.columnid_Cheevo_Challenges_Cheevos = New Global.System.Data.DataColumn("id_Cheevo_Challenges_Cheevos", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Cheevo_Challenges_Cheevos)
+            Me.columnid_Cheevo_Challenges = New Global.System.Data.DataColumn("id_Cheevo_Challenges", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Cheevo_Challenges)
+            Me.columnCheevoType = New Global.System.Data.DataColumn("CheevoType", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheevoType)
+            Me.columnChallenge_Name = New Global.System.Data.DataColumn("Challenge_Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnChallenge_Name)
+            Me.columnTier = New Global.System.Data.DataColumn("Tier", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTier)
+            Me.columnid_Emu_Games = New Global.System.Data.DataColumn("id_Emu_Games", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Emu_Games)
+            Me.columnCheevo_GameName = New Global.System.Data.DataColumn("Cheevo_GameName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheevo_GameName)
+            Me.columnCheevo_ID = New Global.System.Data.DataColumn("Cheevo_ID", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheevo_ID)
+            Me.columnCheevo_Title = New Global.System.Data.DataColumn("Cheevo_Title", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheevo_Title)
+            Me.columnCheevo_Description = New Global.System.Data.DataColumn("Cheevo_Description", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheevo_Description)
+            Me.columnRuntime = New Global.System.Data.DataColumn("Runtime", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRuntime)
+            Me.columnHardcore = New Global.System.Data.DataColumn("Hardcore", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHardcore)
+            Me.columnUnlocked_Casual = New Global.System.Data.DataColumn("Unlocked_Casual", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnUnlocked_Casual)
+            Me.columnUnlocked_Hardcore = New Global.System.Data.DataColumn("Unlocked_Hardcore", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnUnlocked_Hardcore)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newttb_Open_Challenges_CheevosRow() As ttb_Open_Challenges_CheevosRow
+            Return CType(Me.NewRow,ttb_Open_Challenges_CheevosRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New ttb_Open_Challenges_CheevosRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(ttb_Open_Challenges_CheevosRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.ttb_Open_Challenges_CheevosRowChangedEvent) Is Nothing) Then
+                RaiseEvent ttb_Open_Challenges_CheevosRowChanged(Me, New ttb_Open_Challenges_CheevosRowChangeEvent(CType(e.Row,ttb_Open_Challenges_CheevosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.ttb_Open_Challenges_CheevosRowChangingEvent) Is Nothing) Then
+                RaiseEvent ttb_Open_Challenges_CheevosRowChanging(Me, New ttb_Open_Challenges_CheevosRowChangeEvent(CType(e.Row,ttb_Open_Challenges_CheevosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.ttb_Open_Challenges_CheevosRowDeletedEvent) Is Nothing) Then
+                RaiseEvent ttb_Open_Challenges_CheevosRowDeleted(Me, New ttb_Open_Challenges_CheevosRowChangeEvent(CType(e.Row,ttb_Open_Challenges_CheevosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.ttb_Open_Challenges_CheevosRowDeletingEvent) Is Nothing) Then
+                RaiseEvent ttb_Open_Challenges_CheevosRowDeleting(Me, New ttb_Open_Challenges_CheevosRowChangeEvent(CType(e.Row,ttb_Open_Challenges_CheevosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removettb_Open_Challenges_CheevosRow(ByVal row As ttb_Open_Challenges_CheevosRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_ML = New DS_ML()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "ttb_Open_Challenges_CheevosDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class ttb_Open_ChallengesDataTable
+        Inherits Global.System.Data.TypedTableBase(Of ttb_Open_ChallengesRow)
+        
+        Private columnid_Cheevo_Challenges As Global.System.Data.DataColumn
+        
+        Private columnName As Global.System.Data.DataColumn
+        
+        Private columnTier As Global.System.Data.DataColumn
+        
+        Private columnMaxTier As Global.System.Data.DataColumn
+        
+        Private columnDisplayText As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "ttb_Open_Challenges"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Cheevo_ChallengesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Cheevo_Challenges
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnName
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property TierColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTier
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MaxTierColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMaxTier
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DisplayTextColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDisplayText
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As ttb_Open_ChallengesRow
+            Get
+                Return CType(Me.Rows(index),ttb_Open_ChallengesRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Open_ChallengesRowChanging As ttb_Open_ChallengesRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Open_ChallengesRowChanged As ttb_Open_ChallengesRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Open_ChallengesRowDeleting As ttb_Open_ChallengesRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Open_ChallengesRowDeleted As ttb_Open_ChallengesRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addttb_Open_ChallengesRow(ByVal row As ttb_Open_ChallengesRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addttb_Open_ChallengesRow(ByVal id_Cheevo_Challenges As Long, ByVal Name As String, ByVal Tier As Long, ByVal MaxTier As Long, ByVal DisplayText As String) As ttb_Open_ChallengesRow
+            Dim rowttb_Open_ChallengesRow As ttb_Open_ChallengesRow = CType(Me.NewRow,ttb_Open_ChallengesRow)
+            Dim columnValuesArray() As Object = New Object() {id_Cheevo_Challenges, Name, Tier, MaxTier, DisplayText}
+            rowttb_Open_ChallengesRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowttb_Open_ChallengesRow)
+            Return rowttb_Open_ChallengesRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As ttb_Open_ChallengesDataTable = CType(MyBase.Clone,ttb_Open_ChallengesDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New ttb_Open_ChallengesDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Cheevo_Challenges = MyBase.Columns("id_Cheevo_Challenges")
+            Me.columnName = MyBase.Columns("Name")
+            Me.columnTier = MyBase.Columns("Tier")
+            Me.columnMaxTier = MyBase.Columns("MaxTier")
+            Me.columnDisplayText = MyBase.Columns("DisplayText")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Cheevo_Challenges = New Global.System.Data.DataColumn("id_Cheevo_Challenges", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Cheevo_Challenges)
+            Me.columnName = New Global.System.Data.DataColumn("Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnName)
+            Me.columnTier = New Global.System.Data.DataColumn("Tier", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTier)
+            Me.columnMaxTier = New Global.System.Data.DataColumn("MaxTier", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMaxTier)
+            Me.columnDisplayText = New Global.System.Data.DataColumn("DisplayText", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDisplayText)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newttb_Open_ChallengesRow() As ttb_Open_ChallengesRow
+            Return CType(Me.NewRow,ttb_Open_ChallengesRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New ttb_Open_ChallengesRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(ttb_Open_ChallengesRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.ttb_Open_ChallengesRowChangedEvent) Is Nothing) Then
+                RaiseEvent ttb_Open_ChallengesRowChanged(Me, New ttb_Open_ChallengesRowChangeEvent(CType(e.Row,ttb_Open_ChallengesRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.ttb_Open_ChallengesRowChangingEvent) Is Nothing) Then
+                RaiseEvent ttb_Open_ChallengesRowChanging(Me, New ttb_Open_ChallengesRowChangeEvent(CType(e.Row,ttb_Open_ChallengesRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.ttb_Open_ChallengesRowDeletedEvent) Is Nothing) Then
+                RaiseEvent ttb_Open_ChallengesRowDeleted(Me, New ttb_Open_ChallengesRowChangeEvent(CType(e.Row,ttb_Open_ChallengesRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.ttb_Open_ChallengesRowDeletingEvent) Is Nothing) Then
+                RaiseEvent ttb_Open_ChallengesRowDeleting(Me, New ttb_Open_ChallengesRowChangeEvent(CType(e.Row,ttb_Open_ChallengesRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removettb_Open_ChallengesRow(ByVal row As ttb_Open_ChallengesRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_ML = New DS_ML()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "ttb_Open_ChallengesDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class ttb_Emulators_PreLaunch_CommandsDataTable
+        Inherits Global.System.Data.TypedTableBase(Of ttb_Emulators_PreLaunch_CommandsRow)
+        
+        Private columnid_Emulators_Pre_Post_Launch_Commands As Global.System.Data.DataColumn
+        
+        Private columnid_Emulators As Global.System.Data.DataColumn
+        
+        Private columnSort As Global.System.Data.DataColumn
+        
+        Private columnDirectory As Global.System.Data.DataColumn
+        
+        Private columnExecutable As Global.System.Data.DataColumn
+        
+        Private columnParameter As Global.System.Data.DataColumn
+        
+        Private columnMinimized As Global.System.Data.DataColumn
+        
+        Private columnWaitForExit As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "ttb_Emulators_PreLaunch_Commands"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Emulators_Pre_Post_Launch_CommandsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Emulators_Pre_Post_Launch_Commands
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_EmulatorsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Emulators
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SortColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSort
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DirectoryColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDirectory
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ExecutableColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnExecutable
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ParameterColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnParameter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MinimizedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMinimized
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property WaitForExitColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnWaitForExit
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As ttb_Emulators_PreLaunch_CommandsRow
+            Get
+                Return CType(Me.Rows(index),ttb_Emulators_PreLaunch_CommandsRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Emulators_PreLaunch_CommandsRowChanging As ttb_Emulators_PreLaunch_CommandsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Emulators_PreLaunch_CommandsRowChanged As ttb_Emulators_PreLaunch_CommandsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Emulators_PreLaunch_CommandsRowDeleting As ttb_Emulators_PreLaunch_CommandsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Emulators_PreLaunch_CommandsRowDeleted As ttb_Emulators_PreLaunch_CommandsRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addttb_Emulators_PreLaunch_CommandsRow(ByVal row As ttb_Emulators_PreLaunch_CommandsRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addttb_Emulators_PreLaunch_CommandsRow(ByVal id_Emulators As Long, ByVal Sort As Long, ByVal Directory As String, ByVal Executable As String, ByVal Parameter As String, ByVal Minimized As Boolean, ByVal WaitForExit As Boolean) As ttb_Emulators_PreLaunch_CommandsRow
+            Dim rowttb_Emulators_PreLaunch_CommandsRow As ttb_Emulators_PreLaunch_CommandsRow = CType(Me.NewRow,ttb_Emulators_PreLaunch_CommandsRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, id_Emulators, Sort, Directory, Executable, Parameter, Minimized, WaitForExit}
+            rowttb_Emulators_PreLaunch_CommandsRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowttb_Emulators_PreLaunch_CommandsRow)
+            Return rowttb_Emulators_PreLaunch_CommandsRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As ttb_Emulators_PreLaunch_CommandsDataTable = CType(MyBase.Clone,ttb_Emulators_PreLaunch_CommandsDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New ttb_Emulators_PreLaunch_CommandsDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Emulators_Pre_Post_Launch_Commands = MyBase.Columns("id_Emulators_Pre_Post_Launch_Commands")
+            Me.columnid_Emulators = MyBase.Columns("id_Emulators")
+            Me.columnSort = MyBase.Columns("Sort")
+            Me.columnDirectory = MyBase.Columns("Directory")
+            Me.columnExecutable = MyBase.Columns("Executable")
+            Me.columnParameter = MyBase.Columns("Parameter")
+            Me.columnMinimized = MyBase.Columns("Minimized")
+            Me.columnWaitForExit = MyBase.Columns("WaitForExit")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Emulators_Pre_Post_Launch_Commands = New Global.System.Data.DataColumn("id_Emulators_Pre_Post_Launch_Commands", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Emulators_Pre_Post_Launch_Commands)
+            Me.columnid_Emulators = New Global.System.Data.DataColumn("id_Emulators", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Emulators)
+            Me.columnSort = New Global.System.Data.DataColumn("Sort", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSort)
+            Me.columnDirectory = New Global.System.Data.DataColumn("Directory", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDirectory)
+            Me.columnExecutable = New Global.System.Data.DataColumn("Executable", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnExecutable)
+            Me.columnParameter = New Global.System.Data.DataColumn("Parameter", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnParameter)
+            Me.columnMinimized = New Global.System.Data.DataColumn("Minimized", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMinimized)
+            Me.columnWaitForExit = New Global.System.Data.DataColumn("WaitForExit", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnWaitForExit)
+            Me.columnid_Emulators_Pre_Post_Launch_Commands.AutoIncrement = true
+            Me.columnid_Emulators_Pre_Post_Launch_Commands.AutoIncrementSeed = -1
+            Me.columnid_Emulators_Pre_Post_Launch_Commands.AutoIncrementStep = -1
+            Me.columnid_Emulators_Pre_Post_Launch_Commands.AllowDBNull = false
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newttb_Emulators_PreLaunch_CommandsRow() As ttb_Emulators_PreLaunch_CommandsRow
+            Return CType(Me.NewRow,ttb_Emulators_PreLaunch_CommandsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New ttb_Emulators_PreLaunch_CommandsRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(ttb_Emulators_PreLaunch_CommandsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.ttb_Emulators_PreLaunch_CommandsRowChangedEvent) Is Nothing) Then
+                RaiseEvent ttb_Emulators_PreLaunch_CommandsRowChanged(Me, New ttb_Emulators_PreLaunch_CommandsRowChangeEvent(CType(e.Row,ttb_Emulators_PreLaunch_CommandsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.ttb_Emulators_PreLaunch_CommandsRowChangingEvent) Is Nothing) Then
+                RaiseEvent ttb_Emulators_PreLaunch_CommandsRowChanging(Me, New ttb_Emulators_PreLaunch_CommandsRowChangeEvent(CType(e.Row,ttb_Emulators_PreLaunch_CommandsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.ttb_Emulators_PreLaunch_CommandsRowDeletedEvent) Is Nothing) Then
+                RaiseEvent ttb_Emulators_PreLaunch_CommandsRowDeleted(Me, New ttb_Emulators_PreLaunch_CommandsRowChangeEvent(CType(e.Row,ttb_Emulators_PreLaunch_CommandsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.ttb_Emulators_PreLaunch_CommandsRowDeletingEvent) Is Nothing) Then
+                RaiseEvent ttb_Emulators_PreLaunch_CommandsRowDeleting(Me, New ttb_Emulators_PreLaunch_CommandsRowChangeEvent(CType(e.Row,ttb_Emulators_PreLaunch_CommandsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removettb_Emulators_PreLaunch_CommandsRow(ByVal row As ttb_Emulators_PreLaunch_CommandsRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_ML = New DS_ML()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "ttb_Emulators_PreLaunch_CommandsDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class ttb_Emulators_PostLaunch_CommandsDataTable
+        Inherits Global.System.Data.TypedTableBase(Of ttb_Emulators_PostLaunch_CommandsRow)
+        
+        Private columnid_Emulators_Pre_Post_Launch_Commands As Global.System.Data.DataColumn
+        
+        Private columnid_Emulators As Global.System.Data.DataColumn
+        
+        Private columnSort As Global.System.Data.DataColumn
+        
+        Private columnDirectory As Global.System.Data.DataColumn
+        
+        Private columnExecutable As Global.System.Data.DataColumn
+        
+        Private columnParameter As Global.System.Data.DataColumn
+        
+        Private columnMinimized As Global.System.Data.DataColumn
+        
+        Private columnWaitForExit As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "ttb_Emulators_PostLaunch_Commands"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_Emulators_Pre_Post_Launch_CommandsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Emulators_Pre_Post_Launch_Commands
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_EmulatorsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Emulators
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property SortColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSort
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DirectoryColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDirectory
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ExecutableColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnExecutable
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ParameterColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnParameter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property MinimizedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMinimized
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property WaitForExitColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnWaitForExit
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As ttb_Emulators_PostLaunch_CommandsRow
+            Get
+                Return CType(Me.Rows(index),ttb_Emulators_PostLaunch_CommandsRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Emulators_PostLaunch_CommandsRowChanging As ttb_Emulators_PostLaunch_CommandsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Emulators_PostLaunch_CommandsRowChanged As ttb_Emulators_PostLaunch_CommandsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Emulators_PostLaunch_CommandsRowDeleting As ttb_Emulators_PostLaunch_CommandsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event ttb_Emulators_PostLaunch_CommandsRowDeleted As ttb_Emulators_PostLaunch_CommandsRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addttb_Emulators_PostLaunch_CommandsRow(ByVal row As ttb_Emulators_PostLaunch_CommandsRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addttb_Emulators_PostLaunch_CommandsRow(ByVal id_Emulators As Long, ByVal Sort As Long, ByVal Directory As String, ByVal Executable As String, ByVal Parameter As String, ByVal Minimized As Boolean, ByVal WaitForExit As Boolean) As ttb_Emulators_PostLaunch_CommandsRow
+            Dim rowttb_Emulators_PostLaunch_CommandsRow As ttb_Emulators_PostLaunch_CommandsRow = CType(Me.NewRow,ttb_Emulators_PostLaunch_CommandsRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, id_Emulators, Sort, Directory, Executable, Parameter, Minimized, WaitForExit}
+            rowttb_Emulators_PostLaunch_CommandsRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowttb_Emulators_PostLaunch_CommandsRow)
+            Return rowttb_Emulators_PostLaunch_CommandsRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As ttb_Emulators_PostLaunch_CommandsDataTable = CType(MyBase.Clone,ttb_Emulators_PostLaunch_CommandsDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New ttb_Emulators_PostLaunch_CommandsDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_Emulators_Pre_Post_Launch_Commands = MyBase.Columns("id_Emulators_Pre_Post_Launch_Commands")
+            Me.columnid_Emulators = MyBase.Columns("id_Emulators")
+            Me.columnSort = MyBase.Columns("Sort")
+            Me.columnDirectory = MyBase.Columns("Directory")
+            Me.columnExecutable = MyBase.Columns("Executable")
+            Me.columnParameter = MyBase.Columns("Parameter")
+            Me.columnMinimized = MyBase.Columns("Minimized")
+            Me.columnWaitForExit = MyBase.Columns("WaitForExit")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_Emulators_Pre_Post_Launch_Commands = New Global.System.Data.DataColumn("id_Emulators_Pre_Post_Launch_Commands", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Emulators_Pre_Post_Launch_Commands)
+            Me.columnid_Emulators = New Global.System.Data.DataColumn("id_Emulators", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Emulators)
+            Me.columnSort = New Global.System.Data.DataColumn("Sort", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSort)
+            Me.columnDirectory = New Global.System.Data.DataColumn("Directory", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDirectory)
+            Me.columnExecutable = New Global.System.Data.DataColumn("Executable", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnExecutable)
+            Me.columnParameter = New Global.System.Data.DataColumn("Parameter", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnParameter)
+            Me.columnMinimized = New Global.System.Data.DataColumn("Minimized", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMinimized)
+            Me.columnWaitForExit = New Global.System.Data.DataColumn("WaitForExit", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnWaitForExit)
+            Me.columnid_Emulators_Pre_Post_Launch_Commands.AutoIncrement = true
+            Me.columnid_Emulators_Pre_Post_Launch_Commands.AutoIncrementSeed = -1
+            Me.columnid_Emulators_Pre_Post_Launch_Commands.AutoIncrementStep = -1
+            Me.columnid_Emulators_Pre_Post_Launch_Commands.AllowDBNull = false
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newttb_Emulators_PostLaunch_CommandsRow() As ttb_Emulators_PostLaunch_CommandsRow
+            Return CType(Me.NewRow,ttb_Emulators_PostLaunch_CommandsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New ttb_Emulators_PostLaunch_CommandsRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(ttb_Emulators_PostLaunch_CommandsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.ttb_Emulators_PostLaunch_CommandsRowChangedEvent) Is Nothing) Then
+                RaiseEvent ttb_Emulators_PostLaunch_CommandsRowChanged(Me, New ttb_Emulators_PostLaunch_CommandsRowChangeEvent(CType(e.Row,ttb_Emulators_PostLaunch_CommandsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.ttb_Emulators_PostLaunch_CommandsRowChangingEvent) Is Nothing) Then
+                RaiseEvent ttb_Emulators_PostLaunch_CommandsRowChanging(Me, New ttb_Emulators_PostLaunch_CommandsRowChangeEvent(CType(e.Row,ttb_Emulators_PostLaunch_CommandsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.ttb_Emulators_PostLaunch_CommandsRowDeletedEvent) Is Nothing) Then
+                RaiseEvent ttb_Emulators_PostLaunch_CommandsRowDeleted(Me, New ttb_Emulators_PostLaunch_CommandsRowChangeEvent(CType(e.Row,ttb_Emulators_PostLaunch_CommandsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.ttb_Emulators_PostLaunch_CommandsRowDeletingEvent) Is Nothing) Then
+                RaiseEvent ttb_Emulators_PostLaunch_CommandsRowDeleting(Me, New ttb_Emulators_PostLaunch_CommandsRowChangeEvent(CType(e.Row,ttb_Emulators_PostLaunch_CommandsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removettb_Emulators_PostLaunch_CommandsRow(ByVal row As ttb_Emulators_PostLaunch_CommandsRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DS_ML = New DS_ML()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "ttb_Emulators_PostLaunch_CommandsDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
     Partial Public Class tbl_EmulatorsRow
@@ -24937,6 +28642,36 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ScriptType() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Emulators.ScriptTypeColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte ScriptType in Tabelle tbl_Emulators ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Emulators.ScriptTypeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ScriptPath() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Emulators.ScriptPathColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte ScriptPath in Tabelle tbl_Emulators ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Emulators.ScriptPathColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsDisplaynameNull() As Boolean
             Return Me.IsNull(Me.tabletbl_Emulators.DisplaynameColumn)
         End Function
@@ -25041,6 +28776,30 @@ Partial Public Class DS_ML
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Setid_List_GeneratorsNull()
             Me(Me.tabletbl_Emulators.id_List_GeneratorsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsScriptTypeNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Emulators.ScriptTypeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetScriptTypeNull()
+            Me(Me.tabletbl_Emulators.ScriptTypeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsScriptPathNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Emulators.ScriptPathColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetScriptPathNull()
+            Me(Me.tabletbl_Emulators.ScriptPathColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -25485,6 +29244,51 @@ Partial Public Class DS_ML
             End Get
             Set
                 Me(Me.tablesrc_ucr_Emulation_Games.InnerFileColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CRC32() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Games.CRC32Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte CRC32 in Tabelle src_ucr_Emulation_Games ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Games.CRC32Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property SHA1() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Games.SHA1Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte SHA1 in Tabelle src_ucr_Emulation_Games ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Games.SHA1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MD5() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Games.MD5Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte MD5 in Tabelle src_ucr_Emulation_Games ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Games.MD5Column) = value
             End Set
         End Property
         
@@ -26070,6 +29874,22 @@ Partial Public Class DS_ML
             End Get
             Set
                 Me(Me.tablesrc_ucr_Emulation_Games.Platform_ShortColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Platform_RetroAchievements() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Games.Platform_RetroAchievementsColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Platform_RetroAchievements in Tabelle src_ucr_Emulation_Games"& _ 
+                            " ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Games.Platform_RetroAchievementsColumn) = value
             End Set
         End Property
         
@@ -27148,6 +30968,21 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property TDL_Subtitle() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablesrc_ucr_Emulation_Games.TDL_SubtitleColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte TDL_Subtitle in Tabelle src_ucr_Emulation_Games ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablesrc_ucr_Emulation_Games.TDL_SubtitleColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Isid_Emu_GamesNull() As Boolean
             Return Me.IsNull(Me.tablesrc_ucr_Emulation_Games.id_Emu_GamesColumn)
         End Function
@@ -27264,6 +31099,42 @@ Partial Public Class DS_ML
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetInnerFileNull()
             Me(Me.tablesrc_ucr_Emulation_Games.InnerFileColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCRC32Null() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Games.CRC32Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCRC32Null()
+            Me(Me.tablesrc_ucr_Emulation_Games.CRC32Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSHA1Null() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Games.SHA1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSHA1Null()
+            Me(Me.tablesrc_ucr_Emulation_Games.SHA1Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMD5Null() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Games.MD5Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMD5Null()
+            Me(Me.tablesrc_ucr_Emulation_Games.MD5Column) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -27720,6 +31591,18 @@ Partial Public Class DS_ML
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetPlatform_ShortNull()
             Me(Me.tablesrc_ucr_Emulation_Games.Platform_ShortColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPlatform_RetroAchievementsNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Games.Platform_RetroAchievementsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPlatform_RetroAchievementsNull()
+            Me(Me.tablesrc_ucr_Emulation_Games.Platform_RetroAchievementsColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -28560,6 +32443,18 @@ Partial Public Class DS_ML
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Set_401_StaffNull()
             Me(Me.tablesrc_ucr_Emulation_Games._401_StaffColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsTDL_SubtitleNull() As Boolean
+            Return Me.IsNull(Me.tablesrc_ucr_Emulation_Games.TDL_SubtitleColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetTDL_SubtitleNull()
+            Me(Me.tablesrc_ucr_Emulation_Games.TDL_SubtitleColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -33006,6 +36901,81 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property TDL_Subtitle() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Emu_Games.TDL_SubtitleColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte TDL_Subtitle in Tabelle tbl_Emu_Games ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Emu_Games.TDL_SubtitleColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property TDL_Show_in_Menu() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Emu_Games.TDL_Show_in_MenuColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte TDL_Show_in_Menu in Tabelle tbl_Emu_Games ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Emu_Games.TDL_Show_in_MenuColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property TDL_DisplayText() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Emu_Games.TDL_DisplayTextColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte TDL_DisplayText in Tabelle tbl_Emu_Games ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Emu_Games.TDL_DisplayTextColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property TDL_Sort() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Emu_Games.TDL_SortColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte TDL_Sort in Tabelle tbl_Emu_Games ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Emu_Games.TDL_SortColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property tmp_DOSBox_DisplayText() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Emu_Games.tmp_DOSBox_DisplayTextColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte tmp_DOSBox_DisplayText in Tabelle tbl_Emu_Games ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Emu_Games.tmp_DOSBox_DisplayTextColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Isid_DOSBox_Configs_TemplateNull() As Boolean
             Return Me.IsNull(Me.tabletbl_Emu_Games.id_DOSBox_Configs_TemplateColumn)
         End Function
@@ -34094,6 +38064,66 @@ Partial Public Class DS_ML
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Settmp_HighlightedNull()
             Me(Me.tabletbl_Emu_Games.tmp_HighlightedColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsTDL_SubtitleNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Emu_Games.TDL_SubtitleColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetTDL_SubtitleNull()
+            Me(Me.tabletbl_Emu_Games.TDL_SubtitleColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsTDL_Show_in_MenuNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Emu_Games.TDL_Show_in_MenuColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetTDL_Show_in_MenuNull()
+            Me(Me.tabletbl_Emu_Games.TDL_Show_in_MenuColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsTDL_DisplayTextNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Emu_Games.TDL_DisplayTextColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetTDL_DisplayTextNull()
+            Me(Me.tabletbl_Emu_Games.TDL_DisplayTextColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsTDL_SortNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Emu_Games.TDL_SortColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetTDL_SortNull()
+            Me(Me.tabletbl_Emu_Games.TDL_SortColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Istmp_DOSBox_DisplayTextNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Emu_Games.tmp_DOSBox_DisplayTextColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Settmp_DOSBox_DisplayTextNull()
+            Me(Me.tabletbl_Emu_Games.tmp_DOSBox_DisplayTextColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -41367,6 +45397,21 @@ Partial Public Class DS_ML
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Cheevo_Challenges() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Users.id_Cheevo_ChallengesColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Cheevo_Challenges in Tabelle tbl_Users ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Users.id_Cheevo_ChallengesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsAdminNull() As Boolean
             Return Me.IsNull(Me.tabletbl_Users.AdminColumn)
         End Function
@@ -41411,6 +45456,18 @@ Partial Public Class DS_ML
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetRestrictedNull()
             Me(Me.tabletbl_Users.RestrictedColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Cheevo_ChallengesNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Users.id_Cheevo_ChallengesColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Cheevo_ChallengesNull()
+            Me(Me.tabletbl_Users.id_Cheevo_ChallengesColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -47626,6 +51683,2231 @@ Partial Public Class DS_ML
     End Class
     
     '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class tbl_Total_DOS_Launcher_ConfigsRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tabletbl_Total_DOS_Launcher_Configs As tbl_Total_DOS_Launcher_ConfigsDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tabletbl_Total_DOS_Launcher_Configs = CType(Me.Table,tbl_Total_DOS_Launcher_ConfigsDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Total_DOS_Launcher_Configs() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Total_DOS_Launcher_Configs.id_Total_DOS_Launcher_ConfigsColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Total_DOS_Launcher_Configs in Tabelle tbl_Total_DOS_Launch"& _ 
+                            "er_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Total_DOS_Launcher_Configs.id_Total_DOS_Launcher_ConfigsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DisplayName() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Total_DOS_Launcher_Configs.DisplayNameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte DisplayName in Tabelle tbl_Total_DOS_Launcher_Configs ist DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Total_DOS_Launcher_Configs.DisplayNameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property proglocations() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Total_DOS_Launcher_Configs.proglocationsColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte proglocations in Tabelle tbl_Total_DOS_Launcher_Configs ist D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Total_DOS_Launcher_Configs.proglocationsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property cachelocation() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Total_DOS_Launcher_Configs.cachelocationColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte cachelocation in Tabelle tbl_Total_DOS_Launcher_Configs ist D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Total_DOS_Launcher_Configs.cachelocationColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property userlevel() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Total_DOS_Launcher_Configs.userlevelColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte userlevel in Tabelle tbl_Total_DOS_Launcher_Configs ist DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Total_DOS_Launcher_Configs.userlevelColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property forcelogging() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Total_DOS_Launcher_Configs.forceloggingColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte forcelogging in Tabelle tbl_Total_DOS_Launcher_Configs ist DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Total_DOS_Launcher_Configs.forceloggingColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property swapping() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Total_DOS_Launcher_Configs.swappingColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte swapping in Tabelle tbl_Total_DOS_Launcher_Configs ist DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Total_DOS_Launcher_Configs.swappingColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property preloading() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Total_DOS_Launcher_Configs.preloadingColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte preloading in Tabelle tbl_Total_DOS_Launcher_Configs ist DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Total_DOS_Launcher_Configs.preloadingColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property pauseafterrun() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Total_DOS_Launcher_Configs.pauseafterrunColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte pauseafterrun in Tabelle tbl_Total_DOS_Launcher_Configs ist D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Total_DOS_Launcher_Configs.pauseafterrunColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property VESA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Total_DOS_Launcher_Configs.VESAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte VESA in Tabelle tbl_Total_DOS_Launcher_Configs ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Total_DOS_Launcher_Configs.VESAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Total_DOS_Launcher_ConfigsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Total_DOS_Launcher_Configs.id_Total_DOS_Launcher_ConfigsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Total_DOS_Launcher_ConfigsNull()
+            Me(Me.tabletbl_Total_DOS_Launcher_Configs.id_Total_DOS_Launcher_ConfigsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDisplayNameNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Total_DOS_Launcher_Configs.DisplayNameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDisplayNameNull()
+            Me(Me.tabletbl_Total_DOS_Launcher_Configs.DisplayNameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsproglocationsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Total_DOS_Launcher_Configs.proglocationsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetproglocationsNull()
+            Me(Me.tabletbl_Total_DOS_Launcher_Configs.proglocationsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscachelocationNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Total_DOS_Launcher_Configs.cachelocationColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcachelocationNull()
+            Me(Me.tabletbl_Total_DOS_Launcher_Configs.cachelocationColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsuserlevelNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Total_DOS_Launcher_Configs.userlevelColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetuserlevelNull()
+            Me(Me.tabletbl_Total_DOS_Launcher_Configs.userlevelColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsforceloggingNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Total_DOS_Launcher_Configs.forceloggingColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetforceloggingNull()
+            Me(Me.tabletbl_Total_DOS_Launcher_Configs.forceloggingColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsswappingNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Total_DOS_Launcher_Configs.swappingColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetswappingNull()
+            Me(Me.tabletbl_Total_DOS_Launcher_Configs.swappingColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IspreloadingNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Total_DOS_Launcher_Configs.preloadingColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetpreloadingNull()
+            Me(Me.tabletbl_Total_DOS_Launcher_Configs.preloadingColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IspauseafterrunNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Total_DOS_Launcher_Configs.pauseafterrunColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetpauseafterrunNull()
+            Me(Me.tabletbl_Total_DOS_Launcher_Configs.pauseafterrunColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsVESANull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Total_DOS_Launcher_Configs.VESAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetVESANull()
+            Me(Me.tabletbl_Total_DOS_Launcher_Configs.VESAColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class tbl_Cheevo_ChallengesRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tabletbl_Cheevo_Challenges As tbl_Cheevo_ChallengesDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tabletbl_Cheevo_Challenges = CType(Me.Table,tbl_Cheevo_ChallengesDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Cheevo_Challenges() As Long
+            Get
+                Return CType(Me(Me.tabletbl_Cheevo_Challenges.id_Cheevo_ChallengesColumn),Long)
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges.id_Cheevo_ChallengesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Name() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges.NameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Name in Tabelle tbl_Cheevo_Challenges ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges.NameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property created() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges.createdColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte created in Tabelle tbl_Cheevo_Challenges ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges.createdColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property updated() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges.updatedColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte updated in Tabelle tbl_Cheevo_Challenges ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges.updatedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNameNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges.NameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNameNull()
+            Me(Me.tabletbl_Cheevo_Challenges.NameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscreatedNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges.createdColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcreatedNull()
+            Me(Me.tabletbl_Cheevo_Challenges.createdColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsupdatedNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges.updatedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetupdatedNull()
+            Me(Me.tabletbl_Cheevo_Challenges.updatedColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class tbl_Cheevo_Challenges_CheevosRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tabletbl_Cheevo_Challenges_Cheevos As tbl_Cheevo_Challenges_CheevosDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tabletbl_Cheevo_Challenges_Cheevos = CType(Me.Table,tbl_Cheevo_Challenges_CheevosDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Cheevo_Challenges_Cheevos() As Long
+            Get
+                Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.id_Cheevo_Challenges_CheevosColumn),Long)
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.id_Cheevo_Challenges_CheevosColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Cheevo_Challenges() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.id_Cheevo_ChallengesColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Cheevo_Challenges in Tabelle tbl_Cheevo_Challenges_Cheevos"& _ 
+                            " ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.id_Cheevo_ChallengesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CheevoType() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.CheevoTypeColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte CheevoType in Tabelle tbl_Cheevo_Challenges_Cheevos ist DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.CheevoTypeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Tier() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.TierColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Tier in Tabelle tbl_Cheevo_Challenges_Cheevos ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.TierColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Emu_Games() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.id_Emu_GamesColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Emu_Games in Tabelle tbl_Cheevo_Challenges_Cheevos ist DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.id_Emu_GamesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Cheevo_GameName() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_GameNameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Cheevo_GameName in Tabelle tbl_Cheevo_Challenges_Cheevos ist "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_GameNameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Cheevo_ID() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_IDColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Cheevo_ID in Tabelle tbl_Cheevo_Challenges_Cheevos ist DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_IDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Cheevo_Title() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_TitleColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Cheevo_Title in Tabelle tbl_Cheevo_Challenges_Cheevos ist DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_TitleColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property tmp_Cheevo_Title_with_Points() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.tmp_Cheevo_Title_with_PointsColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte tmp_Cheevo_Title_with_Points in Tabelle tbl_Cheevo_Challenges"& _ 
+                            "_Cheevos ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.tmp_Cheevo_Title_with_PointsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property tmp_Cheevo_Title_with_Points_and_Mode() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.tmp_Cheevo_Title_with_Points_and_ModeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte tmp_Cheevo_Title_with_Points_and_Mode in Tabelle tbl_Cheevo_C"& _ 
+                            "hallenges_Cheevos ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.tmp_Cheevo_Title_with_Points_and_ModeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Cheevo_Description() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_DescriptionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Cheevo_Description in Tabelle tbl_Cheevo_Challenges_Cheevos i"& _ 
+                            "st DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_DescriptionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Cheevo_Points() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_PointsColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Cheevo_Points in Tabelle tbl_Cheevo_Challenges_Cheevos ist DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_PointsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Cheevo_BadgeName() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_BadgeNameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Cheevo_BadgeName in Tabelle tbl_Cheevo_Challenges_Cheevos ist"& _ 
+                            " DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_BadgeNameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Cheevo_Flags() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_FlagsColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Cheevo_Flags in Tabelle tbl_Cheevo_Challenges_Cheevos ist DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_FlagsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Hardcore() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.HardcoreColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Hardcore in Tabelle tbl_Cheevo_Challenges_Cheevos ist DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.HardcoreColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Runtime() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.RuntimeColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Runtime in Tabelle tbl_Cheevo_Challenges_Cheevos ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.RuntimeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property created() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.createdColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte created in Tabelle tbl_Cheevo_Challenges_Cheevos ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.createdColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property updated() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Cheevo_Challenges_Cheevos.updatedColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte updated in Tabelle tbl_Cheevo_Challenges_Cheevos ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Cheevo_Challenges_Cheevos.updatedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Cheevo_ChallengesNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.id_Cheevo_ChallengesColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Cheevo_ChallengesNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.id_Cheevo_ChallengesColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCheevoTypeNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.CheevoTypeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCheevoTypeNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.CheevoTypeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsTierNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.TierColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetTierNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.TierColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Emu_GamesNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.id_Emu_GamesColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Emu_GamesNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.id_Emu_GamesColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCheevo_GameNameNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_GameNameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCheevo_GameNameNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_GameNameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCheevo_IDNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_IDColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCheevo_IDNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_IDColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCheevo_TitleNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_TitleColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCheevo_TitleNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_TitleColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Istmp_Cheevo_Title_with_PointsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.tmp_Cheevo_Title_with_PointsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Settmp_Cheevo_Title_with_PointsNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.tmp_Cheevo_Title_with_PointsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Istmp_Cheevo_Title_with_Points_and_ModeNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.tmp_Cheevo_Title_with_Points_and_ModeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Settmp_Cheevo_Title_with_Points_and_ModeNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.tmp_Cheevo_Title_with_Points_and_ModeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCheevo_DescriptionNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_DescriptionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCheevo_DescriptionNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_DescriptionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCheevo_PointsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_PointsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCheevo_PointsNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_PointsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCheevo_BadgeNameNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_BadgeNameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCheevo_BadgeNameNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_BadgeNameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCheevo_FlagsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_FlagsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCheevo_FlagsNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.Cheevo_FlagsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsHardcoreNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.HardcoreColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetHardcoreNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.HardcoreColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsRuntimeNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.RuntimeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetRuntimeNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.RuntimeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscreatedNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.createdColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcreatedNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.createdColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsupdatedNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Cheevo_Challenges_Cheevos.updatedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetupdatedNull()
+            Me(Me.tabletbl_Cheevo_Challenges_Cheevos.updatedColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class tbl_Users_Cheevo_Challenges_CheevosRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tabletbl_Users_Cheevo_Challenges_Cheevos As tbl_Users_Cheevo_Challenges_CheevosDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tabletbl_Users_Cheevo_Challenges_Cheevos = CType(Me.Table,tbl_Users_Cheevo_Challenges_CheevosDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Users_Cheevo_Challenges_Cheevos() As Long
+            Get
+                Return CType(Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.id_Users_Cheevo_Challenges_CheevosColumn),Long)
+            End Get
+            Set
+                Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.id_Users_Cheevo_Challenges_CheevosColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Users() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.id_UsersColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Users in Tabelle tbl_Users_Cheevo_Challenges_Cheevos ist D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.id_UsersColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Cheevo_ID() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.Cheevo_IDColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Cheevo_ID in Tabelle tbl_Users_Cheevo_Challenges_Cheevos ist "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.Cheevo_IDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Unlocked_Casual() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.Unlocked_CasualColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Unlocked_Casual in Tabelle tbl_Users_Cheevo_Challenges_Cheevo"& _ 
+                            "s ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.Unlocked_CasualColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Unlocked_Hardcore() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.Unlocked_HardcoreColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Unlocked_Hardcore in Tabelle tbl_Users_Cheevo_Challenges_Chee"& _ 
+                            "vos ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.Unlocked_HardcoreColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property created() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.createdColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte created in Tabelle tbl_Users_Cheevo_Challenges_Cheevos ist DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.createdColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property updated() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.updatedColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte updated in Tabelle tbl_Users_Cheevo_Challenges_Cheevos ist DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.updatedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_UsersNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.id_UsersColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_UsersNull()
+            Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.id_UsersColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCheevo_IDNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.Cheevo_IDColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCheevo_IDNull()
+            Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.Cheevo_IDColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsUnlocked_CasualNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.Unlocked_CasualColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetUnlocked_CasualNull()
+            Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.Unlocked_CasualColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsUnlocked_HardcoreNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.Unlocked_HardcoreColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetUnlocked_HardcoreNull()
+            Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.Unlocked_HardcoreColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscreatedNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.createdColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcreatedNull()
+            Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.createdColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsupdatedNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.updatedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetupdatedNull()
+            Me(Me.tabletbl_Users_Cheevo_Challenges_Cheevos.updatedColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class ttb_Cheevo_Challenges_TiersRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tablettb_Cheevo_Challenges_Tiers As ttb_Cheevo_Challenges_TiersDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tablettb_Cheevo_Challenges_Tiers = CType(Me.Table,ttb_Cheevo_Challenges_TiersDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Cheevo_Challenges() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Cheevo_Challenges_Tiers.id_Cheevo_ChallengesColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Cheevo_Challenges in Tabelle ttb_Cheevo_Challenges_Tiers i"& _ 
+                            "st DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Cheevo_Challenges_Tiers.id_Cheevo_ChallengesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Tier() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Cheevo_Challenges_Tiers.TierColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Tier in Tabelle ttb_Cheevo_Challenges_Tiers ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Cheevo_Challenges_Tiers.TierColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DisplayName() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Cheevo_Challenges_Tiers.DisplayNameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte DisplayName in Tabelle ttb_Cheevo_Challenges_Tiers ist DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Cheevo_Challenges_Tiers.DisplayNameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Cheevo_ChallengesNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Cheevo_Challenges_Tiers.id_Cheevo_ChallengesColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Cheevo_ChallengesNull()
+            Me(Me.tablettb_Cheevo_Challenges_Tiers.id_Cheevo_ChallengesColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsTierNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Cheevo_Challenges_Tiers.TierColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetTierNull()
+            Me(Me.tablettb_Cheevo_Challenges_Tiers.TierColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDisplayNameNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Cheevo_Challenges_Tiers.DisplayNameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDisplayNameNull()
+            Me(Me.tablettb_Cheevo_Challenges_Tiers.DisplayNameColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class ttb_Open_Challenges_CheevosRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tablettb_Open_Challenges_Cheevos As ttb_Open_Challenges_CheevosDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tablettb_Open_Challenges_Cheevos = CType(Me.Table,ttb_Open_Challenges_CheevosDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Users_Cheevo_Challenges_Cheevos() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges_Cheevos.id_Users_Cheevo_Challenges_CheevosColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Users_Cheevo_Challenges_Cheevos in Tabelle ttb_Open_Challe"& _ 
+                            "nges_Cheevos ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges_Cheevos.id_Users_Cheevo_Challenges_CheevosColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Cheevo_Challenges_Cheevos() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges_Cheevos.id_Cheevo_Challenges_CheevosColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Cheevo_Challenges_Cheevos in Tabelle ttb_Open_Challenges_C"& _ 
+                            "heevos ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges_Cheevos.id_Cheevo_Challenges_CheevosColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Cheevo_Challenges() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges_Cheevos.id_Cheevo_ChallengesColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Cheevo_Challenges in Tabelle ttb_Open_Challenges_Cheevos i"& _ 
+                            "st DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges_Cheevos.id_Cheevo_ChallengesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CheevoType() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges_Cheevos.CheevoTypeColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte CheevoType in Tabelle ttb_Open_Challenges_Cheevos ist DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges_Cheevos.CheevoTypeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Challenge_Name() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges_Cheevos.Challenge_NameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Challenge_Name in Tabelle ttb_Open_Challenges_Cheevos ist DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges_Cheevos.Challenge_NameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Tier() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges_Cheevos.TierColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Tier in Tabelle ttb_Open_Challenges_Cheevos ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges_Cheevos.TierColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Emu_Games() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges_Cheevos.id_Emu_GamesColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Emu_Games in Tabelle ttb_Open_Challenges_Cheevos ist DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges_Cheevos.id_Emu_GamesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Cheevo_GameName() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges_Cheevos.Cheevo_GameNameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Cheevo_GameName in Tabelle ttb_Open_Challenges_Cheevos ist DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges_Cheevos.Cheevo_GameNameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Cheevo_ID() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges_Cheevos.Cheevo_IDColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Cheevo_ID in Tabelle ttb_Open_Challenges_Cheevos ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges_Cheevos.Cheevo_IDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Cheevo_Title() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges_Cheevos.Cheevo_TitleColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Cheevo_Title in Tabelle ttb_Open_Challenges_Cheevos ist DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges_Cheevos.Cheevo_TitleColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Cheevo_Description() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges_Cheevos.Cheevo_DescriptionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Cheevo_Description in Tabelle ttb_Open_Challenges_Cheevos ist"& _ 
+                            " DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges_Cheevos.Cheevo_DescriptionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Runtime() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges_Cheevos.RuntimeColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Runtime in Tabelle ttb_Open_Challenges_Cheevos ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges_Cheevos.RuntimeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Hardcore() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges_Cheevos.HardcoreColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Hardcore in Tabelle ttb_Open_Challenges_Cheevos ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges_Cheevos.HardcoreColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Unlocked_Casual() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges_Cheevos.Unlocked_CasualColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Unlocked_Casual in Tabelle ttb_Open_Challenges_Cheevos ist DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges_Cheevos.Unlocked_CasualColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Unlocked_Hardcore() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges_Cheevos.Unlocked_HardcoreColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Unlocked_Hardcore in Tabelle ttb_Open_Challenges_Cheevos ist "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges_Cheevos.Unlocked_HardcoreColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Users_Cheevo_Challenges_CheevosNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges_Cheevos.id_Users_Cheevo_Challenges_CheevosColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Users_Cheevo_Challenges_CheevosNull()
+            Me(Me.tablettb_Open_Challenges_Cheevos.id_Users_Cheevo_Challenges_CheevosColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Cheevo_Challenges_CheevosNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges_Cheevos.id_Cheevo_Challenges_CheevosColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Cheevo_Challenges_CheevosNull()
+            Me(Me.tablettb_Open_Challenges_Cheevos.id_Cheevo_Challenges_CheevosColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Cheevo_ChallengesNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges_Cheevos.id_Cheevo_ChallengesColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Cheevo_ChallengesNull()
+            Me(Me.tablettb_Open_Challenges_Cheevos.id_Cheevo_ChallengesColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCheevoTypeNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges_Cheevos.CheevoTypeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCheevoTypeNull()
+            Me(Me.tablettb_Open_Challenges_Cheevos.CheevoTypeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsChallenge_NameNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges_Cheevos.Challenge_NameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetChallenge_NameNull()
+            Me(Me.tablettb_Open_Challenges_Cheevos.Challenge_NameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsTierNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges_Cheevos.TierColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetTierNull()
+            Me(Me.tablettb_Open_Challenges_Cheevos.TierColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Emu_GamesNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges_Cheevos.id_Emu_GamesColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Emu_GamesNull()
+            Me(Me.tablettb_Open_Challenges_Cheevos.id_Emu_GamesColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCheevo_GameNameNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges_Cheevos.Cheevo_GameNameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCheevo_GameNameNull()
+            Me(Me.tablettb_Open_Challenges_Cheevos.Cheevo_GameNameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCheevo_IDNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges_Cheevos.Cheevo_IDColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCheevo_IDNull()
+            Me(Me.tablettb_Open_Challenges_Cheevos.Cheevo_IDColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCheevo_TitleNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges_Cheevos.Cheevo_TitleColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCheevo_TitleNull()
+            Me(Me.tablettb_Open_Challenges_Cheevos.Cheevo_TitleColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCheevo_DescriptionNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges_Cheevos.Cheevo_DescriptionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCheevo_DescriptionNull()
+            Me(Me.tablettb_Open_Challenges_Cheevos.Cheevo_DescriptionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsRuntimeNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges_Cheevos.RuntimeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetRuntimeNull()
+            Me(Me.tablettb_Open_Challenges_Cheevos.RuntimeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsHardcoreNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges_Cheevos.HardcoreColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetHardcoreNull()
+            Me(Me.tablettb_Open_Challenges_Cheevos.HardcoreColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsUnlocked_CasualNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges_Cheevos.Unlocked_CasualColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetUnlocked_CasualNull()
+            Me(Me.tablettb_Open_Challenges_Cheevos.Unlocked_CasualColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsUnlocked_HardcoreNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges_Cheevos.Unlocked_HardcoreColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetUnlocked_HardcoreNull()
+            Me(Me.tablettb_Open_Challenges_Cheevos.Unlocked_HardcoreColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class ttb_Open_ChallengesRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tablettb_Open_Challenges As ttb_Open_ChallengesDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tablettb_Open_Challenges = CType(Me.Table,ttb_Open_ChallengesDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Cheevo_Challenges() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges.id_Cheevo_ChallengesColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Cheevo_Challenges in Tabelle ttb_Open_Challenges ist DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges.id_Cheevo_ChallengesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Name() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges.NameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Name in Tabelle ttb_Open_Challenges ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges.NameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Tier() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges.TierColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Tier in Tabelle ttb_Open_Challenges ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges.TierColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property MaxTier() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges.MaxTierColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte MaxTier in Tabelle ttb_Open_Challenges ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges.MaxTierColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DisplayText() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Open_Challenges.DisplayTextColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte DisplayText in Tabelle ttb_Open_Challenges ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Open_Challenges.DisplayTextColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_Cheevo_ChallengesNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges.id_Cheevo_ChallengesColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_Cheevo_ChallengesNull()
+            Me(Me.tablettb_Open_Challenges.id_Cheevo_ChallengesColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNameNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges.NameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNameNull()
+            Me(Me.tablettb_Open_Challenges.NameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsTierNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges.TierColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetTierNull()
+            Me(Me.tablettb_Open_Challenges.TierColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMaxTierNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges.MaxTierColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMaxTierNull()
+            Me(Me.tablettb_Open_Challenges.MaxTierColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDisplayTextNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Open_Challenges.DisplayTextColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDisplayTextNull()
+            Me(Me.tablettb_Open_Challenges.DisplayTextColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class ttb_Emulators_PreLaunch_CommandsRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tablettb_Emulators_PreLaunch_Commands As ttb_Emulators_PreLaunch_CommandsDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tablettb_Emulators_PreLaunch_Commands = CType(Me.Table,ttb_Emulators_PreLaunch_CommandsDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Emulators_Pre_Post_Launch_Commands() As Long
+            Get
+                Return CType(Me(Me.tablettb_Emulators_PreLaunch_Commands.id_Emulators_Pre_Post_Launch_CommandsColumn),Long)
+            End Get
+            Set
+                Me(Me.tablettb_Emulators_PreLaunch_Commands.id_Emulators_Pre_Post_Launch_CommandsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Emulators() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Emulators_PreLaunch_Commands.id_EmulatorsColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Emulators in Tabelle ttb_Emulators_PreLaunch_Commands ist "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Emulators_PreLaunch_Commands.id_EmulatorsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Sort() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Emulators_PreLaunch_Commands.SortColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Sort in Tabelle ttb_Emulators_PreLaunch_Commands ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Emulators_PreLaunch_Commands.SortColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Directory() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Emulators_PreLaunch_Commands.DirectoryColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Directory in Tabelle ttb_Emulators_PreLaunch_Commands ist DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Emulators_PreLaunch_Commands.DirectoryColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Executable() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Emulators_PreLaunch_Commands.ExecutableColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Executable in Tabelle ttb_Emulators_PreLaunch_Commands ist DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Emulators_PreLaunch_Commands.ExecutableColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Parameter() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Emulators_PreLaunch_Commands.ParameterColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Parameter in Tabelle ttb_Emulators_PreLaunch_Commands ist DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Emulators_PreLaunch_Commands.ParameterColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Minimized() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Emulators_PreLaunch_Commands.MinimizedColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Minimized in Tabelle ttb_Emulators_PreLaunch_Commands ist DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Emulators_PreLaunch_Commands.MinimizedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property WaitForExit() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Emulators_PreLaunch_Commands.WaitForExitColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte WaitForExit in Tabelle ttb_Emulators_PreLaunch_Commands ist D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Emulators_PreLaunch_Commands.WaitForExitColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_EmulatorsNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Emulators_PreLaunch_Commands.id_EmulatorsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_EmulatorsNull()
+            Me(Me.tablettb_Emulators_PreLaunch_Commands.id_EmulatorsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSortNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Emulators_PreLaunch_Commands.SortColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSortNull()
+            Me(Me.tablettb_Emulators_PreLaunch_Commands.SortColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDirectoryNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Emulators_PreLaunch_Commands.DirectoryColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDirectoryNull()
+            Me(Me.tablettb_Emulators_PreLaunch_Commands.DirectoryColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsExecutableNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Emulators_PreLaunch_Commands.ExecutableColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetExecutableNull()
+            Me(Me.tablettb_Emulators_PreLaunch_Commands.ExecutableColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsParameterNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Emulators_PreLaunch_Commands.ParameterColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetParameterNull()
+            Me(Me.tablettb_Emulators_PreLaunch_Commands.ParameterColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMinimizedNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Emulators_PreLaunch_Commands.MinimizedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMinimizedNull()
+            Me(Me.tablettb_Emulators_PreLaunch_Commands.MinimizedColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsWaitForExitNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Emulators_PreLaunch_Commands.WaitForExitColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetWaitForExitNull()
+            Me(Me.tablettb_Emulators_PreLaunch_Commands.WaitForExitColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class ttb_Emulators_PostLaunch_CommandsRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tablettb_Emulators_PostLaunch_Commands As ttb_Emulators_PostLaunch_CommandsDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tablettb_Emulators_PostLaunch_Commands = CType(Me.Table,ttb_Emulators_PostLaunch_CommandsDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Emulators_Pre_Post_Launch_Commands() As Long
+            Get
+                Return CType(Me(Me.tablettb_Emulators_PostLaunch_Commands.id_Emulators_Pre_Post_Launch_CommandsColumn),Long)
+            End Get
+            Set
+                Me(Me.tablettb_Emulators_PostLaunch_Commands.id_Emulators_Pre_Post_Launch_CommandsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_Emulators() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Emulators_PostLaunch_Commands.id_EmulatorsColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte id_Emulators in Tabelle ttb_Emulators_PostLaunch_Commands ist"& _ 
+                            " DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Emulators_PostLaunch_Commands.id_EmulatorsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Sort() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Emulators_PostLaunch_Commands.SortColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Sort in Tabelle ttb_Emulators_PostLaunch_Commands ist DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Emulators_PostLaunch_Commands.SortColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Directory() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Emulators_PostLaunch_Commands.DirectoryColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Directory in Tabelle ttb_Emulators_PostLaunch_Commands ist DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Emulators_PostLaunch_Commands.DirectoryColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Executable() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Emulators_PostLaunch_Commands.ExecutableColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Executable in Tabelle ttb_Emulators_PostLaunch_Commands ist D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Emulators_PostLaunch_Commands.ExecutableColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Parameter() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Emulators_PostLaunch_Commands.ParameterColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Parameter in Tabelle ttb_Emulators_PostLaunch_Commands ist DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Emulators_PostLaunch_Commands.ParameterColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Minimized() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Emulators_PostLaunch_Commands.MinimizedColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Minimized in Tabelle ttb_Emulators_PostLaunch_Commands ist DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Emulators_PostLaunch_Commands.MinimizedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property WaitForExit() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablettb_Emulators_PostLaunch_Commands.WaitForExitColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte WaitForExit in Tabelle ttb_Emulators_PostLaunch_Commands ist "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablettb_Emulators_PostLaunch_Commands.WaitForExitColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isid_EmulatorsNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Emulators_PostLaunch_Commands.id_EmulatorsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setid_EmulatorsNull()
+            Me(Me.tablettb_Emulators_PostLaunch_Commands.id_EmulatorsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsSortNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Emulators_PostLaunch_Commands.SortColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetSortNull()
+            Me(Me.tablettb_Emulators_PostLaunch_Commands.SortColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDirectoryNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Emulators_PostLaunch_Commands.DirectoryColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDirectoryNull()
+            Me(Me.tablettb_Emulators_PostLaunch_Commands.DirectoryColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsExecutableNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Emulators_PostLaunch_Commands.ExecutableColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetExecutableNull()
+            Me(Me.tablettb_Emulators_PostLaunch_Commands.ExecutableColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsParameterNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Emulators_PostLaunch_Commands.ParameterColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetParameterNull()
+            Me(Me.tablettb_Emulators_PostLaunch_Commands.ParameterColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsMinimizedNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Emulators_PostLaunch_Commands.MinimizedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetMinimizedNull()
+            Me(Me.tablettb_Emulators_PostLaunch_Commands.MinimizedColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsWaitForExitNull() As Boolean
+            Return Me.IsNull(Me.tablettb_Emulators_PostLaunch_Commands.WaitForExitColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetWaitForExitNull()
+            Me(Me.tablettb_Emulators_PostLaunch_Commands.WaitForExitColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -49267,6 +55549,330 @@ Partial Public Class DS_ML
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As tbl_Moby_RegionsRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class tbl_Total_DOS_Launcher_ConfigsRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As tbl_Total_DOS_Launcher_ConfigsRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As tbl_Total_DOS_Launcher_ConfigsRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As tbl_Total_DOS_Launcher_ConfigsRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class tbl_Cheevo_ChallengesRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As tbl_Cheevo_ChallengesRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As tbl_Cheevo_ChallengesRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As tbl_Cheevo_ChallengesRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class tbl_Cheevo_Challenges_CheevosRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As tbl_Cheevo_Challenges_CheevosRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As tbl_Cheevo_Challenges_CheevosRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As tbl_Cheevo_Challenges_CheevosRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class tbl_Users_Cheevo_Challenges_CheevosRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As tbl_Users_Cheevo_Challenges_CheevosRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As tbl_Users_Cheevo_Challenges_CheevosRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As tbl_Users_Cheevo_Challenges_CheevosRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class ttb_Cheevo_Challenges_TiersRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As ttb_Cheevo_Challenges_TiersRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As ttb_Cheevo_Challenges_TiersRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As ttb_Cheevo_Challenges_TiersRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class ttb_Open_Challenges_CheevosRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As ttb_Open_Challenges_CheevosRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As ttb_Open_Challenges_CheevosRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As ttb_Open_Challenges_CheevosRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class ttb_Open_ChallengesRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As ttb_Open_ChallengesRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As ttb_Open_ChallengesRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As ttb_Open_ChallengesRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class ttb_Emulators_PreLaunch_CommandsRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As ttb_Emulators_PreLaunch_CommandsRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As ttb_Emulators_PreLaunch_CommandsRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As ttb_Emulators_PreLaunch_CommandsRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class ttb_Emulators_PostLaunch_CommandsRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As ttb_Emulators_PostLaunch_CommandsRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As ttb_Emulators_PostLaunch_CommandsRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As ttb_Emulators_PostLaunch_CommandsRow
             Get
                 Return Me.eventRow
             End Get

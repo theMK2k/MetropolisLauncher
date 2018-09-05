@@ -113,7 +113,7 @@ Public Class frm_Rom_Manager
 		sSQL &= "	, PLTFM.MultiVolume" & ControlChars.CrLf
 		sSQL &= "FROM moby.tbl_Moby_Platforms PLTFM" & ControlChars.CrLf
 		sSQL &= "LEFT JOIN main.tbl_Moby_Platforms_Settings PLTFMS ON PLTFM.id_Moby_Platforms = PLTFMS.id_Moby_Platforms" & ControlChars.CrLf
-		sSQL &= "WHERE (PLTFM.id_Moby_Platforms > 0 OR PLTFM.id_Moby_Platforms = -3)" & ControlChars.CrLf
+		sSQL &= "WHERE (PLTFM.id_Moby_Platforms > 0 OR PLTFM.id_Moby_Platforms IN (-2, -3))" & ControlChars.CrLf
 		sSQL &= "			AND PLTFM.Visible = 1" & ControlChars.CrLf
 		sSQL &= "			AND id_Moby_Platforms_Owner IS NULL" & ControlChars.CrLf
 		sSQL &= "			AND (PLTFMS.Visible IS NULL OR PLTFMS.Visible = 1)" & ControlChars.CrLf
@@ -1284,9 +1284,35 @@ Public Class frm_Rom_Manager
 				End If
 			End If
 
-			'Unpack and calculate md5 and sha1 only if crc+size is not successful
-			'md5 = MKNetLib.cls_MKFileSupport.MD5Hash(inner_fi.FullName)
-			'sha1 = MKNetLib.cls_MKFileSupport.SHA1Hash(inner_fi.FullName)
+#If DEBUG Then
+			'Always calculate MD5/SHA1 in Debug Mode (as we're also providing rombase data)
+			If ArchiveEntry Is Nothing Then
+				md5 = MKNetLib.cls_MKFileSupport.MD5Hash(inner_fi.FullName)
+				sha1 = MKNetLib.cls_MKFileSupport.SHA1Hash(inner_fi.FullName)
+			Else
+				'unpack and then calc these checksums
+				Try
+					Dim TempDir As String = MKNetLib.cls_MKFileSupport.CreateTempDir("ml_") 'Temp dir for extracted rom
+
+					Dim sOutFile As String = TempDir & "\" & Alphaleonis.Win32.Filesystem.Path.GetFileName(ArchiveEntry.FilePath)
+					If Not Alphaleonis.Win32.Filesystem.File.Exists(sOutFile) Then
+						Using sw As New IO.StreamWriter(sOutFile)
+							GC.SuppressFinalize(sw.BaseStream)
+							ArchiveEntry.WriteTo(sw.BaseStream)
+							'sw.BaseStream.Close()
+							sw.Close()
+						End Using
+					End If
+
+					md5 = MKNetLib.cls_MKFileSupport.MD5Hash(sOutFile)
+					sha1 = MKNetLib.cls_MKFileSupport.SHA1Hash(sOutFile)
+				Catch ex As Exception
+
+				End Try
+
+			End If
+
+#End If
 		End If
 
 
@@ -1821,7 +1847,7 @@ Public Class frm_Rom_Manager
 		Dim bDuplicate_Added As Boolean = False
 
 		'Find local duplicate and return if there is one found
-		Dim folderID As String = (folder & "\" & TC.NZ(file, "<null>") & TC.NZ(innerfile, "<null>")).ToLower
+		Dim folderID As String = (folder & "\" & TC.NZ(file, "") & TC.NZ(innerfile, "<null>")).ToLower
 
 		If Not _Rescan AndAlso dict_Have.ContainsKey(folderID) Then
 			Dim rows As ArrayList = dict_Have(folderID)
@@ -2635,10 +2661,12 @@ Public Class frm_Rom_Manager
 	Private Sub gv_Moby_Releases_RowCellStyle(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs) Handles gv_Moby_Releases.RowCellStyle
 		If BS_Emu_Games.Current IsNot Nothing Then
 			If TC.NZ(BS_Emu_Games.Current("Moby_Games_URLPart"), "") <> "" Then
-				Dim row = gv_Moby_Releases.GetRow(e.RowHandle)
-				If TC.NZ(row("Moby_Games_URLPart"), "") = BS_Emu_Games.Current("Moby_Games_URLPart") Then
-					If Not cmb_Platform.EditValue = cls_Globals.enm_Moby_Platforms.scummvm OrElse TC.IsNullNothingOrEmpty(BS_Emu_Games.Current("id_Moby_Platforms_Alternative")) OrElse TC.NZ(BS_Emu_Games.Current("id_Moby_Platforms_Alternative"), 0) = TC.NZ(row("id_Moby_Platforms"), 0) Then
-						e.Appearance.Font = New Font(e.Appearance.Font.FontFamily.Name, e.Appearance.Font.Size, FontStyle.Bold)
+				If e.RowHandle >= 0 Then
+					Dim row = gv_Moby_Releases.GetRow(e.RowHandle)
+					If TC.NZ(row("Moby_Games_URLPart"), "") = BS_Emu_Games.Current("Moby_Games_URLPart") Then
+						If Not cmb_Platform.EditValue = cls_Globals.enm_Moby_Platforms.scummvm OrElse TC.IsNullNothingOrEmpty(BS_Emu_Games.Current("id_Moby_Platforms_Alternative")) OrElse TC.NZ(BS_Emu_Games.Current("id_Moby_Platforms_Alternative"), 0) = TC.NZ(row("id_Moby_Platforms"), 0) Then
+							e.Appearance.Font = New Font(e.Appearance.Font.FontFamily.Name, e.Appearance.Font.Size, FontStyle.Bold)
+						End If
 					End If
 				End If
 			End If
@@ -2669,19 +2697,21 @@ Public Class frm_Rom_Manager
 	End Sub
 
 	Private Sub gv_Emu_Games_RowCellStyle(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs) Handles gv_Emu_Games.RowCellStyle
-		Dim row As DataRow = gv_Emu_Games.GetRow(e.RowHandle).Row
-		If row IsNot Nothing Then
-			If TC.NZ(row("ROMBASE_id_Moby_Platforms"), 0) <> 0 AndAlso TC.NZ(row("id_Moby_Platforms"), -1) <> TC.NZ(row("ROMBASE_id_Moby_Platforms"), -1) Then
-				e.Appearance.ForeColor = Color.Red
+		If e.RowHandle >= 0 Then
+			Dim row As DataRow = gv_Emu_Games.GetRow(e.RowHandle).Row
+			If row IsNot Nothing Then
+				If TC.NZ(row("ROMBASE_id_Moby_Platforms"), 0) <> 0 AndAlso TC.NZ(row("id_Moby_Platforms"), -1) <> TC.NZ(row("ROMBASE_id_Moby_Platforms"), -1) Then
+					e.Appearance.ForeColor = Color.Red
+				End If
 			End If
-		End If
 
-		If TC.NZ(row("tmp_Highlighted"), False) = True AndAlso TC.NZ(row("Unavailable"), False) = True Then
-			e.Appearance.Font = New Font(e.Appearance.Font, FontStyle.Bold Or FontStyle.Strikeout)
-		ElseIf TC.NZ(row("tmp_Highlighted"), False) = True Then
-			e.Appearance.Font = New Font(e.Appearance.Font, FontStyle.Bold)
-		ElseIf TC.NZ(row("Unavailable"), False) = True Then
-			e.Appearance.Font = New Font(e.Appearance.Font, FontStyle.Strikeout)
+			If TC.NZ(row("tmp_Highlighted"), False) = True AndAlso TC.NZ(row("Unavailable"), False) = True Then
+				e.Appearance.Font = New Font(e.Appearance.Font, FontStyle.Bold Or FontStyle.Strikeout)
+			ElseIf TC.NZ(row("tmp_Highlighted"), False) = True Then
+				e.Appearance.Font = New Font(e.Appearance.Font, FontStyle.Bold)
+			ElseIf TC.NZ(row("Unavailable"), False) = True Then
+				e.Appearance.Font = New Font(e.Appearance.Font, FontStyle.Strikeout)
+			End If
 		End If
 	End Sub
 
@@ -2805,7 +2835,7 @@ Public Class frm_Rom_Manager
 					Dim innerfile As String = ""
 					Dim sTmpDir As String = ""
 
-					If TC.NZ(main_Row("File"), "") <> "" Then
+					If TC.NZ(main_Row("File"), "") <> "" AndAlso TC.NZ(main_Row("id_Rombase_DOSBox_Filetypes"), 0) <> cls_Globals.enm_Rombase_DOSBox_Filetypes.cwd Then
 						'Check file existence
 						If Not Alphaleonis.Win32.Filesystem.File.Exists(mainfile) Then
 
@@ -2917,40 +2947,73 @@ Public Class frm_Rom_Manager
 						main_Row("Unavailable") = False
 					End If
 
-					If TC.NZ(cmb_Platform.EditValue, 0L) <> cls_Globals.enm_Moby_Platforms.scummvm AndAlso TC.NZ(main_Row("File"), "").ToLower <> TC.NZ(main_Row("InnerFile"), "").ToLower Then
-						Try
-							'We could have an archive with a specific inner file
-							Dim archive As SharpCompress.Archive.IArchive = SharpCompress.Archive.ArchiveFactory.Open(mainfile)
 
-							If archive IsNot Nothing Then
-								sTmpDir = MKNetLib.cls_MKFileSupport.CreateTempDir("ml_")
+					If TC.NZ(main_Row("id_Rombase_DOSBox_Filetypes"), 0) <> cls_Globals.enm_Rombase_DOSBox_Filetypes.cwd Then
 
-								For Each entry As SharpCompress.Archive.IArchiveEntry In archive.Entries
-									If Not entry.IsDirectory Then
-										If Alphaleonis.Win32.Filesystem.Path.GetFileName(entry.FilePath).ToLower = TC.NZ(main_Row("InnerFile"), "").ToLower Then
-											'We found the file we want to extract
-											Dim sOutFile As String = sTmpDir & "\" & Alphaleonis.Win32.Filesystem.Path.GetFileName(entry.FilePath)
-											If Not Alphaleonis.Win32.Filesystem.File.Exists(sOutFile) Then
-												Using sw As New IO.StreamWriter(sOutFile)
-													GC.SuppressFinalize(sw.BaseStream)
-													entry.WriteTo(sw.BaseStream)
-													'sw.BaseStream.Close()
-													sw.Close()
+						If TC.NZ(cmb_Platform.EditValue, 0L) <> cls_Globals.enm_Moby_Platforms.scummvm AndAlso TC.NZ(main_Row("File"), "").ToLower <> TC.NZ(main_Row("InnerFile"), "").ToLower Then
+							Try
+								'We could have an archive with a specific inner file
+								Dim archive As SharpCompress.Archive.IArchive = SharpCompress.Archive.ArchiveFactory.Open(mainfile)
 
-													innerfile = sOutFile
-													Exit For
-												End Using
+								If archive IsNot Nothing Then
+									sTmpDir = MKNetLib.cls_MKFileSupport.CreateTempDir("ml_")
+
+									For Each entry As SharpCompress.Archive.IArchiveEntry In archive.Entries
+										If Not entry.IsDirectory Then
+											If Alphaleonis.Win32.Filesystem.Path.GetFileName(entry.FilePath).ToLower = TC.NZ(main_Row("InnerFile"), "").ToLower Then
+												'We found the file we want to extract
+												Dim sOutFile As String = sTmpDir & "\" & Alphaleonis.Win32.Filesystem.Path.GetFileName(entry.FilePath)
+												If Not Alphaleonis.Win32.Filesystem.File.Exists(sOutFile) Then
+													Using sw As New IO.StreamWriter(sOutFile)
+														GC.SuppressFinalize(sw.BaseStream)
+														entry.WriteTo(sw.BaseStream)
+														'sw.BaseStream.Close()
+														sw.Close()
+
+														innerfile = sOutFile
+														Exit For
+													End Using
+												End If
 											End If
 										End If
-									End If
-								Next
-							End If
+									Next
+								End If
 
-							If Not Alphaleonis.Win32.Filesystem.File.Exists(innerfile) Then
+								If Not Alphaleonis.Win32.Filesystem.File.Exists(innerfile) Then
 
+									prg.Hide = True
+									Cursor.Current = Cursors.Default
+									Dim res As DialogResult = pd_NotFound.Show("Inner file not found", "The expected inner file '" & TC.NZ(main_Row("InnerFile"), "") & "' could not be found in " & mainfile & ". Do you want to remove it from the collection, keep it or cancel the rescan process?")
+									prg.Hide = False
+									Cursor.Current = Cursors.WaitCursor
+
+									Select Case res
+										Case Windows.Forms.DialogResult.Yes
+											Dim id_Emu_Games As Integer = main_Row("id_Emu_Games")
+
+											If id_Emu_Games > 0 Then
+												al_Delete.Add(id_Emu_Games)
+											End If
+
+											ar_Delete_Rows.Add(main_Row)
+
+											Continue For
+										Case Windows.Forms.DialogResult.No
+											'Keep (do nothing eh?)
+											If TC.NZ(main_Row("Unavailable"), False) = False Then
+												main_Row("Unavailable") = True
+											End If
+
+											Continue For
+										Case Windows.Forms.DialogResult.Cancel
+											'Cancel the rescan operation
+											Exit For
+									End Select
+								End If
+							Catch ex As Exception
 								prg.Hide = True
 								Cursor.Current = Cursors.Default
-								Dim res As DialogResult = pd_NotFound.Show("Inner file not found", "The expected inner file '" & TC.NZ(main_Row("InnerFile"), "") & "' could not be found in " & mainfile & ". Do you want to remove it from the collection, keep it or cancel the rescan process?")
+								Dim res As DialogResult = pd_NotFound.Show("Error on decompression", "There has been an error on decompressing " & mainfile & " with the expected inner file " & main_Row("InnerFile") & ". Do you want to remove it from the collection, keep it or cancel the rescan process?" & ControlChars.CrLf & ControlChars.CrLf & "The error was: " & ex.Message)
 								prg.Hide = False
 								Cursor.Current = Cursors.WaitCursor
 
@@ -2976,39 +3039,10 @@ Public Class frm_Rom_Manager
 										'Cancel the rescan operation
 										Exit For
 								End Select
-							End If
-						Catch ex As Exception
-							prg.Hide = True
-							Cursor.Current = Cursors.Default
-							Dim res As DialogResult = pd_NotFound.Show("Error on decompression", "There has been an error on decompressing " & mainfile & " with the expected inner file " & main_Row("InnerFile") & ". Do you want to remove it from the collection, keep it or cancel the rescan process?" & ControlChars.CrLf & ControlChars.CrLf & "The error was: " & ex.Message)
-							prg.Hide = False
-							Cursor.Current = Cursors.WaitCursor
-
-							Select Case res
-								Case Windows.Forms.DialogResult.Yes
-									Dim id_Emu_Games As Integer = main_Row("id_Emu_Games")
-
-									If id_Emu_Games > 0 Then
-										al_Delete.Add(id_Emu_Games)
-									End If
-
-									ar_Delete_Rows.Add(main_Row)
-
-									Continue For
-								Case Windows.Forms.DialogResult.No
-									'Keep (do nothing eh?)
-									If TC.NZ(main_Row("Unavailable"), False) = False Then
-										main_Row("Unavailable") = True
-									End If
-
-									Continue For
-								Case Windows.Forms.DialogResult.Cancel
-									'Cancel the rescan operation
-									Exit For
-							End Select
-						End Try
-					Else
-						innerfile = mainfile
+							End Try
+						Else
+							innerfile = mainfile
+						End If
 					End If
 
 					If TC.NZ(main_Row("Unavailable"), False) = True Then
@@ -3383,7 +3417,7 @@ Public Class frm_Rom_Manager
 
 			Clear_dict_Rombase()
 
-			Dim sResult As String = "Result" & IIf(Aborted, "after cancellation", "") & ": " & result._x & " games added, " & result._y & " of them were mapped to game info, " & result._z & " duplicates have been ignored."
+			Dim sResult As String = "Result" & IIf(Aborted, " after cancellation", "") & ": " & result._x & " games added, " & result._y & " of them were mapped to game info, " & result._z & " duplicates have been ignored."
 
 			If cntMismatch > 0 Then
 				sResult &= ControlChars.CrLf & ControlChars.CrLf & "WARNING: There have been " & cntMismatch & " platform mismatch/es detected! All affected entries are in red color. Did you import Roms for the correct Platform?"
@@ -3820,7 +3854,14 @@ Public Class frm_Rom_Manager
 
 				For Each fi As Alphaleonis.Win32.Filesystem.FileInfo In fs.Files
 					'Skip if file is already known
-					If dt_Files.Select("InnerFile = " & TC.getSQLFormat(fi.Name) & " AND Folder = " & TC.getSQLFormat(fi.Directory.FullName) & " AND (id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games) & " OR id_Emu_Games_Owner = " & TC.getSQLFormat(id_Emu_Games) & ")").Length > 0 Then Continue For
+					If dt_Files.Select("InnerFile = " & TC.getSQLFormat(fi.Name) & " AND Folder = " & TC.getSQLFormat(fi.Directory.FullName) & " AND (id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games) & " OR id_Emu_Games_Owner = " & TC.getSQLFormat(id_Emu_Games) & ")").Length > 0 Then
+						Continue For
+					End If
+
+					'Skip if file is under _TDL_ directory and is not tdl.exe
+					If fi.FullName.ToLower.Contains("_tdl_") AndAlso Not fi.FullName.ToLower.Contains("tdl.exe") Then
+						Continue For
+					End If
 
 					Dim row_file As DataRow = Nothing
 					Dim rows_file As DataRow() = dt_Files.Select("InnerFile LIKE '%" & fi.Name.Replace("'", "''") & "' AND Size = " & fi.Length & " AND InnerFile <> File" & " AND (id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games) & " OR id_Emu_Games_Owner = " & TC.getSQLFormat(id_Emu_Games) & ")")
@@ -3868,6 +3909,10 @@ Public Class frm_Rom_Manager
 						Dim sha1 As String = MKNetLib.cls_MKFileSupport.SHA1Hash(fi.FullName)
 
 						Dim id_Rombase_DOSBox_Exe_Types As Object = DBNull.Value  'TODO: check Rombase if an exe type is available
+						If fi.FullName.ToLower.Contains("_tdl_\tdl.exe") Then
+							'Always set TDL.exe as a MAIN executable
+							id_Rombase_DOSBox_Exe_Types = cls_Globals.enm_Rombase_DOSBox_Exe_Types.main
+						End If
 
 						If bUseDB Then
 							Dim sSQL As String = ""
@@ -3914,7 +3959,7 @@ Public Class frm_Rom_Manager
 								If TC.NZ(id_Rombase_DOSBox_Exe_Types, 0) <> 0 Then
 									Dim sSQLUpdate As String = ""
 									sSQLUpdate &= "UPDATE tbl_Emu_Games" & ControlChars.CrLf
-									sSQLUpdate &= "SET id_Rombase_DOSBox_Exe_Types = NULL"
+									sSQLUpdate &= "SET id_Rombase_DOSBox_Exe_Types = NULL" & ControlChars.CrLf
 									sSQLUpdate &= "WHERE (id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games) & " OR id_Emu_Games_Owner = " & TC.getSQLFormat(id_Emu_Games) & ")" & ControlChars.CrLf
 									sSQLUpdate &= "	AND id_Rombase_DOSBox_Exe_Types = " & TC.getSQLFormat(id_Rombase_DOSBox_Exe_Types) & ControlChars.CrLf
 									sSQLUpdate &= "	AND id_Emu_Games <> " & TC.getSQLFormat(id_Emu_Games_New)
@@ -3975,7 +4020,9 @@ Public Class frm_Rom_Manager
 				Next
 			End If
 
-			If bUseDB AndAlso bTran Then tran.Commit()
+			If bTran Then
+				tran.Commit()
+			End If
 		Catch ex As Exception
 			If prg IsNot Nothing Then prg.Hide = True
 			Dim bWaitCursor As Boolean = Cursor.Current = Cursors.WaitCursor
@@ -4223,8 +4270,12 @@ Public Class frm_Rom_Manager
 
 				If TC.NZ(oMoby_Games_URLPart, "").Length > 0 Then
 					row_Emu_Games_Owner("Moby_Games_URLPart") = oMoby_Games_URLPart
-					row_Emu_Games_Owner("Name") = DBNull.Value
-					row_Emu_Games_Owner("Name_USR") = DBNull.Value
+
+					If TC.NZ(row_Emu_Games_Owner("Name_USR"), "") = "" Then
+						row_Emu_Games_Owner("Name") = DBNull.Value
+						row_Emu_Games_Owner("Name_USR") = DBNull.Value
+					End If
+
 					row_Emu_Games_Owner("Publisher_USR") = DBNull.Value
 				End If
 
@@ -4235,9 +4286,13 @@ Public Class frm_Rom_Manager
 				For Each row_Emu_Games_Children As DataRow In ar_Emu_Games_Children
 					If TC.NZ(oMoby_Games_URLPart, "").Length > 0 Then
 						row_Emu_Games_Children("Moby_Games_URLPart") = oMoby_Games_URLPart
-						row_Emu_Games_Owner("Name") = DBNull.Value
+
+						If TC.NZ(row_Emu_Games_Owner("Name_USR"), "") = "" Then
+							row_Emu_Games_Owner("Name") = DBNull.Value
+							row_Emu_Games_Owner("Name_USR") = DBNull.Value
+						End If
+
 						row_Emu_Games_Owner("Publisher") = DBNull.Value
-						row_Emu_Games_Owner("Name_USR") = DBNull.Value
 						row_Emu_Games_Owner("Publisher_USR") = DBNull.Value
 					End If
 
@@ -4806,13 +4861,13 @@ Public Class frm_Rom_Manager
 		Dim Strip_File_Extensions As Boolean = False
 
 		Dim dotcounter As Integer = 0
-		For Each row_Rombase As DS_Rombase.tbl_RombaseRow In Me.DS_Rombase.tbl_Rombase.Rows
-			If TC.NZ(row_Rombase.filename, "").Contains(".") Then
+		For Each row_Emu_Game As DS_ML.tbl_Emu_GamesRow In Me.DS_ML.tbl_Emu_Games.Rows
+			If TC.NZ(row_Emu_Game("File"), "").Contains(".") Then
 				dotcounter += 1
 			End If
 		Next
 
-		If CDbl(dotcounter) / CDbl(Me.DS_Rombase.tbl_Rombase.Rows.Count) > 0.9 Then
+		If CDbl(dotcounter) / CDbl(Me.DS_ML.tbl_Emu_Games.Rows.Count) > 0.9 Then
 			Strip_File_Extensions = True
 		End If
 
@@ -4859,7 +4914,11 @@ Public Class frm_Rom_Manager
 				GameName = Alphaleonis.Win32.Filesystem.Path.GetDirectoryName(row_Emu_Games.Folder)
 			End If
 
-			row_Auto_Link.GameName = row_Emu_Games.InnerFile
+			If Me.cmb_Platform.EditValue = cls_Globals.enm_Moby_Platforms.mame Then
+				GameName = TC.NZ(row_Emu_Games("Name"), "")
+			End If
+
+			row_Auto_Link.GameName = GameName
 
 			tbl_Moby_Auto_Link.Rows.Add(row_Auto_Link)
 		Next

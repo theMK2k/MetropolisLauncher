@@ -20,6 +20,9 @@ Partial Class frm_DOSBox_Choose_Exe
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
 		Me.components = New System.ComponentModel.Container()
+		Dim SuperToolTip1 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem1 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem1 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Me.btn_OK = New MKNetDXLib.ctl_MKDXSimpleButton()
 		Me.btn_Just_Mount = New MKNetDXLib.ctl_MKDXSimpleButton()
 		Me.grd_DOSBox_Files_and_Folders = New MKNetDXLib.ctl_MKDXGrid()
@@ -32,6 +35,7 @@ Partial Class frm_DOSBox_Choose_Exe
 		Me.rpi_MV_Volume = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
 		Me.lbl_Explanation = New MKNetDXLib.ctl_MKDXLabel()
 		Me.Ctl_MKDXPanel1 = New MKNetDXLib.ctl_MKDXPanel()
+		Me.btn_Create_TDL_Menu = New MKNetDXLib.ctl_MKDXSimpleButton()
 		CType(Me.grd_DOSBox_Files_and_Folders, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BS_DOSBox_Files_and_Folders, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.gv_DOSBox_Files_and_Folders, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,6 +101,7 @@ Partial Class frm_DOSBox_Choose_Exe
 		'col_DOSBox_Displayname
 		'
 		Me.col_DOSBox_Displayname.Caption = "File/Directory"
+		Me.col_DOSBox_Displayname.FieldName = "DOSBox_Displayname"
 		Me.col_DOSBox_Displayname.Name = "col_DOSBox_Displayname"
 		Me.col_DOSBox_Displayname.OptionsColumn.AllowEdit = False
 		Me.col_DOSBox_Displayname.Visible = True
@@ -160,6 +165,7 @@ Partial Class frm_DOSBox_Choose_Exe
 		'Ctl_MKDXPanel1
 		'
 		Me.Ctl_MKDXPanel1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.Ctl_MKDXPanel1.Controls.Add(Me.btn_Create_TDL_Menu)
 		Me.Ctl_MKDXPanel1.Controls.Add(Me.btn_OK)
 		Me.Ctl_MKDXPanel1.Controls.Add(Me.btn_Just_Mount)
 		Me.Ctl_MKDXPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -167,6 +173,21 @@ Partial Class frm_DOSBox_Choose_Exe
 		Me.Ctl_MKDXPanel1.Name = "Ctl_MKDXPanel1"
 		Me.Ctl_MKDXPanel1.Size = New System.Drawing.Size(372, 29)
 		Me.Ctl_MKDXPanel1.TabIndex = 8
+		'
+		'btn_Create_TDL_Menu
+		'
+		Me.btn_Create_TDL_Menu.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+		Me.btn_Create_TDL_Menu.Location = New System.Drawing.Point(3, 3)
+		Me.btn_Create_TDL_Menu.Name = "btn_Create_TDL_Menu"
+		Me.btn_Create_TDL_Menu.Size = New System.Drawing.Size(99, 23)
+		ToolTipTitleItem1.Text = "Create TDL Menu"
+		ToolTipItem1.LeftIndent = 6
+		ToolTipItem1.Text = "Create a native DOS menu with Total DOS Launcher"
+		SuperToolTip1.Items.Add(ToolTipTitleItem1)
+		SuperToolTip1.Items.Add(ToolTipItem1)
+		Me.btn_Create_TDL_Menu.SuperTip = SuperToolTip1
+		Me.btn_Create_TDL_Menu.TabIndex = 2
+		Me.btn_Create_TDL_Menu.Text = "&Create TDL Menu"
 		'
 		'frm_DOSBox_Choose_Exe
 		'
@@ -202,5 +223,5 @@ Partial Class frm_DOSBox_Choose_Exe
 	Friend WithEvents lbl_Explanation As MKNetDXLib.ctl_MKDXLabel
 	Friend WithEvents Ctl_MKDXPanel1 As MKNetDXLib.ctl_MKDXPanel
 	Public WithEvents BS_DOSBox_Files_and_Folders As System.Windows.Forms.BindingSource
-
+	Friend WithEvents btn_Create_TDL_Menu As MKNetDXLib.ctl_MKDXSimpleButton
 End Class

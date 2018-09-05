@@ -278,20 +278,20 @@ Public Class frm_Emu_Game_Edit
 			'OF COURSE On MultiEdit, emulators can be selected
 			Me.cmb_Default_Emulator.Properties.NullText = "<do not change>"
 			If Me._id_Moby_Platforms > 0 Then
-				sSQL = "		SELECT"
-				sSQL &= "			-1 AS id_Emulators"
-				sSQL &= "			, '<remove all and use global default emulator>' AS Displayname"
-				sSQL &= "			, NULL AS J2KPreset"
-				sSQL &= "		UNION ALL"
-				sSQL &= "		SELECT"
-				sSQL &= "			EMP.id_Emulators"
-				sSQL &= "			, E.Displayname || CASE WHEN EMP.DefaultEmulator = 1 THEN ' (global default)' ELSE '' END AS Displayname"
-				sSQL &= "			, E.J2KPreset"
-				sSQL &= "		FROM"
-				sSQL &= "		tbl_Emulators_Moby_Platforms EMP"
-				sSQL &= "		INNER JOIN tbl_Emulators E ON EMP.id_Emulators = E.id_Emulators"
-				sSQL &= "		WHERE id_Moby_Platforms = " & TC.getSQLFormat(_id_Moby_Platforms)
-				sSQL &= "		ORDER BY Displayname"
+				sSQL = "		SELECT" & ControlChars.CrLf
+				sSQL &= "			-1 AS id_Emulators" & ControlChars.CrLf
+				sSQL &= "			, '<remove all and use global default emulator>' AS Displayname" & ControlChars.CrLf
+				sSQL &= "			, NULL AS J2KPreset" & ControlChars.CrLf
+				sSQL &= "		UNION ALL" & ControlChars.CrLf
+				sSQL &= "		SELECT" & ControlChars.CrLf
+				sSQL &= "			EMP.id_Emulators" & ControlChars.CrLf
+				sSQL &= "			, E.Displayname || CASE WHEN EMP.DefaultEmulator = 1 THEN ' (global default)' ELSE '' END AS Displayname" & ControlChars.CrLf
+				sSQL &= "			, E.J2KPreset" & ControlChars.CrLf
+				sSQL &= "		FROM" & ControlChars.CrLf
+				sSQL &= "		tbl_Emulators_Moby_Platforms EMP" & ControlChars.CrLf
+				sSQL &= "		INNER JOIN tbl_Emulators E ON EMP.id_Emulators = E.id_Emulators" & ControlChars.CrLf
+				sSQL &= "		WHERE id_Moby_Platforms = " & TC.getSQLFormat(_id_Moby_Platforms) & ControlChars.CrLf
+				sSQL &= "		ORDER BY Displayname" & ControlChars.CrLf
 				DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, DS_ML.tbl_Emu_Games_Edit_Default_Emulator)
 			End If
 
@@ -495,8 +495,10 @@ Public Class frm_Emu_Game_Edit
 			Next
 
 			Using tran As SQLite.SQLiteTransaction = cls_Globals.Conn.BeginTransaction
-				DS_ML.Fill_src_frm_Rom_Manager_Emu_Games(tran, DS_ML.tbl_Emu_Games, Me._id_Moby_Platforms, Me._id_Emu_Games, Me._id_Emu_Games)
+				DS_ML.Fill_src_frm_Rom_Manager_Emu_Games(tran, Me.DS_ML.tbl_Emu_Games, Me._id_Moby_Platforms, Me._id_Emu_Games, Me._id_Emu_Games)
 			End Using
+
+			DS_ML.Prepare_tmp_DOSBox_DisplayText(Me.DS_ML.tbl_Emu_Games)
 
 			Me._MultiVolume = TC.NZ(DataAccess.FireProcedureReturnScalar(cls_Globals.Conn, 0, "SELECT PLTFM.MultiVolume FROM tbl_Emu_Games EG LEFT JOIN moby.tbl_Moby_Platforms PLTFM ON EG.id_Moby_Platforms = PLTFM.id_Moby_Platforms WHERE EG.id_Emu_Games = " & TC.getSQLFormat(Me._id_Emu_Games)), False)
 
@@ -1178,18 +1180,6 @@ Public Class frm_Emu_Game_Edit
 	End Sub
 
 	Private Sub gv_DOSBox_Files_and_Folders_CustomColumnDisplayText(ByVal sender As System.Object, ByVal e As DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs) Handles gv_DOSBox_Files_and_Folders.CustomColumnDisplayText
-		If e.Column Is col_DOSBox_Displayname Then
-			'Dim row As DataRow = gv_DOSBox_Files_and_Folders.GetRow(e.ListSourceRowIndex).Row
-			Dim oInnerFile As Object = gv_DOSBox_Files_and_Folders.GetListSourceRowCellValue(e.ListSourceRowIndex, "InnerFile")
-			Dim oFolder As Object = gv_DOSBox_Files_and_Folders.GetListSourceRowCellValue(e.ListSourceRowIndex, "Folder")
-
-			If TC.NZ(oInnerFile, "").Length > 0 Then
-				e.DisplayText = oInnerFile
-			Else
-				e.DisplayText = oFolder
-			End If
-		End If
-
 		If e.Column Is colid_Rombase_DOSBox_Filetypes Then
 			'Dim row As DataRow = gv_DOSBox_Files_and_Folders.GetRow(e.ListSourceRowIndex).Row
 			Dim o_id_Rombase_DOSBox_Filetypes As Object = gv_DOSBox_Files_and_Folders.GetListSourceRowCellValue(e.ListSourceRowIndex, "id_Rombase_DOSBox_Filetypes")

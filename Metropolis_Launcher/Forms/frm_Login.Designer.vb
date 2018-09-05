@@ -168,10 +168,9 @@ Partial Class frm_Login
 		Me.ClientSize = New System.Drawing.Size(314, 117)
 		Me.Controls.Add(Me.Ctl_MKDXPanel1)
 		Me.Controls.Add(Me.lbl_Explanation)
-		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable
 		Me.Name = "frm_Login"
 		Me.ShowInTaskbar = False
-		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
 		Me.Text = "Welcome! Please log in..."
 		CType(Me.txb_Password.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.DS_ML, System.ComponentModel.ISupportInitialize).EndInit()

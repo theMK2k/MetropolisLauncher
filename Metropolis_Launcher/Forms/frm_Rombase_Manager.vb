@@ -172,7 +172,7 @@ Public Class frm_ROMBase_Manager
 			DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, DS_Rombase.tbl_Rombase)
 
 			If e.NewValue <> 0 Then
-				_Moby_Platforms_URLPart = DS_MobyDB.tbl_Moby_Platforms.Select("id_Moby_Platforms = " & e.NewValue)(0)("URLPart")
+				_Moby_Platforms_URLPart = TC.NZ(DS_MobyDB.tbl_Moby_Platforms.Select("id_Moby_Platforms = " & e.NewValue)(0)("URLPart"), "")
 			End If
 
 			Cursor.Current = Cursors.Default
@@ -437,8 +437,10 @@ Public Class frm_ROMBase_Manager
 	Private Sub gv_Moby_Releases_RowCellStyle(ByVal sender As Object, ByVal e As DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs) Handles gv_Moby_Releases.RowCellStyle
 		If BS_Rombase.Current IsNot Nothing Then
 			If TC.NZ(BS_Rombase.Current("id_Moby_Releases"), 0) <> 0 Then
-				If TC.NZ(gv_Moby_Releases.GetRow(e.RowHandle)("id_Moby_Releases"), -1) = BS_Rombase.Current("id_Moby_Releases") Then
-					e.Appearance.Font = New Font(e.Appearance.Font.FontFamily.Name, e.Appearance.Font.Size, FontStyle.Bold)
+				If e.RowHandle >= 0 Then
+					If TC.NZ(gv_Moby_Releases.GetRow(e.RowHandle)("id_Moby_Releases"), -1) = BS_Rombase.Current("id_Moby_Releases") Then
+						e.Appearance.Font = New Font(e.Appearance.Font.FontFamily.Name, e.Appearance.Font.Size, FontStyle.Bold)
+					End If
 				End If
 			End If
 		End If

@@ -39,7 +39,6 @@ Partial Class frm_Main
 		Me.doc_Cinema = New DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(Me.components)
 		Me.tile_Settings = New DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(Me.components)
 		Me.doc_Settings = New DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(Me.components)
-		Me.DS_MLApps = New Metropolis_Launcher.DS_MLApps()
 		Me.barmng = New MKNetDXLib.ctl_MKDXBarManager()
 		Me.Bar3 = New DevExpress.XtraBars.Bar()
 		Me.bbi_DownloadManager = New DevExpress.XtraBars.BarButtonItem()
@@ -60,7 +59,6 @@ Partial Class frm_Main
 		CType(Me.doc_Cinema, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.tile_Settings, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.doc_Settings, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.DS_MLApps, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.barmng, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
 		'
@@ -169,11 +167,6 @@ Partial Class frm_Main
 		Me.doc_Settings.Caption = "Settings"
 		Me.doc_Settings.ControlName = ""
 		'
-		'DS_MLApps
-		'
-		Me.DS_MLApps.DataSetName = "DS_MLApps"
-		Me.DS_MLApps.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-		'
 		'barmng
 		'
 		Me.barmng.Bars.AddRange(New DevExpress.XtraBars.Bar() {Me.Bar3})
@@ -272,7 +265,6 @@ Partial Class frm_Main
 		CType(Me.doc_Cinema, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.tile_Settings, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.doc_Settings, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.DS_MLApps, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.barmng, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.ResumeLayout(False)
 		Me.PerformLayout()
@@ -289,7 +281,6 @@ Partial Class frm_Main
 	Friend WithEvents doc_Settings As DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document
 	Friend WithEvents tile_Cinema As DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile
 	Friend WithEvents doc_Cinema As DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document
-	Friend WithEvents DS_MLApps As Metropolis_Launcher.DS_MLApps
 	Friend WithEvents barDockControlLeft As DevExpress.XtraBars.BarDockControl
 	Friend WithEvents barDockControlRight As DevExpress.XtraBars.BarDockControl
 	Friend WithEvents barDockControlBottom As DevExpress.XtraBars.BarDockControl

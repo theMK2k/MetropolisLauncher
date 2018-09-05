@@ -61,6 +61,9 @@
 			cls_Globals.Dir_Screenshot = TC.NZ(cls_Settings.GetSetting("Dir_Screenshot"), "")
 		End If
 
+		cls_Globals.RetroAchievements_User = TC.NZ(cls_Settings.GetSetting("RetroAchievements_User", cls_Settings.enm_Settingmodes.Per_User), "")
+		cls_Globals.RetroAchievements_Pass = TC.NZ(cls_Settings.GetSetting("RetroAchievements_Pass", cls_Settings.enm_Settingmodes.Per_User), "")
+
 		MKNetLib.cls_MKFileSupport.TempDirRoot = cls_Globals.TempDir(Nothing)
 	End Sub
 

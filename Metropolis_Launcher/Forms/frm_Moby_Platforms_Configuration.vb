@@ -15,6 +15,13 @@
 		sSQL &= "	ORDER BY Display_Name"
 
 		DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, DS_ML.tbl_Moby_Platforms_Settings)
+
+		If cls_Globals.MultiUserMode AndAlso Not cls_Globals.Admin Then
+			Me.rpi_Checkedit.ReadOnly = True
+			Me.colVisible.OptionsColumn.AllowEdit = False
+			Me.btn_OK.Visible = False
+			Me.btn_Cancel.Text = "&Close"
+		End If
 	End Sub
 
 	Private Sub btn_OK_Click(sender As System.Object, e As System.EventArgs) Handles btn_OK.Click
@@ -33,6 +40,8 @@
 	End Sub
 
 	Private Sub gv_Platforms_MouseMove(sender As Object, e As MouseEventArgs) Handles gv_Platforms.MouseMove
-		Me.grd_Platforms.ShowHandInColumns(gv_Platforms, {"Visible"}, e)
+		If Not cls_Globals.MultiUserMode OrElse cls_Globals.Admin Then
+			Me.grd_Platforms.ShowHandInColumns(gv_Platforms, {"Visible"}, e)
+		End If
 	End Sub
 End Class

@@ -243,4 +243,20 @@
 
 		Return True
 	End Function
+
+	Public Shared Function LoadImageFromStreamSafe(ByVal filepath As String, Optional ByVal deleteOnFail As Boolean = True)
+		Try
+			Return Image.FromStream(New IO.MemoryStream(Alphaleonis.Win32.Filesystem.File.ReadAllBytes(filepath)))
+		Catch ex As Exception
+			If deleteOnFail AndAlso False Then
+				Try
+					Alphaleonis.Win32.Filesystem.File.Delete(filepath)
+				Catch ex2 As Exception
+
+				End Try
+			End If
+		End Try
+
+		Return Nothing
+	End Function
 End Class

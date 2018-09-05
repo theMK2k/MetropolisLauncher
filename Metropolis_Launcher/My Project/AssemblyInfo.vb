@@ -10,9 +10,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Metropolis_Launcher")>
 <Assembly: AssemblyDescription("old-school game launcher, emulation front-end and an extensive offline database of video gaming history")>
-<Assembly: AssemblyCompany("MK2k | www.emulation-evolved.net | www.metropolis-launcher.net")>
+<Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("Metropolis_Launcher")>
-<Assembly: AssemblyCopyright("")> 
+<Assembly: AssemblyCopyright("MK2k | www.metropolis-launcher.net | www.emulation-evolved.net")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' übernehmen, indem Sie "*" eingeben:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.1.1.0")>
-<Assembly: AssemblyFileVersion("1.1.1.0")>
+<Assembly: AssemblyVersion("1.2.0.0")>
+<Assembly: AssemblyFileVersion("1.2.0.0")>

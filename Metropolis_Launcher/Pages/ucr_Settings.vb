@@ -1,10 +1,14 @@
-﻿Imports DataAccess = MKNetLib.cls_MKSQLiteDataAccess
+﻿Imports System.ComponentModel
+Imports System.Web
+Imports DataAccess = MKNetLib.cls_MKSQLiteDataAccess
 Imports TC = MKNetLib.cls_MKTypeConverter
 
 Public Class ucr_Settings
 	Private _sem_Loading As Boolean = True
 
 	Public Event E_Rom_Manager_Changed()
+
+	Private WithEvents WebClient As System.Net.WebClient = New System.Net.WebClient
 
 	Public Sub New()
 		_sem_Handle_Textboxes_EditValueChanged = True
@@ -65,7 +69,9 @@ Public Class ucr_Settings
 
 		txb_J2K.Text = TC.NZ(cls_Settings.GetSetting("Path_J2K"), "")
 		If Not Alphaleonis.Win32.Filesystem.File.Exists(txb_J2K.Text) Then
-			txb_J2K.ErrorText = "File not found!"
+			If txb_J2K.Text <> "" Then
+				txb_J2K.ErrorText = "File not found!"
+			End If
 		Else
 			'Fill the J2K Config DS
 			cls_Settings.Fill_J2K_DS(Me.DS_J2K, TC.NZ(cls_Settings.GetSetting("Path_J2K"), ""))
@@ -90,6 +96,9 @@ Public Class ucr_Settings
 		Me.spn_StatsMinTime.Enabled = Me.chb_StatsEnable.Checked
 
 		Me.chb_Downloader.Checked = TC.NZ(cls_Settings.GetSetting("Downloader_Enabled", cls_Settings.enm_Settingmodes.Same_for_All), True)
+
+		Me.txb_RetroAchievements_User.EditValue = TC.NZ(cls_Settings.GetSetting("RetroAchievements_User", cls_Settings.enm_Settingmodes.Per_User), "")
+		Me.txb_RetroAchievements_Pass.EditValue = TC.NZ(cls_Settings.GetSetting("RetroAchievements_Pass", cls_Settings.enm_Settingmodes.Per_User), "")
 
 		Me.cmb_Skin.EditValue = TC.NZ(cls_Settings.GetSetting("Skin", cls_Settings.enm_Settingmodes.Per_User), 4)
 
@@ -116,6 +125,12 @@ Public Class ucr_Settings
 
 		Me.lbl_Launch_Counter_Value.Text = TC.NZ(cls_Settings.GetSetting("LaunchCounter_BackupRotation"), 0)
 
+		Me.txb_AutoIt.Text = TC.NZ(cls_Settings.GetSetting("Path_AutoIt"), "")
+		Me.txb_AutoIt.DoValidate()
+
+		Me.txb_AutoHotKey.Text = TC.NZ(cls_Settings.GetSetting("Path_AutoHotKey"), "")
+		Me.txb_AutoHotKey.DoValidate()
+
 #If DEBUG Then
 		gb_Internal.Visible = True
 #End If
@@ -133,6 +148,14 @@ Public Class ucr_Settings
 			End If
 		Next
 
+		For Each ctrl As Control In pnl_Right.Controls
+			If cls_Globals.MultiUserMode = True AndAlso cls_Globals.Admin = False Then
+				ctrl.Enabled = False
+			Else
+				ctrl.Enabled = True
+			End If
+		Next
+
 		If cls_Globals.MultiUserMode = True AndAlso cls_Globals.Admin = False Then
 			lbl_Skin.Enabled = True
 			cmb_Skin.Enabled = True
@@ -141,6 +164,16 @@ Public Class ucr_Settings
 			lbl_StatsMinutes.Enabled = True
 			chb_StatsEnable.Enabled = True
 			spn_StatsMinTime.Enabled = True
+
+			lbl_RetroAchievements.Enabled = True
+			lbl_RetroAchievements_Pass.Enabled = True
+			lbl_RetroAchievements_User.Enabled = True
+			txb_RetroAchievements_Pass.Enabled = True
+			txb_RetroAchievements_User.Enabled = True
+			btn_RetroAchievements_Test.Enabled = True
+
+			btn_EmulatorSettings.Enabled = True
+			lbl_EmulatorSettings.Enabled = True
 		End If
 
 		If cls_Globals.MultiUserMode = True AndAlso cls_Globals.Restricted = False Then
@@ -190,11 +223,20 @@ Public Class ucr_Settings
 		cls_Settings.SetSetting("Stats_Enabled", Me.chb_StatsEnable.Checked, cls_Settings.enm_Settingmodes.Per_User)
 		cls_Settings.SetSetting("Stats_MinTime", Me.spn_StatsMinTime.Value, cls_Settings.enm_Settingmodes.Per_User)
 
+		cls_Settings.SetSetting("RetroAchievements_User", Me.txb_RetroAchievements_User.EditValue, cls_Settings.enm_Settingmodes.Per_User)
+		cls_Settings.SetSetting("RetroAchievements_Pass", Me.txb_RetroAchievements_Pass.EditValue, cls_Settings.enm_Settingmodes.Per_User)
+
+		cls_Globals.RetroAchievements_User = TC.NZ(Me.txb_RetroAchievements_User.EditValue, "")
+		cls_Globals.RetroAchievements_Pass = TC.NZ(Me.txb_RetroAchievements_Pass.EditValue, "")
+
 		cls_Settings.SetSetting("Downloader_Enabled", Me.chb_Downloader.Checked, cls_Settings.enm_Settingmodes.Same_for_All)
 
 		cls_Settings.SetSetting("Backup_Frequency", spn_Backup_Frequency.Value)
 		cls_Settings.SetSetting("Backup_Retention", spn_Backup_Retention.Value)
 		cls_Settings.SetSetting("Dir_Backup", txb_Backup_Dir.Text)
+
+		cls_Settings.SetSetting("Path_AutoIt", Me.txb_AutoIt.Text)
+		cls_Settings.SetSetting("Path_AutoHotKey", Me.txb_AutoHotKey.Text)
 	End Sub
 
 	Private Sub Handle_Font_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles font_Grid.EditValueChanged, spin_FontSize.EditValueChanged, spn_StatsMinTime.EditValueChanged
@@ -286,7 +328,7 @@ Public Class ucr_Settings
 		End If
 	End Sub
 
-	Private Sub Handle_File_Textboxes_Validating(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles txb_J2K.Validating
+	Private Sub Handle_File_Textboxes_Validating(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles txb_J2K.Validating, txb_AutoIt.Validating, txb_AutoHotKey.Validating
 		If TC.NZ(CType(sender, MKNetDXLib.ctl_MKDXButtonEdit).EditValue, "") <> "" AndAlso Not Alphaleonis.Win32.Filesystem.File.Exists(TC.NZ(CType(sender, MKNetDXLib.ctl_MKDXButtonEdit).EditValue, "")) Then
 			CType(sender, MKNetDXLib.ctl_MKDXButtonEdit).ErrorText = "File not found!"
 		End If
@@ -326,8 +368,8 @@ Public Class ucr_Settings
 				sSQL &= "	LEFT JOIN moby.tbl_Moby_Releases REL ON REL.id_Moby_Platforms = IFNULL(GAME.id_Moby_Platforms_Alternative, GAME.id_Moby_Platforms) AND REL.id_Moby_Games = MG.id_Moby_Games" & ControlChars.CrLf
 				sSQL &= "	WHERE GAME.id_Moby_Platforms <> 3 AND GAME.id_Moby_Platforms <> -2 " & ControlChars.CrLf  'Don't export Windows games (3) and M.A.M.E. games (-2)
 				sSQL &= " AND id_Emu_Games_Owner IS NULL" & ControlChars.CrLf 'Only Main Entries
-				sSQL &= "	AND REL.id_Moby_Platforms IS NOT NULL" & ControlChars.CrLf
-				sSQL &= "	AND GAME.id_Rombase IS NULL" & ControlChars.CrLf
+				sSQL &= "	AND GAME.id_Moby_Platforms IS NOT NULL" & ControlChars.CrLf
+				sSQL &= "	AND GAME.id_Rombase IS NULL" & ControlChars.CrLf  'Only unknown entries
 				sSQL &= "	AND" & ControlChars.CrLf
 				sSQL &= "	(" & ControlChars.CrLf
 				sSQL &= "		GAME.id_Moby_Platforms <> 2" & ControlChars.CrLf  'If Platform is not DOS, just import every entry, even without interesting info
@@ -335,6 +377,13 @@ Public Class ucr_Settings
 				sSQL &= "		GAME.Moby_Games_URLPart IS NOT NULL" & ControlChars.CrLf
 				sSQL &= "		OR" & ControlChars.CrLf
 				sSQL &= "		GAME.Name IS NOT NULL OR GAME.Note IS NOT NULL OR GAME.Publisher IS NOT NULL OR GAME.Developer IS NOT NULL OR GAME.Description IS NOT NULL OR GAME.SpecialInfo IS NOT NULL OR GAME.Year IS NOT NULL OR GAME.Version IS NOT NULL OR GAME.Alt IS NOT NULL OR GAME.Trainer IS NOT NULL OR GAME.Translation IS NOT NULL OR GAME.Hack IS NOT NULL OR GAME.Bios IS NOT NULL OR GAME.Prototype IS NOT NULL OR GAME.Alpha IS NOT NULL OR GAME.Beta IS NOT NULL OR GAME.Sample IS NOT NULL OR GAME.Kiosk IS NOT NULL OR GAME.Unlicensed IS NOT NULL OR GAME.Fixed IS NOT NULL OR GAME.Pirated IS NOT NULL OR GAME.Good IS NOT NULL OR GAME.Bad IS NOT NULL OR GAME.Overdump IS NOT NULL OR GAME.PublicDomain IS NOT NULL" & ControlChars.CrLf
+				sSQL &= "		OR" & ControlChars.CrLf
+				sSQL &= "		GAME.id_Emu_Games IN ("
+				sSQL &= "			SELECT id_Emu_Games FROM tbl_Emu_Games_Moby_Attributes"
+				sSQL &= "			UNION SELECT id_Emu_Games FROM tbl_Emu_Games_Languages"
+				sSQL &= "			UNION SELECT id_Emu_Games FROM tbl_Emu_Games_Moby_Genres"
+				sSQL &= "			UNION SELECT id_Emu_Games FROM tbl_Emu_Games_Regions"
+				sSQL &= "		)"
 				sSQL &= "	)" & ControlChars.CrLf
 				sSQL &= "	ORDER BY GAME.InnerFile" & ControlChars.CrLf
 
@@ -700,5 +749,61 @@ Public Class ucr_Settings
 		Using frm As New frm_Known_Emulators
 			frm.ShowDialog()
 		End Using
+	End Sub
+
+	Private Sub Handle_Directory_Textboxes_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txb_Temp_Dir.Validating, txb_Screenshot_Dir.Validating, txb_DOSBox_Working_Directory.Validating, txb_Dir_Extras.Validating
+
+	End Sub
+
+	Private Sub btn_RetroAchievements_Test_Click(sender As Object, e As EventArgs) Handles btn_RetroAchievements_Test.Click
+		Me.Cursor = Cursors.WaitCursor
+		Try
+			Dim result As Byte() = Me.WebClient.DownloadData("http://retroachievements.org/dorequest.php?r=login&u=" & HttpUtility.UrlEncode(TC.NZ(Me.txb_RetroAchievements_User.EditValue, "")) & "&p=" & HttpUtility.UrlEncode(TC.NZ(Me.txb_RetroAchievements_Pass.EditValue, "")))
+			Dim sResult As String = System.Text.Encoding.UTF8.GetString(result)
+
+			Dim dictResult As New Dictionary(Of String, String)
+			dictResult = Newtonsoft.Json.JsonConvert.DeserializeObject(Of Dictionary(Of String, String))(sResult)
+
+			If dictResult("Success").ToLower = "true" Then
+				MKNetDXLib.cls_MKDXHelper.MessageBox("Login to retroachievements.org was successful!", "Test RetroAchievements", MessageBoxButtons.OK, MessageBoxIcon.Information)
+			Else
+				MKNetDXLib.cls_MKDXHelper.MessageBox("Login to retroachievements.org failed!", "Test RetroAchievements", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+			End If
+		Catch ex As Exception
+			MKNetDXLib.cls_MKDXHelper.ExceptionMessageBox(ex)
+		End Try
+		Me.Cursor = Cursors.Default
+	End Sub
+
+	Private Sub btn_AutoIt_Click(sender As Object, e As EventArgs) Handles btn_AutoIt.Click
+		Dim sFilePath As Object = MKNetLib.cls_MKFileSupport.OpenFileDialog("Browse AutoIt Executable", "Executables (*.exe)|*.exe")
+		If Alphaleonis.Win32.Filesystem.File.Exists(TC.NZ(sFilePath, "")) Then
+			Me.txb_AutoIt.Focus()
+			Me.txb_AutoIt.EditValue = sFilePath
+			Me.txb_AutoIt.DoValidate()
+			Me.btn_AutoIt.Focus()
+		End If
+	End Sub
+
+	Private Sub btn_AutoHotKey_Click(sender As Object, e As EventArgs) Handles btn_AutoHotKey.Click
+		Dim sFilePath As Object = MKNetLib.cls_MKFileSupport.OpenFileDialog("Browse AutoHotKey Executable", "Executables (*.exe)|*.exe")
+		If Alphaleonis.Win32.Filesystem.File.Exists(TC.NZ(sFilePath, "")) Then
+			Me.txb_AutoHotKey.Focus()
+			Me.txb_AutoHotKey.EditValue = sFilePath
+			Me.txb_AutoHotKey.DoValidate()
+			Me.btn_AutoHotKey.Focus()
+		End If
+	End Sub
+
+	Private Sub txb_AutoIt_ButtonClick(sender As Object, e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles txb_AutoIt.ButtonClick
+		If e.Button.Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Delete Then
+			txb_AutoIt.Text = ""
+		End If
+	End Sub
+
+	Private Sub txb_AutoHotKey_ButtonClick(sender As Object, e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles txb_AutoHotKey.ButtonClick
+		If e.Button.Kind = DevExpress.XtraEditors.Controls.ButtonPredefines.Delete Then
+			txb_AutoHotKey.Text = ""
+		End If
 	End Sub
 End Class

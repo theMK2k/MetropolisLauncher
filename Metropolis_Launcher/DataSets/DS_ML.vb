@@ -1,11 +1,11 @@
 ﻿Partial Class DS_ML
-	Partial Public Class tbl_Moby_RegionsDataTable
+	Partial Public Class ttb_Emulators_PreLaunch_CommandsDataTable
 	End Class
 
 	Public Enum enm_FilterSetTypes
-			All = 0
-			Emulation = 1
-		End Enum
+		All = 0
+		Emulation = 1
+	End Enum
 
 #Region "Select Statements"
 	Public Function Select_src_ucr_Emulation_Games_Rating(ByRef tran As SQLite.SQLiteTransaction, ByVal id_Emu_Games As Integer) As Object
@@ -374,38 +374,42 @@
 #Region "Fill Statements"
 	Public Sub Fill_src_frm_Emulators(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As tbl_EmulatorsDataTable)
 		dt.Clear()
-		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, "SELECT id_Emulators, Displayname, InstallDirectory, Executable, StartupParameter, AutoItScript, J2KPreset, ScreenshotDirectory, Libretro_Core, id_List_Generators FROM tbl_Emulators ORDER BY Displayname", dt, tran)
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, "SELECT id_Emulators, Displayname, InstallDirectory, Executable, StartupParameter, AutoItScript, J2KPreset, ScreenshotDirectory, Libretro_Core, id_List_Generators, ScriptType, ScriptPath FROM tbl_Emulators ORDER BY Displayname", dt, tran)
 	End Sub
 
-	Public Sub Fill_src_frm_Emulators_Moby_Platforms(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As src_frm_Emulators_Moby_PlatformsDataTable, ByVal id_Emulators As Integer)
+	Public Sub Fill_src_frm_Emulators_Moby_Platforms(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As src_frm_Emulators_Moby_PlatformsDataTable, ByVal id_Emulators As Integer, Optional ByVal id_Users As Object = Nothing)
 		dt.Clear()
-		Dim sSQL As String = _
-		"	SELECT" & _
-		"		PLTFM.id_Moby_Platforms" & _
-		"		, PLTFM.Display_Name" & _
-		"		, CASE WHEN EMUPLTFM.id_Moby_Platforms IS NOT NULL THEN 1 ELSE 0 END AS Supported" & _
-		"		, IFNULL(EMUPLTFM.DefaultEmulator, 0) AS DefaultEmulator" & _
-		"	FROM moby.tbl_Moby_Platforms PLTFM" & _
-		"	LEFT JOIN main.tbl_Emulators_Moby_Platforms EMUPLTFM ON PLTFM.id_Moby_Platforms = EMUPLTFM.id_Moby_Platforms AND EMUPLTFM.id_Emulators = " & TC.getSQLFormat(id_Emulators) & _
-		" LEFT JOIN main.tbl_Moby_Platforms_Settings PLTFMS ON PLTFM.id_Moby_Platforms = PLTFMS.id_Moby_Platforms " & _
-		"	WHERE PLTFM.Visible = 1" & _
-		"				AND PLTFM.GenericEmulated = 1" & _
-		"				AND PLTFM.id_Moby_Platforms_Owner IS NULL" & _
-		"				AND (PLTFMS.Visible IS NULL OR PLTFMS.Visible = 1)" & _
-		"	ORDER BY Display_Name"
+		Dim sSQL As String = ""
+		sSQL &= "	SELECT" & ControlChars.CrLf
+		sSQL &= "		PLTFM.id_Moby_Platforms" & ControlChars.CrLf
+		sSQL &= "		, PLTFM.Display_Name" & ControlChars.CrLf
+		sSQL &= "		, CASE WHEN EMUPLTFM.id_Moby_Platforms IS NOT NULL THEN 1 ELSE 0 END AS Supported" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(" & ControlChars.CrLf
+		sSQL &= "				UEMUPLTFM.DefaultEmulator, " & ControlChars.CrLf
+		sSQL &= "				IFNULL(EMUPLTFM.DefaultEmulator, 0)" & ControlChars.CrLf
+		sSQL &= "		) AS DefaultEmulator" & ControlChars.CrLf
+		sSQL &= "	FROM moby.tbl_Moby_Platforms PLTFM" & ControlChars.CrLf
+		sSQL &= "	LEFT JOIN main.tbl_Emulators_Moby_Platforms EMUPLTFM ON PLTFM.id_Moby_Platforms = EMUPLTFM.id_Moby_Platforms AND EMUPLTFM.id_Emulators = " & TC.getSQLFormat(id_Emulators) & ControlChars.CrLf
+		sSQL &= "	LEFT JOIN main.tbl_Moby_Platforms_Settings PLTFMS ON PLTFM.id_Moby_Platforms = PLTFMS.id_Moby_Platforms " & ControlChars.CrLf
+		sSQL &= "	LEFT JOIN main.tbl_Users_Emulators_Moby_Platforms UEMUPLTFM ON UEMUPLTFM.id_Users = " & TC.getSQLFormat(TC.NZ(id_Users, 0)) & " AND PLTFM.id_Moby_Platforms = UEMUPLTFM.id_Moby_Platforms AND UEMUPLTFM.id_Emulators = " & TC.getSQLFormat(id_Emulators) & ControlChars.CrLf
+		sSQL &= "	WHERE PLTFM.Visible = 1" & ControlChars.CrLf
+		sSQL &= "				AND PLTFM.GenericEmulated = 1" & ControlChars.CrLf
+		sSQL &= "				AND PLTFM.id_Moby_Platforms_Owner IS NULL" & ControlChars.CrLf
+		sSQL &= "				AND (PLTFMS.Visible IS NULL OR PLTFMS.Visible = 1)" & ControlChars.CrLf
+		sSQL &= "	ORDER BY Display_Name" & ControlChars.CrLf
 		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, sSQL, dt, tran)
 	End Sub
 
 	Public Sub Fill_src_frm_Emulators_Multivolume_Parameters(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As tbl_Emulators_Multivolume_ParametersDataTable, ByVal id_Emulators As Integer)
 		dt.Clear()
-		Dim sSQL As String = _
-		"	SELECT" & _
-		"		id_Emulators_Multivolume_Parameters" & _
-		"		, id_Emulators" & _
-		"		, Volume_Number" & _
-		"		, Parameter" & _
-		"	FROM tbl_Emulators_Multivolume_Parameters" & _
-		"	WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators) & _
+		Dim sSQL As String =
+		"	SELECT" &
+		"		id_Emulators_Multivolume_Parameters" &
+		"		, id_Emulators" &
+		"		, Volume_Number" &
+		"		, Parameter" &
+		"	FROM tbl_Emulators_Multivolume_Parameters" &
+		"	WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators) &
 		"	ORDER BY Volume_Number"
 		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, sSQL, dt, tran)
 	End Sub
@@ -455,7 +459,7 @@
 		sSQL &= "	LEFT JOIN tbl_Moby_Platforms_Settings PLTFMS ON PLTFM.id_Moby_Platforms = PLTFMS.id_Moby_Platforms" & ControlChars.CrLf
 		sSQL &= " LEFT JOIN tbl_Moby_Platforms_Caches MPC ON MPC.id_Moby_Platforms = PLTFM.id_Moby_Platforms AND MPC.id_Users " & IIf(id_Users > 0, " = " & TC.getSQLFormat(id_Users), " IS NULL") & ControlChars.CrLf
 		sSQL &= "	WHERE	("
-		sSQL &= "					PLTFM.id_Moby_Platforms IN (-1, -2)" & ControlChars.CrLf
+		sSQL &= "					(PLTFM.id_Moby_Platforms IN (-1, -2) AND (PLTFMS.Visible IS NULL OR PLTFMS.Visible = 1))" & ControlChars.CrLf
 		sSQL &= "					OR" & ControlChars.CrLf
 		sSQL &= "					(" & ControlChars.CrLf
 		sSQL &= "						PLTFM.Visible = 1" & ControlChars.CrLf
@@ -463,7 +467,7 @@
 		sSQL &= "						PLTFM.id_Moby_Platforms_Owner Is NULL" & ControlChars.CrLf
 		sSQL &= "						AND" & ControlChars.CrLf
 		sSQL &= "						(" & ControlChars.CrLf
-		sSQL &= "							PLTFMS.Visible Is NULL" & ControlChars.CrLf
+		sSQL &= "							PLTFMS.Visible IS NULL" & ControlChars.CrLf
 		sSQL &= "							OR" & ControlChars.CrLf
 		sSQL &= "							PLTFMS.Visible = 1" & ControlChars.CrLf
 		sSQL &= "						)" & ControlChars.CrLf
@@ -477,7 +481,7 @@
 		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, sSQL, dt, tran)
 	End Sub
 
-	Public Shared Sub Fill_src_ucr_Emulation_Games(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As src_ucr_Emulation_GamesDataTable, Optional ByVal id_Moby_Platforms As Object = Nothing, Optional ByVal SearchText As Object = Nothing, Optional ByVal id_FilterSets As Object = Nothing, Optional ByVal id_Emu_Games As Object = Nothing, Optional ByVal ShowHidden As Boolean = True, Optional ByVal id_Moby_Game_Groups As Object = CLng(0), Optional ByVal ShowVolumes As Boolean = False, Optional ByVal id_Moby_Staff As Object = CLng(0), Optional ByVal id_Similarity_Calculation_Results As Object = CLng(0))
+	Public Shared Sub Fill_src_ucr_Emulation_Games(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As src_ucr_Emulation_GamesDataTable, Optional ByVal id_Moby_Platforms As Object = Nothing, Optional ByVal SearchText As Object = Nothing, Optional ByVal id_FilterSets As Object = Nothing, Optional ByVal id_Emu_Games As Object = Nothing, Optional ByVal ShowHidden As Boolean = True, Optional ByVal id_Moby_Game_Groups As Object = CLng(0), Optional ByVal ShowVolumes As Boolean = False, Optional ByVal id_Moby_Staff As Object = CLng(0), Optional ByVal id_Similarity_Calculation_Results As Object = CLng(0), Optional ByVal id_Cheevo_Challenges As Object = CLng(0), Optional ByVal Cheevo_Challenges_Tier As Object = CLng(0), Optional ByVal Cheevo_Challenges_Show_Completed As Boolean = False)
 		If dt Is Nothing Then dt = New src_ucr_Emulation_GamesDataTable
 
 		dt.Clear()
@@ -547,6 +551,7 @@
 		sSQL &= "					" & ControlChars.CrLf
 		sSQL &= "					, PF.Name AS Platform" & ControlChars.CrLf
 		sSQL &= "					, PF.ShortName AS Platform_Short" & ControlChars.CrLf
+		sSQL &= "					, PF.RetroAchievements AS Platform_RetroAchievements" & ControlChars.CrLf
 		sSQL &= "					, GAME.Name AS Game_NoPrefix" & ControlChars.CrLf
 		sSQL &= "					, EMUGAME.created" & ControlChars.CrLf
 		sSQL &= "					" & ControlChars.CrLf
@@ -673,8 +678,12 @@
 			sSQL &= "					, CASE WHEN EGS.id_Emu_Games IS NULL THEN MRS.[401_Staff] ELSE EGS.[401_Staff] END  AS [401_Staff]" & ControlChars.CrLf
 		End If
 
+		sSQL &= "	, IFNULL(EMUGAME.CRC32, RB.CRC) AS CRC32" & ControlChars.CrLf
+		sSQL &= "	, IFNULL(EMUGAME.SHA1, RB.SHA1) AS SHA1" & ControlChars.CrLf
+		sSQL &= "	, IFNULL(EMUGAME.MD5, RB.MD5) AS MD5" & ControlChars.CrLf
+
 		sSQL &= "	FROM			tbl_Emu_Games EMUGAME" & ControlChars.CrLf
-		sSQL &= " " & IIf(cls_Globals.Restricted AndAlso Not ShowVolumes, "INNER", "LEFT") & " JOIN tbl_Users_Emu_Games USREG ON id_Users = " & cls_Globals.id_Users & " AND EMUGAME.id_Emu_Games = USREG.id_Emu_Games"
+		sSQL &= " " & IIf(cls_Globals.id_Cheevo_Challenges = 0L AndAlso cls_Globals.Restricted AndAlso Not ShowVolumes, "INNER", "LEFT") & " JOIN tbl_Users_Emu_Games USREG ON id_Users = " & cls_Globals.id_Users & " AND EMUGAME.id_Emu_Games = USREG.id_Emu_Games"
 		sSQL &= "	LEFT JOIN tbl_Moby_Games GAME ON EMUGAME.Moby_Games_URLPart = GAME.URLPart" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Moby_Platforms PF ON EMUGAME.id_Moby_Platforms = PF.id_Moby_Platforms" & ControlChars.CrLf
 		sSQL &= "	LEFT JOIN tbl_Moby_Platforms PFALT ON EMUGAME.id_Moby_Platforms_Alternative = PFALT.id_Moby_Platforms" & ControlChars.CrLf
@@ -691,6 +700,7 @@
 			sSQL &= " LEFT JOIN ttb_Emu_Games_Similarity_Calculation EGS ON EMUGAME.id_Emu_Games = EGS.id_Emu_Games" & ControlChars.CrLf
 			sSQL &= " LEFT JOIN ttb_Moby_Releases_Similarity_Calculation MRS ON REL.id_Moby_Releases = MRS.id_Moby_Releases" & ControlChars.CrLf
 		End If
+		sSQL &= "	LEFT JOIN rombase.tbl_Rombase RB ON EMUGAME.id_Rombase = RB.id_Rombase" & ControlChars.CrLf
 
 		If id_Similarity_Calculation_Results <> 0 Then
 			'sSQL &= "	LEFT JOIN tbl_Similarity_Calculation_Results SCR ON SCR.id_Similarity_Calculation_Results = " & TC.getSQLFormat(id_Similarity_Calculation_Results) & ControlChars.CrLf
@@ -699,9 +709,9 @@
 			'sSQL &= "	LEFT JOIN tbl_Similarity_Calculation_Results_Entries SCRE ON SCRE.id_Similarity_Calculation_Results = " & TC.getSQLFormat(id_Similarity_Calculation_Results) & " AND SCRE.id_Emu_Games = EMUGAME.id_Emu_Games" & ControlChars.CrLf
 		End If
 
-		sSQL &= "	WHERE " & IIf(ShowHidden, "			1=1", "			(EMUGAME.Hidden IS NULL OR EMUGAME.Hidden = 0)")
+		sSQL &= "	WHERE " & IIf(ShowHidden, "			1=1", "			(EMUGAME.Hidden IS NULL OR EMUGAME.Hidden = 0)") & ControlChars.CrLf
 
-		sSQL &= "	AND (PFS.Visible IS NULL OR PFS.Visible = 1)"
+		sSQL &= "	AND (PFS.Visible IS NULL OR PFS.Visible = 1)" & ControlChars.CrLf
 
 		If Not ShowVolumes AndAlso id_Emu_Games Is Nothing Then
 			sSQL &= "	AND EMUGAME.id_Emu_Games_Owner IS NULL" & ControlChars.CrLf
@@ -715,7 +725,7 @@
 			End If
 
 		Else
-			sSQL &= " AND EMUGAME.id_Emu_Games > 0" 'Prevent Emu_Mapping entries from showing up
+			sSQL &= " AND EMUGAME.id_Emu_Games > 0" & ControlChars.CrLf 'Prevent Emu_Mapping entries from showing up
 		End If
 
 		'If TC.NZ(id_Moby_Platforms, 0) > 0 OrElse TC.NZ(id_Moby_Platforms, 0) = cls_Globals.enm_Moby_Platforms.mame Then
@@ -743,29 +753,56 @@
 		End If
 
 		If TC.NZ(id_Moby_Game_Groups, 0) > 0 Then
-			sSQL &= "	AND GAME.id_Moby_Games IN ("
-			sSQL &= "		SELECT SQGroup_MR.id_Moby_Games"
-			sSQL &= "		FROM moby.tbl_Moby_Game_Groups_Moby_Releases SQGroup_MGGMR"
-			sSQL &= "		INNER JOIN moby.tbl_Moby_Releases SQGroup_MR ON SQGroup_MGGMR.id_Moby_Releases = SQGroup_MR.id_Moby_Releases"
-			sSQL &= "		WHERE SQGroup_MGGMR.id_Moby_Game_Groups = " & TC.getSQLFormat(id_Moby_Game_Groups)
-			sSQL &= "	)"
+			sSQL &= "	AND GAME.id_Moby_Games IN (" & ControlChars.CrLf
+			sSQL &= "		SELECT SQGroup_MR.id_Moby_Games" & ControlChars.CrLf
+			sSQL &= "		FROM moby.tbl_Moby_Game_Groups_Moby_Releases SQGroup_MGGMR" & ControlChars.CrLf
+			sSQL &= "		INNER JOIN moby.tbl_Moby_Releases SQGroup_MR ON SQGroup_MGGMR.id_Moby_Releases = SQGroup_MR.id_Moby_Releases" & ControlChars.CrLf
+			sSQL &= "		WHERE SQGroup_MGGMR.id_Moby_Game_Groups = " & TC.getSQLFormat(id_Moby_Game_Groups) & ControlChars.CrLf
+			sSQL &= "	)" & ControlChars.CrLf
 		End If
 
 		If TC.NZ(id_Moby_Staff, 0) > 0 Then
-			sSQL &= "	AND GAME.id_Moby_Games IN ("
-			sSQL &= "		SELECT SQStaff_MR.id_Moby_Games"
-			sSQL &= "		FROM moby.tbl_Moby_Releases_Staff SQStaff_MRS"
-			sSQL &= "		INNER JOIN moby.tbl_Moby_Releases SQStaff_MR ON SQStaff_MRS.id_Moby_Releases = SQStaff_MR.id_Moby_Releases"
-			sSQL &= "		WHERE SQStaff_MRS.id_Moby_Staff = " & TC.getSQLFormat(id_Moby_Staff)
+			sSQL &= "	AND GAME.id_Moby_Games IN (" & ControlChars.CrLf
+			sSQL &= "		SELECT SQStaff_MR.id_Moby_Games" & ControlChars.CrLf
+			sSQL &= "		FROM moby.tbl_Moby_Releases_Staff SQStaff_MRS" & ControlChars.CrLf
+			sSQL &= "		INNER JOIN moby.tbl_Moby_Releases SQStaff_MR ON SQStaff_MRS.id_Moby_Releases = SQStaff_MR.id_Moby_Releases" & ControlChars.CrLf
+			sSQL &= "		WHERE SQStaff_MRS.id_Moby_Staff = " & TC.getSQLFormat(id_Moby_Staff) & ControlChars.CrLf
 			sSQL &= "	)"
 		End If
 
+		If TC.NZ(id_Cheevo_Challenges, 0) > 0 Then
+			'TODO: id_Cheevo_Challenges
+			sSQL &= "	AND EMUGAME.id_Emu_Games IN (" & ControlChars.CrLf
+			sSQL &= " SELECT CCC.id_Emu_Games FROM tbl_Cheevo_Challenges_Cheevos CCC" & ControlChars.CrLf
+			sSQL &= "	LEFT JOIN tbl_Users_Cheevo_Challenges_Cheevos UCCC ON CCC.id_Cheevo_Challenges_Cheevos = UCCC.id_Cheevo_Challenges_Cheevos" & ControlChars.CrLf
+			sSQL &= IIf(cls_Globals.MultiUserMode AndAlso Not cls_Globals.Admin AndAlso cls_Globals.id_Users > 0, " AND id_Users = " & TC.getSQLFormat(cls_Globals.id_Users), " AND id_Users IS NULL") & ControlChars.CrLf
+			sSQL &= "	WHERE CCC.id_Cheevo_Challenges = " & TC.getSQLFormat(id_Cheevo_Challenges) & ControlChars.CrLf
+			If TC.NZ(Cheevo_Challenges_Tier, 0) > 0 Then
+				If Cheevo_Challenges_Show_Completed Then
+					sSQL &= "				AND CCC.Tier <= " & TC.getSQLFormat(Cheevo_Challenges_Tier) & ControlChars.CrLf
+				Else
+					sSQL &= "				AND CCC.Tier = " & TC.getSQLFormat(Cheevo_Challenges_Tier) & ControlChars.CrLf
+				End If
+			End If
+
+			If Not Cheevo_Challenges_Show_Completed Then
+				sSQL &= "		AND" & ControlChars.CrLf
+				sSQL &= "		(	" & ControlChars.CrLf
+				sSQL &= "			UCCC.id_Users_Cheevo_Challenges_Cheevos IS NULL" & ControlChars.CrLf
+				sSQL &= "			OR (IFNULL(CCC.Hardcore, 0) = 0 AND IFNULL(UCCC.Unlocked_Casual, 0) = 0)" & ControlChars.CrLf
+				sSQL &= "			OR (IFNULL(CCC.Hardcore, 0) = 1 AND IFNULL(UCCC.Unlocked_Hardcore, 0) = 0)" & ControlChars.CrLf
+				sSQL &= "		)	" & ControlChars.CrLf
+			End If
+
+			sSQL &= "	)" & ControlChars.CrLf
+		End If
+
 		If TC.NZ(id_FilterSets, 0) > 0 Then
-			sSQL &= " AND 1 = 1"
+			sSQL &= " AND 1 = 1" & ControlChars.CrLf
 		End If
 
 		If ShowVolumes Then
-			sSQL &= "	ORDER BY Volume_Number"
+			sSQL &= "	ORDER BY EMUGAME.Volume_Number" & ControlChars.CrLf
 		End If
 
 		'sSQL &= "	ORDER BY GAME.Name"
@@ -821,7 +858,7 @@
 		sSQL &= "	SELECT" & ControlChars.CrLf
 		sSQL &= "		id_Moby_Attributes" & ControlChars.CrLf
 		sSQL &= "		, CASE	WHEN ATTC.RatingSystem = 1 OR ATTC.RatingDescriptor = 1 THEN 'Rating Systems'" & ControlChars.CrLf
-		sSQL &= "						WHEN ATTC.Name = 'Multiplayer Game Modes' OR ATTC.Name = 'Multiplayer Options' OR ATTC.Name = 'Number of Players Supported' THEN 'Multiplayer Attributes'" & ControlChars.CrLf
+		sSQL &= "						WHEN ATTC.Name = 'Multiplayer Game Modes' OR ATTC.Name = 'Multiplayer Options' OR ATTC.Name LIKE 'Number of Players%' THEN 'Multiplayer Attributes'" & ControlChars.CrLf
 		sSQL &= "						ELSE 'Tech Info'" & ControlChars.CrLf
 		sSQL &= "			END" & ControlChars.CrLf
 		sSQL &= "			AS CategoryGroup" & ControlChars.CrLf
@@ -1067,7 +1104,11 @@
 		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, sSQL, dt, tran)
 	End Sub
 
-	Public Shared Sub Fill_src_frm_Rom_Manager_Emu_Games(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As tbl_Emu_GamesDataTable, ByVal id_Moby_Platforms As Integer, Optional ByVal id_Emu_Games As Integer = 0, Optional ByVal id_Emu_Games_Owner As Integer = 0)
+	Public Shared Function Fill_src_frm_Rom_Manager_Emu_Games(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As tbl_Emu_GamesDataTable, ByVal id_Moby_Platforms As Integer, Optional ByVal id_Emu_Games As Integer = 0, Optional ByVal id_Emu_Games_Owner As Integer = 0, Optional ByVal Only_DOSBox_Filetype As cls_Globals.enm_Rombase_DOSBox_Filetypes = 0) As DS_ML.tbl_Emu_GamesDataTable
+		If dt Is Nothing Then
+			dt = New DS_ML.tbl_Emu_GamesDataTable
+		End If
+
 		sSQL = ""
 		sSQL &= "SELECT"
 		sSQL &= "	EMUGAMES.id_Emu_Games"
@@ -1161,32 +1202,43 @@
 		sSQL &= "	, ROMBASE.id_Moby_Platforms AS ROMBASE_id_Moby_Platforms"
 		sSQL &= "	, EMUGAMES.created"
 		sSQL &= " , CASE WHEN REL.deprecated = 1 THEN 1 ELSE MG.deprecated END AS deprecated"
+		sSQL &= " , EMUGAMES.TDL_Show_in_Menu"
+		sSQL &= " , EMUGAMES.TDL_DisplayText"
+		sSQL &= " , EMUGAMES.TDL_Sort"
 		sSQL &= "	FROM tbl_Emu_Games EMUGAMES"
 		sSQL &= "	LEFT JOIN tbl_Rombase ROMBASE ON EMUGAMES.id_Rombase = ROMBASE.id_Rombase"
 		sSQL &= "	LEFT JOIN tbl_Moby_Games MG ON EMUGAMES.Moby_Games_URLPart = MG.URLPart"
 		sSQL &= " LEFT JOIN tbl_Moby_Releases REL ON REL.id_Moby_Games = MG.id_Moby_Games AND REL.id_Moby_Platforms = EMUGAMES.id_Moby_Platforms"
 
-		If id_Emu_Games = 0 Then
-			sSQL &= "	WHERE EMUGAMES.id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms)
-		End If
+		sSQL &= "	WHERE 1=1"
 
-		If id_Emu_Games > 0 Then
-			sSQL &= "	WHERE EMUGAMES.id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games)
+		If id_Emu_Games = 0 Then
+			sSQL &= "	AND EMUGAMES.id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms)
+		ElseIf id_Emu_Games > 0 Then
+			sSQL &= "	AND ( EMUGAMES.id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games)
 
 			If id_Emu_Games_Owner > 0 Then
 				sSQL &= " OR EMUGAMES.id_Emu_Games_Owner = " & TC.getSQLFormat(id_Emu_Games)
 			End If
+
+			sSQL &= "	)"
+		End If
+
+		If Only_DOSBox_Filetype <> 0 Then
+			sSQL &= "	AND EMUGAMES.id_Rombase_DOSBox_Filetypes = " & Only_DOSBox_Filetype
 		End If
 
 		sSQL &= "	ORDER BY File, InnerFile"
 
 		DataAccess.FireProcedureReturnDT(tran.Connection, 0, False, sSQL, dt, tran)
-	End Sub
+
+		Return dt
+	End Function
 
 	Public Shared Sub Fill_src_frm_Rom_Manager_Moby_Releases(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As DS_MobyDB.src_Moby_ReleasesDataTable, ByVal id_Moby_Platforms As Integer)
 		Dim sSQL As String = ""
-		sSQL &= "	SELECT" & ControlChars.CrLf
-		sSQL &= "		REL.id_Moby_Releases AS id_Moby_Releases" & ControlChars.CrLf
+		sSQL &= "	Select" & ControlChars.CrLf
+		sSQL &= "		REL.id_Moby_Releases As id_Moby_Releases" & ControlChars.CrLf
 		sSQL &= "		, IFNULL(GAME.Name_Prefix || ' ', '') || GAME.Name AS GameName" & ControlChars.CrLf
 		sSQL &= "		, REL.id_Moby_Platforms AS id_Moby_Platforms" & ControlChars.CrLf
 		sSQL &= "		, soundex(GAME.Name) AS Soundex" & ControlChars.CrLf
@@ -2297,7 +2349,7 @@
 
 	Public Shared Sub Fill_tbl_Users(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As tbl_UsersDataTable, ByVal id_Users As Integer, ByVal ShowOnlyRestricted As Boolean)
 		dt.Clear()
-		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, "SELECT id_Users, Admin, Username, Password, Restricted FROM tbl_Users WHERE 1=1 " & IIf(id_Users > 0, " AND id_Users = " & TC.getSQLFormat(id_Users), "") & IIf(ShowOnlyRestricted, " AND Restricted = 1", "") & " ORDER BY Username", dt, tran)
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, "SELECT id_Users, Admin, Username, Password, Restricted, IFNULL(id_Cheevo_Challenges, 0) AS id_Cheevo_Challenges FROM tbl_Users WHERE 1=1 " & IIf(id_Users > 0, " AND id_Users = " & TC.getSQLFormat(id_Users), "") & IIf(ShowOnlyRestricted, " AND Restricted = 1", "") & " ORDER BY Username", dt, tran)
 	End Sub
 
 	Public Shared Sub Fill_tbl_Similarity_Calculation_Config(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As tbl_Similarity_Calculation_ConfigDataTable, Optional ByVal id_Similarity_Calculation_Config As Object = Nothing)
@@ -4955,6 +5007,262 @@
 
 		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(tran.Connection, 0, False, sSQL, dt, tran)
 	End Sub
+
+	Public Shared Sub Fill_tbl_Total_DOS_Launcher_Configs(ByRef dt As tbl_Total_DOS_Launcher_ConfigsDataTable, Optional ByVal id_Total_DOS_Launcher_Configs As Int64 = 0)
+		dt.Clear()
+		Dim sSQL As String = ""
+
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "		-id_Rombase_Total_DOS_Launcher_Configs AS id_Total_DOS_Launcher_Configs" & ControlChars.CrLf
+		sSQL &= "		, DisplayName" & ControlChars.CrLf
+		sSQL &= "		, proglocations" & ControlChars.CrLf
+		sSQL &= "		, cachelocation" & ControlChars.CrLf
+		sSQL &= "		, userlevel" & ControlChars.CrLf
+		sSQL &= "		, forcelogging" & ControlChars.CrLf
+		sSQL &= "		, swapping" & ControlChars.CrLf
+		sSQL &= "		, preloading" & ControlChars.CrLf
+		sSQL &= "		, pauseafterrun" & ControlChars.CrLf
+		sSQL &= "		, VESA" & ControlChars.CrLf
+		sSQL &= "FROM	rombase.tbl_Rombase_Total_DOS_Launcher_Configs" & ControlChars.CrLf
+		sSQL &= "WHERE	" & IIf(id_Total_DOS_Launcher_Configs > 0, "0=1", "1=1") & ControlChars.CrLf
+		sSQL &= IIf(id_Total_DOS_Launcher_Configs < 0, " AND id_Rombase_Total_DOS_Launcher_Configs = " & TC.getSQLFormat(-1 * id_Total_DOS_Launcher_Configs), "") & ControlChars.CrLf
+
+		sSQL &= "UNION" & ControlChars.CrLf
+
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "		id_Total_DOS_Launcher_Configs AS id_Total_DOS_Launcher_Configs" & ControlChars.CrLf
+		sSQL &= "		, DisplayName" & ControlChars.CrLf
+		sSQL &= "		, proglocations" & ControlChars.CrLf
+		sSQL &= "		, cachelocation" & ControlChars.CrLf
+		sSQL &= "		, userlevel" & ControlChars.CrLf
+		sSQL &= "		, forcelogging" & ControlChars.CrLf
+		sSQL &= "		, swapping" & ControlChars.CrLf
+		sSQL &= "		, preloading" & ControlChars.CrLf
+		sSQL &= "		, pauseafterrun" & ControlChars.CrLf
+		sSQL &= "		, VESA" & ControlChars.CrLf
+		sSQL &= "FROM	tbl_Total_DOS_Launcher_Configs" & ControlChars.CrLf
+		sSQL &= "WHERE	" & IIf(id_Total_DOS_Launcher_Configs < 0, "0=1", "1=1") & ControlChars.CrLf
+		sSQL &= IIf(id_Total_DOS_Launcher_Configs > 0, " AND id_Total_DOS_Launcher_Configs = " & TC.getSQLFormat(id_Total_DOS_Launcher_Configs), "") & ControlChars.CrLf
+
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
+	End Sub
+
+	Public Shared Sub Fill_tbl_Cheevo_Challenges(ByRef dt As tbl_Cheevo_ChallengesDataTable)
+		dt.Clear()
+		Dim sSQL As String = ""
+
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "		id_Cheevo_Challenges" & ControlChars.CrLf
+		sSQL &= "		, Name" & ControlChars.CrLf
+		sSQL &= "		, created" & ControlChars.CrLf
+		sSQL &= "		, updated" & ControlChars.CrLf
+		sSQL &= "FROM	tbl_Cheevo_Challenges" & ControlChars.CrLf
+		sSQL &= "ORDER BY Name"
+
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
+	End Sub
+
+	Public Shared Sub Fill_tbl_Cheevo_Challenges_Cheevos(ByRef dt As tbl_Cheevo_Challenges_CheevosDataTable, Optional ByVal id_Cheevo_Challenges As Int64 = 0, Optional ByVal Tier As Int64 = 0)
+		dt.Clear()
+		Dim sSQL As String = ""
+
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "		id_Cheevo_Challenges_Cheevos" & ControlChars.CrLf
+		sSQL &= "		, IFNULL(CheevoType, 0) AS CheevoType" & ControlChars.CrLf
+		sSQL &= "		, id_Cheevo_Challenges" & ControlChars.CrLf
+		sSQL &= "		, Tier" & ControlChars.CrLf
+		sSQL &= "		, id_Emu_Games" & ControlChars.CrLf
+		sSQL &= "		, Cheevo_GameName" & ControlChars.CrLf
+		sSQL &= "		, Cheevo_ID" & ControlChars.CrLf
+		sSQL &= "		, Cheevo_Title" & ControlChars.CrLf
+		sSQL &= "		, Cheevo_Description" & ControlChars.CrLf
+		sSQL &= "		, Cheevo_Points" & ControlChars.CrLf
+		sSQL &= "		, Cheevo_BadgeName" & ControlChars.CrLf
+		sSQL &= "		, Cheevo_Flags" & ControlChars.CrLf
+		sSQL &= "		, Hardcore" & ControlChars.CrLf
+		sSQL &= "		, Runtime" & ControlChars.CrLf
+		sSQL &= "		, created" & ControlChars.CrLf
+		sSQL &= "		, updated" & ControlChars.CrLf
+		'sSQL &= "		, Cheevo_Title || CASE WHEN IFNULL(Hardcore, 0) = 1 THEN ' [Hardcore]' ELSE ' [Casual]' END AS tmp_Cheevo_Title_with_Mode" & ControlChars.CrLf		sSQL &= "		, Cheevo_Title || CASE WHEN IFNULL(Hardcore, 0) = 1 THEN ' [Hardcore]' ELSE ' [Casual]' END AS tmp_Cheevo_Title_with_Mode" & ControlChars.CrLf
+		sSQL &= "		, Cheevo_Title || CASE WHEN IFNULL(CheevoType, 0) = 0 THEN CASE WHEN IFNULL(Hardcore, 0) = 1 THEN ' [Hardcore]' ELSE ' [Casual]' END ELSE '' END AS tmp_Cheevo_Title_with_Mode" & ControlChars.CrLf
+
+		sSQL &= "FROM	tbl_Cheevo_Challenges_Cheevos" & ControlChars.CrLf
+		sSQL &= "WHERE  1=1" & ControlChars.CrLf
+		If id_Cheevo_Challenges <> 0 Then
+			sSQL &= "   AND id_Cheevo_Challenges = " & TC.getSQLFormat(id_Cheevo_Challenges) & ControlChars.CrLf
+		End If
+		If Tier > 0 Then
+			sSQL &= "   AND Tier = " & TC.getSQLFormat(Tier) & ControlChars.CrLf
+		End If
+		sSQL &= "ORDER BY created" & ControlChars.CrLf
+
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
+	End Sub
+
+	Public Shared Sub Fill_ttb_Cheevo_Challenges_Tiers(ByRef dt As ttb_Cheevo_Challenges_TiersDataTable, ByVal id_Cheevo_Challenges As Int64)
+		dt.Clear()
+		Dim sSQL As String = ""
+
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "   " & TC.getSQLFormat(id_Cheevo_Challenges) & " AS id_Cheevo_Challenges" & ControlChars.CrLf
+		sSQL &= "   , Tier" & ControlChars.CrLf
+		sSQL &= "   , 'Tier ' + Tier AS Displayname" & ControlChars.CrLf
+		sSQL &= "FROM" & ControlChars.CrLf
+		sSQL &= "(SELECT DISTINCT Tier FROM tbl_Cheevo_Challenges_Cheevos WHERE id_Cheevo_Challenges = " & TC.getSQLFormat(id_Cheevo_Challenges) & ") SQ" & ControlChars.CrLf
+		sSQL &= "ORDER BY Tier ASC" & ControlChars.CrLf
+
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
+	End Sub
+
+	Public Shared Sub Fill_ttb_Open_Challenges(ByRef dt As ttb_Open_ChallengesDataTable)
+		dt.Clear()
+		Dim sSQL As String = ""
+
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "	CC.id_Cheevo_Challenges AS id_Cheevo_Challenges" & ControlChars.CrLf
+		sSQL &= "	, CC.Name AS Name" & ControlChars.CrLf
+		sSQL &= "	, (" & ControlChars.CrLf
+		sSQL &= "		SELECT" & ControlChars.CrLf
+		sSQL &= "			MIN(Tier)" & ControlChars.CrLf
+		sSQL &= "		FROM tbl_Cheevo_Challenges_Cheevos CCC" & ControlChars.CrLf
+		sSQL &= "		LEFT JOIN tbl_Users_Cheevo_Challenges_Cheevos UCCC ON CCC.id_Cheevo_Challenges_Cheevos = UCCC.id_Cheevo_Challenges_Cheevos" & ControlChars.CrLf
+		sSQL &= IIf(cls_Globals.MultiUserMode AndAlso Not cls_Globals.Admin AndAlso cls_Globals.id_Users > 0, " AND id_Users = " & TC.getSQLFormat(cls_Globals.id_Users), " AND id_Users IS NULL") & ControlChars.CrLf
+		sSQL &= "		WHERE	CCC.id_Cheevo_Challenges = CC.id_Cheevo_Challenges" & ControlChars.CrLf
+		sSQL &= "				AND UCCC.id_Users_Cheevo_Challenges_Cheevos IS NULL" & ControlChars.CrLf
+		sSQL &= "				AND (" & ControlChars.CrLf
+		sSQL &= "							(IFNULL(CCC.Hardcore, 0) = 0 AND IFNULL(UCCC.Unlocked_Casual, 0) = 0)" & ControlChars.CrLf
+		sSQL &= "							OR (IFNULL(CCC.Hardcore, 0) = 1 AND IFNULL(UCCC.Unlocked_Hardcore, 0) = 0)" & ControlChars.CrLf
+		sSQL &= "				)" & ControlChars.CrLf
+		sSQL &= "	)" & ControlChars.CrLf
+		sSQL &= "	AS Tier" & ControlChars.CrLf
+		sSQL &= "	, (SELECT MAX(Tier) FROM tbl_Cheevo_Challenges_Cheevos CCC WHERE CCC.id_Cheevo_Challenges = CC.id_Cheevo_Challenges) AS MaxTier" & ControlChars.CrLf
+		sSQL &= "	, 1 AS Sort" & ControlChars.CrLf
+		sSQL &= "FROM tbl_Cheevo_Challenges CC" & ControlChars.CrLf
+		sSQL &= "WHERE CC.id_Cheevo_Challenges IN (" & ControlChars.CrLf
+		sSQL &= "	SELECT" & ControlChars.CrLf
+		sSQL &= "		id_Cheevo_Challenges" & ControlChars.CrLf
+		sSQL &= "	FROM tbl_Cheevo_Challenges_Cheevos CCC" & ControlChars.CrLf
+		sSQL &= "	LEFT JOIN tbl_Users_Cheevo_Challenges_Cheevos UCCC ON CCC.id_Cheevo_Challenges_Cheevos = UCCC.id_Cheevo_Challenges_Cheevos" & ControlChars.CrLf
+		sSQL &= IIf(cls_Globals.MultiUserMode AndAlso Not cls_Globals.Admin AndAlso cls_Globals.id_Users > 0, " AND id_Users = " & TC.getSQLFormat(cls_Globals.id_Users), " AND id_Users IS NULL") & ControlChars.CrLf
+		sSQL &= "	WHERE	UCCC.id_Users_Cheevo_Challenges_Cheevos IS NULL" & ControlChars.CrLf
+		sSQL &= "			OR (IFNULL(CCC.Hardcore, 0) = 0 AND IFNULL(UCCC.Unlocked_Casual, 0) = 0)" & ControlChars.CrLf
+		sSQL &= "			OR (IFNULL(CCC.Hardcore, 0) = 1 AND IFNULL(UCCC.Unlocked_Hardcore, 0) = 0)" & ControlChars.CrLf
+		sSQL &= ")" & ControlChars.CrLf
+
+		sSQL &= "	UNION" & ControlChars.CrLf
+		sSQL &= "	SELECT" & ControlChars.CrLf
+		sSQL &= "	0 AS id_Cheevo_Challenges" & ControlChars.CrLf
+		sSQL &= "	, 'None' AS Name" & ControlChars.CrLf
+		sSQL &= "	, 0 AS Tier" & ControlChars.CrLf
+		sSQL &= "	, 0 AS MaxTier" & ControlChars.CrLf
+		sSQL &= "	, 0 AS Sort" & ControlChars.CrLf
+
+		'Always UNION Completed Challenges
+		sSQL &= "UNION" & ControlChars.CrLf
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "	CC.id_Cheevo_Challenges AS id_Cheevo_Challenges" & ControlChars.CrLf
+		sSQL &= "	, CC.Name AS Name" & ControlChars.CrLf
+		sSQL &= "	, -1 AS Tier" & ControlChars.CrLf
+		sSQL &= "	, (SELECT MAX(Tier) FROM tbl_Cheevo_Challenges_Cheevos CCC WHERE CCC.id_Cheevo_Challenges = CC.id_Cheevo_Challenges) AS MaxTier" & ControlChars.CrLf
+		sSQL &= "	, 2 AS Sort" & ControlChars.CrLf
+		sSQL &= "FROM tbl_Cheevo_Challenges CC" & ControlChars.CrLf
+		sSQL &= "WHERE CC.id_Cheevo_Challenges NOT IN (" & ControlChars.CrLf
+		sSQL &= "	SELECT" & ControlChars.CrLf
+		sSQL &= "		id_Cheevo_Challenges" & ControlChars.CrLf
+		sSQL &= "	FROM tbl_Cheevo_Challenges_Cheevos CCC" & ControlChars.CrLf
+		sSQL &= "	LEFT JOIN tbl_Users_Cheevo_Challenges_Cheevos UCCC ON CCC.id_Cheevo_Challenges_Cheevos = UCCC.id_Cheevo_Challenges_Cheevos" & ControlChars.CrLf
+		sSQL &= IIf(cls_Globals.MultiUserMode AndAlso Not cls_Globals.Admin AndAlso cls_Globals.id_Users > 0, " AND id_Users = " & TC.getSQLFormat(cls_Globals.id_Users), " AND id_Users IS NULL") & ControlChars.CrLf
+		sSQL &= "	WHERE	UCCC.id_Users_Cheevo_Challenges_Cheevos IS NULL" & ControlChars.CrLf
+		sSQL &= "			OR (IFNULL(CCC.Hardcore, 0) = 0 AND IFNULL(UCCC.Unlocked_Casual, 0) = 0)" & ControlChars.CrLf
+		sSQL &= "			OR (IFNULL(CCC.Hardcore, 0) = 1 AND IFNULL(UCCC.Unlocked_Hardcore, 0) = 0)" & ControlChars.CrLf
+		sSQL &= ")" & ControlChars.CrLf
+
+		sSQL &= "ORDER BY Sort, Name"
+
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
+
+		If cls_Globals.id_Cheevo_Challenges > 0 Then
+			'User is bound to a challenge and this challenge may not be included (because it is already completed)
+			Dim isChallengeInTable As Boolean = False
+			For Each row As DataRow In dt.Rows
+				If row("id_Cheevo_Challenges") = cls_Globals.id_Cheevo_Challenges Then
+					isChallengeInTable = True
+				End If
+			Next
+
+			If Not isChallengeInTable Then
+				sSQL = ""
+
+				sSQL &= "SELECT" & ControlChars.CrLf
+				sSQL &= "	CC.id_Cheevo_Challenges AS id_Cheevo_Challenges" & ControlChars.CrLf
+				sSQL &= "	, CC.Name AS Name" & ControlChars.CrLf
+				sSQL &= "	, -1 AS Tier" & ControlChars.CrLf
+				sSQL &= "	, (SELECT MAX(Tier) FROM tbl_Cheevo_Challenges_Cheevos CCC WHERE CCC.id_Cheevo_Challenges = CC.id_Cheevo_Challenges) AS MaxTier" & ControlChars.CrLf
+				sSQL &= "	, 1 AS Sort" & ControlChars.CrLf
+				sSQL &= "FROM tbl_Cheevo_Challenges CC" & ControlChars.CrLf
+				sSQL &= "WHERE CC.id_Cheevo_Challenges = " & TC.getSQLFormat(cls_Globals.id_Cheevo_Challenges)
+
+				MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
+			End If
+		End If
+
+		For Each row As DataRow In dt.Rows
+			row("DisplayText") = row("Name") & IIf(row("Tier") > 0, " Tier " & row("Tier") & " of " & row("MaxTier"), "") & IIf(row("Tier") = -1, " (completed)", "")
+		Next
+	End Sub
+
+	Public Shared Sub Fill_ttb_Open_Challenges_Cheevos(ByRef dt As ttb_Open_Challenges_CheevosDataTable)
+		dt.Clear()
+		Dim sSQL As String = ""
+
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "	CCC.id_Cheevo_Challenges_Cheevos" & ControlChars.CrLf
+		sSQL &= "	, CCC.id_Cheevo_Challenges" & ControlChars.CrLf
+		sSQL &= "	, IFNULL(CCC.CheevoType, 0) AS CheevoType" & ControlChars.CrLf
+		sSQL &= "	, UCCC.id_Users_Cheevo_Challenges_Cheevos" & ControlChars.CrLf
+		sSQL &= "	, CC.Name AS Challenge_Name" & ControlChars.CrLf
+		sSQL &= "	, CCC.Tier" & ControlChars.CrLf
+		sSQL &= "	, CCC.id_Emu_Games" & ControlChars.CrLf
+		sSQL &= "	, CCC.Cheevo_GameName" & ControlChars.CrLf
+		sSQL &= "	, CCC.Cheevo_ID" & ControlChars.CrLf
+		sSQL &= "	, CCC.Cheevo_Title || CASE WHEN IFNULL(CCC.CheevoType, 0) = 0 THEN CASE WHEN IFNULL(CCC.Hardcore, 0) = 1 THEN ' [Hardcore]' ELSE ' [Casual]' END ELSE '' END AS Cheevo_Title" & ControlChars.CrLf
+		sSQL &= "	, CCC.Cheevo_Description" & ControlChars.CrLf
+		sSQL &= "	, CCC.Hardcore" & ControlChars.CrLf
+		sSQL &= "	, CCC.Runtime" & ControlChars.CrLf
+		sSQL &= "	, UCCC.Unlocked_Casual" & ControlChars.CrLf
+		sSQL &= "	, UCCC.Unlocked_Hardcore" & ControlChars.CrLf
+		sSQL &= "FROM tbl_Cheevo_Challenges_Cheevos CCC" & ControlChars.CrLf
+		sSQL &= "LEFT JOIN tbl_Users_Cheevo_Challenges_Cheevos UCCC ON CCC.id_Cheevo_Challenges_Cheevos = UCCC.id_Cheevo_Challenges_Cheevos" & ControlChars.CrLf
+		sSQL &= IIf(cls_Globals.MultiUserMode AndAlso Not cls_Globals.Admin AndAlso cls_Globals.id_Users > 0, " AND id_Users = " & TC.getSQLFormat(cls_Globals.id_Users), " AND id_Users IS NULL") & ControlChars.CrLf
+		sSQL &= "INNER JOIN tbl_Cheevo_Challenges CC ON CCC.id_Cheevo_Challenges = CC.id_Cheevo_Challenges" & ControlChars.CrLf
+		sSQL &= "WHERE	UCCC.id_Users_Cheevo_Challenges_Cheevos IS NULL" & ControlChars.CrLf
+		sSQL &= "		OR (IFNULL(CCC.Hardcore, 0) = 0 AND IFNULL(UCCC.Unlocked_Casual, 0) = 0)" & ControlChars.CrLf
+		sSQL &= "		OR (IFNULL(CCC.Hardcore, 0) = 1 AND IFNULL(UCCC.Unlocked_Hardcore, 0) = 0)" & ControlChars.CrLf
+
+		MKNetLib.cls_MKSQLiteDataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, sSQL, dt)
+	End Sub
+
+	Public Sub Fill_ttb_Emulators_Pre_Post_Launch_Commands(ByRef tran As SQLite.SQLiteTransaction, ByRef dt As DataTable, ByVal id_Emulators As Int64, ByVal isPreLaunch As Boolean)
+		dt.Clear()
+
+		Dim sSQL As String = ""
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "	id_Emulators_Pre_Post_Launch_Commands" & ControlChars.CrLf
+		sSQL &= "	, id_Emulators" & ControlChars.CrLf
+		sSQL &= "	, Sort" & ControlChars.CrLf
+		sSQL &= "	, Directory" & ControlChars.CrLf
+		sSQL &= "	, Executable" & ControlChars.CrLf
+		sSQL &= "	, Parameter" & ControlChars.CrLf
+		sSQL &= "	, Minimized" & ControlChars.CrLf
+		sSQL &= "	, WaitForExit" & ControlChars.CrLf
+		sSQL &= "FROM		tbl_Emulators_Pre_Post_Launch_Commands EPPLC" & ControlChars.CrLf
+		sSQL &= "WHERE	" & IIf(isPreLaunch, "PreLaunch", "PostLaunch") & " = 1" & ControlChars.CrLf
+		sSQL &= "				AND id_Emulators = " & TC.getSQLFormat(id_Emulators) & ControlChars.CrLf
+		sSQL &= "ORDER BY Sort" & ControlChars.CrLf
+
+		DataAccess.FireProcedureReturnDT(tran.Connection, 0, False, sSQL, dt, tran)
+	End Sub
+
 #End Region
 
 #Region "Upsert Statements"
@@ -4965,7 +5273,7 @@
 	''' <param name="row"></param>
 	''' <remarks></remarks>
 	Public Sub Upsert_Rom_Manager_tbl_Emu_Games(ByRef tran As SQLite.SQLiteTransaction, ByRef row As DataRow)
-		Dim Column_Blacklist As String() = {"ROMBASE_id_Moby_Platforms", "id_Emu_Games", "Rating_Gameplay", "Rating_Graphics", "Rating_Sound", "Rating_Story", "Rating_Personal", "Num_Played", "Num_Runtime", "deprecated", "tmp_Highlighted"}
+		Dim Column_Blacklist As String() = {"ROMBASE_id_Moby_Platforms", "id_Emu_Games", "Rating_Gameplay", "Rating_Graphics", "Rating_Sound", "Rating_Story", "Rating_Personal", "Num_Played", "Num_Runtime", "deprecated"}
 
 		Dim id_Emu_Games As Object = Nothing
 		If TC.NZ(row("id_Emu_Games"), 0) > 0 Then
@@ -4979,7 +5287,7 @@
 			sSQL = "UPDATE tbl_Emu_Games SET "
 
 			For Each col As DataColumn In row.Table.Columns
-				If Not Column_Blacklist.Contains(col.ColumnName) Then
+				If Not Column_Blacklist.Contains(col.ColumnName) AndAlso Not col.ColumnName.StartsWith("tmp") Then
 					If bFirst Then
 						sSQL &= "	"
 						bFirst = False
@@ -5510,11 +5818,11 @@
 			End If
 
 			If row.RowState = DataRowState.Added Then
-				DataAccess.FireProcedure(tran.Connection, 0, "INSERT INTO tbl_Users (Username, Password, Admin, Restricted) VALUES (" & TC.getSQLParameter(row("Username"), row("Password"), row("Admin"), row("Restricted")) & ")", tran)
+				DataAccess.FireProcedure(tran.Connection, 0, "INSERT INTO tbl_Users (Username, Password, Admin, Restricted, id_Cheevo_Challenges) VALUES (" & TC.getSQLParameter(row("Username"), row("Password"), row("Admin"), row("Restricted"), TC.NZ("id_Cheevo_Challenges", 0)) & ")", tran)
 			End If
 
 			If row.RowState = DataRowState.Modified Then
-				DataAccess.FireProcedure(tran.Connection, 0, "UPDATE tbl_Users SET Username = " & TC.getSQLFormat(row("Username")) & ", Password = " & TC.getSQLFormat(row("Password")) & ", Admin = " & TC.getSQLFormat(row("Admin")) & ", Restricted = " & TC.getSQLFormat(row("Restricted")) & " WHERE id_Users = " & TC.getSQLFormat(row("id_Users")), tran)
+				DataAccess.FireProcedure(tran.Connection, 0, "UPDATE tbl_Users SET Username = " & TC.getSQLFormat(row("Username")) & ", Password = " & TC.getSQLFormat(row("Password")) & ", Admin = " & TC.getSQLFormat(row("Admin")) & ", Restricted = " & TC.getSQLFormat(row("Restricted")) & ", id_Cheevo_Challenges = " & TC.getSQLFormat(TC.NZ(row("id_Cheevo_Challenges"), 0)) & " WHERE id_Users = " & TC.getSQLFormat(row("id_Users")), tran)
 			End If
 		Next
 	End Sub
@@ -5702,6 +6010,78 @@
 			Return id_List_Generators
 		End If
 	End Function
+
+	Public Shared Function Upsert_tbl_Total_DOS_Launcher_Configs(ByRef tran As SQLite.SQLiteTransaction, ByVal DisplayName As String, ByVal proglocations As String, ByVal cachelocation As String, ByVal userlevel As String, ByVal forcelogging As Boolean, ByVal swapping As Boolean, ByVal preloading As Boolean, ByVal pauseafterrun As Boolean, ByVal VESA As Object, Optional ByVal id_Total_DOS_Launcher_Configs As Int64 = 0L) As Int64
+		If id_Total_DOS_Launcher_Configs = 0L Then
+			Return DataAccess.FireProcedureReturnScalar(tran.Connection, 0, "INSERT INTO tbl_Total_DOS_Launcher_Configs (DisplayName, proglocations, cachelocation, userlevel, forcelogging, swapping, preloading, pauseafterrun, VESA) VALUES (" & TC.getSQLParameter(DisplayName, proglocations, cachelocation, userlevel, forcelogging, swapping, preloading, pauseafterrun, VESA) & "); SELECT last_insert_rowid()", tran)
+		Else
+			DataAccess.FireProcedure(tran.Connection, 0, "UPDATE tbl_Total_DOS_Launcher_Configs SET DisplayName = " & TC.getSQLFormat(DisplayName) & ", proglocations = " & TC.getSQLFormat(proglocations) & ", cachelocation = " & TC.getSQLFormat(cachelocation) & ", userlevel = " & TC.getSQLFormat(userlevel) & ", forcelogging = " & TC.getSQLFormat(forcelogging) & ", swapping = " & TC.getSQLFormat(swapping) & ", preloading = " & TC.getSQLFormat(preloading) & ", pauseafterrun = " & TC.getSQLFormat(pauseafterrun) & ", VESA = " & TC.getSQLFormat(VESA) & " WHERE id_Total_DOS_Launcher_Configs = " & TC.getSQLFormat(id_Total_DOS_Launcher_Configs), tran)
+			Return id_Total_DOS_Launcher_Configs
+		End If
+	End Function
+
+	Public Shared Sub Upsert_tbl_Users_Emulators_Moby_Platforms_Enforce_Not_Default(ByRef tran As SQLite.SQLiteTransaction, Optional ByVal id_Users As Int64 = 0, Optional ByVal id_Moby_Platforms As Int64 = 0, Optional ByVal id_Emulators As Int64 = 0)
+		Dim dt_Users As DataTable = DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, "SELECT id_Users, Username FROM tbl_Users WHERE IFNULL(Admin, 0) = 0" & IIf(id_Users > 0, " AND id_Users = " & TC.getSQLFormat(id_Users), ""))
+		Dim dt_Emulators As DataTable = DataAccess.FireProcedureReturnDT(cls_Globals.Conn, 0, False, "SELECT id_Emulators, Displayname FROM tbl_Emulators" & IIf(id_Emulators > 0, " WHERE id_Emulators = " & TC.getSQLFormat(id_Emulators), ""))
+
+		For Each row_User As DataRow In dt_Users.Rows
+			Dim current_id_Users As Int64 = row_User("id_Users")
+
+			Dim sSQLCheckDefaults As String = ""
+			sSQLCheckDefaults &= "SELECT COUNT(1)" & ControlChars.CrLf
+			sSQLCheckDefaults &= "FROM tbl_Users_Emulators_Moby_Platforms" & ControlChars.CrLf
+			sSQLCheckDefaults &= "WHERE id_Users = " & TC.getSQLFormat(current_id_Users) & ControlChars.CrLf
+			sSQLCheckDefaults &= "AND id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms) & ControlChars.CrLf
+			sSQLCheckDefaults &= "AND DefaultEmulator = 1" & ControlChars.CrLf
+
+			If TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, sSQLCheckDefaults, tran), 0) > 0 Then
+				For Each row_Emulators As DataRow In dt_Emulators.Rows
+					Dim sSQL As String = ""
+					sSQL &= "SELECT id_Users_Emulators_Moby_Platforms" & ControlChars.CrLf
+					sSQL &= "FROM tbl_Users_Emulators_Moby_Platforms" & ControlChars.CrLf
+					sSQL &= "WHERE id_Users = " & TC.getSQLFormat(current_id_Users) & ControlChars.CrLf
+					sSQL &= "AND id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms) & ControlChars.CrLf
+					sSQL &= "AND id_Emulators = " & TC.getSQLFormat(row_Emulators("id_Emulators")) & ControlChars.CrLf
+
+					Dim id_Users_Emulators_Moby_Platforms As Int64 = TC.NZ(DataAccess.FireProcedureReturnScalar(tran.Connection, 0, sSQL, tran), 0L)
+
+					If id_Users_Emulators_Moby_Platforms = 0L Then
+						'INSERT (we dont need to update)
+						DataAccess.FireProcedure(tran.Connection, 0, "INSERT INTO tbl_Users_Emulators_Moby_Platforms (id_Users, id_Emulators, id_Moby_Platforms, DefaultEmulator) VALUES (" & TC.getSQLParameter(current_id_Users, row_Emulators("id_Emulators"), id_Moby_Platforms, 0) & ")", tran)
+					End If
+				Next
+			End If
+
+		Next
+	End Sub
+
+	Public Shared Sub Upsert_tbl_Users_Emulators_Moby_Platforms_Enforce_Not_Default_All_Emulators_For_Platform(ByRef tran As SQLite.SQLiteTransaction, ByVal id_Users As Int64, ByVal id_Moby_Platforms As Int64, ByVal excluded_id_Emulators As Int64)
+		Dim sSQL As String = ""
+		sSQL &= "INSERT INTO tbl_Users_Emulators_Moby_Platforms (" & ControlChars.CrLf
+		sSQL &= "	id_Users" & ControlChars.CrLf
+		sSQL &= "	, id_Emulators" & ControlChars.CrLf
+		sSQL &= "	, id_Moby_Platforms" & ControlChars.CrLf
+		sSQL &= "	, DefaultEmulator" & ControlChars.CrLf
+		sSQL &= ")" & ControlChars.CrLf
+		sSQL &= "SELECT" & ControlChars.CrLf
+		sSQL &= "	" & TC.getSQLFormat(id_Users) & " AS id_Users" & ControlChars.CrLf
+		sSQL &= "	, EMP.id_Emulators AS id_Emulators" & ControlChars.CrLf
+		sSQL &= "	, EMP.id_Moby_Platforms AS id_Moby_Platforms" & ControlChars.CrLf
+		sSQL &= "	, 0 AS DefaultEmulator" & ControlChars.CrLf
+		sSQL &= "FROM tbl_Emulators_Moby_Platforms EMP" & ControlChars.CrLf
+		sSQL &= "WHERE EMP.id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms) & ControlChars.CrLf
+		sSQL &= "AND (EMP.id_Emulators <> " & TC.getSQLFormat(excluded_id_Emulators) & ")" & ControlChars.CrLf
+		sSQL &= "AND EMP.id_Emulators || '-' || EMP.id_Moby_Platforms NOT IN (" & ControlChars.CrLf
+		sSQL &= "	SELECT UEMP.id_Emulators || '-' || UEMP.id_Moby_Platforms" & ControlChars.CrLf
+		sSQL &= "	FROM tbl_Users_Emulators_Moby_Platforms UEMP" & ControlChars.CrLf
+		sSQL &= "	WHERE UEMP.id_Users = " & TC.getSQLFormat(id_Users) & ControlChars.CrLf
+		sSQL &= "	AND UEMP.id_Moby_Platforms = " & TC.getSQLFormat(id_Moby_Platforms) & ControlChars.CrLf
+		sSQL &= ")" & ControlChars.CrLf
+
+		DataAccess.FireProcedure(cls_Globals.Conn, 0, sSQL, tran)
+	End Sub
+
+
 #End Region
 
 #Region "Delete Statements"
@@ -5724,7 +6104,7 @@
 		sSQL &= "					WHERE AT2.id_Emu_Games = " & TC.getSQLFormat(new_id_Emu_Games)
 		sSQL &= "								And AT2.Alternate_Title = tbl_Emu_Games_Alternate_Titles.Alternate_Title"
 		sSQL &= "								And AT2.Description = tbl_Emu_Games_Alternate_Titles.Description"
-		sSQL &= "				)"
+		sSQL &= "				) Then"
 		sSQL &= "	;"
 		sSQL &= "	DELETE FROM tbl_Emu_Games_Alternate_Titles WHERE id_Emu_Games = " & TC.getSQLFormat(old_id_Emu_Games)
 		DataAccess.FireProcedure(tran.Connection, 0, sSQL, tran)
@@ -6145,6 +6525,50 @@
 		End If
 		DataAccess.FireProcedure(conn, 0, "UPDATE tbl_Emu_Games SET Unavailable = " & TC.getSQLFormat(Unavailable) & " WHERE id_Emu_Games = " & TC.getSQLFormat(id_Emu_Games), tran)
 	End Sub
+#End Region
+
+#Region "Transformations"
+	''' <summary>
+	''' 
+	''' </summary>
+	''' <param name="tbl_Emu_Games">Table filled with Files and optional with CWDs</param>
+	''' <param name="tbl_Emu_Games_CWDs">Optional Table filled with CWDs</param>
+	Public Shared Sub Prepare_tmp_DOSBox_DisplayText(ByRef tbl_Emu_Games As DS_ML.tbl_Emu_GamesDataTable, Optional ByRef tbl_Emu_Games_CWDs As DS_ML.tbl_Emu_GamesDataTable = Nothing)
+		If tbl_Emu_Games_CWDs Is Nothing Then
+			tbl_Emu_Games_CWDs = tbl_Emu_Games
+		End If
+
+		For Each row As DS_ML.tbl_Emu_GamesRow In tbl_Emu_Games.Rows
+			'If TC.NZ(row("id_Rombase_DOSBox_Filetypes"), 0) <> cls_Globals.enm_Rombase_DOSBox_Filetypes.cwd Then
+			Dim oInnerFile As Object = row("InnerFile")
+			Dim oFolder As Object = row("Folder")
+
+			If TC.NZ(oInnerFile, "").Length = 0 Then
+				row("tmp_DOSBox_DisplayText") = oFolder
+				Continue For
+			End If
+
+			For Each row_cwd As DS_ML.tbl_Emu_GamesRow In tbl_Emu_Games_CWDs.Rows
+				If TC.NZ(row_cwd("id_Rombase_DOSBox_Filetypes"), 0) = cls_Globals.enm_Rombase_DOSBox_Filetypes.cwd Then
+					If TC.NZ(row_cwd("Folder"), "") <> "" AndAlso row("Folder").ToString.Contains(row_cwd("Folder")) Then
+						If TC.NZ(row("InnerFile"), "") <> "" Then
+							row("tmp_DOSBox_DisplayText") = row("Folder").Replace(row_cwd("Folder"), "") & "\" & row("InnerFile")
+						End If
+					End If
+				End If
+			Next
+
+			If TC.NZ(row("tmp_DOSBox_DisplayText"), "") = "" Then
+				row("tmp_DOSBox_DisplayText") = TC.NZ(oInnerFile, "")
+			End If
+
+			'Packed content contains forward slashes, we want to display backward slashes, also we don't want a prepended backward slash
+			row("tmp_DOSBox_DisplayText") = MKNetLib.cls_MKStringSupport.Clean_Left(TC.NZ(row("tmp_DOSBox_DisplayText"), "").Replace("/", "\"), "\")
+			'End If
+		Next
+
+	End Sub
+
 #End Region
 
 #Region "Rombase -> Main Migration Scripts"

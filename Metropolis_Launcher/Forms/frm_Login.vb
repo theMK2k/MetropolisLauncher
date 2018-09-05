@@ -54,6 +54,7 @@
 			cls_Globals.Restricted = TC.NZ(BS_Users.Current("Restricted"), False)
 			cls_Globals.Admin = TC.NZ(BS_Users.Current("Admin"), False)
 			cls_Globals.id_Users = BS_Users.Current("id_Users")
+			cls_Globals.id_Cheevo_Challenges = BS_Users.Current("id_Cheevo_Challenges")
 
 			cls_Settings.SetSetting("Last_Login_id_User", cmb_Users.EditValue)
 		End If

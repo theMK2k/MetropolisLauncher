@@ -962,35 +962,26 @@ Public Class frm_Mame_Config
 		End If
 	End Sub
 
-	Private Sub OpenURL(URL As String)
-		Try
-			Dim procinfo As New ProcessStartInfo(URL)
-			procinfo.UseShellExecute = True
-			Process.Start(procinfo)
-		Catch ex As Exception
 
-		End Try
-
-	End Sub
 
 	Private Sub btn_history_dat_www_Click(sender As Object, e As EventArgs) Handles btn_history_dat_www.Click
-		OpenURL("http://www.arcade-history.com/?page=download")
+		cls_Globals.OpenURL("http://www.arcade-history.com/?page=download")
 	End Sub
 
 	Private Sub btn_mameinfo_dat_www_Click(sender As Object, e As EventArgs) Handles btn_mameinfo_dat_www.Click
-		OpenURL("http://mameinfo.mameworld.info/")
+		cls_Globals.OpenURL("http://mameinfo.mameworld.info/")
 	End Sub
 
 	Private Sub btn_gameinit_dat_www_Click(sender As Object, e As EventArgs) Handles btn_gameinit_dat_www.Click
-		OpenURL("http://www.progettosnaps.net/gameinit")
+		cls_Globals.OpenURL("http://www.progettosnaps.net/gameinit")
 	End Sub
 
 	Private Sub btn_Filter_ini_www_Click(sender As Object, e As EventArgs) Handles btn_Filter_ini_www.Click
-		OpenURL("http://www.progettosnaps.net/renameset/")
+		cls_Globals.OpenURL("http://www.progettosnaps.net/renameset/")
 	End Sub
 
 	Private Sub btn_Category_ini_www_Click(sender As Object, e As EventArgs) Handles btn_Category_ini_www.Click
-		OpenURL("http://nplayers.arcadebelgium.be/")
-		OpenURL("http://www.progettoemma.net/?catlist")
+		cls_Globals.OpenURL("http://nplayers.arcadebelgium.be/")
+		cls_Globals.OpenURL("http://www.progettoemma.net/?catlist")
 	End Sub
 End Class

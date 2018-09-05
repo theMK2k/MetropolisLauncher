@@ -20,85 +20,102 @@ Partial Class frm_Emulators
 	<System.Diagnostics.DebuggerStepThrough()> _
 	Private Sub InitializeComponent()
 		Me.components = New System.ComponentModel.Container()
-		Dim SuperToolTip1 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem1 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim SuperToolTip2 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem2 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim SuperToolTip3 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem3 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim SuperToolTip4 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem4 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem1 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SerializableAppearanceObject1 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject2 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject3 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject4 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SuperToolTip5 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipItem2 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SerializableAppearanceObject5 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject6 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject7 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject8 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SuperToolTip6 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipItem3 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SerializableAppearanceObject9 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject10 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject11 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject12 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SuperToolTip31 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem27 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip32 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem28 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip33 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem29 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip34 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem30 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem24 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip35 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem31 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem25 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip36 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem32 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip37 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem33 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem26 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip7 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipItem4 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SerializableAppearanceObject13 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject14 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject15 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SerializableAppearanceObject16 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
-		Dim SuperToolTip8 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipItem5 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip9 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem5 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem6 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_Emulators))
-		Dim SuperToolTip10 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem6 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem7 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip11 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem7 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem8 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip12 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipItem3 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_Emulators))
+		Dim SuperToolTip8 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem8 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem9 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip13 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem9 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem10 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip14 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem10 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem11 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip15 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem11 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem12 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip16 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipItem4 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip38 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem34 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem27 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip39 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem35 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem28 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SerializableAppearanceObject17 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject18 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject19 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject20 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SuperToolTip40 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipItem29 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SerializableAppearanceObject21 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject22 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject23 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject24 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SuperToolTip41 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipItem30 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SerializableAppearanceObject25 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject26 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject27 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject28 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SuperToolTip42 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipItem31 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SerializableAppearanceObject29 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject30 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject31 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SerializableAppearanceObject32 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+		Dim SuperToolTip43 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipItem32 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip44 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem36 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem33 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip12 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem12 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem13 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip17 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem13 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem14 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip18 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem14 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim SuperToolTip19 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem15 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem15 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip20 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipItem8 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip13 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem37 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem9 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip14 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem38 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem10 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip15 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem39 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem11 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip16 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem16 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem12 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip20 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem40 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
 		Dim ToolTipItem16 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-		Dim SuperToolTip21 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem17 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem17 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip22 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem18 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem18 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Dim SuperToolTip23 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
 		Dim ToolTipTitleItem19 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim SuperToolTip24 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-		Dim ToolTipTitleItem20 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-		Dim ToolTipItem18 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim ToolTipItem19 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip45 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem41 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip46 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem42 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem34 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip47 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem43 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem35 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+		Dim SuperToolTip48 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem44 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip49 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem45 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim SuperToolTip27 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+		Dim ToolTipTitleItem23 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+		Dim ToolTipItem22 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
 		Me.grd_Emulators = New MKNetDXLib.ctl_MKDXGrid()
 		Me.BS_Emulators = New System.Windows.Forms.BindingSource(Me.components)
 		Me.DS_ML = New Metropolis_Launcher.DS_ML()
@@ -122,34 +139,44 @@ Partial Class frm_Emulators
 		Me.pnl_Settings = New MKNetDXLib.ctl_MKDXPanel()
 		Me.tcl_Settings = New MKNetDXLib.ctl_MKDXTabControl()
 		Me.tpg_Settings = New DevExpress.XtraTab.XtraTabPage()
+		Me.pnl_Settings_Settings = New MKNetDXLib.ctl_MKDXPanel()
+		Me.pnl_Script_File = New MKNetDXLib.ctl_MKDXPanel()
+		Me.lbl_Script_File = New MKNetDXLib.ctl_MKDXLabel()
+		Me.btn_Create_Script_File = New MKNetDXLib.ctl_MKDXSimpleButton()
+		Me.btn_Browse_Script_File = New MKNetDXLib.ctl_MKDXSimpleButton()
+		Me.txb_Script_File = New MKNetDXLib.ctl_MKDXTextEdit()
+		Me.cmb_Scripting = New MKNetDXLib.ctl_MKDXLookupEdit()
+		Me.BTA_Script_Types = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
+		Me.lbl_Scripting = New MKNetDXLib.ctl_MKDXLabel()
 		Me.btn_AutoConfig = New MKNetDXLib.ctl_MKDXSimpleButton()
+		Me.lbl_J2KPreset = New MKNetDXLib.ctl_MKDXLabel()
 		Me.cmb_List_Generator = New MKNetDXLib.ctl_MKDXLookupEdit()
 		Me.BS_List_Generators = New System.Windows.Forms.BindingSource(Me.components)
+		Me.lbl_Screenshot_Directory = New MKNetDXLib.ctl_MKDXLabel()
 		Me.lbl_List_Generator = New MKNetDXLib.ctl_MKDXLabel()
+		Me.lbl_StartupParameter = New MKNetDXLib.ctl_MKDXLabel()
 		Me.cmb_Libretro_Core = New MKNetDXLib.ctl_MKDXLookupEdit()
 		Me.BTA_Libretro_Core = New MKNetLib.cmp_MKBindableTableAdapter(Me.components)
+		Me.txb_Name = New MKNetDXLib.ctl_MKDXTextEdit()
 		Me.lbl_Libretro_Core = New MKNetDXLib.ctl_MKDXLabel()
+		Me.lbl_Executable = New MKNetDXLib.ctl_MKDXLabel()
 		Me.cmb_J2K_Config = New MKNetDXLib.ctl_MKDXLookupEdit()
 		Me.BS_J2K = New System.Windows.Forms.BindingSource(Me.components)
 		Me.DS_J2K = New System.Data.DataSet()
 		Me.tbl_Config = New System.Data.DataTable()
 		Me.DataColumn5 = New System.Data.DataColumn()
 		Me.DataColumn6 = New System.Data.DataColumn()
+		Me.txb_Directory = New MKNetDXLib.ctl_MKDXTextEdit()
 		Me.lbl_Name = New MKNetDXLib.ctl_MKDXLabel()
+		Me.lbl_Directory = New MKNetDXLib.ctl_MKDXLabel()
 		Me.txb_ScreenshotDirectory = New MKNetDXLib.ctl_MKDXTextEdit()
+		Me.txb_Executable = New MKNetDXLib.ctl_MKDXTextEdit()
 		Me.btn_Run = New MKNetDXLib.ctl_MKDXSimpleButton()
+		Me.btn_ScreenshotDirectoryOpen = New MKNetDXLib.ctl_MKDXSimpleButton()
 		Me.btn_EmulatorFileOpen = New MKNetDXLib.ctl_MKDXSimpleButton()
 		Me.txb_StartupParameter = New MKNetDXLib.ctl_MKDXTextEdit()
-		Me.btn_ScreenshotDirectoryOpen = New MKNetDXLib.ctl_MKDXSimpleButton()
-		Me.txb_Executable = New MKNetDXLib.ctl_MKDXTextEdit()
-		Me.lbl_Directory = New MKNetDXLib.ctl_MKDXLabel()
-		Me.txb_Directory = New MKNetDXLib.ctl_MKDXTextEdit()
-		Me.lbl_Executable = New MKNetDXLib.ctl_MKDXLabel()
-		Me.txb_Name = New MKNetDXLib.ctl_MKDXTextEdit()
-		Me.lbl_StartupParameter = New MKNetDXLib.ctl_MKDXLabel()
-		Me.lbl_Screenshot_Directory = New MKNetDXLib.ctl_MKDXLabel()
-		Me.lbl_J2KPreset = New MKNetDXLib.ctl_MKDXLabel()
 		Me.tpg_MV_Settings = New DevExpress.XtraTab.XtraTabPage()
+		Me.pnl_Settings_MV = New MKNetDXLib.ctl_MKDXPanel()
 		Me.grd_MV = New MKNetDXLib.ctl_MKDXGrid()
 		Me.BS_MV = New System.Windows.Forms.BindingSource(Me.components)
 		Me.gv_MV = New DevExpress.XtraGrid.Views.Grid.GridView()
@@ -160,6 +187,46 @@ Partial Class frm_Emulators
 		Me.pnl_MV_Buttons = New MKNetDXLib.ctl_MKDXPanel()
 		Me.btn_MV_Delete = New MKNetDXLib.ctl_MKDXSimpleButton()
 		Me.btn_MV_Add = New MKNetDXLib.ctl_MKDXSimpleButton()
+		Me.tpg_PrePostLaunch = New DevExpress.XtraTab.XtraTabPage()
+		Me.tlp_PrePostLaunch = New System.Windows.Forms.TableLayoutPanel()
+		Me.gb_PostLaunch = New MKNetDXLib.ctl_MKDXGroupBox()
+		Me.grd_PostLaunch = New MKNetDXLib.ctl_MKDXGrid()
+		Me.BS_PostLaunch_Commands = New System.Windows.Forms.BindingSource(Me.components)
+		Me.gv_PostLaunch = New DevExpress.XtraGrid.Views.Grid.GridView()
+		Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.barmng = New MKNetDXLib.ctl_MKDXBarManager()
+		Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
+		Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
+		Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
+		Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
+		Me.bbi_Add = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Duplicate = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_Delete = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_PreLaunch_Add = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_PreLaunch_Edit = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_PreLaunch_Delete = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_PostLaunch_Add = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_PostLaunch_Edit = New DevExpress.XtraBars.BarButtonItem()
+		Me.bbi_PostLaunch_Delete = New DevExpress.XtraBars.BarButtonItem()
+		Me.pnl_PostLaunch_Buttons = New MKNetDXLib.ctl_MKDXPanel()
+		Me.btn_PostLaunch_MoveDown = New MKNetDXLib.ctl_MKDXSimpleButton()
+		Me.btn_PostLaunch_MoveUp = New MKNetDXLib.ctl_MKDXSimpleButton()
+		Me.gb_PreLaunch = New MKNetDXLib.ctl_MKDXGroupBox()
+		Me.grd_PreLaunch = New MKNetDXLib.ctl_MKDXGrid()
+		Me.BS_PreLaunch_Commands = New System.Windows.Forms.BindingSource(Me.components)
+		Me.gv_PreLaunch = New DevExpress.XtraGrid.Views.Grid.GridView()
+		Me.colDirectory = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.colExecutable = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.colParameter1 = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.colWaitForExit = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.colMinimized = New DevExpress.XtraGrid.Columns.GridColumn()
+		Me.pnl_PreLaunch_Buttons = New MKNetDXLib.ctl_MKDXPanel()
+		Me.btn_PreLaunch_MoveDown = New MKNetDXLib.ctl_MKDXSimpleButton()
+		Me.btn_PreLaunch_MoveUp = New MKNetDXLib.ctl_MKDXSimpleButton()
 		Me.tpg_DOSBox_Patches = New DevExpress.XtraTab.XtraTabPage()
 		Me.splt_DOSBox_Patches = New MKNetDXLib.ctl_MKDXSplitPanel()
 		Me.grd_DOSBox_Patches_Categories = New MKNetDXLib.ctl_MKDXGrid()
@@ -177,21 +244,18 @@ Partial Class frm_Emulators
 		Me.DS_MobyDB = New Metropolis_Launcher.DS_MobyDB()
 		Me.pnl_Buttons = New MKNetDXLib.ctl_MKDXPanel()
 		Me.popmnu_Emulators = New MKNetDXLib.cmp_MKDXPopupMenu()
-		Me.bbi_Add = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Duplicate = New DevExpress.XtraBars.BarButtonItem()
-		Me.bbi_Delete = New DevExpress.XtraBars.BarButtonItem()
-		Me.barmng = New MKNetDXLib.ctl_MKDXBarManager()
-		Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
-		Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
-		Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
-		Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
 		Me.DataTable1 = New System.Data.DataTable()
 		Me.DataColumn1 = New System.Data.DataColumn()
 		Me.DataColumn2 = New System.Data.DataColumn()
 		Me.DS_Rombase = New Metropolis_Launcher.DS_Rombase()
 		Me.splt_Main = New MKNetDXLib.ctl_MKDXSplitPanel()
-		Me.splt_Right = New MKNetDXLib.ctl_MKDXSplitPanel()
 		Me.pnl_Right = New MKNetDXLib.ctl_MKDXPanel()
+		Me.splt_Right = New MKNetDXLib.ctl_MKDXSplitPanel()
+		Me.popmnu_PreLaunch = New MKNetDXLib.cmp_MKDXPopupMenu()
+		Me.popmnu_PostLaunch = New MKNetDXLib.cmp_MKDXPopupMenu()
+		Me.DataTable2 = New System.Data.DataTable()
+		Me.DataColumn3 = New System.Data.DataColumn()
+		Me.DataColumn4 = New System.Data.DataColumn()
 		CType(Me.grd_Emulators, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BS_Emulators, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.DS_ML, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -210,20 +274,29 @@ Partial Class frm_Emulators
 		CType(Me.tcl_Settings, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.tcl_Settings.SuspendLayout()
 		Me.tpg_Settings.SuspendLayout()
+		CType(Me.pnl_Settings_Settings, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.pnl_Settings_Settings.SuspendLayout()
+		CType(Me.pnl_Script_File, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.pnl_Script_File.SuspendLayout()
+		CType(Me.txb_Script_File.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.cmb_Scripting.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BTA_Script_Types, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.cmb_List_Generator.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BS_List_Generators, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.cmb_Libretro_Core.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BTA_Libretro_Core, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.txb_Name.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.cmb_J2K_Config.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BS_J2K, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.DS_J2K, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.tbl_Config, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.txb_ScreenshotDirectory.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.txb_StartupParameter.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.txb_Executable.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.txb_Directory.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.txb_Name.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.txb_ScreenshotDirectory.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.txb_Executable.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.txb_StartupParameter.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.tpg_MV_Settings.SuspendLayout()
+		CType(Me.pnl_Settings_MV, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.pnl_Settings_MV.SuspendLayout()
 		CType(Me.grd_MV, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.BS_MV, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.gv_MV, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -231,6 +304,23 @@ Partial Class frm_Emulators
 		CType(Me.BS_Volumes, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.pnl_MV_Buttons, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.pnl_MV_Buttons.SuspendLayout()
+		Me.tpg_PrePostLaunch.SuspendLayout()
+		Me.tlp_PrePostLaunch.SuspendLayout()
+		CType(Me.gb_PostLaunch, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.gb_PostLaunch.SuspendLayout()
+		CType(Me.grd_PostLaunch, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BS_PostLaunch_Commands, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.gv_PostLaunch, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.barmng, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.pnl_PostLaunch_Buttons, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.pnl_PostLaunch_Buttons.SuspendLayout()
+		CType(Me.gb_PreLaunch, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.gb_PreLaunch.SuspendLayout()
+		CType(Me.grd_PreLaunch, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.BS_PreLaunch_Commands, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.gv_PreLaunch, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.pnl_PreLaunch_Buttons, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.pnl_PreLaunch_Buttons.SuspendLayout()
 		Me.tpg_DOSBox_Patches.SuspendLayout()
 		CType(Me.splt_DOSBox_Patches, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.splt_DOSBox_Patches.SuspendLayout()
@@ -246,15 +336,17 @@ Partial Class frm_Emulators
 		CType(Me.pnl_Buttons, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.pnl_Buttons.SuspendLayout()
 		CType(Me.popmnu_Emulators, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.barmng, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.DataTable1, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.DS_Rombase, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.splt_Main, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.splt_Main.SuspendLayout()
-		CType(Me.splt_Right, System.ComponentModel.ISupportInitialize).BeginInit()
-		Me.splt_Right.SuspendLayout()
 		CType(Me.pnl_Right, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.pnl_Right.SuspendLayout()
+		CType(Me.splt_Right, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.splt_Right.SuspendLayout()
+		CType(Me.popmnu_PreLaunch, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.popmnu_PostLaunch, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.DataTable2, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
 		'
 		'grd_Emulators
@@ -265,7 +357,7 @@ Partial Class frm_Emulators
 		Me.grd_Emulators.MainView = Me.gv_Emulators
 		Me.grd_Emulators.MinimumSize = New System.Drawing.Size(262, 559)
 		Me.grd_Emulators.Name = "grd_Emulators"
-		Me.grd_Emulators.Size = New System.Drawing.Size(262, 559)
+		Me.grd_Emulators.Size = New System.Drawing.Size(262, 618)
 		Me.grd_Emulators.TabIndex = 0
 		Me.grd_Emulators.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Emulators})
 		'
@@ -307,7 +399,7 @@ Partial Class frm_Emulators
 		Me.pnl_Emulators_Buttons.Controls.Add(Me.btn_Duplicate_Emulator)
 		Me.pnl_Emulators_Buttons.Controls.Add(Me.btn_Add_Emulator)
 		Me.pnl_Emulators_Buttons.Dock = System.Windows.Forms.DockStyle.Bottom
-		Me.pnl_Emulators_Buttons.Location = New System.Drawing.Point(0, 559)
+		Me.pnl_Emulators_Buttons.Location = New System.Drawing.Point(0, 618)
 		Me.pnl_Emulators_Buttons.Name = "pnl_Emulators_Buttons"
 		Me.pnl_Emulators_Buttons.Size = New System.Drawing.Size(262, 26)
 		Me.pnl_Emulators_Buttons.TabIndex = 5
@@ -318,9 +410,9 @@ Partial Class frm_Emulators
 		Me.btn_Delete_Emulator.Location = New System.Drawing.Point(185, 4)
 		Me.btn_Delete_Emulator.Name = "btn_Delete_Emulator"
 		Me.btn_Delete_Emulator.Size = New System.Drawing.Size(75, 20)
-		ToolTipTitleItem1.Text = "Delete Emulator"
-		SuperToolTip1.Items.Add(ToolTipTitleItem1)
-		Me.btn_Delete_Emulator.SuperTip = SuperToolTip1
+		ToolTipTitleItem27.Text = "Delete Emulator"
+		SuperToolTip31.Items.Add(ToolTipTitleItem27)
+		Me.btn_Delete_Emulator.SuperTip = SuperToolTip31
 		Me.btn_Delete_Emulator.TabIndex = 2
 		Me.btn_Delete_Emulator.Text = "&Delete"
 		'
@@ -330,9 +422,9 @@ Partial Class frm_Emulators
 		Me.btn_Duplicate_Emulator.Location = New System.Drawing.Point(107, 4)
 		Me.btn_Duplicate_Emulator.Name = "btn_Duplicate_Emulator"
 		Me.btn_Duplicate_Emulator.Size = New System.Drawing.Size(75, 20)
-		ToolTipTitleItem2.Text = "Duplicate Emulator"
-		SuperToolTip2.Items.Add(ToolTipTitleItem2)
-		Me.btn_Duplicate_Emulator.SuperTip = SuperToolTip2
+		ToolTipTitleItem28.Text = "Duplicate Emulator"
+		SuperToolTip32.Items.Add(ToolTipTitleItem28)
+		Me.btn_Duplicate_Emulator.SuperTip = SuperToolTip32
 		Me.btn_Duplicate_Emulator.TabIndex = 1
 		Me.btn_Duplicate_Emulator.Text = "D&uplicate"
 		'
@@ -342,9 +434,9 @@ Partial Class frm_Emulators
 		Me.btn_Add_Emulator.Location = New System.Drawing.Point(29, 4)
 		Me.btn_Add_Emulator.Name = "btn_Add_Emulator"
 		Me.btn_Add_Emulator.Size = New System.Drawing.Size(75, 20)
-		ToolTipTitleItem3.Text = "Add Emulator"
-		SuperToolTip3.Items.Add(ToolTipTitleItem3)
-		Me.btn_Add_Emulator.SuperTip = SuperToolTip3
+		ToolTipTitleItem29.Text = "Add Emulator"
+		SuperToolTip33.Items.Add(ToolTipTitleItem29)
+		Me.btn_Add_Emulator.SuperTip = SuperToolTip33
 		Me.btn_Add_Emulator.TabIndex = 0
 		Me.btn_Add_Emulator.Text = "&Add"
 		'
@@ -356,7 +448,7 @@ Partial Class frm_Emulators
 		Me.pnl_Platforms.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.pnl_Platforms.Location = New System.Drawing.Point(0, 0)
 		Me.pnl_Platforms.Name = "pnl_Platforms"
-		Me.pnl_Platforms.Size = New System.Drawing.Size(419, 286)
+		Me.pnl_Platforms.Size = New System.Drawing.Size(437, 325)
 		Me.pnl_Platforms.TabIndex = 10
 		'
 		'grd_Platforms
@@ -367,7 +459,7 @@ Partial Class frm_Emulators
 		Me.grd_Platforms.MainView = Me.gv_Platforms
 		Me.grd_Platforms.Name = "grd_Platforms"
 		Me.grd_Platforms.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_Supported, Me.rpi_DefaultEmulator})
-		Me.grd_Platforms.Size = New System.Drawing.Size(419, 255)
+		Me.grd_Platforms.Size = New System.Drawing.Size(437, 294)
 		Me.grd_Platforms.TabIndex = 0
 		Me.grd_Platforms.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_Platforms})
 		'
@@ -441,14 +533,14 @@ Partial Class frm_Emulators
 		Me.lbl_Platforms.MKBoundControl4 = Nothing
 		Me.lbl_Platforms.MKBoundControl5 = Nothing
 		Me.lbl_Platforms.Name = "lbl_Platforms"
-		Me.lbl_Platforms.Size = New System.Drawing.Size(419, 31)
+		Me.lbl_Platforms.Size = New System.Drawing.Size(437, 31)
 		Me.lbl_Platforms.TabIndex = 0
 		Me.lbl_Platforms.Text = "Platforms supported by this Emulator:"
 		'
 		'btn_Save
 		'
 		Me.btn_Save.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btn_Save.Location = New System.Drawing.Point(262, 4)
+		Me.btn_Save.Location = New System.Drawing.Point(280, 4)
 		Me.btn_Save.Name = "btn_Save"
 		Me.btn_Save.Size = New System.Drawing.Size(75, 20)
 		Me.btn_Save.TabIndex = 0
@@ -460,9 +552,8 @@ Partial Class frm_Emulators
 		Me.pnl_Settings.Controls.Add(Me.tcl_Settings)
 		Me.pnl_Settings.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.pnl_Settings.Location = New System.Drawing.Point(0, 0)
-		Me.pnl_Settings.MinimumSize = New System.Drawing.Size(411, 215)
 		Me.pnl_Settings.Name = "pnl_Settings"
-		Me.pnl_Settings.Size = New System.Drawing.Size(419, 264)
+		Me.pnl_Settings.Size = New System.Drawing.Size(437, 284)
 		Me.pnl_Settings.TabIndex = 9
 		'
 		'tcl_Settings
@@ -471,73 +562,251 @@ Partial Class frm_Emulators
 		Me.tcl_Settings.Location = New System.Drawing.Point(0, 0)
 		Me.tcl_Settings.Name = "tcl_Settings"
 		Me.tcl_Settings.SelectedTabPage = Me.tpg_Settings
-		Me.tcl_Settings.Size = New System.Drawing.Size(419, 264)
+		Me.tcl_Settings.Size = New System.Drawing.Size(437, 284)
 		Me.tcl_Settings.TabIndex = 0
-		Me.tcl_Settings.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.tpg_Settings, Me.tpg_MV_Settings, Me.tpg_DOSBox_Patches})
+		Me.tcl_Settings.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.tpg_Settings, Me.tpg_MV_Settings, Me.tpg_PrePostLaunch, Me.tpg_DOSBox_Patches})
 		'
 		'tpg_Settings
 		'
-		Me.tpg_Settings.Controls.Add(Me.btn_AutoConfig)
-		Me.tpg_Settings.Controls.Add(Me.cmb_List_Generator)
-		Me.tpg_Settings.Controls.Add(Me.lbl_List_Generator)
-		Me.tpg_Settings.Controls.Add(Me.cmb_Libretro_Core)
-		Me.tpg_Settings.Controls.Add(Me.lbl_Libretro_Core)
-		Me.tpg_Settings.Controls.Add(Me.cmb_J2K_Config)
-		Me.tpg_Settings.Controls.Add(Me.lbl_Name)
-		Me.tpg_Settings.Controls.Add(Me.txb_ScreenshotDirectory)
-		Me.tpg_Settings.Controls.Add(Me.btn_Run)
-		Me.tpg_Settings.Controls.Add(Me.btn_EmulatorFileOpen)
-		Me.tpg_Settings.Controls.Add(Me.txb_StartupParameter)
-		Me.tpg_Settings.Controls.Add(Me.btn_ScreenshotDirectoryOpen)
-		Me.tpg_Settings.Controls.Add(Me.txb_Executable)
-		Me.tpg_Settings.Controls.Add(Me.lbl_Directory)
-		Me.tpg_Settings.Controls.Add(Me.txb_Directory)
-		Me.tpg_Settings.Controls.Add(Me.lbl_Executable)
-		Me.tpg_Settings.Controls.Add(Me.txb_Name)
-		Me.tpg_Settings.Controls.Add(Me.lbl_StartupParameter)
-		Me.tpg_Settings.Controls.Add(Me.lbl_Screenshot_Directory)
-		Me.tpg_Settings.Controls.Add(Me.lbl_J2KPreset)
+		Me.tpg_Settings.Controls.Add(Me.pnl_Settings_Settings)
 		Me.tpg_Settings.Name = "tpg_Settings"
-		Me.tpg_Settings.Size = New System.Drawing.Size(413, 236)
+		Me.tpg_Settings.Size = New System.Drawing.Size(431, 256)
 		Me.tpg_Settings.Text = "Settings"
+		'
+		'pnl_Settings_Settings
+		'
+		Me.pnl_Settings_Settings.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.pnl_Settings_Settings.Controls.Add(Me.pnl_Script_File)
+		Me.pnl_Settings_Settings.Controls.Add(Me.cmb_Scripting)
+		Me.pnl_Settings_Settings.Controls.Add(Me.lbl_Scripting)
+		Me.pnl_Settings_Settings.Controls.Add(Me.btn_AutoConfig)
+		Me.pnl_Settings_Settings.Controls.Add(Me.lbl_J2KPreset)
+		Me.pnl_Settings_Settings.Controls.Add(Me.cmb_List_Generator)
+		Me.pnl_Settings_Settings.Controls.Add(Me.lbl_Screenshot_Directory)
+		Me.pnl_Settings_Settings.Controls.Add(Me.lbl_List_Generator)
+		Me.pnl_Settings_Settings.Controls.Add(Me.lbl_StartupParameter)
+		Me.pnl_Settings_Settings.Controls.Add(Me.cmb_Libretro_Core)
+		Me.pnl_Settings_Settings.Controls.Add(Me.txb_Name)
+		Me.pnl_Settings_Settings.Controls.Add(Me.lbl_Libretro_Core)
+		Me.pnl_Settings_Settings.Controls.Add(Me.lbl_Executable)
+		Me.pnl_Settings_Settings.Controls.Add(Me.cmb_J2K_Config)
+		Me.pnl_Settings_Settings.Controls.Add(Me.txb_Directory)
+		Me.pnl_Settings_Settings.Controls.Add(Me.lbl_Name)
+		Me.pnl_Settings_Settings.Controls.Add(Me.lbl_Directory)
+		Me.pnl_Settings_Settings.Controls.Add(Me.txb_ScreenshotDirectory)
+		Me.pnl_Settings_Settings.Controls.Add(Me.txb_Executable)
+		Me.pnl_Settings_Settings.Controls.Add(Me.btn_Run)
+		Me.pnl_Settings_Settings.Controls.Add(Me.btn_ScreenshotDirectoryOpen)
+		Me.pnl_Settings_Settings.Controls.Add(Me.btn_EmulatorFileOpen)
+		Me.pnl_Settings_Settings.Controls.Add(Me.txb_StartupParameter)
+		Me.pnl_Settings_Settings.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.pnl_Settings_Settings.Location = New System.Drawing.Point(0, 0)
+		Me.pnl_Settings_Settings.Name = "pnl_Settings_Settings"
+		Me.pnl_Settings_Settings.Size = New System.Drawing.Size(431, 256)
+		Me.pnl_Settings_Settings.TabIndex = 16
+		'
+		'pnl_Script_File
+		'
+		Me.pnl_Script_File.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.pnl_Script_File.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.pnl_Script_File.Controls.Add(Me.lbl_Script_File)
+		Me.pnl_Script_File.Controls.Add(Me.btn_Create_Script_File)
+		Me.pnl_Script_File.Controls.Add(Me.btn_Browse_Script_File)
+		Me.pnl_Script_File.Controls.Add(Me.txb_Script_File)
+		Me.pnl_Script_File.Location = New System.Drawing.Point(2, 232)
+		Me.pnl_Script_File.Name = "pnl_Script_File"
+		Me.pnl_Script_File.Size = New System.Drawing.Size(432, 22)
+		Me.pnl_Script_File.TabIndex = 22
+		Me.pnl_Script_File.Visible = False
+		'
+		'lbl_Script_File
+		'
+		Me.lbl_Script_File.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_Script_File.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_Script_File.Location = New System.Drawing.Point(1, 1)
+		Me.lbl_Script_File.MKBoundControl1 = Nothing
+		Me.lbl_Script_File.MKBoundControl2 = Nothing
+		Me.lbl_Script_File.MKBoundControl3 = Nothing
+		Me.lbl_Script_File.MKBoundControl4 = Nothing
+		Me.lbl_Script_File.MKBoundControl5 = Nothing
+		Me.lbl_Script_File.Name = "lbl_Script_File"
+		Me.lbl_Script_File.Size = New System.Drawing.Size(112, 20)
+		ToolTipTitleItem30.Text = "Script File"
+		ToolTipItem24.LeftIndent = 6
+		ToolTipItem24.Text = "Provide here the location of the script file to be used."
+		SuperToolTip34.Items.Add(ToolTipTitleItem30)
+		SuperToolTip34.Items.Add(ToolTipItem24)
+		Me.lbl_Script_File.SuperTip = SuperToolTip34
+		Me.lbl_Script_File.TabIndex = 18
+		Me.lbl_Script_File.Text = "Script File:"
+		'
+		'btn_Create_Script_File
+		'
+		Me.btn_Create_Script_File.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.btn_Create_Script_File.Location = New System.Drawing.Point(379, 1)
+		Me.btn_Create_Script_File.Name = "btn_Create_Script_File"
+		Me.btn_Create_Script_File.Size = New System.Drawing.Size(49, 20)
+		ToolTipTitleItem31.Text = "Create"
+		ToolTipItem25.LeftIndent = 6
+		ToolTipItem25.Text = "Metropolis Launcher creates a bare bones script file including the definition of " &
+		"data which suit as a basis for your own script development."
+		SuperToolTip35.Items.Add(ToolTipTitleItem31)
+		SuperToolTip35.Items.Add(ToolTipItem25)
+		Me.btn_Create_Script_File.SuperTip = SuperToolTip35
+		Me.btn_Create_Script_File.TabIndex = 21
+		Me.btn_Create_Script_File.Text = "Create"
+		'
+		'btn_Browse_Script_File
+		'
+		Me.btn_Browse_Script_File.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.btn_Browse_Script_File.Location = New System.Drawing.Point(344, 1)
+		Me.btn_Browse_Script_File.Name = "btn_Browse_Script_File"
+		Me.btn_Browse_Script_File.Size = New System.Drawing.Size(32, 20)
+		ToolTipTitleItem32.Text = "Browse Script File"
+		SuperToolTip36.Items.Add(ToolTipTitleItem32)
+		Me.btn_Browse_Script_File.SuperTip = SuperToolTip36
+		Me.btn_Browse_Script_File.TabIndex = 20
+		Me.btn_Browse_Script_File.Text = "..."
+		'
+		'txb_Script_File
+		'
+		Me.txb_Script_File.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.txb_Script_File.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_Emulators, "ScriptPath", True))
+		Me.txb_Script_File.Location = New System.Drawing.Point(114, 1)
+		Me.txb_Script_File.MKBoundLabel = Nothing
+		Me.txb_Script_File.MKEditValue_Compare = Nothing
+		Me.txb_Script_File.Name = "txb_Script_File"
+		Me.txb_Script_File.Size = New System.Drawing.Size(227, 20)
+		ToolTipTitleItem33.Text = "Script File"
+		ToolTipItem26.LeftIndent = 6
+		ToolTipItem26.Text = "Provide here the location of the script file to be used."
+		SuperToolTip37.Items.Add(ToolTipTitleItem33)
+		SuperToolTip37.Items.Add(ToolTipItem26)
+		Me.txb_Script_File.SuperTip = SuperToolTip37
+		Me.txb_Script_File.TabIndex = 19
+		'
+		'cmb_Scripting
+		'
+		Me.cmb_Scripting.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.cmb_Scripting.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_Emulators, "ScriptType", True))
+		Me.cmb_Scripting.Location = New System.Drawing.Point(116, 210)
+		Me.cmb_Scripting.MKBoundLabel = Nothing
+		Me.cmb_Scripting.MKEditValue_Compare = Nothing
+		Me.cmb_Scripting.Name = "cmb_Scripting"
+		Me.cmb_Scripting.Properties.AllowFocused = False
+		Me.cmb_Scripting.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)})
+		Me.cmb_Scripting.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("id", "id", 14, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("DisplayText", "Display Text", 66, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
+		Me.cmb_Scripting.Properties.DataSource = Me.BTA_Script_Types
+		Me.cmb_Scripting.Properties.DisplayMember = "DisplayText"
+		Me.cmb_Scripting.Properties.NullText = ""
+		Me.cmb_Scripting.Properties.ShowFooter = False
+		Me.cmb_Scripting.Properties.ShowHeader = False
+		Me.cmb_Scripting.Properties.ValueMember = "id"
+		Me.cmb_Scripting.Size = New System.Drawing.Size(314, 20)
+		ToolTipTitleItem7.Text = "Enhanced Scripting"
+		ToolTipItem3.LeftIndent = 6
+		ToolTipItem3.Text = "Metropolis Launcher supports AutoIt and AutoHotKey for advanced scripting." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ins" &
+		"tead of launching the emulator with parameters the script will be launched."
+		SuperToolTip7.Items.Add(ToolTipTitleItem7)
+		SuperToolTip7.Items.Add(ToolTipItem3)
+		Me.cmb_Scripting.SuperTip = SuperToolTip7
+		Me.cmb_Scripting.TabIndex = 17
+		'
+		'BTA_Script_Types
+		'
+		Me.BTA_Script_Types.AllowDelete = True
+		Me.BTA_Script_Types.ColumnUpdateBlacklistStream = CType(resources.GetObject("BTA_Script_Types.ColumnUpdateBlacklistStream"), System.Collections.Generic.List(Of String))
+		Me.BTA_Script_Types.Connection = Nothing
+		Me.BTA_Script_Types.DSStream = CType(resources.GetObject("BTA_Script_Types.DSStream"), System.IO.MemoryStream)
+		Me.BTA_Script_Types.FillMethod = MKNetLib.FillMethod.ValueList
+		Me.BTA_Script_Types.FillString = "1;AutoIt;2;AutoHotKey"
+		Me.BTA_Script_Types.Position = 0
+		Me.BTA_Script_Types.Transaction = Nothing
+		Me.BTA_Script_Types.UpdateTablesStream = CType(resources.GetObject("BTA_Script_Types.UpdateTablesStream"), System.Collections.Generic.List(Of String))
+		'
+		'lbl_Scripting
+		'
+		Me.lbl_Scripting.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_Scripting.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_Scripting.Location = New System.Drawing.Point(3, 210)
+		Me.lbl_Scripting.MKBoundControl1 = Nothing
+		Me.lbl_Scripting.MKBoundControl2 = Nothing
+		Me.lbl_Scripting.MKBoundControl3 = Nothing
+		Me.lbl_Scripting.MKBoundControl4 = Nothing
+		Me.lbl_Scripting.MKBoundControl5 = Nothing
+		Me.lbl_Scripting.Name = "lbl_Scripting"
+		Me.lbl_Scripting.Size = New System.Drawing.Size(112, 20)
+		ToolTipTitleItem8.Text = "Enhanced Scripting"
+		ToolTipItem4.LeftIndent = 6
+		ToolTipItem4.Text = "Metropolis Launcher supports AutoIt and AutoHotKey for advanced scripting." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ins" &
+		"tead of launching the emulator with parameters the script will be launched."
+		SuperToolTip8.Items.Add(ToolTipTitleItem8)
+		SuperToolTip8.Items.Add(ToolTipItem4)
+		Me.lbl_Scripting.SuperTip = SuperToolTip8
+		Me.lbl_Scripting.TabIndex = 16
+		Me.lbl_Scripting.Text = "Enhanced Scripting:"
 		'
 		'btn_AutoConfig
 		'
 		Me.btn_AutoConfig.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
 						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btn_AutoConfig.Location = New System.Drawing.Point(3, 1)
+		Me.btn_AutoConfig.Location = New System.Drawing.Point(1, 3)
 		Me.btn_AutoConfig.Name = "btn_AutoConfig"
-		Me.btn_AutoConfig.Size = New System.Drawing.Size(407, 20)
-		ToolTipTitleItem4.Text = "Autoconfig this Emulator"
-		ToolTipItem1.LeftIndent = 6
-		ToolTipItem1.Text = "Metropolis Launcher is able to identify numerous emulators. When clicking this bu" &
+		Me.btn_AutoConfig.Size = New System.Drawing.Size(429, 20)
+		ToolTipTitleItem34.Text = "Autoconfig this Emulator"
+		ToolTipItem27.LeftIndent = 6
+		ToolTipItem27.Text = "Metropolis Launcher is able to identify numerous emulators. When clicking this bu" &
 		"tton, the recommended settings for this emulator will be applied. In some cases " &
 		"you'll have to answer some questions."
-		SuperToolTip4.Items.Add(ToolTipTitleItem4)
-		SuperToolTip4.Items.Add(ToolTipItem1)
-		Me.btn_AutoConfig.SuperTip = SuperToolTip4
+		SuperToolTip38.Items.Add(ToolTipTitleItem34)
+		SuperToolTip38.Items.Add(ToolTipItem27)
+		Me.btn_AutoConfig.SuperTip = SuperToolTip38
 		Me.btn_AutoConfig.TabIndex = 15
 		Me.btn_AutoConfig.Text = "Autoconfig this Emulator"
+		'
+		'lbl_J2KPreset
+		'
+		Me.lbl_J2KPreset.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_J2KPreset.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_J2KPreset.Location = New System.Drawing.Point(3, 164)
+		Me.lbl_J2KPreset.MKBoundControl1 = Nothing
+		Me.lbl_J2KPreset.MKBoundControl2 = Nothing
+		Me.lbl_J2KPreset.MKBoundControl3 = Nothing
+		Me.lbl_J2KPreset.MKBoundControl4 = Nothing
+		Me.lbl_J2KPreset.MKBoundControl5 = Nothing
+		Me.lbl_J2KPreset.Name = "lbl_J2KPreset"
+		Me.lbl_J2KPreset.Size = New System.Drawing.Size(112, 20)
+		ToolTipTitleItem35.Text = "J2K Preset"
+		ToolTipItem28.LeftIndent = 6
+		ToolTipItem28.Text = resources.GetString("ToolTipItem28.Text")
+		SuperToolTip39.Items.Add(ToolTipTitleItem35)
+		SuperToolTip39.Items.Add(ToolTipItem28)
+		Me.lbl_J2KPreset.SuperTip = SuperToolTip39
+		Me.lbl_J2KPreset.TabIndex = 7
+		Me.lbl_J2KPreset.Text = "J2K Preset:"
 		'
 		'cmb_List_Generator
 		'
 		Me.cmb_List_Generator.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
 						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.cmb_List_Generator.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_Emulators, "id_List_Generators", True))
-		Me.cmb_List_Generator.Location = New System.Drawing.Point(118, 139)
+		Me.cmb_List_Generator.Location = New System.Drawing.Point(116, 141)
 		Me.cmb_List_Generator.MKBoundLabel = Nothing
 		Me.cmb_List_Generator.MKEditValue_Compare = Nothing
 		Me.cmb_List_Generator.Name = "cmb_List_Generator"
 		Me.cmb_List_Generator.Properties.AllowFocused = False
-		ToolTipItem2.Text = "Add a List Generator globally"
-		SuperToolTip5.Items.Add(ToolTipItem2)
-		ToolTipItem3.Text = "Remove this List Generator globally"
-		SuperToolTip6.Items.Add(ToolTipItem3)
-		ToolTipItem4.Text = "Edit this List Generator"
-		SuperToolTip7.Items.Add(ToolTipItem4)
-		ToolTipItem5.Text = "Don't use a List Generator with this Emulator"
-		SuperToolTip8.Items.Add(ToolTipItem5)
-		Me.cmb_List_Generator.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject1, SerializableAppearanceObject2, SerializableAppearanceObject3, SerializableAppearanceObject4, "", Nothing, SuperToolTip5, True), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Minus, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject5, SerializableAppearanceObject6, SerializableAppearanceObject7, SerializableAppearanceObject8, "", Nothing, SuperToolTip6, True), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject9, SerializableAppearanceObject10, SerializableAppearanceObject11, SerializableAppearanceObject12, "", Nothing, SuperToolTip7, True), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject13, SerializableAppearanceObject14, SerializableAppearanceObject15, SerializableAppearanceObject16, "", Nothing, SuperToolTip8, True)})
+		ToolTipItem29.Text = "Add a List Generator globally"
+		SuperToolTip40.Items.Add(ToolTipItem29)
+		ToolTipItem30.Text = "Remove this List Generator globally"
+		SuperToolTip41.Items.Add(ToolTipItem30)
+		ToolTipItem31.Text = "Edit this List Generator"
+		SuperToolTip42.Items.Add(ToolTipItem31)
+		ToolTipItem32.Text = "Don't use a List Generator with this Emulator"
+		SuperToolTip43.Items.Add(ToolTipItem32)
+		Me.cmb_List_Generator.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject17, SerializableAppearanceObject18, SerializableAppearanceObject19, SerializableAppearanceObject20, "", Nothing, SuperToolTip40, True), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Minus, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject21, SerializableAppearanceObject22, SerializableAppearanceObject23, SerializableAppearanceObject24, "", Nothing, SuperToolTip41, True), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject25, SerializableAppearanceObject26, SerializableAppearanceObject27, SerializableAppearanceObject28, "", Nothing, SuperToolTip42, True), New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, Nothing, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject29, SerializableAppearanceObject30, SerializableAppearanceObject31, SerializableAppearanceObject32, "", Nothing, SuperToolTip43, True)})
 		Me.cmb_List_Generator.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("id_List_Generators", "id_List_Generators", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 5, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Main_Template", "Main_Template", 5, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("File_Entry_Template", "File_Entry_Template", 5, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Sort", "Sort", 5, DevExpress.Utils.FormatType.Numeric, "", False, DevExpress.Utils.HorzAlignment.Far)})
 		Me.cmb_List_Generator.Properties.DataSource = Me.BS_List_Generators
 		Me.cmb_List_Generator.Properties.DisplayMember = "Name"
@@ -545,13 +814,13 @@ Partial Class frm_Emulators
 		Me.cmb_List_Generator.Properties.ShowFooter = False
 		Me.cmb_List_Generator.Properties.ShowHeader = False
 		Me.cmb_List_Generator.Properties.ValueMember = "id_List_Generators"
-		Me.cmb_List_Generator.Size = New System.Drawing.Size(292, 20)
-		ToolTipTitleItem5.Text = "List Generator"
-		ToolTipItem6.LeftIndent = 6
-		ToolTipItem6.Text = resources.GetString("ToolTipItem6.Text")
-		SuperToolTip9.Items.Add(ToolTipTitleItem5)
-		SuperToolTip9.Items.Add(ToolTipItem6)
-		Me.cmb_List_Generator.SuperTip = SuperToolTip9
+		Me.cmb_List_Generator.Size = New System.Drawing.Size(314, 20)
+		ToolTipTitleItem36.Text = "List Generator"
+		ToolTipItem33.LeftIndent = 6
+		ToolTipItem33.Text = resources.GetString("ToolTipItem33.Text")
+		SuperToolTip44.Items.Add(ToolTipTitleItem36)
+		SuperToolTip44.Items.Add(ToolTipItem33)
+		Me.cmb_List_Generator.SuperTip = SuperToolTip44
 		Me.cmb_List_Generator.TabIndex = 14
 		'
 		'BS_List_Generators
@@ -559,11 +828,33 @@ Partial Class frm_Emulators
 		Me.BS_List_Generators.DataMember = "tbl_List_Generators"
 		Me.BS_List_Generators.DataSource = Me.DS_ML
 		'
+		'lbl_Screenshot_Directory
+		'
+		Me.lbl_Screenshot_Directory.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_Screenshot_Directory.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_Screenshot_Directory.Location = New System.Drawing.Point(3, 95)
+		Me.lbl_Screenshot_Directory.MKBoundControl1 = Nothing
+		Me.lbl_Screenshot_Directory.MKBoundControl2 = Nothing
+		Me.lbl_Screenshot_Directory.MKBoundControl3 = Nothing
+		Me.lbl_Screenshot_Directory.MKBoundControl4 = Nothing
+		Me.lbl_Screenshot_Directory.MKBoundControl5 = Nothing
+		Me.lbl_Screenshot_Directory.Name = "lbl_Screenshot_Directory"
+		Me.lbl_Screenshot_Directory.Size = New System.Drawing.Size(112, 20)
+		ToolTipTitleItem12.Text = "Screenshot Directory"
+		ToolTipItem8.LeftIndent = 6
+		ToolTipItem8.Text = "Define the screenshot directory of the emulator here. This will be used for autom" &
+		"atic screenshot collection of your roms."
+		SuperToolTip12.Items.Add(ToolTipTitleItem12)
+		SuperToolTip12.Items.Add(ToolTipItem8)
+		Me.lbl_Screenshot_Directory.SuperTip = SuperToolTip12
+		Me.lbl_Screenshot_Directory.TabIndex = 7
+		Me.lbl_Screenshot_Directory.Text = "Screenshot Directory:"
+		'
 		'lbl_List_Generator
 		'
 		Me.lbl_List_Generator.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
 		Me.lbl_List_Generator.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_List_Generator.Location = New System.Drawing.Point(3, 139)
+		Me.lbl_List_Generator.Location = New System.Drawing.Point(3, 141)
 		Me.lbl_List_Generator.MKBoundControl1 = Nothing
 		Me.lbl_List_Generator.MKBoundControl2 = Nothing
 		Me.lbl_List_Generator.MKBoundControl3 = Nothing
@@ -571,21 +862,42 @@ Partial Class frm_Emulators
 		Me.lbl_List_Generator.MKBoundControl5 = Nothing
 		Me.lbl_List_Generator.Name = "lbl_List_Generator"
 		Me.lbl_List_Generator.Size = New System.Drawing.Size(112, 20)
-		ToolTipTitleItem6.Text = "List Generator"
-		ToolTipItem7.LeftIndent = 6
-		ToolTipItem7.Text = resources.GetString("ToolTipItem7.Text")
-		SuperToolTip10.Items.Add(ToolTipTitleItem6)
-		SuperToolTip10.Items.Add(ToolTipItem7)
-		Me.lbl_List_Generator.SuperTip = SuperToolTip10
+		ToolTipTitleItem37.Text = "List Generator"
+		ToolTipItem9.LeftIndent = 6
+		ToolTipItem9.Text = resources.GetString("ToolTipItem9.Text")
+		SuperToolTip13.Items.Add(ToolTipTitleItem37)
+		SuperToolTip13.Items.Add(ToolTipItem9)
+		Me.lbl_List_Generator.SuperTip = SuperToolTip13
 		Me.lbl_List_Generator.TabIndex = 13
 		Me.lbl_List_Generator.Text = "List Generator:"
+		'
+		'lbl_StartupParameter
+		'
+		Me.lbl_StartupParameter.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_StartupParameter.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_StartupParameter.Location = New System.Drawing.Point(3, 118)
+		Me.lbl_StartupParameter.MKBoundControl1 = Nothing
+		Me.lbl_StartupParameter.MKBoundControl2 = Nothing
+		Me.lbl_StartupParameter.MKBoundControl3 = Nothing
+		Me.lbl_StartupParameter.MKBoundControl4 = Nothing
+		Me.lbl_StartupParameter.MKBoundControl5 = Nothing
+		Me.lbl_StartupParameter.Name = "lbl_StartupParameter"
+		Me.lbl_StartupParameter.Size = New System.Drawing.Size(112, 20)
+		ToolTipTitleItem38.Text = "Startup Parameter"
+		ToolTipItem10.LeftIndent = 6
+		ToolTipItem10.Text = resources.GetString("ToolTipItem10.Text")
+		SuperToolTip14.Items.Add(ToolTipTitleItem38)
+		SuperToolTip14.Items.Add(ToolTipItem10)
+		Me.lbl_StartupParameter.SuperTip = SuperToolTip14
+		Me.lbl_StartupParameter.TabIndex = 7
+		Me.lbl_StartupParameter.Text = "Startup Parameter:"
 		'
 		'cmb_Libretro_Core
 		'
 		Me.cmb_Libretro_Core.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
 						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.cmb_Libretro_Core.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_Emulators, "Libretro_Core", True))
-		Me.cmb_Libretro_Core.Location = New System.Drawing.Point(118, 185)
+		Me.cmb_Libretro_Core.Location = New System.Drawing.Point(116, 187)
 		Me.cmb_Libretro_Core.MKBoundLabel = Nothing
 		Me.cmb_Libretro_Core.MKEditValue_Compare = Nothing
 		Me.cmb_Libretro_Core.Name = "cmb_Libretro_Core"
@@ -598,13 +910,13 @@ Partial Class frm_Emulators
 		Me.cmb_Libretro_Core.Properties.ShowFooter = False
 		Me.cmb_Libretro_Core.Properties.ShowHeader = False
 		Me.cmb_Libretro_Core.Properties.ValueMember = "DLL"
-		Me.cmb_Libretro_Core.Size = New System.Drawing.Size(292, 20)
-		ToolTipTitleItem7.Text = "Libretro Core"
-		ToolTipItem8.LeftIndent = 6
-		ToolTipItem8.Text = resources.GetString("ToolTipItem8.Text")
-		SuperToolTip11.Items.Add(ToolTipTitleItem7)
-		SuperToolTip11.Items.Add(ToolTipItem8)
-		Me.cmb_Libretro_Core.SuperTip = SuperToolTip11
+		Me.cmb_Libretro_Core.Size = New System.Drawing.Size(314, 20)
+		ToolTipTitleItem39.Text = "Libretro Core"
+		ToolTipItem11.LeftIndent = 6
+		ToolTipItem11.Text = resources.GetString("ToolTipItem11.Text")
+		SuperToolTip15.Items.Add(ToolTipTitleItem39)
+		SuperToolTip15.Items.Add(ToolTipItem11)
+		Me.cmb_Libretro_Core.SuperTip = SuperToolTip15
 		Me.cmb_Libretro_Core.TabIndex = 12
 		Me.cmb_Libretro_Core.Visible = False
 		'
@@ -619,11 +931,23 @@ Partial Class frm_Emulators
 		Me.BTA_Libretro_Core.Transaction = Nothing
 		Me.BTA_Libretro_Core.UpdateTablesStream = CType(resources.GetObject("BTA_Libretro_Core.UpdateTablesStream"), System.Collections.Generic.List(Of String))
 		'
+		'txb_Name
+		'
+		Me.txb_Name.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.txb_Name.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_Emulators, "Displayname", True))
+		Me.txb_Name.Location = New System.Drawing.Point(116, 26)
+		Me.txb_Name.MKBoundLabel = Nothing
+		Me.txb_Name.MKEditValue_Compare = Nothing
+		Me.txb_Name.Name = "txb_Name"
+		Me.txb_Name.Size = New System.Drawing.Size(314, 20)
+		Me.txb_Name.TabIndex = 0
+		'
 		'lbl_Libretro_Core
 		'
 		Me.lbl_Libretro_Core.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
 		Me.lbl_Libretro_Core.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_Libretro_Core.Location = New System.Drawing.Point(3, 185)
+		Me.lbl_Libretro_Core.Location = New System.Drawing.Point(3, 187)
 		Me.lbl_Libretro_Core.MKBoundControl1 = Nothing
 		Me.lbl_Libretro_Core.MKBoundControl2 = Nothing
 		Me.lbl_Libretro_Core.MKBoundControl3 = Nothing
@@ -631,21 +955,36 @@ Partial Class frm_Emulators
 		Me.lbl_Libretro_Core.MKBoundControl5 = Nothing
 		Me.lbl_Libretro_Core.Name = "lbl_Libretro_Core"
 		Me.lbl_Libretro_Core.Size = New System.Drawing.Size(112, 20)
-		ToolTipTitleItem8.Text = "Libretro Core"
-		ToolTipItem9.LeftIndent = 6
-		ToolTipItem9.Text = resources.GetString("ToolTipItem9.Text")
-		SuperToolTip12.Items.Add(ToolTipTitleItem8)
-		SuperToolTip12.Items.Add(ToolTipItem9)
-		Me.lbl_Libretro_Core.SuperTip = SuperToolTip12
+		ToolTipTitleItem16.Text = "Libretro Core"
+		ToolTipItem12.LeftIndent = 6
+		ToolTipItem12.Text = resources.GetString("ToolTipItem12.Text")
+		SuperToolTip16.Items.Add(ToolTipTitleItem16)
+		SuperToolTip16.Items.Add(ToolTipItem12)
+		Me.lbl_Libretro_Core.SuperTip = SuperToolTip16
 		Me.lbl_Libretro_Core.TabIndex = 11
 		Me.lbl_Libretro_Core.Text = "Libretro Core:"
 		Me.lbl_Libretro_Core.Visible = False
+		'
+		'lbl_Executable
+		'
+		Me.lbl_Executable.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+		Me.lbl_Executable.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+		Me.lbl_Executable.Location = New System.Drawing.Point(3, 72)
+		Me.lbl_Executable.MKBoundControl1 = Nothing
+		Me.lbl_Executable.MKBoundControl2 = Nothing
+		Me.lbl_Executable.MKBoundControl3 = Nothing
+		Me.lbl_Executable.MKBoundControl4 = Nothing
+		Me.lbl_Executable.MKBoundControl5 = Nothing
+		Me.lbl_Executable.Name = "lbl_Executable"
+		Me.lbl_Executable.Size = New System.Drawing.Size(112, 20)
+		Me.lbl_Executable.TabIndex = 7
+		Me.lbl_Executable.Text = "Executable:"
 		'
 		'cmb_J2K_Config
 		'
 		Me.cmb_J2K_Config.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
 						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.cmb_J2K_Config.Location = New System.Drawing.Point(118, 162)
+		Me.cmb_J2K_Config.Location = New System.Drawing.Point(116, 164)
 		Me.cmb_J2K_Config.MKBoundLabel = Nothing
 		Me.cmb_J2K_Config.MKEditValue_Compare = Nothing
 		Me.cmb_J2K_Config.Name = "cmb_J2K_Config"
@@ -658,13 +997,13 @@ Partial Class frm_Emulators
 		Me.cmb_J2K_Config.Properties.ShowFooter = False
 		Me.cmb_J2K_Config.Properties.ShowHeader = False
 		Me.cmb_J2K_Config.Properties.ValueMember = "id_Config"
-		Me.cmb_J2K_Config.Size = New System.Drawing.Size(292, 20)
-		ToolTipTitleItem9.Text = "J2K Preset"
-		ToolTipItem10.LeftIndent = 6
-		ToolTipItem10.Text = "Choose which preset you want to use for the J2K joystick to keyboard mapper."
-		SuperToolTip13.Items.Add(ToolTipTitleItem9)
-		SuperToolTip13.Items.Add(ToolTipItem10)
-		Me.cmb_J2K_Config.SuperTip = SuperToolTip13
+		Me.cmb_J2K_Config.Size = New System.Drawing.Size(314, 20)
+		ToolTipTitleItem40.Text = "J2K Preset"
+		ToolTipItem16.LeftIndent = 6
+		ToolTipItem16.Text = "Choose which preset you want to use for the J2K joystick to keyboard mapper."
+		SuperToolTip20.Items.Add(ToolTipTitleItem40)
+		SuperToolTip20.Items.Add(ToolTipItem16)
+		Me.cmb_J2K_Config.SuperTip = SuperToolTip20
 		Me.cmb_J2K_Config.TabIndex = 8
 		'
 		'BS_J2K
@@ -691,11 +1030,23 @@ Partial Class frm_Emulators
 		'
 		Me.DataColumn6.ColumnName = "ConfigName"
 		'
+		'txb_Directory
+		'
+		Me.txb_Directory.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.txb_Directory.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_Emulators, "InstallDirectory", True))
+		Me.txb_Directory.Location = New System.Drawing.Point(116, 49)
+		Me.txb_Directory.MKBoundLabel = Nothing
+		Me.txb_Directory.MKEditValue_Compare = Nothing
+		Me.txb_Directory.Name = "txb_Directory"
+		Me.txb_Directory.Size = New System.Drawing.Size(279, 20)
+		Me.txb_Directory.TabIndex = 1
+		'
 		'lbl_Name
 		'
 		Me.lbl_Name.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
 		Me.lbl_Name.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_Name.Location = New System.Drawing.Point(3, 24)
+		Me.lbl_Name.Location = New System.Drawing.Point(3, 26)
 		Me.lbl_Name.MKBoundControl1 = Nothing
 		Me.lbl_Name.MKBoundControl2 = Nothing
 		Me.lbl_Name.MKBoundControl3 = Nothing
@@ -706,102 +1057,11 @@ Partial Class frm_Emulators
 		Me.lbl_Name.TabIndex = 7
 		Me.lbl_Name.Text = "Name:"
 		'
-		'txb_ScreenshotDirectory
-		'
-		Me.txb_ScreenshotDirectory.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.txb_ScreenshotDirectory.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_Emulators, "ScreenshotDirectory", True))
-		Me.txb_ScreenshotDirectory.Location = New System.Drawing.Point(118, 93)
-		Me.txb_ScreenshotDirectory.MKBoundLabel = Nothing
-		Me.txb_ScreenshotDirectory.MKEditValue_Compare = Nothing
-		Me.txb_ScreenshotDirectory.Name = "txb_ScreenshotDirectory"
-		Me.txb_ScreenshotDirectory.Size = New System.Drawing.Size(257, 20)
-		ToolTipTitleItem10.Text = "Screenshot Directory"
-		ToolTipItem11.LeftIndent = 6
-		ToolTipItem11.Text = "Define the screenshot directory of the emulator here. This will be used for autom" &
-		"atic screenshot collection of your roms."
-		SuperToolTip14.Items.Add(ToolTipTitleItem10)
-		SuperToolTip14.Items.Add(ToolTipItem11)
-		Me.txb_ScreenshotDirectory.SuperTip = SuperToolTip14
-		Me.txb_ScreenshotDirectory.TabIndex = 5
-		'
-		'btn_Run
-		'
-		Me.btn_Run.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btn_Run.Location = New System.Drawing.Point(378, 70)
-		Me.btn_Run.Name = "btn_Run"
-		Me.btn_Run.Size = New System.Drawing.Size(32, 20)
-		ToolTipTitleItem11.Text = "Run"
-		ToolTipItem12.LeftIndent = 6
-		ToolTipItem12.Text = "Run the emulator right here, right now."
-		SuperToolTip15.Items.Add(ToolTipTitleItem11)
-		SuperToolTip15.Items.Add(ToolTipItem12)
-		Me.btn_Run.SuperTip = SuperToolTip15
-		Me.btn_Run.TabIndex = 4
-		Me.btn_Run.Text = "&Run"
-		'
-		'btn_EmulatorFileOpen
-		'
-		Me.btn_EmulatorFileOpen.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btn_EmulatorFileOpen.Location = New System.Drawing.Point(378, 47)
-		Me.btn_EmulatorFileOpen.Name = "btn_EmulatorFileOpen"
-		Me.btn_EmulatorFileOpen.Size = New System.Drawing.Size(32, 20)
-		ToolTipTitleItem12.Text = "Choose Emulator"
-		ToolTipItem13.LeftIndent = 6
-		ToolTipItem13.Text = "Choose emulator by selecting the executable."
-		SuperToolTip16.Items.Add(ToolTipTitleItem12)
-		SuperToolTip16.Items.Add(ToolTipItem13)
-		Me.btn_EmulatorFileOpen.SuperTip = SuperToolTip16
-		Me.btn_EmulatorFileOpen.TabIndex = 2
-		Me.btn_EmulatorFileOpen.Text = "..."
-		'
-		'txb_StartupParameter
-		'
-		Me.txb_StartupParameter.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.txb_StartupParameter.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_Emulators, "StartupParameter", True))
-		Me.txb_StartupParameter.Location = New System.Drawing.Point(118, 116)
-		Me.txb_StartupParameter.MKBoundLabel = Nothing
-		Me.txb_StartupParameter.MKEditValue_Compare = Nothing
-		Me.txb_StartupParameter.Name = "txb_StartupParameter"
-		Me.txb_StartupParameter.Size = New System.Drawing.Size(292, 20)
-		ToolTipTitleItem13.Text = "Startup Parameter"
-		ToolTipItem14.LeftIndent = 6
-		ToolTipItem14.Text = resources.GetString("ToolTipItem14.Text")
-		SuperToolTip17.Items.Add(ToolTipTitleItem13)
-		SuperToolTip17.Items.Add(ToolTipItem14)
-		Me.txb_StartupParameter.SuperTip = SuperToolTip17
-		Me.txb_StartupParameter.TabIndex = 7
-		'
-		'btn_ScreenshotDirectoryOpen
-		'
-		Me.btn_ScreenshotDirectoryOpen.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btn_ScreenshotDirectoryOpen.Location = New System.Drawing.Point(378, 93)
-		Me.btn_ScreenshotDirectoryOpen.Name = "btn_ScreenshotDirectoryOpen"
-		Me.btn_ScreenshotDirectoryOpen.Size = New System.Drawing.Size(32, 20)
-		ToolTipTitleItem14.Text = "browse screenshot directory"
-		SuperToolTip18.Items.Add(ToolTipTitleItem14)
-		Me.btn_ScreenshotDirectoryOpen.SuperTip = SuperToolTip18
-		Me.btn_ScreenshotDirectoryOpen.TabIndex = 6
-		Me.btn_ScreenshotDirectoryOpen.Text = "..."
-		'
-		'txb_Executable
-		'
-		Me.txb_Executable.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.txb_Executable.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_Emulators, "Executable", True))
-		Me.txb_Executable.Location = New System.Drawing.Point(118, 70)
-		Me.txb_Executable.MKBoundLabel = Nothing
-		Me.txb_Executable.MKEditValue_Compare = Nothing
-		Me.txb_Executable.Name = "txb_Executable"
-		Me.txb_Executable.Size = New System.Drawing.Size(257, 20)
-		Me.txb_Executable.TabIndex = 3
-		'
 		'lbl_Directory
 		'
 		Me.lbl_Directory.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
 		Me.lbl_Directory.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_Directory.Location = New System.Drawing.Point(3, 47)
+		Me.lbl_Directory.Location = New System.Drawing.Point(3, 49)
 		Me.lbl_Directory.MKBoundControl1 = Nothing
 		Me.lbl_Directory.MKBoundControl2 = Nothing
 		Me.lbl_Directory.MKBoundControl3 = Nothing
@@ -812,116 +1072,114 @@ Partial Class frm_Emulators
 		Me.lbl_Directory.TabIndex = 7
 		Me.lbl_Directory.Text = "Directory:"
 		'
-		'txb_Directory
+		'txb_ScreenshotDirectory
 		'
-		Me.txb_Directory.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+		Me.txb_ScreenshotDirectory.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
 						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.txb_Directory.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_Emulators, "InstallDirectory", True))
-		Me.txb_Directory.Location = New System.Drawing.Point(118, 47)
-		Me.txb_Directory.MKBoundLabel = Nothing
-		Me.txb_Directory.MKEditValue_Compare = Nothing
-		Me.txb_Directory.Name = "txb_Directory"
-		Me.txb_Directory.Size = New System.Drawing.Size(257, 20)
-		Me.txb_Directory.TabIndex = 1
-		'
-		'lbl_Executable
-		'
-		Me.lbl_Executable.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_Executable.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_Executable.Location = New System.Drawing.Point(3, 70)
-		Me.lbl_Executable.MKBoundControl1 = Nothing
-		Me.lbl_Executable.MKBoundControl2 = Nothing
-		Me.lbl_Executable.MKBoundControl3 = Nothing
-		Me.lbl_Executable.MKBoundControl4 = Nothing
-		Me.lbl_Executable.MKBoundControl5 = Nothing
-		Me.lbl_Executable.Name = "lbl_Executable"
-		Me.lbl_Executable.Size = New System.Drawing.Size(112, 20)
-		Me.lbl_Executable.TabIndex = 7
-		Me.lbl_Executable.Text = "Executable:"
-		'
-		'txb_Name
-		'
-		Me.txb_Name.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.txb_Name.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_Emulators, "Displayname", True))
-		Me.txb_Name.Location = New System.Drawing.Point(118, 24)
-		Me.txb_Name.MKBoundLabel = Nothing
-		Me.txb_Name.MKEditValue_Compare = Nothing
-		Me.txb_Name.Name = "txb_Name"
-		Me.txb_Name.Size = New System.Drawing.Size(292, 20)
-		Me.txb_Name.TabIndex = 0
-		'
-		'lbl_StartupParameter
-		'
-		Me.lbl_StartupParameter.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_StartupParameter.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_StartupParameter.Location = New System.Drawing.Point(3, 116)
-		Me.lbl_StartupParameter.MKBoundControl1 = Nothing
-		Me.lbl_StartupParameter.MKBoundControl2 = Nothing
-		Me.lbl_StartupParameter.MKBoundControl3 = Nothing
-		Me.lbl_StartupParameter.MKBoundControl4 = Nothing
-		Me.lbl_StartupParameter.MKBoundControl5 = Nothing
-		Me.lbl_StartupParameter.Name = "lbl_StartupParameter"
-		Me.lbl_StartupParameter.Size = New System.Drawing.Size(112, 20)
-		ToolTipTitleItem15.Text = "Startup Parameter"
-		ToolTipItem15.LeftIndent = 6
-		ToolTipItem15.Text = resources.GetString("ToolTipItem15.Text")
-		SuperToolTip19.Items.Add(ToolTipTitleItem15)
-		SuperToolTip19.Items.Add(ToolTipItem15)
-		Me.lbl_StartupParameter.SuperTip = SuperToolTip19
-		Me.lbl_StartupParameter.TabIndex = 7
-		Me.lbl_StartupParameter.Text = "Startup Parameter:"
-		'
-		'lbl_Screenshot_Directory
-		'
-		Me.lbl_Screenshot_Directory.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_Screenshot_Directory.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_Screenshot_Directory.Location = New System.Drawing.Point(3, 93)
-		Me.lbl_Screenshot_Directory.MKBoundControl1 = Nothing
-		Me.lbl_Screenshot_Directory.MKBoundControl2 = Nothing
-		Me.lbl_Screenshot_Directory.MKBoundControl3 = Nothing
-		Me.lbl_Screenshot_Directory.MKBoundControl4 = Nothing
-		Me.lbl_Screenshot_Directory.MKBoundControl5 = Nothing
-		Me.lbl_Screenshot_Directory.Name = "lbl_Screenshot_Directory"
-		Me.lbl_Screenshot_Directory.Size = New System.Drawing.Size(112, 20)
-		ToolTipTitleItem16.Text = "Screenshot Directory"
-		ToolTipItem16.LeftIndent = 6
-		ToolTipItem16.Text = "Define the screenshot directory of the emulator here. This will be used for autom" &
+		Me.txb_ScreenshotDirectory.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_Emulators, "ScreenshotDirectory", True))
+		Me.txb_ScreenshotDirectory.Location = New System.Drawing.Point(116, 95)
+		Me.txb_ScreenshotDirectory.MKBoundLabel = Nothing
+		Me.txb_ScreenshotDirectory.MKEditValue_Compare = Nothing
+		Me.txb_ScreenshotDirectory.Name = "txb_ScreenshotDirectory"
+		Me.txb_ScreenshotDirectory.Size = New System.Drawing.Size(279, 20)
+		ToolTipTitleItem18.Text = "Screenshot Directory"
+		ToolTipItem18.LeftIndent = 6
+		ToolTipItem18.Text = "Define the screenshot directory of the emulator here. This will be used for autom" &
 		"atic screenshot collection of your roms."
-		SuperToolTip20.Items.Add(ToolTipTitleItem16)
-		SuperToolTip20.Items.Add(ToolTipItem16)
-		Me.lbl_Screenshot_Directory.SuperTip = SuperToolTip20
-		Me.lbl_Screenshot_Directory.TabIndex = 7
-		Me.lbl_Screenshot_Directory.Text = "Screenshot Directory:"
+		SuperToolTip22.Items.Add(ToolTipTitleItem18)
+		SuperToolTip22.Items.Add(ToolTipItem18)
+		Me.txb_ScreenshotDirectory.SuperTip = SuperToolTip22
+		Me.txb_ScreenshotDirectory.TabIndex = 5
 		'
-		'lbl_J2KPreset
+		'txb_Executable
 		'
-		Me.lbl_J2KPreset.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-		Me.lbl_J2KPreset.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
-		Me.lbl_J2KPreset.Location = New System.Drawing.Point(3, 162)
-		Me.lbl_J2KPreset.MKBoundControl1 = Nothing
-		Me.lbl_J2KPreset.MKBoundControl2 = Nothing
-		Me.lbl_J2KPreset.MKBoundControl3 = Nothing
-		Me.lbl_J2KPreset.MKBoundControl4 = Nothing
-		Me.lbl_J2KPreset.MKBoundControl5 = Nothing
-		Me.lbl_J2KPreset.Name = "lbl_J2KPreset"
-		Me.lbl_J2KPreset.Size = New System.Drawing.Size(112, 20)
-		ToolTipTitleItem17.Text = "J2K Preset"
-		ToolTipItem17.LeftIndent = 6
-		ToolTipItem17.Text = resources.GetString("ToolTipItem17.Text")
-		SuperToolTip21.Items.Add(ToolTipTitleItem17)
-		SuperToolTip21.Items.Add(ToolTipItem17)
-		Me.lbl_J2KPreset.SuperTip = SuperToolTip21
-		Me.lbl_J2KPreset.TabIndex = 7
-		Me.lbl_J2KPreset.Text = "J2K Preset:"
+		Me.txb_Executable.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.txb_Executable.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_Emulators, "Executable", True))
+		Me.txb_Executable.Location = New System.Drawing.Point(116, 72)
+		Me.txb_Executable.MKBoundLabel = Nothing
+		Me.txb_Executable.MKEditValue_Compare = Nothing
+		Me.txb_Executable.Name = "txb_Executable"
+		Me.txb_Executable.Size = New System.Drawing.Size(279, 20)
+		Me.txb_Executable.TabIndex = 3
+		'
+		'btn_Run
+		'
+		Me.btn_Run.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.btn_Run.Location = New System.Drawing.Point(398, 72)
+		Me.btn_Run.Name = "btn_Run"
+		Me.btn_Run.Size = New System.Drawing.Size(32, 20)
+		ToolTipTitleItem19.Text = "Run"
+		ToolTipItem19.LeftIndent = 6
+		ToolTipItem19.Text = "Run the emulator right here, right now."
+		SuperToolTip23.Items.Add(ToolTipTitleItem19)
+		SuperToolTip23.Items.Add(ToolTipItem19)
+		Me.btn_Run.SuperTip = SuperToolTip23
+		Me.btn_Run.TabIndex = 4
+		Me.btn_Run.Text = "&Run"
+		'
+		'btn_ScreenshotDirectoryOpen
+		'
+		Me.btn_ScreenshotDirectoryOpen.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.btn_ScreenshotDirectoryOpen.Location = New System.Drawing.Point(398, 95)
+		Me.btn_ScreenshotDirectoryOpen.Name = "btn_ScreenshotDirectoryOpen"
+		Me.btn_ScreenshotDirectoryOpen.Size = New System.Drawing.Size(32, 20)
+		ToolTipTitleItem41.Text = "browse screenshot directory"
+		SuperToolTip45.Items.Add(ToolTipTitleItem41)
+		Me.btn_ScreenshotDirectoryOpen.SuperTip = SuperToolTip45
+		Me.btn_ScreenshotDirectoryOpen.TabIndex = 6
+		Me.btn_ScreenshotDirectoryOpen.Text = "..."
+		'
+		'btn_EmulatorFileOpen
+		'
+		Me.btn_EmulatorFileOpen.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.btn_EmulatorFileOpen.Location = New System.Drawing.Point(398, 49)
+		Me.btn_EmulatorFileOpen.Name = "btn_EmulatorFileOpen"
+		Me.btn_EmulatorFileOpen.Size = New System.Drawing.Size(32, 20)
+		ToolTipTitleItem42.Text = "Choose Emulator"
+		ToolTipItem34.LeftIndent = 6
+		ToolTipItem34.Text = "Choose emulator by selecting the executable."
+		SuperToolTip46.Items.Add(ToolTipTitleItem42)
+		SuperToolTip46.Items.Add(ToolTipItem34)
+		Me.btn_EmulatorFileOpen.SuperTip = SuperToolTip46
+		Me.btn_EmulatorFileOpen.TabIndex = 2
+		Me.btn_EmulatorFileOpen.Text = "..."
+		'
+		'txb_StartupParameter
+		'
+		Me.txb_StartupParameter.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+						Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.txb_StartupParameter.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.BS_Emulators, "StartupParameter", True))
+		Me.txb_StartupParameter.Location = New System.Drawing.Point(116, 118)
+		Me.txb_StartupParameter.MKBoundLabel = Nothing
+		Me.txb_StartupParameter.MKEditValue_Compare = Nothing
+		Me.txb_StartupParameter.Name = "txb_StartupParameter"
+		Me.txb_StartupParameter.Size = New System.Drawing.Size(314, 20)
+		ToolTipTitleItem43.Text = "Startup Parameter"
+		ToolTipItem35.LeftIndent = 6
+		ToolTipItem35.Text = resources.GetString("ToolTipItem35.Text")
+		SuperToolTip47.Items.Add(ToolTipTitleItem43)
+		SuperToolTip47.Items.Add(ToolTipItem35)
+		Me.txb_StartupParameter.SuperTip = SuperToolTip47
+		Me.txb_StartupParameter.TabIndex = 7
 		'
 		'tpg_MV_Settings
 		'
-		Me.tpg_MV_Settings.Controls.Add(Me.grd_MV)
-		Me.tpg_MV_Settings.Controls.Add(Me.pnl_MV_Buttons)
+		Me.tpg_MV_Settings.Controls.Add(Me.pnl_Settings_MV)
 		Me.tpg_MV_Settings.Name = "tpg_MV_Settings"
-		Me.tpg_MV_Settings.Size = New System.Drawing.Size(405, 207)
+		Me.tpg_MV_Settings.Size = New System.Drawing.Size(431, 256)
 		Me.tpg_MV_Settings.Text = "Multiple Volumes"
+		'
+		'pnl_Settings_MV
+		'
+		Me.pnl_Settings_MV.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.pnl_Settings_MV.Controls.Add(Me.grd_MV)
+		Me.pnl_Settings_MV.Controls.Add(Me.pnl_MV_Buttons)
+		Me.pnl_Settings_MV.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.pnl_Settings_MV.Location = New System.Drawing.Point(0, 0)
+		Me.pnl_Settings_MV.Name = "pnl_Settings_MV"
+		Me.pnl_Settings_MV.Size = New System.Drawing.Size(431, 256)
+		Me.pnl_Settings_MV.TabIndex = 9
 		'
 		'grd_MV
 		'
@@ -931,7 +1189,7 @@ Partial Class frm_Emulators
 		Me.grd_MV.MainView = Me.gv_MV
 		Me.grd_MV.Name = "grd_MV"
 		Me.grd_MV.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_MV})
-		Me.grd_MV.Size = New System.Drawing.Size(405, 181)
+		Me.grd_MV.Size = New System.Drawing.Size(431, 230)
 		Me.grd_MV.TabIndex = 0
 		Me.grd_MV.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_MV})
 		'
@@ -990,46 +1248,417 @@ Partial Class frm_Emulators
 		Me.pnl_MV_Buttons.Controls.Add(Me.btn_MV_Delete)
 		Me.pnl_MV_Buttons.Controls.Add(Me.btn_MV_Add)
 		Me.pnl_MV_Buttons.Dock = System.Windows.Forms.DockStyle.Bottom
-		Me.pnl_MV_Buttons.Location = New System.Drawing.Point(0, 181)
+		Me.pnl_MV_Buttons.Location = New System.Drawing.Point(0, 230)
 		Me.pnl_MV_Buttons.Name = "pnl_MV_Buttons"
-		Me.pnl_MV_Buttons.Size = New System.Drawing.Size(405, 26)
+		Me.pnl_MV_Buttons.Size = New System.Drawing.Size(431, 26)
 		Me.pnl_MV_Buttons.TabIndex = 8
 		'
 		'btn_MV_Delete
 		'
 		Me.btn_MV_Delete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btn_MV_Delete.Location = New System.Drawing.Point(326, 3)
+		Me.btn_MV_Delete.Location = New System.Drawing.Point(352, 3)
 		Me.btn_MV_Delete.Name = "btn_MV_Delete"
 		Me.btn_MV_Delete.Size = New System.Drawing.Size(75, 20)
-		ToolTipTitleItem18.Text = "Delete selected Volume from list"
-		SuperToolTip22.Items.Add(ToolTipTitleItem18)
-		Me.btn_MV_Delete.SuperTip = SuperToolTip22
+		ToolTipTitleItem44.Text = "Delete selected Volume from list"
+		SuperToolTip48.Items.Add(ToolTipTitleItem44)
+		Me.btn_MV_Delete.SuperTip = SuperToolTip48
 		Me.btn_MV_Delete.TabIndex = 1
 		Me.btn_MV_Delete.Text = "&Delete"
 		'
 		'btn_MV_Add
 		'
 		Me.btn_MV_Add.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btn_MV_Add.Location = New System.Drawing.Point(248, 3)
+		Me.btn_MV_Add.Location = New System.Drawing.Point(274, 3)
 		Me.btn_MV_Add.Name = "btn_MV_Add"
 		Me.btn_MV_Add.Size = New System.Drawing.Size(75, 20)
-		ToolTipTitleItem19.Text = "Add a Volume to the list"
-		SuperToolTip23.Items.Add(ToolTipTitleItem19)
-		Me.btn_MV_Add.SuperTip = SuperToolTip23
+		ToolTipTitleItem45.Text = "Add a Volume to the list"
+		SuperToolTip49.Items.Add(ToolTipTitleItem45)
+		Me.btn_MV_Add.SuperTip = SuperToolTip49
 		Me.btn_MV_Add.TabIndex = 0
 		Me.btn_MV_Add.Text = "&Add"
+		'
+		'tpg_PrePostLaunch
+		'
+		Me.tpg_PrePostLaunch.Controls.Add(Me.tlp_PrePostLaunch)
+		Me.tpg_PrePostLaunch.Name = "tpg_PrePostLaunch"
+		Me.tpg_PrePostLaunch.Size = New System.Drawing.Size(431, 256)
+		Me.tpg_PrePostLaunch.Text = "Pre- and Post-Launch Commands"
+		'
+		'tlp_PrePostLaunch
+		'
+		Me.tlp_PrePostLaunch.ColumnCount = 1
+		Me.tlp_PrePostLaunch.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+		Me.tlp_PrePostLaunch.Controls.Add(Me.gb_PostLaunch, 0, 1)
+		Me.tlp_PrePostLaunch.Controls.Add(Me.gb_PreLaunch, 0, 0)
+		Me.tlp_PrePostLaunch.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.tlp_PrePostLaunch.Location = New System.Drawing.Point(0, 0)
+		Me.tlp_PrePostLaunch.Name = "tlp_PrePostLaunch"
+		Me.tlp_PrePostLaunch.RowCount = 2
+		Me.tlp_PrePostLaunch.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+		Me.tlp_PrePostLaunch.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+		Me.tlp_PrePostLaunch.Size = New System.Drawing.Size(431, 256)
+		Me.tlp_PrePostLaunch.TabIndex = 0
+		'
+		'gb_PostLaunch
+		'
+		Me.gb_PostLaunch.Controls.Add(Me.grd_PostLaunch)
+		Me.gb_PostLaunch.Controls.Add(Me.pnl_PostLaunch_Buttons)
+		Me.gb_PostLaunch.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.gb_PostLaunch.Location = New System.Drawing.Point(3, 131)
+		Me.gb_PostLaunch.Name = "gb_PostLaunch"
+		Me.gb_PostLaunch.Size = New System.Drawing.Size(425, 122)
+		Me.gb_PostLaunch.TabIndex = 1
+		Me.gb_PostLaunch.Text = "Post-Launch Commands"
+		'
+		'grd_PostLaunch
+		'
+		Me.grd_PostLaunch.DataSource = Me.BS_PostLaunch_Commands
+		Me.grd_PostLaunch.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.grd_PostLaunch.Location = New System.Drawing.Point(2, 20)
+		Me.grd_PostLaunch.MainView = Me.gv_PostLaunch
+		Me.grd_PostLaunch.MenuManager = Me.barmng
+		Me.grd_PostLaunch.Name = "grd_PostLaunch"
+		Me.grd_PostLaunch.Size = New System.Drawing.Size(421, 78)
+		Me.grd_PostLaunch.TabIndex = 3
+		Me.grd_PostLaunch.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_PostLaunch})
+		'
+		'BS_PostLaunch_Commands
+		'
+		Me.BS_PostLaunch_Commands.DataMember = "ttb_Emulators_PostLaunch_Commands"
+		Me.BS_PostLaunch_Commands.DataSource = Me.DS_ML
+		Me.BS_PostLaunch_Commands.Sort = "Sort"
+		'
+		'gv_PostLaunch
+		'
+		Me.gv_PostLaunch.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn5})
+		Me.gv_PostLaunch.GridControl = Me.grd_PostLaunch
+		Me.gv_PostLaunch.Name = "gv_PostLaunch"
+		Me.gv_PostLaunch.OptionsView.ColumnAutoWidth = False
+		Me.gv_PostLaunch.OptionsView.ShowGroupPanel = False
+		'
+		'GridColumn1
+		'
+		Me.GridColumn1.FieldName = "Directory"
+		Me.GridColumn1.Name = "GridColumn1"
+		Me.GridColumn1.OptionsColumn.AllowEdit = False
+		Me.GridColumn1.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.[False]
+		Me.GridColumn1.OptionsColumn.ReadOnly = True
+		Me.GridColumn1.Visible = True
+		Me.GridColumn1.VisibleIndex = 0
+		Me.GridColumn1.Width = 106
+		'
+		'GridColumn2
+		'
+		Me.GridColumn2.FieldName = "Executable"
+		Me.GridColumn2.Name = "GridColumn2"
+		Me.GridColumn2.OptionsColumn.AllowEdit = False
+		Me.GridColumn2.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.[False]
+		Me.GridColumn2.OptionsColumn.ReadOnly = True
+		Me.GridColumn2.Visible = True
+		Me.GridColumn2.VisibleIndex = 1
+		Me.GridColumn2.Width = 122
+		'
+		'GridColumn3
+		'
+		Me.GridColumn3.FieldName = "Parameter"
+		Me.GridColumn3.Name = "GridColumn3"
+		Me.GridColumn3.OptionsColumn.AllowEdit = False
+		Me.GridColumn3.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.[False]
+		Me.GridColumn3.OptionsColumn.ReadOnly = True
+		Me.GridColumn3.Visible = True
+		Me.GridColumn3.VisibleIndex = 2
+		Me.GridColumn3.Width = 129
+		'
+		'GridColumn4
+		'
+		Me.GridColumn4.Caption = "Wait"
+		Me.GridColumn4.FieldName = "WaitForExit"
+		Me.GridColumn4.Name = "GridColumn4"
+		Me.GridColumn4.OptionsColumn.AllowEdit = False
+		Me.GridColumn4.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.[False]
+		Me.GridColumn4.OptionsColumn.ReadOnly = True
+		Me.GridColumn4.ToolTip = "Wait until the command exits"
+		Me.GridColumn4.Visible = True
+		Me.GridColumn4.VisibleIndex = 3
+		Me.GridColumn4.Width = 40
+		'
+		'GridColumn5
+		'
+		Me.GridColumn5.FieldName = "Minimized"
+		Me.GridColumn5.Name = "GridColumn5"
+		Me.GridColumn5.OptionsColumn.AllowEdit = False
+		Me.GridColumn5.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.[False]
+		Me.GridColumn5.OptionsColumn.ReadOnly = True
+		Me.GridColumn5.ToolTip = "Run minimized"
+		Me.GridColumn5.Visible = True
+		Me.GridColumn5.VisibleIndex = 4
+		Me.GridColumn5.Width = 63
+		'
+		'barmng
+		'
+		Me.barmng.DockControls.Add(Me.barDockControlTop)
+		Me.barmng.DockControls.Add(Me.barDockControlBottom)
+		Me.barmng.DockControls.Add(Me.barDockControlLeft)
+		Me.barmng.DockControls.Add(Me.barDockControlRight)
+		Me.barmng.Form = Me
+		Me.barmng.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.bbi_Add, Me.bbi_Duplicate, Me.bbi_Delete, Me.bbi_PreLaunch_Add, Me.bbi_PreLaunch_Edit, Me.bbi_PreLaunch_Delete, Me.bbi_PostLaunch_Add, Me.bbi_PostLaunch_Edit, Me.bbi_PostLaunch_Delete})
+		Me.barmng.MaxItemId = 9
+		'
+		'barDockControlTop
+		'
+		Me.barDockControlTop.CausesValidation = False
+		Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
+		Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
+		Me.barDockControlTop.Size = New System.Drawing.Size(708, 0)
+		'
+		'barDockControlBottom
+		'
+		Me.barDockControlBottom.CausesValidation = False
+		Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
+		Me.barDockControlBottom.Location = New System.Drawing.Point(0, 644)
+		Me.barDockControlBottom.Size = New System.Drawing.Size(708, 0)
+		'
+		'barDockControlLeft
+		'
+		Me.barDockControlLeft.CausesValidation = False
+		Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
+		Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
+		Me.barDockControlLeft.Size = New System.Drawing.Size(0, 644)
+		'
+		'barDockControlRight
+		'
+		Me.barDockControlRight.CausesValidation = False
+		Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
+		Me.barDockControlRight.Location = New System.Drawing.Point(708, 0)
+		Me.barDockControlRight.Size = New System.Drawing.Size(0, 644)
+		'
+		'bbi_Add
+		'
+		Me.bbi_Add.Caption = "&Add"
+		Me.bbi_Add.Id = 0
+		Me.bbi_Add.ImageUri.Uri = "Add"
+		Me.bbi_Add.Name = "bbi_Add"
+		'
+		'bbi_Duplicate
+		'
+		Me.bbi_Duplicate.Caption = "&Duplicate"
+		Me.bbi_Duplicate.Id = 1
+		Me.bbi_Duplicate.ImageUri.Uri = "Copy"
+		Me.bbi_Duplicate.Name = "bbi_Duplicate"
+		'
+		'bbi_Delete
+		'
+		Me.bbi_Delete.Caption = "De&lete"
+		Me.bbi_Delete.Id = 2
+		Me.bbi_Delete.ImageUri.Uri = "Delete"
+		Me.bbi_Delete.Name = "bbi_Delete"
+		'
+		'bbi_PreLaunch_Add
+		'
+		Me.bbi_PreLaunch_Add.Caption = "&Add a Pre-Launch Command"
+		Me.bbi_PreLaunch_Add.Id = 3
+		Me.bbi_PreLaunch_Add.ImageUri.Uri = "Add"
+		Me.bbi_PreLaunch_Add.Name = "bbi_PreLaunch_Add"
+		'
+		'bbi_PreLaunch_Edit
+		'
+		Me.bbi_PreLaunch_Edit.Caption = "Edit this Pre-Launch Command"
+		Me.bbi_PreLaunch_Edit.Id = 4
+		Me.bbi_PreLaunch_Edit.ImageUri.Uri = "Edit"
+		Me.bbi_PreLaunch_Edit.Name = "bbi_PreLaunch_Edit"
+		'
+		'bbi_PreLaunch_Delete
+		'
+		Me.bbi_PreLaunch_Delete.Caption = "Delete this Pre-Launch Command"
+		Me.bbi_PreLaunch_Delete.Id = 5
+		Me.bbi_PreLaunch_Delete.ImageUri.Uri = "Cancel"
+		Me.bbi_PreLaunch_Delete.Name = "bbi_PreLaunch_Delete"
+		'
+		'bbi_PostLaunch_Add
+		'
+		Me.bbi_PostLaunch_Add.Caption = "Add Post-Launch Command"
+		Me.bbi_PostLaunch_Add.Id = 6
+		Me.bbi_PostLaunch_Add.ImageUri.Uri = "Add"
+		Me.bbi_PostLaunch_Add.Name = "bbi_PostLaunch_Add"
+		'
+		'bbi_PostLaunch_Edit
+		'
+		Me.bbi_PostLaunch_Edit.Caption = "Edit this Post-Launch Command"
+		Me.bbi_PostLaunch_Edit.Id = 7
+		Me.bbi_PostLaunch_Edit.ImageUri.Uri = "Edit"
+		Me.bbi_PostLaunch_Edit.Name = "bbi_PostLaunch_Edit"
+		'
+		'bbi_PostLaunch_Delete
+		'
+		Me.bbi_PostLaunch_Delete.Caption = "Delete this Post-Launch Command"
+		Me.bbi_PostLaunch_Delete.Id = 8
+		Me.bbi_PostLaunch_Delete.ImageUri.Uri = "Cancel"
+		Me.bbi_PostLaunch_Delete.Name = "bbi_PostLaunch_Delete"
+		'
+		'pnl_PostLaunch_Buttons
+		'
+		Me.pnl_PostLaunch_Buttons.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.pnl_PostLaunch_Buttons.Controls.Add(Me.btn_PostLaunch_MoveDown)
+		Me.pnl_PostLaunch_Buttons.Controls.Add(Me.btn_PostLaunch_MoveUp)
+		Me.pnl_PostLaunch_Buttons.Dock = System.Windows.Forms.DockStyle.Bottom
+		Me.pnl_PostLaunch_Buttons.Location = New System.Drawing.Point(2, 98)
+		Me.pnl_PostLaunch_Buttons.Name = "pnl_PostLaunch_Buttons"
+		Me.pnl_PostLaunch_Buttons.Size = New System.Drawing.Size(421, 22)
+		Me.pnl_PostLaunch_Buttons.TabIndex = 2
+		'
+		'btn_PostLaunch_MoveDown
+		'
+		Me.btn_PostLaunch_MoveDown.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+		Me.btn_PostLaunch_MoveDown.Location = New System.Drawing.Point(78, 1)
+		Me.btn_PostLaunch_MoveDown.Name = "btn_PostLaunch_MoveDown"
+		Me.btn_PostLaunch_MoveDown.Size = New System.Drawing.Size(75, 20)
+		Me.btn_PostLaunch_MoveDown.TabIndex = 4
+		Me.btn_PostLaunch_MoveDown.Text = "Move &Down"
+		'
+		'btn_PostLaunch_MoveUp
+		'
+		Me.btn_PostLaunch_MoveUp.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+		Me.btn_PostLaunch_MoveUp.Location = New System.Drawing.Point(0, 1)
+		Me.btn_PostLaunch_MoveUp.Name = "btn_PostLaunch_MoveUp"
+		Me.btn_PostLaunch_MoveUp.Size = New System.Drawing.Size(75, 20)
+		Me.btn_PostLaunch_MoveUp.TabIndex = 3
+		Me.btn_PostLaunch_MoveUp.Text = "Move &Up"
+		'
+		'gb_PreLaunch
+		'
+		Me.gb_PreLaunch.Controls.Add(Me.grd_PreLaunch)
+		Me.gb_PreLaunch.Controls.Add(Me.pnl_PreLaunch_Buttons)
+		Me.gb_PreLaunch.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.gb_PreLaunch.Location = New System.Drawing.Point(3, 3)
+		Me.gb_PreLaunch.Name = "gb_PreLaunch"
+		Me.gb_PreLaunch.Size = New System.Drawing.Size(425, 122)
+		Me.gb_PreLaunch.TabIndex = 0
+		Me.gb_PreLaunch.Text = "Pre-Launch Commands"
+		'
+		'grd_PreLaunch
+		'
+		Me.grd_PreLaunch.DataSource = Me.BS_PreLaunch_Commands
+		Me.grd_PreLaunch.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.grd_PreLaunch.Location = New System.Drawing.Point(2, 20)
+		Me.grd_PreLaunch.MainView = Me.gv_PreLaunch
+		Me.grd_PreLaunch.MenuManager = Me.barmng
+		Me.grd_PreLaunch.Name = "grd_PreLaunch"
+		Me.grd_PreLaunch.Size = New System.Drawing.Size(421, 78)
+		Me.grd_PreLaunch.TabIndex = 0
+		Me.grd_PreLaunch.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_PreLaunch})
+		'
+		'BS_PreLaunch_Commands
+		'
+		Me.BS_PreLaunch_Commands.DataMember = "ttb_Emulators_PreLaunch_Commands"
+		Me.BS_PreLaunch_Commands.DataSource = Me.DS_ML
+		Me.BS_PreLaunch_Commands.Sort = "Sort"
+		'
+		'gv_PreLaunch
+		'
+		Me.gv_PreLaunch.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colDirectory, Me.colExecutable, Me.colParameter1, Me.colWaitForExit, Me.colMinimized})
+		Me.gv_PreLaunch.GridControl = Me.grd_PreLaunch
+		Me.gv_PreLaunch.Name = "gv_PreLaunch"
+		Me.gv_PreLaunch.OptionsView.ColumnAutoWidth = False
+		Me.gv_PreLaunch.OptionsView.ShowGroupPanel = False
+		'
+		'colDirectory
+		'
+		Me.colDirectory.FieldName = "Directory"
+		Me.colDirectory.Name = "colDirectory"
+		Me.colDirectory.OptionsColumn.AllowEdit = False
+		Me.colDirectory.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.[False]
+		Me.colDirectory.OptionsColumn.ReadOnly = True
+		Me.colDirectory.Visible = True
+		Me.colDirectory.VisibleIndex = 0
+		Me.colDirectory.Width = 106
+		'
+		'colExecutable
+		'
+		Me.colExecutable.FieldName = "Executable"
+		Me.colExecutable.Name = "colExecutable"
+		Me.colExecutable.OptionsColumn.AllowEdit = False
+		Me.colExecutable.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.[False]
+		Me.colExecutable.OptionsColumn.ReadOnly = True
+		Me.colExecutable.Visible = True
+		Me.colExecutable.VisibleIndex = 1
+		Me.colExecutable.Width = 122
+		'
+		'colParameter1
+		'
+		Me.colParameter1.FieldName = "Parameter"
+		Me.colParameter1.Name = "colParameter1"
+		Me.colParameter1.OptionsColumn.AllowEdit = False
+		Me.colParameter1.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.[False]
+		Me.colParameter1.OptionsColumn.ReadOnly = True
+		Me.colParameter1.Visible = True
+		Me.colParameter1.VisibleIndex = 2
+		Me.colParameter1.Width = 129
+		'
+		'colWaitForExit
+		'
+		Me.colWaitForExit.Caption = "Wait"
+		Me.colWaitForExit.FieldName = "WaitForExit"
+		Me.colWaitForExit.Name = "colWaitForExit"
+		Me.colWaitForExit.OptionsColumn.AllowEdit = False
+		Me.colWaitForExit.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.[False]
+		Me.colWaitForExit.OptionsColumn.ReadOnly = True
+		Me.colWaitForExit.ToolTip = "Wait until the command exits"
+		Me.colWaitForExit.Visible = True
+		Me.colWaitForExit.VisibleIndex = 3
+		Me.colWaitForExit.Width = 40
+		'
+		'colMinimized
+		'
+		Me.colMinimized.FieldName = "Minimized"
+		Me.colMinimized.Name = "colMinimized"
+		Me.colMinimized.OptionsColumn.AllowEdit = False
+		Me.colMinimized.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.[False]
+		Me.colMinimized.OptionsColumn.ReadOnly = True
+		Me.colMinimized.ToolTip = "Run minimized"
+		Me.colMinimized.Visible = True
+		Me.colMinimized.VisibleIndex = 4
+		Me.colMinimized.Width = 63
+		'
+		'pnl_PreLaunch_Buttons
+		'
+		Me.pnl_PreLaunch_Buttons.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+		Me.pnl_PreLaunch_Buttons.Controls.Add(Me.btn_PreLaunch_MoveDown)
+		Me.pnl_PreLaunch_Buttons.Controls.Add(Me.btn_PreLaunch_MoveUp)
+		Me.pnl_PreLaunch_Buttons.Dock = System.Windows.Forms.DockStyle.Bottom
+		Me.pnl_PreLaunch_Buttons.Location = New System.Drawing.Point(2, 98)
+		Me.pnl_PreLaunch_Buttons.Name = "pnl_PreLaunch_Buttons"
+		Me.pnl_PreLaunch_Buttons.Size = New System.Drawing.Size(421, 22)
+		Me.pnl_PreLaunch_Buttons.TabIndex = 1
+		'
+		'btn_PreLaunch_MoveDown
+		'
+		Me.btn_PreLaunch_MoveDown.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+		Me.btn_PreLaunch_MoveDown.Location = New System.Drawing.Point(78, 1)
+		Me.btn_PreLaunch_MoveDown.Name = "btn_PreLaunch_MoveDown"
+		Me.btn_PreLaunch_MoveDown.Size = New System.Drawing.Size(75, 20)
+		Me.btn_PreLaunch_MoveDown.TabIndex = 4
+		Me.btn_PreLaunch_MoveDown.Text = "Move &Down"
+		'
+		'btn_PreLaunch_MoveUp
+		'
+		Me.btn_PreLaunch_MoveUp.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+		Me.btn_PreLaunch_MoveUp.Location = New System.Drawing.Point(0, 1)
+		Me.btn_PreLaunch_MoveUp.Name = "btn_PreLaunch_MoveUp"
+		Me.btn_PreLaunch_MoveUp.Size = New System.Drawing.Size(75, 20)
+		Me.btn_PreLaunch_MoveUp.TabIndex = 3
+		Me.btn_PreLaunch_MoveUp.Text = "Move &Up"
 		'
 		'tpg_DOSBox_Patches
 		'
 		Me.tpg_DOSBox_Patches.Controls.Add(Me.splt_DOSBox_Patches)
 		Me.tpg_DOSBox_Patches.Name = "tpg_DOSBox_Patches"
-		Me.tpg_DOSBox_Patches.Size = New System.Drawing.Size(405, 207)
-		ToolTipTitleItem20.Text = "DOSBox Patches"
-		ToolTipItem18.LeftIndent = 6
-		ToolTipItem18.Text = "Choose which patches the DOSBox instance supports"
-		SuperToolTip24.Items.Add(ToolTipTitleItem20)
-		SuperToolTip24.Items.Add(ToolTipItem18)
-		Me.tpg_DOSBox_Patches.SuperTip = SuperToolTip24
+		Me.tpg_DOSBox_Patches.Size = New System.Drawing.Size(431, 256)
+		ToolTipTitleItem23.Text = "DOSBox Patches"
+		ToolTipItem22.LeftIndent = 6
+		ToolTipItem22.Text = "Choose which patches the DOSBox instance supports"
+		SuperToolTip27.Items.Add(ToolTipTitleItem23)
+		SuperToolTip27.Items.Add(ToolTipItem22)
+		Me.tpg_DOSBox_Patches.SuperTip = SuperToolTip27
 		Me.tpg_DOSBox_Patches.Text = "DOSBox Patches"
 		'
 		'splt_DOSBox_Patches
@@ -1041,7 +1670,7 @@ Partial Class frm_Emulators
 		Me.splt_DOSBox_Patches.Panel1.Text = "Panel1"
 		Me.splt_DOSBox_Patches.Panel2.Controls.Add(Me.grd_DOSBox_Patches)
 		Me.splt_DOSBox_Patches.Panel2.Text = "Panel2"
-		Me.splt_DOSBox_Patches.Size = New System.Drawing.Size(405, 207)
+		Me.splt_DOSBox_Patches.Size = New System.Drawing.Size(431, 256)
 		Me.splt_DOSBox_Patches.SplitterPosition = 113
 		Me.splt_DOSBox_Patches.TabIndex = 0
 		Me.splt_DOSBox_Patches.Text = "Ctl_MKDXSplitPanel1"
@@ -1053,7 +1682,7 @@ Partial Class frm_Emulators
 		Me.grd_DOSBox_Patches_Categories.Location = New System.Drawing.Point(0, 0)
 		Me.grd_DOSBox_Patches_Categories.MainView = Me.gv_DOSBox_Patches_Categories
 		Me.grd_DOSBox_Patches_Categories.Name = "grd_DOSBox_Patches_Categories"
-		Me.grd_DOSBox_Patches_Categories.Size = New System.Drawing.Size(113, 207)
+		Me.grd_DOSBox_Patches_Categories.Size = New System.Drawing.Size(113, 256)
 		Me.grd_DOSBox_Patches_Categories.TabIndex = 0
 		Me.grd_DOSBox_Patches_Categories.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_DOSBox_Patches_Categories})
 		'
@@ -1090,7 +1719,7 @@ Partial Class frm_Emulators
 		Me.grd_DOSBox_Patches.MainView = Me.gv_DOSBox_Patches
 		Me.grd_DOSBox_Patches.Name = "grd_DOSBox_Patches"
 		Me.grd_DOSBox_Patches.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rpi_DOSBox_Patches})
-		Me.grd_DOSBox_Patches.Size = New System.Drawing.Size(287, 207)
+		Me.grd_DOSBox_Patches.Size = New System.Drawing.Size(313, 256)
 		Me.grd_DOSBox_Patches.TabIndex = 0
 		Me.grd_DOSBox_Patches.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_DOSBox_Patches})
 		'
@@ -1139,7 +1768,7 @@ Partial Class frm_Emulators
 		'btn_Close
 		'
 		Me.btn_Close.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.btn_Close.Location = New System.Drawing.Point(340, 4)
+		Me.btn_Close.Location = New System.Drawing.Point(358, 4)
 		Me.btn_Close.Name = "btn_Close"
 		Me.btn_Close.Size = New System.Drawing.Size(75, 20)
 		Me.btn_Close.TabIndex = 1
@@ -1161,9 +1790,9 @@ Partial Class frm_Emulators
 		Me.pnl_Buttons.Controls.Add(Me.btn_Save)
 		Me.pnl_Buttons.Controls.Add(Me.btn_Close)
 		Me.pnl_Buttons.Dock = System.Windows.Forms.DockStyle.Bottom
-		Me.pnl_Buttons.Location = New System.Drawing.Point(0, 286)
+		Me.pnl_Buttons.Location = New System.Drawing.Point(0, 325)
 		Me.pnl_Buttons.Name = "pnl_Buttons"
-		Me.pnl_Buttons.Size = New System.Drawing.Size(419, 26)
+		Me.pnl_Buttons.Size = New System.Drawing.Size(437, 26)
 		Me.pnl_Buttons.TabIndex = 7
 		'
 		'popmnu_Emulators
@@ -1171,65 +1800,6 @@ Partial Class frm_Emulators
 		Me.popmnu_Emulators.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Add), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Duplicate), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_Delete)})
 		Me.popmnu_Emulators.Manager = Me.barmng
 		Me.popmnu_Emulators.Name = "popmnu_Emulators"
-		'
-		'bbi_Add
-		'
-		Me.bbi_Add.Caption = "&Add"
-		Me.bbi_Add.Id = 0
-		Me.bbi_Add.ImageUri.Uri = "Add"
-		Me.bbi_Add.Name = "bbi_Add"
-		'
-		'bbi_Duplicate
-		'
-		Me.bbi_Duplicate.Caption = "&Duplicate"
-		Me.bbi_Duplicate.Id = 1
-		Me.bbi_Duplicate.ImageUri.Uri = "Copy"
-		Me.bbi_Duplicate.Name = "bbi_Duplicate"
-		'
-		'bbi_Delete
-		'
-		Me.bbi_Delete.Caption = "De&lete"
-		Me.bbi_Delete.Id = 2
-		Me.bbi_Delete.ImageUri.Uri = "Delete"
-		Me.bbi_Delete.Name = "bbi_Delete"
-		'
-		'barmng
-		'
-		Me.barmng.DockControls.Add(Me.barDockControlTop)
-		Me.barmng.DockControls.Add(Me.barDockControlBottom)
-		Me.barmng.DockControls.Add(Me.barDockControlLeft)
-		Me.barmng.DockControls.Add(Me.barDockControlRight)
-		Me.barmng.Form = Me
-		Me.barmng.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.bbi_Add, Me.bbi_Duplicate, Me.bbi_Delete})
-		Me.barmng.MaxItemId = 3
-		'
-		'barDockControlTop
-		'
-		Me.barDockControlTop.CausesValidation = False
-		Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
-		Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-		Me.barDockControlTop.Size = New System.Drawing.Size(690, 0)
-		'
-		'barDockControlBottom
-		'
-		Me.barDockControlBottom.CausesValidation = False
-		Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-		Me.barDockControlBottom.Location = New System.Drawing.Point(0, 585)
-		Me.barDockControlBottom.Size = New System.Drawing.Size(690, 0)
-		'
-		'barDockControlLeft
-		'
-		Me.barDockControlLeft.CausesValidation = False
-		Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-		Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
-		Me.barDockControlLeft.Size = New System.Drawing.Size(0, 585)
-		'
-		'barDockControlRight
-		'
-		Me.barDockControlRight.CausesValidation = False
-		Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-		Me.barDockControlRight.Location = New System.Drawing.Point(690, 0)
-		Me.barDockControlRight.Size = New System.Drawing.Size(0, 585)
 		'
 		'DataTable1
 		'
@@ -1259,26 +1829,10 @@ Partial Class frm_Emulators
 		Me.splt_Main.Panel1.Text = "Panel1"
 		Me.splt_Main.Panel2.Controls.Add(Me.pnl_Right)
 		Me.splt_Main.Panel2.Text = "Panel2"
-		Me.splt_Main.Size = New System.Drawing.Size(690, 585)
+		Me.splt_Main.Size = New System.Drawing.Size(708, 644)
 		Me.splt_Main.SplitterPosition = 262
 		Me.splt_Main.TabIndex = 16
 		Me.splt_Main.Text = "Ctl_MKDXSplitPanel1"
-		'
-		'splt_Right
-		'
-		Me.splt_Right.Dock = System.Windows.Forms.DockStyle.Fill
-		Me.splt_Right.Horizontal = False
-		Me.splt_Right.Location = New System.Drawing.Point(2, 2)
-		Me.splt_Right.Name = "splt_Right"
-		Me.splt_Right.Panel1.Controls.Add(Me.pnl_Settings)
-		Me.splt_Right.Panel1.Text = "Panel1"
-		Me.splt_Right.Panel2.Controls.Add(Me.pnl_Platforms)
-		Me.splt_Right.Panel2.Controls.Add(Me.pnl_Buttons)
-		Me.splt_Right.Panel2.Text = "Panel2"
-		Me.splt_Right.Size = New System.Drawing.Size(419, 581)
-		Me.splt_Right.SplitterPosition = 264
-		Me.splt_Right.TabIndex = 12
-		Me.splt_Right.Text = "Ctl_MKDXSplitPanel2"
 		'
 		'pnl_Right
 		'
@@ -1287,17 +1841,61 @@ Partial Class frm_Emulators
 		Me.pnl_Right.Location = New System.Drawing.Point(0, 0)
 		Me.pnl_Right.MinimumSize = New System.Drawing.Size(423, 585)
 		Me.pnl_Right.Name = "pnl_Right"
-		Me.pnl_Right.Size = New System.Drawing.Size(423, 585)
+		Me.pnl_Right.Size = New System.Drawing.Size(441, 644)
 		Me.pnl_Right.TabIndex = 13
+		'
+		'splt_Right
+		'
+		Me.splt_Right.Dock = System.Windows.Forms.DockStyle.Fill
+		Me.splt_Right.Horizontal = False
+		Me.splt_Right.Location = New System.Drawing.Point(2, 2)
+		Me.splt_Right.Name = "splt_Right"
+		Me.splt_Right.Panel1.Controls.Add(Me.pnl_Settings)
+		Me.splt_Right.Panel1.MinSize = 284
+		Me.splt_Right.Panel1.Text = "Panel1"
+		Me.splt_Right.Panel2.Controls.Add(Me.pnl_Platforms)
+		Me.splt_Right.Panel2.Controls.Add(Me.pnl_Buttons)
+		Me.splt_Right.Panel2.Text = "Panel2"
+		Me.splt_Right.Size = New System.Drawing.Size(437, 640)
+		Me.splt_Right.SplitterPosition = 284
+		Me.splt_Right.TabIndex = 12
+		Me.splt_Right.Text = "Ctl_MKDXSplitPanel2"
+		'
+		'popmnu_PreLaunch
+		'
+		Me.popmnu_PreLaunch.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_PreLaunch_Add), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_PreLaunch_Edit), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_PreLaunch_Delete)})
+		Me.popmnu_PreLaunch.Manager = Me.barmng
+		Me.popmnu_PreLaunch.Name = "popmnu_PreLaunch"
+		'
+		'popmnu_PostLaunch
+		'
+		Me.popmnu_PostLaunch.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_PostLaunch_Add), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_PostLaunch_Edit), New DevExpress.XtraBars.LinkPersistInfo(Me.bbi_PostLaunch_Delete)})
+		Me.popmnu_PostLaunch.Manager = Me.barmng
+		Me.popmnu_PostLaunch.Name = "popmnu_PostLaunch"
+		'
+		'DataTable2
+		'
+		Me.DataTable2.Columns.AddRange(New System.Data.DataColumn() {Me.DataColumn3, Me.DataColumn4})
+		Me.DataTable2.TableName = "Table1"
+		'
+		'DataColumn3
+		'
+		Me.DataColumn3.ColumnName = "id"
+		Me.DataColumn3.DataType = GetType(Long)
+		'
+		'DataColumn4
+		'
+		Me.DataColumn4.ColumnName = "DisplayText"
 		'
 		'frm_Emulators
 		'
-		Me.ClientSize = New System.Drawing.Size(690, 585)
+		Me.ClientSize = New System.Drawing.Size(708, 644)
 		Me.Controls.Add(Me.splt_Main)
 		Me.Controls.Add(Me.barDockControlLeft)
 		Me.Controls.Add(Me.barDockControlRight)
 		Me.Controls.Add(Me.barDockControlBottom)
 		Me.Controls.Add(Me.barDockControlTop)
+		Me.MinimumSize = New System.Drawing.Size(724, 600)
 		Me.Name = "frm_Emulators"
 		Me.ShowInTaskbar = False
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -1320,20 +1918,29 @@ Partial Class frm_Emulators
 		CType(Me.tcl_Settings, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.tcl_Settings.ResumeLayout(False)
 		Me.tpg_Settings.ResumeLayout(False)
+		CType(Me.pnl_Settings_Settings, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.pnl_Settings_Settings.ResumeLayout(False)
+		CType(Me.pnl_Script_File, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.pnl_Script_File.ResumeLayout(False)
+		CType(Me.txb_Script_File.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.cmb_Scripting.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BTA_Script_Types, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.cmb_List_Generator.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.BS_List_Generators, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.cmb_Libretro_Core.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.BTA_Libretro_Core, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.txb_Name.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.cmb_J2K_Config.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.BS_J2K, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.DS_J2K, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.tbl_Config, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.txb_ScreenshotDirectory.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.txb_StartupParameter.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.txb_Executable.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.txb_Directory.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.txb_Name.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.txb_ScreenshotDirectory.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.txb_Executable.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.txb_StartupParameter.Properties, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.tpg_MV_Settings.ResumeLayout(False)
+		CType(Me.pnl_Settings_MV, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.pnl_Settings_MV.ResumeLayout(False)
 		CType(Me.grd_MV, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.BS_MV, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.gv_MV, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1341,6 +1948,23 @@ Partial Class frm_Emulators
 		CType(Me.BS_Volumes, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.pnl_MV_Buttons, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.pnl_MV_Buttons.ResumeLayout(False)
+		Me.tpg_PrePostLaunch.ResumeLayout(False)
+		Me.tlp_PrePostLaunch.ResumeLayout(False)
+		CType(Me.gb_PostLaunch, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.gb_PostLaunch.ResumeLayout(False)
+		CType(Me.grd_PostLaunch, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BS_PostLaunch_Commands, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.gv_PostLaunch, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.barmng, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.pnl_PostLaunch_Buttons, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.pnl_PostLaunch_Buttons.ResumeLayout(False)
+		CType(Me.gb_PreLaunch, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.gb_PreLaunch.ResumeLayout(False)
+		CType(Me.grd_PreLaunch, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.BS_PreLaunch_Commands, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.gv_PreLaunch, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.pnl_PreLaunch_Buttons, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.pnl_PreLaunch_Buttons.ResumeLayout(False)
 		Me.tpg_DOSBox_Patches.ResumeLayout(False)
 		CType(Me.splt_DOSBox_Patches, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.splt_DOSBox_Patches.ResumeLayout(False)
@@ -1356,15 +1980,17 @@ Partial Class frm_Emulators
 		CType(Me.pnl_Buttons, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.pnl_Buttons.ResumeLayout(False)
 		CType(Me.popmnu_Emulators, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.barmng, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.DataTable1, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.DS_Rombase, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.splt_Main, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.splt_Main.ResumeLayout(False)
-		CType(Me.splt_Right, System.ComponentModel.ISupportInitialize).EndInit()
-		Me.splt_Right.ResumeLayout(False)
 		CType(Me.pnl_Right, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.pnl_Right.ResumeLayout(False)
+		CType(Me.splt_Right, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.splt_Right.ResumeLayout(False)
+		CType(Me.popmnu_PreLaunch, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.popmnu_PostLaunch, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.DataTable2, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.ResumeLayout(False)
 		Me.PerformLayout()
 
@@ -1462,4 +2088,51 @@ Partial Class frm_Emulators
 	Friend WithEvents splt_Main As MKNetDXLib.ctl_MKDXSplitPanel
 	Friend WithEvents splt_Right As MKNetDXLib.ctl_MKDXSplitPanel
 	Friend WithEvents pnl_Right As MKNetDXLib.ctl_MKDXPanel
+	Friend WithEvents pnl_Settings_Settings As MKNetDXLib.ctl_MKDXPanel
+	Friend WithEvents pnl_Settings_MV As MKNetDXLib.ctl_MKDXPanel
+	Friend WithEvents tpg_PrePostLaunch As DevExpress.XtraTab.XtraTabPage
+	Friend WithEvents tlp_PrePostLaunch As TableLayoutPanel
+	Friend WithEvents gb_PostLaunch As MKNetDXLib.ctl_MKDXGroupBox
+	Friend WithEvents gb_PreLaunch As MKNetDXLib.ctl_MKDXGroupBox
+	Friend WithEvents grd_PreLaunch As MKNetDXLib.ctl_MKDXGrid
+	Friend WithEvents gv_PreLaunch As DevExpress.XtraGrid.Views.Grid.GridView
+	Friend WithEvents pnl_PreLaunch_Buttons As MKNetDXLib.ctl_MKDXPanel
+	Friend WithEvents pnl_PostLaunch_Buttons As MKNetDXLib.ctl_MKDXPanel
+	Friend WithEvents btn_PostLaunch_MoveDown As MKNetDXLib.ctl_MKDXSimpleButton
+	Friend WithEvents btn_PostLaunch_MoveUp As MKNetDXLib.ctl_MKDXSimpleButton
+	Friend WithEvents btn_PreLaunch_MoveDown As MKNetDXLib.ctl_MKDXSimpleButton
+	Friend WithEvents btn_PreLaunch_MoveUp As MKNetDXLib.ctl_MKDXSimpleButton
+	Friend WithEvents bbi_PreLaunch_Add As DevExpress.XtraBars.BarButtonItem
+	Friend WithEvents bbi_PreLaunch_Edit As DevExpress.XtraBars.BarButtonItem
+	Friend WithEvents bbi_PreLaunch_Delete As DevExpress.XtraBars.BarButtonItem
+	Friend WithEvents popmnu_PreLaunch As MKNetDXLib.cmp_MKDXPopupMenu
+	Friend WithEvents BS_PreLaunch_Commands As BindingSource
+	Friend WithEvents BS_PostLaunch_Commands As BindingSource
+	Friend WithEvents grd_PostLaunch As MKNetDXLib.ctl_MKDXGrid
+	Friend WithEvents gv_PostLaunch As DevExpress.XtraGrid.Views.Grid.GridView
+	Friend WithEvents GridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents colDirectory As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents colExecutable As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents colParameter1 As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents colWaitForExit As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents colMinimized As DevExpress.XtraGrid.Columns.GridColumn
+	Friend WithEvents bbi_PostLaunch_Add As DevExpress.XtraBars.BarButtonItem
+	Friend WithEvents bbi_PostLaunch_Edit As DevExpress.XtraBars.BarButtonItem
+	Friend WithEvents bbi_PostLaunch_Delete As DevExpress.XtraBars.BarButtonItem
+	Friend WithEvents popmnu_PostLaunch As MKNetDXLib.cmp_MKDXPopupMenu
+	Friend WithEvents cmb_Scripting As MKNetDXLib.ctl_MKDXLookupEdit
+	Friend WithEvents lbl_Scripting As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents BTA_Script_Types As MKNetLib.cmp_MKBindableTableAdapter
+	Friend WithEvents DataTable2 As DataTable
+	Friend WithEvents DataColumn3 As DataColumn
+	Friend WithEvents DataColumn4 As DataColumn
+	Friend WithEvents lbl_Script_File As MKNetDXLib.ctl_MKDXLabel
+	Friend WithEvents txb_Script_File As MKNetDXLib.ctl_MKDXTextEdit
+	Friend WithEvents btn_Browse_Script_File As MKNetDXLib.ctl_MKDXSimpleButton
+	Friend WithEvents btn_Create_Script_File As MKNetDXLib.ctl_MKDXSimpleButton
+	Friend WithEvents pnl_Script_File As MKNetDXLib.ctl_MKDXPanel
 End Class
