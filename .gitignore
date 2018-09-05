@@ -2,6 +2,8 @@
 Metropolis_Launcher/bin/**/*
 Metropolis_Launcher/obj/**/*
 Metropolis_Launcher/Metropolis_Launcher.vbproj.user
+
 Metropolis_Launcher/rombase.db
 Metropolis_Launcher/moby.db
 Metropolis_Launcher/imdb.db
+Metropolis_Launcher/tools/*
