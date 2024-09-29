@@ -1,4 +1,4 @@
-# MetropolisLauncher
+# Metropolis Launcher
 
 Metropolis Launcher has been created to be a great old-school launcher, emulation front-end and an extensive offline database of video game metadata thanks to MobyGames.com and their strong user base.
 
